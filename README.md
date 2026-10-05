@@ -1,6 +1,6 @@
 # CD Menciana · Apaga y Vámonos
 
-Primera versión funcional 0.1.0, creada desde cero: aplicación Android con contenedor nativo WebView, interfaz propia y servidor Python/SQLite. No depende de Replit ni WordPress. El panel web utiliza el mismo servidor y los permisos se comprueban en cada petición.
+Primera versión funcional 0.2.0, creada desde cero: aplicación Android con contenedor nativo WebView, interfaz propia y servidor Python/SQLite. No depende de Replit ni WordPress. El panel web utiliza el mismo servidor y los permisos se comprueban en cada petición.
 
 ## Qué incluye
 
@@ -13,7 +13,7 @@ Primera versión funcional 0.1.0, creada desde cero: aplicación Android con con
 - Escudo original facilitado por el club, sin recrear sus textos.
 - Pruebas del aislamiento de permisos, registro, suspensión y protección CSRF.
 
-La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Para usar cuentas y datos reales, conecta un servidor propio mediante el botón superior; esa interfaz requiere internet. Esta versión NO es una interfaz íntegramente nativa ni incluye notificaciones push, pagos, QR, verificación de correo o recuperación automática por email. La recuperación de contraseña se hace desde la consola del servidor por el administrador, tras verificar la identidad. Estas funciones se pueden incorporar después.
+La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Para usar cuentas y datos reales, conecta un servidor propio desde Más → Configurar conexión del club; esa interfaz requiere internet. Esta versión NO es una interfaz íntegramente nativa ni incluye notificaciones push, pagos, QR, verificación de correo o recuperación automática por email. La recuperación de contraseña se hace desde la consola del servidor por el administrador, tras verificar la identidad. Estas funciones se pueden incorporar después.
 
 ## Ejecutar en desarrollo
 
@@ -49,7 +49,7 @@ docker compose exec app python app.py --create-admin
 
 Caddy obtiene el certificado. La base de datos queda en el volumen `club-data`; realiza copias de seguridad coherentes con SQLite antes de actualizar o migrar. El servidor interno no debe exponerse directamente. Configura retención de datos, contacto del club y aviso de privacidad antes de abrir registros reales.
 
-Para activar las cuentas, pulsa Conectar servidor del club e introduce `https://app.tu-dominio.es`. La dirección es configurable mientras no haya dominio definitivo. Solo admite HTTPS. El escudo también es el icono de la app.
+Para activar las cuentas, abre Más → Configurar conexión del club e introduce `https://app.tu-dominio.es`. La dirección es configurable mientras no haya dominio definitivo. Solo admite HTTPS. El escudo también es el icono de la app.
 
 ## Compilar y descargar APK
 
@@ -71,3 +71,7 @@ node --check server/static/app.js
 ```
 
 El prototipo usa el servidor HTTP estándar detrás del proxy y una base de datos SQLite. Antes de un uso a gran escala conviene migrar el servicio a un servidor de aplicación con control de concurrencia, añadir auditoría de administración y ampliar las pruebas de carga. Los permisos existentes no dependen de la interfaz.
+
+## Diseño 0.2.0
+
+Interfaz inspirada en la referencia facilitada: cabecera con escudo centrado, portada de equipo, pestañas superiores, tarjeta de partido, accesos de socios y jugadores y navegación inferior. Paleta azul marino, celeste, blanco y dorado del club. Sin fotografías ni partidos ficticios.

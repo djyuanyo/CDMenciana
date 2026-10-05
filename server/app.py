@@ -60,7 +60,7 @@ class Handler(BaseHTTPRequestHandler):
             path=self.path.split('?')[0]
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
-                files={'/':'index.html','/admin':'index.html','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
+                files={'/':'index.html','/admin':'index.html','/ui.js':'ui.js','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
                 if path not in files: raise ApiError(404,'No encontrado.')
                 file=ROOT/'static'/files[path]
                 if not file.exists(): raise ApiError(404,'No encontrado.')
