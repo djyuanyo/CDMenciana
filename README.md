@@ -13,7 +13,7 @@ Primera versión funcional 0.1.0, creada desde cero: aplicación Android con con
 - Escudo original facilitado por el club, sin recrear sus textos.
 - Pruebas del aislamiento de permisos, registro, suspensión y protección CSRF.
 
-La interfaz móvil se carga desde el servidor propio; requiere conexión a internet. Esta versión NO es una interfaz íntegramente nativa ni incluye notificaciones push, pagos, QR, verificación de correo o recuperación automática por email. La recuperación de contraseña se hace desde la consola del servidor por el administrador, tras verificar la identidad. Estas funciones se pueden incorporar después.
+La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Para usar cuentas y datos reales, conecta un servidor propio mediante el botón superior; esa interfaz requiere internet. Esta versión NO es una interfaz íntegramente nativa ni incluye notificaciones push, pagos, QR, verificación de correo o recuperación automática por email. La recuperación de contraseña se hace desde la consola del servidor por el administrador, tras verificar la identidad. Estas funciones se pueden incorporar después.
 
 ## Ejecutar en desarrollo
 
@@ -49,7 +49,7 @@ docker compose exec app python app.py --create-admin
 
 Caddy obtiene el certificado. La base de datos queda en el volumen `club-data`; realiza copias de seguridad coherentes con SQLite antes de actualizar o migrar. El servidor interno no debe exponerse directamente. Configura retención de datos, contacto del club y aviso de privacidad antes de abrir registros reales.
 
-En la primera apertura de Android, introduce `https://app.tu-dominio.es`. La dirección es configurable mientras no haya dominio definitivo. Solo admite HTTPS. El escudo también es el icono de la app.
+Para activar las cuentas, pulsa Conectar servidor del club e introduce `https://app.tu-dominio.es`. La dirección es configurable mientras no haya dominio definitivo. Solo admite HTTPS. El escudo también es el icono de la app.
 
 ## Compilar y descargar APK
 
