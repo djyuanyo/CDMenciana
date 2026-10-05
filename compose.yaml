@@ -1,0 +1,25 @@
+services:
+  app:
+    build: ./server
+    restart: unless-stopped
+    environment:
+      CDM_ORIGIN: https://${CDM_DOMAIN:?Define CDM_DOMAIN en .env}
+      CDM_TRUST_PROXY: '1'
+    volumes:
+      - club-data:/data
+  proxy:
+    image: caddy:2
+    restart: unless-stopped
+    environment:
+      CDM_DOMAIN: ${CDM_DOMAIN:?Define CDM_DOMAIN en .env}
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+volumes:
+  club-data:
+  caddy-data:
+  caddy-config:
