@@ -41,7 +41,7 @@ class Handler(BaseHTTPRequestHandler):
     def respond(self, status, payload, cookie=None, mime='application/json; charset=utf-8'):
         raw = json.dumps(payload, ensure_ascii=False).encode() if mime.startswith('application/json') else payload
         self.send_response(status)
-        for k,v in {'Content-Type':mime,'Content-Length':str(len(raw)),'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}.items(): self.send_header(k,v)
+        for k,v in {'Content-Type':mime,'Content-Length':str(len(raw)),'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://stars.rfaf.es; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}.items(): self.send_header(k,v)
         if cookie: self.send_header('Set-Cookie',cookie)
         self.end_headers(); self.wfile.write(raw)
     def user(self,c):
@@ -60,7 +60,7 @@ class Handler(BaseHTTPRequestHandler):
             path=self.path.split('?')[0]
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
-                files={'/':'index.html','/admin':'index.html','/ui.js':'ui.js','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
+                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
                 if path not in files: raise ApiError(404,'No encontrado.')
                 file=ROOT/'static'/files[path]
                 if not file.exists(): raise ApiError(404,'No encontrado.')

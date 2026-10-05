@@ -3,8 +3,8 @@ let page='Inicio';
 function render(){
  CDM.shell(page,null);
  let body='';
- if(page==='Inicio')body=CDM.nextMatch()+CDM.accessTiles()+'<div class="section-heading"><h2>Actualidad del club</h2></div>'+CDM.empty('La próxima historia empieza aquí','Las noticias del equipo se publicarán en este espacio.','ball');
- if(page==='Partidos')body='<div class="section-heading"><h2>Calendario del equipo</h2></div>'+CDM.nextMatch()+'<section class="card"><span class="badge">FUENTE OFICIAL</span><h2>Resultados de la competición</h2><p>El calendario todavía no está sincronizado. Consulta los datos oficiales en la federación.</p><a href="https://stars.rfaf.es/?delegacion=9&competicion=48466108&grupo=48466109&widget_view=results">Consultar la RFAF →</a></section>';
+ if(page==='Inicio')body=Fixtures.home()+CDM.accessTiles()+'<div class="section-heading"><h2>Actualidad del club</h2></div>'+CDM.empty('La próxima historia empieza aquí','Las noticias del equipo se publicarán en este espacio.','ball');
+ if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Club')body='<div class="section-heading"><h2>Plantilla</h2><span>CD MENCIANA</span></div>'+CDM.empty('Nuestro equipo','Próximamente: fotografías, dorsales y posiciones de los jugadores.','team');
  if(page==='Estadísticas')body='<div class="section-heading"><h2>Estadísticas del equipo</h2></div>'+CDM.empty('Cada partido cuenta','Las estadísticas aparecerán cuando se incorporen los resultados oficiales.','chart');
  if(page==='Clasificación')body='<div class="section-heading"><h2>Clasificación</h2></div>'+CDM.empty('La liga, jornada a jornada','La clasificación oficial todavía no está sincronizada.','chart');
@@ -15,4 +15,6 @@ function render(){
  main.innerHTML=body;
 }
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;render();window.scrollTo(0,0)}});
-render();
+document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
+document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;render();}});
+render();Fixtures.load().then(render);

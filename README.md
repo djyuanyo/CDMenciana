@@ -1,6 +1,6 @@
 # CD Menciana · Apaga y Vámonos
 
-Primera versión funcional 0.2.0, creada desde cero: aplicación Android con contenedor nativo WebView, interfaz propia y servidor Python/SQLite. No depende de Replit ni WordPress. El panel web utiliza el mismo servidor y los permisos se comprueban en cada petición.
+Primera versión funcional 0.3.0, creada desde cero: aplicación Android con contenedor nativo WebView, interfaz propia y servidor Python/SQLite. No depende de Replit ni WordPress. El panel web utiliza el mismo servidor y los permisos se comprueban en cada petición.
 
 ## Qué incluye
 
@@ -61,7 +61,9 @@ Es una APK de pruebas con firma debug; para distribuir versiones actualizables h
 
 Fuente propuesta: https://stars.rfaf.es/?delegacion=9&competicion=48466108&grupo=48466109&widget_view=results
 
-La sincronización con la RFAF todavía NO está implementada porque no se ha podido verificar el acceso a los datos. La app enlaza la fuente y permite publicaciones manuales de partidos/clasificación, con fecha de actualización. No contiene resultados inventados ni datos de ejemplo mezclados con datos reales. Se empieza con un equipo del club; el soporte de varios equipos se incorporará cuando se definan.
+La parte pública está conectada a los datos reales de la RFAF. `tools/sync_fixtures.py` consulta las jornadas del grupo y guarda únicamente los partidos del CD Menciana en `data/fixtures.json`. El workflow **Actualizar partidos RFAF** programa una actualización cada dos horas (GitHub puede retrasar las ejecuciones) y conserva el último conjunto válido si la fuente falla. Se incluye una copia en la APK para usarla sin conexión.
+
+Android obtiene el JSON público de este repositorio al abrir la app o al pulsar Actualizar, con caché local y respaldo incluido. No necesita hosting para estos datos deportivos. La zona privada sigue requiriendo un servidor de cuentas. Las jornadas que la RFAF indica sin partidos publicados se muestran como pendientes; no se inventan encuentros. Los escudos rivales se cargan de la fuente oficial y el escudo del club conserva la imagen facilitada.
 
 ## Verificación
 
@@ -72,6 +74,10 @@ node --check server/static/app.js
 
 El prototipo usa el servidor HTTP estándar detrás del proxy y una base de datos SQLite. Antes de un uso a gran escala conviene migrar el servicio a un servidor de aplicación con control de concurrencia, añadir auditoría de administración y ampliar las pruebas de carga. Los permisos existentes no dependen de la interfaz.
 
-## Diseño 0.2.0
+## Diseño 0.3.0
 
 Interfaz inspirada en la referencia facilitada: cabecera con escudo centrado, portada de equipo, pestañas superiores, tarjeta de partido, accesos de socios y jugadores y navegación inferior. Paleta azul marino, celeste, blanco y dorado del club. Sin fotografías ni partidos ficticios.
+
+## Ajuste de pantalla 0.3.0
+
+El contenedor Android aplica los insets del sistema, notch y teclado al padre del WebView, reduciendo su área real. Los elementos fijos de la interfaz quedan dentro de esa área. Incluye manejo de Android 15/16 y ajuste clásico para versiones anteriores.
