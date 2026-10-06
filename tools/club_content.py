@@ -36,7 +36,7 @@ def roster(html):
 NEWS_SOURCE='https://cdmenciana.es/noticias/'
 def news(html):
     root=Document(html).root;items=[]
-    for card in root.find('article','news-card'):
+    for card in root.find('section','news-lead')+root.find('article','news-card'):
         headings=card.find('h3') or card.find('h2');times=card.find('time');links=card.find('a');imgs=card.find('img')
         if not headings or not times or not links:raise ValueError('Incomplete club news card')
         url=urljoin(NEWS_SOURCE,links[0].attrs.get('href',''))

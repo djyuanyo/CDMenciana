@@ -21,6 +21,11 @@ class ClubContentTests(unittest.TestCase):
         self.assertEqual('Victoria del equipo',row['title'])
         self.assertEqual('2026-10-03',row['date'])
         self.assertEqual('https://cdmenciana.es/noticias/victoria/',row['url'])
+    def test_lead_story_and_archive_are_both_imported(self):
+        html='<section class="news-lead"><img src="https://cms.cdmenciana.es/media/latest/web"><time datetime="2026-10-05"></time><h2><a href="/noticias/ultima/">Última noticia</a></h2></section><article class="news-card"><a href="/noticias/anterior/"></a><h3>Noticia anterior</h3><time datetime="2026-10-03"></time></article>'
+        rows=news(html)
+        self.assertEqual(2,len(rows))
+        self.assertEqual(['Última noticia','Noticia anterior'],[r['title'] for r in rows])
     def test_news_failure_does_not_look_like_empty_feed(self):
         with self.assertRaises(ValueError):news('<h1>Error</h1>')
         self.assertEqual([],news('<h1>Noticias</h1>'))
