@@ -7,3 +7,5 @@ __pycache__/
 android/.gradle/
 android/local.properties
 **/build/
+
+node_modules/

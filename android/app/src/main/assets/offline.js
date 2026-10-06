@@ -21,7 +21,9 @@ document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures
 render();Fixtures.load().then(render);
 
 let reportRequest=0;
-async function reportRoute(){const id=location.hash.match(/^#acta=(\d+)$/)?.[1];const request=++reportRequest;if(!id){if(page==='Acta'){page='Partidos';render();}return;}page='Acta';Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id);if(request===reportRequest&&location.hash==='#acta='+id)render();}
-window.addEventListener('hashchange',reportRoute);
-document.addEventListener('click',e=>{if(e.target.closest('[data-report-back]')){if(location.hash.startsWith('#acta='))history.back();else{page='Partidos';render();}}if(e.target.closest('[data-report-retry]'))reportRoute();if(e.target.closest('button[data-page]')&&location.hash.startsWith('#acta=')){history.replaceState(null,'',location.pathname);reportRequest++;}});
+async function reportRoute(refresh=false){const id=location.hash.match(/^#acta=(\d+)$/)?.[1];const request=++reportRequest;if(!id){if(page==='Acta'){page='Partidos';render();}return;}page='Acta';Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id,refresh);if(request===reportRequest&&location.hash==='#acta='+id)render();}
+window.addEventListener('hashchange',()=>reportRoute());
+document.addEventListener('click',e=>{if(e.target.closest('[data-report-back]')){if(location.hash.startsWith('#acta='))history.back();else{page='Partidos';render();}}if(e.target.closest('[data-report-retry]'))reportRoute(true);if(e.target.closest('button[data-page]')&&location.hash.startsWith('#acta=')){history.replaceState(null,'',location.pathname);reportRequest++;}});
 if(location.hash.startsWith('#acta='))reportRoute();
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-report-side]');if(b){Fixtures.reportSide=Number(b.dataset.reportSide);render();}});

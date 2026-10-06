@@ -31,6 +31,7 @@ import org.json.JSONObject;
 public class MainActivity extends Activity {
     private WebView web;
     private String base;
+    private String publicUserAgent;
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
         if(android.os.Build.VERSION.SDK_INT>=30)getWindow().setDecorFitsSystemWindows(false);
@@ -87,8 +88,57 @@ public class MainActivity extends Activity {
         try{JSONObject json=new JSONObject(new String(data,StandardCharsets.UTF_8));json.put("connection_state",source);data=json.toString().getBytes(StandardCharsets.UTF_8);}catch(Exception ignored){data="{\"matches\":[],\"connection_state\":\"unavailable\"}".getBytes(StandardCharsets.UTF_8);}
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(data));
     }
+    /** Read public match reports directly when the scheduled copy is unavailable. */
+    private android.webkit.WebResourceResponse publicReportResponse(String id,boolean refresh) {
+        String filename="actas/"+id+".json";
+        android.webkit.WebResourceResponse saved=publicDataResponse(filename,refresh);
+        byte[] prior=new byte[0];boolean valid=false;
+        try(InputStream in=saved.getData();ByteArrayOutputStream out=new ByteArrayOutputStream()){
+            byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1)out.write(b,0,n);prior=out.toByteArray();
+            JSONObject json=new JSONObject(new String(prior,StandardCharsets.UTF_8));
+            valid=(json.optJSONArray("blocks")!=null&&json.getJSONArray("blocks").length()>0)||json.has("html");
+        }catch(Exception ignored){}
+        if(!valid||refresh)try {
+            java.net.CookieManager cookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
+            readPublicFederation("https://www.rfaf.es/",cookies);
+            String roundSource="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5";
+            try {
+                JSONObject fixtures=new JSONObject(new String(java.nio.file.Files.readAllBytes(new java.io.File(getFilesDir(),"fixtures.json").toPath()),StandardCharsets.UTF_8));
+                org.json.JSONArray matches=fixtures.getJSONArray("round_matches");
+                for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(id.equals(link.getQueryParameter("CodActa"))){String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))roundSource=source;break;}}
+            }catch(Exception ignored){}
+            readPublicFederation(roundSource,cookies);
+            String url="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+id+"&cod_acta="+id;
+            String html=new String(readPublicFederation(url,cookies),java.nio.charset.Charset.forName("ISO-8859-15"));
+            if(!html.contains("Ficha de Partido"))throw new java.io.IOException("Acta unavailable");
+            JSONObject data=new JSONObject();data.put("id",id);data.put("html",html);data.put("updated_at",java.time.Instant.now().toString());data.put("connection_state","official");
+            prior=data.toString().getBytes(StandardCharsets.UTF_8);
+            java.nio.file.Files.write(new java.io.File(getFilesDir(),filename.replace('/','_')).toPath(),prior);
+        }catch(Exception ignored){}
+        return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(prior));
+    }
+    private byte[] readPublicFederation(String address,java.net.CookieManager cookies) throws Exception {
+        for(int hop=0;hop<6;hop++){
+            java.net.URI uri=new java.net.URI(address);
+            if(!"https".equals(uri.getScheme())||!("www.rfaf.es".equals(uri.getHost())||"rfaf.es".equals(uri.getHost()))||uri.getUserInfo()!=null)throw new java.io.IOException("Unsupported federation redirect");
+            HttpURLConnection connection=(HttpURLConnection)uri.toURL().openConnection();
+            connection.setConnectTimeout(8000);connection.setReadTimeout(8000);connection.setInstanceFollowRedirects(false);
+            connection.setRequestProperty("User-Agent",publicUserAgent);connection.setRequestProperty("Accept","text/html");
+            for(java.util.Map.Entry<String,java.util.List<String>> h:cookies.get(uri,java.util.Collections.emptyMap()).entrySet())connection.setRequestProperty(h.getKey(),String.join("; ",h.getValue()));
+            try {
+                int status=connection.getResponseCode();cookies.put(uri,connection.getHeaderFields());
+                if(status==301||status==302||status==303||status==307||status==308){String location=connection.getHeaderField("Location");if(location==null)throw new java.io.IOException("Missing redirect");address=uri.resolve(location).toString();continue;}
+                if(status!=200)throw new java.io.IOException("Federation response unavailable");
+                try(InputStream in=connection.getInputStream();ByteArrayOutputStream out=new ByteArrayOutputStream()){
+                    byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1){if(out.size()+n>1048576)throw new java.io.IOException("Report size limit");out.write(b,0,n);}return out.toByteArray();
+                }
+            }finally{connection.disconnect();}
+        }
+        throw new java.io.IOException("Too many redirects");
+    }
     private boolean sameOrigin(Uri uri){Uri home=Uri.parse(base.isEmpty()?"https://appassets.androidplatform.net":base);return "https".equals(uri.getScheme())&&home.getHost().equalsIgnoreCase(uri.getHost())&&home.getPort()==uri.getPort();}
     private void load() {
+        publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(Color.rgb(8,41,85));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
@@ -97,7 +147,8 @@ public class MainActivity extends Activity {
             @Override public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest req){
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
-                    if(name.matches("actas/[0-9]+\\.json")||"fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
+                    if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
+                    if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
                     if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}

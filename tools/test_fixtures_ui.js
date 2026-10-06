@@ -39,3 +39,11 @@ f.reportData={updated_at:new Date().toISOString(),blocks:[{kind:'heading',text:'
 assert(!f.card({...actaMatch,played:false}).includes('class="result-acta"'));
 assert(!f.card({...actaMatch,acta_url:'https://other.example/?CodActa=1234'}).includes('class="result-acta"'));
 console.log('Official per-match acta links and unpublished/unsafe link handling verified');
+
+f.data=allData;f.reportData=JSON.parse(fs.readFileSync('data/actas/2645766.json','utf8'));const match=allData.round_matches.find(m=>m.acta_url?.includes('CodActa=2645766&'));const report=f.reportModel(f.reportData,match);
+assert.equal(report.teams[0].starters.length,5);assert.equal(report.teams[1].starters.length,5);
+assert.equal(report.teams[0].bench.length,6);assert.equal(report.goals.length,4);assert.equal(report.referees.length,3);
+assert.equal(report.teams[0].cards.length,3);assert.equal(report.teams[1].cards.length,4);
+f.reportSide=0;const localReport=f.report('2645766');assert(localReport.includes('acta-scoreboard'));assert.equal((localReport.match(/alt="Escudo de /g)||[]).length,4);assert(localReport.includes('David Copete Rivero'));
+f.reportSide=1;const awayReport=f.report('2645766');assert(awayReport.includes('Petru Emanuel Horodinca'));assert(!awayReport.includes('David Copete Rivero'));
+console.log('Structured lineups, goal minutes, referee roles, cards and both club crests verified');
