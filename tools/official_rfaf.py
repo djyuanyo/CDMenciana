@@ -10,12 +10,12 @@ DIGITS=[2,5,9,4,1,0,8,6,3,7,1,3,5,7,9,0,2,4,6,8,0,2,4,6,8,1,3,5,7,9,7,5,2,0,9,6,
 
 def visible(node,css=""):
     if node.tag in ('style','script') or re.search(r'display\s*:\s*none',node.attrs.get('style','')):return ''
-    scripts=node.find('script')
+    scripts=node.find('script');icon=''
     if node.attrs.get('id'):
         call=next((re.search(r'ntype\("'+re.escape(node.attrs['id'])+r'",(\d+),(\d+),',s.text()) for s in scripts),None)
         if call:
-            n,i=map(int,call.groups());return str(DIGITS[i*10+n])
-    text=''.join(x if isinstance(x,str) else visible(x,css) for x in node.content)
+            n,i=map(int,call.groups());icon=str(DIGITS[i*10+n])
+    text=icon+''.join(x if isinstance(x,str) else visible(x,css) for x in node.content)
     for side,rule in re.findall(r'#'+re.escape(node.attrs.get('id','__missing__'))+r':(before|after)\s*\{([^}]+)\}',css):
         if re.search(r'display\s*:\s*none',rule):continue
         value=re.search(r'content\s*:\s*[\"\']([^\"\']*)',rule)
@@ -102,6 +102,21 @@ def enrich(match,html):
         return
     raise ValueError('Club missing from official round')
 
+def verify_results(matches,club,previous):
+    played=[m for m in matches if m['played']]
+    gf=sum(m['home_score'] if is_club(m['home']) else m['away_score'] for m in played)
+    ga=sum(m['away_score'] if is_club(m['home']) else m['home_score'] for m in played)
+    if (len(played),gf,ga)==(club['played'],club['gf'],club['ga']):return 'verified'
+    old={m['id']:m for m in previous.get('matches',[])}
+    for match in played:
+        prior=old.get(match['id'])
+        if prior and prior.get('played') and all(normalize(prior[s])==normalize(match[s]) for s in ('home','away')):
+            match['home_score'],match['away_score']=prior['home_score'],prior['away_score']
+        else:
+            match.update(played=False,home_score=None,away_score=None,state='Resultado por verificar')
+    print('Score verification pending; retaining verified results and refreshing kickoff times',flush=True)
+    return 'pending'
+
 def sync():
     opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     def get(url,encoding="iso-8859-15"):
@@ -120,7 +135,7 @@ def sync():
     print(f'Calendar: {len(matches)} matches; standings: {len(table)} teams',flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
-        published=[m for m in matches if m['played'] or m['round']==next_round]
+        published=matches  # Every published future kickoff must be refreshed.
         pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
         for match in published:enrich(match,pages[match['source']])
     logos={}
@@ -130,11 +145,9 @@ def sync():
     goal_rows=scorers(get(scorers_url))
     roster_rows=roster(get(ROSTER_SOURCE,'utf-8'))
     club=next(r for r in table if is_club(r['team']))
-    played=[m for m in matches if m['played']]
-    gf=sum(m['home_score'] if is_club(m['home']) else m['away_score'] for m in played)
-    ga=sum(m['away_score'] if is_club(m['home']) else m['home_score'] for m in played)
-    if (len(played),gf,ga)!=(club['played'],club['gf'],club['ga']):raise ValueError('Scores disagree with official standings; retaining previous data')
-    payload=dict(scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    previous=json.loads((ROOT/'data/fixtures.json').read_text()) if (ROOT/'data/fixtures.json').exists() else {}
+    results_status=verify_results(matches,club,previous)
+    payload=dict(results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
     for target in [ROOT/'data/fixtures.json',ROOT/'android/app/src/main/assets/fixtures.json',ROOT/'server/static/fixtures.json']:target.write_text(raw,encoding='utf-8')
     print(f'Updated {len(matches)} matches, {len(table)} teams, {len(goal_rows)} scorers and {len(roster_rows)} players')

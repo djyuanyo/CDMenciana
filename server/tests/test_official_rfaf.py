@@ -1,7 +1,7 @@
 import sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings,team_crests,apply_crests
+from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results
 class OfficialRFAFTests(unittest.TestCase):
     def score(self,html):return scores(Document('<td>'+html+'</td>').root.find('td')[0])
     def test_hidden_digits_and_icons(self):
@@ -10,6 +10,14 @@ class OfficialRFAFTests(unittest.TestCase):
         self.assertEqual((5,3),self.score('<strong>5</strong><strong><style>#x:before{content:"\\0033"}</style><span id="x"><span style="display:none">4</span></span></strong>'))
     def test_two_digit_result(self):
         self.assertEqual((11,4),self.score('<strong><i id="a"><script>ntype("a",4,0,"fa-1");</script></i><i id="b"><script>ntype("b",4,0,"fa-1");</script></i></strong><strong><i id="c"><script>ntype("c",3,0,"fa-6");</script></i></strong>'))
+    def test_icon_digit_preserves_visible_following_digit(self):
+        self.assertEqual((11,4),self.score('<strong><i id="a"><script>ntype("a",4,0,"fa-2");</script>1<span style="display:none">2</span></i></strong><strong>4</strong>'))
+    def test_score_mismatch_does_not_freeze_new_kickoff_times(self):
+        prior={'id':'match','home':'Rival','away':'APAGA Y VAMONOS','played':True,'home_score':11,'away_score':4}
+        current=dict(prior,home_score=1,time='19:00')
+        state=verify_results([current],{'played':1,'gf':4,'ga':11},{'matches':[prior]})
+        self.assertEqual('pending',state)
+        self.assertEqual((11,4,'19:00'),(current['home_score'],current['away_score'],current['time']))
     def test_future_is_not_zero_zero(self):self.assertEqual((None,None),self.score('<strong></strong><strong></strong>'))
     def test_unknown_score_rejected(self):
         with self.assertRaises(ValueError):self.score('<strong>?</strong><strong>4</strong>')

@@ -1052,7 +1052,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-06T10:18:51.321347+00:00",
+  "updated_at": "2026-10-06T19:44:49.630186+00:00",
   "rounds": [
     1,
     2,
@@ -1163,7 +1163,7 @@
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg",
       "date": "2026-10-10",
-      "time": "",
+      "time": "19:00",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
       "state": "Programado",
       "played": false,
@@ -1858,5 +1858,6 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg": "crests/fd2658f79c329d04.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG": "crests/955f5137fd52bf55.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png": "crests/62c2362186b53ac7.png"
-  }
+  },
+  "results_status": "verified"
 }
