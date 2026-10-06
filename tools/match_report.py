@@ -203,7 +203,15 @@ def sync_reports(matches,get,root):
             team_refs=[]
             for team_url in dict.fromkeys([match.get('home_team_url',''),match.get('away_team_url','')]):
                 if not team_url:continue
-                try:team_refs.extend(player_refs(get(team_url)))
+                try:
+                    team_html=get(team_url);found=player_refs(team_html);team_refs.extend(found)
+                    if not found:
+                        hints=[]
+                        for hit in re.finditer(r'(?i)(jugador|estadisticas|ficha|licencia|persona|plantilla)',team_html):
+                            snippet=clean(team_html[max(0,hit.start()-100):min(len(team_html),hit.end()+180)])
+                            if snippet not in hints:hints.append(snippet)
+                            if len(hints)>=8:break
+                        print(f'RFAF team profile hints {team_url}: '+json.dumps(hints,ensure_ascii=False),flush=True)
                 except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
             picked=participant_refs(old,team_refs)
             if picked:
