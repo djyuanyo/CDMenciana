@@ -44,6 +44,12 @@ class OfficialRFAFTests(unittest.TestCase):
         enrich(match,table('C.D. APAGA Y VAMONOS','Otro','19:00')+table('Local rival','Visitante rival','17:30'))
         self.assertEqual('17:30',match['time'])
         self.assertEqual('2026-10-10',match['date'])
+    def test_team_roster_links_belong_to_home_and_away(self):
+        match={'home':'Local','away':'Visitante','played':True}
+        html='''<table><a href="/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=11"><div class="font_widgetL"><h4>Local</h4></div></a><a href="/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=22"><div class="font_widgetV"><h4>Visitante</h4></div></a></table>'''
+        enrich(match,html)
+        self.assertIn('Codigo_Equipo=11',match['home_team_url'])
+        self.assertIn('Codigo_Equipo=22',match['away_team_url'])
     def test_acta_link_belongs_to_correct_match(self):
         match={'home':'Local','away':'Visitante','played':True}
         html='<table><div class="font_widgetL"><h4>Local</h4></div><div class="font_widgetV"><h4>Visitante</h4></div><a class="btn btn-success btn-sm" href="/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&amp;CodActa=2645799">Acta</a></table>'
