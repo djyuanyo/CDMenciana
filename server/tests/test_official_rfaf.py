@@ -1,7 +1,7 @@
 import sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results
+from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich
 class OfficialRFAFTests(unittest.TestCase):
     def score(self,html):return scores(Document('<td>'+html+'</td>').root.find('td')[0])
     def test_hidden_digits_and_icons(self):
@@ -28,6 +28,22 @@ class OfficialRFAFTests(unittest.TestCase):
         apply_crests(matches,[],logos)
         self.assertEqual('https://official/club.jpg',matches[0]['home_crest'])
         self.assertEqual('https://official/rival.png',matches[0]['away_crest'])
+    def test_calendar_contains_all_eight_matches_in_every_round(self):
+        tables=[]
+        for n in range(1,31):
+            rows=''.join(f'<tr><td>{"C.D. APAGA Y VAMONOS" if i==0 else "Local "+str(i)}</td><td><strong></strong><strong></strong></td><td>Visitante {i}</td></tr>' for i in range(8))
+            tables.append(f'<table class="table-hover">Jornada {n} (10-10-2026){rows}</table>')
+        matches,_=calendar(''.join(tables),all_teams=True)
+        self.assertEqual(240,len(matches))
+        self.assertEqual(240,len({m['id'] for m in matches}))
+        self.assertEqual(8,len([m for m in matches if m['round']==5]))
+    def test_kickoff_is_attached_to_matching_rival_pair(self):
+        def table(home,away,hour):
+            return f'<table><div class="font_widgetL"><h4>{home}</h4></div><div class="font_widgetV"><h4>{away}</h4></div><span class="horario">10-10-2026 {hour}</span></table>'
+        match={'home':'Local rival','away':'Visitante rival','played':False}
+        enrich(match,table('C.D. APAGA Y VAMONOS','Otro','19:00')+table('Local rival','Visitante rival','17:30'))
+        self.assertEqual('17:30',match['time'])
+        self.assertEqual('2026-10-10',match['date'])
     def test_home_away_standings_totals(self):
         rows=[]
         for pos in range(1,17):

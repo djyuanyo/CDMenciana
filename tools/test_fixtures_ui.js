@@ -20,3 +20,13 @@ const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.e
 console.log('Scorer highlighting and roster names, shirt numbers and photos verified');
 
 f.newsData=JSON.parse(fs.readFileSync('data/news.json','utf8'));const news=f.news();for(const n of f.newsData.news){assert(news.includes(f.esc(n.title)));assert(news.includes(f.esc(n.url)));}assert(!news.includes('PRÓXIMO PARTIDO'));console.log('Home news cards and original article links verified');
+
+const allData=JSON.parse(fs.readFileSync('data/fixtures.json','utf8'));
+f.data=allData;f.round='5';const roundHtml=f.calendar();
+assert.equal((roundHtml.match(/class="match-card fixture-card/g)||[]).length,8);
+assert.equal((roundHtml.match(/fixture-card our-match/g)||[]).length,1);
+const sorted=allData.round_matches.filter(m=>m.round===5).sort((a,b)=>f.kickoffOrder(a,b));
+let previous=-1;for(const match of sorted){const position=roundHtml.indexOf(f.esc(match.home),previous+1);assert(position>previous);previous=position;}
+assert(f.kickoffOrder({date:'2026-10-10',time:'17:30'},{date:'2026-10-10',time:''})<0);
+assert(f.kickoffOrder({date:'2026-10-09',time:'21:00'},{date:'2026-10-10',time:'09:00'})<0);
+console.log('Eight chronological round fixtures and exactly one highlighted club match verified');

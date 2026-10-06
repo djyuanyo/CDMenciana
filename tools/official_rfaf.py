@@ -33,7 +33,7 @@ def scores(cell):
     if not all(re.fullmatch(r'\d{1,2}',n) for n in values):raise ValueError('Unrecognized rendered score')
     return tuple(map(int,values))
 
-def calendar(html):
+def calendar(html,all_teams=False):
     tables=[t for t in Document(html).root.find('table') if 'table-hover' in t.attrs.get('class','')]
     out=[];numbers=[]
     for t in tables:
@@ -42,10 +42,11 @@ def calendar(html):
         n=int(header[1]);numbers.append(n)
         for row in t.find('tr'):
             cells=[c for c in row.children if c.tag=='td']
-            if len(cells)!=3 or not (is_club(cells[0].text()) or is_club(cells[2].text())):continue
+            if len(cells)!=3:continue
+            if not all_teams and not (is_club(cells[0].text()) or is_club(cells[2].text())):continue
             h,a=scores(cells[1]);played=h is not None
-            out.append(dict(id=f'48466109-{n}',round=n,home=cells[0].text(),away=cells[2].text(),home_crest='',away_crest='',date=datetime.datetime.strptime(header[2],'%d-%m-%Y').date().isoformat(),time='',venue='',state='Finalizado' if played else 'Fecha de jornada',played=played,home_score=h,away_score=a,source=SOURCE+'&CodJornada='+str(n),date_provisional=True))
-    if len(out)!=30 or numbers!=list(range(1,31)):raise ValueError('Incomplete official calendar')
+            out.append(dict(id=f'48466109-{n}-'+str(len([m for m in out if m['round']==n])+1) if all_teams else f'48466109-{n}',round=n,home=cells[0].text(),away=cells[2].text(),home_crest='',away_crest='',date=datetime.datetime.strptime(header[2],'%d-%m-%Y').date().isoformat(),time='',venue='',state='Finalizado' if played else 'Fecha de jornada',played=played,home_score=h,away_score=a,source=SOURCE+'&CodJornada='+str(n),date_provisional=True))
+    if len(out)!=(240 if all_teams else 30) or numbers!=list(range(1,31)):raise ValueError('Incomplete official calendar')
     return out,numbers
 
 def standings(html):
@@ -83,7 +84,7 @@ def enrich(match,html):
     root=Document(html).root
     homes=[n for n in root.find('div','font_widgetL') if n.find('h4')];aways=[n for n in root.find('div','font_widgetV') if n.find('h4')]
     for h,a in zip(homes,aways):
-        if not (is_club(h.text()) or is_club(a.text())):continue
+        if normalize(h.text())!=normalize(match['home']) or normalize(a.text())!=normalize(match['away']):continue
         # Find the smallest containing match table, including venue and kickoff.
         tables=[t for t in root.find('table') if h in t.find('div') and a in t.find('div')]
         table=tables[-1]
@@ -100,7 +101,7 @@ def enrich(match,html):
         match['venue']=venue
         if not match['played']:match['state']='Programado' if date else 'Por confirmar'
         return
-    raise ValueError('Club missing from official round')
+    raise ValueError('Match missing from official round')
 
 def verify_results(matches,club,previous):
     played=[m for m in matches if m['played']]
@@ -128,7 +129,9 @@ def sync():
             return html
     get('https://www.rfaf.es/')
     print('Public session initialized',flush=True)
-    matches,numbers=calendar(get(PREFIX+'NFG_VisCalendario_Vis?'+DATA_QUERY+'&CodJornada=5'))
+    round_matches,numbers=calendar(get(PREFIX+'NFG_VisCalendario_Vis?'+DATA_QUERY+'&CodJornada=5'),all_teams=True)
+    matches=[m for m in round_matches if is_club(m['home']) or is_club(m['away'])]
+    for match in matches:match['id']=f"48466109-{match['round']}"
     current=max((m['round'] for m in matches if m['played']),default=1)
     standings_url=PREFIX+'NFG_VisClasificacion?'+DATA_QUERY+'&codjornada='+str(current)
     table=standings(get(standings_url))
@@ -137,14 +140,14 @@ def sync():
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
         published=matches  # Every published future kickoff must be refreshed.
         pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
-        for match in published:
+        for match in round_matches:
             try:enrich(match,pages[match['source']])
             except ValueError as error:
-                if match['played'] or str(error)!='Club missing from official round':raise
+                if match['played'] or str(error)!='Match missing from official round':raise
                 print(f"Round {match['round']}: kickoff not published yet",flush=True)
     logos={}
     for html in pages.values():logos.update(team_crests(html))
-    apply_crests(matches,table,logos)
+    apply_crests(round_matches,table,logos)
     previous=json.loads((ROOT/'data/fixtures.json').read_text()) if (ROOT/'data/fixtures.json').exists() else {}
     scorers_url=PREFIX+'NFG_CMP_Goleadores?'+DATA_QUERY+'&CodJornada='+str(current)
     try:goal_rows=scorers(get(scorers_url))
@@ -160,7 +163,7 @@ def sync():
         print(f'Plantilla pendiente: {error}; se actualizan los horarios',flush=True)
     club=next(r for r in table if is_club(r['team']))
     results_status=verify_results(matches,club,previous)
-    payload=dict(results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    payload=dict(round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
     for target in [ROOT/'data/fixtures.json',ROOT/'android/app/src/main/assets/fixtures.json',ROOT/'server/static/fixtures.json']:target.write_text(raw,encoding='utf-8')
     print(f'Updated {len(matches)} matches, {len(table)} teams, {len(goal_rows)} scorers and {len(roster_rows)} players')
