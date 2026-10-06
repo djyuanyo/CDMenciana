@@ -51,3 +51,7 @@ assert.equal(novanetPlayers.length,1);assert.equal(novanetPlayers[0].rfaf_id,'99
 const parsedProfile=f.parsePlayerProfileHtml(`<main><img class="foto-jugador" width="180" height="220" src="https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/9981.jpg"><table><tr><th>Temporada</th><th>Partidos</th><th>Goles</th></tr><tr><td>2026-2027</td><td>4</td><td>3</td></tr></table></main>`,novanetPlayers[0]);
 assert(parsedProfile.photo.includes('9981.jpg'));assert.equal(parsedProfile.stats.length,1);assert.equal(parsedProfile.stats[0].rows[1][2],'3');
 console.log('Novanet onclick player links, row photos and internal statistics HTML are parsed correctly');
+
+const rawHidden=f.parseReportPlayers(`<script>var destino="NFG_EstadisticasJugador?cod_primaria=3000328&jugador=445566&codacta=2645766";</script><table><tr><td>9</td><td>RAMOS ORTAS, SAMUEL</td></tr></table>`,'2645766');
+assert.equal(rawHidden.length,1);assert.equal(rawHidden[0].rfaf_id,'445566');assert.equal(rawHidden[0].acta_id,'2645766');assert.equal(rawHidden[0].name,'RAMOS ORTAS, SAMUEL');
+console.log('Raw jugador id near plain acta name is recovered without an anchor');
