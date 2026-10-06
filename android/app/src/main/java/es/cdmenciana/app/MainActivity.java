@@ -34,6 +34,7 @@ public class MainActivity extends Activity {
     private String base;
     private String publicUserAgent;
     private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
+    private final java.util.concurrent.ConcurrentHashMap<String,String[]> rfafPhotoSources=new java.util.concurrent.ConcurrentHashMap<>();
     private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
@@ -127,6 +128,10 @@ public class MainActivity extends Activity {
             if(acta==null||!acta.matches("[0-9]{1,12}")||namesJson==null||namesJson.length()>12000)return;
             runOnUiThread(()->resolveActaPlayersInWebView(acta,namesJson));
         }
+        @JavascriptInterface public void resolvePlayerProfile(String profileUrl,String playerKey) {
+            if(playerKey==null||!playerKey.matches("[a-f0-9]{8,64}")||profileUrl==null||profileUrl.length()>2000)return;
+            runOnUiThread(()->resolvePlayerProfileInWebView(profileUrl,playerKey));
+        }
     }
     /** RFAF adds the player navigation after the page is rendered. Resolve those public IDs in an isolated WebView. */
     private void resolveActaPlayersInWebView(String acta,String namesJson) {
@@ -160,6 +165,77 @@ public class MainActivity extends Activity {
         String rows="[]";try{new org.json.JSONArray(rowsJson);rows=rowsJson;}catch(Exception ignored){}
         final String script="window.Fixtures&&window.Fixtures.applyResolvedPlayers("+JSONObject.quote(acta)+","+rows+");";
         if(web!=null)web.post(()->web.evaluateJavascript(script,null));
+    }
+    private Uri safePlayerProfileUri(String profileUrl) {
+        try {
+            Uri uri=Uri.parse(profileUrl);
+            String host=uri.getHost(),path=uri.getPath(),player=uri.getQueryParameter("jugador"),primary=uri.getQueryParameter("cod_primaria");
+            if(!"https".equals(uri.getScheme())||host==null||!("www.rfaf.es".equalsIgnoreCase(host)||"rfaf.es".equalsIgnoreCase(host))||uri.getUserInfo()!=null)return null;
+            if(path==null||!path.matches("/pnfg/(?:NPcd/)?NFG_EstadisticasJugador"))return null;
+            if(player==null||!player.matches("[0-9]{1,12}"))return null;
+            if(primary==null||!primary.matches("[0-9]{1,12}"))return null;
+            return uri;
+        } catch(Exception ignored){return null;}
+    }
+    private void resolvePlayerProfileInWebView(String profileUrl,String playerKey) {
+        final Uri profile=safePlayerProfileUri(profileUrl);
+        if(profile==null){deliverResolvedProfile(playerKey,new JSONObject());return;}
+        final String player=profile.getQueryParameter("jugador"),primary=profile.getQueryParameter("cod_primaria");
+        final String acta=profile.getQueryParameter("codacta")==null?profile.getQueryParameter("CodActa"):profile.getQueryParameter("codacta");
+        final java.io.File cache=new java.io.File(getFilesDir(),"rfaf_rendered_profile_"+player+"_"+primary+".json");
+        if(cache.exists()&&System.currentTimeMillis()-cache.lastModified()<86400000L)try{
+            JSONObject cached=new JSONObject(new String(java.nio.file.Files.readAllBytes(cache.toPath()),StandardCharsets.UTF_8));
+            String photoSource=cached.optString("photo_source");
+            if(!photoSource.isEmpty())rfafPhotoSources.put(player,new String[]{photoSource,profileUrl});
+            if(!photoSource.isEmpty())cached.put("photo","rfaf-photo/"+player+".img");
+            deliverResolvedProfile(playerKey,cached);return;
+        }catch(Exception ignored){}
+        final WebView resolver=new WebView(this);
+        final boolean[] done={false};final int[] stage={0};
+        WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
+        CookieManager.getInstance().setAcceptCookie(true);CookieManager.getInstance().setAcceptThirdPartyCookies(resolver,false);
+        final String actaUrl=acta!=null&&acta.matches("[0-9]{1,12}")?"https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta+"&cod_acta="+acta:"";
+        final Runnable fail=()->{if(done[0])return;done[0]=true;deliverResolvedProfile(playerKey,new JSONObject());resolver.stopLoading();resolver.destroy();};
+        resolver.setWebViewClient(new WebViewClient(){
+            @Override public void onPageFinished(WebView view,String url){
+                if(done[0])return;
+                if(stage[0]==0){stage[0]=1;if(!actaUrl.isEmpty()){view.loadUrl(actaUrl);return;}}
+                if(stage[0]<=1){stage[0]=2;view.loadUrl(profileUrl);return;}
+                if(stage[0]!=2)return;stage[0]=3;
+                final String script="(function(){const clean=s=>String(s||'').replace(/\\s+/g,' ').trim(),upper=s=>clean(s).normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toUpperCase(),bad=/ESCUDO|LOGO|BANNER|COOKIE|PUBLICIDAD|SOCIAL|ICON|TARJ_/,imgs=[];for(const img of document.querySelectorAll('img[src]')){const src=img.currentSrc||img.src||'',meta=upper([src,img.className||'',img.id||'',img.alt||'',img.title||'',img.parentElement?.className||''].join(' '));if(!src||bad.test(meta))continue;let score=/JUGADOR|FUTBOLISTA|PLAYER|PERSONA|FOTO|PHOTO|RETRATO/.test(meta)?14:0;if(/\\/pimg\\/|NOVANET/.test(meta))score+=3;if((img.naturalWidth||img.width||0)>=80&&(img.naturalHeight||img.height||0)>=80)score+=4;if((img.naturalHeight||0)>(img.naturalWidth||0)*0.8)score+=2;imgs.push([score,src])}for(const el of document.querySelectorAll('[style*="background"],[class*="jug"],[class*="foto"],[id*="jug"],[id*="foto"]')){const bg=getComputedStyle(el).backgroundImage||'',m=bg.match(/url\\(["']?([^"')]+)["']?\\)/i);if(m&&!bad.test(upper(m[1])))imgs.push([12,m[1]])}imgs.sort((a,b)=>b[0]-a[0]);const photo_source=imgs[0]?.[0]>=4?new URL(imgs[0][1],location.href).href:'';const sections=[],fallback=[];let index=0;for(const table of document.querySelectorAll('table')){const rows=[...table.querySelectorAll('tr')].map(tr=>[...tr.children].filter(c=>/^(TD|TH)$/.test(c.tagName)).map(c=>clean(c.textContent)).slice(0,10)).filter(r=>r.some(Boolean));if(rows.length<1)continue;let title='';for(let el=table.previousElementSibling,tries=0;el&&tries<5;el=el.previousElementSibling,tries++){const t=clean(el.textContent);if(t&&t.length<180){title=t;break}}if(!title){const box=table.closest('.panel,.card,.well,.box,[class*="panel"],[class*="card"]');if(box){const h=box.querySelector('h1,h2,h3,h4,h5,h6,.panel-title,.card-title,strong');if(h)title=clean(h.textContent)}}const sample=upper(title+' '+rows.slice(0,6).flat().join(' '));let score=0;if(/COMPETICION|COMPETENCIA|LIGA|CAMPEONATO/.test(sample))score+=12;if(/TEMPORADA/.test(sample))score+=7;if(/ESTADIST/.test(sample))score+=8;if(/PARTIDOS JUGADOS|PJ\\b|MINUTOS|GOLES|TARJETAS|AMARILLAS|ROJAS|TITULARIDADES|CONVOCATORIAS/.test(sample))score+=6;if(/ACTA|DATOS DEL PARTIDO|ALINEACION|TITULARES|SUPLENTES|ARBITR|RESULTADO DEL PARTIDO/.test(upper(title)))score-=14;const numeric=rows.flat().filter(x=>/\\d/.test(x)).length,section={title:title||'Estadísticas de competición',rows:rows.slice(0,30),score,index:index++};if(score>=8)sections.push(section);else if(numeric>=3&&/PARTIDOS|PJ\\b|MINUTOS|GOLES|TARJETAS|TEMPORADA|COMPETICION/.test(sample)&&score>=0)fallback.push(section)}const chosen=(sections.length?sections:fallback).sort((a,b)=>b.score-a.score||a.index-b.index).slice(0,4).map(x=>({title:x.title,rows:x.rows}));return JSON.stringify({photo_source,stats:chosen})})()";
+                view.postDelayed(()->view.evaluateJavascript(script,value->{if(done[0])return;JSONObject data=new JSONObject();try{Object decoded=new org.json.JSONTokener(value).nextValue();String raw=decoded instanceof String?(String)decoded:"{}";data=new JSONObject(raw);}catch(Exception ignored){}try{
+                    String photoSource=data.optString("photo_source");
+                    if(!photoSource.isEmpty()){java.net.URI imageUri=new java.net.URI(photoSource);String h=imageUri.getHost();if("https".equals(imageUri.getScheme())&&h!=null&&("rfaf.es".equalsIgnoreCase(h)||"www.rfaf.es".equalsIgnoreCase(h)||h.toLowerCase().endsWith(".rfaf.es")||h.toLowerCase().endsWith(".filesnovanet.es"))){rfafPhotoSources.put(player,new String[]{photoSource,profileUrl});data.put("photo","rfaf-photo/"+player+".img");}else data.put("photo_source","");}
+                    data.put("updated_at",java.time.Instant.now().toString());
+                    java.nio.file.Files.write(cache.toPath(),data.toString().getBytes(StandardCharsets.UTF_8));
+                }catch(Exception ignored){}done[0]=true;deliverResolvedProfile(playerKey,data);view.destroy();}),1500);
+            }
+            @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
+        });
+        resolver.postDelayed(fail,22000);resolver.loadUrl("https://www.rfaf.es/");
+    }
+    private void deliverResolvedProfile(String playerKey,JSONObject data) {
+        final String script="window.Fixtures&&window.Fixtures.applyResolvedProfile("+JSONObject.quote(playerKey)+","+data.toString()+");";
+        if(web!=null)web.post(()->web.evaluateJavascript(script,null));
+    }
+    private android.webkit.WebResourceResponse publicPhotoResponse(String player) {
+        if(player==null||!player.matches("[0-9]{1,12}"))return new android.webkit.WebResourceResponse("image/png",null,new ByteArrayInputStream(new byte[0]));
+        String[] source=rfafPhotoSources.get(player);if(source==null||source.length<2)return new android.webkit.WebResourceResponse("image/png",null,new ByteArrayInputStream(new byte[0]));
+        try {
+            String address=source[0],referer=source[1];
+            for(int hop=0;hop<5;hop++){
+                java.net.URI uri=new java.net.URI(address);String host=uri.getHost();
+                if(!"https".equals(uri.getScheme())||host==null||uri.getUserInfo()!=null||!("rfaf.es".equalsIgnoreCase(host)||"www.rfaf.es".equalsIgnoreCase(host)||host.toLowerCase().endsWith(".rfaf.es")||host.toLowerCase().endsWith(".filesnovanet.es")))throw new java.io.IOException("Unsupported image host");
+                HttpURLConnection connection=(HttpURLConnection)uri.toURL().openConnection();connection.setConnectTimeout(8000);connection.setReadTimeout(8000);connection.setInstanceFollowRedirects(false);connection.setRequestProperty("User-Agent",publicUserAgent);connection.setRequestProperty("Accept","image/avif,image/webp,image/apng,image/*,*/*;q=0.8");connection.setRequestProperty("Referer",referer);
+                String cookie=CookieManager.getInstance().getCookie(address);if(cookie!=null&&!cookie.isEmpty())connection.setRequestProperty("Cookie",cookie);
+                try{
+                    int status=connection.getResponseCode();if(status==301||status==302||status==303||status==307||status==308){String location=connection.getHeaderField("Location");if(location==null)throw new java.io.IOException("Missing image redirect");address=uri.resolve(location).toString();continue;}if(status!=200)throw new java.io.IOException("Image unavailable");
+                    String mime=connection.getContentType();if(mime==null||!mime.toLowerCase().startsWith("image/"))mime="image/jpeg";else mime=mime.split(";",2)[0];
+                    try(InputStream in=connection.getInputStream();ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] b=new byte[8192];int n;while((n=in.read(b))!=-1){if(out.size()+n>5242880)throw new java.io.IOException("Image too large");out.write(b,0,n);}return new android.webkit.WebResourceResponse(mime,null,new ByteArrayInputStream(out.toByteArray()));}
+                }finally{connection.disconnect();}
+            }
+        }catch(Exception ignored){}
+        return new android.webkit.WebResourceResponse("image/png",null,new ByteArrayInputStream(new byte[0]));
     }
     private synchronized void ensureFederationSession() throws Exception {
         long now=System.currentTimeMillis();
