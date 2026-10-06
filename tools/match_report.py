@@ -211,7 +211,12 @@ def sync_reports(matches,get,root):
                             snippet=clean(team_html[max(0,hit.start()-100):min(len(team_html),hit.end()+180)])
                             if snippet not in hints:hints.append(snippet)
                             if len(hints)>=8:break
-                        print(f'RFAF team profile hints {team_url}: '+json.dumps(hints,ensure_ascii=False),flush=True)
+                        hrefs=[]
+                        for href in re.findall(r'''(?:href|src|url)\s*[=:]\s*["']([^"']+)''',team_html,re.I):
+                            if href not in hrefs:hrefs.append(href)
+                            if len(hrefs)>=24:break
+                        plain=clean(re.sub(r'<[^>]+>',' ',team_html))[:900]
+                        print(f'RFAF team profile hints {team_url}: '+json.dumps({'hints':hints,'links':hrefs,'text':plain},ensure_ascii=False),flush=True)
                 except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
             picked=participant_refs(old,team_refs)
             if picked:
