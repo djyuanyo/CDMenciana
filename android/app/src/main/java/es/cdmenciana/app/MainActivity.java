@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.CookieManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceError;
 import android.webkit.WebSettings;
@@ -27,7 +28,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 
-/** Native Android shell for the club's own hosted interface. No JS bridge. */
+/** Native Android shell for the club's own hosted interface. The only JS bridge is offline-only and resolves public RFAF player links. */
 public class MainActivity extends Activity {
     private WebView web;
     private String base;
@@ -121,6 +122,45 @@ public class MainActivity extends Activity {
         }catch(Exception ignored){}
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(prior));
     }
+    private final class RfafResolverBridge {
+        @JavascriptInterface public void resolveActaPlayers(String acta,String namesJson) {
+            if(acta==null||!acta.matches("[0-9]{1,12}")||namesJson==null||namesJson.length()>12000)return;
+            runOnUiThread(()->resolveActaPlayersInWebView(acta,namesJson));
+        }
+    }
+    /** RFAF adds the player navigation after the page is rendered. Resolve those public IDs in an isolated WebView. */
+    private void resolveActaPlayersInWebView(String acta,String namesJson) {
+        final org.json.JSONArray names;
+        try {
+            names=new org.json.JSONArray(namesJson);
+            if(names.length()==0||names.length()>40){deliverResolvedPlayers(acta,"[]");return;}
+        } catch(Exception error){deliverResolvedPlayers(acta,"[]");return;}
+        final WebView resolver=new WebView(this);
+        final boolean[] done={false};final int[] stage={0};
+        WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
+        CookieManager.getInstance().setAcceptCookie(true);CookieManager.getInstance().setAcceptThirdPartyCookies(resolver,false);
+        final String actaUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta+"&cod_acta="+acta;
+        final String roundUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5";
+        final Runnable fail=()->{if(done[0])return;done[0]=true;deliverResolvedPlayers(acta,"[]");resolver.stopLoading();resolver.destroy();};
+        resolver.setWebViewClient(new WebViewClient(){
+            @Override public void onPageFinished(WebView view,String url){
+                if(done[0])return;
+                if(stage[0]==0){stage[0]=1;view.loadUrl(roundUrl);return;}
+                if(stage[0]==1){stage[0]=2;view.loadUrl(actaUrl);return;}
+                if(stage[0]!=2)return;stage[0]=3;
+                final String wanted=names.toString();
+                final String script="(function(){const wanted="+wanted+",norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/\\s+/g,' ').trim().toUpperCase(),keys=new Set(wanted.map(norm)),out=[],seen=new Set();for(const el of document.querySelectorAll('a,[onclick],[data-href],[data-url],td,span,strong')){const text=(el.textContent||'').replace(/\\s+/g,' ').trim(),key=norm(text);if(!keys.has(key)||seen.has(key))continue;const nodes=[el,el.closest&&el.closest('a'),el.closest&&el.closest('[onclick]')].filter(Boolean);for(const node of nodes){let raw=(node.getAttribute&&node.getAttribute('href')||'')+' '+(node.getAttribute&&node.getAttribute('onclick')||'')+' '+(node.getAttribute&&node.getAttribute('data-href')||'')+' '+(node.getAttribute&&node.getAttribute('data-url')||'')+' '+(node.onclick?String(node.onclick):'')+' '+String(node.outerHTML||'').slice(0,1800),id='',m=raw.match(/(?:[?&]|\\b)jugador\\s*(?:=|%3D)\\s*(-?\\d{1,12})/i);if(m)id=m[1];if(!id){const fn=raw.match(/(?:EstadisticasJugador|Jugador)[^(]{0,50}\\(([^)]{0,220})\\)/i);if(fn){const n=fn[1].match(/-?\\d{1,12}/);if(n)id=n[0]}}if(id){out.push({name:text,player_id:id,url:(node.href||node.getAttribute&&node.getAttribute('href')||'')});seen.add(key);break}}}return JSON.stringify(out)})()";
+                view.postDelayed(()->view.evaluateJavascript(script,value->{if(done[0])return;String rows="[]";try{Object decoded=new org.json.JSONTokener(value).nextValue();if(decoded instanceof String)rows=(String)decoded;new org.json.JSONArray(rows);}catch(Exception ignored){rows="[]";}done[0]=true;deliverResolvedPlayers(acta,rows);view.destroy();}),1200);
+            }
+            @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
+        });
+        resolver.postDelayed(fail,18000);resolver.loadUrl("https://www.rfaf.es/");
+    }
+    private void deliverResolvedPlayers(String acta,String rowsJson) {
+        String rows="[]";try{new org.json.JSONArray(rowsJson);rows=rowsJson;}catch(Exception ignored){}
+        final String script="window.Fixtures&&window.Fixtures.applyResolvedPlayers("+JSONObject.quote(acta)+","+rows+");";
+        if(web!=null)web.post(()->web.evaluateJavascript(script,null));
+    }
     private synchronized void ensureFederationSession() throws Exception {
         long now=System.currentTimeMillis();
         if(now-federationSessionAt<300000L)return;
@@ -179,6 +219,7 @@ public class MainActivity extends Activity {
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(Color.rgb(8,41,85));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,false);
         web.setWebViewClient(new WebViewClient(){
             @Override public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest req){
