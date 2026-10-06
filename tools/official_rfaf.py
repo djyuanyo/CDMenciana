@@ -1,5 +1,5 @@
 """Public RFAF calendar and standings; no account or browser required."""
-import concurrent.futures, datetime, http.cookiejar, json, re, urllib.request
+import concurrent.futures, datetime, http.cookiejar, json, re, urllib.request, urllib.parse
 from sync_fixtures import Document, is_club, normalize, ROOT
 from club_content import scorers,roster,ROSTER_SOURCE
 PREFIX='https://www.rfaf.es/pnfg/NPcd/'
@@ -91,6 +91,8 @@ def enrich(match,html):
         match['home'],match['away']=h.text(),a.text()
         imgs=table.find('img','escudo_widget2')
         if len(imgs)==2:match['home_crest'],match['away_crest']=[i.attrs.get('src','') for i in imgs]
+        acta=next((a.attrs.get('href','') for a in table.find('a') if 'btn-success' in a.attrs.get('class','') and re.search(r'[?&]CodActa=\d+',a.attrs.get('href',''),re.I)),'')
+        match['acta_url']=urllib.parse.urljoin('https://www.rfaf.es',acta) if acta else ''
         dates=table.find('span','horario')
         text=' '.join(d.text() for d in dates)
         date=re.search(r'\b(\d{2}-\d{2}-\d{4})\b',text)

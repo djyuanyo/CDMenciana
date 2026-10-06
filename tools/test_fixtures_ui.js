@@ -30,3 +30,10 @@ let previous=-1;for(const match of sorted){const position=roundHtml.indexOf(f.es
 assert(f.kickoffOrder({date:'2026-10-10',time:'17:30'},{date:'2026-10-10',time:''})<0);
 assert(f.kickoffOrder({date:'2026-10-09',time:'21:00'},{date:'2026-10-10',time:'09:00'})<0);
 console.log('Eight chronological round fixtures and exactly one highlighted club match verified');
+
+const actaMatch={...allData.matches[0],played:true,acta_url:'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?CodActa=1234'};
+assert(f.card(actaMatch).includes('class="result-acta"'));
+assert(f.card(actaMatch).includes('CodActa=1234'));
+assert(!f.card({...actaMatch,played:false}).includes('class="result-acta"'));
+assert(!f.card({...actaMatch,acta_url:'https://other.example/?CodActa=1234'}).includes('class="result-acta"'));
+console.log('Official per-match acta links and unpublished/unsafe link handling verified');
