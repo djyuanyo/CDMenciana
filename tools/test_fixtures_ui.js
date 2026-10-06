@@ -1,4 +1,5 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+new vm.Script(fs.readFileSync('android/app/src/main/assets/fixtures.js','utf8'),{filename:'android fixtures.js'});
 const ctx={window:{},document:{addEventListener(){}},CDM:{icon:()=>'',empty:()=>''},URL};vm.createContext(ctx);vm.runInContext(fs.readFileSync('server/static/fixtures.js','utf8'),ctx);const f=ctx.window.Fixtures;
 f.data={matches:[{round:1,played:true},{round:4,played:true},{round:5,played:false,time:''},{round:6,played:false,time:'19:00'}]};
 assert.equal(f.defaultRound(),'4','Later confirmed fixtures must not skip the immediate next round');
