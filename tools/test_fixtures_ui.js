@@ -44,6 +44,27 @@ f.data=allData;f.reportData=JSON.parse(fs.readFileSync('data/actas/2645766.json'
 assert.deepEqual(Array.from(report.result),['2','2']);assert.equal(report.teams[0].starters.length,5);assert.equal(report.teams[1].starters.length,5);
 assert.equal(report.teams[0].bench.length,6);assert.equal(report.goals.length,4);assert.equal(report.referees.length,3);
 assert.equal(report.teams[0].cards.length,3);assert.equal(report.teams[1].cards.length,4);
-f.reportSide=0;const localReport=f.report('2645766');assert(localReport.includes('acta-scoreboard'));assert.equal((localReport.match(/alt="Escudo de /g)||[]).length,4);assert(localReport.includes('David Copete Rivero'));
+f.reportSide=0;const localReport=f.report('2645766');assert(localReport.includes('acta-scoreboard'));assert.equal((localReport.match(/alt="Escudo de /g)||[]).length,4+report.goals.length+report.teams.reduce((sum,t)=>sum+t.cards.length,0));assert(localReport.includes('David Copete Rivero'));
 f.reportSide=1;const awayReport=f.report('2645766');assert(awayReport.includes('Petru Emanuel Horodinca'));assert(!awayReport.includes('David Copete Rivero'));
 console.log('Structured lineups, goal minutes, referee roles, cards and both club crests verified');
+
+const events=f.reportEvents(report);
+assert.equal(events.length,11);
+assert.deepEqual(Array.from(events,e=>e.minute),["5'","13'","16'","16'","18'","21'","27'","27'","33'","36'","38'"]);
+assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','card','card','goal','goal','card','card','card','goal']);
+assert.equal(events.find(e=>e.type==='Gol en propia puerta').side,1,'An own goal must carry its author’s team crest');
+assert.equal(events.find(e=>e.name==='AGUILERA CABALLERO, RAFAEL').side,1,'Cards for staff also retain the team');
+const timeline=f.reportTimeline(report,match);
+assert(timeline.includes('aria-label="Goles y tarjetas por minuto"'));
+assert.equal((timeline.match(/class="acta-timeline-crest"/g)||[]).length,11);
+assert(!timeline.includes(report.teams[0].name+'</small>'));
+assert(!timeline.includes(report.teams[1].name+'</small>'));
+assert(timeline.includes('own-goal'));
+assert.equal((timeline.match(/acta-timeline-score/g)||[]).length,4);
+const unusual={goals:[{minute:"20+2'",name:'Añadido',type:'Gol',side:0},{minute:"20'",name:'Antes',type:'Gol',side:1},{minute:'',name:'Pendiente',type:'Gol',side:-1}],teams:[{cards:[{minute:"3'",type:'Tarjeta roja',name:'Roja'},{minute:"20+1'",type:'Segunda amarilla',name:'Expulsado'}]},{cards:[]}]};
+assert.deepEqual(Array.from(f.reportEvents(unusual),e=>e.name),['Roja','Antes','Expulsado','Añadido','Pendiente']);
+assert(f.reportEventIcon({kind:'card',type:'Segunda amarilla'}).includes('acta-card double'));
+assert(f.reportEventIcon({kind:'card',type:'Tarjeta roja'}).includes('acta-card red'));
+const fallback=f.reportModel({blocks:[{kind:'table',rows:[['Local','','Visitante'],['','2 - 1','']]},{kind:'heading',text:'Goles'},{kind:'table',rows:[['Gol · 1 - 0',"(5') Jugador desconocido"],['Gol en propia puerta · 2 - 0',"(6') Otro jugador"],['Gol de penalti · 2 - 1',"(7') Rival"]]}]},{home:'Local',away:'Visitante'});
+assert.deepEqual(Array.from(fallback.goals,e=>e.side),[0,1,1]);
+console.log('Combined event chronology, author crests, stoppage minutes, staff cards, goal types and missing-roster fallback verified');
