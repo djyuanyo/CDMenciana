@@ -145,11 +145,20 @@ def sync():
     logos={}
     for html in pages.values():logos.update(team_crests(html))
     apply_crests(matches,table,logos)
-    scorers_url=PREFIX+'NFG_CMP_Goleadores?'+DATA_QUERY+'&CodJornada='+str(min(next_round,30))
-    goal_rows=scorers(get(scorers_url))
-    roster_rows=roster(get(ROSTER_SOURCE,'utf-8'))
-    club=next(r for r in table if is_club(r['team']))
     previous=json.loads((ROOT/'data/fixtures.json').read_text()) if (ROOT/'data/fixtures.json').exists() else {}
+    scorers_url=PREFIX+'NFG_CMP_Goleadores?'+DATA_QUERY+'&CodJornada='+str(current)
+    try:goal_rows=scorers(get(scorers_url))
+    except (ValueError,OSError) as error:
+        if not previous.get('scorers'):raise
+        goal_rows=previous['scorers']
+        scorers_url=previous.get('scorers_source',scorers_url)
+        print(f'Goleadores pendientes: {error}; se actualizan los horarios',flush=True)
+    try:roster_rows=roster(get(ROSTER_SOURCE,'utf-8'))
+    except (ValueError,OSError) as error:
+        if not previous.get('roster'):raise
+        roster_rows=previous['roster']
+        print(f'Plantilla pendiente: {error}; se actualizan los horarios',flush=True)
+    club=next(r for r in table if is_club(r['team']))
     results_status=verify_results(matches,club,previous)
     payload=dict(results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
