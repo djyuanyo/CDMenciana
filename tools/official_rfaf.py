@@ -137,7 +137,11 @@ def sync():
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
         published=matches  # Every published future kickoff must be refreshed.
         pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
-        for match in published:enrich(match,pages[match['source']])
+        for match in published:
+            try:enrich(match,pages[match['source']])
+            except ValueError as error:
+                if match['played'] or str(error)!='Club missing from official round':raise
+                print(f"Round {match['round']}: kickoff not published yet",flush=True)
     logos={}
     for html in pages.values():logos.update(team_crests(html))
     apply_crests(matches,table,logos)
