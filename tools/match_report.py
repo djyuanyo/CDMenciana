@@ -1,5 +1,5 @@
 """Extract the public acta into data, never federation HTML or scripts."""
-import concurrent.futures, datetime, hashlib, json, re, subprocess, urllib.parse
+import concurrent.futures, datetime, hashlib, html as html_lib, json, re, subprocess, urllib.parse
 from sync_fixtures import Document,normalize
 from official_rfaf import visible
 
@@ -60,6 +60,22 @@ def player_refs_from_node(root,css=''):
         names=re.findall(r'''([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' -]{2,},\s*[A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' -]{1,60})''',window)
         if names:
             name=clean(names[-1]);players.setdefault(person_key(name),{'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url,'photo':''})
+    return list(players.values())
+
+def raw_player_refs(source,acta_id=''):
+    players={}
+    for hit in re.finditer(r'(?i)(?:jugador|cod[_-]?jugador)\\s*(?:=|%3D|:)\\s*["\\']?(\\d{1,12})',source):
+        player_id=hit.group(1);window=source[max(0,hit.start()-700):min(len(source),hit.end()+700)]
+        plain=clean(html_lib.unescape(re.sub(r'<[^>]+>',' ',window)))
+        names=re.findall(r'''([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' .-]{1,70},\\s*[A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' .-]{1,70})''',plain)
+        if not names:continue
+        name=min(names,key=lambda n:abs(plain.find(n)-len(plain)//2))
+        query={'cod_primaria':'3000328','jugador':player_id}
+        if str(acta_id).isdigit():query.update(codacta=str(acta_id),nueva_ventana='0')
+        url='https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?'+urllib.parse.urlencode(query)
+        photos=re.findall(r'''(?:src|data-src)\\s*=\\s*["']([^"']*(?:Jugador|jugador|pimg)[^"']*\\.(?:jpe?g|png|webp)[^"']*)["']''',window,re.I)
+        photo=next((safe_image(html_lib.unescape(x),url) for x in photos if safe_image(html_lib.unescape(x),url)),'')
+        players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':clean(name),'profile_url':url,'photo':photo,'rfaf_id':player_id,'acta_id':str(acta_id or '')}
     return list(players.values())
 
 def player_refs(html):
@@ -189,6 +205,8 @@ def report(html):
         for c in n.content:walk(c)
     walk(root);flush()
     if len(blocks)<10:raise ValueError('Incomplete acta')
+    raw=raw_player_refs(html)
+    for ref in raw:players.setdefault(person_key(ref['name']),ref)
     return {'blocks':blocks,'players':list(players.values())}
 
 def sync_reports(matches,get,root):
