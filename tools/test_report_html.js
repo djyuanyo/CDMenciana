@@ -32,3 +32,16 @@ for(const row of rows){
 assert.equal(rows[0].querySelector('time').textContent,"38'");
 assert.equal(dom.window.document.querySelectorAll('.acta-timeline-event .acta-timeline-score').length,4);
 console.log('Timeline DOM keeps the author crest before the minute, separates the two teams and omits repeated team names');
+
+const linked=fullModel.teams[0].starters[0];
+f.reportData={...fullReport,players:[{id:'1234abcd',name:linked.name,profile_url:'https://www.rfaf.es/pnfg/NPcd/NFG_Jugador?jugador=77',photo:'https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/77.jpg',profile_updated_at:new Date().toISOString(),stats:[{title:'Temporada 2026-2027',rows:[['Temporada','Partidos','Goles'],['2026-2027','4','3']]}]}]};
+const decorated=f.decorateReportPlayers(f.report('2645766'),'2645766');
+dom.window.document.body.innerHTML=decorated;
+const playerLinks=[...dom.window.document.querySelectorAll('a[data-player-link]')];
+assert(playerLinks.length>=1);
+assert(playerLinks.every(a=>a.getAttribute('href')==='#jugador=1234abcd&acta=2645766'));
+assert(playerLinks.some(a=>a.querySelector('img.acta-player-avatar')?.src.includes('/pnfg/pimg/Jugadores/77.jpg')));
+const profile=f.player('1234abcd','2645766');
+assert(profile.includes('PERFIL RFAF'));assert(profile.includes('Estadísticas RFAF'));assert(profile.includes('2026-2027'));
+assert(profile.includes('data-player-back'));assert(!profile.includes('href="https://www.rfaf.es'));
+console.log('RFAF player photos are embedded throughout the acta and player statistics stay inside the app');
