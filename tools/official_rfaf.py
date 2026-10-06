@@ -126,6 +126,15 @@ def sync():
         req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36','Accept':'text/html,application/xhtml+xml','Referer':SOURCE})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
+            if not raw and 'NFG_CmpPartido' in url:
+                import subprocess,tempfile
+                with tempfile.TemporaryDirectory() as directory:
+                    path=directory+'/public-cookies.txt'
+                    jar=http.cookiejar.MozillaCookieJar(path)
+                    cookies=next(h.cookiejar for h in opener.handlers if isinstance(h,urllib.request.HTTPCookieProcessor))
+                    for cookie in cookies:jar.set_cookie(cookie)
+                    jar.save(ignore_discard=True,ignore_expires=True)
+                    raw=subprocess.check_output(['curl','--fail','--silent','--show-error','--location','--max-time','40','--cookie',path,'--cookie-jar',path,'--referer',SOURCE,url],timeout=45)
             html=raw.decode(encoding)
             if 'No se ha aceptado el cookie' in html:raise ValueError('Public RFAF session failed')
             return html

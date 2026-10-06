@@ -1,5 +1,5 @@
 """Extract the public acta into data, never federation HTML or scripts."""
-import re
+import re,subprocess
 from sync_fixtures import Document
 from official_rfaf import visible
 
@@ -58,7 +58,7 @@ def sync_reports(matches,get,root):
             for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
                 target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw)
             return 1
-        except (ValueError,OSError) as error:
+        except (ValueError,OSError,subprocess.SubprocessError) as error:
             print(f'Acta {id} pendiente: {error}',flush=True);return 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:count=sum(pool.map(fetch,urls.items()))
     print(f'Updated {count} public match reports',flush=True)
