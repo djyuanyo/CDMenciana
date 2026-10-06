@@ -63,27 +63,27 @@ public class MainActivity extends Activity {
             root.post(root::requestApplyInsets);
         }else root.setFitsSystemWindows(true);
     }
-    /** Public sports data only. Never credentials or private member information. */
-    private synchronized android.webkit.WebResourceResponse fixturesResponse(boolean refresh) {
-        java.io.File cache=new java.io.File(getFilesDir(),"fixtures.json");
+    /** Public club content only. Never credentials or private member information. */
+    private synchronized android.webkit.WebResourceResponse publicDataResponse(String filename,boolean refresh) {
+        java.io.File cache=new java.io.File(getFilesDir(),filename);
         byte[] data=null;String source="bundled";
         try {
             if(!refresh&&cache.exists()&&System.currentTimeMillis()-cache.lastModified()<300000){data=java.nio.file.Files.readAllBytes(cache.toPath());source="cached";}
             if(data==null){
-                HttpURLConnection connection=(HttpURLConnection)new URL("https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/fixtures.json").openConnection();
+                HttpURLConnection connection=(HttpURLConnection)new URL("https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/"+filename).openConnection();
                 connection.setConnectTimeout(5000);connection.setReadTimeout(5000);connection.setInstanceFollowRedirects(false);
                 try {
                     if(connection.getResponseCode()!=200)throw new java.io.IOException("Source unavailable");
                     try(InputStream input=connection.getInputStream();ByteArrayOutputStream output=new ByteArrayOutputStream()){
                         byte[] buf=new byte[4096];int count;while((count=input.read(buf))!=-1){if(output.size()+count>524288)throw new java.io.IOException("Data limit");output.write(buf,0,count);}data=output.toByteArray();
                     }
-                    JSONObject parsed=new JSONObject(new String(data,StandardCharsets.UTF_8));if(parsed.getJSONArray("matches").length()==0)throw new java.io.IOException("Empty calendar");
+                    JSONObject parsed=new JSONObject(new String(data,StandardCharsets.UTF_8));int itemCount=parsed.getJSONArray(filename.equals("news.json")?"news":"matches").length();if(!filename.equals("news.json")&&itemCount==0)throw new java.io.IOException("Empty calendar");
                     java.nio.file.Files.write(cache.toPath(),data);source="live";
                 }finally{connection.disconnect();}
             }
         }catch(Exception ignored){data=null;}
         if(data==null)try{data=java.nio.file.Files.readAllBytes(cache.toPath());source="cached";}catch(Exception ignored){}
-        if(data==null)try(InputStream in=getAssets().open("fixtures.json");ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1)out.write(b,0,n);data=out.toByteArray();}catch(Exception ignored){}
+        if(data==null)try(InputStream in=getAssets().open(filename);ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1)out.write(b,0,n);data=out.toByteArray();}catch(Exception ignored){}
         try{JSONObject json=new JSONObject(new String(data,StandardCharsets.UTF_8));json.put("connection_state",source);data=json.toString().getBytes(StandardCharsets.UTF_8);}catch(Exception ignored){data="{\"matches\":[],\"connection_state\":\"unavailable\"}".getBytes(StandardCharsets.UTF_8);}
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(data));
     }
@@ -97,7 +97,7 @@ public class MainActivity extends Activity {
             @Override public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest req){
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
-                    if("fixtures.json".equals(name))return fixturesResponse(req.getUrl().getQueryParameter("refresh")!=null);
+                    if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
                     if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}

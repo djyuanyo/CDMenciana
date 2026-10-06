@@ -1,10 +1,10 @@
-name: Actualizar partidos RFAF
+name: Actualizar noticias del club
 on:
   push:
     branches: [main]
-    paths: ['tools/*.py', '.github/workflows/sync-fixtures.yml']
+    paths: ['tools/sync_news.py', 'tools/club_content.py', '.github/workflows/sync-news.yml']
   schedule:
-    - cron: '17 */2 * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,14 +19,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python tools/sync_fixtures.py
-      - name: Guardar datos públicos actualizados
+      - run: python tools/sync_news.py
+      - name: Guardar noticias actualizadas
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/fixtures.json android/app/src/main/assets/fixtures.json server/static/fixtures.json
+          git add data/news.json server/static/news.json android/app/src/main/assets/news.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Actualizar calendario público RFAF'
+            git commit -m 'Actualizar noticias públicas del club'
             git pull --rebase origin main
             git push origin HEAD:main
           fi

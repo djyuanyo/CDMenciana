@@ -22,6 +22,11 @@ class AccessTest(unittest.TestCase):
         return r.status,json.loads(r.read()),r.headers.get('Set-Cookie','')
     def login(self,name):
         status,_,cookie=self.request('login',{'email':name+'@club.es','password':'long-password'});self.assertEqual(status,200);return cookie.split(';')[0]
+    def test_public_news_and_fixtures_json(self):
+        for path,key in [('/news.json','news'),('/fixtures.json','matches')]:
+            with urllib.request.urlopen(self.url+path) as response:
+                self.assertEqual(200,response.status)
+                self.assertIsInstance(json.loads(response.read())[key],list)
     def test_role_isolation(self):
         for name,expected in [('pending',{'public'}),('member',{'public','member'}),('player',{'public','player'}),('both',{'public','member','player'})]:
             cookie=self.login(name);status,data,_=self.request('content',cookie=cookie);self.assertEqual(status,200);self.assertEqual({x['audience'] for x in data['items']},expected)

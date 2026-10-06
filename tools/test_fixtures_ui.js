@@ -18,3 +18,5 @@ const scorers=f.scorers();assert.equal((scorers.match(/scorer-row our-club/g)||[
 f.data=actual;assert(f.data.roster.length>0&&f.data.scorers.length>0);
 const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.esc(p.name)));assert(roster.includes('Dorsal '+p.number));const photo=f.photo(p);if(photo.startsWith('players/'))assert(fs.existsSync('android/app/src/main/assets/'+photo));else assert(photo.startsWith('https://cdmenciana.es/images/jugadores/'));}
 console.log('Scorer highlighting and roster names, shirt numbers and photos verified');
+
+f.newsData=JSON.parse(fs.readFileSync('data/news.json','utf8'));const news=f.news();for(const n of f.newsData.news){assert(news.includes(f.esc(n.title)));assert(news.includes(f.esc(n.url)));}assert(!news.includes('PRÓXIMO PARTIDO'));console.log('Home news cards and original article links verified');

@@ -3,7 +3,7 @@ let page='Inicio';
 function render(){
  CDM.shell(page,null);
  let body='';
- if(page==='Inicio')body=Fixtures.home()+CDM.accessTiles()+'<div class="section-heading"><h2>Actualidad del club</h2></div>'+CDM.empty('La próxima historia empieza aquí','Las noticias del equipo se publicarán en este espacio.','ball');
+ if(page==='Inicio')body=Fixtures.news();
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Club')body=Fixtures.roster();
  if(page==='Goleadores')body=Fixtures.scorers();

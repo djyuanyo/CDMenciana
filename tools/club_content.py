@@ -32,3 +32,21 @@ def roster(html):
     if not players or len(players)>50:raise ValueError('Club roster missing')
     if len({p['number'] for p in players})!=len(players):raise ValueError('Duplicate club shirt number')
     return players
+
+NEWS_SOURCE='https://cdmenciana.es/noticias/'
+def news(html):
+    root=Document(html).root;items=[]
+    for card in root.find('article','news-card'):
+        headings=card.find('h3') or card.find('h2');times=card.find('time');links=card.find('a');imgs=card.find('img')
+        if not headings or not times or not links:raise ValueError('Incomplete club news card')
+        url=urljoin(NEWS_SOURCE,links[0].attrs.get('href',''))
+        if not url.startswith(NEWS_SOURCE):raise ValueError('Unexpected news link')
+        date=times[0].attrs.get('datetime','')[:10]
+        import datetime
+        datetime.date.fromisoformat(date)
+        category=next((n.text() for n in card.find('span') if n.text()),'Noticias')
+        items.append(dict(title=headings[0].text(),date=date,category=category,url=url,image=urljoin(NEWS_SOURCE,imgs[0].attrs.get('src','')) if imgs else ''))
+    if len(items)>100:raise ValueError('Unexpected news count')
+    if not items and not any('noticias' in h.text().lower() for h in root.find('h1')):raise ValueError('Club news index missing')
+    if len({n['url'] for n in items})!=len(items):raise ValueError('Duplicate news links')
+    return sorted(items,key=lambda n:n['date'],reverse=True)

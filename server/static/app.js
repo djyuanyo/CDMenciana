@@ -10,7 +10,7 @@ function content(rows){return rows.length?rows.map(i=>`<article class="card"><sp
 async function render(){
  const pages=['Inicio','Partidos','Clasificación','Goleadores','Club','Más','Mi cuenta'];if(user?.active&&(user.member||user.admin))pages.push('Socios');if(user?.active&&(user.player||user.admin))pages.push('Jugadores');if(user?.active&&user.admin)pages.push('Administración');if(!pages.includes(page))page='Mi cuenta';
  CDM.shell(page,user);
- if(page==='Inicio')main.innerHTML=Fixtures.home()+CDM.accessTiles()+'<div class="section-heading"><h2>Actualidad del club</h2></div>'+content(items.filter(i=>i.audience==='public'&&i.kind==='news'));
+ if(page==='Inicio')main.innerHTML=Fixtures.news();
  if(page==='Más')main.innerHTML=CDM.menu(user);
  if(page==='Goleadores')main.innerHTML=Fixtures.scorers();
  if(page==='Partidos')main.innerHTML=Fixtures.calendar();
