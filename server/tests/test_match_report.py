@@ -1,7 +1,7 @@
 import sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from match_report import report
+from match_report import report,player_profile
 class MatchReportTests(unittest.TestCase):
     def test_visible_data_cards_goals_and_metadata_without_scripts(self):
         html='<div class="container"><h4>Ficha de Partido</h4>'+''.join('<h5>'+name+'</h5>' for name in ['Jornada 1','Árbitros','Goles','Estadio','Local','Titulares','Suplentes','Cuerpo Técnico','Tarjetas','Visitante'])
@@ -9,5 +9,18 @@ class MatchReportTests(unittest.TestCase):
         blocks=report(html)['blocks'];text=str(blocks)
         self.assertIn('Tarjeta amarilla',text);self.assertIn('Gol en propia puerta · 02 - 2',text)
         self.assertIn('Suplentes',text);self.assertNotIn('alert',text)
+
+    def test_player_link_photo_and_public_stats_are_preserved(self):
+        html='''<div class="container"><h4>Ficha de Partido</h4><h5>Local</h5><h5>Titulares</h5>
+        <table><tr><td>10</td><td><a href="/pnfg/NPcd/NFG_Jugador?cod_primaria=1000120&jugador=77">SANCHEZ, ALBERTO</a></td></tr></table>
+        <h5>Suplentes</h5><h5>Cuerpo Técnico</h5><h5>Tarjetas</h5><h5>Visitante</h5><h5>Titulares</h5>
+        <table><tr><td>1</td><td>LOPEZ, JUAN</td></tr></table><h5>Suplentes</h5><h5>Cuerpo Técnico</h5><h5>Tarjetas</h5></div>'''
+        data=report(html);self.assertEqual(1,len(data['players']))
+        player=data['players'][0];self.assertEqual('SANCHEZ, ALBERTO',player['name'])
+        self.assertTrue(player['profile_url'].startswith('https://www.rfaf.es/pnfg/NPcd/'))
+        profile=player_profile('''<main><img class="foto-jugador" width="180" height="220" src="/pnfg/pimg/Jugadores/77.jpg">
+        <table><tr><th>Temporada</th><th>Partidos</th><th>Goles</th></tr><tr><td>2026-2027</td><td>4</td><td>3</td></tr></table></main>''',player['profile_url'],player['name'])
+        self.assertEqual('https://www.rfaf.es/pnfg/pimg/Jugadores/77.jpg',profile['photo_source'])
+        self.assertTrue(profile['sections']);self.assertIn('Partidos',str(profile['sections']))
     def test_cookie_wall_is_not_an_acta(self):
         with self.assertRaises(ValueError):report('<html>Cookies pendientes</html>')

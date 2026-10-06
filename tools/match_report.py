@@ -1,19 +1,80 @@
 """Extract the public acta into data, never federation HTML or scripts."""
-import re,subprocess
+import concurrent.futures, datetime, hashlib, json, re, subprocess, urllib.parse
 from sync_fixtures import Document
 from official_rfaf import visible
+
+RFAF_HOSTS={'www.rfaf.es','rfaf.es'}
+PROFILE_CACHE='data/rfaf-player-profiles.json'
+
+def clean(text):return ' '.join(str(text or '').split())
+def person_key(name):return re.sub(r'\\s+',' ',clean(name)).upper()
+def safe_profile_url(href):
+    try:
+        url=urllib.parse.urljoin('https://www.rfaf.es',href or '');p=urllib.parse.urlparse(url)
+        if p.scheme!='https' or p.hostname not in RFAF_HOSTS or not p.path.startswith('/pnfg/NPcd/'):return ''
+        if any(x in p.path for x in ('NFG_CmpPartido','NFG_CmpJornada','NFG_VisClasificacion','NFG_CMP_Goleadores')):return ''
+        return url
+    except ValueError:return ''
+
+def safe_image(src,base):
+    try:
+        url=urllib.parse.urljoin(base,src or '');p=urllib.parse.urlparse(url);host=(p.hostname or '').lower()
+        return url if p.scheme=='https' and (host in RFAF_HOSTS or host.endswith('.rfaf.es') or host.endswith('.filesnovanet.es')) else ''
+    except ValueError:return ''
+
+def player_profile(html,url,name):
+    root=Document(html).root;candidates=[];wanted=person_key(name).split(',')[0].split()
+    for img in root.find('img'):
+        src=safe_image(img.attrs.get('src',''),url)
+        if not src:continue
+        meta=' '.join([src,img.attrs.get('class',''),img.attrs.get('id',''),img.attrs.get('alt',''),img.attrs.get('title','')]).lower()
+        if any(x in meta for x in ('escudo','logo','banner','cookie','icon','spacer','loading','tarj_','publicidad','social')):continue
+        score=8 if re.search(r'jugador|futbolista|player|persona|foto|photo|retrato',meta) else 0
+        if '/pimg/' in meta or 'novanet' in meta:score+=2
+        if any(token.lower() in meta for token in wanted if len(token)>3):score+=3
+        try:
+            w=int(re.sub(r'\\D','',img.attrs.get('width','')) or 0);h=int(re.sub(r'\\D','',img.attrs.get('height','')) or 0)
+            if w>=70 and h>=70:score+=2
+        except ValueError:pass
+        if re.search(r'\\.(?:jpe?g|png|webp)(?:\\?|$)',src,re.I):score+=1
+        candidates.append((score,src))
+    candidates.sort(key=lambda x:x[0],reverse=True);photo=candidates[0][1] if candidates and candidates[0][0]>=2 else ''
+    sections=[];seen=set();tokens=('PARTID','GOLES','GOL ','TARJET','TEMPORADA','EQUIPO','COMPETIC','MINUT','JUGAD','TITULAR','SUPLENT','RESULTADO')
+    for table in root.find('table'):
+        rows=[]
+        for tr in table.find('tr'):
+            cells=[clean(visible(cell)) for cell in tr.children if cell.tag in ('td','th')]
+            if any(cells):rows.append(cells)
+        if len(rows)<2:continue
+        sample=' '.join(' '.join(r) for r in rows[:8]).upper();numeric=sum(bool(re.search(r'\\d',x)) for r in rows for x in r)
+        if not any(t in sample for t in tokens) and numeric<max(2,len(rows)//2):continue
+        compact=[r[:8] for r in rows[:24]];sig=json.dumps(compact,ensure_ascii=False)
+        if sig in seen:continue
+        seen.add(sig);title=clean(' · '.join(compact[0]))[:120]
+        sections.append({'title':title or 'Estadísticas RFAF','rows':compact})
+        if len(sections)>=4:break
+    return {'name':name,'source':url,'photo_source':photo,'sections':sections,'updated_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+
+def fresh_profile(profile,now):
+    try:return (now-datetime.datetime.fromisoformat(profile.get('updated_at','').replace('Z','+00:00'))).total_seconds()<86400
+    except (ValueError,TypeError):return False
 
 def report(html):
     root=Document(html).root
     containers=[n for n in root.find('div','container') if any(h.text()=='Ficha de Partido' for h in n.find('h4'))]
     if not containers:raise ValueError('Acta no disponible en la fuente oficial')
     root=containers[-1];css=' '.join(n.text() for n in root.find('style'))
-    blocks=[];pending=[]
-    def clean(text):return ' '.join(text.split())
+    blocks=[];pending=[];players={}
+    def remember_people(n):
+        for anchor in n.find('a'):
+            name=clean(visible(anchor,css));url=safe_profile_url(anchor.attrs.get('href',''))
+            if url and ',' in name and 4<=len(name)<=120:
+                players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url}
     def flush():
         text=clean(' '.join(pending));pending.clear()
         if text:blocks.append({'kind':'text','text':text})
     def cell(n):
+        remember_people(n)
         text=clean(visible(n,css))
         labels=[]
         for img in n.find('img'):
@@ -43,22 +104,47 @@ def report(html):
         for c in n.content:walk(c)
     walk(root);flush()
     if len(blocks)<10:raise ValueError('Incomplete acta')
-    return {'blocks':blocks}
+    return {'blocks':blocks,'players':list(players.values())}
 
 def sync_reports(matches,get,root):
-    import concurrent.futures,datetime,json,urllib.parse
     urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:m['acta_url'] for m in matches if m.get('played') and m.get('acta_url')}
-    def fetch(item):
+    def fetch_report(item):
         id,url=item
         try:
             html=get(url)
             if not html.strip():html=get('https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&cod_acta='+id)
             data=report(html);data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
-            raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
-            for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
-                target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw)
-            return 1
+            return id,data
         except (ValueError,OSError,subprocess.SubprocessError) as error:
-            print(f'Acta {id} pendiente: {error}',flush=True);return 0
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:count=sum(pool.map(fetch,urls.items()))
-    print(f'Updated {count} public match reports',flush=True)
+            print(f'Acta {id} pendiente: {error}',flush=True);return id,None
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:reports=dict(pool.map(fetch_report,urls.items()))
+
+    cache_path=root/PROFILE_CACHE
+    try:cache=json.loads(cache_path.read_text(encoding='utf-8')).get('profiles',{})
+    except (OSError,ValueError,AttributeError):cache={}
+    refs={p['profile_url']:p for data in reports.values() if data for p in data.get('players',[]) if p.get('profile_url')}
+    now=datetime.datetime.now(datetime.timezone.utc);refresh=[(url,ref) for url,ref in refs.items() if url not in cache or not fresh_profile(cache[url],now)]
+    def fetch_profile(item):
+        url,ref=item
+        try:return url,player_profile(get(url),url,ref['name'])
+        except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
+            print(f"Perfil RFAF pendiente {ref['name']}: {error}",flush=True)
+            return url,cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''})
+    if refresh:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+            for url,profile in pool.map(fetch_profile,refresh):cache[url]=profile
+    cache_path.parent.mkdir(parents=True,exist_ok=True);cache_path.write_text(json.dumps({'updated_at':now.isoformat(),'profiles':cache},ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+
+    count=0
+    for id,data in reports.items():
+        if not data:continue
+        for ref in data.get('players',[]):
+            profile=cache.get(ref.get('profile_url',''),{})
+            ref['photo']=profile.get('photo_source','');ref['stats']=profile.get('sections',[]);ref['profile_updated_at']=profile.get('updated_at','')
+        raw=json.dumps(data,ensure_ascii=False,indent=2)+'\\n'
+        for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
+            target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
+        count+=1
+    print(f'Updated {count} public match reports and {len(refs)} linked RFAF player profiles',flush=True)
+    return count
+
