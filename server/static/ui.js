@@ -9,7 +9,7 @@ window.CDM={
   nav.innerHTML=[['Inicio','home','Inicio'],['Partidos','calendar','Partidos'],['Club','team','Equipo'],['Más','more','Más']].map(([p,i,l])=>`<button data-page="${p}" class="${section===p?'selected':''}" ${section===p?'aria-current="page"':''}>${this.icon(i)}<span>${l}</span></button>`).join('');
   const teamPages=['Inicio','Partidos','Club','Clasificación','Goleadores'];
   banner.innerHTML=teamPages.includes(page)?`<div class="team-cover"><svg class="court" viewBox="0 0 500 240" aria-hidden="true"><rect x="80" y="15" width="340" height="210" rx="2"/><path d="M250 15v210M80 90h35v60H80m340-60h-35v60h35"/><circle cx="250" cy="120" r="35"/><path d="M80 60a60 60 0 0 1 0 120m340-120a60 60 0 0 0 0 120"/></svg><div class="cover-copy"><span class="eyebrow">DOÑA MENCÍA · NUESTRO EQUIPO</span><h1 class="category-name">${Fixtures.esc(Fixtures.clubName())}</h1><span class="team-tag">${this.icon('ball')} FÚTBOL SALA</span></div><img class="cover-crest" src="${Fixtures.esc(Fixtures.clubCrest())}" alt=""></div>`:'';
-  tabs.innerHTML=teamPages.includes(page)?[['Club','Plantilla'],['Partidos','Calendario'],['Goleadores','Goleadores'],['Clasificación','Clasificación']].map(([p,l])=>`<button data-page="${p}" class="${page===p?'active':''}">${l}</button>`).join(''):'';
+  tabs.innerHTML=teamPages.includes(page)?[['Partidos','Calendario'],['Clasificación','Clasificación'],['Club','Plantilla'],['Goleadores','Goleadores']].map(([p,l])=>`<button data-page="${p}" class="${page===p?'active':''}">${l}</button>`).join(''):'';
   tabs.hidden=!teamPages.includes(page);
  },
  empty(title,text,icon='ball'){return `<section class="card empty-panel"><div class="empty-icon">${this.icon(icon)}</div><h2>${title}</h2><p>${text}</p></section>`},
