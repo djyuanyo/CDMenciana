@@ -249,21 +249,28 @@ def sync_reports(matches,get,root):
             team_refs=[]
             for team_url in dict.fromkeys([match.get('home_team_url',''),match.get('away_team_url','')]):
                 if not team_url:continue
-                try:
-                    team_html=get(team_url);found=player_refs(team_html);team_refs.extend(found)
-                    if not found:
-                        hints=[]
-                        for hit in re.finditer(r'(?i)(jugador|estadisticas|ficha|licencia|persona|plantilla)',team_html):
-                            snippet=clean(team_html[max(0,hit.start()-100):min(len(team_html),hit.end()+180)])
-                            if snippet not in hints:hints.append(snippet)
-                            if len(hints)>=8:break
-                        hrefs=[]
-                        for href in re.findall(r'''(?:href|src|url)\s*[=:]\s*["']([^"']+)''',team_html,re.I):
-                            if href not in hrefs:hrefs.append(href)
-                            if len(hrefs)>=24:break
-                        plain=clean(re.sub(r'<[^>]+>',' ',team_html))[:900]
-                        print(f'RFAF team profile hints {team_url}: '+json.dumps({'hints':hints,'links':hrefs,'text':plain},ensure_ascii=False),flush=True)
-                except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
+                parsed_team=urllib.parse.urlparse(team_url);leaf=parsed_team.path.rsplit('/',1)[-1] or 'NFG_VisEquipos'
+                alt=urllib.parse.urlunparse(parsed_team._replace(path='/pnfg/NPcd/'+leaf))
+                found=[];team_html=''
+                for candidate_team in dict.fromkeys([team_url,alt]):
+                    try:
+                        html=get(candidate_team);refs=player_refs(html)
+                        if not team_html:team_html=html
+                        if refs:found=refs;team_html=html;break
+                    except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
+                team_refs.extend(found)
+                if not found and team_html:
+                    hints=[]
+                    for hit in re.finditer(r'(?i)(jugador|estadisticas|ficha|licencia|persona|plantilla|equipo)',team_html):
+                        snippet=clean(team_html[max(0,hit.start()-100):min(len(team_html),hit.end()+180)])
+                        if snippet not in hints:hints.append(snippet)
+                        if len(hints)>=8:break
+                    hrefs=[]
+                    for href in re.findall(r'''(?:href|src|url)\s*[=:]\s*["']([^"']+)''',team_html,re.I):
+                        if href not in hrefs:hrefs.append(href)
+                        if len(hrefs)>=30:break
+                    plain=clean(re.sub(r'<[^>]+>',' ',team_html))[:1200]
+                    print(f'RFAF team profile hints {team_url}: '+json.dumps({'hints':hints,'links':hrefs,'text':plain},ensure_ascii=False),flush=True)
             picked=participant_refs(old,team_refs)
             if picked:
                 data=dict(old);data['players']=[profile_for_acta(ref,id) for ref in picked];data['players_source']='RFAF team rosters';data['players_updated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
