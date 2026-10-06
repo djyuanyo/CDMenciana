@@ -6,7 +6,7 @@ from official_rfaf import visible
 def report(html):
     root=Document(html).root
     containers=[n for n in root.find('div','container') if any(h.text()=='Ficha de Partido' for h in n.find('h4'))]
-    if not containers:raise ValueError('Acta not published: '+str([n.text()[:150] for n in root.find('title')+root.find('h4')])+ ' '+repr(html[:300])+ ' bytes='+str(len(html)))
+    if not containers:raise ValueError('Acta no disponible en la fuente oficial')
     root=containers[-1];css=' '.join(n.text() for n in root.find('style'))
     blocks=[];pending=[]
     def clean(text):return ' '.join(text.split())
@@ -23,7 +23,7 @@ def report(html):
         for i in n.find('i'):
             if 'fa-futbol' in i.attrs.get('class',''):
                 style=i.attrs.get('style','').lower()
-                labels.append('Gol en propia puerta' if 'red' in style else 'Gol de penalti' if 'blue' in style else 'Gol')
+                labels.append('Gol en propia puerta' if 'red' in style else 'Gol de penalti' if 'blue' in style or 'rgb(21,114,228)' in style.replace(' ','') else 'Gol')
         return clean(' · '.join(labels+([text] if text else [])))
     def walk(n):
         if isinstance(n,str):pending.append(n);return
