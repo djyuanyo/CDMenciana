@@ -6,7 +6,7 @@ from official_rfaf import visible
 def report(html):
     root=Document(html).root
     containers=[n for n in root.find('div','container') if any(h.text()=='Ficha de Partido' for h in n.find('h4'))]
-    if not containers:raise ValueError('Acta not published: '+str([n.text()[:150] for n in root.find('title')+root.find('h4')])+ ' '+root.text()[-300:])
+    if not containers:raise ValueError('Acta not published: '+str([n.text()[:150] for n in root.find('title')+root.find('h4')])+ ' '+repr(html[:300])+ ' bytes='+str(len(html)))
     root=containers[-1];css=' '.join(n.text() for n in root.find('style'))
     blocks=[];pending=[]
     def clean(text):return ' '.join(text.split())
