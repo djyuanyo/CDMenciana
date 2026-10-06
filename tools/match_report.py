@@ -1,6 +1,6 @@
 """Extract the public acta into data, never federation HTML or scripts."""
 import concurrent.futures, datetime, hashlib, json, re, subprocess, urllib.parse
-from sync_fixtures import Document
+from sync_fixtures import Document,normalize
 from official_rfaf import visible
 
 RFAF_HOSTS={'www.rfaf.es','rfaf.es'}
@@ -121,8 +121,17 @@ def profile_for_acta(ref,acta_id):
         return out
     except (ValueError,TypeError):return dict(ref)
 
+def person_signature(name):
+    text=normalize(clean(name))
+    tokens=[t for t in re.findall(r'[A-Z0-9]+',text) if not t.isdigit() and t not in ('CAPITAN','CAPITÁN','PORTERO','JUGADOR')]
+    return ' '.join(sorted(tokens))
+
 def participant_refs(report_data,refs):
     known={person_key(r.get('name','')):r for r in refs if r.get('name')}
+    by_signature={}
+    for ref in refs:
+        sig=person_signature(ref.get('name',''))
+        if sig:by_signature.setdefault(sig,[]).append(ref)
     selected={}
     for block in report_data.get('blocks',[]):
         if block.get('kind')!='table':continue
@@ -132,7 +141,9 @@ def participant_refs(report_data,refs):
                 text=re.sub(r'^\([^)]*\)\s*','',text)
                 text=re.sub(r'^(?:Gol(?: en propia puerta| de penalti)?|Tarjeta amarilla|Tarjeta roja|Segunda amarilla)(?:\s*·\s*[^·]+)?\s*·?\s*','',text,flags=re.I)
                 key=person_key(text)
-                if key in known:selected[key]=known[key]
+                if key in known:selected[key]=known[key];continue
+                sig=person_signature(text);matches=by_signature.get(sig,[])
+                if len(matches)==1:selected[person_key(matches[0]['name'])]=matches[0]
     return list(selected.values())
 
 def report(html):
