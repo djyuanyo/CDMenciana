@@ -12,28 +12,35 @@ def person_key(name):return re.sub(r'\s+',' ',clean(name)).upper()
 def safe_profile_url(href):
     try:
         url=urllib.parse.urljoin('https://www.rfaf.es/pnfg/NPcd/',href or '')
-        p=urllib.parse.urlparse(url)
-        if p.scheme!='https' or (p.hostname or '').lower() not in RFAF_HOSTS:return ''
-        if not re.search(r'/pnfg/(?:NPcd/)?NFG_EstadisticasJugador$',p.path,re.I):return ''
-        if not re.fullmatch(r'\d+',urllib.parse.parse_qs(p.query).get('jugador',[''])[0]):return ''
+        p=urllib.parse.urlparse(url);host=(p.hostname or '').lower()
+        if p.scheme!='https' or host not in RFAF_HOSTS:return ''
+        # RFAF has used several player-card routes/parameter names over time.
+        path=p.path.lower();q=urllib.parse.parse_qs(p.query)
+        if not any(token in path for token in ('jugador','estadisticas','persona','licencia','ficha')):return ''
+        ids=[]
+        for key,values in q.items():
+            if any(token in key.lower() for token in ('jug','persona','licen','codigo','cod_')):ids.extend(values)
+        if not any(re.fullmatch(r'\d+',str(value)) for value in ids):return ''
         return url
     except ValueError:return ''
 
 def profile_href(node):
-    values=[node.attrs.get('href',''),node.attrs.get('onclick',''),node.attrs.get('data-href','')]
+    values=[node.attrs.get(k,'') for k in ('href','onclick','data-href','data-url','data-link','data-target','formaction')]
     for value in values:
         if not value:continue
+        value=value.replace(r'\x26','&').replace(r'\u0026','&').replace('&amp;','&')
         direct=safe_profile_url(value)
         if direct:return direct
-        match=re.search(r'''((?:https?://(?:www\.)?rfaf\.es)?/?pnfg/(?:NPcd/)?NFG_EstadisticasJugador\?[^'"<> ]+)''',value,re.I)
-        if match:
-            direct=safe_profile_url(match.group(1).replace(r'\x26','&').replace(r'\u0026','&'))
+        # onclick wrappers frequently contain the real route inside quotes.
+        for match in re.findall(r'''(?:https?://(?:www\.)?rfaf\.es)?/?(?:pnfg/(?:NPcd/)?)?[^'"<> ]*(?:Jugador|Estadisticas|Persona|Licencia|Ficha)[^'"<> ]*''',value,re.I):
+            direct=safe_profile_url(match)
             if direct:return direct
     return ''
 
 def player_refs_from_node(root,css=''):
     players={}
-    for node in [root]+root.find():
+    nodes=[root]+root.find()
+    for node in nodes:
         url=profile_href(node)
         if not url:continue
         name=clean(visible(node,css))
@@ -44,6 +51,15 @@ def player_refs_from_node(root,css=''):
             photo=safe_image(img.attrs.get('src',''),url)
             if photo:break
         players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url,'photo':photo}
+    # Some RFAF team pages expose player ids in script/onclick data rather than anchors.
+    raw=' '.join(clean(n.text()) for n in root.find('script'))
+    for match in re.finditer(r'''(?:NFG_[A-Za-z]*(?:Jugador|Estadisticas|Persona|Licencia|Ficha)[A-Za-z]*\?[^"'<> ]+)''',raw,re.I):
+        url=safe_profile_url(match.group(0).replace(r'\x26','&').replace(r'\u0026','&'))
+        if not url:continue
+        window=raw[max(0,match.start()-180):min(len(raw),match.end()+180)]
+        names=re.findall(r'''([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' -]{2,},\s*[A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' -]{1,60})''',window)
+        if names:
+            name=clean(names[-1]);players.setdefault(person_key(name),{'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url,'photo':''})
     return list(players.values())
 
 def player_refs(html):
