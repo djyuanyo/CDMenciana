@@ -7,12 +7,50 @@ RFAF_HOSTS={'www.rfaf.es','rfaf.es'}
 PROFILE_CACHE='data/rfaf-player-profiles.json'
 
 def clean(text):return ' '.join(str(text or '').split())
-def person_key(name):return re.sub(r'\\s+',' ',clean(name)).upper()
+def person_key(name):return re.sub(r'\s+',' ',clean(name)).upper()
+
 def safe_profile_url(href):
     try:
-        url=urllib.parse.urljoin('https://www.rfaf.es/pnfg/NPcd/',href or '');p=urllib.parse.urlparse(url)
+        url=urllib.parse.urljoin('https://www.rfaf.es/pnfg/NPcd/',href or '')
+        p=urllib.parse.urlparse(url)
         if p.scheme!='https' or (p.hostname or '').lower() not in RFAF_HOSTS:return ''
-        if not re.search(r'/pnfg/(?:NPcd/)?NFG_EstadisticasJugador
+        if not re.search(r'/pnfg/(?:NPcd/)?NFG_EstadisticasJugador$',p.path,re.I):return ''
+        if not re.fullmatch(r'\d+',urllib.parse.parse_qs(p.query).get('jugador',[''])[0]):return ''
+        return url
+    except ValueError:return ''
+
+def profile_href(node):
+    values=[node.attrs.get('href',''),node.attrs.get('onclick',''),node.attrs.get('data-href','')]
+    for value in values:
+        if not value:continue
+        direct=safe_profile_url(value)
+        if direct:return direct
+        match=re.search(r'''((?:https?://(?:www\.)?rfaf\.es)?/?pnfg/(?:NPcd/)?NFG_EstadisticasJugador\?[^'"<> ]+)''',value,re.I)
+        if match:
+            direct=safe_profile_url(match.group(1).replace(r'\x26','&').replace(r'\u0026','&'))
+            if direct:return direct
+    return ''
+
+def player_refs_from_node(root,css=''):
+    players={}
+    for node in [root]+root.find():
+        url=profile_href(node)
+        if not url:continue
+        name=clean(visible(node,css))
+        if ',' not in name:name=clean(node.attrs.get('title','') or node.attrs.get('aria-label',''))
+        if ',' not in name or not 4<=len(name)<=120:continue
+        photo=''
+        for img in node.find('img'):
+            photo=safe_image(img.attrs.get('src',''),url)
+            if photo:break
+        players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url,'photo':photo}
+    return list(players.values())
+
+def player_refs(html):
+    root=Document(html).root
+    css=' '.join(n.text() for n in root.find('style'))
+    return player_refs_from_node(root,css)
+
 def safe_image(src,base):
     try:
         url=urllib.parse.urljoin(base,src or '');p=urllib.parse.urlparse(url);host=(p.hostname or '').lower()
@@ -30,10 +68,10 @@ def player_profile(html,url,name):
         if '/pimg/' in meta or 'novanet' in meta:score+=2
         if any(token.lower() in meta for token in wanted if len(token)>3):score+=3
         try:
-            w=int(re.sub(r'\\D','',img.attrs.get('width','')) or 0);h=int(re.sub(r'\\D','',img.attrs.get('height','')) or 0)
+            w=int(re.sub(r'\D','',img.attrs.get('width','')) or 0);h=int(re.sub(r'\D','',img.attrs.get('height','')) or 0)
             if w>=70 and h>=70:score+=2
         except ValueError:pass
-        if re.search(r'\\.(?:jpe?g|png|webp)(?:\\?|$)',src,re.I):score+=1
+        if re.search(r'\.(?:jpe?g|png|webp)(?:\?|$)',src,re.I):score+=1
         candidates.append((score,src))
     candidates.sort(key=lambda x:x[0],reverse=True);photo=candidates[0][1] if candidates and candidates[0][0]>=2 else ''
     sections=[];seen=set();tokens=('PARTID','GOLES','GOL ','TARJET','TEMPORADA','EQUIPO','COMPETIC','MINUT','JUGAD','TITULAR','SUPLENT','RESULTADO')
@@ -43,7 +81,7 @@ def player_profile(html,url,name):
             cells=[clean(visible(cell)) for cell in tr.children if cell.tag in ('td','th')]
             if any(cells):rows.append(cells)
         if len(rows)<2:continue
-        sample=' '.join(' '.join(r) for r in rows[:8]).upper();numeric=sum(bool(re.search(r'\\d',x)) for r in rows for x in r)
+        sample=' '.join(' '.join(r) for r in rows[:8]).upper();numeric=sum(bool(re.search(r'\d',x)) for r in rows for x in r)
         if not any(t in sample for t in tokens) and numeric<max(2,len(rows)//2):continue
         compact=[r[:8] for r in rows[:24]];sig=json.dumps(compact,ensure_ascii=False)
         if sig in seen:continue
