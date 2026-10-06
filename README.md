@@ -59,11 +59,11 @@ Es una APK de pruebas con firma debug; para distribuir versiones actualizables h
 
 ## Datos deportivos
 
-Fuente propuesta: https://stars.rfaf.es/?delegacion=9&competicion=48466108&grupo=48466109&widget_view=results
+Fuente oficial: https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5
 
-La parte pública está conectada a los datos reales de la RFAF. `tools/sync_fixtures.py` consulta las jornadas del grupo y guarda únicamente los partidos del CD Menciana en `data/fixtures.json`. El workflow **Actualizar partidos RFAF** programa una actualización cada dos horas (GitHub puede retrasar las ejecuciones) y conserva el último conjunto válido si la fuente falla. Se incluye una copia en la APK para usarla sin conexión.
+La parte pública está conectada a los datos reales de la RFAF. `tools/sync_fixtures.py` usa `tools/official_rfaf.py` para consultar el calendario completo, las fechas y los pabellones por jornada y la clasificación de los 16 equipos; guarda únicamente los partidos del CD Menciana en `data/fixtures.json`. El workflow **Actualizar partidos RFAF** programa una actualización cada dos horas (GitHub puede retrasar las ejecuciones) y conserva el último conjunto válido si la fuente falla. Se incluye una copia en la APK para usarla sin conexión.
 
-Android obtiene el JSON público de este repositorio al abrir la app o al pulsar Actualizar, con caché local y respaldo incluido. No necesita hosting para estos datos deportivos. La zona privada sigue requiriendo un servidor de cuentas. Las jornadas que la RFAF indica sin partidos publicados se muestran como pendientes; no se inventan encuentros. Los escudos rivales se cargan de la fuente oficial y el escudo del club conserva la imagen facilitada.
+Android obtiene el JSON público de este repositorio al abrir la app o al pulsar Actualizar, con caché local y respaldo incluido. No necesita hosting para estos datos deportivos. La zona privada sigue requiriendo un servidor de cuentas. Las horas no publicadas se muestran por confirmar. Las fechas que solo aparecen en la cabecera del calendario se etiquetan como orientativas. Se verifica el total de goles y partidos con la clasificación antes de reemplazar los datos. Los escudos rivales se cargan de la fuente oficial y el escudo del club conserva la imagen facilitada.
 
 ## Verificación
 

@@ -7,7 +7,7 @@ function render(){
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Club')body='<div class="section-heading"><h2>Plantilla</h2><span>CD MENCIANA</span></div>'+CDM.empty('Nuestro equipo','Próximamente: fotografías, dorsales y posiciones de los jugadores.','team');
  if(page==='Estadísticas')body='<div class="section-heading"><h2>Estadísticas del equipo</h2></div>'+CDM.empty('Cada partido cuenta','Las estadísticas aparecerán cuando se incorporen los resultados oficiales.','chart');
- if(page==='Clasificación')body='<div class="section-heading"><h2>Clasificación</h2></div>'+CDM.empty('La liga, jornada a jornada','La clasificación oficial todavía no está sincronizada.','chart');
+ if(page==='Clasificación')body=Fixtures.standings();
  if(page==='Más')body=CDM.menu(null);
  if(page==='Mi cuenta')body='<div class="section-heading"><h2>Mi cuenta</h2></div>'+CDM.empty('Tu sitio en el club','El acceso con correo y contraseña estará disponible cuando conectemos el servicio de cuentas.','user')+'<section class="card"><h2>Socios y jugadores</h2><p>Una cuenta, tus accesos. El club asignará el perfil de socio, jugador o ambos tras aprobar tu registro.</p></section>';
  if(page==='Socios')body='<div class="section-heading"><h2>Zona de socios</h2></div><section class="card membercard"><small>CD MENCIANA · CARNET DIGITAL</small><h3>Parte de nuestro club</h3><p>Tu carnet, número de socio y estado de cuota se mostrarán aquí al iniciar sesión.</p><span class="badge">ACCESO DE SOCIOS</span></section>'+CDM.empty('Todo lo que te une al club','Avisos exclusivos y novedades para socios. El servicio de cuentas todavía está pendiente de conexión.','lock');

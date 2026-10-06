@@ -14,7 +14,7 @@ async function render(){
  if(page==='Más')main.innerHTML=CDM.menu(user);
  if(page==='Estadísticas')main.innerHTML=CDM.empty('Estadísticas del equipo','Las estadísticas se incorporarán al conectar los resultados de la competición.','chart');
  if(page==='Partidos')main.innerHTML=Fixtures.calendar();
- if(page==='Clasificación')main.innerHTML='<h2>Clasificación</h2><p>Consulta la fecha de actualización en cada publicación.</p>'+content(items.filter(i=>i.audience==='public'&&i.kind==='standings'));
+ if(page==='Clasificación')main.innerHTML=Fixtures.standings();
  if(page==='Club')main.innerHTML='<section class="card"><h2>CD Menciana Apaga y Vámonos</h2><p>Fútbol sala · Doña Mencía</p></section>'+content(items.filter(i=>i.audience==='public'&&i.kind==='roster'));
  if(page==='Socios')main.innerHTML=`<section class="card membercard"><small>CARNET DIGITAL · SOCIO</small><h3>${esc(user.name)}</h3><p>Número: ${esc(user.number||'Pendiente de asignar')}</p><span class="badge">Cuota: ${user.paid?'Pagada':'Pendiente'}</span></section>`+content(items.filter(i=>i.audience==='member'));
  if(page==='Jugadores')main.innerHTML='<h2>Zona del equipo</h2>'+content(items.filter(i=>i.audience==='player'));

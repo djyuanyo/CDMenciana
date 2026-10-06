@@ -6,7 +6,7 @@ BASE='https://stars.rfaf.es/?delegacion=9&competicion=48466108&grupo=48466109&wi
 ROOT=Path(__file__).resolve().parents[1]
 
 class Node:
-    def __init__(self,tag='',attrs=None): self.tag=tag;self.attrs=dict(attrs or []);self.children=[];self.parts=[]
+    def __init__(self,tag='',attrs=None): self.tag=tag;self.attrs=dict(attrs or []);self.children=[];self.parts=[];self.content=[]
     def text(self): return ' '.join(' '.join(self.parts).split())
     def find(self,tag=None,cls=None):
         result=[]
@@ -17,12 +17,13 @@ class Node:
 class Document(HTMLParser):
     def __init__(self,html):super().__init__(convert_charrefs=True);self.root=Node();self.stack=[self.root];self.feed(html)
     def handle_starttag(self,tag,attrs):
-        node=Node(tag,attrs);self.stack[-1].children.append(node)
+        node=Node(tag,attrs);self.stack[-1].children.append(node);self.stack[-1].content.append(node)
         if tag not in ('img','input','meta','link','br','hr','source','area','wbr','embed'):self.stack.append(node)
     def handle_endtag(self,tag):
         for i in range(len(self.stack)-1,0,-1):
             if self.stack[i].tag==tag:del self.stack[i:];break
     def handle_data(self,text):
+        self.stack[-1].content.append(text)
         for n in self.stack:n.parts.append(text)
 
 def normalize(name):return ''.join(c for c in unicodedata.normalize('NFKD',name.upper()) if not unicodedata.combining(c))
@@ -90,4 +91,6 @@ def sync():
     for target in [ROOT/'data/fixtures.json',ROOT/'android/app/src/main/assets/fixtures.json',ROOT/'server/static/fixtures.json']:
         target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
     print(f'Updated {len(matches)} fixtures across {len(numbers)} rounds')
-if __name__=='__main__':sync()
+if __name__=='__main__':
+    from official_rfaf import sync as official_sync
+    official_sync()
