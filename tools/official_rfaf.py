@@ -1,6 +1,7 @@
 """Public RFAF calendar and standings; no account or browser required."""
 import concurrent.futures, datetime, http.cookiejar, json, re, urllib.request
 from sync_fixtures import Document, is_club, normalize, ROOT
+from club_content import scorers,roster,ROSTER_SOURCE
 PREFIX='https://www.rfaf.es/pnfg/NPcd/'
 DATA_QUERY='cod_primaria=1000120&codcompeticion=48466108&codgrupo=48466109&codtemporada=22'
 QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22'
@@ -103,11 +104,11 @@ def enrich(match,html):
 
 def sync():
     opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-    def get(url):
+    def get(url,encoding="iso-8859-15"):
         req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 CDMenciana public sports data'})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
-            html=raw.decode('iso-8859-15')
+            html=raw.decode(encoding)
             if 'No se ha aceptado el cookie' in html:raise ValueError('Public RFAF session failed')
             return html
     get('https://www.rfaf.es/')
@@ -125,13 +126,16 @@ def sync():
     logos={}
     for html in pages.values():logos.update(team_crests(html))
     apply_crests(matches,table,logos)
+    scorers_url=PREFIX+'NFG_CMP_Goleadores?'+DATA_QUERY+'&CodJornada='+str(min(next_round,30))
+    goal_rows=scorers(get(scorers_url))
+    roster_rows=roster(get(ROSTER_SOURCE,'utf-8'))
     club=next(r for r in table if is_club(r['team']))
     played=[m for m in matches if m['played']]
     gf=sum(m['home_score'] if is_club(m['home']) else m['away_score'] for m in played)
     ga=sum(m['away_score'] if is_club(m['home']) else m['home_score'] for m in played)
     if (len(played),gf,ga)!=(club['played'],club['gf'],club['ga']):raise ValueError('Scores disagree with official standings; retaining previous data')
-    payload=dict(competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    payload=dict(scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
     for target in [ROOT/'data/fixtures.json',ROOT/'android/app/src/main/assets/fixtures.json',ROOT/'server/static/fixtures.json']:target.write_text(raw,encoding='utf-8')
-    print(f'Updated {len(matches)} matches and {len(table)} standings rows')
+    print(f'Updated {len(matches)} matches, {len(table)} teams, {len(goal_rows)} scorers and {len(roster_rows)} players')
 if __name__=='__main__':sync()

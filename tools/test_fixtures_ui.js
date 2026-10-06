@@ -12,3 +12,9 @@ assert(f.clubCrest().startsWith('crests/'));assert(f.card(f.data.matches[4]).inc
 for(const m of f.data.matches)for(const side of ['home','away']){const image=f.crest(m[side],m[side+'_crest']);assert(image.startsWith('crests/'));assert(fs.existsSync('android/app/src/main/assets/'+image));}
 f.round=null;const selected=f.defaultRound();assert(f.calendar().includes(`value="${selected}" selected`));f.round='all';assert(f.calendar().includes('value="all" selected'));
 console.log('Default round, exact team name, pending time and all official crest assets verified');
+const actual=f.data;
+f.data={matches:[],scorers:[{name:'Jugador del club',team:'C.D. APAGA Y VAMONOS',played:2,goals:3,average:1.5},{name:'Rival',team:'Otro equipo',played:0,goals:2,average:null}]};
+const scorers=f.scorers();assert.equal((scorers.match(/scorer-row our-club/g)||[]).length,1);assert(!scorers.includes('null'));assert(scorers.includes('Jugador del club'));
+f.data=actual;assert(f.data.roster.length>0&&f.data.scorers.length>0);
+const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.esc(p.name)));assert(roster.includes('Dorsal '+p.number));const photo=f.photo(p);if(photo.startsWith('players/'))assert(fs.existsSync('android/app/src/main/assets/'+photo));else assert(photo.startsWith('https://cdmenciana.es/images/jugadores/'));}
+console.log('Scorer highlighting and roster names, shirt numbers and photos verified');

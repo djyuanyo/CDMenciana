@@ -810,5 +810,1053 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg": "crests/fd2658f79c329d04.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG": "crests/955f5137fd52bf55.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png": "crests/62c2362186b53ac7.png"
-  }
+  },
+  "roster": [
+    {
+      "name": "Jesús Luna",
+      "number": 1,
+      "position": "Portero",
+      "photo": "https://cdmenciana.es/images/jugadores/raton.webp"
+    },
+    {
+      "name": "Álex",
+      "number": 3,
+      "position": "Portero",
+      "photo": "https://cdmenciana.es/images/jugadores/alex.webp?v=2"
+    },
+    {
+      "name": "Melli",
+      "number": 15,
+      "position": "Portero",
+      "photo": "https://cdmenciana.es/images/jugadores/melli.webp"
+    },
+    {
+      "name": "Campitos",
+      "number": 4,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/campitos.webp"
+    },
+    {
+      "name": "Cala",
+      "number": 5,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/cala.webp?v=2"
+    },
+    {
+      "name": "Mara",
+      "number": 7,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/mara.webp"
+    },
+    {
+      "name": "Cabezas",
+      "number": 8,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/cabezas.webp"
+    },
+    {
+      "name": "Tamajón",
+      "number": 9,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/tamajon.webp"
+    },
+    {
+      "name": "David",
+      "number": 10,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/david.webp"
+    },
+    {
+      "name": "Jesús Cubero",
+      "number": 11,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/jesus.webp?v=2"
+    },
+    {
+      "name": "Keko",
+      "number": 13,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/keko.webp"
+    },
+    {
+      "name": "Juan Bonilla",
+      "number": 20,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/juanbo.webp"
+    },
+    {
+      "name": "Adri Luna",
+      "number": 21,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/adri-luna.webp?v=2"
+    },
+    {
+      "name": "Borrallo",
+      "number": 22,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/borrallo.webp"
+    },
+    {
+      "name": "Isaac",
+      "number": 23,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/isaac.webp"
+    },
+    {
+      "name": "Tetur",
+      "number": 27,
+      "position": "Jugador de pista",
+      "photo": "https://cdmenciana.es/images/jugadores/tetur.webp"
+    }
+  ],
+  "roster_source": "https://cdmenciana.es/equipos/",
+  "photo_assets": {
+    "https://cdmenciana.es/images/jugadores/raton.webp": "players/00b8d3bfbf640cf4.webp",
+    "https://cdmenciana.es/images/jugadores/alex.webp?v=2": "players/dc515525a64dc46c.webp",
+    "https://cdmenciana.es/images/jugadores/melli.webp": "players/db52502364b2dd57.webp",
+    "https://cdmenciana.es/images/jugadores/campitos.webp": "players/5e04c209c454c0c8.webp",
+    "https://cdmenciana.es/images/jugadores/cala.webp?v=2": "players/724ccc262ffaa8f4.webp",
+    "https://cdmenciana.es/images/jugadores/mara.webp": "players/3e7f42c0ca6d2ff6.webp",
+    "https://cdmenciana.es/images/jugadores/cabezas.webp": "players/dd60786b1a1650f8.webp",
+    "https://cdmenciana.es/images/jugadores/tamajon.webp": "players/2b3f5bf3d84723ed.webp",
+    "https://cdmenciana.es/images/jugadores/david.webp": "players/63c7fca7e899491d.webp",
+    "https://cdmenciana.es/images/jugadores/jesus.webp?v=2": "players/fa03a39be3534328.webp",
+    "https://cdmenciana.es/images/jugadores/keko.webp": "players/53bcbde0bb925732.webp",
+    "https://cdmenciana.es/images/jugadores/juanbo.webp": "players/ab457d63189cf387.webp",
+    "https://cdmenciana.es/images/jugadores/adri-luna.webp?v=2": "players/488e70b976577687.webp",
+    "https://cdmenciana.es/images/jugadores/borrallo.webp": "players/4dde9fd2db6827a8.webp",
+    "https://cdmenciana.es/images/jugadores/isaac.webp": "players/1b35ce0dd658c627.webp",
+    "https://cdmenciana.es/images/jugadores/tetur.webp": "players/e3157d24f24a0921.webp"
+  },
+  "scorers": [
+    {
+      "name": "CORTABARRA CASTELLON, AGUSTIN",
+      "team": "U.D. ALCHOYANO",
+      "played": 2,
+      "goals": 6,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "BERLANGA HIDALGO, DAYRON",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 4,
+      "goals": 6,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
+      "name": "RODRIGUEZ GUERRA, ALBERTO",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 2,
+      "goals": 5,
+      "penalties": 0,
+      "average": 2.5
+    },
+    {
+      "name": "MOYANO PULIDO, ANTONIO JESUS",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "MENCHEN MARTÍNEZ, SANTIAGO",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "MORENO PEREZ, SANTOS",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "TOSINA LUQUE, DIEGO",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 1,
+      "goals": 4,
+      "penalties": 0,
+      "average": 4.0
+    },
+    {
+      "name": "POZO PEÑA, CANDIDO",
+      "team": "U.D. ALCHOYANO",
+      "played": 3,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "MORALES RODRIGUEZ, IVAN",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 3,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "RUIZ GONZALEZ, RAFAEL",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 3,
+      "goals": 4,
+      "penalties": 1,
+      "average": 1.3333
+    },
+    {
+      "name": "REQUENA SANCHEZ, ALBERTO",
+      "team": "C.D. DECORSENECA",
+      "played": 3,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "MUÑOZ LARIOS, MARCOS JOSE",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 4,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "ROLDAN AGUILERA, JESUS",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 4,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GARCIA SANZ, ADOLFO",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "OLMEDO ZARZUELA, PEDRO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "GARCIA PERALTA, ADRIAN",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "LOPEZ HERNANDEZ, JOSE IVAN",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "CATALAN CASADO, JOSE ANTONIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 2,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
+      "name": "HERRERA GARCIA, LUIS ANGEL",
+      "team": "U.D. ALCHOYANO",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SALVADOR FERNANDEZ, FERNANDO",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "BORRALLO LOPEZ, CARLOS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "CARICOL MARQUEZ, DAVID",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "WARSCHKE ACERO, GONZALO",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "LOZANO BARRETO, NICOLAS AGUSTIN",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "CABALLERO LAMA, ISAAC",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "GALAN NAVARRO, PABLO ANTONIO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "DELIS LOPEZ, JOSE",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "JULIAN PAEZ, SERGIO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "CALLERO ORTIZ, SERGIO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "RIESGO BARRAU, ROBERTO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "JIMENEZ CARRASCO, IVAN",
+      "team": "C.D. BENALUP",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "PEINADO LOPEZ, ALBERTO",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SUCINO MORENO, PABLO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GUIJARRO VALLES, RAFAEL",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SANCHEZ PEREZ DE AZPILLA, TOMAS",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "ROMERO MORENO, SERGIO",
+      "team": "U.D. ALCHOYANO",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MUÑOZ ROLDAN, JESUS",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "RUIZ PEÑA, PABLO",
+      "team": "C.D. BENALUP",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "RICHARTE LEON, ISRAEL",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "PRUDENCIO MINCHON, PABLO",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "CUBERO CUBERO, JESUS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GARCIA CUESTA, EMILIO",
+      "team": "C.D. DECORSENECA",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "PEREZ GARRIDO, IVAN",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "PALANCAR BELLOSO, MANUEL",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "MOLERO PEÑA, JOSE MARIA",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "RODRIGUEZ RODRIGUEZ, JORGE",
+      "team": "U.D. ALCHOYANO",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "BATALLA BUTRON, DANIEL",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "BAJO PAVÉS, CARLOS",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "VERANO VALENCIA, JESUS",
+      "team": "U.D. ALCHOYANO",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "LEÑA FERNÁNDEZ, SAMUEL",
+      "team": "C.D. DECORSENECA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "ARRIAZA FRANCO, JORGE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "LAINEZ TAPIA, ANTONIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "COTO MORENO, ANTONIO",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "CRESPO LUNA, MIGUEL",
+      "team": "C.D. DECORSENECA",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CEPERO ANGERIZ, MARIO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RAMOS ORTAS, SAMUEL",
+      "team": "C.D. DECORSENECA",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RUIZ PALOMINO, PABLO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CALDERON LOZADA, GUILLERMO",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "GOMEZ VERDUGO, JOSE",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTINEZ GUTIERREZ, IGNACIO ANTONIO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 0,
+      "goals": 2,
+      "penalties": 0,
+      "average": null
+    },
+    {
+      "name": "IBAÑEZ FERNANDEZ, ADRIAN",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 0,
+      "goals": 2,
+      "penalties": 0,
+      "average": null
+    },
+    {
+      "name": "CASAL RAMOS, JESUS",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 0,
+      "goals": 2,
+      "penalties": 0,
+      "average": null
+    },
+    {
+      "name": "VEGA CORBELLA, FRANCISCO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 0,
+      "goals": 2,
+      "penalties": 0,
+      "average": null
+    },
+    {
+      "name": "SUAZO TORRES, ALEJANDRO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SOTO REYES, PABLO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MATEO RODRIGUEZ, FRANCISCO",
+      "team": "C.D. BENALUP",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GALLEGO FERNANDEZ, DIEGO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "DOPICO UROZ, JESUS VICENTE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SOTO BERNAL, JESUS",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "JARABA MARTIN, SERGIO",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "PINTO CERDAN, ALVARO",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RIOS AIDO, FRANCISCO JOSE",
+      "team": "U.D. ALCHOYANO",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "TEROL CAMACHO, ALVARO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "TORRES TORRELO, JULIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LABRADOR GARCIA, JORGE",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "BAQUERO BEGINES, ALEJANDRO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "ENRIQUEZ PEÑA, MANUEL JESUS",
+      "team": "C.D. BENALUP",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "BREA PARRADO, CHRISTIAN",
+      "team": "C.D. BENALUP",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTÍN RUIZ, CARLOS",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MONTORI CAMACHO, JAVIER",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LEDESMA REVUELTO, MARIO DANIEL",
+      "team": "C.D. DECORSENECA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "COBELO DORADO, CHRISTIAN",
+      "team": "C.D. BENALUP",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "SAUCES JIMENEZ, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "FERNANDEZ GOMEZ, JAVIER",
+      "team": "C.D. DECORSENECA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "RUIZ MANCHA, JUAN RAMON",
+      "team": "C.D. DECORSENECA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "BELGRANO PAEZ, BRYAN",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "SUAREZ CARRERA, JOSE MANUEL",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "MARAÑON BAENA, JESUS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "MARQUEZ ROMERO, DANIEL",
+      "team": "U.D. ALCHOYANO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "PICHARDO BENJUMEA, JUAN MANUEL",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ZAFRA SANCHEZ, MANUEL",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ALVAREZ BENITEZ, DAVID",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "TEROL CAMACHO, ROBERTO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "GONZALEZ SANABRIA, CARLOS",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ROMERO VILCHES, DAVID",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ENRIQUEZ GONZALEZ, JOSE LUIS",
+      "team": "C.D. BENALUP",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "RODRIGUEZ SOTILLO, RUBÉN",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "BEL MAMOUN KHARBOUCH, ILYAS",
+      "team": "C.D. LA PALMA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "VELA ACEDO, SERGIO",
+      "team": "C.D. BENALUP",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "GARCIA MANZANERO, JUAN JOSE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "GOMEZ ROSA, MIGUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "LOPEZ BENITEZ, DAVID",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BORJAS LOZANO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BUEZAS HUMANES, GONZALO",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BERMUDO NAVARRO, CRISTIAN",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "PEREZ CORTES, ANIBAL",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BAENA LOZADA, MIGUEL",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "CAMPAÑA POZO, JOSE MANUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "EL DAHER, LAUTARO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "ONIEVA LORA, JOSE",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BARROSO GONZÁLEZ, ENRIQUE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 0,
+      "goals": 1,
+      "penalties": 0,
+      "average": null
+    },
+    {
+      "name": "TORRES NAVAS, ADRIÁN",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 0,
+      "goals": 1,
+      "penalties": 0,
+      "average": null
+    }
+  ],
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=5&codcompeticion=48466108&codtemporada=22&codgrupo=48466109"
 }
