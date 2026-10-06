@@ -96,10 +96,10 @@ def enrich(match,html):
         team_links=[link for link in table.find('a') if 'NFG_VisEquipos' in link.attrs.get('href','')]
         for side,name in (('home',h.text()),('away',a.text())):
             exact=next((link for link in team_links if normalize(link.text())==normalize(name)),None)
-            if exact:match[side+'_team_url']=urllib.parse.urljoin(PREFIX,exact.attrs.get('href',''))
+            if exact:match[side+'_team_url']=urllib.parse.urljoin('https://www.rfaf.es',exact.attrs.get('href',''))
         if len(team_links)==2:
-            match.setdefault('home_team_url',urllib.parse.urljoin(PREFIX,team_links[0].attrs.get('href','')))
-            match.setdefault('away_team_url',urllib.parse.urljoin(PREFIX,team_links[1].attrs.get('href','')))
+            match.setdefault('home_team_url',urllib.parse.urljoin('https://www.rfaf.es',team_links[0].attrs.get('href','')))
+            match.setdefault('away_team_url',urllib.parse.urljoin('https://www.rfaf.es',team_links[1].attrs.get('href','')))
         dates=table.find('span','horario')
         text=' '.join(d.text() for d in dates)
         date=re.search(r'\b(\d{2}-\d{2}-\d{4})\b',text)
