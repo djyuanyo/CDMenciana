@@ -5,6 +5,7 @@ function render(){
  let body='';
  if(page==='Inicio')body=Fixtures.news();
  if(page==='Partidos')body=Fixtures.calendar();
+ if(page==='Acta')body=Fixtures.report(location.hash.slice(6));
  if(page==='Club')body=Fixtures.roster();
  if(page==='Goleadores')body=Fixtures.scorers();
  if(page==='Clasificación')body=Fixtures.standings();
@@ -18,3 +19,9 @@ document.addEventListener('click',e=>{const b=e.target.closest('button[data-page
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
 document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;Fixtures.manualRound=true;render();}});
 render();Fixtures.load().then(render);
+
+let reportRequest=0;
+async function reportRoute(){const id=location.hash.match(/^#acta=(\d+)$/)?.[1];const request=++reportRequest;if(!id){if(page==='Acta'){page='Partidos';render();}return;}page='Acta';Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id);if(request===reportRequest&&location.hash==='#acta='+id)render();}
+window.addEventListener('hashchange',reportRoute);
+document.addEventListener('click',e=>{if(e.target.closest('[data-report-back]')){if(location.hash.startsWith('#acta='))history.back();else{page='Partidos';render();}}if(e.target.closest('[data-report-retry]'))reportRoute();if(e.target.closest('button[data-page]')&&location.hash.startsWith('#acta=')){history.replaceState(null,'',location.pathname);reportRequest++;}});
+if(location.hash.startsWith('#acta='))reportRoute();

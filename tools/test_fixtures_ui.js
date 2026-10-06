@@ -33,7 +33,9 @@ console.log('Eight chronological round fixtures and exactly one highlighted club
 
 const actaMatch={...allData.matches[0],played:true,acta_url:'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?CodActa=1234'};
 assert(f.card(actaMatch).includes('class="result-acta"'));
-assert(f.card(actaMatch).includes('CodActa=1234'));
+assert(f.card(actaMatch).includes('#acta=1234'));
+assert(!f.card(actaMatch).includes('href="https://www.rfaf.es'));
+f.reportData={updated_at:new Date().toISOString(),blocks:[{kind:'heading',text:'Goles'},{kind:'table',rows:[["Gol de penalti","(5′) Nombre <script>"]]}]};assert(f.report('1234').includes('Gol de penalti'));assert(f.report('1234').includes('&lt;script&gt;'));
 assert(!f.card({...actaMatch,played:false}).includes('class="result-acta"'));
 assert(!f.card({...actaMatch,acta_url:'https://other.example/?CodActa=1234'}).includes('class="result-acta"'));
 console.log('Official per-match acta links and unpublished/unsafe link handling verified');
