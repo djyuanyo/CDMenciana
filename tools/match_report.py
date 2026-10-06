@@ -64,7 +64,7 @@ def player_refs_from_node(root,css=''):
 
 def raw_player_refs(source,acta_id=''):
     players={}
-    for hit in re.finditer(r'(?i)(?:jugador|cod[_-]?jugador)\\s*(?:=|%3D|:)\\s*["\\']?(\\d{1,12})',source):
+    for hit in re.finditer(r'''(?i)(?:jugador|cod[_-]?jugador)\\s*(?:=|%3D|:)\\s*["']?(\\d{1,12})''',source):
         player_id=hit.group(1);window=source[max(0,hit.start()-700):min(len(source),hit.end()+700)]
         plain=clean(html_lib.unescape(re.sub(r'<[^>]+>',' ',window)))
         names=re.findall(r'''([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' .-]{1,70},\\s*[A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ' .-]{1,70})''',plain)
