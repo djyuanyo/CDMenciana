@@ -81,3 +81,5 @@ Interfaz inspirada en la referencia facilitada: cabecera con escudo centrado, po
 ## Ajuste de pantalla 0.3.0
 
 El contenedor Android aplica los insets del sistema, notch y teclado al padre del WebView, reduciendo su área real. Los elementos fijos de la interfaz quedan dentro de esa área. Incluye manejo de Android 15/16 y ajuste clásico para versiones anteriores.
+
+Los 16 escudos oficiales se guardan también en la APK y en la interfaz web para mostrarlos sin conexión. `data/crest-assets.json` conserva la URL original de cada imagen. La categoría usa su nombre completo de la RFAF. El calendario abre la última jornada jugada; avanza a la siguiente únicamente cuando tiene hora confirmada. La selección manual se conserva mientras la app permanece abierta.

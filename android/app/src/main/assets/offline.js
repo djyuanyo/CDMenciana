@@ -16,5 +16,5 @@ function render(){
 }
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;render();window.scrollTo(0,0)}});
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
-document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;render();}});
+document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;Fixtures.manualRound=true;render();}});
 render();Fixtures.load().then(render);

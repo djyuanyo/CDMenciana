@@ -98,8 +98,8 @@ public class MainActivity extends Activity {
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if("fixtures.json".equals(name))return fixturesResponse(req.getUrl().getQueryParameter("refresh")!=null);
-                    if(!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
-                    String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":"image/png";
+                    if(!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
+                    String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
                 }return null;
             }

@@ -61,6 +61,7 @@ class Handler(BaseHTTPRequestHandler):
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
                 files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
+                if re.fullmatch(r'/crests/[a-f0-9]{16}\.(png|jpg)',path):files[path]=path[1:]
                 if path not in files: raise ApiError(404,'No encontrado.')
                 file=ROOT/'static'/files[path]
                 if not file.exists(): raise ApiError(404,'No encontrado.')

@@ -28,4 +28,4 @@ document.addEventListener('click',async e=>{const el=e.target.closest('button');
 document.addEventListener('submit',async e=>{e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));const button=f.querySelector('button');button.disabled=true;try{let r;if(f.dataset.user){for(const k of ['active','member','player','paid'])d[k]=f.elements[k].checked?1:0;d.id=Number(f.dataset.user);r=await api('admin/user',d)}else r=await api(({login:'login',register:'register',publish:'admin/content'})[f.id],d);if(f.id==='register')f.reset();await refresh();msg(r.message||'Sesión iniciada.')}catch(err){msg(err.message)}finally{button.disabled=false}});
 refresh().catch(e=>msg(e.message));
 
-document.addEventListener('change',async e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;await render()}});
+document.addEventListener('change',async e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;Fixtures.manualRound=true;await render()}});

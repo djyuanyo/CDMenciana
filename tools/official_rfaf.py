@@ -1,6 +1,6 @@
 """Public RFAF calendar and standings; no account or browser required."""
 import concurrent.futures, datetime, http.cookiejar, json, re, urllib.request
-from sync_fixtures import Document, is_club, ROOT
+from sync_fixtures import Document, is_club, normalize, ROOT
 PREFIX='https://www.rfaf.es/pnfg/NPcd/'
 DATA_QUERY='cod_primaria=1000120&codcompeticion=48466108&codgrupo=48466109&codtemporada=22'
 QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22'
@@ -59,6 +59,25 @@ def standings(html):
         if len(out)==16 and sum(is_club(r['team']) for r in out)==1:return out
     raise ValueError('Incomplete standings')
 
+def team_crests(html):
+    logos={}
+    for t in Document(html).root.find('table'):
+        h=[n for n in t.find('div','font_widgetL') if n.find('h4')]
+        a=[n for n in t.find('div','font_widgetV') if n.find('h4')]
+        imgs=t.find('img','escudo_widget2')
+        if len(h)==1 and len(a)==1 and len(imgs)==2:
+            for team,img in zip([h[0].text(),a[0].text()],imgs):
+                logos[normalize(team)]=img.attrs.get('src','')
+    return logos
+
+def apply_crests(matches,table,logos):
+    for match in matches:
+        for side in ('home','away'):
+            match[side+'_crest']=logos.get(normalize(match[side]),match.get(side+'_crest',''))
+    for row in table:row['crest']=logos.get(normalize(row['team']),'')
+    if any(not m[side+'_crest'] for m in matches for side in ('home','away')):
+        raise ValueError('Incomplete official crests')
+
 def enrich(match,html):
     root=Document(html).root
     homes=[n for n in root.find('div','font_widgetL') if n.find('h4')];aways=[n for n in root.find('div','font_widgetV') if n.find('h4')]
@@ -101,13 +120,17 @@ def sync():
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
         published=[m for m in matches if m['played'] or m['round']==next_round]
-        list(pool.map(lambda match:enrich(match,get(match['source'])),published))
+        pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
+        for match in published:enrich(match,pages[match['source']])
+    logos={}
+    for html in pages.values():logos.update(team_crests(html))
+    apply_crests(matches,table,logos)
     club=next(r for r in table if is_club(r['team']))
     played=[m for m in matches if m['played']]
     gf=sum(m['home_score'] if is_club(m['home']) else m['away_score'] for m in played)
     ga=sum(m['away_score'] if is_club(m['home']) else m['home_score'] for m in played)
     if (len(played),gf,ga)!=(club['played'],club['gf'],club['ga']):raise ValueError('Scores disagree with official standings; retaining previous data')
-    payload=dict(competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url)
+    payload=dict(competition='3ª División F.S.',group='Grupo 17',season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=SOURCE,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
     for target in [ROOT/'data/fixtures.json',ROOT/'android/app/src/main/assets/fixtures.json',ROOT/'server/static/fixtures.json']:target.write_text(raw,encoding='utf-8')
     print(f'Updated {len(matches)} matches and {len(table)} standings rows')

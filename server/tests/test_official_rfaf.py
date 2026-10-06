@@ -1,7 +1,7 @@
 import sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings
+from official_rfaf import Document,scores,standings,team_crests,apply_crests
 class OfficialRFAFTests(unittest.TestCase):
     def score(self,html):return scores(Document('<td>'+html+'</td>').root.find('td')[0])
     def test_hidden_digits_and_icons(self):
@@ -13,6 +13,13 @@ class OfficialRFAFTests(unittest.TestCase):
     def test_future_is_not_zero_zero(self):self.assertEqual((None,None),self.score('<strong></strong><strong></strong>'))
     def test_unknown_score_rejected(self):
         with self.assertRaises(ValueError):self.score('<strong>?</strong><strong>4</strong>')
+    def test_crests_fill_future_calendar(self):
+        html='<table><div class="font_widgetL"><h4>C.D. APAGA Y VAMONOS</h4></div><img class="escudo_widget2" src="https://official/club.jpg"><div class="font_widgetV"><h4>Rival</h4></div><img class="escudo_widget2" src="https://official/rival.png"></table>'
+        logos=team_crests(html)
+        matches=[{'home':'C.D. APAGA Y VAMONOS','away':'Rival','home_crest':'','away_crest':''}]
+        apply_crests(matches,[],logos)
+        self.assertEqual('https://official/club.jpg',matches[0]['home_crest'])
+        self.assertEqual('https://official/rival.png',matches[0]['away_crest'])
     def test_home_away_standings_totals(self):
         rows=[]
         for pos in range(1,17):
