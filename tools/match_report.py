@@ -7,14 +7,49 @@ RFAF_HOSTS={'www.rfaf.es','rfaf.es'}
 PROFILE_CACHE='data/rfaf-player-profiles.json'
 
 def clean(text):return ' '.join(str(text or '').split())
-def person_key(name):return re.sub(r'\\s+',' ',clean(name)).upper()
+def person_key(name):return re.sub(r'\s+',' ',clean(name)).upper()
+
 def safe_profile_url(href):
     try:
-        url=urllib.parse.urljoin('https://www.rfaf.es',href or '');p=urllib.parse.urlparse(url)
-        if p.scheme!='https' or p.hostname not in RFAF_HOSTS or not p.path.startswith('/pnfg/NPcd/'):return ''
-        if any(x in p.path for x in ('NFG_CmpPartido','NFG_CmpJornada','NFG_VisClasificacion','NFG_CMP_Goleadores')):return ''
+        url=urllib.parse.urljoin('https://www.rfaf.es/pnfg/NPcd/',href or '')
+        p=urllib.parse.urlparse(url)
+        if p.scheme!='https' or (p.hostname or '').lower() not in RFAF_HOSTS:return ''
+        if not re.search(r'/pnfg/(?:NPcd/)?NFG_EstadisticasJugador$',p.path,re.I):return ''
+        if not re.fullmatch(r'\d+',urllib.parse.parse_qs(p.query).get('jugador',[''])[0]):return ''
         return url
     except ValueError:return ''
+
+def profile_href(node):
+    values=[node.attrs.get('href',''),node.attrs.get('onclick',''),node.attrs.get('data-href','')]
+    for value in values:
+        if not value:continue
+        direct=safe_profile_url(value)
+        if direct:return direct
+        match=re.search(r'''((?:https?://(?:www\.)?rfaf\.es)?/?pnfg/(?:NPcd/)?NFG_EstadisticasJugador\?[^'"<> ]+)''',value,re.I)
+        if match:
+            direct=safe_profile_url(match.group(1).replace(r'\x26','&').replace(r'\u0026','&'))
+            if direct:return direct
+    return ''
+
+def player_refs_from_node(root,css=''):
+    players={}
+    for node in [root]+root.find():
+        url=profile_href(node)
+        if not url:continue
+        name=clean(visible(node,css))
+        if ',' not in name:name=clean(node.attrs.get('title','') or node.attrs.get('aria-label',''))
+        if ',' not in name or not 4<=len(name)<=120:continue
+        photo=''
+        for img in node.find('img'):
+            photo=safe_image(img.attrs.get('src',''),url)
+            if photo:break
+        players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url,'photo':photo}
+    return list(players.values())
+
+def player_refs(html):
+    root=Document(html).root
+    css=' '.join(n.text() for n in root.find('style'))
+    return player_refs_from_node(root,css)
 
 def safe_image(src,base):
     try:
@@ -33,10 +68,10 @@ def player_profile(html,url,name):
         if '/pimg/' in meta or 'novanet' in meta:score+=2
         if any(token.lower() in meta for token in wanted if len(token)>3):score+=3
         try:
-            w=int(re.sub(r'\\D','',img.attrs.get('width','')) or 0);h=int(re.sub(r'\\D','',img.attrs.get('height','')) or 0)
+            w=int(re.sub(r'\D','',img.attrs.get('width','')) or 0);h=int(re.sub(r'\D','',img.attrs.get('height','')) or 0)
             if w>=70 and h>=70:score+=2
         except ValueError:pass
-        if re.search(r'\\.(?:jpe?g|png|webp)(?:\\?|$)',src,re.I):score+=1
+        if re.search(r'\.(?:jpe?g|png|webp)(?:\?|$)',src,re.I):score+=1
         candidates.append((score,src))
     candidates.sort(key=lambda x:x[0],reverse=True);photo=candidates[0][1] if candidates and candidates[0][0]>=2 else ''
     sections=[];seen=set();tokens=('PARTID','GOLES','GOL ','TARJET','TEMPORADA','EQUIPO','COMPETIC','MINUT','JUGAD','TITULAR','SUPLENT','RESULTADO')
@@ -46,7 +81,7 @@ def player_profile(html,url,name):
             cells=[clean(visible(cell)) for cell in tr.children if cell.tag in ('td','th')]
             if any(cells):rows.append(cells)
         if len(rows)<2:continue
-        sample=' '.join(' '.join(r) for r in rows[:8]).upper();numeric=sum(bool(re.search(r'\\d',x)) for r in rows for x in r)
+        sample=' '.join(' '.join(r) for r in rows[:8]).upper();numeric=sum(bool(re.search(r'\d',x)) for r in rows for x in r)
         if not any(t in sample for t in tokens) and numeric<max(2,len(rows)//2):continue
         compact=[r[:8] for r in rows[:24]];sig=json.dumps(compact,ensure_ascii=False)
         if sig in seen:continue
@@ -66,10 +101,8 @@ def report(html):
     root=containers[-1];css=' '.join(n.text() for n in root.find('style'))
     blocks=[];pending=[];players={}
     def remember_people(n):
-        for anchor in n.find('a'):
-            name=clean(visible(anchor,css));url=safe_profile_url(anchor.attrs.get('href',''))
-            if url and ',' in name and 4<=len(name)<=120:
-                players[person_key(name)]={'id':hashlib.sha256(url.encode()).hexdigest()[:16],'name':name,'profile_url':url}
+        for ref in player_refs_from_node(n,css):
+            players[person_key(ref['name'])]=ref
     def flush():
         text=clean(' '.join(pending));pending.clear()
         if text:blocks.append({'kind':'text','text':text})
@@ -108,15 +141,38 @@ def report(html):
 
 def sync_reports(matches,get,root):
     urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:m['acta_url'] for m in matches if m.get('played') and m.get('acta_url')}
-    def fetch_report(item):
-        id,url=item
+    def prior_report(id):
+        path=root/'data/actas'/(id+'.json')
         try:
-            html=get(url)
-            if not html.strip():html=get('https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&cod_acta='+id)
-            data=report(html);data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
-            return id,data
-        except (ValueError,OSError,subprocess.SubprocessError) as error:
-            print(f'Acta {id} pendiente: {error}',flush=True);return id,None
+            data=json.loads(path.read_text(encoding='utf-8'))
+            return data if isinstance(data.get('blocks'),list) and len(data['blocks'])>=10 else None
+        except (OSError,ValueError,AttributeError):return None
+    def fetch_report(item):
+        id,url=item;errors=[]
+        candidates=[url,
+            'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id,
+            'https://www.rfaf.es/pnfg/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id]
+        for candidate in dict.fromkeys(candidates):
+            try:
+                data=report(get(candidate));data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+                return id,data
+            except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
+        old=prior_report(id)
+        if old:
+            previews=[
+                'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa='+id,
+                'https://www.rfaf.es/pnfg/NFG_CmpPrevio?cod_primaria=1000120&CodActa='+id]
+            for preview in previews:
+                try:
+                    refs=player_refs(get(preview))
+                    if refs:
+                        data=dict(old);data['players']=refs;data['players_source']=preview;data['players_updated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+                        print(f'Acta {id}: recuperados {len(refs)} perfiles desde datos previos',flush=True)
+                        return id,data
+                except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
+            print(f'Acta {id}: se conserva copia guardada; perfiles pendientes',flush=True)
+            return id,old
+        print(f"Acta {id} pendiente: {errors[-1] if errors else 'fuente no disponible'}",flush=True);return id,None
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:reports=dict(pool.map(fetch_report,urls.items()))
 
     cache_path=root/PROFILE_CACHE
@@ -126,25 +182,30 @@ def sync_reports(matches,get,root):
     now=datetime.datetime.now(datetime.timezone.utc);refresh=[(url,ref) for url,ref in refs.items() if url not in cache or not fresh_profile(cache[url],now)]
     def fetch_profile(item):
         url,ref=item
-        try:return url,player_profile(get(url),url,ref['name'])
-        except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
-            print(f"Perfil RFAF pendiente {ref['name']}: {error}",flush=True)
-            return url,cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''})
+        candidates=[url]
+        parsed=urllib.parse.urlparse(url)
+        if '/NPcd/' in parsed.path:candidates.append(url.replace('/pnfg/NPcd/','/pnfg/',1))
+        for candidate in dict.fromkeys(candidates):
+            try:return url,player_profile(get(candidate),candidate,ref['name'])
+            except (ValueError,OSError,subprocess.SubprocessError,RuntimeError):pass
+        print(f"Perfil RFAF pendiente {ref['name']}",flush=True)
+        return url,cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''})
     if refresh:
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
             for url,profile in pool.map(fetch_profile,refresh):cache[url]=profile
-    cache_path.parent.mkdir(parents=True,exist_ok=True);cache_path.write_text(json.dumps({'updated_at':now.isoformat(),'profiles':cache},ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+    cache_path.parent.mkdir(parents=True,exist_ok=True);cache_path.write_text(json.dumps({'updated_at':now.isoformat(),'profiles':cache},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
-    count=0
+    count=0;linked=0;photos=0
     for id,data in reports.items():
         if not data:continue
         for ref in data.get('players',[]):
             profile=cache.get(ref.get('profile_url',''),{})
-            ref['photo']=profile.get('photo_source','');ref['stats']=profile.get('sections',[]);ref['profile_updated_at']=profile.get('updated_at','')
-        raw=json.dumps(data,ensure_ascii=False,indent=2)+'\\n'
+            ref['photo']=ref.get('photo') or profile.get('photo_source','');ref['stats']=profile.get('sections',[]);ref['profile_updated_at']=profile.get('updated_at','')
+            linked+=1;photos+=bool(ref['photo'])
+        raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
         for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
             target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
         count+=1
-    print(f'Updated {count} public match reports and {len(refs)} linked RFAF player profiles',flush=True)
+    print(f'Updated {count} public match reports; {linked} player links; {photos} player photos',flush=True)
     return count
 
