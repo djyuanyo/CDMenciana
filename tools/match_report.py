@@ -94,6 +94,31 @@ def fresh_profile(profile,now):
     try:return (now-datetime.datetime.fromisoformat(profile.get('updated_at','').replace('Z','+00:00'))).total_seconds()<86400
     except (ValueError,TypeError):return False
 
+
+def profile_for_acta(ref,acta_id):
+    try:
+        p=urllib.parse.urlparse(ref.get('profile_url',''));q=urllib.parse.parse_qs(p.query)
+        q['codacta']=[str(acta_id)];q['nueva_ventana']=['0']
+        query=urllib.parse.urlencode({k:v[-1] for k,v in q.items() if v})
+        url=urllib.parse.urlunparse(p._replace(query=query))
+        out=dict(ref);out['profile_url']=url;out['id']=hashlib.sha256(url.encode()).hexdigest()[:16]
+        return out
+    except (ValueError,TypeError):return dict(ref)
+
+def participant_refs(report_data,refs):
+    known={person_key(r.get('name','')):r for r in refs if r.get('name')}
+    selected={}
+    for block in report_data.get('blocks',[]):
+        if block.get('kind')!='table':continue
+        for row in block.get('rows',[]):
+            for cell in row:
+                text=clean(cell)
+                text=re.sub(r'^\([^)]*\)\s*','',text)
+                text=re.sub(r'^(?:Gol(?: en propia puerta| de penalti)?|Tarjeta amarilla|Tarjeta roja|Segunda amarilla)(?:\s*·\s*[^·]+)?\s*·?\s*','',text,flags=re.I)
+                key=person_key(text)
+                if key in known:selected[key]=known[key]
+    return list(selected.values())
+
 def report(html):
     root=Document(html).root
     containers=[n for n in root.find('div','container') if any(h.text()=='Ficha de Partido' for h in n.find('h4'))]
@@ -140,7 +165,7 @@ def report(html):
     return {'blocks':blocks,'players':list(players.values())}
 
 def sync_reports(matches,get,root):
-    urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:m['acta_url'] for m in matches if m.get('played') and m.get('acta_url')}
+    urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:(m['acta_url'],m) for m in matches if m.get('played') and m.get('acta_url')}
     def prior_report(id):
         path=root/'data/actas'/(id+'.json')
         try:
@@ -148,7 +173,7 @@ def sync_reports(matches,get,root):
             return data if isinstance(data.get('blocks'),list) and len(data['blocks'])>=10 else None
         except (OSError,ValueError,AttributeError):return None
     def fetch_report(item):
-        id,url=item;errors=[]
+        id,payload=item;url,match=payload;errors=[]
         candidates=[url,
             'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id,
             'https://www.rfaf.es/pnfg/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id]
@@ -159,15 +184,25 @@ def sync_reports(matches,get,root):
             except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
         old=prior_report(id)
         if old:
+            team_refs=[]
+            for team_url in dict.fromkeys([match.get('home_team_url',''),match.get('away_team_url','')]):
+                if not team_url:continue
+                try:team_refs.extend(player_refs(get(team_url)))
+                except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
+            picked=participant_refs(old,team_refs)
+            if picked:
+                data=dict(old);data['players']=[profile_for_acta(ref,id) for ref in picked];data['players_source']='RFAF team rosters';data['players_updated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+                print(f'Acta {id}: recuperados {len(picked)} perfiles desde plantillas RFAF',flush=True)
+                return id,data
             previews=[
                 'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa='+id,
                 'https://www.rfaf.es/pnfg/NFG_CmpPrevio?cod_primaria=1000120&CodActa='+id]
             for preview in previews:
                 try:
-                    refs=player_refs(get(preview))
-                    if refs:
-                        data=dict(old);data['players']=refs;data['players_source']=preview;data['players_updated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
-                        print(f'Acta {id}: recuperados {len(refs)} perfiles desde datos previos',flush=True)
+                    refs=player_refs(get(preview));picked=participant_refs(old,refs)
+                    if picked:
+                        data=dict(old);data['players']=[profile_for_acta(ref,id) for ref in picked];data['players_source']=preview;data['players_updated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+                        print(f'Acta {id}: recuperados {len(picked)} perfiles desde datos previos',flush=True)
                         return id,data
                 except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
             print(f'Acta {id}: se conserva copia guardada; perfiles pendientes',flush=True)
