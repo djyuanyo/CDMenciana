@@ -154,7 +154,7 @@ public class MainActivity extends Activity {
                 if(stage[0]==1){stage[0]=2;view.loadUrl(actaUrl);return;}
                 if(stage[0]!=2)return;stage[0]=3;
                 final String wanted=names.toString();
-                final String script="(function(){const wanted="+wanted+",norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/\\s+/g,' ').trim().toUpperCase(),people=wanted.map(name=>({name,key:norm(name)})),out=[],seen=new Set();for(const node of document.querySelectorAll('a,[onclick],[data-href],[data-url]')){let raw=(node.getAttribute&&node.getAttribute('href')||'')+' '+(node.getAttribute&&node.getAttribute('onclick')||'')+' '+(node.getAttribute&&node.getAttribute('data-href')||'')+' '+(node.getAttribute&&node.getAttribute('data-url')||'')+' '+(node.onclick?String(node.onclick):'')+' '+String(node.outerHTML||'').slice(0,2200),id='',m=raw.match(/(?:[?&]|\\b)jugador\\s*(?:=|%3D)\\s*(-?\\d{1,12})/i);if(m)id=m[1];if(!id){const fn=raw.match(/(?:EstadisticasJugador|Jugador)[^(]{0,70}\\(([^)]{0,260})\\)/i);if(fn){const n=fn[1].match(/-?\\d{1,12}/);if(n)id=n[0]}}if(!id)continue;const text=norm(node.textContent||''),person=people.find(p=>text===p.key||text.includes(p.key)||p.key.includes(text));if(!person)continue;const key=person.key+'|'+id;if(seen.has(key))continue;seen.add(key);out.push({name:person.name,player_id:id,url:(node.href||node.getAttribute&&node.getAttribute('href')||'')})}return JSON.stringify(out)})()";
+                final String script="(function(){const wanted="+wanted+",norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/\\s+/g,' ').trim().toUpperCase(),people=wanted.map(name=>({name,key:norm(name)})),out=[],seen=new Set();for(const node of document.querySelectorAll('a,[onclick],[data-href],[data-url]')){let raw=(node.getAttribute&&node.getAttribute('href')||'')+' '+(node.getAttribute&&node.getAttribute('onclick')||'')+' '+(node.getAttribute&&node.getAttribute('data-href')||'')+' '+(node.getAttribute&&node.getAttribute('data-url')||'')+' '+(node.onclick?String(node.onclick):'')+' '+String(node.outerHTML||'').slice(0,2200),id='',m=raw.match(/(?:[?&]|\\b)jugador\\s*(?:=|%3D)\\s*(-?\\d{1,12})/i);if(m)id=m[1];if(!id){const fn=raw.match(/(?:EstadisticasJugador|Jugador)[^(]{0,70}\\(([^)]{0,260})\\)/i);if(fn){const n=fn[1].match(/-?\\d{1,12}/);if(n)id=n[0]}}if(!id)continue;const text=norm(node.textContent||''),person=people.find(p=>text===p.key||text.includes(p.key)||p.key.includes(text));if(!person)continue;const key=person.key+'|'+id;if(seen.has(key))continue;seen.add(key);const pm=raw.match(/(?:[?&]|\\b)cod_primaria\\s*(?:=|%3D)\\s*(\\d{1,12})/i),primary=pm?pm[1]:'5000274';out.push({name:person.name,player_id:id,primary,url:(node.href||node.getAttribute&&node.getAttribute('href')||'')})}return JSON.stringify(out)})()";
                 view.postDelayed(()->view.evaluateJavascript(script,value->{if(done[0])return;String rows="[]";try{Object decoded=new org.json.JSONTokener(value).nextValue();if(decoded instanceof String)rows=(String)decoded;new org.json.JSONArray(rows);}catch(Exception ignored){rows="[]";}done[0]=true;deliverResolvedPlayers(acta,rows);view.destroy();}),1200);
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
@@ -243,15 +243,16 @@ public class MainActivity extends Activity {
         readPublicFederation("https://www.rfaf.es/",federationCookies);
         federationSessionAt=now;
     }
-    private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta) {
+    private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta,String primary) {
         if(player==null||acta==null||!player.matches("[0-9]{1,12}")||!acta.matches("[0-9]{1,12}"))return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream("{}".getBytes(StandardCharsets.UTF_8)));
-        java.io.File cache=new java.io.File(getFilesDir(),"rfaf_player_"+player+"_"+acta+".json");
+        if(primary==null||!primary.matches("[0-9]{1,12}"))primary="5000274";
+        java.io.File cache=new java.io.File(getFilesDir(),"rfaf_player_"+player+"_"+acta+"_"+primary+".json");
         byte[] data=null;
         try {
             if(cache.exists()&&System.currentTimeMillis()-cache.lastModified()<86400000L)data=java.nio.file.Files.readAllBytes(cache.toPath());
             if(data==null){
                 ensureFederationSession();
-                String query="?cod_primaria=3000328&jugador="+player+"&codacta="+acta+"&nueva_ventana=0";
+                String query="?cod_primaria="+primary+"&jugador="+player+"&codacta="+acta+"&nueva_ventana=";
                 Exception last=null;String html=null;
                 for(String prefix:new String[]{"https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador","https://www.rfaf.es/pnfg/NFG_EstadisticasJugador"}){
                     try{
@@ -261,7 +262,7 @@ public class MainActivity extends Activity {
                     }catch(Exception error){last=error;html=null;}
                 }
                 if(html==null)throw last==null?new java.io.IOException("Player profile unavailable"):last;
-                JSONObject out=new JSONObject();out.put("player",player);out.put("acta",acta);out.put("html",html);out.put("updated_at",java.time.Instant.now().toString());
+                JSONObject out=new JSONObject();out.put("player",player);out.put("acta",acta);out.put("primary",primary);out.put("html",html);out.put("updated_at",java.time.Instant.now().toString());
                 data=out.toString().getBytes(StandardCharsets.UTF_8);java.nio.file.Files.write(cache.toPath(),data);
             }
         }catch(Exception ignored){
@@ -270,7 +271,7 @@ public class MainActivity extends Activity {
         if(data==null)data="{}".getBytes(StandardCharsets.UTF_8);
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(data));
     }
-    private byte[] readPublicFederation(String address,java.net.CookieManager cookies) throws Exception {
+        private byte[] readPublicFederation(String address,java.net.CookieManager cookies) throws Exception {
         for(int hop=0;hop<6;hop++){
             java.net.URI uri=new java.net.URI(address);
             if(!"https".equals(uri.getScheme())||!("www.rfaf.es".equals(uri.getHost())||"rfaf.es".equals(uri.getHost()))||uri.getUserInfo()!=null)throw new java.io.IOException("Unsupported federation redirect");
@@ -302,9 +303,10 @@ public class MainActivity extends Activity {
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
-                    if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"));
+                    if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"));
+                    if(name.matches("rfaf-photo/[0-9]{1,12}\\.img"))return publicPhotoResponse(name.substring(11,name.length()-4));
                     if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
-                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
+                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!name.matches("rfaf-photo/[0-9]{1,12}\\.img")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
                 }return null;
