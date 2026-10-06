@@ -11,3 +11,24 @@ const blocks=f.parseReportHtml(html);const model=f.reportModel({blocks},{home:'L
 assert.equal(model.goals[0].score,'11 - 0');assert.equal(model.goals[0].type,'Gol de penalti');assert.equal(model.goals[0].minute,"12'");assert.equal(model.teams[0].starters[0].number,'10');assert.equal(model.teams[0].cards[0].type,'Tarjeta roja');assert.equal(model.teams[0].staff[0].role,'Entrenador');assert.equal(model.referees.length,1);assert.equal(dom.window.harmful,undefined);
 assert.throws(()=>f.parseReportHtml(''));
 console.log('On-device HTML extraction preserves scores, penalties, players, coaches and cards without running federation scripts');
+const fullReport=JSON.parse(fs.readFileSync('data/actas/2645766.json','utf8'));
+f.data=JSON.parse(fs.readFileSync('data/fixtures.json','utf8'));
+const fixture=f.data.round_matches.find(m=>m.acta_url?.includes('CodActa=2645766&'));
+const fullModel=f.reportModel(fullReport,fixture);
+dom.window.document.body.innerHTML=f.reportTimeline(fullModel,fixture);
+const rows=[...dom.window.document.querySelectorAll('.acta-timeline-event')];
+assert.equal(rows.length,11);
+for(const row of rows){
+ const stamp=row.querySelector('.acta-timeline-stamp');
+ assert(stamp.firstElementChild.classList.contains('acta-timeline-crest'));
+ assert.equal(stamp.lastElementChild.tagName,'TIME');
+ const name=row.querySelector('.acta-timeline-player');
+ assert.equal(name.querySelectorAll('strong').length,1);
+ assert(![...name.querySelectorAll('small')].some(n=>fullModel.teams.some(t=>t.name===n.textContent)));
+ const ownSide=Number(row.dataset.eventSide);
+ assert.equal(row.classList.contains(ownSide===0?'home':'away'),true);
+ assert(row.querySelector('img').alt.includes(fullModel.teams[ownSide].name));
+}
+assert.equal(rows[0].querySelector('time').textContent,"38'");
+assert.equal(dom.window.document.querySelectorAll('.acta-timeline-event .acta-timeline-score').length,4);
+console.log('Timeline DOM keeps the author crest before the minute, separates the two teams and omits repeated team names');
