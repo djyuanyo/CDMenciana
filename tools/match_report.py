@@ -195,7 +195,24 @@ def sync_reports(matches,get,root):
             'https://www.rfaf.es/pnfg/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id]
         for candidate in dict.fromkeys(candidates):
             try:
-                data=report(get(candidate));data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+                html=get(candidate);data=report(html);data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+                if not data.get('players'):
+                    names=[]
+                    for block in data.get('blocks',[]):
+                        if block.get('kind')!='table':continue
+                        for row in block.get('rows',[]):
+                            for cell in row:
+                                person=re.sub(r'^\\([^)]*\\)\\s*','',clean(cell))
+                                if ',' in person and 5<=len(person)<=100 and person not in names:names.append(person)
+                    samples=[]
+                    low=html.lower()
+                    for name in names[:8]:
+                        surname=name.split(',')[0].strip()
+                        pos=low.find(surname.lower())
+                        if pos>=0:
+                            samples.append(clean(html[max(0,pos-260):min(len(html),pos+len(surname)+420)]))
+                        if len(samples)>=4:break
+                    print(f'RFAF acta player markup {id}: '+json.dumps(samples,ensure_ascii=False),flush=True)
                 return id,data
             except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:errors.append(str(error))
         old=prior_report(id)
