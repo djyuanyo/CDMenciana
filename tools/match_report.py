@@ -51,7 +51,9 @@ def sync_reports(matches,get,root):
     def fetch(item):
         id,url=item
         try:
-            data=report(get(url));data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+            html=get(url)
+            if not html.strip():html=get('https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&cod_acta='+id)
+            data=report(html);data.update(id=id,source=url,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
             raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
             for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
                 target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw)

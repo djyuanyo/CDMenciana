@@ -123,7 +123,7 @@ def verify_results(matches,club,previous):
 def sync():
     opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     def get(url,encoding="iso-8859-15"):
-        req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 CDMenciana public sports data'})
+        req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36','Accept':'text/html,application/xhtml+xml','Referer':SOURCE})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
             html=raw.decode(encoding)
