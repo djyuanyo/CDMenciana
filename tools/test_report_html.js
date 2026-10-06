@@ -45,3 +45,9 @@ const profile=f.player('1234abcd','2645766');
 assert(profile.includes('PERFIL RFAF'));assert(profile.includes('Estadísticas RFAF'));assert(profile.includes('2026-2027'));
 assert(profile.includes('data-player-back'));assert(!profile.includes('href="https://www.rfaf.es'));
 console.log('RFAF player photos are embedded throughout the acta and player statistics stay inside the app');
+
+const novanetPlayers=f.parseReportPlayers(`<table><tr><td><img src="https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/9981.jpg"></td><td><a href="#" onclick="window.open('/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=3000328&amp;jugador=9981&amp;codacta=2645766&amp;nueva_ventana=0')">PEREZ LOPEZ, ANA</a></td></tr></table>`,'2645766');
+assert.equal(novanetPlayers.length,1);assert.equal(novanetPlayers[0].rfaf_id,'9981');assert.equal(novanetPlayers[0].acta_id,'2645766');assert(novanetPlayers[0].photo.includes('/pimg/Jugadores/9981.jpg'));
+const parsedProfile=f.parsePlayerProfileHtml(`<main><img class="foto-jugador" width="180" height="220" src="https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/9981.jpg"><table><tr><th>Temporada</th><th>Partidos</th><th>Goles</th></tr><tr><td>2026-2027</td><td>4</td><td>3</td></tr></table></main>`,novanetPlayers[0]);
+assert(parsedProfile.photo.includes('9981.jpg'));assert.equal(parsedProfile.stats.length,1);assert.equal(parsedProfile.stats[0].rows[1][2],'3');
+console.log('Novanet onclick player links, row photos and internal statistics HTML are parsed correctly');

@@ -32,6 +32,8 @@ public class MainActivity extends Activity {
     private WebView web;
     private String base;
     private String publicUserAgent;
+    private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
+    private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
         if(android.os.Build.VERSION.SDK_INT>=30)getWindow().setDecorFitsSystemWindows(false);
@@ -97,6 +99,8 @@ public class MainActivity extends Activity {
             byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1)out.write(b,0,n);prior=out.toByteArray();
             JSONObject json=new JSONObject(new String(prior,StandardCharsets.UTF_8));
             valid=(json.optJSONArray("blocks")!=null&&json.getJSONArray("blocks").length()>0)||json.has("html");
+            org.json.JSONArray players=json.optJSONArray("players");
+            if(valid&&!json.has("html")&&(players==null||players.length()==0))valid=false;
         }catch(Exception ignored){}
         if(!valid||refresh)try {
             java.net.CookieManager cookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
@@ -116,6 +120,39 @@ public class MainActivity extends Activity {
             java.nio.file.Files.write(new java.io.File(getFilesDir(),filename.replace('/','_')).toPath(),prior);
         }catch(Exception ignored){}
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(prior));
+    }
+    private synchronized void ensureFederationSession() throws Exception {
+        long now=System.currentTimeMillis();
+        if(now-federationSessionAt<300000L)return;
+        readPublicFederation("https://www.rfaf.es/",federationCookies);
+        federationSessionAt=now;
+    }
+    private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta) {
+        if(player==null||acta==null||!player.matches("[0-9]{1,12}")||!acta.matches("[0-9]{1,12}"))return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream("{}".getBytes(StandardCharsets.UTF_8)));
+        java.io.File cache=new java.io.File(getFilesDir(),"rfaf_player_"+player+"_"+acta+".json");
+        byte[] data=null;
+        try {
+            if(cache.exists()&&System.currentTimeMillis()-cache.lastModified()<86400000L)data=java.nio.file.Files.readAllBytes(cache.toPath());
+            if(data==null){
+                ensureFederationSession();
+                String query="?cod_primaria=3000328&jugador="+player+"&codacta="+acta+"&nueva_ventana=0";
+                Exception last=null;String html=null;
+                for(String prefix:new String[]{"https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador","https://www.rfaf.es/pnfg/NFG_EstadisticasJugador"}){
+                    try{
+                        html=new String(readPublicFederation(prefix+query,federationCookies),java.nio.charset.Charset.forName("ISO-8859-15"));
+                        if(html.length()<200||html.contains("No se ha aceptado el cookie"))throw new java.io.IOException("Player profile unavailable");
+                        break;
+                    }catch(Exception error){last=error;html=null;}
+                }
+                if(html==null)throw last==null?new java.io.IOException("Player profile unavailable"):last;
+                JSONObject out=new JSONObject();out.put("player",player);out.put("acta",acta);out.put("html",html);out.put("updated_at",java.time.Instant.now().toString());
+                data=out.toString().getBytes(StandardCharsets.UTF_8);java.nio.file.Files.write(cache.toPath(),data);
+            }
+        }catch(Exception ignored){
+            try{if(cache.exists())data=java.nio.file.Files.readAllBytes(cache.toPath());}catch(Exception ignored2){}
+        }
+        if(data==null)data="{}".getBytes(StandardCharsets.UTF_8);
+        return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(data));
     }
     private byte[] readPublicFederation(String address,java.net.CookieManager cookies) throws Exception {
         for(int hop=0;hop<6;hop++){
@@ -148,8 +185,9 @@ public class MainActivity extends Activity {
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
+                    if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"));
                     if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
-                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
+                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
                 }return null;

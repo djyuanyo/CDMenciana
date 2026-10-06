@@ -33,7 +33,20 @@ async function reportRoute(refresh=false){
  const id=route.acta,need=refresh||String(Fixtures.reportData?.id||'')!==id;
  page=route.kind==='player'?'Jugador':'Acta';
  if(need){Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id,refresh);}
- if(request===reportRequest){const current=routeState();if(current&&current.acta===id){page=current.kind==='player'?'Jugador':'Acta';render();}}
+ if(request===reportRequest){
+  const current=routeState();
+  if(current&&current.acta===id){
+   if(current.kind==='player'){
+    page='Jugador';render();
+    const player=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
+    if(player){await Fixtures.loadPlayerProfile(player,id);if(request===reportRequest&&routeState()?.player===current.player)render();}
+   }else{
+    page='Acta';render();
+    const changed=await Fixtures.enrichReportPlayers(id);
+    if(changed&&request===reportRequest&&routeState()?.kind==='acta')render();
+   }
+  }
+ }
 }
 window.addEventListener('hashchange',()=>reportRoute());
 document.addEventListener('click',e=>{
