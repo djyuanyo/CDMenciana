@@ -60,7 +60,7 @@ class Handler(BaseHTTPRequestHandler):
             path=self.path.split('?')[0]
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
-                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/app.js':'app.js','/style.css':'style.css','/crest.png':'crest.png'}
+                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures-filial.json':'fixtures-filial.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/appearance.js':'appearance.js','/rfaf_extract.js':'rfaf_extract.js','/app.js':'app.js','/style.css':'style.css','/theme.css':'theme.css','/crest.png':'crest.png'}
                 if re.fullmatch(r'/crests/[a-f0-9]{16}\.(png|jpg)',path):files[path]=path[1:]
                 if re.fullmatch(r'/players/[a-f0-9]{16}\.webp',path):files[path]=path[1:]
                 if re.fullmatch(r'/actas/[0-9]+\.json',path):files[path]=path[1:]

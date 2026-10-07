@@ -6,7 +6,7 @@ final class BundledAssets {
 
     static boolean allows(String name) {
         return java.util.Arrays.asList("index.html", "style.css", "theme.css", "offline.js",
-                "ui.js", "fixtures.js", "rfaf_extract.js", "crest.png").contains(name)
+                "ui.js", "appearance.js", "fixtures.js", "rfaf_extract.js", "crest.png").contains(name)
                 || name.matches("players/[a-f0-9]{16}\\.webp")
                 || name.matches("crests/[a-f0-9]{16}\\.(png|jpg)");
     }

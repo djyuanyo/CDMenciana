@@ -92,5 +92,5 @@ def sync():
         target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
     print(f'Updated {len(matches)} fixtures across {len(numbers)} rounds')
 if __name__=='__main__':
-    from official_rfaf import sync as official_sync
+    from official_rfaf import sync_all as official_sync
     official_sync()

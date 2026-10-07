@@ -298,7 +298,7 @@ def report(html):
     for ref in raw:players.setdefault(person_key(ref['name']),ref)
     return {'blocks':blocks,'players':list(players.values())}
 
-def sync_reports(matches,get,root):
+def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
     urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:(m['acta_url'],m) for m in matches if m.get('played') and m.get('acta_url')}
     def prior_report(id):
         path=root/'data/actas'/(id+'.json')
@@ -381,7 +381,7 @@ def sync_reports(matches,get,root):
         print(f"Acta {id} pendiente: {errors[-1] if errors else 'fuente no disponible'}",flush=True);return id,None
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:reports=dict(pool.map(fetch_report,urls.items()))
 
-    cache_path=root/PROFILE_CACHE
+    cache_path=root/(PROFILE_CACHE if fixtures_filename=='fixtures.json' else 'data/rfaf-player-profiles-filial.json')
     try:cache=json.loads(cache_path.read_text(encoding='utf-8')).get('profiles',{})
     except (OSError,ValueError,AttributeError):cache={}
     refs={p['profile_url']:p for data in reports.values() if data for p in data.get('players',[]) if p.get('profile_url')}
@@ -418,7 +418,7 @@ def sync_reports(matches,get,root):
     cache_path.parent.mkdir(parents=True,exist_ok=True);cache_path.write_text(json.dumps({'updated_at':now.isoformat(),'profiles':cache},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
     count=0;linked=0;photos=0
-    try:scorers=json.loads((root/'data/fixtures.json').read_text()).get('scorers',[])
+    try:scorers=json.loads((root/'data'/fixtures_filename).read_text()).get('scorers',[])
     except (OSError,ValueError):scorers=[]
     summaries=competition_summaries(reports,matches,scorers)
     for id,data in reports.items():

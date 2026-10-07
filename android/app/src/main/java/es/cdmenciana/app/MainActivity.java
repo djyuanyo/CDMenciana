@@ -28,9 +28,10 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 
-/** Native Android shell for the club's own hosted interface. The only JS bridge is offline-only and resolves public RFAF player links. */
+/** Native club shell with local appearance preferences and public RFAF player resolution. */
 public class MainActivity extends Activity {
     private WebView web;
+    private FrameLayout rootView;
     private String base;
     private String publicUserAgent;
     private boolean configuring=false;
@@ -40,9 +41,9 @@ public class MainActivity extends Activity {
         super.onCreate(saved);
         if(android.os.Build.VERSION.SDK_INT>=30)getWindow().setDecorFitsSystemWindows(false);
         getWindow().setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        getWindow().setStatusBarColor(Color.rgb(24,35,53));
-        getWindow().setNavigationBarColor(Color.rgb(24,35,53));
-        getWindow().getDecorView().setSystemUiVisibility(0);
+        getWindow().setStatusBarColor(tone("#182335","#edf3fa"));
+        getWindow().setNavigationBarColor(tone("#182335","#edf3fa"));
+        applyNativeTheme();
         base=getPreferences(MODE_PRIVATE).getString("server", "");
         load();
     }
@@ -52,40 +53,55 @@ public class MainActivity extends Activity {
         LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(dp(20),dp(20),dp(20),dp(28));
         scroll.addView(box,new android.widget.ScrollView.LayoutParams(-1,-1));
         Button back=styledButton("← Volver",false);LinearLayout.LayoutParams backLayout=new LinearLayout.LayoutParams(-2,dp(44));backLayout.bottomMargin=dp(22);box.addView(back,backLayout);back.setOnClickListener(v->load());
-        LinearLayout hero=nativeCard();hero.setBackground(surface(Color.rgb(49,83,118),Color.rgb(36,51,73),24));
+        LinearLayout hero=nativeCard();hero.setBackground(surface(tone("#315376","#f4faff"),tone("#243349","#dce8f6"),24));
         android.widget.ImageView crest=new android.widget.ImageView(this);crest.setImageResource(es.cdmenciana.app.R.drawable.crest);crest.setScaleType(android.widget.ImageView.ScaleType.FIT_CENTER);hero.addView(crest,new LinearLayout.LayoutParams(dp(68),dp(68)));
-        TextView kicker=styledText("CD MENCIANA · TU CLUB",10,Color.rgb(133,211,255));kicker.setPadding(0,dp(18),0,dp(12));hero.addView(kicker);
-        TextView title=styledText("Conexión del club",28,Color.WHITE);title.setTypeface(null,android.graphics.Typeface.BOLD);hero.addView(title);
-        TextView intro=styledText("Tu cuenta y las zonas privadas, en un mismo sitio.",13,Color.rgb(197,214,233));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
+        TextView kicker=styledText("CD MENCIANA · TU CLUB",10,tone("#85d3ff","#176495"));kicker.setPadding(0,dp(18),0,dp(12));hero.addView(kicker);
+        TextView title=styledText("Conexión del club",28,tone("#ffffff","#182c46"));title.setTypeface(null,android.graphics.Typeface.BOLD);hero.addView(title);
+        TextView intro=styledText("Tu cuenta y las zonas privadas, en un mismo sitio.",13,tone("#c5d6e9","#526780"));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
         box.addView(hero,spaced(-1,-2,0,22));
-        LinearLayout form=nativeCard();TextView label=styledText("Servidor del club",18,Color.WHITE);label.setTypeface(null,android.graphics.Typeface.BOLD);form.addView(label);
-        TextView hint=styledText("Introduce la dirección facilitada por el club para acceder a tu cuenta.",13,Color.rgb(176,192,213));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
-        EditText url=new EditText(this);url.setText(base);url.setHint("https://app.tu-dominio.es");url.setTextSize(14);url.setTextColor(Color.WHITE);url.setHintTextColor(Color.rgb(176,192,213));url.setBackground(surface(Color.rgb(29,43,64),Color.rgb(29,43,64),12));url.setBackgroundTintList(null);url.setPadding(dp(14),dp(12),dp(14),dp(12));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);form.addView(url,new LinearLayout.LayoutParams(-1,dp(50)));
-        TextView error=styledText("",12,Color.rgb(255,166,181));error.setPadding(0,dp(10),0,0);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);form.addView(error);
+        LinearLayout form=nativeCard();TextView label=styledText("Servidor del club",18,tone("#ffffff","#182c46"));label.setTypeface(null,android.graphics.Typeface.BOLD);form.addView(label);
+        TextView hint=styledText("Introduce la dirección facilitada por el club para acceder a tu cuenta.",13,tone("#b0c0d5","#526780"));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
+        EditText url=new EditText(this);url.setText(base);url.setHint("https://app.tu-dominio.es");url.setTextSize(14);url.setTextColor(tone("#ffffff","#182c46"));url.setHintTextColor(tone("#b0c0d5","#526780"));url.setBackground(surface(tone("#1d2b40","#f8fbff"),tone("#1d2b40","#f8fbff"),12));url.setBackgroundTintList(null);url.setPadding(dp(14),dp(12),dp(14),dp(12));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);form.addView(url,new LinearLayout.LayoutParams(-1,dp(50)));
+        TextView error=styledText("",12,tone("#ffa6b5","#ad2340"));error.setPadding(0,dp(10),0,0);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);form.addView(error);
         Button connect=styledButton("Conectar con el club",true);form.addView(connect,spaced(-1,dp(48),20,0));
         connect.setOnClickListener(v->{Uri uri=Uri.parse(url.getText().toString().trim());if(!"https".equals(uri.getScheme())||uri.getHost()==null||uri.getUserInfo()!=null||uri.getQuery()!=null||uri.getFragment()!=null||!(uri.getPath()==null||uri.getPath().isEmpty()||"/".equals(uri.getPath()))){error.setText("Introduce una dirección HTTPS sin rutas ni parámetros.");error.setVisibility(View.VISIBLE);url.requestFocus();return;}base=uri.buildUpon().path("").build().toString();getPreferences(MODE_PRIVATE).edit().putString("server",base).apply();load();});
         box.addView(form,spaced(-1,-2,0,20));
         Button publicView=styledButton("Usar la vista pública",false);box.addView(publicView,spaced(-1,dp(48),0,0));publicView.setOnClickListener(v->{CookieManager.getInstance().removeAllCookies(null);base="";getPreferences(MODE_PRIVATE).edit().remove("server").apply();load();});
-        TextView publicHint=styledText("Calendario, resultados y noticias sin iniciar sesión.",12,Color.rgb(176,192,213));publicHint.setPadding(dp(8),dp(12),dp(8),0);publicHint.setGravity(android.view.Gravity.CENTER);box.addView(publicHint);
+        TextView publicHint=styledText("Calendario, resultados y noticias sin iniciar sesión.",12,tone("#b0c0d5","#526780"));publicHint.setPadding(dp(8),dp(12),dp(8),0);publicHint.setGravity(android.view.Gravity.CENTER);box.addView(publicHint);
         mountSafe(scroll);
+    }
+    private boolean lightMode(){return "light".equals(getPreferences(MODE_PRIVATE).getString("theme","dark"));}
+    private int tone(String dark,String light){return Color.parseColor(lightMode()?light:dark);}
+    private void applyNativeTheme(){
+        int background=tone("#182335","#edf3fa");getWindow().setStatusBarColor(background);getWindow().setNavigationBarColor(background);
+        getWindow().getDecorView().setSystemUiVisibility(lightMode()?View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR:0);
+        if(rootView!=null)rootView.setBackgroundColor(background);if(web!=null)web.setBackgroundColor(background);
+    }
+    /** Only local appearance preferences: no account or file access. */
+    private final class AppearanceBridge {
+        @JavascriptInterface public String getTheme(){return getPreferences(MODE_PRIVATE).getString("theme","dark");}
+        @JavascriptInterface public String getTeam(){return getPreferences(MODE_PRIVATE).getString("team","first");}
+        @JavascriptInterface public void setTheme(String value){if(!"dark".equals(value)&&!"light".equals(value))return;getPreferences(MODE_PRIVATE).edit().putString("theme",value).apply();runOnUiThread(()->applyNativeTheme());}
+        @JavascriptInterface public void setTeam(String value){if("first".equals(value)||"filial".equals(value))getPreferences(MODE_PRIVATE).edit().putString("team",value).apply();}
     }
     private int dp(int value){return Math.round(value*getResources().getDisplayMetrics().density);}
     private TextView styledText(String text,int size,int color){TextView view=new TextView(this);view.setText(text);view.setTextSize(size);view.setTextColor(color);view.setLineSpacing(dp(3),1f);return view;}
     private android.graphics.drawable.GradientDrawable surface(int start,int end,int radius){android.graphics.drawable.GradientDrawable background=new android.graphics.drawable.GradientDrawable(android.graphics.drawable.GradientDrawable.Orientation.TL_BR,new int[]{start,end});background.setCornerRadius(dp(radius));background.setStroke(dp(1),Color.argb(35,168,201,229));return background;}
-    private LinearLayout nativeCard(){LinearLayout card=new LinearLayout(this);card.setOrientation(LinearLayout.VERTICAL);card.setPadding(dp(22),dp(22),dp(22),dp(22));card.setBackground(surface(Color.rgb(52,69,94),Color.rgb(37,51,73),21));card.setElevation(dp(5));return card;}
+    private LinearLayout nativeCard(){LinearLayout card=new LinearLayout(this);card.setOrientation(LinearLayout.VERTICAL);card.setPadding(dp(22),dp(22),dp(22),dp(22));card.setBackground(surface(tone("#34455e","#ffffff"),tone("#253349","#e6edf6"),21));card.setElevation(dp(5));return card;}
     private LinearLayout.LayoutParams spaced(int width,int height,int top,int bottom){LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(width,height);params.topMargin=dp(top);params.bottomMargin=dp(bottom);return params;}
-    private Button styledButton(String label,boolean primary){Button button=new Button(this);button.setText(label);button.setTextSize(13);button.setAllCaps(false);button.setTextColor(primary?Color.WHITE:Color.rgb(197,213,232));button.setPadding(dp(16),dp(10),dp(16),dp(10));button.setMinHeight(dp(44));button.setBackground(primary?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),13):surface(Color.rgb(52,69,94),Color.rgb(37,51,73),13));button.setBackgroundTintList(null);button.setElevation(dp(3));return button;}
+    private Button styledButton(String label,boolean primary){Button button=new Button(this);button.setText(label);button.setTextSize(13);button.setAllCaps(false);button.setTextColor(primary?Color.WHITE:tone("#c5d5e8","#435d7e"));button.setPadding(dp(16),dp(10),dp(16),dp(10));button.setMinHeight(dp(44));button.setBackground(primary?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),13):surface(tone("#34455e","#ffffff"),tone("#253349","#e6edf6"),13));button.setBackgroundTintList(null);button.setElevation(dp(3));return button;}
     private void showThemedDialog(AlertDialog.Builder builder,String title){
-        TextView heading=styledText(title,20,Color.WHITE);heading.setTypeface(null,android.graphics.Typeface.BOLD);heading.setPadding(dp(24),dp(24),dp(24),dp(10));builder.setCustomTitle(heading);
+        TextView heading=styledText(title,20,tone("#ffffff","#182c46"));heading.setTypeface(null,android.graphics.Typeface.BOLD);heading.setPadding(dp(24),dp(24),dp(24),dp(10));builder.setCustomTitle(heading);
         AlertDialog dialog=builder.create();dialog.setOnShowListener(ignored->{
-            if(dialog.getWindow()!=null){dialog.getWindow().setBackgroundDrawable(surface(Color.rgb(52,69,94),Color.rgb(37,51,73),24));dialog.getWindow().setDimAmount(.65f);}
-            TextView message=dialog.findViewById(android.R.id.message);if(message!=null){message.setTextColor(Color.rgb(197,213,232));message.setTextSize(14);message.setLineSpacing(dp(3),1f);}
-            for(int id:new int[]{AlertDialog.BUTTON_POSITIVE,AlertDialog.BUTTON_NEGATIVE,AlertDialog.BUTTON_NEUTRAL}){Button button=dialog.getButton(id);if(button==null)continue;button.setAllCaps(false);button.setTextSize(12);button.setTextColor(id==AlertDialog.BUTTON_POSITIVE?Color.WHITE:Color.rgb(197,213,232));button.setMinHeight(dp(44));button.setBackground(id==AlertDialog.BUTTON_POSITIVE?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),12):surface(Color.rgb(44,59,82),Color.rgb(37,51,73),12));button.setBackgroundTintList(null);if(button.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams){android.view.ViewGroup.MarginLayoutParams params=(android.view.ViewGroup.MarginLayoutParams)button.getLayoutParams();params.setMargins(dp(4),dp(4),dp(4),dp(12));button.setLayoutParams(params);}}
+            if(dialog.getWindow()!=null){dialog.getWindow().setBackgroundDrawable(surface(tone("#34455e","#ffffff"),tone("#253349","#e6edf6"),24));dialog.getWindow().setDimAmount(.65f);}
+            TextView message=dialog.findViewById(android.R.id.message);if(message!=null){message.setTextColor(tone("#c5d5e8","#435d7e"));message.setTextSize(14);message.setLineSpacing(dp(3),1f);}
+            for(int id:new int[]{AlertDialog.BUTTON_POSITIVE,AlertDialog.BUTTON_NEGATIVE,AlertDialog.BUTTON_NEUTRAL}){Button button=dialog.getButton(id);if(button==null)continue;button.setAllCaps(false);button.setTextSize(12);button.setTextColor(id==AlertDialog.BUTTON_POSITIVE?Color.WHITE:tone("#c5d5e8","#435d7e"));button.setMinHeight(dp(44));button.setBackground(id==AlertDialog.BUTTON_POSITIVE?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),12):surface(tone("#2c3b52","#e0e9f5"),tone("#253349","#e6edf6"),12));button.setBackgroundTintList(null);if(button.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams){android.view.ViewGroup.MarginLayoutParams params=(android.view.ViewGroup.MarginLayoutParams)button.getLayoutParams();params.setMargins(dp(4),dp(4),dp(4),dp(12));button.setLayoutParams(params);}}
         });dialog.show();
     }
     /** Insets belong to the parent: this physically resizes the WebView viewport. */
     private void mountSafe(View content) {
-        FrameLayout root=new FrameLayout(this);root.setBackgroundColor(Color.rgb(24,35,53));
+        FrameLayout root=new FrameLayout(this);root.setBackgroundColor(tone("#182335","#edf3fa"));
+        rootView=root;
         root.addView(content,new FrameLayout.LayoutParams(-1,-1));setContentView(root);
         if(android.os.Build.VERSION.SDK_INT>=30){
             root.setOnApplyWindowInsetsListener((v,insets)->{
@@ -149,6 +165,18 @@ public class MainActivity extends Activity {
             }
         }catch(Exception ignored){}
     }
+    private String roundSourceForActa(String id){
+        for(String filename:new String[]{"fixtures.json","fixtures-filial.json"}){
+            java.io.File cached=new java.io.File(getFilesDir(),filename);
+            for(boolean bundled:new boolean[]{false,true})try(InputStream input=bundled?getAssets().open(filename):new java.io.FileInputStream(cached);ByteArrayOutputStream bytes=new ByteArrayOutputStream()){
+                byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);
+                JSONObject data=new JSONObject(bytes.toString("UTF-8"));org.json.JSONArray matches=data.optJSONArray("round_matches");if(matches==null)matches=data.optJSONArray("matches");if(matches==null)continue;
+                for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(!id.equals(link.getQueryParameter("CodActa")))continue;String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))return source;}
+            }catch(Exception ignored){}
+        }
+        boolean filial="filial".equals(getPreferences(MODE_PRIVATE).getString("team","first"));
+        return "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion="+(filial?"49113015":"48466108")+"&CodGrupo="+(filial?"49113036":"48466109")+"&CodTemporada=22&CodJornada=1";
+    }
     /** Read public match reports directly when the scheduled copy is unavailable. */
     private android.webkit.WebResourceResponse publicReportResponse(String id,boolean refresh) {
         String filename="actas/"+id+".json";
@@ -163,13 +191,8 @@ public class MainActivity extends Activity {
         }catch(Exception ignored){}
         if(!valid||refresh)try {
             java.net.CookieManager cookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
-            readPublicFederation("https://www.rfaf.es/",cookies);
-            String roundSource="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5";
-            try {
-                JSONObject fixtures=new JSONObject(new String(java.nio.file.Files.readAllBytes(new java.io.File(getFilesDir(),"fixtures.json").toPath()),StandardCharsets.UTF_8));
-                org.json.JSONArray matches=fixtures.getJSONArray("round_matches");
-                for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(id.equals(link.getQueryParameter("CodActa"))){String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))roundSource=source;break;}}
-            }catch(Exception ignored){}
+            readPublicFederation("https://www.rfaf.es/pnfg/NPortada",cookies);
+            String roundSource=roundSourceForActa(id);
             readPublicFederation(roundSource,cookies);
             String url="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+id;
             String html=new String(readPublicFederation(url,cookies),java.nio.charset.Charset.forName("ISO-8859-15"));
@@ -203,7 +226,7 @@ public class MainActivity extends Activity {
         WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
         CookieManager.getInstance().setAcceptCookie(true);CookieManager.getInstance().setAcceptThirdPartyCookies(resolver,true);
         final String actaUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta;
-        final String roundUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5";
+        final String roundUrl=roundSourceForActa(acta);
         final Runnable fail=()->{if(done[0])return;done[0]=true;deliverResolvedPlayers(acta,"[]");resolver.stopLoading();resolver.destroy();};
         resolver.setWebViewClient(new WebViewClient(){
             @Override public void onPageFinished(WebView view,String url){
@@ -219,7 +242,7 @@ public class MainActivity extends Activity {
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
         });
-        resolver.postDelayed(fail,18000);resolver.loadUrl("https://www.rfaf.es/");
+        resolver.postDelayed(fail,18000);resolver.loadUrl("https://www.rfaf.es/pnfg/NPortada");
     }
     /** The same tested DOM reader handles embedded portraits on Android and the app. */
     private String rfafExtractorScript(String expression) {
@@ -276,7 +299,7 @@ public class MainActivity extends Activity {
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
         });
-        resolver.postDelayed(fail,22000);resolver.loadUrl("https://www.rfaf.es/");
+        resolver.postDelayed(fail,22000);resolver.loadUrl("https://www.rfaf.es/pnfg/NPortada");
     }
     private void deliverResolvedProfile(String playerKey,JSONObject data) {
         final String script="window.Fixtures&&window.Fixtures.applyResolvedProfile("+JSONObject.quote(playerKey)+","+data.toString()+");";
@@ -294,7 +317,7 @@ public class MainActivity extends Activity {
     private synchronized void ensureFederationSession() throws Exception {
         long now=System.currentTimeMillis();
         if(now-federationSessionAt<300000L)return;
-        readPublicFederation("https://www.rfaf.es/",federationCookies);
+        readPublicFederation("https://www.rfaf.es/pnfg/NPortada",federationCookies);
         federationSessionAt=now;
     }
     private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta,String primary,boolean refresh) {
@@ -346,11 +369,12 @@ public class MainActivity extends Activity {
     }
     private boolean sameOrigin(Uri uri){Uri home=Uri.parse(base.isEmpty()?"https://appassets.androidplatform.net":base);return "https".equals(uri.getScheme())&&home.getHost().equalsIgnoreCase(uri.getHost())&&home.getPort()==uri.getPort();}
     private void load() {
-        configuring=false;
+        configuring=false;applyNativeTheme();
         publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
-        mountSafe(web);web.setBackgroundColor(Color.rgb(24,35,53));
+        mountSafe(web);web.setBackgroundColor(tone("#182335","#edf3fa"));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        web.addJavascriptInterface(new AppearanceBridge(),"AppAppearance");
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);
         web.setWebViewClient(new WebViewClient(){
@@ -359,7 +383,7 @@ public class MainActivity extends Activity {
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
                     if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"),req.getUrl().getQueryParameter("refresh")!=null);
-                    if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
+                    if("fixtures.json".equals(name)||"fixtures-filial.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
                     if(!BundledAssets.allows(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
@@ -368,7 +392,7 @@ public class MainActivity extends Activity {
             @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest req){Uri uri=req.getUrl();if(req.isForMainFrame()&&sameOrigin(uri)&&"/__native__/settings".equals(uri.getPath())){configure();return true;}if(sameOrigin(uri))return false;if("https".equals(uri.getScheme())){try{startActivity(new Intent(Intent.ACTION_VIEW,uri));}catch(Exception ignored){}}return true;}
             @Override public void onPageFinished(WebView view,String url){
                 if(base.isEmpty()||!sameOrigin(Uri.parse(url)))return;
-                try(InputStream input=getAssets().open("theme.css")){ByteArrayOutputStream bytes=new ByteArrayOutputStream();byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);String css=bytes.toString("UTF-8");view.evaluateJavascript("(()=>{if(!document.getElementById('main')||!document.getElementById('nav'))return;let style=document.getElementById('cdm-android-theme');if(!style){style=document.createElement('style');style.id='cdm-android-theme';document.head.appendChild(style);}style.textContent="+JSONObject.quote(css)+";})()",null);}catch(java.io.IOException ignored){}
+                try(InputStream input=getAssets().open("theme.css")){ByteArrayOutputStream bytes=new ByteArrayOutputStream();byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);String css=bytes.toString("UTF-8");view.evaluateJavascript("(()=>{if(!document.getElementById('main')||!document.getElementById('nav'))return;if(window.AppAppearance)document.documentElement.dataset.theme=AppAppearance.getTheme();let style=document.getElementById('cdm-android-theme');if(!style){style=document.createElement('style');style.id='cdm-android-theme';document.head.appendChild(style);}style.textContent="+JSONObject.quote(css)+";})()",null);}catch(java.io.IOException ignored){}
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest req,WebResourceError error){if(req.isForMainFrame())showThemedDialog(new AlertDialog.Builder(MainActivity.this).setMessage("Comprueba tu conexión y que el servidor del club esté disponible.").setPositiveButton("Reintentar",(d,w)->load()).setNeutralButton("Cambiar servidor",(d,w)->configure()),"No se puede conectar");}
         });web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base);

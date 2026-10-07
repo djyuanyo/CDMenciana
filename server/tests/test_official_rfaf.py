@@ -1,8 +1,24 @@
 import sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich
+from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS
 class OfficialRFAFTests(unittest.TestCase):
+    def test_filial_regional_table_without_coefficient(self):
+        html=(Path(__file__).parent/'fixtures/rfaf_filial_standings.html').read_text()
+        rows=standings(html,team_count=8)
+        club=next(r for r in rows if 'APAGA' in r['team'])
+        self.assertEqual((4,1,1,0,1,0,1,1),tuple(club[k] for k in ['position','points','played','won','drawn','lost','gf','ga']))
+        with self.assertRaises(ValueError):standings(html)
+    def test_filial_calendar_has_four_matches_and_its_own_ids(self):
+        tables=[]
+        for n in range(1,15):
+            rows=''.join(f'<tr><td>{"C.D. APAGA Y VAMONOS" if i==0 else "Local "+str(i)}</td><td><strong></strong><strong></strong></td><td>Visitante {i}</td></tr>' for i in range(4))
+            tables.append(f'<table class="table-hover">Jornada {n} (10-10-2026){rows}</table>')
+        html=''.join(tables);matches,numbers=calendar(html,all_teams=True,config=TEAMS['filial'])
+        self.assertEqual((56,14),(len(matches),len(numbers)))
+        self.assertEqual(56,len({m['id'] for m in matches}))
+        self.assertTrue(all(m['id'].startswith('49113036-') and 'CodCompeticion=49113015' in m['source'] for m in matches))
+        with self.assertRaises(ValueError):calendar(html,all_teams=True)
     def score(self,html):return scores(Document('<td>'+html+'</td>').root.find('td')[0])
     def test_hidden_digits_and_icons(self):
         self.assertEqual((5,3),self.score('<strong><style>#x:before{content:"0";display:none}</style><span>5<span style="display:none">9</span></span></strong><strong><i id="x"><script>ntype("x",8,0,"fa-6");</script><span style="display:none">6</span></i></strong>'))

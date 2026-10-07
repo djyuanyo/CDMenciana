@@ -17,6 +17,29 @@
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #edf3fa;
+  --surface: #f5f8fd;
+  --surface-raised: #ffffff;
+  --text: #182c46;
+  --muted: #526780;
+  --sky: #176495;
+  --gold: #93610d;
+  --line: #355b8326;
+  --matte: linear-gradient(145deg, #ffffff, #e6edf6);
+  --accent: linear-gradient(135deg, #177da7, #3d65d9);
+  --raised-shadow: 7px 7px 18px #97abc64a, -5px -5px 14px #ffffffd9;
+}
+.header-actions { display: flex; gap: 9px; align-items: center; }
+.theme-btn svg { width: 21px; height: 21px; display: block; }
+.team-selector { display: flex; gap: 10px; max-width: 1016px; padding: 0 18px; margin: 0 auto 20px; }
+.team-selector button { display: flex; align-items: center; justify-content: center; gap: 8px; flex: 1; max-width: 200px; min-height: 46px; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); background: var(--matte); box-shadow: var(--raised-shadow); font-size: 12px; font-weight: 700; }
+.team-selector button svg { width: 18px; height: 18px; }
+.team-selector button.active { background: var(--accent); color: white; }
+.roster-photo-placeholder { display: flex; justify-content: center; align-items: center; height: 100%; min-height: 180px; color: var(--muted); }
+.roster-photo-placeholder svg { width: 80px; height: 80px; }
+.player-details a { color: inherit; }
 body {
   padding-bottom: 108px;
   background: radial-gradient(ellipse at 100% 12%, #27558335, transparent 48%), var(--background);
@@ -41,6 +64,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   padding: 18px 22px;
   background: transparent;
   border: 0;
+  color: var(--text);
 }
 .club-wordmark strong { font-size: 29px; letter-spacing: -1.5px; }
 .club-wordmark span { font-size: 8px; color: var(--muted); letter-spacing: 1.7px; }
@@ -371,3 +395,47 @@ input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
   button, a { transition: none; }
   .acta-spinner { animation-duration: 2.5s; }
 }
+
+/* Light mode changes the palette while keeping the same cards and geometry. */
+:root[data-theme="light"] body { background: radial-gradient(ellipse at 100% 12%, #79b7ed25, transparent 48%), var(--background); }
+:root[data-theme="light"] .team-cover { background: linear-gradient(125deg, #ffffff, #dce8f6); }
+:root[data-theme="light"] .team-cover::before { background: linear-gradient(150deg, #b4e6fa, #87b2f5 72%); opacity: .8; }
+:root[data-theme="light"] .team-cover h1 { color: var(--text); }
+:root[data-theme="light"] .cover-team-name { color: var(--muted); }
+:root[data-theme="light"] .cover-crest { filter: drop-shadow(0 10px 12px #58759c35); }
+:root[data-theme="light"] .team-tabs button, :root[data-theme="light"] .round-tabs .round-tab, :root[data-theme="light"] .sync-status button, :root[data-theme="light"] .report-back, :root[data-theme="light"] .acta-team-switch button, :root[data-theme="light"] .dialog-actions button.secondary { color: var(--muted); box-shadow: var(--raised-shadow); }
+:root[data-theme="light"] .team-tabs button.active, :root[data-theme="light"] .round-tabs .round-tab.active, :root[data-theme="light"] .acta-team-switch button.active { color: white; }
+:root[data-theme="light"] .player-tile, :root[data-theme="light"] .membercard { background: linear-gradient(125deg, #edf8ff, #cddff2); }
+:root[data-theme="light"] .membercard small, :root[data-theme="light"] .membercard p, :root[data-theme="light"] label { color: var(--muted); }
+:root[data-theme="light"] .match-status { color: #435d7e; background: #d5e3f5; }
+:root[data-theme="light"] .match-status.finished, :root[data-theme="light"] .acta-result > span { color: #166a50; background: #ccece0; }
+:root[data-theme="light"] .fixture-team strong { color: var(--text) !important; }
+:root[data-theme="light"] .fixture-card .match-time span, :root[data-theme="light"] .fixture-card .match-time small { color: var(--muted); }
+:root[data-theme="light"] .fixture-score .score-dash { color: var(--muted) !important; }
+:root[data-theme="light"] .rival-placeholder, :root[data-theme="light"] .player-photo-wrap, :root[data-theme="light"] .news-cover { background: #d8e5f4; }
+:root[data-theme="light"] .match-teams img, :root[data-theme="light"] .acta-team img, :root[data-theme="light"] .acta-crest-placeholder { box-shadow: 0 5px 12px #7590ad35; }
+:root[data-theme="light"] .scorer-row.our-club, :root[data-theme="light"] .standings-table tbody tr.our-club { background: #d5eafa; }
+:root[data-theme="light"] .standings-table thead { background: #dae6f4; color: var(--text); }
+:root[data-theme="light"] .standings-table { scrollbar-color: #8aa8c6 #e3ecf6; }
+:root[data-theme="light"] .acta-hero, :root[data-theme="light"] .player-rfaf-hero { background: linear-gradient(135deg, #ffffff, #d9e7f7); }
+:root[data-theme="light"] .acta-team strong, :root[data-theme="light"] .acta-result > strong, :root[data-theme="light"] .player-rfaf-hero h1 { color: var(--text); }
+:root[data-theme="light"] .acta-team small, :root[data-theme="light"] .acta-date, :root[data-theme="light"] .player-rfaf-hero p { color: var(--muted); }
+:root[data-theme="light"] .acta-number, :root[data-theme="light"] .acta-events time { background: #dae8f8; }
+:root[data-theme="light"] .acta-player-avatar { background: #c6d9ed; border-color: #a0bdda; box-shadow: 0 3px 8px #8a9db835; }
+:root[data-theme="light"] .acta-player-placeholder { background: linear-gradient(145deg, #e5f0fa, #b7d0e8); color: #28587d; }
+:root[data-theme="light"] .player-rfaf-hero .acta-player-placeholder { color: #28587d; }
+:root[data-theme="light"] .acta-timeline-stamp { background: #dae8f8; border-color: #94b9da; }
+:root[data-theme="light"] .acta-timeline time { color: var(--text); }
+:root[data-theme="light"] .acta-timeline-score { background: var(--surface); }
+:root[data-theme="light"] .acta-timeline-icon.normal-goal { color: #148343; }
+:root[data-theme="light"] .acta-timeline-icon.own-goal { color: #bd243c; }
+:root[data-theme="light"] .acta-timeline-icon.penalty { color: #2467b8; }
+:root[data-theme="light"] .player-match-stats .player-stat-featured { background: linear-gradient(145deg, #e1f4ff, #c9ddf7); }
+:root[data-theme="light"] input, :root[data-theme="light"] select, :root[data-theme="light"] textarea { background: #f8fbff; border-color: #aabed6; box-shadow: inset 3px 3px 9px #bdcce144; }
+:root[data-theme="light"] .card button[data-delete] { color: #9d304a; background: #f4dfe5; }
+:root[data-theme="light"] #notice { color: var(--text); background: #dbeafb; border-color: #9cbddd; }
+:root[data-theme="light"] #nav { background: linear-gradient(135deg, #fffffff5, #e2ebf7fa); border-color: var(--line); box-shadow: var(--raised-shadow); }
+:root[data-theme="light"] #nav button, :root[data-theme="light"] #nav button.selected { color: var(--text); }
+:root[data-theme="light"] .app-dialog { color: var(--text); }
+:root[data-theme="light"] .dialog-actions button { box-shadow: var(--raised-shadow); }
+@media (max-width: 359px) { .header-actions { gap: 7px; } .header-crest { width: 40px; height: 40px; } }

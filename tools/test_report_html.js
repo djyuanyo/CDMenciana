@@ -39,7 +39,7 @@ const decorated=f.decorateReportPlayers(f.report('2645766'),'2645766');
 dom.window.document.body.innerHTML=decorated;
 const playerLinks=[...dom.window.document.querySelectorAll('a[data-player-link]')];
 assert(playerLinks.length>=1);
-assert(playerLinks.every(a=>a.getAttribute('href')==='#jugador=1234abcd&acta=2645766'));
+assert(playerLinks.every(a=>a.getAttribute('href')==='#jugador=1234abcd&acta=2645766&equipo=first'));
 assert(playerLinks.some(a=>a.querySelector('img.acta-player-avatar')?.src.includes('/pnfg/pimg/Jugadores/77.jpg')));
 const profile=f.player('1234abcd','2645766');
 assert(profile.includes('PERFIL RFAF'));assert(profile.includes('Temporada 2026-2027'));assert(profile.includes('2026-2027'));
@@ -132,19 +132,19 @@ console.log('Player cards distinguish played matches from call-ups, keep publish
  W.scrollTo=()=>{};
  W.fetch=async url=>({ok:true,json:async()=>String(url).startsWith('actas/')?JSON.parse(JSON.stringify(data)):String(url).startsWith('news')?{news:[]}:f.data});
  W.RfafResolver={resolveActaPlayers(){actaRequests++},resolvePlayerProfile(url,id){profileRequests++;assert(url.includes('jugador=77'));W.Fixtures.applyResolvedProfile(id,{stats:exact.stats,photo:''});}};
- for(const file of ['ui.js','rfaf_extract.js','fixtures.js','offline.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+file,'utf8'));
+ for(const file of ['appearance.js','ui.js','rfaf_extract.js','fixtures.js','offline.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+file,'utf8'));
  const settle=()=>new Promise(resolve=>W.setTimeout(resolve,20));await settle();
  assert.equal(profileRequests,0,'Opening the acta must not fetch every player statistics page');
- const a=W.document.querySelector('a[data-player-link][href="#jugador=1234abcd&acta=2645766"]');assert(a);
+ const a=W.document.querySelector('a[data-player-link][href="#jugador=1234abcd&acta=2645766&equipo=first"]');assert(a);
  assert(a.querySelector('img').src.startsWith('data:image/jpeg;base64,'));
  // Other unknown player refs should not hold the selected player navigation open.
  W.Fixtures.applyResolvedPlayers('2645766',[]);
  a.click();await settle();
- assert.equal(W.location.hash,'#jugador=1234abcd&acta=2645766');assert.equal(profileRequests,1);
+ assert.equal(W.location.hash,'#jugador=1234abcd&acta=2645766&equipo=first');assert.equal(profileRequests,1);
  assert.equal(W.document.querySelectorAll('.player-rfaf-section').length,3);
  assert(W.document.querySelector('.player-rfaf-hero img').src.startsWith('data:image/jpeg;base64,'));
  W.document.querySelector('[data-player-back]').click();await settle();
- assert.equal(W.location.hash,'#acta=2645766');assert(W.document.querySelector('.acta-people'));
+ assert.equal(W.location.hash,'#acta=2645766&equipo=first');assert(W.document.querySelector('.acta-people'));
  W.Fixtures.applyResolvedPlayers('2645766',[]);
  // Recent saved statistics work even when the device has no network connection.
  data.players[0].stats=exact.stats;data.players[0].profile_updated_at=new Date().toISOString();

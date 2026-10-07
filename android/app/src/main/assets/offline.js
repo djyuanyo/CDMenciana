@@ -1,8 +1,10 @@
 const main=document.getElementById('main');
 let page='Inicio',playerProfileLoading=false;
 function routeState(){
- const player=location.hash.match(/^#jugador=([a-f0-9]{8,64})&acta=(\d+)$/i);if(player)return {kind:'player',player:player[1],acta:player[2]};
- const acta=location.hash.match(/^#acta=(\d+)$/);return acta?{kind:'acta',acta:acta[1]}:null;
+ const params=new URLSearchParams(location.hash.slice(1)),team=params.get('equipo'),acta=params.get('acta'),player=params.get('jugador');
+ if(team&&!Fixtures.teams[team])return null;
+ if(player&&/^[a-f0-9]{8,64}$/i.test(player)&&/^\d+$/.test(acta||''))return {kind:'player',player,acta,team:team||Fixtures.selectedTeam};
+ return /^\d+$/.test(acta||'')?{kind:'acta',acta,team:team||Fixtures.selectedTeam}:null;
 }
 function render(){
  CDM.shell(page,null);
@@ -31,6 +33,7 @@ let reportRequest=0;
 async function reportRoute(refresh=false){
  const route=routeState(),request=++reportRequest;
  if(!route){playerProfileLoading=false;if(page==='Acta'||page==='Jugador'){page='Partidos';render();}return;}
+ if(route.team!==Fixtures.selectedTeam){Fixtures.selectTeam(route.team);await Fixtures.loadFixtures();if(request!==reportRequest)return;}
  const id=route.acta,need=refresh||String(Fixtures.reportData?.id||'')!==id;
  page=route.kind==='player'?'Jugador':'Acta';
  if(need){Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id,refresh);}
@@ -52,11 +55,13 @@ async function reportRoute(refresh=false){
 }
 window.addEventListener('hashchange',()=>reportRoute());
 document.addEventListener('click',e=>{
- if(e.target.closest('[data-report-back]')){if(location.hash.startsWith('#acta='))history.back();else{page='Partidos';render();}}
+ if(e.target.closest('[data-report-back]')){if(routeState()){history.replaceState(null,'',location.pathname);reportRequest++;page='Partidos';render();window.scrollTo(0,0);}else{page='Partidos';render();}}
  if(e.target.closest('[data-report-retry]'))reportRoute(true);
  if(e.target.closest('[data-player-retry]')){const route=routeState(),p=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===route?.player);if(p){p._profileLoaded=false;p._refreshRequested=true;}reportRoute();}
- const playerBack=e.target.closest('[data-player-back]');if(playerBack){const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'','#acta='+id);reportRoute();}}
+ const playerBack=e.target.closest('[data-player-back]');if(playerBack){const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'',Fixtures.actaHref(id));reportRoute();}}
 });
 if(routeState())reportRoute();
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-report-side]');if(b){Fixtures.reportSide=Number(b.dataset.reportSide);render();}});
+
+document.addEventListener('click',async e=>{const button=e.target.closest('[data-team]');if(!button||!Fixtures.selectTeam(button.dataset.team))return;const team=Fixtures.selectedTeam;reportRequest++;playerProfileLoading=false;if(routeState()){history.replaceState(null,'',location.pathname);page='Partidos';}render();await Fixtures.loadFixtures();if(team===Fixtures.selectedTeam){render();window.scrollTo(0,0);}});
