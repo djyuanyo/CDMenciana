@@ -60,3 +60,9 @@ const lazyProfile=f.parsePlayerProfileHtml(`<main><img class="foto-jugador" data
 assert.equal(lazyProfile.photo,'https://www.rfaf.es/pnfg/pimg/Jugadores/42566.jpg');
 assert.equal(f.safePlayerPhoto('http://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/42566.jpg'),'https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/42566.jpg');
 assert.equal(f.safePlayerPhoto('rfaf-photo/42566.img'),'');
+
+const actaPhoto='https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/42566.jpg';
+f.reportData={blocks:[],players:[{id:'acta-photo',name:'JUGADOR, PRUEBA',profile_url:'',photo:'',stats:[],rfaf_id:'',acta_id:'2645790'}]};
+f.applyResolvedPlayers('2645790',[{name:'JUGADOR, PRUEBA',player_id:'42566',primary:'5000274',url:'https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645790&nueva_ventana=',photo:actaPhoto}]);
+assert.equal(f.reportData.players[0].photo,actaPhoto);assert.equal(f.reportData.players[0].rfaf_id,'42566');
+console.log('Acta resolver photo is applied directly to the internal player');
