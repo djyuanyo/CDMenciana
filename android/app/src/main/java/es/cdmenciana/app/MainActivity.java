@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
     private String base;
     private String publicUserAgent;
     private boolean configuring=false;
+    private FirebaseAccount account;
     private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
     private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
@@ -368,13 +369,28 @@ public class MainActivity extends Activity {
         throw new java.io.IOException("Too many redirects");
     }
     private boolean sameOrigin(Uri uri){Uri home=Uri.parse(base.isEmpty()?"https://appassets.androidplatform.net":base);return "https".equals(uri.getScheme())&&home.getHost().equalsIgnoreCase(uri.getHost())&&home.getPort()==uri.getPort();}
+    private final class AccountBridge {
+        @JavascriptInterface public void request(String id,String action,String payload){
+            if(id==null||!id.matches("[a-zA-Z0-9_-]{1,64}")||payload==null||payload.length()>4096)return;
+            runOnUiThread(()->{
+                if(web==null||web.getUrl()==null||!sameOrigin(Uri.parse(web.getUrl()))||account==null)return;
+                try{account.request(id,action,new JSONObject(payload));}catch(Exception ignored){}
+            });
+        }
+    }
     private void load() {
         configuring=false;applyNativeTheme();
+        if(account!=null)account.close();
+        if(web!=null)web.destroy();
         publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(tone("#182335","#edf3fa"));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         web.addJavascriptInterface(new AppearanceBridge(),"AppAppearance");
+        account=new FirebaseAccount(this,(id,data)->runOnUiThread(()->{
+            if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubAuth&&window.ClubAuth.receive("+JSONObject.quote(id)+","+data.toString()+")",null);
+        }));
+        web.addJavascriptInterface(new AccountBridge(),"ClubAuthNative");
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);
         web.setWebViewClient(new WebViewClient(){
@@ -398,5 +414,5 @@ public class MainActivity extends Activity {
         });web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base);
     }
     @Override public void onBackPressed(){if(configuring){load();return;}if(web!=null&&web.canGoBack())web.goBack();else showThemedDialog(new AlertDialog.Builder(this).setMessage("Puedes seguir consultando el club o cerrar la aplicación.").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Conexión",(d,w)->configure()),"¿Salir de la app?");}
-    @Override protected void onDestroy(){if(web!=null)web.destroy();super.onDestroy();}
+    @Override protected void onDestroy(){if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
 }

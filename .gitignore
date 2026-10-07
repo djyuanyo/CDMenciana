@@ -2,6 +2,8 @@
 *.sqlite3-*
 __pycache__/
 .env
+**/firebase-adminsdk*.json
+**/service-account*.json
 *.jks
 *.keystore
 android/.gradle/

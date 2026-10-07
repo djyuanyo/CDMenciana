@@ -7,7 +7,7 @@ function routeState(){
  return /^\d+$/.test(acta||'')?{kind:'acta',acta,team:team||Fixtures.selectedTeam}:null;
 }
 function render(){
- CDM.shell(page,null);
+ CDM.shell(page,window.ClubAuth?.user||null);
  let body='';
  const route=routeState();
  if(page==='Inicio')body=Fixtures.overview();
@@ -17,10 +17,10 @@ function render(){
  if(page==='Club')body=Fixtures.roster();
  if(page==='Goleadores')body=Fixtures.scorers();
  if(page==='Clasificación')body=Fixtures.standings();
- if(page==='Más')body=CDM.menu(null);
- if(page==='Mi cuenta')body='<div class="section-heading"><h2>Mi cuenta</h2></div>'+CDM.empty('Tu sitio en el club','El acceso con correo y contraseña estará disponible cuando conectemos el servicio de cuentas.','user')+'<section class="card"><h2>Socios y jugadores</h2><p>Una cuenta, tus accesos. El club asignará el perfil de socio, jugador o ambos tras aprobar tu registro.</p></section>';
- if(page==='Socios')body='<div class="section-heading"><h2>Zona de socios</h2></div><section class="card membercard"><small>CD MENCIANA · CARNET DIGITAL</small><h3>Parte de nuestro club</h3><p>Tu carnet, número de socio y estado de cuota se mostrarán aquí al iniciar sesión.</p><span class="badge">ACCESO DE SOCIOS</span></section>'+CDM.empty('Todo lo que te une al club','Avisos exclusivos y novedades para socios. El servicio de cuentas todavía está pendiente de conexión.','lock');
- if(page==='Jugadores')body='<div class="section-heading"><h2>Zona de jugadores</h2></div>'+CDM.empty('Nos vemos en la pista','Consulta convocatorias y entrenamientos y confirma tu asistencia. El servicio de cuentas todavía está pendiente de conexión.','team');
+ if(page==='Más')body=CDM.menu(window.ClubAuth?.user||null);
+ if(page==='Mi cuenta')body=window.ClubAuth?ClubAuth.screen():CDM.empty('Mi cuenta','Accede al club desde tu cuenta.','user');
+ if(page==='Socios')body='<div class="section-heading"><h2>Zona de socios</h2></div><section class="card membercard"><small>CD MENCIANA · CARNET DIGITAL</small><h3>Parte de nuestro club</h3><p>Tu carnet, número de socio y estado de cuota se mostrarán aquí al iniciar sesión.</p><span class="badge">ACCESO DE SOCIOS</span></section>'+CDM.empty('Todo lo que te une al club','Avisos exclusivos y novedades para socios. El club activará este acceso cuando apruebe tu cuenta de socio.','lock');
+ if(page==='Jugadores')body='<div class="section-heading"><h2>Zona de jugadores</h2></div>'+CDM.empty('Nos vemos en la pista','Consulta convocatorias y entrenamientos y confirma tu asistencia. El club activará este acceso cuando apruebe tu cuenta de jugador.','team');
  main.innerHTML=body;
  if(page==='Partidos')Fixtures.syncRoundTabs();
 }
@@ -65,3 +65,6 @@ if(routeState())reportRoute();
 document.addEventListener('click',e=>{const b=e.target.closest('[data-report-side]');if(b){Fixtures.reportSide=Number(b.dataset.reportSide);render();}});
 
 document.addEventListener('click',async e=>{const button=e.target.closest('[data-team]');if(!button||!Fixtures.selectTeam(button.dataset.team))return;const team=Fixtures.selectedTeam;reportRequest++;playerProfileLoading=false;if(routeState()){history.replaceState(null,'',location.pathname);page='Partidos';}render();await Fixtures.loadFixtures();if(team===Fixtures.selectedTeam){render();window.scrollTo(0,0);}});
+
+for(const event of ['club-auth-state','club-auth-view'])window.addEventListener(event,()=>{if(page==='Mi cuenta'||page==='Más')render();});
+window.ClubAuth?.init();
