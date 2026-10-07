@@ -1,5 +1,5 @@
 const main=document.getElementById('main');
-let page='Inicio';
+let page='Inicio',playerProfileLoading=false;
 function routeState(){
  const player=location.hash.match(/^#jugador=([a-f0-9]{8,64})&acta=(\d+)$/i);if(player)return {kind:'player',player:player[1],acta:player[2]};
  const acta=location.hash.match(/^#acta=(\d+)$/);return acta?{kind:'acta',acta:acta[1]}:null;
@@ -11,7 +11,7 @@ function render(){
  if(page==='Inicio')body=Fixtures.news();
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
- if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong><p>Consultando su perfil público de RFAF…</p></section>';
+ if(page==='Jugador')body=playerProfileLoading?'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando estadísticas</strong><p>Consultando la ficha del jugador en RFAF…</p></section>':(Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong><p>Consultando su perfil público de RFAF…</p></section>');
  if(page==='Club')body=Fixtures.roster();
  if(page==='Goleadores')body=Fixtures.scorers();
  if(page==='Clasificación')body=Fixtures.standings();
@@ -29,7 +29,7 @@ render();Fixtures.load().then(()=>routeState()?reportRoute():render());
 let reportRequest=0;
 async function reportRoute(refresh=false){
  const route=routeState(),request=++reportRequest;
- if(!route){if(page==='Acta'||page==='Jugador'){page='Partidos';render();}return;}
+ if(!route){playerProfileLoading=false;if(page==='Acta'||page==='Jugador'){page='Partidos';render();}return;}
  const id=route.acta,need=refresh||String(Fixtures.reportData?.id||'')!==id;
  page=route.kind==='player'?'Jugador':'Acta';
  if(need){Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id,refresh);}
@@ -37,9 +37,10 @@ async function reportRoute(refresh=false){
   const current=routeState();
   if(current&&current.acta===id){
    if(current.kind==='player'){
-    page='Jugador';render();
+    page='Jugador';playerProfileLoading=true;render();
     const player=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
-    if(player){await Fixtures.loadPlayerProfile(player,id);if(request===reportRequest&&routeState()?.player===current.player)render();}
+    if(player)await Fixtures.loadPlayerProfile(player,id);
+    if(request===reportRequest&&routeState()?.player===current.player){playerProfileLoading=false;render();}
    }else{
     page='Acta';render();
     const changed=await Fixtures.enrichReportPlayers(id);
