@@ -3,14 +3,16 @@ package es.cdmenciana.app;
 import org.junit.Test;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static org.junit.Assert.*;
 
 public class BundledAssetsTest {
     @Test public void everyBootstrapResourceIsActuallyServedByTheWebView() throws Exception {
-        Path assets=Path.of("src/main/assets");
-        String html=Files.readString(assets.resolve("index.html"));
+        Path assets=Paths.get("src/main/assets");
+        String html=new String(Files.readAllBytes(assets.resolve("index.html")),StandardCharsets.UTF_8);
         Matcher refs=Pattern.compile("(?:href|src)=\"([^\"]+)\"").matcher(html);
         int count=0;
         while(refs.find()) {
