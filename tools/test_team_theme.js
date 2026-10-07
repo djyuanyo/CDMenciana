@@ -6,7 +6,7 @@ const dataset=name=>JSON.parse(source(name));
 const dom=new JSDOM('<meta name="theme-color"><main></main>',{url:'https://appassets.androidplatform.net/',runScripts:'outside-only'});
 const W=dom.window;
 W.CDM={icon:()=>'',empty:()=>''};
-for(const name of ['appearance.js','rfaf_extract.js','fixtures.js'])W.eval(source(name));
+for(const name of ['appearance.js','rfaf_extract.js','roster-snapshot.js','fixtures.js'])W.eval(source(name));
 const f=W.Fixtures,first=dataset('fixtures.json'),filial=dataset('fixtures-filial.json');
 const pending=[];
 W.fetch=url=>new Promise(resolve=>pending.push({url,reply:data=>resolve({ok:true,json:async()=>data})}));

@@ -12,7 +12,7 @@ async function render(){
  CDM.shell(page,user);
  const route=routeState();
  if(page==='Acta')main.innerHTML=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
- if(page==='Jugador')main.innerHTML=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
+ if(page==='Jugador')main.innerHTML=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'',route?.origin==='plantilla')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
  if(page==='Inicio')main.innerHTML=Fixtures.overview();
  if(page==='Más')main.innerHTML=CDM.menu(user);
  if(page==='Goleadores')main.innerHTML=Fixtures.scorers();
@@ -36,7 +36,7 @@ document.addEventListener('click',async e=>{const tab=e.target.closest('.round-t
 function routeState(){
  const params=new URLSearchParams(location.hash.slice(1)),team=params.get('equipo'),acta=params.get('acta'),player=params.get('jugador');
  if(team&&!Fixtures.teams[team])return null;
- if(player&&/^[a-f0-9]{8,64}$/i.test(player)&&/^\d+$/.test(acta||''))return {kind:'player',player,acta,team:team||Fixtures.selectedTeam};
+ if(player&&/^[a-f0-9]{8,64}$/i.test(player)&&/^\d+$/.test(acta||''))return {kind:'player',player,acta,team:team||Fixtures.selectedTeam,origin:params.get('origen')==='plantilla'?'plantilla':''};
  return /^\d+$/.test(acta||'')?{kind:'acta',acta,team:team||Fixtures.selectedTeam}:null;
 }
 let reportRequest=0;
@@ -52,7 +52,7 @@ async function reportRoute(refresh=false){
   if(current&&current.acta===id){
    if(current.kind==='player'){
     page='Jugador';playerProfileLoading=true;render();window.scrollTo(0,0);
-    const player=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
+    const player=current.origin==='plantilla'?Fixtures.prepareRosterPlayer(current.player,id):(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
     if(player)await Fixtures.loadPlayerProfile(player,id);
     if(request===reportRequest&&routeState()?.player===current.player){playerProfileLoading=false;render();}
    }else{
@@ -68,7 +68,7 @@ document.addEventListener('click',e=>{
  if(e.target.closest('[data-report-back]')){if(routeState()){history.replaceState(null,'',location.pathname);reportRequest++;page='Partidos';render();window.scrollTo(0,0);}else{page='Partidos';render();}}
  if(e.target.closest('[data-report-retry]'))reportRoute(true);
  if(e.target.closest('[data-player-retry]')){const route=routeState(),p=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===route?.player);if(p){p._profileLoaded=false;p._refreshRequested=true;}reportRoute();}
- const playerBack=e.target.closest('[data-player-back]');if(playerBack){const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'',Fixtures.actaHref(id));reportRoute();}}
+ const playerBack=e.target.closest('[data-player-back]');if(playerBack){if(playerBack.hasAttribute('data-roster-back')){history.replaceState(null,'',location.pathname);reportRequest++;playerProfileLoading=false;page='Club';render();window.scrollTo(0,0);}else{const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'',Fixtures.actaHref(id));reportRoute();}}}
 });
 if(routeState())reportRoute();
 

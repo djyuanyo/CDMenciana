@@ -1,7 +1,7 @@
 """Public RFAF calendar and standings; no account or browser required."""
 import concurrent.futures, datetime, http.cookiejar, json, re, urllib.request, urllib.parse
 from sync_fixtures import Document, is_club, normalize, ROOT
-from club_content import scorers,roster,ROSTER_SOURCE
+from club_content import scorers
 PREFIX='https://www.rfaf.es/pnfg/NPcd/'
 DATA_QUERY='cod_primaria=1000120&codcompeticion=48466108&codgrupo=48466109&codtemporada=22'
 QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22'
@@ -122,6 +122,41 @@ def team_staff(html):
     if not seen:raise ValueError('Official staff sections missing')
     return result
 
+def team_players(html):
+    root=Document(html).root
+    if not any(n.text().startswith('Club:') and is_club(n.text()) for n in root.find('h5')):
+        raise ValueError('Official club roster page missing')
+    for table in root.find('table'):
+        headers=[re.fullmatch(r'JUGADORES\s*\((\d+)\)',normalize(visible(n)).strip()) for n in table.find('th')]
+        header=next((h for h in headers if h),None)
+        if not header:continue
+        names=[' '.join(visible(c).split()) for row in table.find('tr') for c in row.children if c.tag=='td']
+        if len(names)!=int(header[1]) or any(',' not in name for name in names) or len(set(map(normalize,names)))!=len(names):
+            raise ValueError('Incomplete official roster section')
+        return names
+    raise ValueError('Official roster section missing')
+
+def official_roster(matches,team,names):
+    rows={normalize(p['name']):p for p in report_roster(matches,team)}
+    players=[]
+    for name in names:
+        player=rows.get(normalize(name))
+        if not player or not player.get('id') or not player.get('profile_url') or not player.get('rfaf_id'):
+            raise ValueError('Official dorsal/profile not yet published for '+name)
+        players.append(dict(player,name=name,position='Jugador'))
+    if len({p['number'] for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
+    return sorted(players,key=lambda p:p['number'])
+
+def write_roster_snapshot(config,payload):
+    path=ROOT/'data/roster-snapshot.json'
+    try:teams=json.loads(path.read_text())
+    except (OSError,ValueError):teams={}
+    keys=('team_key','roster','roster_source','roster_status','roster_updated_at','staff','staff_source','staff_status','staff_updated_at')
+    teams[config['key']]={key:payload[key] for key in keys if key in payload}
+    path.write_text(json.dumps(teams,ensure_ascii=False,indent=2)+'\n')
+    script='/* Official roster identities and staff survive older cached calendars. */\nwindow.ClubRosterSnapshot='+json.dumps(teams,ensure_ascii=False,separators=(',',':'))+';\n'
+    for folder in ('server/static','android/app/src/main/assets'):(ROOT/folder/'roster-snapshot.js').write_text(script)
+
 def enrich(match,html):
     root=Document(html).root
     homes=[n for n in root.find('div','font_widgetL') if n.find('h4')];aways=[n for n in root.find('div','font_widgetV') if n.find('h4')]
@@ -225,17 +260,15 @@ def sync(config=None):
         goal_rows=previous['scorers']
         scorers_url=previous.get('scorers_source',scorers_url)
         print(f'Goleadores pendientes: {error}; se actualizan los horarios',flush=True)
-    try:roster_rows=roster(get(ROSTER_SOURCE,'utf-8')) if config['key']=='first' else previous.get('roster',[])
-    except (ValueError,OSError) as error:
-        if not previous.get('roster'):raise
-        roster_rows=previous['roster']
-        print(f'Plantilla pendiente: {error}; se actualizan los horarios',flush=True)
+    roster_rows=previous.get('roster',[])
     club=next(r for r in table if is_club(r['team']))
     results_status=verify_results(matches,club,previous)
-    payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE if config['key']=='first' else source,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
+    team_html=''
     try:
-        payload.update(staff=team_staff(get(payload['staff_source'])),staff_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),staff_status='verified')
+        team_html=get(payload['staff_source'])
+        payload.update(staff=team_staff(team_html),staff_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),staff_status='verified')
     except (ValueError,OSError) as error:
         print(f'Cuerpo técnico pendiente: {error}; se conserva la última copia válida',flush=True)
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
@@ -243,14 +276,19 @@ def sync(config=None):
     for target in targets:target.write_text(raw,encoding='utf-8')
     from match_report import sync_reports
     sync_reports(round_matches,get,ROOT,fixtures_filename=config['filename'])
-    if config['key']=='filial':
-        payload['roster']=report_roster(matches,payload['team']) or roster_rows
-        raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
-        for target in targets:target.write_text(raw,encoding='utf-8')
+    try:
+        payload['roster']=official_roster(matches,payload['team'],team_players(team_html)) if config['key']=='first' else report_roster(matches,payload['team']) or roster_rows
+        payload.update(roster_source=staff_source(config),roster_status='verified',roster_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+    except ValueError as error:
+        payload.update(roster_status=previous.get('roster_status','cached'),roster_updated_at=previous.get('roster_updated_at',''))
+        print(f'Plantilla RFAF pendiente: {error}; se conservan las identidades verificadas',flush=True)
+    raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
+    for target in targets:target.write_text(raw,encoding='utf-8')
+    write_roster_snapshot(config,payload)
     print(f"Updated {len(matches)} matches, {len(table)} teams, {len(goal_rows)} scorers and {len(payload['roster'])} players")
 def report_roster(matches,team):
     players={}
-    for match in matches:
+    for match in sorted(matches,key=lambda m:m['round']):
         acta=urllib.parse.parse_qs(urllib.parse.urlparse(match.get('acta_url','')).query).get('CodActa',[''])[0]
         try:data=json.loads((ROOT/'data/actas'/(acta+'.json')).read_text())
         except (OSError,ValueError):continue
@@ -266,7 +304,8 @@ def report_roster(matches,team):
                 cells=[str(c).strip() for c in row if str(c).strip()]
                 if len(cells)<2 or not cells[0].isdigit():continue
                 name=' '.join(cells[1:]);ref=refs.get(normalize(name),{})
-                players[normalize(name)]=dict(name=name,number=int(cells[0]),position='Jugador de pista',photo=ref.get('photo',''),id=ref.get('id',''),acta_id=acta,profile_url=ref.get('profile_url',''))
+                rfaf_id=urllib.parse.parse_qs(urllib.parse.urlparse(ref.get('profile_url','')).query).get('jugador',[''])[0]
+                players[normalize(name)]=dict(name=name,number=int(cells[0]),position='Jugador de pista',photo=ref.get('photo',''),id=ref.get('id',''),acta_id=acta,profile_url=ref.get('profile_url',''),rfaf_id=rfaf_id,stats=ref.get('stats',[]),profile_updated_at=ref.get('profile_updated_at',''),competition_summary=ref.get('competition_summary',{}))
     return sorted(players.values(),key=lambda p:(p['number'],p['name']))
 
 def sync_all():

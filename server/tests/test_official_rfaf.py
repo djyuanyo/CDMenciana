@@ -1,8 +1,20 @@
-import sys, unittest
+import json, sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS,team_staff,staff_source
+from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS,team_staff,staff_source,team_players,official_roster
 class OfficialRFAFTests(unittest.TestCase):
+    def test_official_roster_uses_identity_and_latest_acta_numbers(self):
+        names=team_players((Path(__file__).parent/'fixtures/rfaf_first_roster.html').read_text())
+        data=json.loads((Path(__file__).resolve().parents[2]/'data/fixtures.json').read_text())
+        rows=official_roster([m for m in data['matches'] if m['round']<=4],data['team'],names)
+        self.assertEqual(13,len(rows))
+        expected={5:('BAENA PRIEGO, ALBERTO','7503'),15:('CORDOBA CORTES, JUAN FRANCISCO','42718'),27:('CARRILLO RUBIO, ANTONIO JESUS','42566')}
+        for row in rows:
+            if row['number'] in expected:self.assertEqual(expected[row['number']],(row['name'],row['rfaf_id']))
+            self.assertIn('jugador='+row['rfaf_id'],row['profile_url'])
+            self.assertIn('codacta='+row['acta_id'],row['profile_url'])
+    def test_official_roster_never_guesses_an_unpublished_identity(self):
+        with self.assertRaises(ValueError):official_roster([],'C.D. APAGA Y VAMONOS',['NOMBRE, SIN PERFIL'])
     def test_first_team_staff_has_all_three_roles(self):
         html=(Path(__file__).parent/'fixtures/rfaf_first_staff.html').read_text()
         rows=team_staff(html)

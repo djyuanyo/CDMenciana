@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 new vm.Script(fs.readFileSync('android/app/src/main/assets/fixtures.js','utf8'),{filename:'android fixtures.js'});
-const ctx={window:{},document:{addEventListener(){}},CDM:{icon:()=>'',empty:()=>''},URL};vm.createContext(ctx);vm.runInContext(fs.readFileSync('server/static/fixtures.js','utf8'),ctx);const f=ctx.window.Fixtures;
+const ctx={window:{},document:{addEventListener(){}},CDM:{icon:()=>'',empty:()=>''},URL,atob};vm.createContext(ctx);vm.runInContext(fs.readFileSync('server/static/rfaf_extract.js','utf8'),ctx);vm.runInContext(fs.readFileSync('server/static/fixtures.js','utf8'),ctx);const f=ctx.window.Fixtures;
 f.data={matches:[{round:1,played:true},{round:4,played:true},{round:5,played:false,time:''},{round:6,played:false,time:'19:00'}]};
 assert.equal(f.defaultRound(),'4','Later confirmed fixtures must not skip the immediate next round');
 f.data.matches[2].time='18:30';assert.equal(f.defaultRound(),'5');
@@ -17,7 +17,7 @@ const actual=f.data;
 f.data={matches:[],scorers:[{name:'Jugador del club',team:'C.D. APAGA Y VAMONOS',played:2,goals:3,average:1.5},{name:'Rival',team:'Otro equipo',played:0,goals:2,average:null}]};
 const scorers=f.scorers();assert.equal((scorers.match(/scorer-row our-club/g)||[]).length,1);assert(!scorers.includes('null'));assert(scorers.includes('Jugador del club'));
 f.data=actual;assert(f.data.roster.length>0&&f.data.scorers.length>0);
-const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.esc(p.name)));assert(roster.includes('Dorsal '+p.number));const photo=f.photo(p);if(photo.startsWith('players/'))assert(fs.existsSync('android/app/src/main/assets/'+photo));else assert(photo.startsWith('https://cdmenciana.es/images/jugadores/'));}
+const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.esc(f.personName(p.name))));assert(roster.includes('Dorsal '+p.number));const photo=f.photo(p);if(photo.startsWith('players/'))assert(fs.existsSync('android/app/src/main/assets/'+photo));else assert(photo.startsWith('data:image/jpeg;base64,')||photo.startsWith('https://cdmenciana.es/images/jugadores/'));assert(roster.includes(f.playerHref(p.id,p.acta_id,'plantilla')));}
 console.log('Scorer highlighting and roster names, shirt numbers and photos verified');
 for(const [key,file,counts] of [['first','fixtures.json',[1,2,1]],['filial','fixtures-filial.json',[1,1,0]]]){
  f.selectTeam(key);f.data=JSON.parse(fs.readFileSync('data/'+file,'utf8'));

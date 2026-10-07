@@ -22,6 +22,7 @@ jobs:
       - run: npm ci --prefix tools --ignore-scripts --no-audit --no-fund
       - run: node tools/test_report_html.js
       - run: node tools/test_team_theme.js
+      - run: node tools/test_roster_identity.js
   android:
     runs-on: ubuntu-latest
     steps:
