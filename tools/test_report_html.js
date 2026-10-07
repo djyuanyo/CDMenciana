@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {JSDOM}=require('jsdom');
-const dom=new JSDOM('',{runScripts:'outside-only'});dom.window.CDM={icon:()=>'',empty:()=>''};dom.window.eval(fs.readFileSync('android/app/src/main/assets/fixtures.js','utf8'));
+const dom=new JSDOM('',{runScripts:'outside-only'});dom.window.CDM={icon:()=>'',empty:()=>''};dom.window.eval(fs.readFileSync('android/app/src/main/assets/rfaf_extract.js','utf8'));dom.window.eval(fs.readFileSync('android/app/src/main/assets/fixtures.js','utf8'));
 const f=dom.window.Fixtures;
 const html=`<div class="container"><h4>Ficha de Partido</h4><h5>Temporada 2026-2027 Jornada 2</h5><h4>3ª División F.S. (Grupo 17)</h4>
 <table><tr><td>Local</td><td></td><td>Visitante</td></tr><tr><td></td><td>1 - 0</td><td></td></tr></table>
@@ -42,7 +42,7 @@ assert(playerLinks.length>=1);
 assert(playerLinks.every(a=>a.getAttribute('href')==='#jugador=1234abcd&acta=2645766'));
 assert(playerLinks.some(a=>a.querySelector('img.acta-player-avatar')?.src.includes('/pnfg/pimg/Jugadores/77.jpg')));
 const profile=f.player('1234abcd','2645766');
-assert(profile.includes('PERFIL RFAF'));assert(profile.includes('Estadísticas de la competición'));assert(profile.includes('2026-2027'));
+assert(profile.includes('PERFIL RFAF'));assert(profile.includes('Temporada 2026-2027'));assert(profile.includes('2026-2027'));
 assert(profile.includes('data-player-back'));assert(!profile.includes('href="https://www.rfaf.es'));
 console.log('RFAF player photos are embedded throughout the acta and player statistics stay inside the app');
 
@@ -70,3 +70,88 @@ console.log('Acta resolver photo is applied directly to the internal player');
 assert.equal(f.safePlayerPhoto('https://cdn.rfaf-images.example/players/42566.webp'),'https://cdn.rfaf-images.example/players/42566.webp');
 assert.equal(f.safePlayerPhoto('https://127.0.0.1/player.jpg'),'');
 console.log('External HTTPS acta photo CDNs are accepted while local targets are rejected');
+
+const realRows=fs.readFileSync('server/tests/fixtures/rfaf_acta_players.html','utf8');
+const realPlayers=f.parseReportPlayers(realRows,'2645790');
+assert.deepEqual(Array.from(realPlayers,p=>p.name),['PEREZ MORALES, FABIAN','LUNA CUBERO, JESUS']);
+assert(realPlayers.every(p=>p.photo.startsWith('data:image/jpeg;base64,')));
+assert.notEqual(realPlayers[0].photo,realPlayers[1].photo);
+assert.equal(realPlayers[1].rfaf_id,'319856');
+assert.equal(f.safePlayerPhoto('data:image/svg+xml;base64,PHN2Zz48L3N2Zz4='),'');
+assert.equal(f.safePlayerPhoto('data:image/png;base64,PHNjcmlwdD4='),'');
+assert.equal(f.safePlayerPhoto('data:image/png;base64,not-an-image'),'');
+const wanted=dom.window.RfafExtract.players(new dom.window.DOMParser().parseFromString(realRows,'text/html'),['LUNA CUBERO, JESUS'],'2645790');
+assert.equal(wanted.length,1);assert.equal(wanted[0].photo,realPlayers[1].photo);
+console.log('Real RFAF clickable rows preserve exact names and distinct embedded JPEG portraits, including the native resolver filter');
+
+const statsHtml='<table><tr><th colspan="2">Partidos</th></tr><tr><td>Convocados</td><td>4</td></tr><tr><td>Titular</td><td>3</td></tr></table><table><tr><th colspan="2">Sanciones</th></tr><tr><td>Tarjeta roja</td><td>1</td></tr></table><table><tr><th colspan="2">Goles</th></tr><tr><td>Total</td><td>0</td></tr><tr><td>Goles por partido</td><td>0.0</td></tr></table>';
+const exact=f.parsePlayerProfileHtml(statsHtml,realPlayers[1]);
+assert.deepEqual(Array.from(exact.stats,s=>s.title),['Partidos','Sanciones','Goles']);
+assert.equal(exact.stats[0].rows[0][1],'4');assert.equal(exact.stats[2].rows[1][1],'0.0');
+f.reportData={id:'2645790',blocks:[],players:realPlayers};
+f.applyResolvedProfile(realPlayers[1].id,{photo:'',stats:exact.stats});
+assert.equal(f.reportData.players[1].photo,realPlayers[1].photo);
+dom.window.document.body.innerHTML=f.player(realPlayers[1].id,'2645790');
+assert.equal(dom.window.document.querySelectorAll('.player-rfaf-section').length,3);
+assert(dom.window.document.querySelector('.player-rfaf-hero img').src.startsWith('data:image/jpeg;base64,'));
+assert(dom.window.document.querySelector('[data-player-retry]'));
+assert(!dom.window.document.querySelector('a[href^="https://www.rfaf.es"]'));
+console.log('Actual Partidos, Sanciones and Goles render inside the app while preserving the acta portrait');
+
+const retained=f.reportData.players[1].photo;
+assert.equal(f.applyResolvedPlayers('2645766',[{name:realPlayers[1].name,player_id:'999',photo:actaPhoto}]),0);
+assert.equal(f.reportData.players[1].photo,retained);
+console.log('A late native acta response cannot attach a previous match portrait to the current report');
+
+const summaryPlayer={name:'JUGADOR, PRUEBA',stats:[{title:'Partidos',rows:[['Convocados','4'],['Titular','2'],['Suplente','2'],['Jugados','3']]},{title:'Goles',rows:[['Total','0']]}]};
+const total=f.competitionSummary(summaryPlayer,'Local');
+assert.equal(total.goals,0);assert.equal(total.played,3);assert.equal(total.starts,2);assert.equal(total.called,4);
+const unknown=f.competitionSummary({name:'DESCONOCIDO, JUGADOR',stats:[]},'Local');
+assert.equal(unknown.goals,null);assert.equal(unknown.played,null);assert.equal(unknown.starts,null);
+f.reportData={id:'9911',players:[{id:'abcdef12',...summaryPlayer}],updated_at:new Date().toISOString(),blocks:[
+ {kind:'table',rows:[['Local','','Visitante'],['','2 - 1','']]},
+ {kind:'heading',text:'Goles'},
+ {kind:'table',rows:[['Gol · 1 - 0',"(5') JUGADOR, PRUEBA"],['Gol de penalti · 2 - 0',"(10') JUGADOR, PRUEBA"],['Gol en propia puerta · 2 - 1',"(15') JUGADOR, PRUEBA"]]},
+ {kind:'heading',text:'Local'},{kind:'heading',text:'Titulares'},
+ {kind:'table',rows:[['9','JUGADOR, PRUEBA']]}
+]};
+dom.window.document.body.innerHTML=f.player('abcdef12','9911');
+const matchStats=[...dom.window.document.querySelectorAll('.player-stat-section:first-of-type .player-match-stats strong')];
+const sections=dom.window.document.querySelectorAll('.player-stat-section');
+assert.equal(sections[0].querySelector('.player-match-stats strong').textContent,'2');
+assert(sections[0].textContent.includes('1 gol en propia puerta'));
+assert.deepEqual([...sections[1].querySelectorAll('strong')].map(n=>n.textContent),['0','3','2','4']);
+assert(!dom.window.document.querySelector('a[href^="https://www.rfaf.es"]'));
+console.log('Player cards distinguish played matches from call-ups, keep published zero totals and exclude own goals from goals scored');
+
+(async()=>{
+ const app=new JSDOM('<header id="header"></header><section id="banner"></section><div id="tabs"></div><main id="main"></main><nav id="nav"></nav><p id="notice"></p>',{runScripts:'outside-only',url:'https://appassets.androidplatform.net/index.html#acta=2645766'});
+ const W=app.window,data=JSON.parse(JSON.stringify(fullReport));
+ data.players=[{id:'1234abcd',name:linked.name,profile_url:'https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=77&codacta=2645766',photo:realPlayers[0].photo,stats:[]}];
+ let profileRequests=0,actaRequests=0;
+ W.scrollTo=()=>{};
+ W.fetch=async url=>({ok:true,json:async()=>String(url).startsWith('actas/')?JSON.parse(JSON.stringify(data)):String(url).startsWith('news')?{news:[]}:f.data});
+ W.RfafResolver={resolveActaPlayers(){actaRequests++},resolvePlayerProfile(url,id){profileRequests++;assert(url.includes('jugador=77'));W.Fixtures.applyResolvedProfile(id,{stats:exact.stats,photo:''});}};
+ for(const file of ['ui.js','rfaf_extract.js','fixtures.js','offline.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+file,'utf8'));
+ const settle=()=>new Promise(resolve=>W.setTimeout(resolve,20));await settle();
+ assert.equal(profileRequests,0,'Opening the acta must not fetch every player statistics page');
+ const a=W.document.querySelector('a[data-player-link][href="#jugador=1234abcd&acta=2645766"]');assert(a);
+ assert(a.querySelector('img').src.startsWith('data:image/jpeg;base64,'));
+ // Other unknown player refs should not hold the selected player navigation open.
+ W.Fixtures.applyResolvedPlayers('2645766',[]);
+ a.click();await settle();
+ assert.equal(W.location.hash,'#jugador=1234abcd&acta=2645766');assert.equal(profileRequests,1);
+ assert.equal(W.document.querySelectorAll('.player-rfaf-section').length,3);
+ assert(W.document.querySelector('.player-rfaf-hero img').src.startsWith('data:image/jpeg;base64,'));
+ W.document.querySelector('[data-player-back]').click();await settle();
+ assert.equal(W.location.hash,'#acta=2645766');assert(W.document.querySelector('.acta-people'));
+ W.Fixtures.applyResolvedPlayers('2645766',[]);
+ // Recent saved statistics work even when the device has no network connection.
+ data.players[0].stats=exact.stats;data.players[0].profile_updated_at=new Date().toISOString();
+ await W.Fixtures.loadReport('2645766');
+ assert.equal(W.Fixtures.reportData.players[0]._profileLoaded,true);
+ assert.equal(await W.Fixtures.loadPlayerProfile(W.Fixtures.reportData.players[0],'2645766'),true);
+ assert.equal(profileRequests,1);
+ app.window.close();
+ console.log('Tapping an acta player opens native-routed statistics, back returns to the acta, and recent saved stats avoid a network request');
+})().catch(error=>{console.error(error);process.exitCode=1;});

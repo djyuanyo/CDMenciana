@@ -11,7 +11,7 @@ function render(){
  if(page==='Inicio')body=Fixtures.news();
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
- if(page==='Jugador')body=playerProfileLoading?'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando estadísticas</strong><p>Consultando la ficha del jugador en RFAF…</p></section>':(Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong><p>Consultando su perfil público de RFAF…</p></section>');
+ if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
  if(page==='Club')body=Fixtures.roster();
  if(page==='Goleadores')body=Fixtures.scorers();
  if(page==='Clasificación')body=Fixtures.standings();
@@ -37,7 +37,7 @@ async function reportRoute(refresh=false){
   const current=routeState();
   if(current&&current.acta===id){
    if(current.kind==='player'){
-    page='Jugador';playerProfileLoading=true;render();
+    page='Jugador';playerProfileLoading=true;render();window.scrollTo(0,0);
     const player=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
     if(player)await Fixtures.loadPlayerProfile(player,id);
     if(request===reportRequest&&routeState()?.player===current.player){playerProfileLoading=false;render();}
@@ -53,6 +53,7 @@ window.addEventListener('hashchange',()=>reportRoute());
 document.addEventListener('click',e=>{
  if(e.target.closest('[data-report-back]')){if(location.hash.startsWith('#acta='))history.back();else{page='Partidos';render();}}
  if(e.target.closest('[data-report-retry]'))reportRoute(true);
+ if(e.target.closest('[data-player-retry]')){const route=routeState(),p=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===route?.player);if(p){p._profileLoaded=false;p._refreshRequested=true;}reportRoute();}
  const playerBack=e.target.closest('[data-player-back]');if(playerBack){const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'','#acta='+id);reportRoute();}}
 });
 if(routeState())reportRoute();

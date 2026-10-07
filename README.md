@@ -87,3 +87,14 @@ Los 16 escudos oficiales se guardan también en la APK y en la interfaz web para
 La pestaña Goleadores utiliza la tabla completa de la RFAF y resalta a los jugadores del equipo. La plantilla se sincroniza desde https://cdmenciana.es/equipos/ con nombre, dorsal y foto original. `data/player-assets.json` relaciona las fotos oficiales con las copias incluidas en Android y en la interfaz web. La actualización programada renueva también estos listados y conserva los datos anteriores si alguna fuente falla.
 
 Inicio muestra las noticias de https://cdmenciana.es/noticias/ con imagen, título, fecha y enlace al artículo original. El workflow Actualizar noticias del club revisa la web cada 15 minutos (GitHub puede retrasar las ejecuciones), separado de la RFAF. Android consulta `data/news.json` al abrir o actualizar, con caché de cinco minutos y una copia incluida para cuando no hay conexión.
+
+Las actas muestran la foto pública junto al nombre del jugador en titulares, suplentes, goles y tarjetas. La RFAF puede incluir las fotos como imágenes base64; se valida el formato de imagen y se conserva la fotografía de la misma fila, sin ejecutar scripts de la federación en la interfaz de la app. Al pulsar el nombre se abre una ficha interna con sus tablas de Partidos, Sanciones y Goles y un botón para actualizar las estadísticas. Las fotos de las actas guardadas se incluyen en la APK; las estadísticas se consultan al abrir la ficha, con reutilización de la copia reciente.
+
+
+## Fichas de jugadores 0.15.0
+
+Las 31 actas publicadas incluyen sus imágenes oficiales junto a titulares, suplentes, goles y tarjetas. Si la federación no publica el retrato, se mantiene su imagen predeterminada. Las imágenes incrustadas se validan y las copias guardadas no sustituyen una foto disponible por un campo vacío.
+
+Al tocar el nombre se abre una ficha dentro de la app. «Este partido» muestra goles marcados, participación, dorsal y tarjetas; los goles en propia puerta se separan. «En competición» muestra goles totales, partidos jugados, titularidades y convocatorias. Se usan las tablas oficiales Partidos/Goles; cuando falta el perfil, los goles y titularidades se cuentan únicamente si están disponibles todas las actas jugadas del equipo. Los partidos jugados proceden del perfil o de la tabla de goleadores: estar convocado como suplente no prueba que haya jugado. Los datos ausentes aparecen como pendientes, nunca como cero.
+
+La ficha conserva los valores disponibles mientras actualiza. El botón Actualizar estadísticas evita la caché reciente; la sincronización programada reutiliza una consulta por jugador y conserva los datos anteriores si la RFAF devuelve una página vacía.

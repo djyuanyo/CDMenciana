@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
                 try {
                     if(connection.getResponseCode()!=200)throw new java.io.IOException("Source unavailable");
                     try(InputStream input=connection.getInputStream();ByteArrayOutputStream output=new ByteArrayOutputStream()){
-                        byte[] buf=new byte[4096];int count;while((count=input.read(buf))!=-1){if(output.size()+count>524288)throw new java.io.IOException("Data limit");output.write(buf,0,count);}data=output.toByteArray();
+                        byte[] buf=new byte[4096];int count;while((count=input.read(buf))!=-1){if(output.size()+count>2097152)throw new java.io.IOException("Data limit");output.write(buf,0,count);}data=output.toByteArray();
                     }
                     JSONObject parsed=new JSONObject(new String(data,StandardCharsets.UTF_8));int itemCount=parsed.getJSONArray(filename.startsWith("actas/")?"blocks":filename.equals("news.json")?"news":"matches").length();if(!filename.equals("news.json")&&itemCount==0)throw new java.io.IOException("Empty calendar");
                     java.nio.file.Files.write(cache.toPath(),data);source="live";
@@ -88,8 +88,37 @@ public class MainActivity extends Activity {
         }catch(Exception ignored){data=null;}
         if(data==null)try{data=java.nio.file.Files.readAllBytes(cache.toPath());source="cached";}catch(Exception ignored){}
         if(data==null)try(InputStream in=getAssets().open(filename);ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] b=new byte[4096];int n;while((n=in.read(b))!=-1)out.write(b,0,n);data=out.toByteArray();}catch(Exception ignored){}
-        try{JSONObject json=new JSONObject(new String(data,StandardCharsets.UTF_8));json.put("connection_state",source);data=json.toString().getBytes(StandardCharsets.UTF_8);}catch(Exception ignored){data="{\"matches\":[],\"connection_state\":\"unavailable\"}".getBytes(StandardCharsets.UTF_8);}
+        try{JSONObject json=new JSONObject(new String(data,StandardCharsets.UTF_8));if(filename.startsWith("actas/"))keepBundledPlayerPhotos(json,filename);json.put("connection_state",source);data=json.toString().getBytes(StandardCharsets.UTF_8);}catch(Exception ignored){data="{\"matches\":[],\"connection_state\":\"unavailable\"}".getBytes(StandardCharsets.UTF_8);}
         return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream(data));
+    }
+    /** An older downloaded acta must not discard the portraits shipped in this APK. */
+    private void keepBundledPlayerPhotos(JSONObject report,String filename) {
+        try(InputStream in=getAssets().open(filename);ByteArrayOutputStream out=new ByteArrayOutputStream()) {
+            byte[] buffer=new byte[4096];int n;while((n=in.read(buffer))!=-1)out.write(buffer,0,n);
+            org.json.JSONArray bundled=new JSONObject(out.toString("UTF-8")).optJSONArray("players"),current=report.optJSONArray("players");
+            if(bundled==null||bundled.length()==0)return;
+            if(current==null||current.length()==0){report.put("players",bundled);return;}
+            for(int i=0;i<current.length();i++) {
+                JSONObject player=current.optJSONObject(i);if(player==null)continue;
+                for(int j=0;j<bundled.length();j++) {
+                    JSONObject saved=bundled.optJSONObject(j);
+                    if(saved!=null&&player.optString("name").trim().equalsIgnoreCase(saved.optString("name").trim())) {
+                        String known=Uri.parse(player.optString("profile_url")).getQueryParameter("jugador"),stored=Uri.parse(saved.optString("profile_url")).getQueryParameter("jugador");
+                        if(known!=null&&stored!=null&&!known.equals(stored))continue;
+                        if(player.optString("photo").isEmpty())player.put("photo",saved.optString("photo"));
+                        if(player.optString("profile_url").isEmpty())player.put("profile_url",saved.optString("profile_url"));
+                        if(!player.has("competition_summary")&&saved.has("competition_summary"))player.put("competition_summary",saved.getJSONObject("competition_summary"));
+                        org.json.JSONArray stats=saved.optJSONArray("stats"),existing=player.optJSONArray("stats");
+                        boolean newer=false;
+                        try{newer=java.time.Instant.parse(saved.optString("profile_updated_at")).isAfter(java.time.Instant.parse(player.optString("profile_updated_at")));}catch(Exception ignored){newer=player.optString("profile_updated_at").isEmpty();}
+                        if(stats!=null&&stats.length()>0&&(existing==null||existing.length()==0||newer)){
+                            player.put("stats",stats);player.put("profile_updated_at",saved.optString("profile_updated_at"));
+                        }
+                        break;
+                    }
+                }
+            }
+        }catch(Exception ignored){}
     }
     /** Read public match reports directly when the scheduled copy is unavailable. */
     private android.webkit.WebResourceResponse publicReportResponse(String id,boolean refresh) {
@@ -113,10 +142,11 @@ public class MainActivity extends Activity {
                 for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(id.equals(link.getQueryParameter("CodActa"))){String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))roundSource=source;break;}}
             }catch(Exception ignored){}
             readPublicFederation(roundSource,cookies);
-            String url="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+id+"&cod_acta="+id;
+            String url="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+id;
             String html=new String(readPublicFederation(url,cookies),java.nio.charset.Charset.forName("ISO-8859-15"));
             if(!html.contains("Ficha de Partido"))throw new java.io.IOException("Acta unavailable");
             JSONObject data=new JSONObject();data.put("id",id);data.put("html",html);data.put("updated_at",java.time.Instant.now().toString());data.put("connection_state","official");
+            try{org.json.JSONArray players=new JSONObject(new String(prior,StandardCharsets.UTF_8)).optJSONArray("players");if(players!=null)data.put("players",players);}catch(Exception ignored){}
             prior=data.toString().getBytes(StandardCharsets.UTF_8);
             java.nio.file.Files.write(new java.io.File(getFilesDir(),filename.replace('/','_')).toPath(),prior);
         }catch(Exception ignored){}
@@ -143,7 +173,7 @@ public class MainActivity extends Activity {
         final boolean[] done={false};final int[] stage={0};
         WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
         CookieManager.getInstance().setAcceptCookie(true);CookieManager.getInstance().setAcceptThirdPartyCookies(resolver,true);
-        final String actaUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta+"&cod_acta="+acta;
+        final String actaUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta;
         final String roundUrl="https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=5";
         final Runnable fail=()->{if(done[0])return;done[0]=true;deliverResolvedPlayers(acta,"[]");resolver.stopLoading();resolver.destroy();};
         resolver.setWebViewClient(new WebViewClient(){
@@ -153,7 +183,7 @@ public class MainActivity extends Activity {
                 if(stage[0]==1){stage[0]=2;view.loadUrl(actaUrl);return;}
                 if(stage[0]!=2)return;stage[0]=3;
                 final String wanted=names.toString();
-                final String script="(function(){const wanted="+wanted+",norm=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/\\s+/g,' ').trim().toUpperCase(),people=wanted.map(name=>({name,key:norm(name)})),docs=[document];for(const frame of document.querySelectorAll('iframe')){try{if(frame.contentDocument)docs.push(frame.contentDocument)}catch(e){}}const all=sel=>docs.flatMap(d=>[...d.querySelectorAll(sel)]),absolute=(raw,base)=>{try{raw=String(raw||'').trim();if(!raw)return '';if(raw.includes(','))raw=raw.split(',')[0].trim();if(/\\s+[0-9.]+[wx]$/.test(raw))raw=raw.replace(/\\s+[0-9.]+[wx]$/,'');const u=new URL(raw,base||location.href),h=u.hostname.toLowerCase();if(u.protocol==='http:'&&(h==='rfaf.es'||h==='www.rfaf.es'||h.endsWith('.rfaf.es')||h.endsWith('.filesnovanet.es')))u.protocol='https:';return u.protocol==='https:'?u.href:''}catch(e){return ''}},rawSrc=el=>el.currentSrc||el.getAttribute?.('src')||el.getAttribute?.('data-src')||el.getAttribute?.('data-original')||el.getAttribute?.('data-lazy-src')||el.getAttribute?.('srcset')||'',bad=/ESCUDO|LOGO|ICON|TARJ_|PUBLICIDAD|SOCIAL|BANNER|SPACER|LOADING/,photoFor=(node,id,person)=>{const doc=node.ownerDocument||document,nr=node.getBoundingClientRect?node.getBoundingClientRect():{left:0,top:0,width:0,height:0},ncx=nr.left+nr.width/2,ncy=nr.top+nr.height/2,row=node.closest&&node.closest('tr'),found=[],add=(el,src,bonus=0)=>{if(!src)return;const meta=norm([src,el?.className||'',el?.id||'',el?.alt||'',el?.title||''].join(' '));if(bad.test(meta))return;let score=bonus;if(/\\/PIMG\\/JUGADORES\\//i.test(src))score+=120;if(/JUGADOR|FOTO|PHOTO|PLAYER|RETRATO|PERSONA/.test(meta))score+=40;if(id&&src.includes(id))score+=100;const tokens=person.key.split(' ').filter(x=>x.length>3);if(tokens.some(t=>meta.includes(t)))score+=40;const target=el?.tagName==='SOURCE'?el.parentElement:el,ir=target?.getBoundingClientRect?target.getBoundingClientRect():null,w=target?.naturalWidth||ir?.width||target?.width||0,h=target?.naturalHeight||ir?.height||target?.height||0;if(w>=45&&h>=45)score+=15;if(ir){const icx=ir.left+ir.width/2,icy=ir.top+ir.height/2,dist=Math.hypot(icx-ncx,icy-ncy);if(Math.abs(icy-ncy)<70)score+=45;if(dist<120)score+=45;else if(dist<240)score+=30;else if(dist<450)score+=15}if(row&&target?.closest&&target.closest('tr')===row)score+=80;if(target?.parentElement===node.parentElement)score+=30;found.push([score,src])};const scopes=[],pushScope=x=>{if(x&&!scopes.includes(x))scopes.push(x)};pushScope(node);pushScope(row);pushScope(node.closest&&node.closest('li'));pushScope(node.closest&&node.closest('[class*=jug]'));pushScope(node.closest&&node.closest('[id*=jug]'));pushScope(node.closest&&node.closest('[class*=player]'));pushScope(node.closest&&node.closest('[id*=player]'));let p=node.parentElement;for(let i=0;p&&i<5;i++,p=p.parentElement)pushScope(p);for(const scope of scopes){for(const el of scope.querySelectorAll?scope.querySelectorAll('img[src],img[data-src],img[data-original],img[data-lazy-src],img[srcset],picture source[srcset]'):[]){add(el,absolute(rawSrc(el),el.baseURI||location.href),35)}const html=String(scope.outerHTML||'');for(const m of html.matchAll(/(?:src|data-src|data-original|data-lazy-src|srcset)\\s*=\\s*['\"]([^'\"]+)['\"]/gi))add(scope,absolute(m[1],scope.baseURI||location.href),20);for(const el of scope.querySelectorAll?scope.querySelectorAll('[style*=background]'):[]){const bg=(el.ownerDocument?.defaultView||window).getComputedStyle(el).backgroundImage||'',m=bg.match(/url\\((['\"]?)(.*?)\\1\\)/i);if(m)add(el,absolute(m[2],el.baseURI||location.href),30)}}for(const el of doc.querySelectorAll('img[src],img[data-src],img[data-original],img[data-lazy-src],img[srcset],picture source[srcset]'))add(el,absolute(rawSrc(el),el.baseURI||location.href),0);for(const el of doc.querySelectorAll('[style*=background]')){const bg=(el.ownerDocument?.defaultView||window).getComputedStyle(el).backgroundImage||'',m=bg.match(/url\\((['\"]?)(.*?)\\1\\)/i);if(m)add(el,absolute(m[2],el.baseURI||location.href),0)}found.sort((x,y)=>y[0]-x[0]);return found[0]&&found[0][0]>=20?found[0][1]:''},out=[],seen=new Set();for(const node of all('a,[onclick],[data-href],[data-url]')){let raw=(node.getAttribute&&node.getAttribute('href')||'')+' '+(node.getAttribute&&node.getAttribute('onclick')||'')+' '+(node.getAttribute&&node.getAttribute('data-href')||'')+' '+(node.getAttribute&&node.getAttribute('data-url')||'')+' '+(node.onclick?String(node.onclick):'')+' '+String(node.outerHTML||'').slice(0,3200),id='',m=raw.match(/(?:[?&]|\\b)jugador\\s*(?:=|%3D)\\s*(-?\\d{1,12})/i);if(m)id=m[1];if(!id){const fn=raw.match(/(?:EstadisticasJugador|Jugador)[^(]{0,70}\\(([^)]{0,260})\\)/i);if(fn){const n=fn[1].match(/-?\\d{1,12}/);if(n)id=n[0]}}if(!id)continue;const text=norm(node.textContent||''),person=people.find(p=>text===p.key||text.includes(p.key)||p.key.includes(text));if(!person)continue;const key=person.key+'|'+id;if(seen.has(key))continue;seen.add(key);const pm=raw.match(/(?:[?&]|\\b)cod_primaria\\s*(?:=|%3D)\\s*(\\d{1,12})/i),primary=pm?pm[1]:'5000274',photo=photoFor(node,id.replace(/^-/,''),person);out.push({name:person.name,player_id:id,primary,url:(node.href||node.getAttribute&&node.getAttribute('href')||''),photo})}return JSON.stringify(out)})()";
+                final String script=rfafExtractorScript("JSON.stringify(window.RfafExtract.players(document,"+wanted+","+JSONObject.quote(acta)+"))");
                 final int[] tries={0};final String[] best={"[]"};final int[] bestPhotos={-1};final Runnable[] probe={null};
                 probe[0]=()->view.evaluateJavascript(script,value->{if(done[0])return;String rows="[]";int photos=0,total=0;try{Object decoded=new org.json.JSONTokener(value).nextValue();if(decoded instanceof String)rows=(String)decoded;org.json.JSONArray arr=new org.json.JSONArray(rows);total=arr.length();for(int i=0;i<arr.length();i++){JSONObject item=arr.optJSONObject(i);if(item!=null&&!item.optString("photo").isEmpty())photos++;}if(photos>bestPhotos[0]||(photos==bestPhotos[0]&&total>new org.json.JSONArray(best[0]).length())){bestPhotos[0]=photos;best[0]=rows;}}catch(Exception ignored){}tries[0]++;if(tries[0]<10&&(bestPhotos[0]<=0||bestPhotos[0]<total)){view.postDelayed(probe[0],700);return;}done[0]=true;deliverResolvedPlayers(acta,best[0]);view.destroy();});
                 view.postDelayed(probe[0],900);
@@ -161,6 +191,13 @@ public class MainActivity extends Activity {
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
         });
         resolver.postDelayed(fail,18000);resolver.loadUrl("https://www.rfaf.es/");
+    }
+    /** The same tested DOM reader handles embedded portraits on Android and the app. */
+    private String rfafExtractorScript(String expression) {
+        try(InputStream in=getAssets().open("rfaf_extract.js");ByteArrayOutputStream out=new ByteArrayOutputStream()) {
+            byte[] buffer=new byte[4096];int n;while((n=in.read(buffer))!=-1)out.write(buffer,0,n);
+            return out.toString("UTF-8")+"\n"+expression+";";
+        }catch(Exception ignored){return "JSON.stringify({})";}
     }
     private void deliverResolvedPlayers(String acta,String rowsJson) {
         String rows="[]";try{new org.json.JSONArray(rowsJson);rows=rowsJson;}catch(Exception ignored){}
@@ -187,7 +224,7 @@ public class MainActivity extends Activity {
         final boolean[] done={false};final int[] stage={0};
         WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
         CookieManager.getInstance().setAcceptCookie(true);CookieManager.getInstance().setAcceptThirdPartyCookies(resolver,true);
-        final String actaUrl=acta!=null&&acta.matches("[0-9]{1,12}")?"https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta+"&cod_acta="+acta:"";
+        final String actaUrl=acta!=null&&acta.matches("[0-9]{1,12}")?"https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa="+acta:"";
         final Runnable fail=()->{if(done[0])return;done[0]=true;deliverResolvedProfile(playerKey,new JSONObject());resolver.stopLoading();resolver.destroy();};
         resolver.setWebViewClient(new WebViewClient(){
             @Override public void onPageFinished(WebView view,String url){
@@ -195,15 +232,16 @@ public class MainActivity extends Activity {
                 if(stage[0]==0){stage[0]=1;if(!actaUrl.isEmpty()){view.loadUrl(actaUrl);return;}}
                 if(stage[0]<=1){stage[0]=2;view.loadUrl(profileUrl);return;}
                 if(stage[0]!=2)return;stage[0]=3;
-                final String script="(function(){const clean=s=>String(s||'').replace(/\\s+/g,' ').trim(),upper=s=>clean(s).normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toUpperCase(),bad=/ESCUDO|LOGO|BANNER|COOKIE|PUBLICIDAD|SOCIAL|ICON|TARJ_/,docs=[document];for(const frame of document.querySelectorAll('iframe')){try{if(frame.contentDocument)docs.push(frame.contentDocument)}catch(e){}}const all=sel=>docs.flatMap(d=>[...d.querySelectorAll(sel)]),imgs=[];for(const img of all('img[src],img[data-src],img[data-original],img[data-lazy-src]')){const raw=img.currentSrc||img.src||img.getAttribute('data-src')||img.getAttribute('data-original')||img.getAttribute('data-lazy-src')||'';let src='';try{src=new URL(raw,img.baseURI||location.href).href}catch(e){}const meta=upper([src,img.className||'',img.id||'',img.alt||'',img.title||'',img.parentElement?.className||''].join(' '));if(!src||bad.test(meta))continue;let score=/\\/pimg\\/jugadores\\//i.test(src)?40:/JUGADOR|FUTBOLISTA|PLAYER|PERSONA|FOTO|PHOTO|RETRATO/.test(meta)?14:0;if(/\\/pimg\\/|NOVANET/.test(meta))score+=3;if((img.naturalWidth||img.width||0)>=80&&(img.naturalHeight||img.height||0)>=80)score+=4;if((img.naturalHeight||0)>(img.naturalWidth||0)*0.8)score+=2;imgs.push([score,src])}for(const el of all('[style*=background],[class*=jug],[class*=foto],[id*=jug],[id*=foto]')){const bg=(el.ownerDocument?.defaultView||window).getComputedStyle(el).backgroundImage||'';if(bg.startsWith('url(')){const src=bg.slice(4,-1).replaceAll(String.fromCharCode(34),'').replaceAll(String.fromCharCode(39),'');if(src&&!bad.test(upper(src))){try{imgs.push([12,new URL(src,el.baseURI||location.href).href])}catch(e){}}}}imgs.sort((a,b)=>b[0]-a[0]);const photo_source=imgs[0]?.[0]>=4?imgs[0][1]:'';const sections=[],fallback=[];let index=0;for(const table of all('table')){const rows=[...table.querySelectorAll('tr')].map(tr=>[...tr.children].filter(c=>/^(TD|TH)$/.test(c.tagName)).map(c=>clean(c.textContent)).slice(0,10)).filter(r=>r.some(Boolean));if(rows.length<1)continue;let title='';for(let el=table.previousElementSibling,tries=0;el&&tries<5;el=el.previousElementSibling,tries++){const t=clean(el.textContent);if(t&&t.length<180){title=t;break}}if(!title){const box=table.closest('.panel,.card,.well,.box,[class*=panel],[class*=card]');if(box){const h=box.querySelector('h1,h2,h3,h4,h5,h6,.panel-title,.card-title,strong');if(h)title=clean(h.textContent)}}const sample=upper(title+' '+rows.slice(0,6).flat().join(' '));let score=0;if(/COMPETICION|COMPETENCIA|LIGA|CAMPEONATO/.test(sample))score+=12;if(/TEMPORADA/.test(sample))score+=7;if(/ESTADIST/.test(sample))score+=8;if(/PARTIDOS JUGADOS|PJ\\b|MINUTOS|GOLES|TARJETAS|AMARILLAS|ROJAS|TITULARIDADES|CONVOCATORIAS/.test(sample))score+=6;if(/ACTA|DATOS DEL PARTIDO|ALINEACION|TITULARES|SUPLENTES|ARBITR|RESULTADO DEL PARTIDO/.test(upper(title)))score-=14;const numeric=rows.flat().filter(x=>/\\d/.test(x)).length,section={title:title||'Estadísticas de competición',rows:rows.slice(0,30),score,index:index++};if(score>=8)sections.push(section);else if(numeric>=3&&/PARTIDOS|PJ\\b|MINUTOS|GOLES|TARJETAS|TEMPORADA|COMPETICION/.test(sample)&&score>=0)fallback.push(section)}const statWord=x=>/PARTIDOS?|PJ|MINUTOS?|GOLES?|TITULAR(?:ES|IDADES)?|SUPLENTES?|CONVOCATORIAS?|AMARILLAS?|ROJAS?|TARJETAS?|TEMPORADA|COMPETICION|LIGA|CAMPEONATO/.test(upper(x));for(const dl of all('dl')){const rows=[];for(const dt of dl.querySelectorAll('dt')){const dd=dt.nextElementSibling;if(dd&&dd.tagName==='DD'&&statWord(dt.textContent)&&/[0-9]/.test(dd.textContent||''))rows.push([clean(dt.textContent),clean(dd.textContent)])}if(rows.length)sections.push({title:'Estadísticas de competición',rows,score:20,index:index++})}for(const box of all('[class*=estad],[id*=estad],[class*=stat],[id*=stat],[class*=dato],[id*=dato],li,p')){const text=clean(box.textContent);if(!text||text.length>260||!statWord(text)||!/[0-9]/.test(text))continue;const children=[...box.children].map(x=>clean(x.textContent)).filter(Boolean);const rows=[];for(let i=0;i<children.length-1;i++){if(statWord(children[i])&&/[0-9]/.test(children[i+1]))rows.push([children[i],children[i+1]])}if(rows.length)sections.push({title:'Estadísticas de competición',rows,score:18,index:index++})}for(const root of all('[class*=estad],[id*=estad],[class*=stat],[id*=stat]')){const lines=(root.innerText||'').split(String.fromCharCode(10)).map(clean).filter(Boolean),rows=[];for(let i=0;i<lines.length-1;i++){if(statWord(lines[i])&&/^[0-9][0-9.,%]*$/.test(lines[i+1]))rows.push([lines[i],lines[i+1]])}if(rows.length)sections.push({title:'Estadísticas de competición',rows,score:22,index:index++})}const chosen=(sections.length?sections:fallback).sort((a,b)=>b.score-a.score||a.index-b.index).slice(0,6).map(x=>({title:x.title,rows:x.rows}));return JSON.stringify({photo_source,stats:chosen})})()";
+                final String script=rfafExtractorScript("JSON.stringify(window.RfafExtract.profile(document))");
                 final int[] attempts={0};final Runnable[] probe={null};
                 probe[0]=()->view.evaluateJavascript(script,value->{if(done[0])return;JSONObject data=new JSONObject();try{Object decoded=new org.json.JSONTokener(value).nextValue();String raw=decoded instanceof String?(String)decoded:"{}";data=new JSONObject(raw);}catch(Exception ignored){}try{
                     String photoSource=data.optString("photo_source");
-                    if(!photoSource.isEmpty()){java.net.URI imageUri=new java.net.URI(photoSource);String h=imageUri.getHost(),scheme=imageUri.getScheme();if(h!=null&&("rfaf.es".equalsIgnoreCase(h)||"www.rfaf.es".equalsIgnoreCase(h)||h.toLowerCase().endsWith(".rfaf.es")||h.toLowerCase().endsWith(".filesnovanet.es"))&&("https".equalsIgnoreCase(scheme)||"http".equalsIgnoreCase(scheme))){if("http".equalsIgnoreCase(scheme))photoSource=photoSource.replaceFirst("^http://","https://");data.put("photo_source",photoSource);data.put("photo",photoSource);}else{data.put("photo_source","");}}
+                    if(photoSource.length()<=700000&&photoSource.matches("data:image/(?:png|jpeg|webp|gif);base64,[A-Za-z0-9+/=]+")){data.put("photo",photoSource);}else if(!photoSource.isEmpty()){java.net.URI imageUri=new java.net.URI(photoSource);String h=imageUri.getHost(),scheme=imageUri.getScheme();if(h!=null&&("rfaf.es".equalsIgnoreCase(h)||"www.rfaf.es".equalsIgnoreCase(h)||h.toLowerCase().endsWith(".rfaf.es")||h.toLowerCase().endsWith(".filesnovanet.es"))&&("https".equalsIgnoreCase(scheme)||"http".equalsIgnoreCase(scheme))){if("http".equalsIgnoreCase(scheme))photoSource=photoSource.replaceFirst("^http://","https://");data.put("photo_source",photoSource);data.put("photo",photoSource);}else{data.put("photo_source","");}}
                     data.put("updated_at",java.time.Instant.now().toString());
                 }catch(Exception ignored){}
-                boolean hasPhoto=!data.optString("photo").isEmpty(),hasStats=data.optJSONArray("stats")!=null&&data.optJSONArray("stats").length()>0;
-                attempts[0]++;if((!hasPhoto||!hasStats)&&attempts[0]<10){view.postDelayed(probe[0],700);return;}
+                boolean hasStats=data.optJSONArray("stats")!=null&&data.optJSONArray("stats").length()>0;
+                attempts[0]++;if(!hasStats&&attempts[0]<10){view.postDelayed(probe[0],700);return;}
+                if(hasStats)cacheResolvedProfile(profile,data);
                 done[0]=true;deliverResolvedProfile(playerKey,data);view.destroy();});
                 view.postDelayed(probe[0],900);
             }
@@ -215,19 +253,28 @@ public class MainActivity extends Activity {
         final String script="window.Fixtures&&window.Fixtures.applyResolvedProfile("+JSONObject.quote(playerKey)+","+data.toString()+");";
         if(web!=null)web.post(()->web.evaluateJavascript(script,null));
     }
+    private void cacheResolvedProfile(Uri profile,JSONObject data) {
+        try{
+            String player=profile.getQueryParameter("jugador"),acta=profile.getQueryParameter("codacta"),primary=profile.getQueryParameter("cod_primaria");
+            if(acta==null)acta=profile.getQueryParameter("CodActa");
+            if(player==null||acta==null||primary==null||!player.matches("[0-9]{1,12}")||!acta.matches("[0-9]{1,12}")||!primary.matches("[0-9]{1,12}"))return;
+            java.io.File cache=new java.io.File(getFilesDir(),"rfaf_player_"+player+"_"+acta+"_"+primary+".json");
+            java.nio.file.Files.write(cache.toPath(),data.toString().getBytes(StandardCharsets.UTF_8));
+        }catch(Exception ignored){}
+    }
     private synchronized void ensureFederationSession() throws Exception {
         long now=System.currentTimeMillis();
         if(now-federationSessionAt<300000L)return;
         readPublicFederation("https://www.rfaf.es/",federationCookies);
         federationSessionAt=now;
     }
-    private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta,String primary) {
+    private android.webkit.WebResourceResponse publicPlayerResponse(String player,String acta,String primary,boolean refresh) {
         if(player==null||acta==null||!player.matches("[0-9]{1,12}")||!acta.matches("[0-9]{1,12}"))return new android.webkit.WebResourceResponse("application/json","UTF-8",new ByteArrayInputStream("{}".getBytes(StandardCharsets.UTF_8)));
         if(primary==null||!primary.matches("[0-9]{1,12}"))primary="5000274";
         java.io.File cache=new java.io.File(getFilesDir(),"rfaf_player_"+player+"_"+acta+"_"+primary+".json");
         byte[] data=null;
         try {
-            if(cache.exists()&&System.currentTimeMillis()-cache.lastModified()<86400000L)data=java.nio.file.Files.readAllBytes(cache.toPath());
+            if(!refresh&&cache.exists()&&System.currentTimeMillis()-cache.lastModified()<1800000L)data=java.nio.file.Files.readAllBytes(cache.toPath());
             if(data==null){
                 ensureFederationSession();
                 String query="?cod_primaria="+primary+"&jugador="+player+"&codacta="+acta+"&nueva_ventana=";
@@ -281,9 +328,9 @@ public class MainActivity extends Activity {
                 if(base.isEmpty() && "https".equals(req.getUrl().getScheme()) && "appassets.androidplatform.net".equals(req.getUrl().getHost())){
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
-                    if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"));
+                    if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"),req.getUrl().getQueryParameter("refresh")!=null);
                     if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
-                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
+                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","rfaf_extract.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
                 }return null;

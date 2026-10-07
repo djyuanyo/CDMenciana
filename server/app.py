@@ -41,7 +41,7 @@ class Handler(BaseHTTPRequestHandler):
     def respond(self, status, payload, cookie=None, mime='application/json; charset=utf-8'):
         raw = payload if isinstance(payload,bytes) else (json.dumps(payload, ensure_ascii=False).encode() if mime.startswith('application/json') else payload)
         self.send_response(status)
-        for k,v in {'Content-Type':mime,'Content-Length':str(len(raw)),'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://stars.rfaf.es https://rfaf.filesnovanet.es https://cdmenciana.es https://cms.cdmenciana.es; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}.items(): self.send_header(k,v)
+        for k,v in {'Content-Type':mime,'Content-Length':str(len(raw)),'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://stars.rfaf.es https://rfaf.filesnovanet.es https://cdmenciana.es https://cms.cdmenciana.es; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"}.items(): self.send_header(k,v)
         if cookie: self.send_header('Set-Cookie',cookie)
         self.end_headers(); self.wfile.write(raw)
     def user(self,c):
