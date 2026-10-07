@@ -7,8 +7,8 @@ DATA_QUERY='cod_primaria=1000120&codcompeticion=48466108&codgrupo=48466109&codte
 QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22'
 SOURCE=PREFIX+'NFG_CmpJornada?'+QUERY
 TEAMS={
-    'first':dict(key='first',label='Primer equipo',competition_id='48466108',group_id='48466109',competition='3ª División F.S.',group='Grupo 17',team_count=16,round_count=30,filename='fixtures.json'),
-    'filial':dict(key='filial',label='Filial Senior',competition_id='49113015',group_id='49113036',competition='2ª Andaluza Senior F.S. (Córdoba)',group='Grupo A',team_count=8,round_count=14,filename='fixtures-filial.json'),
+    'first':dict(key='first',label='Primer equipo',team_id='2137495',competition_id='48466108',group_id='48466109',competition='3ª División F.S.',group='Grupo 17',team_count=16,round_count=30,filename='fixtures.json'),
+    'filial':dict(key='filial',label='Filial Senior',team_id='48536795',competition_id='49113015',group_id='49113036',competition='2ª Andaluza Senior F.S. (Córdoba)',group='Grupo A',team_count=8,round_count=14,filename='fixtures-filial.json'),
 }
 def team_query(config,lower=False):
     keys=('codcompeticion','codgrupo','codtemporada') if lower else ('CodCompeticion','CodGrupo','CodTemporada')
@@ -90,6 +90,37 @@ def apply_crests(matches,table,logos):
     for row in table:row['crest']=logos.get(normalize(row['team']),'')
     if any(not m[side+'_crest'] for m in matches for side in ('home','away')):
         raise ValueError('Incomplete official crests')
+
+def staff_source(config):
+    return PREFIX+'NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo='+config['team_id']
+
+def team_staff(html):
+    root=Document(html).root
+    if not any(n.text().startswith('Club:') and is_club(n.text()) for n in root.find('h5')):
+        raise ValueError('Official club staff page missing')
+    groups={'TECNICOS':('technicians','Técnico'),'DELEGADOS':('delegates','Delegado'),'AUXILIARES':('assistants','Auxiliar')}
+    result=[];seen=set()
+    for table in root.find('table'):
+        header=None
+        for node in table.find('th'):
+            header=re.fullmatch(r'(TECNICOS|DELEGADOS|AUXILIARES)\s*\((\d+)\)',normalize(visible(node)).strip())
+            if header:break
+        if not header:continue
+        group,count=header.groups()
+        if group in seen:raise ValueError('Duplicate staff section')
+        seen.add(group);members=[]
+        for row in table.find('tr'):
+            cells=[n for n in row.children if n.tag=='td']
+            if not cells:continue
+            name=' '.join(' '.join(visible(c).split()) for c in cells).strip()
+            if not name:continue
+            if ',' not in name or len(name)>120:raise ValueError('Invalid official staff member')
+            members.append(dict(name=name,group=groups[group][0],role=groups[group][1]))
+        if len(members)!=int(count):raise ValueError('Incomplete official staff section')
+        if len({normalize(m['name']) for m in members})!=len(members):raise ValueError('Duplicate staff member')
+        result.extend(members)
+    if not seen:raise ValueError('Official staff sections missing')
+    return result
 
 def enrich(match,html):
     root=Document(html).root
@@ -202,6 +233,11 @@ def sync(config=None):
     club=next(r for r in table if is_club(r['team']))
     results_status=verify_results(matches,club,previous)
     payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=ROSTER_SOURCE if config['key']=='first' else source,photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
+    try:
+        payload.update(staff=team_staff(get(payload['staff_source'])),staff_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),staff_status='verified')
+    except (ValueError,OSError) as error:
+        print(f'Cuerpo técnico pendiente: {error}; se conserva la última copia válida',flush=True)
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
     targets=[ROOT/folder/config['filename'] for folder in ('data','android/app/src/main/assets','server/static')]
     for target in targets:target.write_text(raw,encoding='utf-8')

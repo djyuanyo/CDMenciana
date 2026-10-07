@@ -6670,5 +6670,30 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg": "crests/fd2658f79c329d04.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG": "crests/955f5137fd52bf55.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png": "crests/62c2362186b53ac7.png"
-  }
+  },
+  "staff": [
+    {
+      "name": "JIMENEZ CUBERO, JOSE ANTONIO",
+      "group": "technicians",
+      "role": "Técnico"
+    },
+    {
+      "name": "CÓRDOBA ÚBEDA, FRANCISCO JAVIER",
+      "group": "delegates",
+      "role": "Delegado"
+    },
+    {
+      "name": "MUÑOZ CUBERO, ANTONIO",
+      "group": "delegates",
+      "role": "Delegado"
+    },
+    {
+      "name": "LUNA RUZ, JUAN",
+      "group": "assistants",
+      "role": "Auxiliar"
+    }
+  ],
+  "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+  "staff_updated_at": "2026-10-07T17:47:19.558947+00:00",
+  "staff_status": "verified"
 }

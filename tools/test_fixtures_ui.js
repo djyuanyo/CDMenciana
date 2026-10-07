@@ -19,6 +19,17 @@ const scorers=f.scorers();assert.equal((scorers.match(/scorer-row our-club/g)||[
 f.data=actual;assert(f.data.roster.length>0&&f.data.scorers.length>0);
 const roster=f.roster();for(const p of f.data.roster){assert(roster.includes(f.esc(p.name)));assert(roster.includes('Dorsal '+p.number));const photo=f.photo(p);if(photo.startsWith('players/'))assert(fs.existsSync('android/app/src/main/assets/'+photo));else assert(photo.startsWith('https://cdmenciana.es/images/jugadores/'));}
 console.log('Scorer highlighting and roster names, shirt numbers and photos verified');
+for(const [key,file,counts] of [['first','fixtures.json',[1,2,1]],['filial','fixtures-filial.json',[1,1,0]]]){
+ f.selectTeam(key);f.data=JSON.parse(fs.readFileSync('data/'+file,'utf8'));
+ const staff=f.staff(),roster=f.roster();
+ assert(roster.includes('Cuerpo técnico'));
+ for(const [i,group] of ['technicians','delegates','assistants'].entries())assert.equal(f.data.staff.filter(p=>p.group===group).length,counts[i]);
+ for(const person of f.data.staff)assert(staff.includes(f.esc(f.personName(person.name)))&&staff.includes(f.esc(person.role)));
+ assert(staff.includes('Codigo_Equipo='+ (key==='first'?'2137495':'48536795')));
+ if(key==='filial'){assert(staff.includes('Sin auxiliares publicados'));assert(!staff.includes('Juan Luna'));}
+}
+f.selectTeam('first');f.data=actual;
+console.log('Both rosters include their own official technicians, delegates and assistants');
 
 f.newsData=JSON.parse(fs.readFileSync('data/news.json','utf8'));const news=f.news();for(const n of f.newsData.news){assert(news.includes(f.esc(n.title)));assert(news.includes(f.esc(n.url)));}assert(!news.includes('PRÓXIMO PARTIDO'));console.log('Home news cards and original article links verified');
 

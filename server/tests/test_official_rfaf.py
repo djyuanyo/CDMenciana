@@ -1,8 +1,23 @@
 import sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS
+from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS,team_staff,staff_source
 class OfficialRFAFTests(unittest.TestCase):
+    def test_first_team_staff_has_all_three_roles(self):
+        html=(Path(__file__).parent/'fixtures/rfaf_first_staff.html').read_text()
+        rows=team_staff(html)
+        self.assertEqual(['technicians','delegates','delegates','assistants'],[r['group'] for r in rows])
+        self.assertEqual('LUNA RUZ, JUAN',rows[-1]['name'])
+        self.assertEqual('CÓRDOBA ÚBEDA, FRANCISCO JAVIER',rows[1]['name'])
+        self.assertTrue(staff_source(TEAMS['first']).endswith('Codigo_Equipo=2137495'))
+    def test_filial_staff_does_not_invent_absent_auxiliaries(self):
+        html=(Path(__file__).parent/'fixtures/rfaf_filial_staff.html').read_text()
+        self.assertEqual([('LOZANO GARCIA, JULIO','technicians'),('RUEDA JIMÉNEZ, FRANCISO JAVIER','delegates')],[(r['name'],r['group']) for r in team_staff(html)])
+        self.assertTrue(staff_source(TEAMS['filial']).endswith('Codigo_Equipo=48536795'))
+    def test_partial_or_wrong_staff_source_is_rejected(self):
+        html=(Path(__file__).parent/'fixtures/rfaf_first_staff.html').read_text()
+        for broken in [html.replace('Delegados (2)','Delegados (3)'),html.replace('C.D. APAGA Y VAMONOS','Otro club'),'<p>Sesión no disponible</p>']:
+            with self.assertRaises(ValueError):team_staff(broken)
     def test_filial_regional_table_without_coefficient(self):
         html=(Path(__file__).parent/'fixtures/rfaf_filial_standings.html').read_text()
         rows=standings(html,team_count=8)

@@ -213,6 +213,23 @@ body[data-page="Acta"] main, body[data-page="Jugador"] main { padding-top: 12px;
 .news-body h2 a { color: var(--text); }
 .read-news { color: var(--sky); min-height: 38px; }
 .roster-grid { gap: 16px; }
+.staff-section { margin: 32px 0 24px; }
+.staff-groups { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+.staff-group { padding: 19px; border: 1px solid var(--line); border-radius: 20px; background: var(--matte); box-shadow: var(--raised-shadow); }
+.staff-group-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
+.staff-group-heading h3 { margin: 0; font-size: 15px; color: var(--text); }
+.staff-group-heading > span { color: var(--sky); font-size: 12px; font-weight: 700; }
+.staff-members { margin: 0; padding: 0; list-style: none; }
+.staff-member { display: flex; align-items: center; gap: 13px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.staff-member:last-child { border-bottom: 0; padding-bottom: 3px; }
+.staff-avatar { display: flex; align-items: center; justify-content: center; flex: 0 0 42px; height: 42px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); color: var(--sky); }
+.staff-avatar svg { width: 21px; height: 21px; }
+.staff-member > div { min-width: 0; }
+.staff-member strong { display: block; color: var(--text); font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.staff-member small, .staff-empty { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.staff-member small { display: block; margin-top: 4px; }
+.staff-empty { margin: 18px 0 0; }
+.staff-section .official-link { margin-bottom: 0; }
 .player-photo-wrap { background: #465772; }
 .player-details { padding: 16px; }
 .player-details small { color: var(--sky); font-size: 10px; }

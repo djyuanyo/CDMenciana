@@ -1843,5 +1843,20 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png": "crests/3cac081e137b2c2e.png",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png": "crests/39d571410234085e.png",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
-  }
+  },
+  "staff": [
+    {
+      "name": "LOZANO GARCIA, JULIO",
+      "group": "technicians",
+      "role": "Técnico"
+    },
+    {
+      "name": "RUEDA JIMÉNEZ, FRANCISO JAVIER",
+      "group": "delegates",
+      "role": "Delegado"
+    }
+  ],
+  "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
+  "staff_updated_at": "2026-10-07T17:47:19.577490+00:00",
+  "staff_status": "verified"
 }
