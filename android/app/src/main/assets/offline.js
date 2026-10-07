@@ -20,10 +20,11 @@ function render(){
  if(page==='Socios')body='<div class="section-heading"><h2>Zona de socios</h2></div><section class="card membercard"><small>CD MENCIANA · CARNET DIGITAL</small><h3>Parte de nuestro club</h3><p>Tu carnet, número de socio y estado de cuota se mostrarán aquí al iniciar sesión.</p><span class="badge">ACCESO DE SOCIOS</span></section>'+CDM.empty('Todo lo que te une al club','Avisos exclusivos y novedades para socios. El servicio de cuentas todavía está pendiente de conexión.','lock');
  if(page==='Jugadores')body='<div class="section-heading"><h2>Zona de jugadores</h2></div>'+CDM.empty('Nos vemos en la pista','Consulta convocatorias y entrenamientos y confirma tu asistencia. El servicio de cuentas todavía está pendiente de conexión.','team');
  main.innerHTML=body;
+ if(page==='Partidos')Fixtures.syncRoundTabs();
 }
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()){history.replaceState(null,'',location.pathname);reportRequest++;}render();window.scrollTo(0,0)}});
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
-document.addEventListener('change',e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;Fixtures.manualRound=true;render();}});
+document.addEventListener('click',e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;render();Fixtures.syncRoundTabs(true);}});
 render();Fixtures.load().then(()=>routeState()?reportRoute():render());
 
 let reportRequest=0;

@@ -13,7 +13,7 @@ async function render(){
  if(page==='Inicio')main.innerHTML=Fixtures.news();
  if(page==='Más')main.innerHTML=CDM.menu(user);
  if(page==='Goleadores')main.innerHTML=Fixtures.scorers();
- if(page==='Partidos')main.innerHTML=Fixtures.calendar();
+ if(page==='Partidos'){main.innerHTML=Fixtures.calendar();Fixtures.syncRoundTabs();}
  if(page==='Clasificación')main.innerHTML=Fixtures.standings();
  if(page==='Club')main.innerHTML=Fixtures.roster();
  if(page==='Socios')main.innerHTML=`<section class="card membercard"><small>CARNET DIGITAL · SOCIO</small><h3>${esc(user.name)}</h3><p>Número: ${esc(user.number||'Pendiente de asignar')}</p><span class="badge">Cuota: ${user.paid?'Pagada':'Pendiente'}</span></section>`+content(items.filter(i=>i.audience==='member'));
@@ -28,4 +28,4 @@ document.addEventListener('click',async e=>{const el=e.target.closest('button');
 document.addEventListener('submit',async e=>{e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));const button=f.querySelector('button');button.disabled=true;try{let r;if(f.dataset.user){for(const k of ['active','member','player','paid'])d[k]=f.elements[k].checked?1:0;d.id=Number(f.dataset.user);r=await api('admin/user',d)}else r=await api(({login:'login',register:'register',publish:'admin/content'})[f.id],d);if(f.id==='register')f.reset();await refresh();msg(r.message||'Sesión iniciada.')}catch(err){msg(err.message)}finally{button.disabled=false}});
 refresh().catch(e=>msg(e.message));
 
-document.addEventListener('change',async e=>{if(e.target.id==='round-filter'){Fixtures.round=e.target.value;Fixtures.manualRound=true;await render()}});
+document.addEventListener('click',async e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;await render();Fixtures.syncRoundTabs(true)}});

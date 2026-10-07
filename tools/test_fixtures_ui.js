@@ -11,7 +11,7 @@ f.data=JSON.parse(fs.readFileSync('data/fixtures.json','utf8'));assert(f.team(f.
 assert(f.standings().includes(f.esc(f.data.team)));
 assert(f.clubCrest().startsWith('crests/'));assert(f.card({...f.data.matches[4],played:false,time:''}).includes('time-unconfirmed'));
 for(const m of f.data.matches)for(const side of ['home','away']){const image=f.crest(m[side],m[side+'_crest']);assert(image.startsWith('crests/'));assert(fs.existsSync('android/app/src/main/assets/'+image));}
-f.round=null;const selected=f.defaultRound();assert(f.calendar().includes(`value="${selected}" selected`));f.round='all';assert(f.calendar().includes('value="all" selected'));
+f.round=null;const selected=f.defaultRound();assert(f.calendar().includes(`data-round="${selected}" role="tab" aria-selected="true"`));f.round='all';assert(f.calendar().includes('data-round="all" role="tab" aria-selected="true"'));
 console.log('Default round, exact team name, pending time and all official crest assets verified');
 const actual=f.data;
 f.data={matches:[],scorers:[{name:'Jugador del club',team:'C.D. APAGA Y VAMONOS',played:2,goals:3,average:1.5},{name:'Rival',team:'Otro equipo',played:0,goals:2,average:null}]};
