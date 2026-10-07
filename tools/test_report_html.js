@@ -55,3 +55,8 @@ console.log('Novanet onclick player links, row photos and internal statistics HT
 const rawHidden=f.parseReportPlayers(`<script>var destino="NFG_EstadisticasJugador?cod_primaria=3000328&jugador=445566&codacta=2645766";</script><table><tr><td>9</td><td>RAMOS ORTAS, SAMUEL</td></tr></table>`,'2645766');
 assert.equal(rawHidden.length,1);assert.equal(rawHidden[0].rfaf_id,'445566');assert.equal(rawHidden[0].acta_id,'2645766');assert.equal(rawHidden[0].name,'RAMOS ORTAS, SAMUEL');
 console.log('Raw jugador id near plain acta name is recovered without an anchor');
+
+const lazyProfile=f.parsePlayerProfileHtml(`<main><img class="foto-jugador" data-src="/pnfg/pimg/Jugadores/42566.jpg"><div class="estadisticas"><span>Partidos jugados</span><strong>7</strong><span>Goles</span><strong>5</strong></div></main>`,{name:'JUGADOR, PRUEBA'});
+assert.equal(lazyProfile.photo,'https://www.rfaf.es/pnfg/pimg/Jugadores/42566.jpg');
+assert.equal(f.safePlayerPhoto('http://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/42566.jpg'),'https://rfaf.filesnovanet.es/pnfg/pimg/Jugadores/42566.jpg');
+assert.equal(f.safePlayerPhoto('rfaf-photo/42566.img'),'');
