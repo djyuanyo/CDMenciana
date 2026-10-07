@@ -181,13 +181,6 @@ public class MainActivity extends Activity {
         if(profile==null){deliverResolvedProfile(playerKey,new JSONObject());return;}
         final String player=profile.getQueryParameter("jugador"),primary=profile.getQueryParameter("cod_primaria");
         final String acta=profile.getQueryParameter("codacta")==null?profile.getQueryParameter("CodActa"):profile.getQueryParameter("codacta");
-        final java.io.File cache=new java.io.File(getFilesDir(),"rfaf_rendered_profile_"+player+"_"+primary+".json");
-        if(cache.exists()&&System.currentTimeMillis()-cache.lastModified()<86400000L)try{
-            JSONObject cached=new JSONObject(new String(java.nio.file.Files.readAllBytes(cache.toPath()),StandardCharsets.UTF_8));
-            String photoSource=cached.optString("photo_source");
-            if(!photoSource.isEmpty())cached.put("photo",photoSource);
-            deliverResolvedProfile(playerKey,cached);return;
-        }catch(Exception ignored){}
         final WebView resolver=new WebView(this);
         final boolean[] done={false};final int[] stage={0};
         WebSettings settings=resolver.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(false);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setUserAgentString(publicUserAgent);
@@ -205,7 +198,6 @@ public class MainActivity extends Activity {
                     String photoSource=data.optString("photo_source");
                     if(!photoSource.isEmpty()){java.net.URI imageUri=new java.net.URI(photoSource);String h=imageUri.getHost();if("https".equals(imageUri.getScheme())&&h!=null&&("rfaf.es".equalsIgnoreCase(h)||"www.rfaf.es".equalsIgnoreCase(h)||h.toLowerCase().endsWith(".rfaf.es")||h.toLowerCase().endsWith(".filesnovanet.es")))data.put("photo",photoSource);else data.put("photo_source","");}
                     data.put("updated_at",java.time.Instant.now().toString());
-                    java.nio.file.Files.write(cache.toPath(),data.toString().getBytes(StandardCharsets.UTF_8));
                 }catch(Exception ignored){}done[0]=true;deliverResolvedProfile(playerKey,data);view.destroy();}),1500);
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())fail.run();}
