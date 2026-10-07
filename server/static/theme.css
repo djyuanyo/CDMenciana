@@ -288,6 +288,8 @@ body[data-page="Acta"] main, body[data-page="Jugador"] main { padding-top: 12px;
 label { color: #d1e0ef; }
 input, select, textarea { color: var(--text); background: #1d2b40; border: 1px solid #7f9ab938; border-radius: 12px; box-shadow: inset 3px 3px 9px #12203770; }
 input::placeholder, textarea::placeholder { color: var(--muted); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; }
+input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
 .card button, form button { background: var(--accent); color: white; border-radius: 12px; min-height: 44px; box-shadow: 4px 4px 10px #0c1a2e80; }
 .card button[data-delete] { background: #43516a; color: #e1d6dd; }
 .membercard { background: linear-gradient(125deg, #315a82, #243650); border-bottom: 3px solid var(--gold); }
@@ -309,6 +311,14 @@ input::placeholder, textarea::placeholder { color: var(--muted); }
 #nav button.selected { color: white; }
 #nav button.selected svg { background: var(--accent); color: white; box-shadow: 0 4px 9px #14254180; }
 #nav button.selected:before { top: auto; bottom: -5px; height: 2px; width: 13px; background: var(--gold); border-radius: 3px; }
+.app-dialog { width: min(440px,calc(100% - 32px)); max-height: calc(100% - 40px); padding: 26px; color: var(--text); background: var(--matte); border: 1px solid var(--line); border-radius: 24px; box-shadow: 0 20px 65px #071123b0; }
+.app-dialog::backdrop { background: #071123b8; backdrop-filter: blur(6px); }
+.app-dialog h2 { margin: 18px 0 10px; font-size: 22px; }
+.app-dialog p { font-size: 14px; line-height: 1.7; }
+.dialog-icon { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: #85d3ff16; color: var(--sky); border-radius: 14px; }
+.dialog-actions { display: flex; gap: 12px; margin-top: 24px; }
+.dialog-actions button { flex: 1; padding: 12px; min-height: 46px; font-size: 13px; font-weight: 700; border: 1px solid var(--line); border-radius: 13px; color: white; background: var(--accent); box-shadow: 4px 4px 10px #0c1a2e80; }
+.dialog-actions button.secondary { color: #c5d5e8; background: var(--matte); }
 @media (min-width: 650px) {
   #banner { padding: 0 18px; }
   .team-cover { padding: 32px; min-height: 260px; }

@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
     private WebView web;
     private String base;
     private String publicUserAgent;
+    private boolean configuring=false;
     private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
     private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
@@ -46,13 +47,41 @@ public class MainActivity extends Activity {
         load();
     }
     private void configure() {
-        LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(40,70,40,40);box.setBackgroundColor(Color.rgb(24,35,53));
-        TextView title=new TextView(this);title.setText("CD MENCIANA\nAPAGA Y VÁMONOS");title.setTextSize(26);title.setTextColor(Color.WHITE);box.addView(title);
-        TextView hint=new TextView(this);hint.setText("Conecta la app al servidor del club. Introduce la dirección HTTPS facilitada por administración.");hint.setTextColor(Color.rgb(177,195,216));hint.setPadding(0,30,0,30);box.addView(hint);
-        EditText url=new EditText(this);url.setHint("https://app.tu-dominio.es");url.setTextColor(Color.WHITE);url.setHintTextColor(Color.rgb(177,195,216));url.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(105,197,248)));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);box.addView(url);
-        Button connect=new Button(this);connect.setText("Conectar con el club");connect.setTextColor(Color.WHITE);connect.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(46,130,215)));box.addView(connect);
-        connect.setOnClickListener(v->{Uri uri=Uri.parse(url.getText().toString().trim());if(!"https".equals(uri.getScheme())||uri.getHost()==null||uri.getUserInfo()!=null||uri.getQuery()!=null||uri.getFragment()!=null||!(uri.getPath()==null||uri.getPath().isEmpty()||"/".equals(uri.getPath()))){url.setError("Introduce una dirección HTTPS sin rutas ni parámetros.");return;}base=uri.buildUpon().path("").build().toString();getPreferences(MODE_PRIVATE).edit().putString("server",base).apply();load();});
-        mountSafe(box);
+        configuring=true;
+        android.widget.ScrollView scroll=new android.widget.ScrollView(this);scroll.setFillViewport(true);
+        LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(dp(20),dp(20),dp(20),dp(28));
+        scroll.addView(box,new android.widget.ScrollView.LayoutParams(-1,-1));
+        Button back=styledButton("← Volver",false);LinearLayout.LayoutParams backLayout=new LinearLayout.LayoutParams(-2,dp(44));backLayout.bottomMargin=dp(22);box.addView(back,backLayout);back.setOnClickListener(v->load());
+        LinearLayout hero=nativeCard();hero.setBackground(surface(Color.rgb(49,83,118),Color.rgb(36,51,73),24));
+        android.widget.ImageView crest=new android.widget.ImageView(this);crest.setImageResource(es.cdmenciana.app.R.drawable.crest);crest.setScaleType(android.widget.ImageView.ScaleType.FIT_CENTER);hero.addView(crest,new LinearLayout.LayoutParams(dp(68),dp(68)));
+        TextView kicker=styledText("CD MENCIANA · TU CLUB",10,Color.rgb(133,211,255));kicker.setPadding(0,dp(18),0,dp(12));hero.addView(kicker);
+        TextView title=styledText("Conexión del club",28,Color.WHITE);title.setTypeface(null,android.graphics.Typeface.BOLD);hero.addView(title);
+        TextView intro=styledText("Tu cuenta y las zonas privadas, en un mismo sitio.",13,Color.rgb(197,214,233));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
+        box.addView(hero,spaced(-1,-2,0,22));
+        LinearLayout form=nativeCard();TextView label=styledText("Servidor del club",18,Color.WHITE);label.setTypeface(null,android.graphics.Typeface.BOLD);form.addView(label);
+        TextView hint=styledText("Introduce la dirección facilitada por el club para acceder a tu cuenta.",13,Color.rgb(176,192,213));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
+        EditText url=new EditText(this);url.setText(base);url.setHint("https://app.tu-dominio.es");url.setTextSize(14);url.setTextColor(Color.WHITE);url.setHintTextColor(Color.rgb(176,192,213));url.setBackground(surface(Color.rgb(29,43,64),Color.rgb(29,43,64),12));url.setBackgroundTintList(null);url.setPadding(dp(14),dp(12),dp(14),dp(12));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);form.addView(url,new LinearLayout.LayoutParams(-1,dp(50)));
+        TextView error=styledText("",12,Color.rgb(255,166,181));error.setPadding(0,dp(10),0,0);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);form.addView(error);
+        Button connect=styledButton("Conectar con el club",true);form.addView(connect,spaced(-1,dp(48),20,0));
+        connect.setOnClickListener(v->{Uri uri=Uri.parse(url.getText().toString().trim());if(!"https".equals(uri.getScheme())||uri.getHost()==null||uri.getUserInfo()!=null||uri.getQuery()!=null||uri.getFragment()!=null||!(uri.getPath()==null||uri.getPath().isEmpty()||"/".equals(uri.getPath()))){error.setText("Introduce una dirección HTTPS sin rutas ni parámetros.");error.setVisibility(View.VISIBLE);url.requestFocus();return;}base=uri.buildUpon().path("").build().toString();getPreferences(MODE_PRIVATE).edit().putString("server",base).apply();load();});
+        box.addView(form,spaced(-1,-2,0,20));
+        Button publicView=styledButton("Usar la vista pública",false);box.addView(publicView,spaced(-1,dp(48),0,0));publicView.setOnClickListener(v->{CookieManager.getInstance().removeAllCookies(null);base="";getPreferences(MODE_PRIVATE).edit().remove("server").apply();load();});
+        TextView publicHint=styledText("Calendario, resultados y noticias sin iniciar sesión.",12,Color.rgb(176,192,213));publicHint.setPadding(dp(8),dp(12),dp(8),0);publicHint.setGravity(android.view.Gravity.CENTER);box.addView(publicHint);
+        mountSafe(scroll);
+    }
+    private int dp(int value){return Math.round(value*getResources().getDisplayMetrics().density);}
+    private TextView styledText(String text,int size,int color){TextView view=new TextView(this);view.setText(text);view.setTextSize(size);view.setTextColor(color);view.setLineSpacing(dp(3),1f);return view;}
+    private android.graphics.drawable.GradientDrawable surface(int start,int end,int radius){android.graphics.drawable.GradientDrawable background=new android.graphics.drawable.GradientDrawable(android.graphics.drawable.GradientDrawable.Orientation.TL_BR,new int[]{start,end});background.setCornerRadius(dp(radius));background.setStroke(dp(1),Color.argb(35,168,201,229));return background;}
+    private LinearLayout nativeCard(){LinearLayout card=new LinearLayout(this);card.setOrientation(LinearLayout.VERTICAL);card.setPadding(dp(22),dp(22),dp(22),dp(22));card.setBackground(surface(Color.rgb(52,69,94),Color.rgb(37,51,73),21));card.setElevation(dp(5));return card;}
+    private LinearLayout.LayoutParams spaced(int width,int height,int top,int bottom){LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(width,height);params.topMargin=dp(top);params.bottomMargin=dp(bottom);return params;}
+    private Button styledButton(String label,boolean primary){Button button=new Button(this);button.setText(label);button.setTextSize(13);button.setAllCaps(false);button.setTextColor(primary?Color.WHITE:Color.rgb(197,213,232));button.setPadding(dp(16),dp(10),dp(16),dp(10));button.setMinHeight(dp(44));button.setBackground(primary?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),13):surface(Color.rgb(52,69,94),Color.rgb(37,51,73),13));button.setBackgroundTintList(null);button.setElevation(dp(3));return button;}
+    private void showThemedDialog(AlertDialog.Builder builder,String title){
+        TextView heading=styledText(title,20,Color.WHITE);heading.setTypeface(null,android.graphics.Typeface.BOLD);heading.setPadding(dp(24),dp(24),dp(24),dp(10));builder.setCustomTitle(heading);
+        AlertDialog dialog=builder.create();dialog.setOnShowListener(ignored->{
+            if(dialog.getWindow()!=null){dialog.getWindow().setBackgroundDrawable(surface(Color.rgb(52,69,94),Color.rgb(37,51,73),24));dialog.getWindow().setDimAmount(.65f);}
+            TextView message=dialog.findViewById(android.R.id.message);if(message!=null){message.setTextColor(Color.rgb(197,213,232));message.setTextSize(14);message.setLineSpacing(dp(3),1f);}
+            for(int id:new int[]{AlertDialog.BUTTON_POSITIVE,AlertDialog.BUTTON_NEGATIVE,AlertDialog.BUTTON_NEUTRAL}){Button button=dialog.getButton(id);if(button==null)continue;button.setAllCaps(false);button.setTextSize(12);button.setTextColor(id==AlertDialog.BUTTON_POSITIVE?Color.WHITE:Color.rgb(197,213,232));button.setMinHeight(dp(44));button.setBackground(id==AlertDialog.BUTTON_POSITIVE?surface(Color.rgb(23,125,167),Color.rgb(61,101,217),12):surface(Color.rgb(44,59,82),Color.rgb(37,51,73),12));button.setBackgroundTintList(null);if(button.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams){android.view.ViewGroup.MarginLayoutParams params=(android.view.ViewGroup.MarginLayoutParams)button.getLayoutParams();params.setMargins(dp(4),dp(4),dp(4),dp(12));button.setLayoutParams(params);}}
+        });dialog.show();
     }
     /** Insets belong to the parent: this physically resizes the WebView viewport. */
     private void mountSafe(View content) {
@@ -317,6 +346,7 @@ public class MainActivity extends Activity {
     }
     private boolean sameOrigin(Uri uri){Uri home=Uri.parse(base.isEmpty()?"https://appassets.androidplatform.net":base);return "https".equals(uri.getScheme())&&home.getHost().equalsIgnoreCase(uri.getHost())&&home.getPort()==uri.getPort();}
     private void load() {
+        configuring=false;
         publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(Color.rgb(24,35,53));
@@ -330,15 +360,19 @@ public class MainActivity extends Activity {
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
                     if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"),req.getUrl().getQueryParameter("refresh")!=null);
                     if("fixtures.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
-                    if(!name.matches("players/[a-f0-9]{16}\\.webp")&&!name.matches("crests/[a-f0-9]{16}\\.(png|jpg)")&&!name.matches("rfaf-player/[0-9]{1,12}\\.json")&&!java.util.Arrays.asList("index.html","style.css","offline.js","ui.js","fixtures.js","rfaf_extract.js","crest.png").contains(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
+                    if(!BundledAssets.allows(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
                 }return null;
             }
             @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest req){Uri uri=req.getUrl();if(req.isForMainFrame()&&sameOrigin(uri)&&"/__native__/settings".equals(uri.getPath())){configure();return true;}if(sameOrigin(uri))return false;if("https".equals(uri.getScheme())){try{startActivity(new Intent(Intent.ACTION_VIEW,uri));}catch(Exception ignored){}}return true;}
-            @Override public void onReceivedError(WebView view,WebResourceRequest req,WebResourceError error){if(req.isForMainFrame())new AlertDialog.Builder(MainActivity.this).setTitle("No se puede conectar").setMessage("Comprueba tu conexión y que el servidor del club esté disponible.").setPositiveButton("Reintentar",(d,w)->web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base)).setNeutralButton("Cambiar servidor",(d,w)->configure()).show();}
+            @Override public void onPageFinished(WebView view,String url){
+                if(base.isEmpty()||!sameOrigin(Uri.parse(url)))return;
+                try(InputStream input=getAssets().open("theme.css")){ByteArrayOutputStream bytes=new ByteArrayOutputStream();byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);String css=bytes.toString("UTF-8");view.evaluateJavascript("(()=>{if(!document.getElementById('main')||!document.getElementById('nav'))return;let style=document.getElementById('cdm-android-theme');if(!style){style=document.createElement('style');style.id='cdm-android-theme';document.head.appendChild(style);}style.textContent="+JSONObject.quote(css)+";})()",null);}catch(java.io.IOException ignored){}
+            }
+            @Override public void onReceivedError(WebView view,WebResourceRequest req,WebResourceError error){if(req.isForMainFrame())showThemedDialog(new AlertDialog.Builder(MainActivity.this).setMessage("Comprueba tu conexión y que el servidor del club esté disponible.").setPositiveButton("Reintentar",(d,w)->load()).setNeutralButton("Cambiar servidor",(d,w)->configure()),"No se puede conectar");}
         });web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base);
     }
-    @Override public void onBackPressed(){if(web!=null&&web.canGoBack())web.goBack();else new AlertDialog.Builder(this).setMessage("¿Salir de la app?").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Servidor",(d,w)->{CookieManager.getInstance().removeAllCookies(null);getPreferences(MODE_PRIVATE).edit().remove("server").apply();configure();}).show();}
+    @Override public void onBackPressed(){if(configuring){load();return;}if(web!=null&&web.canGoBack())web.goBack();else showThemedDialog(new AlertDialog.Builder(this).setMessage("Puedes seguir consultando el club o cerrar la aplicación.").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Conexión",(d,w)->configure()),"¿Salir de la app?");}
     @Override protected void onDestroy(){if(web!=null)web.destroy();super.onDestroy();}
 }

@@ -2,6 +2,13 @@
 window.CDM={
  paths:{home:'M3 10 12 3l9 7v10H15v-6H9v6H3Z',calendar:'M5 5h14v16H5ZM8 3v4m8-4v4M5 10h14',team:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m9-7a4 4 0 0 1 0 7',more:'M5 12h.01M12 12h.01M19 12h.01',user:'M20 21v-2a7 7 0 0 0-14 0v2M13 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8',arrow:'m9 5 7 7-7 7',card:'M3 5h18v14H3ZM3 9h18M7 14h3',ball:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 6 4 3-1.5 5h-5L8 11Zm0-6v6M2 9l6 2m-4 8 5.5-3M20 19l-5.5-3M22 9l-6 2',chart:'M4 20V10m8 10V4m8 16v-7',lock:'M5 10h14v11H5Zm3 0V6a4 4 0 0 1 8 0v4',check:'m5 12 4 4L19 6',pin:'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6'},
  icon(name){return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${this.paths[name]||this.paths.ball}"/></svg>`},
+ confirm(title,message,label='Aceptar'){
+  const previous=document.activeElement,dialog=document.createElement('dialog'),E=x=>Fixtures.esc(x);
+  dialog.className='app-dialog';dialog.setAttribute('aria-labelledby','cdm-confirm-title');
+  dialog.innerHTML=`<span class="dialog-icon">${this.icon('lock')}</span><h2 id="cdm-confirm-title">${E(title)}</h2><p>${E(message)}</p><div class="dialog-actions"><button type="button" class="secondary" data-dialog-cancel>Cancelar</button><button type="button" data-dialog-confirm>${E(label)}</button></div>`;
+  document.body.appendChild(dialog);
+  return new Promise(resolve=>{const finish=value=>{dialog.close();dialog.remove();previous?.focus?.({preventScroll:true});resolve(value)};dialog.querySelector('[data-dialog-cancel]').onclick=()=>finish(false);dialog.querySelector('[data-dialog-confirm]').onclick=()=>finish(true);dialog.addEventListener('cancel',e=>{e.preventDefault();finish(false)});dialog.showModal();dialog.querySelector('[data-dialog-cancel]').focus();});
+ },
  shell(page,user){
   document.body.dataset.page=page;
   const nav=document.getElementById('nav'),header=document.getElementById('header'),banner=document.getElementById('banner'),tabs=document.getElementById('tabs');
