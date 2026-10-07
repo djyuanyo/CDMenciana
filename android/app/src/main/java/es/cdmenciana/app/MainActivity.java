@@ -39,24 +39,24 @@ public class MainActivity extends Activity {
         super.onCreate(saved);
         if(android.os.Build.VERSION.SDK_INT>=30)getWindow().setDecorFitsSystemWindows(false);
         getWindow().setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        getWindow().setStatusBarColor(Color.rgb(8,41,85));
-        getWindow().setNavigationBarColor(Color.rgb(8,41,85));
+        getWindow().setStatusBarColor(Color.rgb(24,35,53));
+        getWindow().setNavigationBarColor(Color.rgb(24,35,53));
         getWindow().getDecorView().setSystemUiVisibility(0);
         base=getPreferences(MODE_PRIVATE).getString("server", "");
         load();
     }
     private void configure() {
-        LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(40,70,40,40);box.setBackgroundColor(Color.rgb(240,244,248));
-        TextView title=new TextView(this);title.setText("CD MENCIANA\nAPAGA Y VÁMONOS");title.setTextSize(26);title.setTextColor(Color.rgb(8,41,85));box.addView(title);
-        TextView hint=new TextView(this);hint.setText("Conecta la app al servidor del club. Introduce la dirección HTTPS facilitada por administración.");hint.setPadding(0,30,0,30);box.addView(hint);
-        EditText url=new EditText(this);url.setHint("https://app.tu-dominio.es");url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);box.addView(url);
-        Button connect=new Button(this);connect.setText("Conectar con el club");box.addView(connect);
+        LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(40,70,40,40);box.setBackgroundColor(Color.rgb(24,35,53));
+        TextView title=new TextView(this);title.setText("CD MENCIANA\nAPAGA Y VÁMONOS");title.setTextSize(26);title.setTextColor(Color.WHITE);box.addView(title);
+        TextView hint=new TextView(this);hint.setText("Conecta la app al servidor del club. Introduce la dirección HTTPS facilitada por administración.");hint.setTextColor(Color.rgb(177,195,216));hint.setPadding(0,30,0,30);box.addView(hint);
+        EditText url=new EditText(this);url.setHint("https://app.tu-dominio.es");url.setTextColor(Color.WHITE);url.setHintTextColor(Color.rgb(177,195,216));url.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(105,197,248)));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);box.addView(url);
+        Button connect=new Button(this);connect.setText("Conectar con el club");connect.setTextColor(Color.WHITE);connect.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(46,130,215)));box.addView(connect);
         connect.setOnClickListener(v->{Uri uri=Uri.parse(url.getText().toString().trim());if(!"https".equals(uri.getScheme())||uri.getHost()==null||uri.getUserInfo()!=null||uri.getQuery()!=null||uri.getFragment()!=null||!(uri.getPath()==null||uri.getPath().isEmpty()||"/".equals(uri.getPath()))){url.setError("Introduce una dirección HTTPS sin rutas ni parámetros.");return;}base=uri.buildUpon().path("").build().toString();getPreferences(MODE_PRIVATE).edit().putString("server",base).apply();load();});
         mountSafe(box);
     }
     /** Insets belong to the parent: this physically resizes the WebView viewport. */
     private void mountSafe(View content) {
-        FrameLayout root=new FrameLayout(this);root.setBackgroundColor(Color.rgb(8,41,85));
+        FrameLayout root=new FrameLayout(this);root.setBackgroundColor(Color.rgb(24,35,53));
         root.addView(content,new FrameLayout.LayoutParams(-1,-1));setContentView(root);
         if(android.os.Build.VERSION.SDK_INT>=30){
             root.setOnApplyWindowInsetsListener((v,insets)->{
@@ -319,7 +319,7 @@ public class MainActivity extends Activity {
     private void load() {
         publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
-        mountSafe(web);web.setBackgroundColor(Color.rgb(8,41,85));
+        mountSafe(web);web.setBackgroundColor(Color.rgb(24,35,53));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);

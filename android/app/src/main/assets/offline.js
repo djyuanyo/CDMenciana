@@ -8,7 +8,7 @@ function render(){
  CDM.shell(page,null);
  let body='';
  const route=routeState();
- if(page==='Inicio')body=Fixtures.news();
+ if(page==='Inicio')body=Fixtures.overview();
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
  if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';

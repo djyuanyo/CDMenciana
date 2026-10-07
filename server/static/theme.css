@@ -1,0 +1,363 @@
+/* Matte sports theme. Shared by the Android app and the club interface. */
+:root {
+  color-scheme: dark;
+  --background: #182335;
+  --surface: #29384f;
+  --surface-raised: #35465f;
+  --text: #f5f8fc;
+  --muted: #b0c0d5;
+  --sky: #85d3ff;
+  --gold: #f2ca75;
+  --line: #a8c9e51c;
+  --matte: linear-gradient(145deg, #34455e, #253349);
+  --accent: linear-gradient(135deg, #177da7, #3d65d9);
+  --raised-shadow: 8px 8px 20px #0d1729a8, -4px -4px 14px #60799716;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  padding-bottom: 108px;
+  background: radial-gradient(ellipse at 100% 12%, #27558335, transparent 48%), var(--background);
+  min-height: 100vh;
+}
+p, small { color: var(--muted); }
+a { color: var(--sky); }
+h2, h3 { color: var(--text); }
+h2 { font-size: 21px; letter-spacing: -.6px; }
+button { touch-action: manipulation; }
+button, a { transition: background-color .15s, box-shadow .15s; }
+button:disabled { opacity: .65; cursor: wait; }
+button:focus-visible, a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 4px;
+}
+[hidden] { display: none !important; }
+#header {
+  height: 82px;
+  max-width: 1016px;
+  margin: auto;
+  padding: 18px 22px;
+  background: transparent;
+  border: 0;
+}
+.club-wordmark strong { font-size: 29px; letter-spacing: -1.5px; }
+.club-wordmark span { font-size: 8px; color: var(--muted); letter-spacing: 1.7px; }
+.header-crest { width: 48px; height: 48px; }
+.profile-btn {
+  width: 43px; height: 43px;
+  padding: 10px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  background: var(--matte);
+  color: var(--sky);
+  box-shadow: var(--raised-shadow);
+}
+#banner { max-width: 1016px; margin: 4px auto 22px; padding: 0 18px; }
+#banner:empty { display: none; }
+.team-cover {
+  height: auto;
+  min-height: 244px;
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  background: linear-gradient(125deg, #31415a, #202d42);
+  padding: 24px;
+  box-shadow: var(--raised-shadow);
+  isolation: isolate;
+}
+.team-cover::before {
+  content: '';
+  position: absolute;
+  inset: -20% -20% -20% 68%;
+  background: linear-gradient(150deg, #55c6ec, #376cde 72%);
+  transform: skewX(-13deg);
+  opacity: .78;
+  z-index: -1;
+}
+.court { right: -26%; opacity: .1; z-index: -1; }
+.cover-copy { max-width: 78%; }
+.eyebrow { color: var(--sky); font-size: 9px; letter-spacing: 1.2px; }
+.team-cover h1 { font-size: 36px; line-height: 1.06; letter-spacing: -1.3px; margin: 18px 0 13px; }
+.team-cover h1 em { font-size: inherit; font-style: normal; color: var(--sky); letter-spacing: inherit; }
+.cover-team-name { font-size: 11px; line-height: 1.6; margin: 0 0 13px; max-width: 235px; color: #d2dfef; }
+.team-tag { font-size: 9px; letter-spacing: .2px; color: var(--gold); }
+.cover-crest { width: 90px; height: 90px; right: 14px; top: 52px; opacity: 1; filter: drop-shadow(0 10px 12px #15283e70); }
+.team-cover.compact { min-height: 144px; padding: 22px; }
+.compact h1 { font-size: 29px; margin: 10px 0; }
+.compact .cover-team-name { display: none; }
+.compact .cover-crest { width: 74px; height: 74px; top: 34px; right: 19px; }
+.compact .cover-copy { max-width: 75%; }
+.team-tabs {
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 2px 18px 12px;
+  background: transparent;
+  scrollbar-width: none;
+}
+.team-tabs::-webkit-scrollbar { display: none; }
+.team-tabs button {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  flex: 0 0 auto;
+  min-width: 112px; min-height: 46px;
+  padding: 12px 14px;
+  font-size: 11px;
+  border: 1px solid var(--line); border-radius: 14px;
+  color: #c3d2e5; background: var(--matte);
+  box-shadow: 4px 4px 10px #101b2e80, -2px -2px 8px #657f9910;
+}
+.team-tabs button svg { width: 17px; height: 17px; }
+.team-tabs button.active { color: white; border-color: #7ec9ff50; background: var(--accent); }
+main { padding: 10px 18px 22px; }
+body[data-page="Acta"] main, body[data-page="Jugador"] main { padding-top: 12px; }
+.section-heading { margin: 24px 0 16px; }
+.section-heading h2 { font-size: 20px; }
+.section-heading > span { color: var(--sky); font-size: 9px; letter-spacing: .7px; }
+.section-intro, .table-help { color: var(--muted); font-size: 12px; }
+.text-action {
+  display: flex; align-items: center; gap: 3px;
+  padding: 8px 0; min-height: 40px;
+  background: none; border: 0; color: var(--sky);
+  font-size: 11px; font-weight: 700;
+}
+.text-action svg { width: 14px; height: 14px; }
+.card, .access-card, .acta-panel, .report-content, .club-news-card, .player-profile, .menu-card {
+  background: var(--matte);
+  border: 1px solid var(--line);
+  box-shadow: var(--raised-shadow);
+  border-radius: 21px;
+  color: var(--text);
+}
+.card { padding: 23px; }
+.badge { color: var(--sky); background: #85d3ff13; }
+.empty, .empty-panel p, .acta-empty { color: var(--muted); }
+.empty-icon, .access-icon, .menu-icon { background: #7ac1f214; color: var(--sky); border-radius: 13px; }
+.access-title { color: var(--text); }
+.access-description { color: var(--muted); }
+.player-tile { background: linear-gradient(140deg, #305274, #263951); }
+.player-tile .access-icon { background: #8dcfff18; }
+.menu-card button { background: transparent; color: var(--text); border-bottom: 1px solid var(--line); min-height: 80px; }
+.menu-card small { color: var(--muted); }
+.connection-link, .official-link { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.menu-card button > svg, .access-card > svg { color: var(--sky); }
+.match-card {
+  background: var(--matte);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 20px 16px;
+  box-shadow: var(--raised-shadow);
+  margin-bottom: 20px;
+}
+.fixture-card.our-match { border: 1px solid #85d3ff55; box-shadow: inset 3px 0 var(--gold), var(--raised-shadow); }
+.section-label { color: var(--text); font-size: 9px; letter-spacing: .5px; gap: 6px; }
+.our-match .section-label { color: var(--sky); }
+.live-dot { background: var(--sky); width: 5px; height: 5px; flex-shrink: 0; }
+.match-status { padding: 6px 7px; color: #d0deef; background: #10213d55; font-size: 8px; border-radius: 8px; }
+.match-status.finished { background: #1d8d741f; color: #93e2c8; }
+.fixture-card .match-teams { grid-template-columns: minmax(0,1fr) 104px minmax(0,1fr); gap: 7px; margin: 25px 0 20px; }
+.match-teams img, .rival-placeholder { width: 62px; height: 62px; border-radius: 16px; background: #fff; padding: 5px; box-shadow: 0 6px 12px #11213960; }
+.rival-placeholder { background: #435675; color: var(--sky); border: 1px solid var(--line); }
+.fixture-team strong { font-size: 10px !important; color: #dde7f5 !important; line-height: 1.5; }
+.match-time > strong, .result-acta > strong.fixture-score { color: var(--text); }
+.fixture-card .match-time > strong.fixture-score, .result-acta > strong.fixture-score { font-size: 33px !important; font-variant-numeric: tabular-nums; }
+.fixture-card .match-time > strong { font-size: 23px !important; }
+.fixture-card .match-time > strong.time-unconfirmed { font-size: 11px !important; line-height: 1.6; }
+.fixture-card .match-time span, .fixture-card .match-time small { color: #b6c9df; font-size: 9px; }
+.fixture-score .score-dash { color: #a7bcd7 !important; font-size: 20px !important; }
+.result-acta { min-height: 58px; padding: 5px 2px; }
+.result-acta .acta-hint { color: var(--sky); font-size: 10px; }
+.fixture-venue, .match-footer { border-color: var(--line); color: var(--muted); font-size: 10px; }
+.fixture-venue svg { color: var(--sky); }
+.match-footer button { color: var(--sky); min-height: 30px; }
+.sync-status { color: var(--muted); font-size: 10px; margin-bottom: 20px; }
+.sync-status button, .report-back {
+  background: var(--matte); border: 1px solid var(--line); color: #d5e5f5;
+  min-height: 40px; padding: 10px 13px; border-radius: 12px;
+  font-size: 11px; box-shadow: 4px 4px 10px #101b2e60;
+}
+.club-season-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin-bottom: 21px; }
+.club-season-stats > div { text-align: center; padding: 14px 8px; background: var(--matte); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--raised-shadow); }
+.club-season-stats strong { font-size: 25px; display: block; color: var(--sky); font-variant-numeric: tabular-nums; }
+.club-season-stats span { display: block; font-size: 10px; color: var(--muted); margin-top: 6px; }
+.news-grid { gap: 20px; }
+.news-cover { border-radius: 20px 20px 0 0; background: #223e5c; aspect-ratio: 16/10; }
+.news-body { padding: 21px; }
+.news-meta { color: var(--muted); font-size: 10px; }
+.news-meta > span { color: var(--sky); }
+.news-body h2 { font-size: 20px; line-height: 1.4; letter-spacing: -.4px; }
+.news-body h2 a { color: var(--text); }
+.read-news { color: var(--sky); min-height: 38px; }
+.roster-grid { gap: 16px; }
+.player-photo-wrap { background: #465772; }
+.player-details { padding: 16px; }
+.player-details small { color: var(--sky); font-size: 10px; }
+.player-details h3 { color: var(--text); font-size: 16px; }
+.shirt-number { background: var(--accent); color: white; border: 1px solid #85d3ff70; box-shadow: 0 5px 12px #10213b66; }
+.scorers-list, .standings-scroll { background: var(--matte); border: 1px solid var(--line); border-radius: 21px; box-shadow: var(--raised-shadow); }
+.scorer-row { border-color: var(--line); padding: 18px 14px; }
+.scorer-row:nth-child(even), .standings-table tbody tr:nth-child(even) { background: #50647c15; }
+.scorer-row.our-club, .standings-table tbody tr.our-club { background: #358bcd28; color: var(--text); box-shadow: inset 3px 0 var(--gold); }
+.scorer-index { color: var(--muted); }
+.scorer-info > strong { color: var(--text); font-size: 13px; }
+.scorer-team, .scorer-info > small { color: var(--muted); }
+.scorer-goals { color: var(--sky); }
+.scorer-goals small { color: var(--muted); font-size: 8px; }
+.standings-table thead { background: #192b44; }
+.standings-table th, .standings-table td { border-color: var(--line); padding: 15px 10px; }
+.standings-table td:nth-child(3) { color: var(--sky); }
+.standings-table { scrollbar-color: #6b91bc #203048; }
+.standings-table { table-layout: fixed; min-width: 600px; }
+.standings-table th:first-child, .standings-table td:first-child { width: 40px; }
+.standings-table thead th:nth-child(2), .standings-table tbody th { width: 184px; min-width: 0; max-width: none; overflow-wrap: anywhere; }
+.standings-crest, .scorer-team img { background: #fff; border-radius: 6px; padding: 2px; }
+.acta-toolbar { align-items: stretch; gap: 9px; }
+.acta-toolbar button:last-child { color: var(--muted); min-height: 42px; font-size: 10px; }
+.acta-hero, .player-rfaf-hero {
+  background: linear-gradient(135deg, #365477, #293952 60%, #254b73);
+  border: 1px solid #85d3ff35;
+  border-radius: 24px;
+  box-shadow: var(--raised-shadow);
+}
+.acta-hero { padding: 23px 14px; margin: 20px 0 24px; }
+.acta-kicker { color: var(--sky); }
+.acta-team img, .acta-crest-placeholder { width: 70px; height: 70px; border-radius: 18px; box-shadow: 0 5px 15px #0d1b3070; }
+.acta-team strong { font-size: 11px; }
+.acta-team small, .acta-date { color: #c4d4e8; }
+.acta-result > strong { font-size: 38px; font-variant-numeric: tabular-nums; }
+.acta-result > span { color: #a8ead4; background: #268b7226; }
+.acta-panel { padding: 19px 16px; margin-bottom: 18px; }
+.acta-panel-title { border-color: var(--line); padding-bottom: 15px; }
+.acta-panel-title h2 { font-size: 17px; }
+.acta-panel-title > span { background: #85d3ff17; color: var(--sky); }
+.acta-person, .acta-events li, .acta-official, .acta-details > div { border-color: var(--line); }
+.acta-number, .acta-events time { background: #18294080; color: var(--sky); }
+.acta-person { padding: 11px 0; gap: 10px; }
+.acta-person strong { color: var(--text); font-size: 13px; }
+.acta-player-link { color: var(--text); }
+.acta-player-link:active { background: #85d3ff18; }
+.acta-player-avatar { width: 38px; height: 38px; flex-basis: 38px; border: 2px solid #91b8d550; border-radius: 12px; background: #536987; box-shadow: 0 3px 8px #10213960; }
+.acta-player-placeholder { background: linear-gradient(145deg, #536b8c, #30425e); color: #edf7ff; }
+.acta-team-switch button { background: var(--matte); color: #c5d5e8; border: 1px solid var(--line); box-shadow: var(--raised-shadow); min-height: 52px; border-radius: 15px; }
+.acta-team-switch button.active { background: var(--accent); border-color: #85d3ff55; box-shadow: var(--raised-shadow); }
+.acta-selected-team { color: var(--sky); font-size: 13px; }
+.acta-events strong { color: var(--text); }
+.acta-events small, .acta-official small, .acta-official span, .acta-details dt { color: var(--muted); }
+.acta-events li > b { color: var(--sky); background: #85d3ff12; }
+.acta-event-type { color: var(--gold); background: #f2ca7514; }
+.acta-source { color: var(--muted); font-size: 10px; }
+.acta-timeline::before { background: #9ac4e330; }
+.acta-timeline-stamp { background: #19283d; border: 1px solid #99d3ff28; }
+.acta-timeline-player strong { color: var(--text); }
+.acta-timeline .acta-event-note { color: var(--muted); }
+.acta-timeline-score { color: var(--sky); background: #29384f; }
+.acta-timeline-legend { border-color: var(--line); }
+.acta-timeline-legend > span { color: var(--muted); }
+.acta-timeline-icon.normal-goal { color: #63df87; }
+.acta-timeline-icon.own-goal { color: #ff7b88; }
+.acta-timeline-icon.penalty { color: #78bdff; }
+.acta-timeline-player .acta-player-avatar { border-radius: 8px; }
+.acta-timeline-crest { border-radius: 50%; }
+.acta-timeline-crest .acta-crest-placeholder { border-radius: 50%; box-shadow: none; }
+.acta-spinner { border-color: #85d3ff25; border-top-color: var(--sky); }
+.report-heading { background: #85d3ff12; color: var(--sky); border-radius: 10px; }
+.report-text { color: var(--muted); }
+.report-table td { border-color: var(--line); }
+.report-table tr:nth-child(even) { background: #64789112; }
+.report-table td:first-child, .player-rfaf-section .report-table tr:first-child { color: #d2e6fa; }
+.player-rfaf-hero { padding: 26px 20px; gap: 19px; margin: 20px 0 28px; }
+.player-rfaf-hero .acta-player-avatar.large { width: 106px; height: 130px; flex-basis: 106px; border-radius: 20px; border-width: 3px; object-fit: cover; box-shadow: 8px 8px 18px #12233b80; }
+.player-rfaf-hero h1 { font-size: 23px; line-height: 1.25; margin: 10px 0; }
+.player-rfaf-hero span { color: var(--sky); }
+.player-rfaf-hero .acta-player-placeholder { font-size: 30px; display: flex; color: #edf7ff; }
+.player-rfaf-hero p { color: #c5d6e9; line-height: 1.6; font-size: 11px; }
+.player-match-stats { gap: 12px; }
+.player-match-stats > div { background: var(--matte); border: 1px solid var(--line); border-radius: 18px; padding: 21px 12px; box-shadow: var(--raised-shadow); min-height: 102px; }
+.player-match-stats strong { color: var(--text); font-size: 25px; }
+.player-match-stats small { color: var(--muted); font-size: 10px; line-height: 1.5; }
+.player-match-stats .player-stat-featured { background: linear-gradient(145deg, #355c83, #2e456b); border-color: #85d3ff55; }
+.player-stat-featured strong { color: var(--sky); font-size: 34px; }
+.player-stat-context, .player-stat-pending { color: var(--muted); font-size: 11px; }
+.player-stat-section { margin-bottom: 27px; }
+.player-stat-details > summary { color: var(--text); background: var(--matte); border: 1px solid var(--line); border-radius: 15px; min-height: 50px; box-shadow: var(--raised-shadow); }
+.player-profile-refresh { background: #294665; color: white; border: 1px solid var(--line); box-shadow: var(--raised-shadow); bottom: 106px; }
+.round-tabs { padding: 6px 3px 13px; gap: 10px; }
+.round-tabs .round-tab { background: var(--matte); color: #c5d5e8; border: 1px solid var(--line); border-radius: 13px; min-height: 44px; box-shadow: 3px 3px 9px #0e192b90; }
+.round-tabs .round-tab.active { background: var(--accent); border-color: #85d3ff50; box-shadow: 0 5px 12px #0a1b3380; color: white; }
+.round-tab.active:after { background: var(--gold); left: 25px; right: 25px; height: 2px; }
+label { color: #d1e0ef; }
+input, select, textarea { color: var(--text); background: #1d2b40; border: 1px solid #7f9ab938; border-radius: 12px; box-shadow: inset 3px 3px 9px #12203770; }
+input::placeholder, textarea::placeholder { color: var(--muted); }
+.card button, form button { background: var(--accent); color: white; border-radius: 12px; min-height: 44px; box-shadow: 4px 4px 10px #0c1a2e80; }
+.card button[data-delete] { background: #43516a; color: #e1d6dd; }
+.membercard { background: linear-gradient(125deg, #315a82, #243650); border-bottom: 3px solid var(--gold); }
+.membercard small, .membercard p { color: #c8d9e9; }
+#notice { bottom: 106px; background: #304d70; border: 1px solid #a9d4f340; }
+#nav {
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: 12px; right: 12px;
+  max-width: 956px;
+  padding: 9px 8px;
+  background: linear-gradient(135deg, #35435bf5, #202c41fa);
+  border: 1px solid #9dbde52b;
+  border-radius: 23px;
+  box-shadow: 0 10px 28px #071123b0, inset 0 1px #ccdfff0e;
+  backdrop-filter: blur(16px);
+}
+#nav button { color: #b4c4d9; font-size: 10px; padding: 2px; gap: 4px; min-height: 58px; }
+#nav button svg { width: 38px; height: 35px; padding: 7px; border-radius: 11px; }
+#nav button.selected { color: white; }
+#nav button.selected svg { background: var(--accent); color: white; box-shadow: 0 4px 9px #14254180; }
+#nav button.selected:before { top: auto; bottom: -5px; height: 2px; width: 13px; background: var(--gold); border-radius: 3px; }
+@media (min-width: 650px) {
+  #banner { padding: 0 18px; }
+  .team-cover { padding: 32px; min-height: 260px; }
+  .team-cover h1 { font-size: 46px; }
+  .cover-team-name { max-width: 440px; font-size: 13px; }
+  .cover-crest { width: 152px; height: 152px; top: 44px; right: 62px; }
+  .team-cover.compact { min-height: 164px; padding: 26px 32px; }
+  .compact h1 { font-size: 35px; }
+  .compact .cover-crest { width: 98px; height: 98px; right: 64px; }
+  .team-tabs { justify-content: flex-start; }
+  .team-tabs button { min-width: 138px; }
+  .match-teams img, .rival-placeholder { width: 74px; height: 74px; }
+  .fixture-team strong { font-size: 12px !important; }
+  .fixture-venue { font-size: 11px; }
+  .home-matches { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  .club-season-stats > div { padding: 17px; }
+  .club-season-stats strong { font-size: 30px; }
+  .player-rfaf-hero .acta-player-avatar.large { width: 132px; height: 160px; flex-basis: 132px; }
+  .player-rfaf-hero h1 { font-size: 32px; }
+  .acta-team img { width: 86px; height: 86px; }
+  .acta-team strong { font-size: 14px; }
+  #nav { left: 50%; right: auto; width: calc(100% - 36px); transform: translateX(-50%); }
+}
+@media (min-width: 760px) {
+  #calendar-round-panel { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  #calendar-round-panel > .fixture-card { margin-bottom: 0; }
+}
+@media (max-width: 359px) {
+  #header { padding-left: 18px; padding-right: 18px; }
+  .team-cover { padding: 21px 18px; }
+  .team-cover h1 { font-size: 32px; }
+  .cover-crest { width: 70px; height: 70px; right: 9px; top: 65px; }
+  .compact h1 { font-size: 25px; }
+  .compact .cover-crest { width: 58px; height: 58px; right: 12px; top: 45px; }
+  .fixture-card .match-teams { grid-template-columns: minmax(0,1fr) 86px minmax(0,1fr); gap: 6px; }
+  .match-teams img, .rival-placeholder { width: 50px; height: 50px; }
+  .section-label { font-size: 8px; letter-spacing: 0; }
+  .match-status { font-size: 7px; padding: 5px; }
+  .fixture-team strong { font-size: 9px !important; }
+  .player-rfaf-hero { padding: 20px 14px; gap: 13px; }
+  .player-rfaf-hero .acta-player-avatar.large { width: 84px; height: 105px; flex-basis: 84px; }
+  .player-rfaf-hero h1 { font-size: 20px; }
+  .section-heading h2 { font-size: 18px; }
+}
+@media (max-width: 430px) {
+  .acta-timeline-player .acta-player-link { flex-direction: column; align-items: flex-start; gap: 5px; padding: 0; }
+  .acta-timeline-event.home .acta-timeline-player .acta-player-link { flex-direction: column; align-items: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button, a { transition: none; }
+  .acta-spinner { animation-duration: 2.5s; }
+}
