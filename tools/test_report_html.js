@@ -66,3 +66,7 @@ f.reportData={blocks:[],players:[{id:'acta-photo',name:'JUGADOR, PRUEBA',profile
 f.applyResolvedPlayers('2645790',[{name:'JUGADOR, PRUEBA',player_id:'42566',primary:'5000274',url:'https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645790&nueva_ventana=',photo:actaPhoto}]);
 assert.equal(f.reportData.players[0].photo,actaPhoto);assert.equal(f.reportData.players[0].rfaf_id,'42566');
 console.log('Acta resolver photo is applied directly to the internal player');
+
+assert.equal(f.safePlayerPhoto('https://cdn.rfaf-images.example/players/42566.webp'),'https://cdn.rfaf-images.example/players/42566.webp');
+assert.equal(f.safePlayerPhoto('https://127.0.0.1/player.jpg'),'');
+console.log('External HTTPS acta photo CDNs are accepted while local targets are rejected');
