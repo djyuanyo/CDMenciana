@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '22'
       - run: python tools/bundle_account_assets.py
+      - run: python -m unittest discover -s tools -p 'test_google_signin_config.py' -v
       - run: python -m unittest discover -s server/tests -v
       - run: node tools/test_fixtures_ui.js
       - run: npm ci --prefix tools --ignore-scripts --no-audit --no-fund
@@ -67,9 +68,12 @@ jobs:
             chmod 600 "$RUNNER_TEMP/cdm-signing.jks"
             echo "CDM_SIGNING_STORE=$RUNNER_TEMP/cdm-signing.jks" >> "$GITHUB_ENV"
           else
-            echo "::warning::Falta CDM_ANDROID_KEYSTORE_BASE64. La firma debug puede cambiar entre compilaciones; los datos solo se conservan si Android permite actualizar sin desinstalar."
+            echo "::error::Falta CDM_ANDROID_KEYSTORE_BASE64. No se publica una APK con firma aleatoria: se romperían Google Sign-In y las actualizaciones sin borrar datos."
+            exit 1
           fi
       - run: gradle -p android testDebugUnitTest assembleDebug lintDebug
+      - name: Verificar firma Google OAuth antes de publicar APK
+        run: python tools/check_google_signin.py --apk android/app/build/outputs/apk/debug/app-debug.apk
       - uses: actions/upload-artifact@v4
         with:
           name: CDMenciana-APK-pruebas
