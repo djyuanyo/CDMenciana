@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import {
   getAuth, onAuthStateChanged, signInWithEmailAndPassword,
-  createUserWithEmailAndPassword, updateProfile, sendEmailVerification,
+  createUserWithEmailAndPassword, updateProfile,
   sendPasswordResetEmail, reload, signOut, getIdToken,
   GoogleAuthProvider, signInWithPopup
 } from 'firebase/auth';
@@ -50,23 +50,19 @@ if (!window.ClubAuthNative?.request) {
             if (!data.password || data.password.length < 10 || data.password.length > 128) throw Error('La contraseña debe tener entre 10 y 128 caracteres.');
             const { user } = await createUserWithEmailAndPassword(auth, data.email.trim(), data.password);
             await updateProfile(user, { displayName: name });
-            try { await sendEmailVerification(user); }
-            catch { window.ClubAuth?.update(state()); return { ...state(), message: 'Cuenta creada. Puedes reenviar la verificación desde tu cuenta.' }; }
           } else if (action === 'reset') {
             try { await sendPasswordResetEmail(auth, data.email.trim()); }
             catch (error) { if (error.code !== 'auth/user-not-found') throw error; }
           } else if (action === 'logout') await signOut(auth);
-          else if (['verify', 'reload', 'token'].includes(action)) {
+          else if (['reload', 'token'].includes(action)) {
             if (!auth.currentUser) throw Error('Inicia sesión para continuar.');
-            if (action === 'verify') await sendEmailVerification(auth.currentUser);
             if (action === 'reload') await reload(auth.currentUser);
             if (action === 'token') return { ...state(), token: await getIdToken(auth.currentUser, true) };
           } else if (action !== 'state') throw Error('Solicitud no disponible.');
         }
         const result = { ...state(), message: ({
-          register: 'Cuenta creada. Abre el correo de verificación.',
+          register: 'Cuenta creada. Completa tus datos en la app.',
           reset: 'Si existe una cuenta con ese correo, recibirás un enlace para recuperar el acceso.',
-          verify: 'Te hemos enviado un correo de verificación.',
           logout: 'Sesión cerrada.'
         })[action] || '' };
         window.ClubAuth?.update(result);
