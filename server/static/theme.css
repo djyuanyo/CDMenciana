@@ -492,3 +492,5 @@ input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
 .fixture-card .fixture-date { text-align: center; font-size: 12px; line-height: 1.5; color: var(--muted); margin-top: 20px; }
 .admin-back { margin-bottom: 18px; }
 .admin-menu .menu-card small { line-height: 1.5; }
+
+.notification-history-item [hidden]{display:none!important}.notification-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}.notification-actions .account-danger{width:auto;margin-top:0}.notification-history-item [data-notification-cancel-prompt]{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:12px}.notification-history-item .card{margin-top:18px}

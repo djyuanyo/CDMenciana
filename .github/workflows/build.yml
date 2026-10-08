@@ -31,6 +31,7 @@ jobs:
       - run: node tools/test_news_reader.cjs
       - run: node tools/test_favorites.cjs
       - run: node tools/test_notification_panel.cjs
+      - run: node tools/test_scheduled_panel.cjs
       - run: node --test tools/test_news_notifications.cjs tools/test_results.cjs tools/test_custom_notifications.cjs tools/test_notification_service.mjs
       - uses: actions/setup-java@v4
         with:
