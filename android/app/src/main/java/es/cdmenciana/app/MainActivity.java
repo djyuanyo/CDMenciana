@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
     private String base;
     private String publicUserAgent;
     private boolean configuring=false;
+    private FirebaseAccount account;
     private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
     private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
@@ -57,10 +58,10 @@ public class MainActivity extends Activity {
         android.widget.ImageView crest=new android.widget.ImageView(this);crest.setImageResource(es.cdmenciana.app.R.drawable.crest);crest.setScaleType(android.widget.ImageView.ScaleType.FIT_CENTER);hero.addView(crest,new LinearLayout.LayoutParams(dp(68),dp(68)));
         TextView kicker=styledText("CD MENCIANA · TU CLUB",10,tone("#85d3ff","#176495"));kicker.setPadding(0,dp(18),0,dp(12));hero.addView(kicker);
         TextView title=styledText("Conexión del club",28,tone("#ffffff","#182c46"));title.setTypeface(null,android.graphics.Typeface.BOLD);hero.addView(title);
-        TextView intro=styledText("Tu cuenta y las zonas privadas, en un mismo sitio.",13,tone("#c5d6e9","#526780"));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
+        TextView intro=styledText("Conecta los carnets, convocatorias y avisos privados del club.",13,tone("#c5d6e9","#526780"));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
         box.addView(hero,spaced(-1,-2,0,22));
         LinearLayout form=nativeCard();TextView label=styledText("Servidor del club",18,tone("#ffffff","#182c46"));label.setTypeface(null,android.graphics.Typeface.BOLD);form.addView(label);
-        TextView hint=styledText("Introduce la dirección facilitada por el club para acceder a tu cuenta.",13,tone("#b0c0d5","#526780"));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
+        TextView hint=styledText("Introduce la dirección facilitada por el club para sus zonas privadas. Tu cuenta Firebase funciona también en la vista pública.",13,tone("#b0c0d5","#526780"));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
         EditText url=new EditText(this);url.setText(base);url.setHint("https://app.tu-dominio.es");url.setTextSize(14);url.setTextColor(tone("#ffffff","#182c46"));url.setHintTextColor(tone("#b0c0d5","#526780"));url.setBackground(surface(tone("#1d2b40","#f8fbff"),tone("#1d2b40","#f8fbff"),12));url.setBackgroundTintList(null);url.setPadding(dp(14),dp(12),dp(14),dp(12));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);form.addView(url,new LinearLayout.LayoutParams(-1,dp(50)));
         TextView error=styledText("",12,tone("#ffa6b5","#ad2340"));error.setPadding(0,dp(10),0,0);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);form.addView(error);
         Button connect=styledButton("Conectar con el club",true);form.addView(connect,spaced(-1,dp(48),20,0));
@@ -368,13 +369,28 @@ public class MainActivity extends Activity {
         throw new java.io.IOException("Too many redirects");
     }
     private boolean sameOrigin(Uri uri){Uri home=Uri.parse(base.isEmpty()?"https://appassets.androidplatform.net":base);return "https".equals(uri.getScheme())&&home.getHost().equalsIgnoreCase(uri.getHost())&&home.getPort()==uri.getPort();}
+    private final class AccountBridge {
+        @JavascriptInterface public void request(String id,String action,String payload){
+            if(id==null||!id.matches("[a-zA-Z0-9_-]{1,64}")||payload==null||payload.length()>4096)return;
+            runOnUiThread(()->{
+                if(web==null||web.getUrl()==null||!sameOrigin(Uri.parse(web.getUrl()))||account==null)return;
+                try{account.request(id,action,new JSONObject(payload));}catch(Exception ignored){}
+            });
+        }
+    }
     private void load() {
         configuring=false;applyNativeTheme();
+        if(account!=null)account.close();
+        if(web!=null)web.destroy();
         publicUserAgent=WebSettings.getDefaultUserAgent(this);
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(tone("#182335","#edf3fa"));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         web.addJavascriptInterface(new AppearanceBridge(),"AppAppearance");
+        account=new FirebaseAccount(this,(id,data)->runOnUiThread(()->{
+            if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubAuth&&window.ClubAuth.receive("+JSONObject.quote(id)+","+data.toString()+")",null);
+        }));
+        web.addJavascriptInterface(new AccountBridge(),"ClubAuthNative");
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);
         web.setWebViewClient(new WebViewClient(){
@@ -398,5 +414,5 @@ public class MainActivity extends Activity {
         });web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base);
     }
     @Override public void onBackPressed(){if(configuring){load();return;}if(web!=null&&web.canGoBack())web.goBack();else showThemedDialog(new AlertDialog.Builder(this).setMessage("Puedes seguir consultando el club o cerrar la aplicación.").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Conexión",(d,w)->configure()),"¿Salir de la app?");}
-    @Override protected void onDestroy(){if(web!=null)web.destroy();super.onDestroy();}
+    @Override protected void onDestroy(){if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
 }

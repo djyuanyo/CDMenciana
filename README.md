@@ -13,7 +13,9 @@ Primera versión funcional 0.3.0, creada desde cero: aplicación Android con con
 - Escudo original facilitado por el club, sin recrear sus textos.
 - Pruebas del aislamiento de permisos, registro, suspensión y protección CSRF.
 
-La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Para usar cuentas y datos reales, conecta un servidor propio desde Más → Configurar conexión del club; esa interfaz requiere internet. Esta versión NO es una interfaz íntegramente nativa ni incluye notificaciones push, pagos, QR, verificación de correo o recuperación automática por email. La recuperación de contraseña se hace desde la consola del servidor por el administrador, tras verificar la identidad. Estas funciones se pueden incorporar después.
+La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Mi cuenta incorpora Firebase Authentication para correo, Google, verificación de correo y recuperación de contraseña; está conectado al proyecto Firebase `barpro-pos-menciana` con proveedores de correo y Google habilitados. La versión web para Firebase Hosting utiliza la misma interfaz y cuentas. Las zonas privadas y los permisos siguen utilizando el servidor del club desde Más → Configurar conexión del club. Esta versión no incluye notificaciones push, pagos o QR. El acceso antiguo del servidor web conserva la recuperación de contraseña desde la consola por el administrador.
+
+Consulta [docs/FIREBASE.md](docs/FIREBASE.md) para publicar la web en el sitio gratuito `cdmenciana`. El sitio ya está creado; su primera publicación está pendiente.
 
 ## Ejecutar en desarrollo
 
@@ -64,6 +66,14 @@ Fuente oficial: https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=100012
 La parte pública está conectada a los datos reales de la RFAF. `tools/sync_fixtures.py` usa `tools/official_rfaf.py` para consultar el calendario completo, las fechas y los pabellones por jornada y la clasificación de los 16 equipos; guarda únicamente los partidos del CD Menciana en `data/fixtures.json`. El workflow **Actualizar partidos RFAF** programa una actualización cada 30 minutos (GitHub puede retrasar las ejecuciones) y conserva el último conjunto válido si la fuente falla. Se incluye una copia en la APK para usarla sin conexión.
 
 Android obtiene el JSON público de este repositorio al abrir la app o al pulsar Actualizar, con caché local y respaldo incluido. No necesita hosting para estos datos deportivos. La zona privada sigue requiriendo un servidor de cuentas. Las horas no publicadas se muestran por confirmar. Las fechas que solo aparecen en la cabecera del calendario se etiquetan como orientativas. Se verifica el total de goles y partidos con la clasificación antes de reemplazar los datos. Los escudos rivales se cargan de la fuente oficial y el escudo del club se obtiene de la misma fuente oficial.
+
+## Acceso con Firebase 0.20.0
+
+La nueva página de Mi cuenta tiene acceso, registro y recuperación de contraseña con el mismo diseño y ambos modos de color. Google utiliza el selector nativo de cuentas de Android. El SDK mantiene la sesión entre aperturas; las contraseñas no se guardan en JavaScript. La app permite seguir consultando la información pública sin iniciar sesión.
+
+Activa Correo/contraseña y Google en el proyecto del club y añade su `google-services.json` actualizado en `android/app/` antes de compilar la APK. La compilación sin ese archivo es una vista previa y muestra que el acceso no está activado. Configuración, huellas del certificado y conexión opcional con las zonas privadas: [docs/FIREBASE.md](docs/FIREBASE.md).
+
+Firebase valida la identidad; el administrador del club asigna los permisos. El servidor verifica los tokens con Firebase Admin y no vincula automáticamente una cuenta antigua por coincidencia de correo. La cuenta de servicio se guarda únicamente en el servidor.
 
 ## Verificación
 

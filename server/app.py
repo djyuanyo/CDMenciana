@@ -23,6 +23,7 @@ def initialize():
         CREATE TABLE IF NOT EXISTS content(id INTEGER PRIMARY KEY, kind TEXT NOT NULL, audience TEXT NOT NULL, title TEXT NOT NULL, body TEXT NOT NULL, date TEXT NOT NULL, created INTEGER NOT NULL);
         CREATE TABLE IF NOT EXISTS attendance(event_id INTEGER REFERENCES content(id) ON DELETE CASCADE, user_id INTEGER REFERENCES users(id), answer TEXT NOT NULL, PRIMARY KEY(event_id,user_id));
         CREATE TABLE IF NOT EXISTS attempts(key TEXT PRIMARY KEY, count INTEGER NOT NULL, expires INTEGER NOT NULL);
+        CREATE TABLE IF NOT EXISTS firebase_users(project TEXT NOT NULL, uid TEXT NOT NULL, user_id INTEGER UNIQUE NOT NULL REFERENCES users(id), PRIMARY KEY(project,uid));
         ''')
 
 def password_hash(password, salt=None):
@@ -60,7 +61,7 @@ class Handler(BaseHTTPRequestHandler):
             path=self.path.split('?')[0]
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
-                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures-filial.json':'fixtures-filial.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/appearance.js':'appearance.js','/roster-snapshot.js':'roster-snapshot.js','/rfaf_extract.js':'rfaf_extract.js','/app.js':'app.js','/style.css':'style.css','/theme.css':'theme.css','/crest.png':'crest.png'}
+                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures-filial.json':'fixtures-filial.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/appearance.js':'appearance.js','/roster-snapshot.js':'roster-snapshot.js','/rfaf_extract.js':'rfaf_extract.js','/auth.js':'auth.js','/auth.css':'auth.css','/app.js':'app.js','/style.css':'style.css','/theme.css':'theme.css','/crest.png':'crest.png'}
                 if re.fullmatch(r'/crests/[a-f0-9]{16}\.(png|jpg)',path):files[path]=path[1:]
                 if re.fullmatch(r'/players/[a-f0-9]{16}\.webp',path):files[path]=path[1:]
                 if re.fullmatch(r'/actas/[0-9]+\.json',path):files[path]=path[1:]
@@ -80,7 +81,7 @@ class Handler(BaseHTTPRequestHandler):
             with db() as c:
                 u=self.user(c)
                 if path=='/api/me' and not post: return self.respond(200,{'user':public_user(u) if u else None})
-                if path in ('/api/register','/api/login') and post:
+                if path in ('/api/register','/api/login','/api/firebase') and post:
                     # Persistent, bounded per-IP rolling rate limit, including failed attempts.
                     key=self.client_address[0]
                     if os.environ.get('CDM_TRUST_PROXY')=='1':
@@ -89,6 +90,26 @@ class Handler(BaseHTTPRequestHandler):
                     c.execute('DELETE FROM attempts WHERE expires<?',(now,))
                     c.execute('INSERT INTO attempts VALUES(?,1,?) ON CONFLICT(key) DO UPDATE SET count=count+1',(key,now+600)); c.commit()
                     if c.execute('SELECT count FROM attempts WHERE key=?',(key,)).fetchone()[0]>20: raise ApiError(429,'Demasiados intentos. Espera diez minutos.')
+                    if path=='/api/firebase':
+                        from firebase_auth import verify_identity
+                        try:identity=verify_identity(data.get('token'))
+                        except RuntimeError as error:raise ApiError(503,str(error))
+                        except ValueError as error:raise ApiError(401,str(error))
+                        if identity['expires']<=now:raise ApiError(401,'Sesión caducada. Vuelve a iniciar sesión.')
+                        c.execute('BEGIN IMMEDIATE')
+                        row=c.execute('SELECT u.* FROM users u JOIN firebase_users f ON f.user_id=u.id WHERE f.project=? AND f.uid=?',(identity['project'],identity['uid'])).fetchone()
+                        if not row:
+                            if c.execute('SELECT id FROM users WHERE email=?',(identity['email'],)).fetchone():
+                                raise ApiError(409,'Ya existe una cuenta del club con ese correo. Contacta con el club para vincularla.')
+                            cursor=c.execute('INSERT INTO users(name,email,password) VALUES(?,?,?)',(identity['name'],identity['email'],password_hash(secrets.token_urlsafe(48))))
+                            c.execute('INSERT INTO firebase_users(project,uid,user_id) VALUES(?,?,?)',(identity['project'],identity['uid'],cursor.lastrowid))
+                            row=c.execute('SELECT * FROM users WHERE id=?',(cursor.lastrowid,)).fetchone()
+                        token=secrets.token_urlsafe(32)
+                        # Firebase identity never assigns club roles. Re-check approval on every API request.
+                        expiry=min(identity['expires'],now+3600)
+                        c.execute('DELETE FROM sessions WHERE expires<?',(now,))
+                        c.execute('INSERT INTO sessions VALUES(?,?,?)',(hashlib.sha256(token.encode()).hexdigest(),row['id'],expiry))
+                        return self.respond(200,{'user':public_user(row)},cookie=f'cdm={token}; Path=/; HttpOnly; SameSite=Strict; Max-Age={expiry-now}'+('; Secure' if SECURE else ''))
                     email=str(data.get('email','')).strip().lower(); pw=str(data.get('password',''))
                     if not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+',email) or len(email)>254 or not 10<=len(pw)<=128: raise ApiError(400,'Usa un correo válido y una contraseña de 10 a 128 caracteres.')
                     if path=='/api/register':
