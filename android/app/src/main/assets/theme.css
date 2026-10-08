@@ -459,9 +459,9 @@ input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
 :root[data-theme="light"] .dialog-actions button { box-shadow: var(--raised-shadow); }
 @media (max-width: 359px) { .header-actions { gap: 7px; } .header-crest { width: 40px; height: 40px; } }
 /* Native news reader and account administration share the club palette. */
-.news-back{margin:0 0 18px;background:transparent!important;color:var(--text)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+.news-back{margin:0 0 18px;padding:12px 16px;min-height:44px;border-radius:13px;font-family:inherit;font-size:13px;font-weight:700;background:transparent!important;color:var(--text)!important;border:1px solid var(--line)!important;box-shadow:none!important}
 .news-article{max-width:820px;margin:0 auto;padding:24px!important;overflow:hidden}
-.news-article h1{font-size:clamp(24px,5vw,36px);line-height:1.22;margin:18px 0 24px;letter-spacing:-.6px}
+.news-article h1{color:var(--text);font-size:clamp(24px,5vw,36px);line-height:1.22;margin:18px 0 24px;letter-spacing:-.6px}
 .news-article-cover{width:100%;max-height:460px;object-fit:cover;border-radius:18px;margin-bottom:18px}
 .news-article-content{font-size:16px;line-height:1.8;overflow-wrap:anywhere}
 .news-article-content p{margin:0 0 20px;color:inherit;white-space:pre-line}

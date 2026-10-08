@@ -68,6 +68,7 @@ def news_article(html, url):
         cls=node.attrs.get('class','').split()
         if node.tag in ('script','style','nav','footer','aside','header','form','button') or any(c in cls for c in ('news-meta','article-meta','related-news','news-card','news-lead','breadcrumbs','share-buttons','article-header','news-detail-header')):return
         value=text(node)
+        if node.tag in ('h2','h3','h4') and value.lower()=='sigue la actualidad':return
         if node.tag in ('p','h2','h3','h4','blockquote'):
             if value:blocks.append(dict(kind='paragraph' if node.tag=='p' else 'quote' if node.tag=='blockquote' else 'heading',text=value))
             for img in node.find('img'):image(img)

@@ -44,9 +44,19 @@ Sin ese archivo, la compilación sirve como vista previa y muestra claramente qu
 
 Las huellas de firma de la APK instalada deben coincidir con las registradas en Firebase. Las APK que compila GitHub Actions con otro certificado debug necesitan su propia huella o deben firmarse con el certificado conservado para las entregas.
 
-## Conectar las zonas privadas del club
+## Roles y panel de control desde 0.21.0
 
-El registro y el inicio de sesión Android no necesitan el servidor Python. Los carnets, roles, convocatorias y administración siguen utilizando el servidor del club y requieren aprobación del administrador.
+La APK y Firebase Hosting utilizan la colección **clubUsers** de Cloud Firestore. No necesitan el servidor Python para asignar roles. Cada cuenta crea su perfil al acceder a esta versión y comienza como aficionado. El panel ofrece búsqueda por nombre/correo y asignación de aficionado, socio, jugador o ambos. El administrador designado es exclusivamente la identidad Firebase con correo **juanjocarrillo7@gmail.com verificado**. Esta condición se comprueba también en las reglas del servidor.
+
+Las cuentas de Firebase Authentication que aún no hayan abierto esta versión no aparecen en clubUsers. Al cerrar sesión se eliminan de memoria los perfiles y el listado; los permisos persistentes permanecen en Firestore.
+
+Activación: abrir Cloud Firestore, crear la base **(default)** si no existe e integrar el bloque **clubUsers** de `firestore.rules` con las reglas existentes. El proyecto también contiene el POS: hay que conservar sus reglas y evitar un comodín que permita acceso a clubUsers. El archivo entregado es una plantilla aislada y **no debe sustituir sin revisión las reglas de una base compartida**. La publicación de Hosting sigue utilizando `firebase deploy --only hosting`; firebase.json no despliega reglas automáticamente.
+
+Las pruebas de CI ejecutan el emulador de Firestore y comprueban que solo el administrador verificado puede enumerar usuarios y cambiar sus roles. Rechazan la escalada de permisos, la suplantación por correo, la consulta anónima, el borrado y el acceso a otras colecciones.
+
+## Servidor Python opcional del club
+
+El servidor antiguo mantiene sus carnets, cuotas, convocatorias y administración de contenidos en SQLite. Esos datos no se migran automáticamente a Firestore. Los roles de la interfaz antigua del servidor y los de la APK/Hosting son almacenes distintos. La cuenta verificada del administrador designado también se reconoce en ese servidor cuando su proyecto Firebase es barpro-pos-menciana.
 
 En el servidor instala `server/requirements.txt` y configura:
 

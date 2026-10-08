@@ -1,20 +1,56 @@
 {
   "source": "https://cdmenciana.es/noticias/",
-  "updated_at": "2026-10-08T06:14:50.117842+00:00",
+  "updated_at": "2026-10-08T11:01:02.440169+00:00",
   "news": [
     {
       "title": "Tres expulsiones y un duro golpe al primer equipo en Vista Alegre",
       "date": "2026-10-05",
       "category": "Primer equipo",
       "url": "https://cdmenciana.es/noticias/menciana-vista-alegre-derrota-expulsiones-polemica-arbitral/",
-      "image": "https://cms.cdmenciana.es/media/80ff36e4-844a-4e8c-9398-13779df67d15/web"
+      "image": "https://cms.cdmenciana.es/media/80ff36e4-844a-4e8c-9398-13779df67d15/web",
+      "content": [
+        {
+          "kind": "paragraph",
+          "text": "El Ravi Obras y Servicios CD Menciana sufrió una contundente derrota por 11-4 ante el filial del Córdoba en Vista Alegre. Keko, Borrallo, Tetur e Isaac firmaron los cuatro tantos mencianos en una jornada amarga, marcada por tres expulsiones y una actuación arbitral que dejó un profundo malestar en nuestro equipo."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Desde el club consideramos que el criterio arbitral fue desigual y que las decisiones adoptadas desestabilizaron al Menciana. La actuación de los colegiados merece una crítica clara: a quienes corresponde dirigir el encuentro se les debe exigir un criterio coherente y el mismo nivel de exigencia para ambos equipos. Esa es la principal queja que nos deja este partido."
+        },
+        {
+          "kind": "paragraph",
+          "text": "También toca asumir nuestra responsabilidad. El equipo no supo gestionar la frustración, perdió el foco y no consiguió volver a entrar mentalmente en el encuentro. Las protestas y el desconcierto terminaron pesando demasiado sobre un grupo incapaz de recuperar la serenidad necesaria para competir. El malestar con el arbitraje no puede impedirnos reconocer ese aspecto y trabajar para corregirlo."
+        },
+        {
+          "kind": "paragraph",
+          "text": "La crítica a los colegiados tampoco resta mérito al filial blanquiverde, al que felicitamos por su justa victoria. Para el Menciana queda una derrota dolorosa y una lección que debe servir para crecer: mantener la cabeza dentro del partido, incluso cuando las decisiones y las circunstancias resultan adversas."
+        }
+      ]
     },
     {
       "title": "El derbi se queda en casa: Juanbo y Mara sellan el triunfo ante el Santaella",
       "date": "2026-10-03",
       "category": "Primer equipo",
       "url": "https://cdmenciana.es/noticias/victoria-derbi-cd-santaella-2-0/",
-      "image": "https://cms.cdmenciana.es/media/bf11d2db-fe97-4fb6-a952-cb7337fba035/thumb"
+      "image": "https://cms.cdmenciana.es/media/bf11d2db-fe97-4fb6-a952-cb7337fba035/thumb",
+      "content": [
+        {
+          "kind": "paragraph",
+          "text": "El primer equipo, patrocinado por RAVI Obras y Servicios, sumó una nueva victoria en casa tras imponerse por 2-0 al CD Santaella en un derbi provincial marcado por el trabajo y la seriedad del conjunto menciano."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Los tantos de Juanbo y Mara, ambos en la segunda mitad, resolvieron el encuentro y permitieron sumar tres puntos más en este arranque liguero. El equipo completó una sólida actuación y mantuvo su portería a cero."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Con este triunfo, nuestros jugadores mantienen las buenas sensaciones de las primeras jornadas y afrontan con confianza el siguiente compromiso."
+        },
+        {
+          "kind": "paragraph",
+          "text": "El próximo domingo, el primer equipo visitará al Córdoba Patrimonio de la Humanidad B en el Palacio de Vista Alegre, donde buscará dar continuidad a este buen inicio de competición."
+        }
+      ]
     }
   ]
 }

@@ -26,6 +26,7 @@ jobs:
       - run: node tools/test_auth.js
       - run: node tools/test_web_auth.cjs
       - run: node tools/test_club_access.cjs
+      - run: node tools/test_news_reader.cjs
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
