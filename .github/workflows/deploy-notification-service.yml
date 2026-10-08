@@ -37,6 +37,7 @@ jobs:
           umask 077
           SECRET_FILE="$secret_file" node -e 'require("node:fs").writeFileSync(process.env.SECRET_FILE,JSON.stringify({FIREBASE_SERVICE_ACCOUNT:process.env.FIREBASE_SERVICE_ACCOUNT,GITHUB_IMAGE_TOKEN:process.env.GITHUB_IMAGE_TOKEN}))'
           cd notification-service
+          SECRET_FILE="$secret_file" node bootstrap.mjs
           npx --no-install wrangler deploy --secrets-file "$secret_file" > "$RUNNER_TEMP/club-worker-deploy.log" 2>&1 || { echo 'No se pudo desplegar el servicio. Revisa la cuenta y los permisos de Cloudflare.'; exit 1; }
           DEPLOY_LOG="$RUNNER_TEMP/club-worker-deploy.log" node publish-config.mjs
       - name: Publicar dirección del servicio en la app
