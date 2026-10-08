@@ -27,6 +27,19 @@ La comprobación automatizada cubre el SDK web, los límites de aprobación, rec
 
 La pantalla de **Mi cuenta** permite registro por nombre, correo y contraseña, acceso con Google, recuperación de contraseña, verificación de correo y cierre de sesión. Firebase Authentication mantiene la sesión Android entre aperturas; la interfaz no guarda contraseñas, tokens ni sesiones en almacenamiento web. Google utiliza Credential Manager, fuera del WebView.
 
+## Incidencia Google Sign-In en la APK 0.32.0 (octubre 2026)
+
+La APK de prueba 0.32.0 distribuida el 8 de octubre se firmó con una clave efímera de GitHub Actions; su certificado **no coincide** con las huellas históricas que se documentaban aquí. Se ha leído la firma directamente del APK enviado:
+
+- SHA-1: `67:29:FE:7D:AA:A8:85:14:1E:A0:44:4E:9A:D4:11:5D:E9:81:24:50`
+- SHA-256: `11:3A:68:1C:84:8C:FC:22:83:47:9D:31:31:B9:08:8F:D7:D7:15:91:1B:79:59:7A:EC:F8:BE:C3:14:B6:D0:EC`
+
+**Solución inmediata para esa APK concreta:** Firebase Console → Proyecto `barpro-pos-menciana` → Configuración del proyecto → General → Tus aplicaciones → Android `es.cdmenciana.app` → Añadir huella digital. Registra la SHA-1 anterior y, preferiblemente, la SHA-256. Comprueba que el proveedor Google sigue habilitado en Authentication. La autorización depende de que Firebase cree el cliente OAuth para exactamente ese certificado. No hay que desinstalar la APK para registrar huellas. Si la APK instalada es otra compilación, consulta *su* firma: las huellas de aquí solo valen para esta compilación.
+
+**Solución permanente:** recuperar la clave de firma original que coincide con una huella registrada, o crear una clave dedicada, registrarla en Firebase y conservarla de forma segura. Cargar su base64 exclusivamente como secreto GitHub Actions `CDM_ANDROID_KEYSTORE_BASE64`. La configuración debug actual espera alias `androiddebugkey`, contraseña del almacén `android` y contraseña de la clave `android`. Después de registrar el certificado, descargar nuevamente `google-services.json` desde Firebase y reemplazar `android/app/google-services.json`. Los nuevos builds validan que el certificado real del APK figura como cliente OAuth Android en ese JSON; si no coinciden, CI **no publica** la APK. Así se evita repetir el error, sin filtrar claves privadas.
+
+**Muy importante:** Android solo conserva datos locales al instalar por encima de una app firmada con la **misma** clave y el mismo identificador. Si la antigua y la nueva firma difieren, no forzar una desinstalación sin respaldar los datos. Registrar una nueva SHA en Firebase restaura la autorización de Google para esa firma, pero no permite actualizar sobre APK anteriores firmadas con otro certificado.
+
 ## Activar el proyecto Android
 
 1. Crea o selecciona el proyecto del club en https://console.firebase.google.com/.
