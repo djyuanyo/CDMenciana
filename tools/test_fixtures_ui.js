@@ -62,9 +62,10 @@ f.reportSide=1;const awayReport=f.report('2645766');assert(awayReport.includes('
 console.log('Structured lineups, goal minutes, referee roles, cards and both club crests verified');
 
 const events=f.reportEvents(report);
+assert(f.teams.infantil&&f.teams.infantil.group==='Grupo B'&&f.teams.infantil.filename==='fixtures-infantil.json');
 assert.equal(events.length,11);
-assert.deepEqual(Array.from(events,e=>e.minute),["38'","36'","33'","27'","27'","21'","18'","16'","16'","13'","5'"]);
-assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','goal','card','goal','card','card','card','card','goal']);
+assert.deepEqual(Array.from(events,e=>e.minute),["5'","13'","16'","16'","18'","21'","27'","27'","33'","36'","38'"]);
+assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','card','card','goal','goal','card','card','card','goal']);
 assert.equal(events.find(e=>e.type==='Gol en propia puerta').side,1,'An own goal must carry its author’s team crest');
 assert.equal(events.find(e=>e.name==='AGUILERA CABALLERO, RAFAEL').side,1,'Cards for staff also retain the team');
 const timeline=f.reportTimeline(report,match);
@@ -75,7 +76,7 @@ assert(!timeline.includes(report.teams[1].name+'</small>'));
 assert(timeline.includes('own-goal'));
 assert.equal((timeline.match(/acta-timeline-score/g)||[]).length,4);
 const unusual={goals:[{minute:"20+2'",name:'Añadido',type:'Gol',side:0},{minute:"20'",name:'Antes',type:'Gol',side:1},{minute:'',name:'Pendiente',type:'Gol',side:-1}],teams:[{cards:[{minute:"3'",type:'Tarjeta roja',name:'Roja'},{minute:"20+1'",type:'Segunda amarilla',name:'Expulsado'}]},{cards:[]}]};
-assert.deepEqual(Array.from(f.reportEvents(unusual),e=>e.name),['Añadido','Expulsado','Antes','Roja','Pendiente']);
+assert.deepEqual(Array.from(f.reportEvents(unusual),e=>e.name),['Roja','Antes','Expulsado','Añadido','Pendiente']);
 assert(f.reportEventIcon({kind:'card',type:'Segunda amarilla'}).includes('acta-card double'));
 assert(f.reportEventIcon({kind:'card',type:'Tarjeta roja'}).includes('acta-card red'));
 const fallback=f.reportModel({blocks:[{kind:'table',rows:[['Local','','Visitante'],['','2 - 1','']]},{kind:'heading',text:'Goles'},{kind:'table',rows:[['Gol · 1 - 0',"(5') Jugador desconocido"],['Gol en propia puerta · 2 - 0',"(6') Otro jugador"],['Gol de penalti · 2 - 1',"(7') Rival"]]}]},{home:'Local',away:'Visitante'});

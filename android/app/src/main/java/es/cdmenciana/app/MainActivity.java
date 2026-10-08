@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String getTheme(){return getPreferences(MODE_PRIVATE).getString("theme","dark");}
         @JavascriptInterface public String getTeam(){return getPreferences(MODE_PRIVATE).getString("team","first");}
         @JavascriptInterface public void setTheme(String value){if(!"dark".equals(value)&&!"light".equals(value))return;getPreferences(MODE_PRIVATE).edit().putString("theme",value).apply();runOnUiThread(()->applyNativeTheme());}
-        @JavascriptInterface public void setTeam(String value){if("first".equals(value)||"filial".equals(value))getPreferences(MODE_PRIVATE).edit().putString("team",value).apply();}
+        @JavascriptInterface public void setTeam(String value){if("first".equals(value)||"filial".equals(value)||"infantil".equals(value))getPreferences(MODE_PRIVATE).edit().putString("team",value).apply();}
     }
     private int dp(int value){return Math.round(value*getResources().getDisplayMetrics().density);}
     private TextView styledText(String text,int size,int color){TextView view=new TextView(this);view.setText(text);view.setTextSize(size);view.setTextColor(color);view.setLineSpacing(dp(3),1f);return view;}

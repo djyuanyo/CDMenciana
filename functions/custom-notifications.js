@@ -1,8 +1,8 @@
 'use strict';
 const {createHash}=require('node:crypto');
 const ADMIN='ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',EMAIL='juanjocarrillo7@gmail.com';
-const TEAMS={first:'2137495',filial:'48536795'};
-function validRequest(v){return v.createdBy===ADMIN&&['all','first','filial'].includes(v.teamKey)&&typeof v.title==='string'&&v.title.trim().length>0&&v.title.length<=100&&typeof v.body==='string'&&v.body.trim().length>0&&v.body.length<=500&&typeof v.createdAt?.toMillis==='function'&&(v.scheduledAt===undefined||typeof v.scheduledAt?.toMillis==='function')&&(v.imageUrl===undefined||validImage(v.imageUrl))&&(v.newsSlug===undefined||/^[a-z0-9][a-z0-9-]{0,199}$/.test(v.newsSlug));}
+const TEAMS={first:'2137495',filial:'48536795',infantil:'34369965'};
+function validRequest(v){return v.createdBy===ADMIN&&['all','first','filial','infantil'].includes(v.teamKey)&&typeof v.title==='string'&&v.title.trim().length>0&&v.title.length<=100&&typeof v.body==='string'&&v.body.trim().length>0&&v.body.length<=500&&typeof v.createdAt?.toMillis==='function'&&(v.scheduledAt===undefined||typeof v.scheduledAt?.toMillis==='function')&&(v.imageUrl===undefined||validImage(v.imageUrl))&&(v.newsSlug===undefined||/^[a-z0-9][a-z0-9-]{0,199}$/.test(v.newsSlug));}
 function validImage(url){return typeof url==='string'&&/^https:\/\/cms\.cdmenciana\.es\/media\/[a-f0-9-]{36}\/(web|thumb)$/.test(url)||url===''||typeof url==='string'&&/^https:\/\/raw\.githubusercontent\.com\/djyuanyo\/CDMenciana\/main\/notification-images\/[a-f0-9]{32}\.jpg$/.test(url);}
 function subscribed(v,rows){return v.teamKey==='all'||rows.some(f=>f.teamKey===v.teamKey&&f.teamId===TEAMS[v.teamKey]);}
 async function processCustom({db,auth,messaging,Timestamp,now=Date.now,requestId,deviceDocs,finalize=true}){

@@ -1,5 +1,8 @@
 name: Activar envío directo en Cloudflare
 on:
+  push:
+    branches: [main]
+    paths: ['notification-service/**', 'functions/custom-notifications.js', '.github/workflows/deploy-notification-service.yml']
   workflow_dispatch:
 permissions:
   contents: write

@@ -57,7 +57,7 @@ Para activar las cuentas, abre Más → Configurar conexión del club e introduc
 
 El workflow **Verificar y compilar APK** se ejecuta al subir a `main`, en pull requests y manualmente. Ejecuta las pruebas del servidor, `assembleDebug` y `lintDebug` y publica el artefacto `CDMenciana-APK-pruebas` durante 30 días. Descarga y descomprime ese ZIP desde Actions para instalar `app-debug.apk` en Android 8 o superior.
 
-Es una APK de pruebas con firma debug; para distribuir versiones actualizables habrá que crear y conservar una clave de firma release. Nunca subir esa clave al repositorio. Para compilación local: JDK 17, Android SDK 35 y Gradle 8.9; ejecutar `gradle -p android assembleDebug lintDebug`.
+Para conservar favoritos, el modo claro/oscuro y los avisos activos/desactivados tras una actualización, instala la nueva APK **encima** de la anterior (sin desinstalar), usando el mismo `applicationId` y **la misma clave de firma**. Los favoritos se guardan en Firebase y las preferencias visuales y de notificaciones, en Android. La opción `CDM_ANDROID_KEYSTORE_BASE64` permite pasar a GitHub Actions (como secreto, nunca en el repositorio) el keystore con el que se firmó la versión instalada; debe ser una clave válida con alias `androiddebugkey` y contraseñas `android` para la configuración debug actual. Sin dicho secreto, las APK de distintos runners pueden llevar firmas incompatibles y Android obligará a desinstalar, lo que elimina los datos locales. Para compilación local: JDK 17, Android SDK 35 y Gradle 8.9; `gradle -p android assembleDebug lintDebug`.
 
 ## Datos deportivos
 

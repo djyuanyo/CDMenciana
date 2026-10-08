@@ -1,6 +1,6 @@
 'use strict';
 const {createHash}=require('node:crypto');
-const GROUPS={first:'fixtures.json',filial:'fixtures-filial.json'};
+const GROUPS={first:'fixtures.json',filial:'fixtures-filial.json',infantil:'fixtures-infantil.json'};
 function teamId(url){try{const u=new URL(url),id=u.searchParams.get('Codigo_Equipo');return ['rfaf.es','www.rfaf.es'].includes(u.hostname)&&/^\d{1,12}$/.test(id||'')?id:'';}catch{return '';}}
 function results(key,feed){
  if(!GROUPS[key]||feed.team_key!==key||!Array.isArray(feed.round_matches)||!Number.isFinite(Date.parse(feed.updated_at)))throw Error('Invalid or stale result feed');
@@ -16,13 +16,13 @@ function results(key,feed){
 }
 function transitions(previous,rows){if(!previous)return [];return rows.filter(m=>m.final&&Object.hasOwn(previous,m.id)&&previous[m.id]===false);}
 function eventId(key,season,id){return createHash('sha256').update(key+'|'+season+'|'+id).digest('hex');}
-const CLUB_TEAMS={first:'2137495',filial:'48536795'};
+const CLUB_TEAMS={first:'2137495',filial:'48536795',infantil:'34369965'};
 function eligible(event,favorite,device){return favorite.teamId===CLUB_TEAMS[favorite.teamKey]&&favorite.teamKey===event.teamKey&&[event.homeId,event.awayId].includes(favorite.teamId)&&Number.isFinite(Date.parse(favorite.createdAt))&&Date.parse(favorite.createdAt)<=event.createdAt.toMillis()&&device.enabled===true&&device.uid===favorite.uid&&typeof device.token==='string'&&device.token.length>=20&&device.updatedAt?.toMillis()<=event.createdAt.toMillis();}
 function payload(event,uid,token){return {token,data:{uid,eventId:event.eventId,teamKey:event.teamKey,acta:event.acta,title:'Final del partido',body:event.home+' '+event.homeScore+' – '+event.awayScore+' '+event.away},android:{priority:'high',ttl:3600000}};}
 async function pollResults({db,auth,messaging,fetchFeed,Timestamp,now=Date.now}){
  const currentTime=now();
  for(const [teamKey,file] of Object.entries(GROUPS)){
-  const feed=await fetchFeed(file),rows=results(teamKey,feed),feedTime=Date.parse(feed.updated_at),stateRef=db.collection('clubResultState').doc(teamKey);
+  let feed;try{feed=await fetchFeed(file);}catch(error){if(teamKey==='infantil'){console.warn('Los datos del Infantil aún no están publicados.');continue;}throw error;}if(teamKey==='infantil'&&feed.team_key!=='infantil'){console.warn('Categoría Infantil: se espera la fuente oficial correcta.');continue;}const rows=results(teamKey,feed),feedTime=Date.parse(feed.updated_at),stateRef=db.collection('clubResultState').doc(teamKey);
   await db.runTransaction(async tx=>{
    const snapshot=await tx.get(stateRef),previous=snapshot.exists?snapshot.data():null;
    if(previous&&feedTime<=previous.feedTime)return;

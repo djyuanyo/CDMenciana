@@ -2,7 +2,7 @@ name: Actualizar partidos RFAF
 on:
   push:
     branches: [main]
-    paths: ['tools/*.py', '.github/workflows/sync-fixtures.yml']
+    paths: ['tools/*.py', '.github/workflows/sync-fixtures.yml', 'server/static/fixtures.js']
   schedule:
     - cron: '7,37 * * * *'
   workflow_dispatch:

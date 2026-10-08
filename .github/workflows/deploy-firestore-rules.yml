@@ -1,0 +1,32 @@
+name: Publicar reglas de Firebase
+on:
+  push:
+    branches: [main]
+    paths: ['firestore.rules', 'firebase.json', '.github/workflows/deploy-firestore-rules.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Preparar credenciales privadas
+        env:
+          CDM_FIREBASE_JSON: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          if [ -z "$CDM_FIREBASE_JSON" ]; then
+            echo "::error::Configura CDM_FIREBASE_SERVICE_ACCOUNT para publicar reglas sin exposición de credenciales."
+            exit 1
+          fi
+          printf '%s' "$CDM_FIREBASE_JSON" > "$RUNNER_TEMP/cdm-firebase-account.json"
+          chmod 600 "$RUNNER_TEMP/cdm-firebase-account.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/cdm-firebase-account.json" >> "$GITHUB_ENV"
+      - name: Publicar solo reglas Firestore
+        run: |
+          npm install --global firebase-tools@15 --no-audit --no-fund
+          firebase deploy --only firestore:rules --project barpro-pos-menciana --non-interactive

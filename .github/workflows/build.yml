@@ -18,6 +18,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python tools/bundle_account_assets.py
       - run: python -m unittest discover -s server/tests -v
       - run: node tools/test_fixtures_ui.js
       - run: npm ci --prefix tools --ignore-scripts --no-audit --no-fund
@@ -55,6 +56,19 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
+      - run: python tools/bundle_account_assets.py
+      - name: Restaurar firma Android estable
+        env:
+          CDM_KEYSTORE_B64: ${{ secrets.CDM_ANDROID_KEYSTORE_BASE64 }}
+        shell: bash
+        run: |
+          if [ -n "$CDM_KEYSTORE_B64" ]; then
+            printf '%s' "$CDM_KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/cdm-signing.jks"
+            chmod 600 "$RUNNER_TEMP/cdm-signing.jks"
+            echo "CDM_SIGNING_STORE=$RUNNER_TEMP/cdm-signing.jks" >> "$GITHUB_ENV"
+          else
+            echo "::warning::Falta CDM_ANDROID_KEYSTORE_BASE64. La firma debug puede cambiar entre compilaciones; los datos solo se conservan si Android permite actualizar sin desinstalar."
+          fi
       - run: gradle -p android testDebugUnitTest assembleDebug lintDebug
       - uses: actions/upload-artifact@v4
         with:
