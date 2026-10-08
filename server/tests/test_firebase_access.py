@@ -53,6 +53,12 @@ class FirebaseAccessTest(unittest.TestCase):
         with app.db() as c:self.assertEqual(c.execute('SELECT COUNT(*) FROM users').fetchone()[0],0)
     def test_no_project_is_an_explicit_unconfigured_state(self):
         with patch.dict(os.environ,{'FIREBASE_PROJECT_ID':''}):self.assertEqual(self.call({'token':'x'})[0],503)
+    def test_designated_verified_owner_becomes_admin_only_in_club_project(self):
+        status,data,_=self.sign_in(dict(self.identity,project='barpro-pos-menciana',email='juanjocarrillo7@gmail.com'))
+        self.assertEqual(status,200);self.assertEqual(data['user']['admin'],1);self.assertEqual(data['user']['active'],1)
+        with app.db() as c:c.execute('DELETE FROM firebase_users');c.execute('DELETE FROM sessions');c.execute('DELETE FROM users')
+        _,foreign,_=self.sign_in(dict(self.identity,project='foreign-project',email='juanjocarrillo7@gmail.com'))
+        self.assertEqual(foreign['user']['admin'],0)
 
 class FirebaseVerificationTest(unittest.TestCase):
     def test_admin_verifies_revocation_and_rejects_unverified_or_wrong_project(self):

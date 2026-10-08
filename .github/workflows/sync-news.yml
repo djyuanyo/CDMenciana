@@ -6,6 +6,8 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+  pull_request:
+    paths: ['tools/sync_news.py', 'tools/club_content.py', '.github/workflows/sync-news.yml']
 permissions:
   contents: write
 concurrency:
@@ -20,7 +22,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python tools/sync_news.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Noticias-completas
+          path: data/news.json
+          retention-days: 7
       - name: Guardar noticias actualizadas
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

@@ -25,6 +25,13 @@ jobs:
       - run: node tools/test_roster_identity.js
       - run: node tools/test_auth.js
       - run: node tools/test_web_auth.cjs
+      - run: node tools/test_club_access.cjs
+      - run: node tools/test_news_reader.cjs
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: tools/node_modules/.bin/firebase emulators:exec --only firestore --config firebase.test.json --project demo-cdmenciana 'node tools/test_firestore_rules.cjs'
       - run: npm ci --prefix hosting --no-audit --no-fund
       - run: npm run build --prefix hosting
   android:

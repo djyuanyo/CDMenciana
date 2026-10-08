@@ -1,7 +1,7 @@
 import sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from club_content import scorers,roster,news
+from club_content import scorers,roster,news,news_article
 class ClubContentTests(unittest.TestCase):
     def test_goals_penalties_and_unpublished_average(self):
         html='<table class="table-hover"><tr><td>JUGADOR</td><td>Equipo</td><td>Grupo 17</td><td>4</td><td>4 (1 P)</td><td>1,0000</td></tr><tr><td>OTRO</td><td>Otro equipo</td><td>Grupo 17</td><td>0</td><td>2</td><td></td></tr></table>'
@@ -31,4 +31,13 @@ class ClubContentTests(unittest.TestCase):
         self.assertEqual([],news('<h1>Noticias</h1>'))
     def test_missing_roster_rejected(self):
         with self.assertRaises(ValueError):roster('<h1>Error</h1>')
+    def test_internal_article_preserves_order_without_navigation_or_scripts(self):
+        html='<main><nav><p>Menú</p></nav><article><h1>Título</h1><div class="prose"><p>Texto <strong>completo</strong> &amp; real.</p><h2>La segunda parte</h2><ul><li>Primero</li><li>Segundo</li></ul><figure><img src="/images/foto.webp"><figcaption>Foto del club</figcaption></figure><p>Final.</p><script>alert(1)</script></div><aside><p>Otra noticia</p></aside></article></main>'
+        blocks=news_article(html,'https://cdmenciana.es/noticias/partido/')
+        self.assertEqual(['paragraph','heading','list','image','paragraph'],[b['kind'] for b in blocks])
+        self.assertEqual('Texto completo & real.',blocks[0]['text'])
+        self.assertEqual('https://cdmenciana.es/images/foto.webp',blocks[3]['src'])
+        self.assertEqual('Foto del club',blocks[3]['caption'])
+    def test_missing_article_text_is_rejected(self):
+        with self.assertRaises(ValueError):news_article('<main><h1>Error</h1></main>','https://cdmenciana.es/noticias/fallo/')
 if __name__=='__main__':unittest.main()
