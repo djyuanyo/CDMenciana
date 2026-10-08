@@ -1,33 +1,69 @@
 rules_version = '2';
 service cloud.firestore {
-  match /databases/{database}/documents {
-    function clubAdmin() {
-      return request.auth != null
-        && request.auth.token.email_verified == true
-        && request.auth.token.email.lower() == 'juanjocarrillo7@gmail.com';
-    }
-    function ownProfile(uid) { return request.auth != null && request.auth.uid == uid; }
-    function validProfile(data) {
-      return data.keys().hasAll(['name', 'email', 'role'])
-        && data.keys().hasOnly(['name', 'email', 'role'])
-        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
-        && data.email is string && data.email.size() <= 254
-        && data.role in ['fan', 'member', 'player', 'member_player'];
-    }
-    // This collection is separate from the existing POS application.
-    match /clubUsers/{uid} {
-      allow get: if ownProfile(uid) || clubAdmin();
-      allow list: if clubAdmin();
-      allow create: if ownProfile(uid) && validProfile(request.resource.data)
-        && request.resource.data.email == request.auth.token.email
-        && request.resource.data.role == 'fan';
-      allow update: if validProfile(request.resource.data) && (
-        (clubAdmin() && request.auth.uid != uid
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['role']))
-        || (ownProfile(uid)
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'email'])
-          && request.resource.data.email == request.auth.token.email));
-      allow delete: if false;
-    }
+ match /databases/{database}/documents {
+  function clubAdmin() { return request.auth != null && request.auth.uid == 'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2' && request.auth.token.email.lower() == 'juanjocarrillo7@gmail.com' && !deleted(request.auth.uid); }
+  function deleted(uid) { return exists(/databases/$(database)/documents/clubDeletedAccounts/$(uid)); }
+  function deleting(uid) { return existsAfter(/databases/$(database)/documents/clubDeletedAccounts/$(uid)); }
+  function recentLogin() { return request.auth != null && request.auth.token.auth_time >= request.time.toMillis() / 1000 - 300; }
+  function ownProfile(uid) { return request.auth != null && request.auth.uid == uid; }
+  function validBirthday(value) {
+   let parts=value.split('-');
+   let y=int(parts[0]); let m=int(parts[1]); let d=int(parts[2]);
+   let birthday=timestamp.date(y,m,d);
+   return value.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}') && y>=1900
+    && birthday.year()==y && birthday.month()==m && birthday.day()==d && birthday <= request.time;
   }
+  function validProfile(data) {
+   return data.keys().hasAll(['name','email','role','registrationType','teamRole','memberNumber','category','birthDate','registrationComplete'])
+    && data.keys().hasOnly(['name','email','role','registrationType','teamRole','memberNumber','category','birthDate','registrationComplete'])
+    && data.name is string && data.name.size() >= 2 && data.name.size() <= 100
+    && data.email is string && data.email.size() <= 254
+    && data.role in ['fan','member','player','member_player'] && data.registrationComplete == 'true'
+    && data.memberNumber is string && data.category is string && data.birthDate is string && data.teamRole is string
+    && ((data.registrationType=='fan' && data.memberNumber=='' && data.category=='' && data.birthDate=='' && data.teamRole=='')
+     || (data.registrationType=='member' && data.memberNumber.matches('[0-9]{1,12}') && data.category=='' && data.birthDate=='' && data.teamRole=='')
+     || (data.registrationType=='team' && data.memberNumber==''
+      && data.category in ['Escuela Biberón','Escuela Benjamín','Escuela Alevín','Infantil','Cadete','Filial Senior','Primer Equipo Senior']
+      && ((data.teamRole=='staff' && data.birthDate=='') || (data.teamRole=='player' && validBirthday(data.birthDate)))));
+  }
+  match /clubUsers/{uid} {
+   allow get: if (ownProfile(uid) && !deleted(uid)) || clubAdmin();
+   allow list: if clubAdmin();
+   allow create: if ownProfile(uid) && !deleted(uid) && validProfile(request.resource.data) && request.resource.data.email==request.auth.token.email && request.resource.data.role=='fan';
+   allow update: if !deleted(uid) && validProfile(request.resource.data) && (
+    (clubAdmin() && request.auth.uid!=uid && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['role']))
+    || (ownProfile(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name','email','registrationType','teamRole','memberNumber','category','birthDate','registrationComplete']) && request.resource.data.email==request.auth.token.email));
+   allow delete: if ownProfile(uid) && deleting(uid);
+  }
+  function clubReady(uid) { return ownProfile(uid) && !deleted(uid) && (clubAdmin() || (exists(/databases/$(database)/documents/clubUsers/$(uid)) && get(/databases/$(database)/documents/clubUsers/$(uid)).data.registrationComplete=='true')); }
+  match /clubUsers/{uid}/favorites/{favorite} {
+   allow get,list: if clubReady(uid);
+   allow create: if clubReady(uid)
+    && request.resource.data.keys().hasAll(['teamKey','teamId','teamName','createdAt']) && request.resource.data.keys().hasOnly(['teamKey','teamId','teamName','createdAt'])
+    && request.resource.data.teamKey in ['first','filial'] && request.resource.data.teamId is string && request.resource.data.teamId.matches('[0-9]{1,12}')
+    && favorite==request.resource.data.teamKey+'_'+request.resource.data.teamId
+    && request.resource.data.teamName is string && request.resource.data.teamName.size()>0 && request.resource.data.teamName.size()<=160
+    && request.resource.data.createdAt is string && request.resource.data.createdAt.size()==24;
+   allow update: if false;
+   allow delete: if ownProfile(uid) && (!deleted(uid) || deleting(uid));
+  }
+  match /clubUsers/{uid}/devices/{device} {
+   allow get,list: if clubReady(uid);
+   allow create,update: if clubReady(uid) && device.matches('[a-f0-9]{64}')
+    && request.resource.data.keys().hasAll(['uid','token','enabled','updatedAt']) && request.resource.data.keys().hasOnly(['uid','token','enabled','updatedAt'])
+    && request.resource.data.uid==uid && request.resource.data.token is string && request.resource.data.token.size()>=20 && request.resource.data.token.size()<=4096
+    && request.resource.data.enabled is bool && request.resource.data.updatedAt==request.time;
+   allow delete: if ownProfile(uid) && (!deleted(uid) || deleting(uid));
+  }
+  match /clubNotificationConfig/status { allow get: if request.auth!=null; allow write,list: if false; }
+  // Minimal UID marker prevents still-valid old tokens from restoring erased data.
+  match /clubDeletedAccounts/{uid} {
+   allow get: if ownProfile(uid) || clubAdmin();
+   allow create: if ownProfile(uid) && recentLogin()
+    && request.resource.data.keys().hasOnly(['requestedAt']) && request.resource.data.keys().hasAll(['requestedAt'])
+    && request.resource.data.requestedAt == request.time;
+   allow list,update,delete: if false;
+  }
+  match /{document=**} { allow read,write: if false; }
+ }
 }
