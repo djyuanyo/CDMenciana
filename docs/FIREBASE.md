@@ -130,15 +130,19 @@ La integración nativa de Firebase Messaging está en `ClubPush` y `ClubMessagin
 
 `notifyFavoriteResults` consulta cada cinco minutos los datos públicos que el sincronizador RFAF ya actualiza en GitHub cada treinta minutos. El aviso depende de que RFAF publique el resultado y el sincronizador lo detecte; no es un marcador en directo. La primera lectura crea una referencia sin avisar de resultados antiguos; solo las transiciones de pendiente a Finalizado con marcador numérico confirmado generan eventos. Seguir a ambos participantes genera un único aviso por dispositivo. Las entregas tienen reclamación temporal, reintento de fallos, invalidación de tokens y comprobación final de baja/favoritos. Los datos de eventos y envíos solo son accesibles al servidor.
 
-**Estado:** el almacenamiento de favoritos está habilitado. El envío automático NO está desplegado: el proyecto sigue en Spark y las funciones programadas requieren Blaze. El estado `clubNotificationConfig/status` solo lo activa el servicio tras una consulta correcta; la interfaz nunca confirma que hay avisos disponibles si ese estado falta. No se cambió la facturación.
+**Estado:** el almacenamiento de favoritos está habilitado y Android se ha compilado completo con FCM en GitHub Actions (8 de octubre de 2026). La APK con sufijo `favoritos` era una entrega parcial; `CDMenciana-0.26.0.apk` incluye el receptor nativo. La subida a `feature/favorites-results-0260` fue autorizada por el titular. No se cambió la facturación.
 
-La compilación Gradle local no pudo resolver el plugin Android 8.7.3. La subida del código a la rama `feature/favorites-results-0260` del repositorio `djyuanyo/CDMenciana` fue rechazada por la revisión automática porque no había autorización explícita para compartirlo allí. No se intentó por otro mecanismo. La APK entregada con sufijo `favoritos` mantiene el contenedor nativo de 0.21.0 y contiene la interfaz y guardado de favoritos; **no incluye aún el receptor nativo FCM**. La integración FCM completa está preparada en el código fuente y requiere compilar la app completa tras autorizar la compilación remota.
+### Envío gratuito sin Blaze
 
-Cuando el titular active Blaze y esté compilada la app completa:
+La opción seleccionada usa Firebase Cloud Messaging (sin coste) y runners estándar de GitHub Actions en este repositorio público (sin coste). `.github/workflows/notify-results.yml` ejecuta `functions/github-results.js` cada treinta minutos, cinco minutos después del horario previsto del sincronizador RFAF. GitHub puede retrasar o saltarse una ejecución programada; no se garantiza el aviso inmediatamente al acabar un partido. Se reutiliza `pollResults`, con la misma persistencia y protección frente a duplicados, bajas y favoritos retirados. Los datos privados se conservan en Firestore, nunca en el repositorio ni en artefactos de Actions.
 
-```sh
-npm --prefix functions install
-firebase deploy --project barpro-pos-menciana --config firebase.accounts.json --only functions:notifyFavoriteResults
-```
+Para activar esta opción faltan dos pasos de configuración:
 
-No desplegar todas las funciones del proyecto ni modificar servicios de otras aplicaciones. Tras el primer ciclo correcto, probar un dispositivo real con permiso concedido, app cerrada, resultado nuevo, favorito quitado y cambio de cuenta. Las pruebas automatizadas de interfaz/servidor/reglas no sustituyen esa prueba real de entrega FCM.
+1. Incorporar el workflow y el código revisado a `main`; los cron solo se ejecutan desde la rama predeterminada. El workflow rechaza otras ramas y no se ejecuta en pull requests.
+2. Crear una cuenta de servicio dedicada en el proyecto `barpro-pos-menciana`, con permisos de lectura de Firebase Authentication, acceso servidor a Firestore y envío FCM. Guardar su JSON exclusivamente en el secreto de Actions **CDM_FIREBASE_SERVICE_ACCOUNT** del repositorio. No añadir la clave a Git, APK, ZIP ni mensajes. Habilitar Firebase Cloud Messaging API si estuviera desactivada. No es necesario habilitar Blaze ni desplegar `notifyFavoriteResults` en Cloud Functions.
+
+La conexión todavía no está configurada: **el envío automático aún no está activo**. El servicio activa `clubNotificationConfig/status` solo tras una consulta correcta; la interfaz no confirma disponibilidad si ese estado falta. Firestore se mantiene en Spark: si se agota su cuota gratuita, se interrumpe el servicio en vez de generar cargos. Los cron dejan de ejecutarse tras el período de inactividad que aplica GitHub a repositorios públicos.
+
+Después de configurar el secreto, ejecutar manualmente “Avisos gratuitos de resultados” en `main` para crear la referencia inicial sin enviar resultados antiguos. Probar un dispositivo real con permiso concedido, app cerrada, resultado nuevo, favorito quitado y cambio de cuenta. Las pruebas automatizadas de interfaz/servidor/reglas y la compilación Android no sustituyen esa prueba real de entrega FCM.
+
+La función Cloud Functions se conserva como alternativa opcional para otros despliegues; no debe activarse a la vez que el cron. El borrado administrativo de cuentas continúa siendo un servicio separado pendiente de configurar; no se despliega ni se modifica en este cambio.
