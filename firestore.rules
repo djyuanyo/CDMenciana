@@ -40,7 +40,7 @@ service cloud.firestore {
    allow get,list: if clubReady(uid);
    allow create: if clubReady(uid)
     && request.resource.data.keys().hasAll(['teamKey','teamId','teamName','createdAt']) && request.resource.data.keys().hasOnly(['teamKey','teamId','teamName','createdAt'])
-    && request.resource.data.teamKey in ['first','filial'] && request.resource.data.teamId is string && request.resource.data.teamId.matches('[0-9]{1,12}')
+    && ((request.resource.data.teamKey=='first' && request.resource.data.teamId=='2137495') || (request.resource.data.teamKey=='filial' && request.resource.data.teamId=='48536795'))
     && favorite==request.resource.data.teamKey+'_'+request.resource.data.teamId
     && request.resource.data.teamName is string && request.resource.data.teamName.size()>0 && request.resource.data.teamName.size()<=160
     && request.resource.data.createdAt is string && request.resource.data.createdAt.size()==24;
@@ -54,6 +54,18 @@ service cloud.firestore {
     && request.resource.data.uid==uid && request.resource.data.token is string && request.resource.data.token.size()>=20 && request.resource.data.token.size()<=4096
     && request.resource.data.enabled is bool && request.resource.data.updatedAt==request.time;
    allow delete: if ownProfile(uid) && (!deleted(uid) || deleting(uid));
+  }
+  match /clubNotificationRequests/{message} {
+   allow get,list: if clubAdmin();
+   allow create: if clubAdmin() && message.matches('[a-f0-9]{32}')
+    && request.resource.data.keys().hasOnly(['title','body','teamKey','createdBy','createdAt','status'])
+    && request.resource.data.keys().hasAll(['title','body','teamKey','createdBy','createdAt','status'])
+    && request.resource.data.title is string && request.resource.data.title.size()>0 && request.resource.data.title.size()<=100
+    && request.resource.data.body is string && request.resource.data.body.size()>0 && request.resource.data.body.size()<=500
+    && request.resource.data.teamKey in ['all','first','filial']
+    && request.resource.data.createdBy==request.auth.uid && request.resource.data.createdAt==request.time
+    && request.resource.data.status=='pending';
+   allow update,delete: if false;
   }
   match /clubNotificationConfig/status { allow get: if request.auth!=null; allow write,list: if false; }
   // Minimal UID marker prevents still-valid old tokens from restoring erased data.
