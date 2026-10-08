@@ -27,6 +27,7 @@ public final class ClubMessagingService extends FirebaseMessagingService {
         manager.createNotificationChannel(new NotificationChannel("club-results","Avisos del club y resultados",NotificationManager.IMPORTANCE_DEFAULT));
         Intent intent=new Intent(this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP).putExtra("notificationTeam",team);
         if(acta!=null&&acta.matches("[0-9]{1,12}"))intent.putExtra("notificationActa",acta);
+        String news=data.get("newsSlug");if(news!=null&&news.matches("[a-z0-9][a-z0-9-]{0,199}"))intent.putExtra("notificationNews",news);
         PendingIntent pending=PendingIntent.getActivity(this,event.hashCode(),intent,PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_IMMUTABLE);
         String title=data.get("title"),body=data.get("body");if(title==null||body==null||title.length()>200||body.length()>500)return;
         Notification notification=new Notification.Builder(this,"club-results").setSmallIcon(R.drawable.notification_ball).setContentTitle(title).setContentText(body).setStyle(new Notification.BigTextStyle().bigText(body)).setContentIntent(pending).setAutoCancel(true).build();

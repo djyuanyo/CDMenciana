@@ -38,3 +38,25 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - uses: actions/setup-node@v4
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          node-version: '22'
+      - name: Avisar de las noticias nuevas
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          CDM_FIREBASE_SERVICE_ACCOUNT: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$CDM_FIREBASE_SERVICE_ACCOUNT" ]; then
+            echo '::notice::Falta la conexión privada con Firebase para avisar de noticias.'
+            exit 0
+          fi
+          npm install --prefix functions --ignore-scripts --no-audit --no-fund
+          credential_path="$RUNNER_TEMP/club-news-firebase.json"
+          trap 'rm -f "$credential_path"' EXIT
+          umask 077
+          printf '%s' "$CDM_FIREBASE_SERVICE_ACCOUNT" > "$credential_path"
+          unset CDM_FIREBASE_SERVICE_ACCOUNT
+          GOOGLE_APPLICATION_CREDENTIALS="$credential_path" node functions/github-results.js --news

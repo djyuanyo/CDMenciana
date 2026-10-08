@@ -382,7 +382,7 @@ public class MainActivity extends Activity {
             });
         }
     }
-    private String notificationRoute(){String team=getIntent().getStringExtra("notificationTeam"),acta=getIntent().getStringExtra("notificationActa");return ("first".equals(team)||"filial".equals(team))&&acta!=null&&acta.matches("[0-9]{1,12}")?"#acta="+acta+"&equipo="+team:"";}
+    private String notificationRoute(){return NotificationRoutes.route(getIntent().getStringExtra("notificationNews"),getIntent().getStringExtra("notificationTeam"),getIntent().getStringExtra("notificationActa"));}
     @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);String route=notificationRoute();if(web!=null&&web.getUrl()!=null&&!route.isEmpty()&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("location.hash="+JSONObject.quote(route),null);}
     @Override public void onRequestPermissionsResult(int request,String[] permissions,int[] results){super.onRequestPermissionsResult(request,permissions,results);if(request==ClubPush.PERMISSION&&push!=null)push.permissionResult();}
     private final class PushBridge {

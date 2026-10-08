@@ -16,7 +16,7 @@ import java.net.URL;
 /** Show the text immediately, then enrich the same still-visible notification. */
 public final class NotificationImageWorker extends Worker {
     public NotificationImageWorker(Context context,WorkerParameters params){super(context,params);}
-    static boolean safeUrl(String value){return value!=null&&value.matches("https://raw\\.githubusercontent\\.com/djyuanyo/CDMenciana/main/notification-images/[a-f0-9]{32}\\.jpg");}
+    static boolean safeUrl(String value){return value!=null&&(value.matches("https://cms\\.cdmenciana\\.es/media/[a-f0-9-]{36}/(web|thumb)")||value.matches("https://raw\\.githubusercontent\\.com/djyuanyo/CDMenciana/main/notification-images/[a-f0-9]{32}\\.jpg"));}
     private boolean allowed(String uid){FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();return user!=null&&user.getUid().equals(uid)&&uid.equals(ClubPush.prefs(getApplicationContext()).getString("uid",""))&&ClubPush.permitted(getApplicationContext());}
     @Override public Result doWork(){
         String uid=getInputData().getString("uid"),event=getInputData().getString("eventId"),url=getInputData().getString("imageUrl");

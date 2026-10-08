@@ -1,0 +1,18 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');
+const {articles,fresh}=require('../functions/news-notifications');
+const {validRequest,validImage}=require('../functions/custom-notifications');
+const feed={updated_at:'2026-10-08T12:00:00Z',news:[{url:'https://cdmenciana.es/noticias/nueva-noticia/',title:'Noticia',image:'https://cms.cdmenciana.es/media/80ff36e4-844a-4e8c-9398-13779df67d15/web'}]};
+test('news baseline is silent, new articles notify once and edits keep identity',()=>{const rows=articles(feed);assert.equal(fresh(null,rows).length,0);assert.equal(fresh({},rows).length,1);assert.equal(fresh({[rows[0].id]:true},rows).length,0);assert.equal(articles({...feed,news:[{...feed.news[0],title:'Editada'}]})[0].id,rows[0].id);});
+test('news only opens internal club articles and trusted images',()=>{assert.equal(articles({...feed,news:[{...feed.news[0],url:'https://evil.test/noticias/nueva-noticia/'}]}).length,0);assert.equal(validImage('https://cms.cdmenciana.es.evil.test/media/80ff36e4-844a-4e8c-9398-13779df67d15/web'),false);assert.ok(validImage(feed.news[0].image));const req={...articles(feed)[0],createdBy:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',teamKey:'all',createdAt:{toMillis:()=>0}};assert.ok(validRequest(req));assert.equal(validRequest({...req,newsSlug:'../otra'}),false);});
+
+function mock(){const store=new Map(),snap=p=>({id:p.split('/').pop(),exists:store.has(p),data:()=>store.get(p),ref:ref(p)});const ref=p=>({id:p.split('/').pop(),parent:{parent:{id:p.split('/')[1]}},path:p,get:async()=>snap(p),set:async v=>store.set(p,v),update:async v=>store.set(p,{...store.get(p),...v}),delete:async()=>store.delete(p),collection:k=>col(p+'/'+k)});const col=p=>({doc:k=>ref(p+'/'+k),get:async()=>({docs:[...store.keys()].filter(k=>k.startsWith(p+'/')&&k.split('/').length===p.split('/').length+1).map(snap)}),where:(f,op,v)=>({limit:()=>({get:async()=>{const docs=[...store.keys()].filter(k=>k.startsWith(p+'/')&&store.get(k)[f]===v).map(snap);return {docs,empty:!docs.length};}})})});return {store,db:{collection:col,collectionGroup:k=>({get:async()=>({docs:[...store.keys()].filter(p=>p.split('/')[2]===k).map(snap)})}),runTransaction:async fn=>fn({get:r=>r.get(),set:(r,v)=>r.set(v),create:(r,v)=>{assert(!store.has(r.path));return r.set(v);}})}};}
+
+test('news workflow baselines quietly, broadcasts a new article once, and preserves pending retries',async()=>{
+ const {store,db}=mock(),sent=[];let fail=true;
+ const uid='fan';store.set('clubUsers/'+uid,{registrationComplete:'true'});store.set('clubUsers/'+uid+'/devices/device',{uid,enabled:true,token:'token-with-enough-characters'});
+ const env={db,feed,Timestamp:{fromMillis:n=>({toMillis:()=>n})},now:()=>10000,auth:{getUser:async uid=>({uid,email:uid==='ZJeZEjtDeMRCYL0UOuvhGt0gNCT2'?'juanjocarrillo7@gmail.com':'fan@club.test'})},messaging:{send:async p=>{if(fail)throw Error('temporary');sent.push(p);}}};
+ const {pollNews}=require('../functions/news-notifications');await pollNews(env);assert.equal(sent.length,0);
+ env.feed={...feed,updated_at:'2026-10-08T13:00:00Z',news:[...feed.news,{...feed.news[0],url:'https://cdmenciana.es/noticias/segunda-noticia/'}]};
+ await pollNews(env);const id=articles(env.feed)[1].id;assert.equal(store.get('clubNotificationRequests/'+id).status,'pending');assert(store.has('clubNotificationSchedule/'+id));
+ fail=false;await pollNews(env);assert.equal(sent.length,1);assert.equal(sent[0].data.newsSlug,'segunda-noticia');assert.equal(sent[0].data.teamKey,'all');assert.equal(sent[0].data.imageUrl,feed.news[0].image);assert(!store.has('clubNotificationSchedule/'+id));await pollNews(env);assert.equal(sent.length,1);
+});
