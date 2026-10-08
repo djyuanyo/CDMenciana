@@ -29,7 +29,7 @@ for(const row of rows){
  assert.equal(row.classList.contains(ownSide===0?'home':'away'),true);
  assert(row.querySelector('img').alt.includes(fullModel.teams[ownSide].name));
 }
-assert.equal(rows[0].querySelector('time').textContent,"38'");
+assert.equal(rows[0].querySelector('time').textContent,"5'");
 assert.equal(dom.window.document.querySelectorAll('.acta-timeline-event .acta-timeline-score').length,4);
 console.log('Timeline DOM keeps the author crest before the minute, separates the two teams and omits repeated team names');
 
