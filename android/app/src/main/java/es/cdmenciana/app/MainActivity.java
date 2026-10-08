@@ -31,6 +31,8 @@ import org.json.JSONObject;
 /** Native club shell with local appearance preferences and public RFAF player resolution. */
 public class MainActivity extends Activity {
     private WebView web;
+    private android.webkit.ValueCallback<Uri[]> imageSelection;
+    private static final int PICK_NOTIFICATION_IMAGE=7104;
     private FrameLayout rootView;
     private String base;
     private String publicUserAgent;
@@ -394,6 +396,16 @@ public class MainActivity extends Activity {
         web=new WebView(this);
         mountSafe(web);web.setBackgroundColor(tone("#182335","#edf3fa"));
         WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(false);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        web.setWebChromeClient(new android.webkit.WebChromeClient(){
+            @Override public boolean onShowFileChooser(WebView view,android.webkit.ValueCallback<Uri[]> callback,FileChooserParams params){
+                if(view.getUrl()==null||!sameOrigin(Uri.parse(view.getUrl())))return false;
+                if(imageSelection!=null)imageSelection.onReceiveValue(null);
+                imageSelection=callback;
+                Intent picker=new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("image/*");
+                try{startActivityForResult(picker,PICK_NOTIFICATION_IMAGE);}catch(Exception unavailable){imageSelection.onReceiveValue(null);imageSelection=null;}
+                return true;
+            }
+        });
         web.addJavascriptInterface(new AppearanceBridge(),"AppAppearance");
         account=new FirebaseAccount(this,(id,data)->runOnUiThread(()->{
             if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubAuth&&window.ClubAuth.receive("+JSONObject.quote(id)+","+data.toString()+")",null);
@@ -424,5 +436,12 @@ public class MainActivity extends Activity {
         });web.loadUrl((base.isEmpty()?"https://appassets.androidplatform.net/index.html":base)+notificationRoute());
     }
     @Override public void onBackPressed(){if(configuring){load();return;}if(web!=null&&web.canGoBack())web.goBack();else showThemedDialog(new AlertDialog.Builder(this).setMessage("Puedes seguir consultando el club o cerrar la aplicación.").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Conexión",(d,w)->configure()),"¿Salir de la app?");}
-    @Override protected void onDestroy(){if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
+    @Override protected void onActivityResult(int request,int result,Intent data){
+        super.onActivityResult(request,result,data);
+        if(request==PICK_NOTIFICATION_IMAGE&&imageSelection!=null){
+            Uri selected=result==RESULT_OK&&data!=null?data.getData():null;
+            imageSelection.onReceiveValue(selected!=null&&"content".equals(selected.getScheme())?new Uri[]{selected}:null);imageSelection=null;
+        }
+    }
+    @Override protected void onDestroy(){if(imageSelection!=null){imageSelection.onReceiveValue(null);imageSelection=null;}if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
 }

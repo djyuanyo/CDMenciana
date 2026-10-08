@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const log=fs.readFileSync(process.env.DEPLOY_LOG,'utf8');
+const endpoint=log.match(/https:\/\/cdmenciana-avisos\.[a-z0-9-]+\.workers\.dev\b/)?.[0];
+if(!endpoint)throw Error('Worker address unavailable');
+const {createHash}=await import('node:crypto');
+const key=createHash('sha256').update('club-internal|'+process.env.FIREBASE_SERVICE_ACCOUNT).digest('hex');
+const r=await fetch(endpoint+'/connection',{method:'POST',headers:{'X-Club-Internal':key}}),data=r.ok?await r.json():{};
+if(!data.ready||!data.images)throw Error('Notification service is not ready');
+fs.writeFileSync('../data/notification-service.json',JSON.stringify({enabled:true,endpoint})+'\n');
+console.log('Servicio desplegado; dirección pública preparada para la app.');

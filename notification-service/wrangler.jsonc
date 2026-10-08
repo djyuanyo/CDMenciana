@@ -1,0 +1,10 @@
+{
+  "name": "cdmenciana-avisos",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "services": [{"binding": "DELIVERY", "service": "cdmenciana-avisos"}],
+  "triggers": {"crons": ["* * * * *"]},
+  "vars": {"FIREBASE_API_KEY": "AIzaSyAuvHYalR84N7cQ1KrOdv3_GeUeGCqZnGQ"}
+}

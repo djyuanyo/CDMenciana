@@ -31,6 +31,14 @@ public final class ClubMessagingService extends FirebaseMessagingService {
         String title=data.get("title"),body=data.get("body");if(title==null||body==null||title.length()>200||body.length()>500)return;
         Notification notification=new Notification.Builder(this,"club-results").setSmallIcon(R.drawable.notification_ball).setContentTitle(title).setContentText(body).setStyle(new Notification.BigTextStyle().bigText(body)).setContentIntent(pending).setAutoCancel(true).build();
         manager.notify(event,0,notification);
+        String image=data.get("imageUrl");
+        if(NotificationImageWorker.safeUrl(image)){
+            androidx.work.Data input=new androidx.work.Data.Builder().putString("uid",recipient).putString("eventId",event).putString("body",body).putString("imageUrl",image).build();
+            androidx.work.OneTimeWorkRequest.Builder builder=new androidx.work.OneTimeWorkRequest.Builder(NotificationImageWorker.class).setInputData(input);
+            if(android.os.Build.VERSION.SDK_INT>=31)builder.setExpedited(androidx.work.OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST);
+            androidx.work.OneTimeWorkRequest work=builder.build();
+            androidx.work.WorkManager.getInstance(this).enqueueUniqueWork("notification-image-"+event,androidx.work.ExistingWorkPolicy.KEEP,work);
+        }
         String[] history=(event+(seen.isEmpty()?"":","+seen)).split(",");ClubPush.prefs(this).edit().putString("seen-"+recipient,String.join(",",java.util.Arrays.copyOf(history,Math.min(history.length,100)))).apply();
     }
 }

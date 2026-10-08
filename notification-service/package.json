@@ -1,0 +1,1 @@
+{"name":"cdmenciana-notification-service","private":true,"type":"module","scripts":{"test":"node --test ../tools/test_notification_service.mjs","deploy":"wrangler deploy"},"devDependencies":{"wrangler":"^4.149.0"}}

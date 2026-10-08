@@ -33,6 +33,8 @@ const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),
   });
   await page.route('https://raw.githubusercontent.com/**',route=>route.abort());await page.route('https://cms.cdmenciana.es/**',route=>route.abort());
   await page.goto('http://127.0.0.1:'+server.address().port+'/');
+  await page.waitForFunction(()=>window.ClubAccess?.administrator()&&!ClubAccess.fetching);
+  await page.locator('.profile-btn[data-page="Mi cuenta"]').click();
   await page.waitForSelector('[data-page="Administración"]');
   assert(await page.getByText('Administrador',{exact:true}).isVisible());assert.equal(await page.locator('[data-registration-dialog]').count(),0);
   await page.locator('[data-page="Administración"]').click();await page.waitForSelector('.admin-summary');

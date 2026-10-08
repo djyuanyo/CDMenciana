@@ -16,3 +16,5 @@ hosting/dist/
 firebase-debug.log
 
 /delivery-*/
+**/.wrangler/
+**/.dev.vars
