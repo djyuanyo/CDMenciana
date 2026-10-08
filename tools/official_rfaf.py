@@ -230,7 +230,11 @@ def sync(config=None):
     first_page=get(source+'&CodJornada='+str(initial_round))
     def menu_link(html,leaf):
         links=[n.attrs.get('href','') for n in Document(html).root.find('a') if leaf in n.attrs.get('href','')]
-        if not links:raise ValueError('Official competition link missing: '+leaf)
+        if not links:
+            if config['key']!='infantil':raise ValueError('Official competition link missing: '+leaf)
+            # The supplied public Infantil page exposes these same menu routes.
+            query=team_query(config,lower=True)+'&CodJornada='+str(config.get('initial_round',1))
+            return PREFIX+leaf+'?'+query
         url=urllib.parse.urljoin(source,links[0]);parsed=urllib.parse.urlparse(url)
         if parsed.scheme!='https' or parsed.hostname!='www.rfaf.es':raise ValueError('Unexpected official source')
         return url
