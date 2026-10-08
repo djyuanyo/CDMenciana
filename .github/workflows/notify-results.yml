@@ -1,0 +1,40 @@
+name: Avisos gratuitos de resultados
+on:
+  schedule:
+    - cron: '12,42 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: club-final-result-notifications
+  cancel-in-progress: false
+jobs:
+  notify:
+    # Secrets never run on pull requests or arbitrary branches.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --prefix functions --ignore-scripts --no-audit --no-fund
+      - name: Consultar resultados y enviar a favoritos
+        env:
+          CDM_FIREBASE_SERVICE_ACCOUNT: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          credential_path="$RUNNER_TEMP/club-firebase.json"
+          trap 'rm -f "$credential_path"' EXIT
+          umask 077
+          if [ -z "$CDM_FIREBASE_SERVICE_ACCOUNT" ]; then
+            echo 'Falta configurar el secreto CDM_FIREBASE_SERVICE_ACCOUNT.'
+            exit 1
+          fi
+          printf '%s' "$CDM_FIREBASE_SERVICE_ACCOUNT" > "$credential_path"
+          unset CDM_FIREBASE_SERVICE_ACCOUNT
+          GOOGLE_APPLICATION_CREDENTIALS="$credential_path" node functions/github-results.js
