@@ -1,7 +1,7 @@
 /* Public sports snapshots from the club repository, with the shipped copy as fallback. */
 (() => {
   const fetchLocal = window.fetch.bind(window);
-  const allowed = /^(?:fixtures(?:-filial)?\.json|news\.json|actas\/\d+\.json)(?:\?refresh=1)?$/;
+  const allowed = /^(?:fixtures(?:-filial|-infantil)?\.json|news\.json|actas\/\d+\.json)(?:\?refresh=1)?$/;
   window.fetch = async (input, options) => {
     if (typeof input !== 'string' || !allowed.test(input)) return fetchLocal(input, options);
     const filename = input.split('?')[0];
