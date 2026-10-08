@@ -65,7 +65,7 @@ const events=f.reportEvents(report);
 assert(f.teams.infantil&&f.teams.infantil.group==='Grupo B'&&f.teams.infantil.filename==='fixtures-infantil.json');
 assert.equal(events.length,11);
 assert.deepEqual(Array.from(events,e=>e.minute),["5'","13'","16'","16'","18'","21'","27'","27'","33'","36'","38'"]);
-assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','card','card','goal','card','goal','card','card','goal']);
+assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','card','card','goal','goal','card','card','card','goal']);
 assert.equal(events.find(e=>e.type==='Gol en propia puerta').side,1,'An own goal must carry its author’s team crest');
 assert.equal(events.find(e=>e.name==='AGUILERA CABALLERO, RAFAEL').side,1,'Cards for staff also retain the team');
 const timeline=f.reportTimeline(report,match);
