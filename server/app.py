@@ -61,7 +61,7 @@ class Handler(BaseHTTPRequestHandler):
             path=self.path.split('?')[0]
             if not path.startswith('/api/'):
                 if post: raise ApiError(405,'Método no permitido.')
-                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures-filial.json':'fixtures-filial.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/appearance.js':'appearance.js','/roster-snapshot.js':'roster-snapshot.js','/rfaf_extract.js':'rfaf_extract.js','/auth.js':'auth.js','/auth.css':'auth.css','/app.js':'app.js','/style.css':'style.css','/theme.css':'theme.css','/crest.png':'crest.png'}
+                files={'/':'index.html','/admin':'index.html','/fixtures.json':'fixtures.json','/fixtures-filial.json':'fixtures-filial.json','/news.json':'news.json','/fixtures.js':'fixtures.js','/ui.js':'ui.js','/appearance.js':'appearance.js','/roster-snapshot.js':'roster-snapshot.js','/rfaf_extract.js':'rfaf_extract.js','/club-access.js':'club-access.js','/news-reader.js':'news-reader.js','/auth.js':'auth.js','/auth.css':'auth.css','/app.js':'app.js','/style.css':'style.css','/theme.css':'theme.css','/crest.png':'crest.png'}
                 if re.fullmatch(r'/crests/[a-f0-9]{16}\.(png|jpg)',path):files[path]=path[1:]
                 if re.fullmatch(r'/players/[a-f0-9]{16}\.webp',path):files[path]=path[1:]
                 if re.fullmatch(r'/actas/[0-9]+\.json',path):files[path]=path[1:]
@@ -104,8 +104,11 @@ class Handler(BaseHTTPRequestHandler):
                             cursor=c.execute('INSERT INTO users(name,email,password) VALUES(?,?,?)',(identity['name'],identity['email'],password_hash(secrets.token_urlsafe(48))))
                             c.execute('INSERT INTO firebase_users(project,uid,user_id) VALUES(?,?,?)',(identity['project'],identity['uid'],cursor.lastrowid))
                             row=c.execute('SELECT * FROM users WHERE id=?',(cursor.lastrowid,)).fetchone()
+                        if identity['project']=='barpro-pos-menciana' and identity['email']=='juanjocarrillo7@gmail.com':
+                            c.execute('UPDATE users SET active=1,admin=1 WHERE id=?',(row['id'],))
+                            row=c.execute('SELECT * FROM users WHERE id=?',(row['id'],)).fetchone()
                         token=secrets.token_urlsafe(32)
-                        # Firebase identity never assigns club roles. Re-check approval on every API request.
+                        # Only the verified, explicitly designated owner bootstraps administration.
                         expiry=min(identity['expires'],now+3600)
                         c.execute('DELETE FROM sessions WHERE expires<?',(now,))
                         c.execute('INSERT INTO sessions VALUES(?,?,?)',(hashlib.sha256(token.encode()).hexdigest(),row['id'],expiry))

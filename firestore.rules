@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function clubAdmin() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() == 'juanjocarrillo7@gmail.com';
+    }
+    function ownProfile(uid) { return request.auth != null && request.auth.uid == uid; }
+    function validProfile(data) {
+      return data.keys().hasAll(['name', 'email', 'role'])
+        && data.keys().hasOnly(['name', 'email', 'role'])
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && data.email is string && data.email.size() <= 254
+        && data.role in ['fan', 'member', 'player', 'member_player'];
+    }
+    // This collection is separate from the existing POS application.
+    match /clubUsers/{uid} {
+      allow get: if ownProfile(uid) || clubAdmin();
+      allow list: if clubAdmin();
+      allow create: if ownProfile(uid) && validProfile(request.resource.data)
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.role == 'fan';
+      allow update: if validProfile(request.resource.data) && (
+        (clubAdmin() && request.auth.uid != uid
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['role']))
+        || (ownProfile(uid)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'email'])
+          && request.resource.data.email == request.auth.token.email));
+      allow delete: if false;
+    }
+  }
+}

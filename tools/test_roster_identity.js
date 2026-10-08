@@ -18,7 +18,7 @@ W.fetch=async url=>({ok:true,json:async()=>{
  }
  return clone(old);
 }});
-for(const name of ['appearance.js','ui.js','rfaf_extract.js','roster-snapshot.js','fixtures.js','offline.js'])W.eval(read(name));
+for(const name of ['appearance.js','ui.js','auth.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js','offline.js'])W.eval(read(name));
 const settle=()=>new Promise(r=>W.setTimeout(r,20));
 (async()=>{
  await settle();const f=W.Fixtures;

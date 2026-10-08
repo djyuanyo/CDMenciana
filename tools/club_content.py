@@ -1,6 +1,6 @@
 """Public category scorers and the club's first-team roster."""
 import re
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 from sync_fixtures import Document
 ROSTER_SOURCE='https://cdmenciana.es/equipos/'
 
@@ -50,3 +50,36 @@ def news(html):
     if not items and not any('noticias' in h.text().lower() for h in root.find('h1')):raise ValueError('Club news index missing')
     if len({n['url'] for n in items})!=len(items):raise ValueError('Duplicate news links')
     return sorted(items,key=lambda n:n['date'],reverse=True)
+
+def news_article(html, url):
+    """Keep article text and pictures in order, excluding navigation and related stories."""
+    root=Document(html).root
+    candidates=[n for n in root.find() if any(c in n.attrs.get('class','').split() for c in ('article-content','news-content','post-content','entry-content','prose','article-body','news-detail-body'))]
+    if not candidates:
+        candidates=[n for n in root.find('article') if n.find('h1')] or root.find('main')
+    if not candidates:raise ValueError('Club article body missing')
+    body=candidates[0];blocks=[]
+    def text(node):return node.text().strip()
+    def image(node,caption=''):
+        src=urljoin(url,node.attrs.get('src',''));parsed=urlsplit(src)
+        if parsed.scheme=='https' and parsed.hostname in ('cdmenciana.es','cms.cdmenciana.es'):
+            blocks.append(dict(kind='image',src=src,alt=node.attrs.get('alt',''),caption=caption))
+    def walk(node):
+        cls=node.attrs.get('class','').split()
+        if node.tag in ('script','style','nav','footer','aside','header','form','button') or any(c in cls for c in ('news-meta','article-meta','related-news','news-card','news-lead','breadcrumbs','share-buttons','article-header','news-detail-header')):return
+        value=text(node)
+        if node.tag in ('p','h2','h3','h4','blockquote'):
+            if value:blocks.append(dict(kind='paragraph' if node.tag=='p' else 'quote' if node.tag=='blockquote' else 'heading',text=value))
+            for img in node.find('img'):image(img)
+        elif node.tag in ('ul','ol'):
+            rows=[text(child) for child in node.children if child.tag=='li' and text(child)]
+            if rows:blocks.append(dict(kind='list',items=rows,ordered=node.tag=='ol'))
+        elif node.tag=='figure':
+            caption=' '.join(text(child) for child in node.find('figcaption'))
+            for img in node.find('img'):image(img,caption)
+        elif node.tag=='img':image(node)
+        else:
+            for child in node.children:walk(child)
+    walk(body)
+    if not any(block['kind']=='paragraph' for block in blocks):raise ValueError('Club article text missing')
+    return blocks

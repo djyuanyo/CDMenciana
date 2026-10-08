@@ -31,7 +31,8 @@ for(const [key,file,counts] of [['first','fixtures.json',[1,2,1]],['filial','fix
 f.selectTeam('first');f.data=actual;
 console.log('Both rosters include their own official technicians, delegates and assistants');
 
-f.newsData=JSON.parse(fs.readFileSync('data/news.json','utf8'));const news=f.news();for(const n of f.newsData.news){assert(news.includes(f.esc(n.title)));assert(news.includes(f.esc(n.url)));}assert(!news.includes('PRÓXIMO PARTIDO'));console.log('Home news cards and original article links verified');
+vm.runInContext(fs.readFileSync('server/static/news-reader.js','utf8'),ctx);ctx.ClubNews=ctx.window.ClubNews;
+f.newsData=JSON.parse(fs.readFileSync('data/news.json','utf8'));const news=f.news();for(const n of f.newsData.news){assert(news.includes(f.esc(n.title)));assert(news.includes(f.esc(ctx.ClubNews.href(n))));assert(!news.includes(f.esc(n.url)));}assert(!news.includes('PRÓXIMO PARTIDO'));console.log('Home news cards and internal article links verified');
 
 const allData=JSON.parse(fs.readFileSync('data/fixtures.json','utf8'));
 f.data=allData;f.round='5';const roundHtml=f.calendar();

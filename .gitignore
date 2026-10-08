@@ -10,7 +10,7 @@ android/.gradle/
 android/local.properties
 **/build/
 
-node_modules/
+node_modules
 hosting/dist/
 .firebase/
 firebase-debug.log
