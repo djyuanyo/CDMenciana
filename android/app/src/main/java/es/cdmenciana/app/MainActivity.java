@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
     private String publicUserAgent;
     private boolean configuring=false;
     private FirebaseAccount account;
+    private ClubPush push;
     private final java.net.CookieManager federationCookies=new java.net.CookieManager(null,java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER);
     private long federationSessionAt=0L;
     @Override public void onCreate(Bundle saved) {
@@ -378,6 +379,12 @@ public class MainActivity extends Activity {
             });
         }
     }
+    private String notificationRoute(){String team=getIntent().getStringExtra("notificationTeam"),acta=getIntent().getStringExtra("notificationActa");return ("first".equals(team)||"filial".equals(team))&&acta!=null&&acta.matches("[0-9]{1,12}")?"#acta="+acta+"&equipo="+team:"";}
+    @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);String route=notificationRoute();if(web!=null&&web.getUrl()!=null&&!route.isEmpty()&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("location.hash="+JSONObject.quote(route),null);}
+    @Override public void onRequestPermissionsResult(int request,String[] permissions,int[] results){super.onRequestPermissionsResult(request,permissions,results);if(request==ClubPush.PERMISSION&&push!=null)push.permissionResult();}
+    private final class PushBridge {
+        @android.webkit.JavascriptInterface public void request(String id,String action){if(id==null||!id.matches("[a-zA-Z0-9_-]{1,64}"))return;runOnUiThread(()->{if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl()))&&push!=null)push.request(id,action);});}
+    }
     private void load() {
         configuring=false;applyNativeTheme();
         if(account!=null)account.close();
@@ -391,6 +398,8 @@ public class MainActivity extends Activity {
             if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubAuth&&window.ClubAuth.receive("+JSONObject.quote(id)+","+data.toString()+")",null);
         }));
         web.addJavascriptInterface(new AccountBridge(),"ClubAuthNative");
+        push=new ClubPush(this,(id,data)->runOnUiThread(()->{if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubFavorites&&ClubFavorites.receive("+JSONObject.quote(id)+","+data.toString()+")",null);}));
+        web.addJavascriptInterface(new PushBridge(),"ClubPushNative");
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);
         web.setWebViewClient(new WebViewClient(){
@@ -411,7 +420,7 @@ public class MainActivity extends Activity {
                 try(InputStream input=getAssets().open("theme.css")){ByteArrayOutputStream bytes=new ByteArrayOutputStream();byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);String css=bytes.toString("UTF-8");view.evaluateJavascript("(()=>{if(!document.getElementById('main')||!document.getElementById('nav'))return;if(window.AppAppearance)document.documentElement.dataset.theme=AppAppearance.getTheme();let style=document.getElementById('cdm-android-theme');if(!style){style=document.createElement('style');style.id='cdm-android-theme';document.head.appendChild(style);}style.textContent="+JSONObject.quote(css)+";})()",null);}catch(java.io.IOException ignored){}
             }
             @Override public void onReceivedError(WebView view,WebResourceRequest req,WebResourceError error){if(req.isForMainFrame())showThemedDialog(new AlertDialog.Builder(MainActivity.this).setMessage("Comprueba tu conexión y que el servidor del club esté disponible.").setPositiveButton("Reintentar",(d,w)->load()).setNeutralButton("Cambiar servidor",(d,w)->configure()),"No se puede conectar");}
-        });web.loadUrl(base.isEmpty()?"https://appassets.androidplatform.net/index.html":base);
+        });web.loadUrl((base.isEmpty()?"https://appassets.androidplatform.net/index.html":base)+notificationRoute());
     }
     @Override public void onBackPressed(){if(configuring){load();return;}if(web!=null&&web.canGoBack())web.goBack();else showThemedDialog(new AlertDialog.Builder(this).setMessage("Puedes seguir consultando el club o cerrar la aplicación.").setPositiveButton("Salir",(d,w)->finish()).setNegativeButton("Cancelar",null).setNeutralButton("Conexión",(d,w)->configure()),"¿Salir de la app?");}
     @Override protected void onDestroy(){if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
