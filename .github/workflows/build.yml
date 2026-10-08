@@ -68,12 +68,17 @@ jobs:
             chmod 600 "$RUNNER_TEMP/cdm-signing.jks"
             echo "CDM_SIGNING_STORE=$RUNNER_TEMP/cdm-signing.jks" >> "$GITHUB_ENV"
           else
-            echo "::error::Falta CDM_ANDROID_KEYSTORE_BASE64. No se publica una APK con firma aleatoria: se romperían Google Sign-In y las actualizaciones sin borrar datos."
-            exit 1
+            echo "::warning::La firma estable no está configurada; se compilan las pruebas Android, pero la APK no se publicará."
           fi
       - run: gradle -p android testDebugUnitTest assembleDebug lintDebug
       - name: Verificar firma Google OAuth antes de publicar APK
-        run: python tools/check_google_signin.py --apk android/app/build/outputs/apk/debug/app-debug.apk
+        shell: bash
+        run: |
+          if [ -z "${CDM_SIGNING_STORE:-}" ]; then
+            echo "::error::Configura CDM_ANDROID_KEYSTORE_BASE64 para publicar una APK instalable sin romper Google Sign-In ni perder ajustes."
+            exit 1
+          fi
+          python tools/check_google_signin.py --apk android/app/build/outputs/apk/debug/app-debug.apk
       - uses: actions/upload-artifact@v4
         with:
           name: CDMenciana-APK-pruebas
