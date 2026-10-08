@@ -1,10 +1,10 @@
 /* Shared Firebase role transport. Firestore rules enforce every read and write. */
 window.ClubAccess={
- project:'barpro-pos-menciana',adminEmail:'juanjocarrillo7@gmail.com',profile:null,error:'',users:[],loading:false,sequence:0,
+ project:'barpro-pos-menciana',adminEmail:'juanjocarrillo7@gmail.com',adminUid:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',profile:null,error:'',users:[],loading:false,fetching:false,sequence:0,
  roles:{fan:'Aficionado',member:'Socio',player:'Jugador',member_player:'Socio y jugador'},
  enabled(){return !!window.ClubAuth?.firebase();},
- administrator(identity=window.ClubAuth?.user){return !!identity?.emailVerified&&identity.email.toLowerCase()===this.adminEmail;},
- user(){const identity=window.ClubAuth?.user;if(!identity)return null;const role=this.profile?.id===identity.uid?this.profile.role:'fan';return {...identity,id:identity.uid,active:!!identity.emailVerified,admin:this.administrator(identity),member:identity.emailVerified&&['member','member_player'].includes(role),player:identity.emailVerified&&['player','member_player'].includes(role),role,number:'',paid:false};},
+ administrator(identity=window.ClubAuth?.user){return !!identity&&identity.uid===this.adminUid&&identity.email.toLowerCase()===this.adminEmail&&!window.ClubDeletion?.pending;},
+ user(){const identity=window.ClubAuth?.user;if(!identity)return null;const role=this.profile?.id===identity.uid?this.profile.role:'fan';return {...identity,id:identity.uid,active:(this.administrator(identity)||!!window.ClubRegistration?.complete(this.profile))&&!window.ClubDeletion?.pending,admin:this.administrator(identity),member:!window.ClubDeletion?.pending&&['member','member_player'].includes(role),player:!window.ClubDeletion?.pending&&['player','member_player'].includes(role),role,number:'',paid:false};},
  async request(path,{method='GET',fields=null,missing=false}={}){
   const identity=ClubAuth.user;if(!identity)throw Error('Inicia sesión para continuar.');
   const credentials=await ClubAuth.request('token');
@@ -20,16 +20,23 @@ window.ClubAccess={
   }catch(error){if(error.name==='AbortError')throw Error('La conexión está tardando demasiado. Vuelve a intentarlo.');throw error;}
   finally{clearTimeout(timeout);}
  },
- decode(document){const fields=document.fields||{},role=fields.role?.stringValue||'fan';if(!Object.hasOwn(this.roles,role))throw Error('Permisos de usuario no válidos.');return {id:document.name.split('/').pop(),name:fields.name?.stringValue||'',email:fields.email?.stringValue||'',role};},
+ decode(document){const fields=document.fields||{},role=fields.role?.stringValue||'fan';if(!Object.hasOwn(this.roles,role))throw Error('Permisos de usuario no válidos.');return {id:document.name.split('/').pop(),...Object.fromEntries(Object.entries(fields).map(([key,value])=>[key,value.stringValue||''])),role};},
  async sync(){
   const sequence=++this.sequence,identity=ClubAuth.user;this.profile=null;this.users=[];this.error='';
+  this.fetching=!!identity&&this.enabled();if(window.ClubDeletion)ClubDeletion.pending=false;
   if(!identity||!this.enabled()){window.dispatchEvent(new CustomEvent('club-access-state'));return;}
   try{
+   if(window.ClubDeletion){const pending=await ClubDeletion.check(identity.uid);if(sequence!==this.sequence||ClubAuth.user?.uid!==identity.uid)return;ClubDeletion.pending=pending;if(pending){this.fetching=false;window.dispatchEvent(new CustomEvent('club-access-state'));return;}}
    const path='/'+encodeURIComponent(identity.uid);let document=await this.request(path,{missing:true});
-   if(!document){try{document=await this.request(path+'?currentDocument.exists=false',{method:'PATCH',fields:{name:(identity.name||identity.email.split('@')[0]).slice(0,100),email:identity.email,role:'fan'}});}catch(error){if(![409,412].includes(error.status))throw error;document=await this.request(path);}}
-   if(sequence===this.sequence&&ClubAuth.user?.uid===identity.uid)this.profile=this.decode(document);
+   if(sequence===this.sequence&&ClubAuth.user?.uid===identity.uid)this.profile=document?this.decode(document):null;
   }catch(error){if(sequence===this.sequence)this.error=error.message;}
-  if(sequence===this.sequence)window.dispatchEvent(new CustomEvent('club-access-state'));
+  if(sequence===this.sequence){this.fetching=false;window.dispatchEvent(new CustomEvent('club-access-state'));}
+ },
+ async saveRegistration(value){
+  const identity=ClubAuth.user;if(!identity)throw Error('Inicia sesión para continuar.');
+  const fields={...value,email:identity.email,role:this.profile?.role||'fan'};
+  const document=await this.request('/'+encodeURIComponent(identity.uid),{method:'PATCH',fields});
+  this.profile=this.decode(document);this.error='';this.fetching=false;window.dispatchEvent(new CustomEvent('club-access-state'));
  },
  async list(){
   if(!this.administrator())throw Error('Solo el administrador puede gestionar usuarios.');
@@ -46,10 +53,10 @@ window.ClubAccess={
  },
  rows(query=''){
   const E=value=>ClubAuth.escape(value),match=query.trim().toLocaleLowerCase('es'),rows=this.users.filter(user=>(user.name+' '+user.email).toLocaleLowerCase('es').includes(match));
-  return rows.length?rows.map(user=>`<article class="card admin-user"><div class="admin-user-heading"><span class="admin-avatar">${E((user.name||user.email).slice(0,1).toUpperCase())}</span><div><h3>${E(user.name||'Usuario del club')}</h3><p>${E(user.email)}</p></div></div>${user.email.toLowerCase()===this.adminEmail?'<span class="badge">Administrador</span>':`<form data-club-role="${E(user.id)}"><label>Acceso al club<select name="role">${Object.entries(this.roles).map(([role,label])=>`<option value="${role}"${role===user.role?' selected':''}>${label}</option>`).join('')}</select></label><button type="submit">Guardar rol</button><p class="role-feedback" role="status" aria-live="polite"></p></form>`}</article>`).join(''):CDM.empty(match?'No hay coincidencias':'Todavía no hay usuarios',match?'Prueba otro nombre o correo.':'Las cuentas aparecerán aquí cuando inicien sesión en esta versión de la app.','user');
+  return rows.length?rows.map(user=>`<article class="card admin-user"><div class="admin-user-heading"><span class="admin-avatar">${E((user.name||user.email).slice(0,1).toUpperCase())}</span><div><h3>${E(user.name||'Usuario del club')}</h3><p>${E(user.email)}</p><p>${E(({team:'Jugador/Cuerpo Técnico',member:'Socio',fan:'Aficionado'})[user.registrationType]||'Registro pendiente')}${user.memberNumber?' · Nº '+E(user.memberNumber):''}${user.category?' · '+E(user.category):''}${user.teamRole?' · '+E(user.teamRole==='player'?'Jugador':'Cuerpo Técnico'):''}${user.birthDate?' · Nacimiento: '+E(user.birthDate):''}</p></div></div>${user.email.toLowerCase()===this.adminEmail?'<span class="badge">Administrador</span>':`<form data-club-role="${E(user.id)}"><label>Acceso al club<select name="role">${Object.entries(this.roles).map(([role,label])=>`<option value="${role}"${role===user.role?' selected':''}>${label}</option>`).join('')}</select></label><button type="submit">Guardar rol</button><p class="role-feedback" role="status" aria-live="polite"></p></form><button type="button" data-delete-user="${E(user.id)}" class="account-danger">Eliminar cuenta</button>`}</article>`).join(''):CDM.empty(match?'No hay coincidencias':'Todavía no hay usuarios',match?'Prueba otro nombre o correo.':'Las cuentas aparecerán aquí cuando inicien sesión en esta versión de la app.','user');
  },
  screen(){
-  if(!this.administrator())return CDM.empty('Acceso de administrador','Inicia sesión con la cuenta de administración y verifica tu correo.','lock');
-  return `<div class="section-heading"><h2>Panel de control</h2><button type="button" class="text-action" data-reload-users>Actualizar</button></div><section class="card admin-summary"><span class="badge">ADMINISTRADOR</span><h3>Usuarios del club</h3><p>Asigna cada cuenta como aficionado, socio o jugador. También puedes combinar socio y jugador.</p><label>Buscar usuario<input type="search" data-user-search placeholder="Nombre o correo" autocomplete="off"></label></section><div id="club-users" aria-live="polite">${this.loading?'<section class="card"><p role="status">Cargando usuarios…</p></section>':this.error?`<section class="card"><p role="alert">${ClubAuth.escape(this.error)}</p><button type="button" data-reload-users>Reintentar</button></section>`:this.rows()}</div>`;
+  if(!this.administrator())return CDM.empty('Acceso de administrador','Inicia sesión con la cuenta de administración del club.','lock');
+  return `<div class="section-heading"><h2>Panel de control</h2><button type="button" class="text-action" data-reload-users>Actualizar</button></div><section class="card admin-summary"><span class="badge">ADMINISTRADOR</span><h3>Usuarios del club</h3><p>Asigna cada cuenta como aficionado, socio o jugador. También puedes combinar socio y jugador, o eliminar una cuenta con confirmación.</p><label>Buscar usuario<input type="search" data-user-search placeholder="Nombre o correo" autocomplete="off"></label></section><div id="club-users" aria-live="polite">${this.loading?'<section class="card"><p role="status">Cargando usuarios…</p></section>':this.error?`<section class="card"><p role="alert">${ClubAuth.escape(this.error)}</p><button type="button" data-reload-users>Reintentar</button></section>`:this.rows()}</div>`;
  }
 };

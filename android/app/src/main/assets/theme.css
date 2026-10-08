@@ -477,3 +477,8 @@ input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
 .admin-user form{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px}.admin-user label{margin:0}.admin-user button{min-height:46px}
 .role-feedback{grid-column:1/-1;font-size:13px;min-height:21px;color:inherit}
 @media(max-width:420px){.news-article{padding:18px!important}.admin-user form{grid-template-columns:1fr}.admin-user button{width:100%}}
+
+/* Clear, readable fixture times on the light palette. */
+:root[data-theme="light"] .match-time > strong:not(.fixture-score),:root[data-theme="light"] .fixture-card .match-time :is(span,small),:root[data-theme="light"] .result-acta > strong:not(.fixture-score){color:#145da8!important}
+:root[data-theme="light"] :is(.profile-btn,.header-actions button,.card .text-action,.team-tabs button,.round-tabs .round-tab,#nav button.selected){color:#145da8}
+:root[data-theme="light"] :is(.team-tabs button.active,.round-tabs .round-tab.active){color:white;background:var(--accent)}

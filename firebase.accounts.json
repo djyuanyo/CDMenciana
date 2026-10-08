@@ -1,0 +1,4 @@
+{
+  "functions": [{ "source": "functions", "codebase": "club-accounts", "runtime": "nodejs22" }],
+  "firestore": { "rules": "firestore.rules" }
+}

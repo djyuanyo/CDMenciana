@@ -132,7 +132,11 @@ console.log('Player cards distinguish played matches from call-ups, keep publish
  W.scrollTo=()=>{};
  W.fetch=async url=>({ok:true,json:async()=>String(url).startsWith('actas/')?JSON.parse(JSON.stringify(data)):String(url).startsWith('news')?{news:[]}:f.data});
  W.RfafResolver={resolveActaPlayers(){actaRequests++},resolvePlayerProfile(url,id){profileRequests++;assert(url.includes('jugador=77'));W.Fixtures.applyResolvedProfile(id,{stats:exact.stats,photo:''});}};
- for(const file of ['appearance.js','ui.js','auth.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js','offline.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+file,'utf8'));
+ for(const file of ['appearance.js','ui.js','auth.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+file,'utf8'));
+ // Acta navigation is tested with a signed-in user; the registration gate has its own tests.
+ W.ClubAuth.user={uid:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',email:'juanjocarrillo7@gmail.com',emailVerified:true};
+ W.ClubAuth.init=async()=>{};W.ClubAccess.sync=async()=>{};
+ W.eval(fs.readFileSync('android/app/src/main/assets/offline.js','utf8'));
  const settle=()=>new Promise(resolve=>W.setTimeout(resolve,20));await settle();
  assert.equal(profileRequests,0,'Opening the acta must not fetch every player statistics page');
  const a=W.document.querySelector('a[data-player-link][href="#jugador=1234abcd&acta=2645766&equipo=first"]');assert(a);

@@ -80,3 +80,69 @@ Una cuenta antigua que ya utiliza ese correo no se vincula automáticamente: req
 - Si se configura el servidor, confirmar que un registro nuevo no tiene acceso a socios, jugadores o administración hasta que el club lo apruebe.
 
 Las pruebas automatizadas validan la interfaz, los errores, la identidad y los permisos con transportes de prueba. No sustituyen esta comprobación del proveedor real y del certificado instalado.
+
+## Registro obligatorio desde 0.22.0
+
+La app abre Mi cuenta cuando falta la sesión y mantiene la navegación bloqueada hasta completar el perfil del club. Google autentica la identidad, pero no sustituye el formulario de registro. Las cuentas existentes con un perfil antiguo deben completar también los datos, conservando su rol aprobado.
+
+`registrationType` identifica la declaración: `fan`, `member` o `team`. Los socios aportan `memberNumber`; el equipo aporta `teamRole` (`player` o `staff`) y una categoría de la lista cerrada. Los jugadores aportan `birthDate` en formato YYYY-MM-DD. Firestore solo admite perfiles completos, números de socio numéricos, categorías válidas y fechas reales no futuras. El perfil usa `registrationComplete: 'true'`. Los usuarios no pueden modificar el rol de acceso aprobado: las declaraciones se muestran al administrador para su revisión.
+
+Se verificaron el flujo Google, los campos condicionales, las siete categorías, las reglas en el emulador, los perfiles existentes, las horas azules y el diseño en cuatro anchuras y ambos temas. La entrega Android conserva el código nativo de 0.21.0 y sustituye los recursos web; `tools/repackage_assets.py` actualiza el manifiesto a 0.22.0/36, y la APK se alinea y firma con el mismo certificado registrado. La compilación Gradle completa no estuvo disponible por falta de acceso a sus dependencias.
+
+
+## Eliminación de cuentas desde 0.23.0
+
+En Android y Hosting, Mi cuenta y el formulario de registro incompleto ofrecen Eliminar mi cuenta. Siempre se confirma el correo de la cuenta y se avisa de que la cuenta de Google permanece intacta. Se exige haber iniciado sesión hace menos de cuatro minutos (las reglas admiten cinco); una sesión antigua pide cerrar sesión y volver a entrar sin iniciar el borrado automáticamente.
+
+El cliente borra el documento clubUsers y crea clubDeletedAccounts/{uid} en un único commit de Firestore. Ese marcador solo conserva el UID y requestedAt, sin correo, nombre ni datos de registro, y bloquea la lectura y recreación del perfil con tokens antiguos. A continuación borra la identidad mediante accounts:delete con el token del propio usuario y cierra la sesión. Un fallo deja una pantalla de eliminación pendiente con reintento; nunca se muestra éxito mientras falta borrar la identidad. Las reglas se probaron en el emulador y se publicaron en el proyecto el 8 de octubre de 2026 (15:07, consola).
+
+El panel incluye Eliminar cuenta para otros usuarios. La operación llama a deleteClubAccount, cuyo código está en functions/. El servicio verifica el token con revocación y el usuario real de Firebase, exige la cuenta administradora verificada y una sesión reciente, protege al administrador y rechaza cuentas ajenas al club. Bloquea los tokens antiguos, elimina Authentication y borra recursivamente el perfil; conserva el perfil si falla Authentication para que el administrador pueda reintentar. Ninguna clave de servicio se incluye en la APK.
+
+**Estado de despliegue:** el borrado propio está habilitado mediante las reglas publicadas. El servicio de administración todavía NO está desplegado: el proyecto sigue en Spark. Firebase exige Blaze y una cuenta de facturación para desplegar Cloud Functions. No se ha cambiado el plan ni añadido facturación. El botón no confirma ningún borrado si el servicio no responde.
+
+Cuando el titular haya habilitado Blaze, desplegar únicamente este servicio (no tocar funciones de otras aplicaciones del mismo proyecto):
+
+```sh
+npm --prefix functions install
+firebase deploy --project barpro-pos-menciana --config firebase.accounts.json --only functions:deleteClubAccount
+```
+
+La APK 0.23.0/37 mantiene sin cambios el código nativo de 0.21.0; se actualizan los recursos web y el manifiesto, se alinea y se firma con el mismo certificado debug. La compilación completa sigue dependiendo del acceso a los repositorios Gradle. Se comprobaron las reglas, el transporte, la confirmación/cancelación en ambos temas, el reintento tras fallo de Auth y los flujos de registro anteriores con datos simulados, sin eliminar cuentas reales.
+
+
+## Registro dentro de la app y administrador desde 0.24.0
+
+Esta versión sustituye la exigencia de verificación por correo de las versiones anteriores. El registro solo se completa al guardar el formulario de datos del club dentro de la app, tanto con correo/contraseña como con Google. Sigue siendo obligatorio elegir Jugador/Cuerpo Técnico, Socio o Aficionado, y completar el número de socio o categoría y fecha de nacimiento según corresponda. Los accesos aprobados de socio/jugador ya no dependen de emailVerified.
+
+La cuenta de administración se vincula al UID real observado en Firebase Authentication: ZJeZEjtDeMRCYL0UOuvhGt0gNCT2, con correo juanjocarrillo7@gmail.com. Tanto el cliente como las reglas y el servicio preparado de eliminación comprueban esa identidad; una cuenta diferente no obtiene privilegios por presentar ese correo. Tras completar el perfil aparece Administrador y Panel de control en Mi cuenta, también si emailVerified es false. La sesión y contraseña/Google siguen siendo obligatorios.
+
+La web crea usuarios con el SDK sin sendEmailVerification. Android crea la identidad por accounts:signUp y actualiza el nombre por accounts:update, sin sendOobCode; después inicia sesión mediante el SDK nativo, que conserva y restaura la sesión. Este recorrido evita la acción de registro antigua del contenedor, que enviaba el correo de verificación. El nombre y los datos del club se guardan obligatoriamente en Firestore. No se guardan contraseñas ni tokens en almacenamiento propio. La recuperación de contraseña conserva su correo de recuperación.
+
+Se probaron el registro nativo sin correos, los campos obligatorios antes de crear la identidad, el guardado del perfil sin correo verificado, la identificación del administrador, el rechazo de otra identidad con el mismo correo, las reglas en emulador y el panel en Chromium. También pasaron las pruebas de eliminación, noticias, roles y temas. La entrega 0.24.0/38 actualiza recursos y manifiesto con el mismo contenedor nativo y certificado debug; no se modificó Java ni se recompiló Gradle.
+
+El servicio para eliminar cuentas ajenas sigue pendiente de desplegar por requerir Blaze. Los roles y el panel funcionan con Spark y no requieren ese servicio.
+
+## Favoritos y avisos de resultados (0.26.0)
+
+Los equipos disponibles pertenecen a las dos competiciones que ya consulta la app. Se identifican por `teamKey` (first/filial) y el código oficial `Codigo_Equipo` de RFAF, conservando por separado categorías con nombres parecidos. Hay estrellas en partidos y clasificación, y Más → Mis favoritos. Los favoritos se guardan en `clubUsers/{uid}/favorites/{teamKey}_{teamId}`; las reglas permiten leer, añadir y quitar solamente los propios. Al cambiar la identidad se vacía inmediatamente la vista y se descartan respuestas de la sesión anterior. El borrado propio limpia favoritos y dispositivos junto al perfil en el commit de eliminación. Las reglas se probaron en el emulador y se publicaron en el proyecto el 8 de octubre de 2026 (18:17, consola).
+
+La integración nativa de Firebase Messaging está en `ClubPush` y `ClubMessagingService`. El permiso se pide al pulsar Activar notificaciones (POST_NOTIFICATIONS en Android 13+). El token se registra con el token Auth del usuario; desactivar o cerrar sesión silencia el móvil y cancela sus avisos. Cada mensaje lleva el UID destinatario; el servicio comprueba sesión, consentimiento, permiso y duplicados antes de mostrar el resultado. Se usan mensajes de datos para evitar que Android muestre automáticamente avisos de una cuenta que ya ha cerrado sesión. Pulsar el aviso abre el acta dentro de la app, pasando por el acceso y registro habituales.
+
+`notifyFavoriteResults` consulta cada cinco minutos los datos públicos que el sincronizador RFAF ya actualiza en GitHub cada treinta minutos. El aviso depende de que RFAF publique el resultado y el sincronizador lo detecte; no es un marcador en directo. La primera lectura crea una referencia sin avisar de resultados antiguos; solo las transiciones de pendiente a Finalizado con marcador numérico confirmado generan eventos. Seguir a ambos participantes genera un único aviso por dispositivo. Las entregas tienen reclamación temporal, reintento de fallos, invalidación de tokens y comprobación final de baja/favoritos. Los datos de eventos y envíos solo son accesibles al servidor.
+
+**Estado:** el almacenamiento de favoritos está habilitado y Android se ha compilado completo con FCM en GitHub Actions (8 de octubre de 2026). La APK con sufijo `favoritos` era una entrega parcial; `CDMenciana-0.26.0.apk` incluye el receptor nativo. La subida a `feature/favorites-results-0260` fue autorizada por el titular. No se cambió la facturación.
+
+### Envío gratuito sin Blaze
+
+La opción seleccionada usa Firebase Cloud Messaging (sin coste) y runners estándar de GitHub Actions en este repositorio público (sin coste). `.github/workflows/notify-results.yml` ejecuta `functions/github-results.js` cada treinta minutos, cinco minutos después del horario previsto del sincronizador RFAF. GitHub puede retrasar o saltarse una ejecución programada; no se garantiza el aviso inmediatamente al acabar un partido. Se reutiliza `pollResults`, con la misma persistencia y protección frente a duplicados, bajas y favoritos retirados. Los datos privados se conservan en Firestore, nunca en el repositorio ni en artefactos de Actions.
+
+Para activar esta opción faltan dos pasos de configuración:
+
+1. Incorporar el workflow y el código revisado a `main`; los cron solo se ejecutan desde la rama predeterminada. El workflow rechaza otras ramas y no se ejecuta en pull requests.
+2. Crear una cuenta de servicio dedicada en el proyecto `barpro-pos-menciana`, con permisos de lectura de Firebase Authentication, acceso servidor a Firestore y envío FCM. Guardar su JSON exclusivamente en el secreto de Actions **CDM_FIREBASE_SERVICE_ACCOUNT** del repositorio. No añadir la clave a Git, APK, ZIP ni mensajes. Habilitar Firebase Cloud Messaging API si estuviera desactivada. No es necesario habilitar Blaze ni desplegar `notifyFavoriteResults` en Cloud Functions.
+
+La conexión todavía no está configurada: **el envío automático aún no está activo**. El servicio activa `clubNotificationConfig/status` solo tras una consulta correcta; la interfaz no confirma disponibilidad si ese estado falta. Firestore se mantiene en Spark: si se agota su cuota gratuita, se interrumpe el servicio en vez de generar cargos. Los cron dejan de ejecutarse tras el período de inactividad que aplica GitHub a repositorios públicos.
+
+Después de configurar el secreto, ejecutar manualmente “Avisos gratuitos de resultados” en `main` para crear la referencia inicial sin enviar resultados antiguos. Probar un dispositivo real con permiso concedido, app cerrada, resultado nuevo, favorito quitado y cambio de cuenta. Las pruebas automatizadas de interfaz/servidor/reglas y la compilación Android no sustituyen esa prueba real de entrega FCM.
+
+La función Cloud Functions se conserva como alternativa opcional para otros despliegues; no debe activarse a la vez que el cron. El borrado administrativo de cuentas continúa siendo un servicio separado pendiente de configurar; no se despliega ni se modifica en este cambio.

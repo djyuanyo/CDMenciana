@@ -1,0 +1,31 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),{JSDOM}=require('jsdom');
+async function run(){
+ const dom=new JSDOM('<main></main>',{url:'https://cdmenciana.web.app/',runScripts:'outside-only'}),W=dom.window;
+ W.CDM={icon:()=>'',empty:()=>''};W.eval(fs.readFileSync('server/static/auth.js','utf8'));W.eval(fs.readFileSync('server/static/registration.js','utf8'));W.eval(fs.readFileSync('server/static/club-access.js','utf8'));
+ const R=W.ClubRegistration,A=W.ClubAuth,C=W.ClubAccess;
+ const fan={name:'Club Fan',registrationType:'fan'};
+ assert.throws(()=>R.validate({name:'User'}),/Selecciona/);
+ assert.throws(()=>R.validate({name:'Member',registrationType:'member'}),/número/);
+ assert.throws(()=>R.validate({name:'Member',registrationType:'member',memberNumber:'abc'}),/número/);
+ assert.equal(R.validate({name:'Member',registrationType:'member',memberNumber:'0012'}).memberNumber,'0012');
+ const player={name:'Club Player',registrationType:'team',teamRole:'player',category:'Infantil'};
+ assert.throws(()=>R.validate(player),/fecha/);
+ assert.throws(()=>R.validate({...player,birthDate:'2025-02-30'}),/fecha/);
+ assert.throws(()=>R.validate({...player,birthDate:'2099-01-01'}),/fecha/);
+ assert.throws(()=>R.validate({...player,birthDate:'2001-01-01',category:'Inventada'}),/categoría/);
+ for(const category of R.categories)assert.equal(R.validate({...player,category,birthDate:'2012-03-20'}).category,category);
+ assert.equal(R.validate({...player,teamRole:'staff'}).birthDate,'');
+ assert(!R.complete({name:'Old account',email:'old@club.test',role:'member'}),'Old incomplete profiles require completion');
+ A.configured=true;A.google=true;A.firebase=()=>true;A.user={uid:'google',name:'Google User',email:'google@club.test',emailVerified:true};
+ W.document.querySelector('main').innerHTML=A.screen();assert(W.document.querySelector('[data-registration-form]'));assert(!W.document.querySelector('[data-page="Inicio"]'));
+ const form=W.document.querySelector('form');form.elements.registrationType.value='member';form.elements.registrationType.dispatchEvent(new W.Event('change',{bubbles:true}));assert(form.elements.memberNumber.required&&!form.elements.memberNumber.disabled);assert(form.elements.category.disabled);
+ form.elements.registrationType.value='team';R.update(form);form.elements.teamRole.value='player';R.update(form);assert(form.elements.birthDate.required&&!form.elements.birthDate.disabled);assert(!form.elements.memberNumber.required&&form.elements.memberNumber.disabled);
+ form.elements.teamRole.value='staff';R.update(form);assert(form.elements.birthDate.disabled);
+ let writes=0;C.request=async(path,{fields}={})=>{writes++;return {name:'clubUsers/google',fields:Object.fromEntries(Object.entries(fields).map(([key,value])=>[key,{stringValue:value}]))};};
+ await assert.rejects(R.save({...player}),/fecha/);assert.equal(writes,0);
+ await R.save(fan);assert(R.complete(C.profile));assert.equal(C.profile.role,'fan');assert(W.ClubAccess.user().active);assert(A.screen().includes('account-card'));
+ C.profile.role='member';await R.save({name:'Member',registrationType:'member',memberNumber:'12'});assert.equal(C.profile.role,'member','Existing approved role survives registration upgrade');
+ A.user=null;await C.sync();assert.equal(C.profile,null);assert(!A.screen().includes('Seguir sin iniciar sesión'));dom.window.close();
+ console.log('Mandatory Google/email profile, seven categories, conditional fields, birthday validation, saved completion and existing role preservation passed.');
+}
+run().catch(error=>{console.error(error);process.exitCode=1;});
