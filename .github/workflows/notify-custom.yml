@@ -1,5 +1,11 @@
 name: Avisos personalizados del club
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/notify-custom.yml', 'functions/custom-notifications.js']
+  workflow_run:
+    workflows: [Actualizar partidos RFAF]
+    types: [completed]
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:

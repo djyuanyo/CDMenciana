@@ -6,11 +6,12 @@ function validRequest(v){return v.createdBy===ADMIN&&['all','first','filial'].in
 function subscribed(v,rows){return v.teamKey==='all'||rows.some(f=>f.teamKey===v.teamKey&&f.teamId===TEAMS[v.teamKey]);}
 async function processCustom({db,auth,messaging,Timestamp,now=Date.now}){
  const pending=await db.collection('clubNotificationRequests').where('status','==','pending').limit(50).get();
+ console.log('Solicitudes pendientes: '+pending.docs.length);
  if(pending.empty)return;
  const owner=await auth.getUser(ADMIN);if(owner.disabled||owner.email?.toLowerCase()!==EMAIL)throw Error('Administrator unavailable');
  for(const request of pending.docs){
   const v=request.data();if(!validRequest(v)){await request.ref.update({status:'invalid'});continue;}
-  const eventId=createHash('sha256').update('custom|'+request.id).digest('hex');let retry=false;
+  const eventId=createHash('sha256').update('custom|'+request.id).digest('hex');let retry=false,accepted=0;
   const devices=await db.collectionGroup('devices').get();
   for(const device of devices.docs){
    const uid=device.ref.parent.parent.id,ref=db.collection('clubCustomDeliveries').doc(request.id+'_'+uid+'_'+device.id);let claimed=false;
@@ -20,10 +21,11 @@ async function processCustom({db,auth,messaging,Timestamp,now=Date.now}){
    let account;try{account=await auth.getUser(uid);}catch{}
    const d=current.exists?current.data():null,ready=uid===ADMIN||profile.exists&&profile.data().registrationComplete==='true';
    if(!account||account.disabled||marker.exists||!ready||!d||d.uid!==uid||!d.enabled||typeof d.token!=='string'||d.token.length<20||!subscribed(v,favorites.docs.map(f=>f.data()))){await ref.set({status:'skipped'});continue;}
-   try{await messaging.send({token:d.token,data:{uid,eventId,teamKey:v.teamKey,acta:'',title:v.title,body:v.body,type:'custom'},android:{priority:'high',ttl:3600000}});await ref.set({status:'sent',sentAt:Timestamp.fromMillis(now())});}
+   try{await messaging.send({token:d.token,data:{uid,eventId,teamKey:v.teamKey,acta:'',title:v.title,body:v.body,type:'custom'},android:{priority:'high',ttl:3600000}});await ref.set({requestId:request.id,status:'sent',sentAt:Timestamp.fromMillis(now())});accepted++;}
    catch(e){if(['messaging/registration-token-not-registered','messaging/invalid-registration-token'].includes(e.code)){await device.ref.delete();await ref.set({status:'invalid'});}else{await ref.set({status:'retry',leaseUntil:0});retry=true;}}
   }
   if(!retry)await request.ref.update({status:'sent',processedAt:Timestamp.fromMillis(now())});
+  console.log('Aviso procesado; entregas aceptadas: '+accepted+'; reintento: '+retry);
  }
 }
 module.exports={validRequest,subscribed,processCustom};
