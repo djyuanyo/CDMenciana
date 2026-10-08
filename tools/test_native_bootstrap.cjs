@@ -37,7 +37,7 @@ const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),
   await page.locator('.profile-btn[data-page="Mi cuenta"]').click();
   await page.waitForSelector('[data-page="Administración"]');
   assert(await page.getByText('Administrador',{exact:true}).isVisible());assert.equal(await page.locator('[data-registration-dialog]').count(),0);
-  await page.locator('[data-page="Administración"]').click();await page.waitForSelector('.admin-summary');
+  await page.locator('[data-page="Administración"]').click();await page.waitForSelector('.admin-summary');await page.locator('[data-page="Administración users"]').click();await page.waitForSelector('[data-user-search]');
   if(process.env.CDM_QA_OUTPUT)await page.screenshot({path:path.join(process.env.CDM_QA_OUTPUT,'panel-admin-025-'+theme+'.png')});
   await page.locator('.profile-btn[data-page="Mi cuenta"]').click();await page.locator('[data-auth-action=logout]').click();await page.waitForSelector('[data-auth-form=login]');
   await page.evaluate(()=>testNextIdentity={uid:'ordinary',email:'ordinary@club.test',name:'Otra cuenta',emailVerified:true});

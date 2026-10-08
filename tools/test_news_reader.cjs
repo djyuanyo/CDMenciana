@@ -12,6 +12,11 @@ async function run(){
  D.querySelector('[data-news-back]').click();assert.equal(W.location.hash,'');assert.equal(D.body.dataset.page,'Inicio');
  W.ClubAuth.user={uid:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',name:'Juanjo',email:'juanjocarrillo7@gmail.com',emailVerified:true};W.ClubAuth.firebase=()=>true;W.ClubAccess.sync=async()=>W.dispatchEvent(new W.CustomEvent('club-access-state'));W.ClubAccess.list=async()=>{W.ClubAccess.users=[{id:'fan',name:'Aficionado',email:'fan@club.test',role:'fan'}];};
  D.querySelector('[data-page="Mi cuenta"]').click();assert(D.querySelector('[data-page="Administración"]'));D.querySelector('[data-page="Administración"]').click();await new Promise(resolve=>setTimeout(resolve,30));
+ assert(!D.querySelector('[data-club-role]'));assert(!D.querySelector('[data-club-notification]'));
+ D.querySelector('[data-page="Administración notifications"]').click();assert(D.querySelector('[data-club-notification]'));assert(!D.querySelector('[data-notification-history]'));assert(!D.querySelector('[data-user-search]'));
+ D.querySelector('.admin-back').click();D.querySelector('[data-page="Administración history"]').click();assert(D.querySelector('[data-notification-history]'));assert(!D.querySelector('[data-club-notification]'));
+ D.querySelector('.admin-back').click();
+ D.querySelector('[data-page="Administración users"]').click();await new Promise(resolve=>setTimeout(resolve,30));
  assert(D.querySelector('[data-club-role="fan"]'));W.ClubAccess.setRole=async(id,role)=>{assert.equal(id,'fan');assert.equal(role,'member');};
  const form=D.querySelector('[data-club-role]');form.querySelector('select').value='member';form.dispatchEvent(new W.Event('submit',{bubbles:true,cancelable:true}));await new Promise(resolve=>setTimeout(resolve,30));assert(form.querySelector('.role-feedback').textContent==='Rol guardado.');
  W.ClubAuth.user=null;W.dispatchEvent(new W.CustomEvent('club-auth-state'));assert(!D.querySelector('[data-club-role]'));assert.equal(D.body.dataset.page,'Mi cuenta');

@@ -1,0 +1,11 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:process.env.CDM_CHROMIUM,args:['--no-sandbox']});try{for(const theme of ['light','dark'])for(const width of [360,430,900]){
+ const page=await browser.newPage({viewport:{width,height:900}});await page.setContent('<html data-theme="'+theme+'"><body><main id="main"></main></body></html>');for(const name of ['style.css','theme.css'])await page.addStyleTag({content:fs.readFileSync('android/app/src/main/assets/'+name,'utf8')});for(const name of ['ui.js','fixtures.js'])await page.addScriptTag({content:fs.readFileSync('android/app/src/main/assets/'+name,'utf8')});
+ const feed=JSON.parse(fs.readFileSync('data/fixtures.json','utf8'));
+ await page.evaluate(feed=>{Fixtures.data=feed;const m={...feed.matches[0],home:'C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS',away:'Cádiz',date:'2026-10-11',played:false,state:'Programado',time:'18:00'};document.getElementById('main').innerHTML=Fixtures.card(m);},feed);
+ let crestIndex=0;for(const img of await page.locator('img').all()){const names=['4ab95fc6e9dcc159.jpg','62c2362186b53ac7.png'];const src='crests/'+names[crestIndex++];await img.evaluate(async(el,data)=>{el.src=data;await el.decode();},'data:image/'+(src.endsWith('.png')?'png':'jpeg')+';base64,'+fs.readFileSync('android/app/src/main/assets/'+src).toString('base64'));}
+
+ const metrics=await page.evaluate(()=>{const card=document.querySelector('.fixture-card'),crests=[...document.querySelectorAll('.fixture-team img')].map(el=>el.getBoundingClientRect().top),date=document.querySelector('.fixture-date');return {crests,text:date.textContent,font:getComputedStyle(date).fontSize,overflow:card.scrollWidth>card.clientWidth};});
+ assert.equal(metrics.text,'Domingo 11 Octubre 2026');assert.equal(metrics.font,'12px');assert.equal(metrics.crests.length,2);assert(Math.abs(metrics.crests[0]-metrics.crests[1])<1);assert(!metrics.overflow);
+ if(width===360&&process.env.CDM_QA_OUTPUT)await page.screenshot({path:process.env.CDM_QA_OUTPUT+'/partido-'+theme+'.png'});await page.close();
+}console.log('Crests aligned, long Spanish dates at 12px, no card overflow: 360/430/900px, light/dark.');}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -11,14 +11,14 @@ function render(){
  const gate=!ClubAuth.user||ClubAccess.fetching||(!ClubAccess.administrator()&&!ClubRegistration.complete(ClubAccess.profile));
  if(gate)page='Mi cuenta';
  document.documentElement.dataset.accountGate=String(gate);
- if(page==='Administración'&&!user?.admin)page='Mi cuenta';
+ if(page.startsWith('Administración')&&!user?.admin)page='Mi cuenta';
  CDM.shell(page,user);
  let body='';
  const route=routeState();
  if(page==='Inicio')body=Fixtures.overview();
  if(page==='Noticia')body=ClubNews.screen();
  if(page==='Favoritos')body=ClubFavorites.screen();
- if(page==='Administración')body=ClubAccess.screen();
+ if(page==='Administración'||['Administración users','Administración notifications','Administración history'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
  if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'',route?.origin==='plantilla')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
@@ -32,7 +32,7 @@ function render(){
  main.innerHTML=body;
  if(page==='Partidos')Fixtures.syncRoundTabs();
 }
-document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración')loadClubUsers();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();window.scrollTo(0,0)}});
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración users')loadClubUsers();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();window.scrollTo(0,0)}});
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
 document.addEventListener('click',e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;render();Fixtures.syncRoundTabs(true);}});
 render();Fixtures.load().then(()=>routeState()?reportRoute():render());
@@ -78,14 +78,14 @@ function newsRoute(){page='Noticia';render();window.scrollTo(0,0);}
 if(ClubNews.route())newsRoute();
 window.addEventListener('club-auth-state',()=>{if(!ClubAuth.user)page='Mi cuenta';ClubAccess.sync();render();});
 window.addEventListener('club-registration-complete',()=>{page='Inicio';render();});
-window.addEventListener('club-access-state',()=>{render();if(page==='Administración')loadClubUsers();});
+window.addEventListener('club-access-state',()=>{render();if(page==='Administración users')loadClubUsers();});
 window.addEventListener('club-auth-view',()=>{if(page==='Mi cuenta')render();});
 window.ClubAuth?.init().then(async()=>{await ClubAccess.sync();if(ClubRegistration.complete(ClubAccess.profile)||ClubAccess.administrator()){if(ClubNews.route()){newsRoute();return;}if(routeState()){reportRoute();return;}if(page==='Mi cuenta')page='Inicio';}render();});
 async function loadClubUsers(){
  if(!ClubAccess.administrator()||ClubAccess.loading)return;
  const identity=ClubAuth.user.uid;ClubAccess.loading=true;ClubAccess.error='';render();
  try{await ClubAccess.list();}catch(error){if(ClubAuth.user?.uid===identity)ClubAccess.error=error.message;}
- finally{ClubAccess.loading=false;if(page==='Administración')render();}
+ finally{ClubAccess.loading=false;if(page==='Administración users')render();}
 }
 document.addEventListener('click',event=>{
  if(event.target.closest('[data-news-back]')){history.replaceState(null,'',location.pathname);page='Inicio';render();window.scrollTo(0,0);}
