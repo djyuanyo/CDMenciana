@@ -381,7 +381,7 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
         print(f"Acta {id} pendiente: {errors[-1] if errors else 'fuente no disponible'}",flush=True);return id,None
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:reports=dict(pool.map(fetch_report,urls.items()))
 
-    cache_path=root/(PROFILE_CACHE if fixtures_filename=='fixtures.json' else 'data/rfaf-player-profiles-filial.json')
+    cache_path=root/(PROFILE_CACHE if fixtures_filename=='fixtures.json' else 'data/rfaf-player-profiles'+fixtures_filename.removeprefix('fixtures').removesuffix('.json')+'.json')
     try:cache=json.loads(cache_path.read_text(encoding='utf-8')).get('profiles',{})
     except (OSError,ValueError,AttributeError):cache={}
     refs={p['profile_url']:p for data in reports.values() if data for p in data.get('players',[]) if p.get('profile_url')}

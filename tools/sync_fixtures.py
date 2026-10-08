@@ -27,7 +27,7 @@ class Document(HTMLParser):
         for n in self.stack:n.parts.append(text)
 
 def normalize(name):return ''.join(c for c in unicodedata.normalize('NFKD',name.upper()) if not unicodedata.combining(c))
-def is_club(name):return 'APAGA Y VAMONOS' in normalize(name)
+def is_club(name):return 'APAGA Y VAMONOS' in normalize(name) or 'C.D. MENCIANA' in normalize(name)
 def fetch(url):
     last=None
     for retry in range(3):
