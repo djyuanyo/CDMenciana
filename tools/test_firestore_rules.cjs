@@ -1,16 +1,32 @@
 const fs=require('node:fs');
 const {initializeTestEnvironment,assertFails,assertSucceeds}=require('@firebase/rules-unit-testing');
-const {doc,setDoc,getDoc,getDocs,collection,updateDoc,deleteDoc}=require('firebase/firestore');
+const {doc,setDoc,getDoc,getDocs,collection,updateDoc,deleteDoc,writeBatch,serverTimestamp}=require('firebase/firestore');
 async function run(){
  const env=await initializeTestEnvironment({projectId:'demo-cdmenciana',firestore:{rules:fs.readFileSync('firestore.rules','utf8')}});
  try{
+  const completed={registrationType:'fan',teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'};
   const fan=env.authenticatedContext('fan',{email:'fan@club.test',email_verified:true}).firestore();
-  const owner=env.authenticatedContext('owner',{email:'juanjocarrillo7@gmail.com',email_verified:true}).firestore();
-  const unverified=env.authenticatedContext('owner',{email:'juanjocarrillo7@gmail.com',email_verified:false}).firestore();
+  const owner=env.authenticatedContext('ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',{email:'juanjocarrillo7@gmail.com',email_verified:false}).firestore();
+  const unverified=env.authenticatedContext('impostor',{email:'juanjocarrillo7@gmail.com',email_verified:false}).firestore();
   const anonymous=env.unauthenticatedContext().firestore();
-  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan'),{name:'Fan',email:'fan@club.test',role:'fan'}));
+  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan'),{...completed,name:'Fan',email:'fan@club.test',role:'fan'}));
   await assertSucceeds(getDoc(doc(fan,'clubUsers/fan')));
-  await assertFails(setDoc(doc(fan,'clubUsers/another'),{name:'Forged',email:'fan@club.test',role:'fan'}));
+  const favorite={teamKey:'first',teamId:'123',teamName:'Equipo',createdAt:'2026-10-08T16:00:00.000Z'};
+  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan/favorites/first_123'),favorite));
+  await assertSucceeds(getDocs(collection(fan,'clubUsers/fan/favorites')));
+  await assertFails(getDocs(collection(owner,'clubUsers/fan/favorites')));
+  await assertFails(setDoc(doc(fan,'clubUsers/another/favorites/first_123'),favorite));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/first_124'),favorite));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/first_321'),{...favorite,teamId:'321',role:'admin'}));
+  await assertFails(setDoc(doc(anonymous,'clubUsers/fan/favorites/first_123'),favorite));
+  const device={uid:'fan',token:'valid-token-12345678901234567890',enabled:true,updatedAt:serverTimestamp()};
+  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan/devices/'+ 'a'.repeat(64)),device));
+  await assertFails(getDocs(collection(owner,'clubUsers/fan/devices')));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/devices/'+ 'b'.repeat(64)),{...device,uid:'owner'}));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/devices/'+ 'c'.repeat(64)),{...device,updatedAt:'forged'}));
+  await assertFails(setDoc(doc(fan,'clubResultEvents/event'),{score:'forged'}));
+
+  await assertFails(setDoc(doc(fan,'clubUsers/another'),{...completed,name:'Forged',email:'fan@club.test',role:'fan'}));
   await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{role:'member'}));
   await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{admin:true}));
   await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{email:'juanjocarrillo7@gmail.com'}));
@@ -23,10 +39,32 @@ async function run(){
   await assertFails(updateDoc(doc(owner,'clubUsers/fan'),{role:'admin'}));
   await assertFails(updateDoc(doc(owner,'clubUsers/fan'),{name:'Changed identity'}));
   await assertFails(deleteDoc(doc(owner,'clubUsers/fan')));
-  await assertSucceeds(setDoc(doc(owner,'clubUsers/owner'),{name:'Owner',email:'juanjocarrillo7@gmail.com',role:'fan'}));
-  await assertFails(updateDoc(doc(owner,'clubUsers/owner'),{role:'player'}));
+  await assertSucceeds(setDoc(doc(owner,'clubUsers/ZJeZEjtDeMRCYL0UOuvhGt0gNCT2'),{...completed,name:'Owner',email:'juanjocarrillo7@gmail.com',role:'fan'}));
+  await assertFails(updateDoc(doc(owner,'clubUsers/ZJeZEjtDeMRCYL0UOuvhGt0gNCT2'),{role:'player'}));
   await assertFails(getDoc(doc(owner,'posUsers/another-app')));
-  console.log('Firestore: only verified owner lists and changes roles; self-escalation, identity spoofing, deletion and other collections denied.');
+  await assertFails(setDoc(doc(fan,'clubUsers/fan'),{name:'Incomplete',email:'fan@club.test',role:'fan'}));
+  await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'member',memberNumber:''}));
+  await assertSucceeds(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'member',memberNumber:'0012'}));
+  await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'team',teamRole:'player',category:'Infantil',memberNumber:'',birthDate:''}));
+  await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'team',teamRole:'player',category:'Infantil',memberNumber:'',birthDate:'2099-01-01'}));
+  await assertFails(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'team',teamRole:'player',category:'Infantil',memberNumber:'',birthDate:'2012-02-30'}));
+  await assertSucceeds(updateDoc(doc(fan,'clubUsers/fan'),{registrationType:'team',teamRole:'player',category:'Infantil',memberNumber:'',birthDate:'2012-03-20'}));
+  await assertSucceeds(updateDoc(doc(fan,'clubUsers/fan'),{teamRole:'staff',birthDate:''}));
+  const deleting=env.authenticatedContext('fan',{email:'fan@club.test',email_verified:true,auth_time:Math.floor(Date.now()/1000)}).firestore();
+  const stale=env.authenticatedContext('stale',{email:'stale@club.test',auth_time:1}).firestore();
+  await assertFails(setDoc(doc(stale,'clubDeletedAccounts/stale'),{requestedAt:serverTimestamp()}));
+  await assertFails(setDoc(doc(deleting,'clubDeletedAccounts/other'),{requestedAt:serverTimestamp()}));
+  await assertFails(setDoc(doc(owner,'clubDeletedAccounts/fan'),{requestedAt:serverTimestamp()}));
+  await assertFails(deleteDoc(doc(deleting,'clubUsers/fan')));
+  await assertFails(setDoc(doc(deleting,'clubDeletedAccounts/fan'),{requestedAt:serverTimestamp(),email:'fan@club.test'}));
+  const batch=writeBatch(deleting);batch.set(doc(deleting,'clubDeletedAccounts/fan'),{requestedAt:serverTimestamp()});batch.delete(doc(deleting,'clubUsers/fan'));await assertSucceeds(batch.commit());
+  await assertSucceeds(getDoc(doc(deleting,'clubDeletedAccounts/fan')));
+  await assertFails(getDoc(doc(deleting,'clubUsers/fan')));
+  await assertFails(setDoc(doc(deleting,'clubUsers/fan'),{...completed,name:'Fan',email:'fan@club.test',role:'fan'}));
+  await assertFails(deleteDoc(doc(deleting,'clubDeletedAccounts/fan')));
+  await assertFails(updateDoc(doc(deleting,'clubDeletedAccounts/fan'),{requestedAt:serverTimestamp()}));
+  await assertFails(getDocs(collection(deleting,'clubDeletedAccounts')));
+  console.log('Firestore: only pinned owner lists and changes roles; self-escalation, identity spoofing and other collections denied; fresh own deletion is atomic and stale tokens cannot recreate profiles.');
  }finally{await env.cleanup();}
 }
 run().catch(error=>{console.error(error);process.exitCode=1;});
