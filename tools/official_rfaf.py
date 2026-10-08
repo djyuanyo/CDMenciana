@@ -8,7 +8,7 @@ QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTempora
 SOURCE=PREFIX+'NFG_CmpJornada?'+QUERY
 TEAMS={
     'first':dict(key='first',label='Primer equipo',team_id='2137495',competition_id='48466108',group_id='48466109',competition='3ª División F.S.',group='Grupo 17',team_count=16,round_count=30,filename='fixtures.json'),
-    'infantil':dict(key='infantil',label='Infantil',team_id='34369965',competition_id='49520234',group_id='49520774',competition='2ª Andaluza Infantil F.S. (Córdoba)',group='Grupo B',team_count=10,round_count=18,filename='fixtures-infantil.json'),
+    'infantil':dict(key='infantil',label='Infantil',team_id='34369965',competition_id='49520234',group_id='49520774',competition='2ª Andaluza Infantil F.S. (Córdoba)',group='Grupo B',team_count=10,round_count=18,filename='fixtures-infantil.json',initial_round=2),
     'filial':dict(key='filial',label='Filial Senior',team_id='48536795',competition_id='49113015',group_id='49113036',competition='2ª Andaluza Senior F.S. (Córdoba)',group='Grupo A',team_count=8,round_count=14,filename='fixtures-filial.json'),
 }
 def team_query(config,lower=False):
@@ -226,7 +226,8 @@ def sync(config=None):
             return html
     get('https://www.rfaf.es/pnfg/NPortada')
     print('Public session initialized',flush=True)
-    first_page=get(source+'&CodJornada=1')
+    initial_round=config.get('initial_round',1)
+    first_page=get(source+'&CodJornada='+str(initial_round))
     def menu_link(html,leaf):
         links=[n.attrs.get('href','') for n in Document(html).root.find('a') if leaf in n.attrs.get('href','')]
         if not links:raise ValueError('Official competition link missing: '+leaf)
@@ -237,7 +238,7 @@ def sync(config=None):
     matches=[m for m in round_matches if is_club(m['home']) or is_club(m['away'])]
     for match in matches:match['id']=f"{config['group_id']}-{match['round']}"
     current=max((m['round'] for m in matches if m['played']),default=1)
-    current_page=first_page if current==1 else get(source+'&CodJornada='+str(current))
+    current_page=first_page if current==initial_round else get(source+'&CodJornada='+str(current))
     standings_url=menu_link(current_page,'NFG_VisClasificacion')
     table=standings(get(standings_url),team_count=config['team_count'])
     print(f'Calendar: {len(matches)} matches; standings: {len(table)} teams',flush=True)
