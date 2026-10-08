@@ -12,7 +12,7 @@ async function run() {
     signInWithEmailAndPassword: async () => { throw { code: 'auth/invalid-credential' }; },
     createUserWithEmailAndPassword: async (_, email) => ({ user: auth.currentUser = { uid: 'new-id', email, emailVerified: false } }),
     updateProfile: async (u, data) => Object.assign(u, data),
-    sendEmailVerification: async () => {},
+    sendEmailVerification: async () => { throw Error('Registration must not send verification emails'); },
     sendPasswordResetEmail: async () => { throw { code: 'auth/user-not-found' }; },
     reload: async u => { u.emailVerified = true; },
     signOut: async () => { auth.currentUser = null; },
@@ -23,7 +23,7 @@ async function run() {
   W.eval(ui); W.eval(transport); await W.ClubAuth.init();
   W.document.querySelector('main').innerHTML = W.ClubAuth.screen();
   assert(W.document.querySelector('.account-card'), 'Browser restores the identity from Firebase');
-  assert(W.document.querySelector('[data-auth-action="verify"]'), 'Web users can verify their email');
+  assert(!W.document.querySelector('[data-auth-action="verify"]'), 'Registration does not require an email link');
   assert(!W.document.querySelector('.account-status.verified'), 'Registration does not claim email verification');
   assert(W.document.querySelector('.account-club-access').textContent.includes('cuando apruebe'), 'Firebase identity does not grant club membership');
   await W.ClubAuth.request('reload');
