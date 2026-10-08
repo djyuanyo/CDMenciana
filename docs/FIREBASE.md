@@ -1,4 +1,29 @@
-# Acceso de CD Menciana con Firebase
+# Firebase de CD Menciana
+
+## Proyecto y dominio
+
+Proyecto: **barpro-pos-menciana** (plan gratuito Spark). Sitio de Hosting: **cdmenciana**. Dominios: `cdmenciana.web.app` y `cdmenciana.firebaseapp.com`. El sitio original `barpro-pos-menciana` se conserva separado.
+
+Las aplicaciones **CD Menciana Web** y **CD Menciana Android** están registradas, correo/contraseña y Google están habilitados y ambos dominios del club están autorizados. La configuración Android se ha preparado con los identificadores públicos de la consola y el cliente OAuth web de Google, sin secretos de administración. La API pública de Firebase ha validado el ID de app Android, el cliente OAuth y el certificado SHA-1. La configuración web pública está en `hosting/firebase-config.json`; la configuración Android pública está en `android/app/google-services.json`.
+
+La web utiliza la misma interfaz pública y los datos deportivos que la APK. Consulta las copias públicas de `main/data` del repositorio del club y conserva la copia incluida cuando no hay conexión. No necesita el servidor Python para consultar calendario, actas, clasificación, goleadores, plantillas y estadísticas ni para iniciar sesión.
+
+## Publicar la web
+
+Con Node 22 o posterior y Firebase CLI instalados:
+
+```sh
+npm ci --prefix hosting
+npm run build --prefix hosting
+firebase login
+firebase deploy --only hosting --project barpro-pos-menciana
+```
+
+`firebase.json` apunta expresamente al sitio **cdmenciana** y solo publica `hosting/dist`. No incluye bases de datos, credenciales de administración ni APK. Firebase Hosting en Spark no permite alojar APK; las entregas Android se distribuyen aparte.
+
+También puede publicarse el ZIP preparado, sin instalar las dependencias de la web: extraerlo, abrir un terminal en su carpeta y ejecutar `firebase deploy --only hosting --project barpro-pos-menciana`. Cloud Shell incluye Firebase CLI y autentica la cuenta de Google; la publicación no se ha podido realizar desde el navegador de esta sesión porque Cloud Shell muestra “Site Unavailable”. El sitio está creado, pero sigue pendiente de su primera publicación.
+
+La comprobación automatizada cubre el SDK web, los límites de aprobación, recuperación de contraseña, cancelación de Google y la preferencia por el SDK nativo dentro de Android. La autenticación real en el dispositivo exige que la APK esté firmada con el certificado registrado.
 
 La pantalla de **Mi cuenta** permite registro por nombre, correo y contraseña, acceso con Google, recuperación de contraseña, verificación de correo y cierre de sesión. Firebase Authentication mantiene la sesión Android entre aperturas; la interfaz no guarda contraseñas, tokens ni sesiones en almacenamiento web. Google utiliza Credential Manager, fuera del WebView.
 
@@ -34,7 +59,7 @@ El archivo de cuenta de servicio permanece en el servidor. Nunca se incluye en l
 
 La app intercambia un token Firebase válido por una cookie del servidor mediante `POST /api/firebase`. El servidor verifica firma, proyecto, audiencia, caducidad, correo verificado y revocación con Firebase Admin. Las cuentas nuevas quedan sin aprobar y sin roles; la identidad Firebase se vincula por proyecto y UID, nunca por el dorsal de un jugador ni por permisos enviados desde la interfaz. La aprobación, la cuota y el rol de administrador se consultan en la base de datos del club.
 
-Una cuenta antigua que ya utiliza ese correo no se vincula automáticamente: requiere una migración o vinculación supervisada por el administrador. El acceso por contraseña del servidor web se conserva. Google en esta versión se utiliza desde Android, con el SDK nativo.
+Una cuenta antigua que ya utiliza ese correo no se vincula automáticamente: requiere una migración o vinculación supervisada por el administrador. El acceso por contraseña del servidor web se conserva. La versión en Firebase Hosting utiliza el SDK web y la app Android utiliza Firebase Auth y Credential Manager nativos. Ambas comparten el proyecto y las cuentas Firebase.
 
 ## Comprobación con el proyecto real
 

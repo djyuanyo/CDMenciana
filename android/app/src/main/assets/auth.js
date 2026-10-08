@@ -1,8 +1,9 @@
-/* Account UI shared by the public APK and the club server. No credentials are persisted here. */
+/* Account UI shared by Android, Firebase Hosting and the club server. SDKs own sessions. */
 window.ClubAuth={
  configured:false,google:false,user:null,mode:'login',message:'',error:false,busy:false,pending:new Map(),sequence:0,legacy:null,ready:null,
  escape(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));},
  native(){return !!window.ClubAuthNative?.request;},
+ firebase(){return this.native()||!!window.ClubAuthWeb;},
  update(data){
   if(!data||typeof data!=='object')return;
   const before=JSON.stringify([this.configured,this.google,this.user]);
@@ -18,7 +19,7 @@ window.ClubAuth={
   if(data?.ok===false)pending.reject(Error(data.error||'No se pudo completar la solicitud.'));else pending.resolve(data);
  },
  request(action,data={}){
-  if(!this.native())return this.legacyRequest(action,data);
+  if(!this.native())return window.ClubAuthWeb?window.ClubAuthWeb.request(action,data):this.legacyRequest(action,data);
   return new Promise((resolve,reject)=>{
    const id='account_'+(++this.sequence),timer=setTimeout(()=>{this.pending.delete(id);reject(Error('La solicitud está tardando demasiado. Vuelve a intentarlo.'));},action==='google'?120000:45000);
    this.pending.set(id,{resolve,reject,timer});
@@ -44,11 +45,11 @@ window.ClubAuth={
  },
  feedback(){return `<p class="auth-feedback ${this.error?'is-error':''}" role="${this.error?'alert':'status'}" aria-live="polite"${this.message?'':' hidden'}>${this.escape(this.message)}</p>`;},
  screen(clubUser=null){
-  const E=x=>this.escape(x),user=this.native()?this.user:clubUser;
+  const E=x=>this.escape(x),user=this.firebase()?this.user:clubUser;
   if(user){
-   const name=user.name||user.email.split('@')[0],verified=this.native()?user.emailVerified:!!clubUser?.active;
+   const name=user.name||user.email.split('@')[0],verified=this.firebase()?user.emailVerified:!!clubUser?.active;
    const initials=name.split(/\s+/).slice(0,2).map(x=>x[0]||'').join('');
-   return `<div class="auth-layout"><section class="auth-card account-card"><span class="auth-eyebrow">TU CUENTA · CD MENCIANA</span><div class="account-avatar" aria-hidden="true">${E(initials)}</div><h1>${E(name)}</h1><p class="auth-subtitle">${E(user.email)}</p><span class="account-status ${verified?'verified':''}">${CDM.icon(verified?'check':'lock')}${this.native()?(verified?'Correo verificado':'Verifica tu correo'):(verified?'Cuenta aprobada':'Pendiente de aprobación')}</span>${this.feedback()}${!verified&&this.native()?'<p class="account-description">Abre el enlace que te hemos enviado para verificar tu correo.</p><div class="account-actions"><button type="button" data-auth-action="verify" class="auth-primary">Reenviar correo</button><button type="button" data-auth-action="reload" class="auth-secondary">Ya lo he verificado</button></div>':''}<section class="account-club-access"><h2>Tu sitio en el club</h2><p>${clubUser?.active?[clubUser.member?'Socio':null,clubUser.player?'Jugador':null,clubUser.admin?'Administrador':null].filter(Boolean).map(E).join(' · ')||'Cuenta aprobada':'El club activará tus accesos de socio o jugador cuando apruebe tu cuenta.'}</p></section><button type="button" data-auth-action="logout" class="auth-secondary auth-logout">Cerrar sesión</button><button type="button" data-page="Inicio" class="auth-text-button">Volver al club ${CDM.icon('arrow')}</button></section></div>`;
+   return `<div class="auth-layout"><section class="auth-card account-card"><span class="auth-eyebrow">TU CUENTA · CD MENCIANA</span><div class="account-avatar" aria-hidden="true">${E(initials)}</div><h1>${E(name)}</h1><p class="auth-subtitle">${E(user.email)}</p><span class="account-status ${verified?'verified':''}">${CDM.icon(verified?'check':'lock')}${this.firebase()?(verified?'Correo verificado':'Verifica tu correo'):(verified?'Cuenta aprobada':'Pendiente de aprobación')}</span>${this.feedback()}${!verified&&this.firebase()?'<p class="account-description">Abre el enlace que te hemos enviado para verificar tu correo.</p><div class="account-actions"><button type="button" data-auth-action="verify" class="auth-primary">Reenviar correo</button><button type="button" data-auth-action="reload" class="auth-secondary">Ya lo he verificado</button></div>':''}<section class="account-club-access"><h2>Tu sitio en el club</h2><p>${clubUser?.active?[clubUser.member?'Socio':null,clubUser.player?'Jugador':null,clubUser.admin?'Administrador':null].filter(Boolean).map(E).join(' · ')||'Cuenta aprobada':'El club activará tus accesos de socio o jugador cuando apruebe tu cuenta.'}</p></section><button type="button" data-auth-action="logout" class="auth-secondary auth-logout">Cerrar sesión</button><button type="button" data-page="Inicio" class="auth-text-button">Volver al club ${CDM.icon('arrow')}</button></section></div>`;
   }
   const register=this.mode==='register',reset=this.mode==='reset',disabled=this.busy||!this.configured;
   const title=reset?'Recupera tu acceso':register?'Tu sitio está aquí.':'Bienvenido al club.';

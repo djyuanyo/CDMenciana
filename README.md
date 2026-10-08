@@ -13,7 +13,9 @@ Primera versión funcional 0.3.0, creada desde cero: aplicación Android con con
 - Escudo original facilitado por el club, sin recrear sus textos.
 - Pruebas del aislamiento de permisos, registro, suspensión y protección CSRF.
 
-La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Mi cuenta incorpora Firebase Authentication para correo, Google, verificación de correo y recuperación de contraseña; requiere el proyecto real del club y su configuración Android. Las zonas privadas y los permisos siguen utilizando el servidor del club desde Más → Configurar conexión del club. Esta versión no incluye notificaciones push, pagos o QR. El acceso antiguo del servidor web conserva la recuperación de contraseña desde la consola por el administrador.
+La APK abre inicialmente una vista pública incluida sin conexión, con el escudo y navegación. No contiene datos inventados ni registro simulado. Mi cuenta incorpora Firebase Authentication para correo, Google, verificación de correo y recuperación de contraseña; está conectado al proyecto Firebase `barpro-pos-menciana` con proveedores de correo y Google habilitados. La versión web para Firebase Hosting utiliza la misma interfaz y cuentas. Las zonas privadas y los permisos siguen utilizando el servidor del club desde Más → Configurar conexión del club. Esta versión no incluye notificaciones push, pagos o QR. El acceso antiguo del servidor web conserva la recuperación de contraseña desde la consola por el administrador.
+
+Consulta [docs/FIREBASE.md](docs/FIREBASE.md) para publicar la web en el sitio gratuito `cdmenciana`. El sitio ya está creado; su primera publicación está pendiente.
 
 ## Ejecutar en desarrollo
 

@@ -24,6 +24,9 @@ jobs:
       - run: node tools/test_team_theme.js
       - run: node tools/test_roster_identity.js
       - run: node tools/test_auth.js
+      - run: node tools/test_web_auth.cjs
+      - run: npm ci --prefix hosting --no-audit --no-fund
+      - run: npm run build --prefix hosting
   android:
     runs-on: ubuntu-latest
     steps:

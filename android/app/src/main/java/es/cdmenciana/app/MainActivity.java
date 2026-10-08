@@ -58,10 +58,10 @@ public class MainActivity extends Activity {
         android.widget.ImageView crest=new android.widget.ImageView(this);crest.setImageResource(es.cdmenciana.app.R.drawable.crest);crest.setScaleType(android.widget.ImageView.ScaleType.FIT_CENTER);hero.addView(crest,new LinearLayout.LayoutParams(dp(68),dp(68)));
         TextView kicker=styledText("CD MENCIANA · TU CLUB",10,tone("#85d3ff","#176495"));kicker.setPadding(0,dp(18),0,dp(12));hero.addView(kicker);
         TextView title=styledText("Conexión del club",28,tone("#ffffff","#182c46"));title.setTypeface(null,android.graphics.Typeface.BOLD);hero.addView(title);
-        TextView intro=styledText("Tu cuenta y las zonas privadas, en un mismo sitio.",13,tone("#c5d6e9","#526780"));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
+        TextView intro=styledText("Conecta los carnets, convocatorias y avisos privados del club.",13,tone("#c5d6e9","#526780"));intro.setPadding(0,dp(12),0,0);hero.addView(intro);
         box.addView(hero,spaced(-1,-2,0,22));
         LinearLayout form=nativeCard();TextView label=styledText("Servidor del club",18,tone("#ffffff","#182c46"));label.setTypeface(null,android.graphics.Typeface.BOLD);form.addView(label);
-        TextView hint=styledText("Introduce la dirección facilitada por el club para acceder a tu cuenta.",13,tone("#b0c0d5","#526780"));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
+        TextView hint=styledText("Introduce la dirección facilitada por el club para sus zonas privadas. Tu cuenta Firebase funciona también en la vista pública.",13,tone("#b0c0d5","#526780"));hint.setPadding(0,dp(12),0,dp(20));form.addView(hint);
         EditText url=new EditText(this);url.setText(base);url.setHint("https://app.tu-dominio.es");url.setTextSize(14);url.setTextColor(tone("#ffffff","#182c46"));url.setHintTextColor(tone("#b0c0d5","#526780"));url.setBackground(surface(tone("#1d2b40","#f8fbff"),tone("#1d2b40","#f8fbff"),12));url.setBackgroundTintList(null);url.setPadding(dp(14),dp(12),dp(14),dp(12));url.setSingleLine(true);url.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_VARIATION_URI);form.addView(url,new LinearLayout.LayoutParams(-1,dp(50)));
         TextView error=styledText("",12,tone("#ffa6b5","#ad2340"));error.setPadding(0,dp(10),0,0);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);form.addView(error);
         Button connect=styledButton("Conectar con el club",true);form.addView(connect,spaced(-1,dp(48),20,0));
