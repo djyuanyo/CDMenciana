@@ -18,8 +18,12 @@ W.fetch=async url=>({ok:true,json:async()=>{
  }
  return clone(old);
 }});
-for(const name of ['appearance.js','ui.js','auth.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js','offline.js'])W.eval(read(name));
+for(const name of ['appearance.js','ui.js','auth.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js'])W.eval(read(name));
+W.ClubAuth.user={uid:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',email:'juanjocarrillo7@gmail.com',emailVerified:true};
+W.ClubAuth.init=async()=>{};W.ClubAccess.sync=async()=>{};
+W.eval(read('offline.js'));
 const settle=()=>new Promise(r=>W.setTimeout(r,20));
+async function waitFor(check){const until=Date.now()+2000;while(!check()&&Date.now()<until)await settle();assert(check(),'Expected navigation to finish');}
 (async()=>{
  await settle();const f=W.Fixtures;
  assert.equal(f.data.staff.length,4,'A cached calendar cannot erase the bundled RFAF staff');
@@ -32,14 +36,14 @@ const settle=()=>new Promise(r=>W.setTimeout(r,20));
  for(const row of first.roster){
   const href=f.playerHref(row.id,row.acta_id,'plantilla'),link=[...W.document.querySelectorAll('.player-details a')].find(a=>a.getAttribute('href')===href);
   assert(link,'Every official player has an internal profile link');
-  const before=requested.length;link.click();await settle();
+  const before=requested.length;link.click();await waitFor(()=>W.document.querySelector('.player-rfaf-hero h1')?.textContent===f.personName(row.name));
   assert.equal(W.document.querySelector('.player-rfaf-hero h1').textContent,f.personName(row.name));
   const tile=[...W.document.querySelectorAll('.player-match-stats > div')].find(n=>n.querySelector('small')?.textContent==='Dorsal');
   assert.equal(Number(tile.querySelector('strong').textContent),row.number);
   assert.equal(f.prepareRosterPlayer(row.id,row.acta_id).rfaf_id,row.rfaf_id);
   if(requested.length>before)assert.equal(requested.at(-1),row.rfaf_id,'Statistics requests use the exact federation identity');
   assert(W.document.querySelector('[data-roster-back]'));
-  W.document.querySelector('[data-roster-back]').click();await settle();
+  W.document.querySelector('[data-roster-back]').click();await waitFor(()=>W.document.querySelector('.roster-grid'));
   assert(W.document.querySelector('.roster-grid'));
  }
  const row=first.roster.find(p=>p.number===5);
