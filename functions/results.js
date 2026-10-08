@@ -22,7 +22,7 @@ function payload(event,uid,token){return {token,data:{uid,eventId:event.eventId,
 async function pollResults({db,auth,messaging,fetchFeed,Timestamp,now=Date.now}){
  const currentTime=now();
  for(const [teamKey,file] of Object.entries(GROUPS)){
-  let feed;try{feed=await fetchFeed(file);}catch(error){if(teamKey==='infantil'){console.warn('Los datos del Infantil aún no están publicados.');continue;}throw error;}const rows=results(teamKey,feed),feedTime=Date.parse(feed.updated_at),stateRef=db.collection('clubResultState').doc(teamKey);
+  let feed;try{feed=await fetchFeed(file);}catch(error){if(teamKey==='infantil'){console.warn('Los datos del Infantil aún no están publicados.');continue;}throw error;}if(teamKey==='infantil'&&feed.team_key!=='infantil'){console.warn('Categoría Infantil: se espera la fuente oficial correcta.');continue;}const rows=results(teamKey,feed),feedTime=Date.parse(feed.updated_at),stateRef=db.collection('clubResultState').doc(teamKey);
   await db.runTransaction(async tx=>{
    const snapshot=await tx.get(stateRef),previous=snapshot.exists?snapshot.data():null;
    if(previous&&feedTime<=previous.feedTime)return;
