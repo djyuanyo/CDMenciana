@@ -1,7 +1,7 @@
 /* Favorites belong to a Firebase identity, never to a shared phone/browser. */
 window.ClubFavorites={rows:[],catalog:new Map(),remembered:new WeakMap(),error:'',busy:false,sequence:0,pending:new Map(),requestSequence:0,notifications:false,
  teamId(url){try{const u=new URL(url);return ['www.rfaf.es','rfaf.es'].includes(u.hostname)&&/^\d{1,12}$/.test(u.searchParams.get('Codigo_Equipo')||'')?u.searchParams.get('Codigo_Equipo'):'';}catch{return '';}},
- clubTeams:{first:{teamId:'2137495',teamName:'Primer equipo'},filial:{teamId:'48536795',teamName:'Filial Senior'}},
+ clubTeams:{first:{teamId:'2137495',teamName:'Primer equipo'},infantil:{teamId:'34369965',teamName:'Infantil'},filial:{teamId:'48536795',teamName:'Filial Senior'}},
  remember(data,key){const team=this.clubTeams[key];if(!team)return;const id=key+'_'+team.teamId;this.catalog.set(id,{id,teamId:team.teamId,teamKey:key,teamName:team.teamName});},
  banner(){this.remember(Fixtures.data,Fixtures.selectedTeam);return this.button(this.clubTeams[Fixtures.selectedTeam]?.teamName);},
  selected(id){return this.rows.some(r=>r.id===id);},
