@@ -1,7 +1,7 @@
 name: Verificar y compilar APK
 on:
   push:
-    branches: [main]
+    branches: [main, feature/favorites-results-0260]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -24,9 +24,12 @@ jobs:
       - run: node tools/test_team_theme.js
       - run: node tools/test_roster_identity.js
       - run: node tools/test_auth.js
+      - run: node tools/test_registration.cjs
       - run: node tools/test_web_auth.cjs
       - run: node tools/test_club_access.cjs
       - run: node tools/test_news_reader.cjs
+      - run: node tools/test_favorites.cjs
+      - run: node --test tools/test_results.cjs
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
