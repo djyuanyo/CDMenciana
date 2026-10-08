@@ -1,0 +1,21 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),{JSDOM}=require('jsdom');
+(async()=>{
+ const dom=new JSDOM('<main></main>',{url:'https://appassets.androidplatform.net/assets/index.html',runScripts:'outside-only'}),W=dom.window;
+ W.CDM={icon:()=>'',empty:()=>''};W.AbortController=AbortController;
+ for(const name of ['auth','registration','club-access'])W.eval(fs.readFileSync('server/static/'+name+'.js','utf8'));
+ const A=W.ClubAuth,R=W.ClubRegistration,C=W.ClubAccess,actions=[],requests=[];
+ A.configured=true;
+ W.ClubAuthNative={request(id,action,json){actions.push(action);assert.notEqual(action,'register','Legacy native registration sends an email and must not run');queueMicrotask(()=>A.receive(id,{ok:true,configured:true,user:{uid:'new-user',name:'Member',email:'member@club.test',emailVerified:false}}));}};
+ W.fetch=async(url,options)=>{requests.push(url);return {ok:true,json:async()=>url.includes(':signUp')?{idToken:'test-token',localId:'new-user'}:{}};};
+ let fields;C.request=async(path,options={})=>{if(!options.fields)return null;fields=options.fields;return {name:'clubUsers/new-user',fields:Object.fromEntries(Object.entries(fields).map(([k,v])=>[k,{stringValue:v}]))};};
+ const data={name:'Member',email:'member@club.test',password:'test-password-123',registrationType:'member',memberNumber:'0012'};R.draft=R.validate(data);await A.perform('register',data);
+ assert.deepEqual(actions,['login']);assert.equal(requests.length,2);assert(requests.every(url=>!url.includes('sendOobCode')));assert.equal(fields.memberNumber,'0012');assert.equal(A.user.emailVerified,false);assert(C.user().active);assert(A.message.includes('Registro completado'));
+ let account=A.screen();assert(account.includes('Registro completado'));assert(!account.includes('Verifica tu correo'));assert(!account.includes('data-auth-action="verify"'));
+ A.user={uid:C.adminUid,name:'Juanjo',email:C.adminEmail,emailVerified:false};C.profile={id:C.adminUid,role:'fan',...R.validate({name:'Juanjo',registrationType:'fan'})};
+ assert(C.user().active&&C.user().admin);account=A.screen();assert(account.includes('Panel de control'));assert(account.includes('Administrador'));
+ C.profile=null;assert(C.user().active&&C.user().admin);assert(A.screen().includes('Panel de control'),'Owner panel must not depend on completing a fan profile');
+ A.user={...A.user,uid:'different-uid'};assert(!C.administrator(),'An email string never grants admin to a different Firebase account');
+ requests.length=0;await assert.rejects(R.createNative({...data,memberNumber:''}),/número/);assert.equal(requests.length,0,'Missing profile data must block identity creation');
+ W.fetch=async()=>({ok:false,json:async()=>({error:{message:'EMAIL_EXISTS'}})});await assert.rejects(R.createNative(data),/ya tiene una cuenta/);
+ dom.window.close();console.log('In-app email registration: no verification mail, native session, mandatory details, completed unverified profile, pinned admin and email spoofing denial passed.');
+})().catch(e=>{console.error(e);process.exitCode=1;});
