@@ -9,9 +9,10 @@ android {
         applicationId 'es.cdmenciana.app'
         minSdk 26
         targetSdk 35
-        versionCode 40
-        versionName '0.26.0'
+        versionCode 41
+        versionName '0.27.0'
     }
+    if (System.getenv('CDM_SIGNING_STORE')) { signingConfigs { club { storeFile file(System.getenv('CDM_SIGNING_STORE')); storePassword 'android'; keyAlias 'androiddebugkey'; keyPassword 'android' } }; buildTypes { debug { signingConfig signingConfigs.club } } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }
 dependencies {

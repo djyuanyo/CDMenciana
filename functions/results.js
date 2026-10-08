@@ -16,7 +16,8 @@ function results(key,feed){
 }
 function transitions(previous,rows){if(!previous)return [];return rows.filter(m=>m.final&&Object.hasOwn(previous,m.id)&&previous[m.id]===false);}
 function eventId(key,season,id){return createHash('sha256').update(key+'|'+season+'|'+id).digest('hex');}
-function eligible(event,favorite,device){return favorite.teamKey===event.teamKey&&[event.homeId,event.awayId].includes(favorite.teamId)&&Number.isFinite(Date.parse(favorite.createdAt))&&Date.parse(favorite.createdAt)<=event.createdAt.toMillis()&&device.enabled===true&&device.uid===favorite.uid&&typeof device.token==='string'&&device.token.length>=20&&device.updatedAt?.toMillis()<=event.createdAt.toMillis();}
+const CLUB_TEAMS={first:'2137495',filial:'48536795'};
+function eligible(event,favorite,device){return favorite.teamId===CLUB_TEAMS[favorite.teamKey]&&favorite.teamKey===event.teamKey&&[event.homeId,event.awayId].includes(favorite.teamId)&&Number.isFinite(Date.parse(favorite.createdAt))&&Date.parse(favorite.createdAt)<=event.createdAt.toMillis()&&device.enabled===true&&device.uid===favorite.uid&&typeof device.token==='string'&&device.token.length>=20&&device.updatedAt?.toMillis()<=event.createdAt.toMillis();}
 function payload(event,uid,token){return {token,data:{uid,eventId:event.eventId,teamKey:event.teamKey,acta:event.acta,title:'Final del partido',body:event.home+' '+event.homeScore+' – '+event.awayScore+' '+event.away},android:{priority:'high',ttl:3600000}};}
 async function pollResults({db,auth,messaging,fetchFeed,Timestamp,now=Date.now}){
  const currentTime=now();

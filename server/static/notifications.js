@@ -1,0 +1,15 @@
+/* The client queues messages; only the trusted worker can deliver push notifications. */
+window.ClubNotifications={
+ screen(){if(!ClubAccess.administrator())return '';return `<section class="card"><h3>Enviar notificación</h3><p>Avisa a todo el club o a quienes siguen una categoría.</p><form data-club-notification class="notification-form"><label>Destinatarios<select name="teamKey"><option value="all">Todos los usuarios con avisos activados</option><option value="first">Favoritos · Primer equipo</option><option value="filial">Favoritos · Filial Senior</option></select></label><label>Título<input name="title" required maxlength="100" autocomplete="off"></label><label>Mensaje<textarea name="body" required maxlength="500"></textarea></label><button type="submit" class="auth-primary">Enviar notificación</button><p class="notification-feedback" role="status" aria-live="polite"></p></form><p>Los avisos se procesan en unos minutos.</p></section>`;},
+ async queue(values){
+  if(!ClubAccess.administrator())throw Error('Solo el administrador puede enviar avisos.');
+  const identity=ClubAuth.user,title=String(values.title||'').trim(),body=String(values.body||'').trim(),teamKey=values.teamKey;
+  if(!title||title.length>100||!body||body.length>500||!['all','first','filial'].includes(teamKey))throw Error('Completa el título, el mensaje y los destinatarios.');
+  const credentials=await ClubAuth.request('token');if(ClubAuth.user?.uid!==identity.uid||credentials.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
+  const id=Array.from(crypto.getRandomValues(new Uint8Array(16)),n=>n.toString(16).padStart(2,'0')).join('');
+  const fields=Object.fromEntries(Object.entries({title,body,teamKey,createdBy:identity.uid,status:'pending'}).map(([k,v])=>[k,{stringValue:v}]));
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${ClubAccess.project}/databases/(default)/documents:commit`,{method:'POST',headers:{Authorization:'Bearer '+credentials.token,'Content-Type':'application/json'},signal:AbortSignal.timeout(15000),body:JSON.stringify({writes:[{update:{name:`projects/${ClubAccess.project}/databases/(default)/documents/clubNotificationRequests/${id}`,fields},currentDocument:{exists:false},updateTransforms:[{fieldPath:'createdAt',setToServerValue:'REQUEST_TIME'}]}]})});
+  if(!response.ok)throw Error('No se pudo enviar el aviso. Comprueba la conexión y vuelve a intentarlo.');return id;
+ }
+};
+document.addEventListener('submit',async event=>{const form=event.target;if(!form.matches('[data-club-notification]'))return;event.preventDefault();const button=form.querySelector('button'),feedback=form.querySelector('[role="status"]');if(button.disabled)return;button.disabled=true;feedback.textContent='Preparando aviso…';try{await ClubNotifications.queue(Object.fromEntries(new FormData(form)));form.reset();feedback.textContent='Aviso en cola. Se enviará a los destinatarios con notificaciones activadas en unos minutos.';}catch(e){feedback.textContent=e.message;}finally{button.disabled=false;}});

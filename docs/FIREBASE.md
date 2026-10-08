@@ -146,3 +146,8 @@ La conexión todavía no está configurada: **el envío automático aún no est�
 Después de configurar el secreto, ejecutar manualmente “Avisos gratuitos de resultados” en `main` para crear la referencia inicial sin enviar resultados antiguos. Probar un dispositivo real con permiso concedido, app cerrada, resultado nuevo, favorito quitado y cambio de cuenta. Las pruebas automatizadas de interfaz/servidor/reglas y la compilación Android no sustituyen esa prueba real de entrega FCM.
 
 La función Cloud Functions se conserva como alternativa opcional para otros despliegues; no debe activarse a la vez que el cron. El borrado administrativo de cuentas continúa siendo un servicio separado pendiente de configurar; no se despliega ni se modifica en este cambio.
+
+## Versión 0.27.0: categorías y avisos del panel
+Solo las categorías del club son favoritas: first/2137495 y filial/48536795. La estrella aparece en el banner de la categoría seleccionada. Los favoritos antiguos de rivales no se muestran ni reciben resultados.
+El administrador fijado por UID y correo crea solicitudes inmutables en clubNotificationRequests con título, mensaje y teamKey (all/first/filial). El proceso notify-custom.yml revisa la cola cada cinco minutos; GitHub puede demorar la ejecución. Solo envía a dispositivos activados de cuentas vigentes, excluye borrados y deshabilitados, vuelve a comprobar las suscripciones y deduplica por solicitud/dispositivo. No requiere Blaze.
+Android solicita POST_NOTIFICATIONS una vez en la primera apertura; al aceptar registra el dispositivo cuando se completa el acceso. Un rechazo no bloquea la app. Los avisos pueden activarse o desactivarse en Mis favoritos.

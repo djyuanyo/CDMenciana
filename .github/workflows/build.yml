@@ -1,7 +1,7 @@
 name: Verificar y compilar APK
 on:
   push:
-    branches: [main, feature/favorites-results-0260]
+    branches: [main, feature/favorites-results-0260, feature/club-notifications-0270]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -29,7 +29,8 @@ jobs:
       - run: node tools/test_club_access.cjs
       - run: node tools/test_news_reader.cjs
       - run: node tools/test_favorites.cjs
-      - run: node --test tools/test_results.cjs
+      - run: node tools/test_notification_panel.cjs
+      - run: node --test tools/test_results.cjs tools/test_custom_notifications.cjs
       - uses: actions/setup-java@v4
         with:
           distribution: temurin

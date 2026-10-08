@@ -5,6 +5,7 @@ const { initializeApp, applicationDefault } = require('firebase-admin/app');
 const { getAuth } = require('firebase-admin/auth');
 const { getFirestore, Timestamp } = require('firebase-admin/firestore');
 const { getMessaging } = require('firebase-admin/messaging');
+const { processCustom } = require('./custom-notifications');
 const { pollResults } = require('./results');
 
 async function main() {
@@ -14,6 +15,7 @@ async function main() {
     throw Error('Configure the CDM_FIREBASE_SERVICE_ACCOUNT secret for the club Firebase project');
   }
   initializeApp({ credential: applicationDefault(), projectId });
+  if(process.argv.includes('--custom')) { await processCustom({db:getFirestore(),auth:getAuth(),messaging:getMessaging(),Timestamp});console.log('Cola de avisos procesada.');return; }
   await pollResults({ db: getFirestore(), auth: getAuth(), messaging: getMessaging(), Timestamp,
     fetchFeed: async file => {
       const response = await fetch('https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/' + file,

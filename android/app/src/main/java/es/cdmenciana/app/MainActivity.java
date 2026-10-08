@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
         applyNativeTheme();
         base=getPreferences(MODE_PRIVATE).getString("server", "");
         load();
+        if(push!=null)push.firstLaunch();
     }
     private void configure() {
         configuring=true;
@@ -398,7 +399,7 @@ public class MainActivity extends Activity {
             if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubAuth&&window.ClubAuth.receive("+JSONObject.quote(id)+","+data.toString()+")",null);
         }));
         web.addJavascriptInterface(new AccountBridge(),"ClubAuthNative");
-        push=new ClubPush(this,(id,data)->runOnUiThread(()->{if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript("window.ClubFavorites&&ClubFavorites.receive("+JSONObject.quote(id)+","+data.toString()+")",null);}));
+        push=new ClubPush(this,(id,data)->runOnUiThread(()->{if(web!=null&&web.getUrl()!=null&&sameOrigin(Uri.parse(web.getUrl())))web.evaluateJavascript(("first-launch".equals(id)?"window.dispatchEvent(new CustomEvent('club-push-permission'));":"")+"window.ClubFavorites&&ClubFavorites.receive("+JSONObject.quote(id)+","+data.toString()+")",null);}));
         web.addJavascriptInterface(new PushBridge(),"ClubPushNative");
         if(base.isEmpty())web.addJavascriptInterface(new RfafResolverBridge(),"RfafResolver");
         CookieManager.getInstance().setAcceptThirdPartyCookies(web,true);
