@@ -38,7 +38,7 @@ final class ClubPush {
     void request(String id,String action){
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         if("bootstrap".equals(action)){
-            if(user!=null&&permitted(activity)&&prefs(activity).getBoolean("autoEnable",false)&&!user.getUid().equals(prefs(activity).getString("uid",""))){enable(id);return;}
+            if(user!=null&&permitted(activity)&&prefs(activity).getBoolean("autoEnable",false)){enable(id);return;}
             reply(id,false,null);return;
         }
         if("state".equals(action)){reply(id,user!=null&&user.getUid().equals(prefs(activity).getString("uid",""))&&permitted(activity),null);return;}
