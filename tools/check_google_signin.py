@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def normalize_sha1(value):
-    candidate = re.sub(r"[:\\s]", "", str(value)).lower()
+    candidate = re.sub(r"[:\s]", "", str(value)).lower()
     if not re.fullmatch(r"[0-9a-f]{40}", candidate):
         raise ValueError("La huella SHA-1 de la firma Android no es válida.")
     return candidate
@@ -44,7 +44,7 @@ def verify_google_config(config, sha1, package="es.cdmenciana.app"):
 def sha1_from_apk(apk_path, apksigner):
     proc = subprocess.run([str(apksigner), "verify", "--print-certs", str(apk_path)],
                           capture_output=True, text=True, check=True)
-    match = re.search(r"Signer #1 certificate SHA-1 digest:\\s*([a-fA-F0-9:]+)",
+    match = re.search(r"Signer #1 certificate SHA-1 digest:\s*([a-fA-F0-9:]+)",
                       proc.stdout)
     if not match:
         raise ValueError("No se ha podido leer la huella de la firma de la APK.")
