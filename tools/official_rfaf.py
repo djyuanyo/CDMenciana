@@ -309,9 +309,15 @@ def report_roster(matches,team):
     return sorted(players.values(),key=lambda p:(p['number'],p['name']))
 
 def sync_all():
-    errors=[]
+    errors=[];updated=0
     for config in TEAMS.values():
-        try:sync(config)
-        except Exception as error:errors.append(error);print(f"{config['label']}: se conserva la última copia válida ({error})",flush=True)
-    if errors:raise RuntimeError('No se pudieron actualizar todos los equipos') from errors[0]
+        try:
+            sync(config)
+            updated+=1
+        except Exception as error:
+            errors.append(error)
+            print(f"::warning::{config['label']}: se conserva la última copia válida ({error})",flush=True)
+    # Publish verified updates even when another competition is unavailable.
+    # Keep a failing run when no team could be refreshed.
+    if not updated and errors:raise RuntimeError('No se pudo actualizar ningún equipo') from errors[0]
 if __name__=='__main__':sync_all()
