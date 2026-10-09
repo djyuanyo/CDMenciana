@@ -133,6 +133,7 @@ jobs:
           states={key:os.environ.get(key+'_OUTCOME','unknown') for key in ('CREDENTIALS','FINGERPRINTS','CONFIG','SAVE')}
           status={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
                   'status':'completed' if all(v=='success' for v in states.values()) else 'incomplete',
+                  'run_id':os.environ.get('GITHUB_RUN_ID',''),
                   'stages':states}
           Path('data/google-signin-repair-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print('Estado de Google Sign-In: '+status['status'])
