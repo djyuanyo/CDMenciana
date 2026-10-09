@@ -259,20 +259,29 @@ def sync(config=None,browser_reader=None):
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
         published={m['source']:m for m in round_matches}.values()  # Every published future kickoff must be refreshed.
-        pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
+        def read_round(match):
+            try:return match['source'],get(match['source'])
+            except OSError:
+                # The full calendar and standings above are already verified.
+                # An unavailable detail page must not discard the whole category.
+                print(f"Round {match['round']}: official detail page pending",flush=True)
+                return match['source'],None
+        pages=dict(pool.map(read_round,published))
         for match in round_matches:
+            if pages[match['source']] is None:continue
             try:enrich(match,pages[match['source']])
             except ValueError as error:
                 if match['played'] or str(error)!='Match missing from official round':raise
                 print(f"Round {match['round']}: kickoff not published yet",flush=True)
     logos={}
-    for html in pages.values():logos.update(team_crests(html))
+    for html in pages.values():
+        if html is not None:logos.update(team_crests(html))
     apply_crests(round_matches,table,logos)
     previous=json.loads((ROOT/'data'/config['filename']).read_text()) if (ROOT/'data'/config['filename']).exists() else {}
     scorers_url=menu_link(current_page,'NFG_CMP_Goleadores')
     try:goal_rows=scorers(get(scorers_url))
     except (ValueError,OSError) as error:
-        if not previous.get('scorers') and any(m['played'] for m in matches):raise
+        if not previous.get('scorers') and any(m['played'] for m in matches) and not config['key'].startswith('rfaf_'):raise
         goal_rows=previous.get('scorers',[])
         scorers_url=previous.get('scorers_source',scorers_url)
         print(f'Goleadores pendientes: {error}; se actualizan los horarios',flush=True)
@@ -281,6 +290,7 @@ def sync(config=None,browser_reader=None):
     results_status=verify_results(matches,club,previous)
     payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season=config.get('season','2026-2027'),team=club['team'],source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
+    payload['details_status']='pending' if any(html is None for html in pages.values()) else 'verified'
     team_html=''
     try:
         team_html=get(payload['staff_source'])

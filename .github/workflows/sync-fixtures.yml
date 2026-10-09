@@ -26,10 +26,5 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ android/app/src/main/assets/ server/static/
-          if ! git diff --cached --quiet; then
-            git commit -m 'Actualizar calendario público RFAF'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          python tools/publish_public_data.py
 

@@ -97,7 +97,11 @@ class PublicSource:
             return preview(calendar_html,other,source)
 
 def write_catalog(teams):
-    value={'version':1,'teams':teams};validate_catalog(value)
+    path=ROOT/'data/club-teams.json'
+    value=json.loads(path.read_text()) if path.exists() else {'version':1}
+    value['teams']=teams
+    value['retired']=[k for k in value.get('retired',[]) if k not in {t['key'] for t in teams}]
+    validate_catalog(value)
     raw=json.dumps(value,ensure_ascii=False,indent=2)+'\n'
     for folder in ('data','server/static','android/app/src/main/assets'):(ROOT/folder/'club-teams.json').write_text(raw)
 
@@ -106,12 +110,22 @@ def process_jobs():
     from rfaf_browser import PublicBrowserReader
     with PublicBrowserReader() as browser:
         reader=PublicSource(browser)
-        for path in sorted((ROOT/'data/team-imports').glob('*.json')):
+        # Newer requests determine the label/order when the same team was retried.
+        paths=sorted((ROOT/'data/team-imports').glob('*.json'),key=lambda p:json.loads(p.read_text()).get('updatedAt',''),reverse=True)
+        for path in paths:
             job=json.loads(path.read_text())
-            if job.get('status') not in ('preview_pending','import_pending'):continue
-            importing=job['status']=='import_pending'
+            if job.get('status') not in ('preview_pending','import_pending','import_error'):continue
+            if job.get('status')=='import_error' and job.get('attempts',0)>=3:continue
+            importing=job['status'] in ('import_pending','import_error')
+            job['attempts']=job.get('attempts',0)+1
             try:
                 if not re.fullmatch(r'[a-f0-9]{32}',job.get('id','')) or path.stem!=job['id']:raise ValueError('Invalid import identifier')
+                identity=source_config(job['source'])
+                key=f"rfaf_{identity['group_id']}_{job.get('selectedTeam','')}"
+                retired=json.loads((ROOT/'data/club-teams.json').read_text()).get('retired',[])
+                if importing and key in retired and not job.get('restore'):
+                    job.update(status='cancelled',error='El equipo se ha eliminado del listado.')
+                    path.write_text(json.dumps(job,ensure_ascii=False,indent=2)+'\n');continue
                 official=reader.discover(job['source']);job['preview']=official
                 if importing:
                     teams=load_teams();candidate=next(c for c in official['candidates'] if c['team_id']==job['selectedTeam'])
@@ -138,5 +152,7 @@ def process_jobs():
                 print('::warning::Importación RFAF pendiente; se conservan los equipos publicados.',flush=True)
             job['updatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat()
             path.write_text(json.dumps(job,ensure_ascii=False,indent=2)+'\n')
+    # Propagate administrator edits/deletions even when no import is pending.
+    write_catalog(load_teams())
 
 if __name__=='__main__':process_jobs()

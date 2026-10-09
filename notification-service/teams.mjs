@@ -19,11 +19,18 @@ export async function teamCatalog(env){const saved=await githubStore(env).read('
 export async function manageTeams(path,input,store,now=Date.now()){
  const saved=await store.read('data/club-teams.json');if(!saved)throw fail('El catálogo aún no está disponible.',503);const teams=catalog.parseCatalog(saved.value);
  if(path==='/teams'){let job=null;if(input.id){if(!/^[a-f0-9]{32}$/.test(input.id))throw fail('Importación no válida.');job=(await store.read(`data/team-imports/${input.id}.json`))?.value||null;}return {teams,revision:saved.sha,job};}
- if(path==='/teams/update'){
+ if(path==='/teams/update'||path==='/teams/delete'){
   if(input.revision!==saved.sha)throw fail('Los equipos han cambiado. Actualiza antes de guardar.',409);
   const team=teams.find(t=>t.key===input.key);if(!team)throw fail('Equipo no disponible.');
+  if(path==='/teams/delete'){
+   if(catalog.BASE[team.key])throw fail('Los tres equipos iniciales se mantienen. Puedes eliminar los equipos añadidos desde este panel.');
+   const ordered=teams.filter(t=>t.key!==team.key);ordered.forEach((t,i)=>t.order=i+1);
+   const retired=[...new Set([...(saved.value.retired||[]),team.key])];
+   await store.write('data/club-teams.json',{...saved.value,teams:ordered,retired},saved.sha);
+   return {saved:true,teams:ordered};
+  }
   if(typeof input.label!=='string'||!input.label.trim()||input.label.trim().length>80||!Number.isSafeInteger(input.order)||input.order<1||input.order>teams.length)throw fail('Revisa el nombre y la posición del equipo.');
-  const ordered=teams.filter(t=>t.key!==team.key);ordered.splice(input.order-1,0,{...team,label:input.label.trim()});ordered.forEach((t,i)=>t.order=i+1);await store.write('data/club-teams.json',{version:1,teams:ordered},saved.sha);return {saved:true,teams:ordered};
+  const ordered=teams.filter(t=>t.key!==team.key);ordered.splice(input.order-1,0,{...team,label:input.label.trim()});ordered.forEach((t,i)=>t.order=i+1);await store.write('data/club-teams.json',{...saved.value,teams:ordered},saved.sha);return {saved:true,teams:ordered};
  }
  if(!/^[a-f0-9]{32}$/.test(input.id||''))throw fail('Importación no válida.');
  const jobPath=`data/team-imports/${input.id}.json`,previous=await store.read(jobPath);
@@ -39,7 +46,7 @@ export async function manageTeams(path,input,store,now=Date.now()){
   const candidate=job.preview?.candidates?.find(t=>t.team_id===input.teamId);if(!candidate)throw fail('Selecciona un equipo de nuestro club.');
   if(teams.some(t=>t.group_id===job.preview.group_id&&t.team_id===input.teamId&&t.season_id===job.preview.season_id))throw fail('Este equipo ya está añadido.');
   if(teams.length>=30||typeof input.label!=='string'||!input.label.trim()||input.label.length>80||!Number.isSafeInteger(input.order)||input.order<1||input.order>teams.length+1)throw fail('Revisa el nombre y el orden del equipo.');
-  const next={...job,status:'import_pending',selectedTeam:input.teamId,label:input.label.trim(),order:input.order,updatedAt:new Date(now).toISOString()};await store.write(jobPath,next,previous.sha);return {job:next};
+  const next={...job,status:'import_pending',selectedTeam:input.teamId,label:input.label.trim(),order:input.order,attempts:0,restore:(saved.value.retired||[]).includes(`rfaf_${job.preview.group_id}_${input.teamId}`),updatedAt:new Date(now).toISOString()};delete next.error;await store.write(jobPath,next,previous.sha);return {job:next};
  }
  throw fail('Ruta de equipos no disponible.',404);
 }

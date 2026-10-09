@@ -2,14 +2,14 @@ name: Importar equipos desde el panel
 on:
   push:
     branches: [main]
-    paths: ['data/team-imports/**', 'tools/team_imports.py', '.github/workflows/import-teams.yml']
+    paths: ['data/team-imports/**', 'data/club-teams.json', 'tools/team_imports.py', 'tools/rfaf_browser.py', 'tools/publish_public_data.py', '.github/workflows/import-teams.yml']
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: club-team-imports
+  group: club-public-data
   cancel-in-progress: false
 jobs:
   import:
@@ -38,10 +38,4 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ android/app/src/main/assets/ server/static/
-          if ! git diff --cached --quiet; then
-            git commit -m 'admin: publish imported club team data'
-            # Never merge a stale result over an administrator's newer request/catalog.
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          python tools/publish_public_data.py --imports

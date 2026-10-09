@@ -21,7 +21,15 @@ class PublicBrowserReader:
             raise ValueError('Unexpected public RFAF page')
         # All Playwright operations run on its owning thread, including callers
         # from the calendar and profile worker pools.
-        return self.worker.submit(self._read, url).result()
+        try:
+            return self.worker.submit(self._read, url).result()
+        except Exception as error:
+            # Playwright timeouts are transport failures, like urllib timeouts.
+            # Callers can retain verified calendars while optional pages are absent.
+            from playwright.sync_api import TimeoutError as BrowserTimeout
+            if isinstance(error, BrowserTimeout):
+                raise OSError('Public RFAF page did not become available: '+parsed.path) from error
+            raise
 
     def _read(self, url):
         if self.page is None:

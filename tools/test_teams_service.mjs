@@ -7,3 +7,14 @@ test('Preview jobs are idempotent; import accepts only verified club candidates 
 test('Renaming/reordering retains keys, fixture names and favorites; stale edits cannot clobber changes',async()=>{const store=mock(),result=await manageTeams('/teams/update',{key:'infantil',label:'Infantil A',order:1,revision:'revision1'},store);assert.equal(result.teams[0].key,'infantil');assert.equal(result.teams[0].team_id,'34369965');assert.deepEqual(result.teams.map(t=>t.order),[1,2,3]);await assert.rejects(manageTeams('/teams/update',{key:'first',label:'Uno',order:1,revision:'revision1'},store),e=>e.status===409);});
 test('Dynamic audiences require a trusted configured identity; malformed keys and rival ids are rejected',()=>{const teams={...catalog.BASE,rfaf_49465413_1234:'1234'},v={id,title:'Aviso',body:'Mensaje',teamKey:'rfaf_49465413_1234',mode:'now'};assert.throws(()=>validateNotice(v));assert.equal(validateNotice(v,1000,teams).teamKey,v.teamKey);const notice=validateNotice(v,1000,teams);assert(custom.validRequest(notice,teams));assert(custom.subscribed(notice,[{teamKey:v.teamKey,teamId:'1234'}],teams));assert(!custom.subscribed(notice,[{teamKey:v.teamKey,teamId:'999'}],teams));assert(!catalog.validKey('../../secret'));});
 test('GitHub transport uses CAS and UTF-8 without credentials in public content',async()=>{const calls=[],store=githubStore({GITHUB_IMAGE_TOKEN:'private'},async(u,o)=>{calls.push([u,o]);return Response.json({});});await store.write('data/team-imports/'+id+'.json',{label:'Infantil Ñ'},'known');const body=JSON.parse(calls[0][1].body);assert.equal(body.sha,'known');assert.equal(new TextDecoder().decode(Uint8Array.from(atob(body.content),c=>c.charCodeAt(0))),'{\n  "label": "Infantil Ñ"\n}\n');assert(!JSON.stringify(body).includes('private'));});
+test('Deleting an added team retires it, preserves original favorites and rejects stale deletion',async()=>{
+ const store=mock(),extra={...initial.teams[2],key:'rfaf_49520774_1234',team_id:'1234',filename:'fixtures-rfaf_49520774_1234.json',label:'Prueba',order:4};
+ store.rows.get('data/club-teams.json').value.teams.push(extra);
+ await assert.rejects(manageTeams('/teams/delete',{key:extra.key,revision:'stale'},store),e=>e.status===409);
+ await assert.rejects(manageTeams('/teams/delete',{key:'first',revision:'revision1'},store));
+ const result=await manageTeams('/teams/delete',{key:extra.key,revision:'revision1'},store);
+ assert.deepEqual(result.teams.map(t=>t.key),['first','filial','infantil']);
+ assert.deepEqual(store.rows.get('data/club-teams.json').value.retired,[extra.key]);
+ await manageTeams('/teams/update',{key:'first',label:'Primer Equipo',order:1,revision:'revision1x'},store);
+ assert.deepEqual(store.rows.get('data/club-teams.json').value.retired,[extra.key]);
+});
