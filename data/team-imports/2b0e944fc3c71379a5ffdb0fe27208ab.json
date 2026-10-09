@@ -1,6 +1,9 @@
 {
   "id": "2b0e944fc3c71379a5ffdb0fe27208ab",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=48466108&codgrupo=48466110&CodJornada=5",
-  "status": "preview_pending",
-  "createdAt": "2026-10-09T12:15:02.626Z"
+  "status": "error",
+  "createdAt": "2026-10-09T12:15:02.626Z",
+  "attempts": 1,
+  "error": "No se pudo leer toda la información pública de RFAF. Puedes reintentar; los equipos existentes se conservan.",
+  "updatedAt": "2026-10-09T12:16:09.825727+00:00"
 }
