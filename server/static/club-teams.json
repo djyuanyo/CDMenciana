@@ -40,26 +40,6 @@
       "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codcompeticion=49113015&codgrupo=49113036&codtemporada=22&CodJornada=1"
     },
     {
-      "key": "infantil",
-      "label": "Infantil",
-      "team_id": "34369965",
-      "competition_id": "49520234",
-      "group_id": "49520774",
-      "competition": "2ª Andaluza Infantil F.S. (Córdoba)",
-      "group": "Grupo B",
-      "team_count": 10,
-      "round_count": 18,
-      "filename": "fixtures-infantil.json",
-      "initial_round": 2,
-      "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2",
-      "order": 3,
-      "season_id": "22",
-      "season": "2026-2027",
-      "status": "active",
-      "team_name": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2"
-    },
-    {
       "competition_id": "49465203",
       "group_id": "49465413",
       "season_id": "22",
@@ -78,7 +58,27 @@
       "filename": "fixtures-rfaf_49465413_485016.json",
       "label": "Cadete",
       "status": "active",
-      "order": 4
+      "order": 3
+    },
+    {
+      "key": "infantil",
+      "label": "Infantil",
+      "team_id": "34369965",
+      "competition_id": "49520234",
+      "group_id": "49520774",
+      "competition": "2ª Andaluza Infantil F.S. (Córdoba)",
+      "group": "Grupo B",
+      "team_count": 10,
+      "round_count": 18,
+      "filename": "fixtures-infantil.json",
+      "initial_round": 2,
+      "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2",
+      "order": 4,
+      "season_id": "22",
+      "season": "2026-2027",
+      "status": "active",
+      "team_name": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2"
     }
   ],
   "retired": []
