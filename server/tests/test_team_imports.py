@@ -18,6 +18,6 @@ class TeamImportTests(unittest.TestCase):
   p=preview(html,links,SOURCE);self.assertEqual(p['team_count'],3);self.assertEqual(p['round_count'],6);self.assertTrue(p['has_byes']);self.assertEqual(p['candidates'],[dict(team_id='1234',team_name='C.D. MENCIANA')])
   cfg=dict(p,key='rfaf_49465413_1234',team_name='C.D. MENCIANA');games,rounds=calendar(html,True,cfg);self.assertEqual(len(games),6);self.assertFalse(any(m['away']=='Descansa' for m in games));games,rounds=calendar(html,False,cfg);self.assertEqual(len(games),4)
  def test_catalog_preserves_original_ids_and_blocks_path_injection(self):
-  value=json.loads((ROOT/'data/club-teams.json').read_text());self.assertEqual([t['key'] for t in validate_catalog(value)],['first','filial','infantil'])
+  value=json.loads((ROOT/'data/club-teams.json').read_text());self.assertTrue({'first','filial','infantil'}.issubset({t['key'] for t in validate_catalog(value)}));self.assertEqual({t['key']:t['team_id'] for t in validate_catalog(value) if t['key'] in {'first','filial','infantil'}},{'first':'2137495', 'filial':'48536795', 'infantil':'34369965'})
   value['teams'][0]['filename']='../private.json'
   with self.assertRaises(ValueError):validate_catalog(value)
