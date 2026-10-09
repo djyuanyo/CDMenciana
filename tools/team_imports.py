@@ -51,8 +51,8 @@ def preview(calendar_html,round_html,source):
         n=int(heading[1]);numbers.append(n)
         for row in table.find('tr'):
             cells=[x for x in row.children if x.tag=='td']
-            if len(cells)!=3:continue
-            for c in (cells[0],cells[2]):
+            if len(cells) not in (2,3):continue
+            for c in (cells[0],cells[-1]):
                 name=c.text().strip()
                 if normalize(name) in ('DESCANSA','DESCANSO','LIBRE'):bye_rounds.append(n)
                 elif name:names.add(name)
