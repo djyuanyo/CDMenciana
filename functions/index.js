@@ -26,7 +26,8 @@ const { getMessaging } = require('firebase-admin/messaging');
 const { Timestamp } = require('firebase-admin/firestore');
 const { pollResults } = require('./results');
 exports.notifyFavoriteResults = onSchedule({ schedule: 'every 5 minutes', timeZone: 'Europe/Madrid', region: 'europe-west1', maxInstances: 1, timeoutSeconds: 240, memory: '256MiB', retryCount: 2 }, async () => {
-  await pollResults({ db: getFirestore(), auth: getAuth(), messaging: getMessaging(), Timestamp, fetchFeed: async file => {
+  const catalogResponse=await fetch('https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/club-teams.json',{signal:AbortSignal.timeout(20000),cache:'no-store'});if(!catalogResponse.ok)throw Error('Club catalog unavailable');
+  await pollResults({ teams:require('./team-catalog').parseCatalog(await catalogResponse.json()), db: getFirestore(), auth: getAuth(), messaging: getMessaging(), Timestamp, fetchFeed: async file => {
     const response = await fetch('https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/' + file, { signal: AbortSignal.timeout(20000), cache: 'no-store' });
     if (!response.ok) throw Error('Official result feed unavailable');
     return response.json();

@@ -18,7 +18,7 @@ function render(){
  if(page==='Inicio')body=Fixtures.overview();
  if(page==='Noticia')body=ClubNews.screen();
  if(page==='Favoritos')body=ClubFavorites.screen();
- if(page==='Administración'||['Administración users','Administración notifications','Administración history'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
+ if(page==='Administración'||['Administración users','Administración notifications','Administración history','Administración teams'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
  if(page==='Partidos')body=Fixtures.calendar();
  if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
  if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'',route?.origin==='plantilla')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
@@ -32,7 +32,7 @@ function render(){
  main.innerHTML=body;
  if(page==='Partidos')Fixtures.syncRoundTabs();
 }
-document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración users')loadClubUsers();else if(page==='Administración history')ClubNotifications.history();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();window.scrollTo(0,0)}});
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración teams'){ClubTeams.paint();ClubTeams.refresh().catch(e=>ClubTeams.say(e.message));}else if(page==='Administración users')loadClubUsers();else if(page==='Administración history')ClubNotifications.history();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();window.scrollTo(0,0)}});
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
 document.addEventListener('click',e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;render();Fixtures.syncRoundTabs(true);}});
 render();Fixtures.load().then(()=>routeState()?reportRoute():render());
@@ -101,3 +101,5 @@ document.addEventListener('submit',async event=>{
 });
 
 window.addEventListener('club-favorites-state',()=>render());
+
+window.addEventListener('club-teams-state',()=>{if(!page.startsWith('Administración'))render();else CDM.shell(page,ClubAccess.user());});

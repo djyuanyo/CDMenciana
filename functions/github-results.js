@@ -18,7 +18,7 @@ async function main() {
   initializeApp({ credential: applicationDefault(), projectId });
   if(process.argv.includes('--news')) { await pollNews({db:getFirestore(),auth:getAuth(),messaging:getMessaging(),Timestamp,feed:JSON.parse(fs.readFileSync('data/news.json','utf8'))});return; }
   if(process.argv.includes('--custom')) { await processCustom({db:getFirestore(),auth:getAuth(),messaging:getMessaging(),Timestamp});console.log('Cola de avisos procesada.');return; }
-  await pollResults({ db: getFirestore(), auth: getAuth(), messaging: getMessaging(), Timestamp,
+  await pollResults({ teams:require('./team-catalog').parseCatalog(JSON.parse(fs.readFileSync('data/club-teams.json','utf8'))), db: getFirestore(), auth: getAuth(), messaging: getMessaging(), Timestamp,
     fetchFeed: async file => {
       const response = await fetch('https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/' + file,
         { signal: AbortSignal.timeout(20000), cache: 'no-store' });

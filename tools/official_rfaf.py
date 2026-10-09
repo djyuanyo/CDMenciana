@@ -13,7 +13,7 @@ TEAMS={
 }
 def team_query(config,lower=False):
     keys=('codcompeticion','codgrupo','codtemporada') if lower else ('CodCompeticion','CodGrupo','CodTemporada')
-    return urllib.parse.urlencode(dict(zip(('cod_primaria',*keys),('1000120',config['competition_id'],config['group_id'],'22'))))
+    return urllib.parse.urlencode(dict(zip(('cod_primaria',*keys),('1000120',config['competition_id'],config['group_id'],config.get('season_id','22')))))
 DIGITS=[2,5,9,4,1,0,8,6,3,7,1,3,5,7,9,0,2,4,6,8,0,2,4,6,8,1,3,5,7,9,7,5,2,0,9,6,3,8,4,1]
 
 def visible(node,css=""):
@@ -41,6 +41,9 @@ def scores(cell):
     if not all(re.fullmatch(r'\d{1,2}',n) for n in values):raise ValueError('Unrecognized rendered score')
     return tuple(map(int,values))
 
+def belongs(name,config):
+    return normalize(name)==normalize(config['team_name']) if config.get('team_name') else is_club(name)
+
 def calendar(html,all_teams=False,config=None):
     config=config or TEAMS['first'];source=PREFIX+'NFG_CmpJornada?'+team_query(config)
     tables=[t for t in Document(html).root.find('table') if 'table-hover' in t.attrs.get('class','')]
@@ -52,14 +55,15 @@ def calendar(html,all_teams=False,config=None):
         for row in t.find('tr'):
             cells=[c for c in row.children if c.tag=='td']
             if len(cells)!=3:continue
-            if not all_teams and not (is_club(cells[0].text()) or is_club(cells[2].text())):continue
+            if any(normalize(c.text()).strip() in ('DESCANSA','DESCANSO','LIBRE') for c in (cells[0],cells[2])):continue
+            if not all_teams and not (belongs(cells[0].text(),config) or belongs(cells[2].text(),config)):continue
             h,a=scores(cells[1]);played=h is not None
             out.append(dict(id=f"{config['group_id']}-{n}"+('-'+str(len([m for m in out if m['round']==n])+1) if all_teams else ''),round=n,home=cells[0].text(),away=cells[2].text(),home_crest='',away_crest='',date=datetime.datetime.strptime(header[2],'%d-%m-%Y').date().isoformat(),time='',venue='',state='Finalizado' if played else 'Fecha de jornada',played=played,home_score=h,away_score=a,source=source+'&CodJornada='+str(n),date_provisional=True))
     expected=config['round_count']*(config['team_count']//2 if all_teams else 1)
-    if len(out)!=expected or numbers!=list(range(1,config['round_count']+1)):raise ValueError('Incomplete official calendar: '+str(len(out))+' matches; rounds '+str(numbers)+'; page '+Document(html).root.text()[:350])
+    if (len(out)!=expected and not (config.get('has_byes') and not all_teams and 0<len(out)<=expected)) or numbers!=list(range(1,config['round_count']+1)):raise ValueError('Incomplete official calendar: '+str(len(out))+' matches; rounds '+str(numbers)+'; page '+Document(html).root.text()[:350])
     return out,numbers
 
-def standings(html,team_count=16):
+def standings(html,team_count=16,team_name=''):
     for t in Document(html).root.find('table'):
         if 'table-bordered' not in t.attrs.get('class',''):continue
         out=[]
@@ -70,7 +74,7 @@ def standings(html,team_count=16):
             shift=1 if len(c)==16 else 0
             num=lambda i:int(c[i-shift].text())
             out.append(dict(position=int(c[1].text()),team=c[2].text(),points=num(4),played=num(5)+num(9),won=num(6)+num(10),drawn=num(7)+num(11),lost=num(8)+num(12),gf=num(13),ga=num(14),gd=num(13)-num(14),form=c[15-shift].text(),sanction=num(16)))
-        if len(out)==team_count and sum(is_club(r['team']) for r in out)==1:return out
+        if len(out)==team_count and sum(normalize(r['team'])==normalize(team_name) if team_name else is_club(r['team']) for r in out)==1:return out
     raise ValueError('Incomplete standings')
 
 def team_crests(html):
@@ -192,9 +196,10 @@ def enrich(match,html):
     raise ValueError('Match missing from official round')
 
 def verify_results(matches,club,previous):
+    our=lambda name:normalize(name)==normalize(club['team']) if club.get('team') else is_club(name)
     played=[m for m in matches if m['played']]
-    gf=sum(m['home_score'] if is_club(m['home']) else m['away_score'] for m in played)
-    ga=sum(m['away_score'] if is_club(m['home']) else m['home_score'] for m in played)
+    gf=sum(m['home_score'] if our(m['home']) else m['away_score'] for m in played)
+    ga=sum(m['away_score'] if our(m['home']) else m['home_score'] for m in played)
     if (len(played),gf,ga)==(club['played'],club['gf'],club['ga']):return 'verified'
     old={m['id']:m for m in previous.get('matches',[])}
     for match in played:
@@ -213,7 +218,7 @@ def sync(config=None,browser_reader=None):
         req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/html,application/xhtml+xml','Referer':source})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
-            if not raw and browser_reader is not None and config['key']=='infantil' and urllib.parse.urlsplit(url).path.startswith('/pnfg/NPcd/NFG_'):
+            if not raw and browser_reader is not None and (config['key']=='infantil' or config['key'].startswith('rfaf_')) and urllib.parse.urlsplit(url).path.startswith('/pnfg/NPcd/NFG_'):
                 return browser_reader.read(url)
             if not raw or (b'No se ha aceptado el cookie' in raw and ('NFG_CmpPartido' in url or 'NFG_EstadisticasJugador' in url)):
                 import subprocess,tempfile
@@ -235,7 +240,7 @@ def sync(config=None,browser_reader=None):
     def menu_link(html,leaf):
         links=[n.attrs.get('href','') for n in Document(html).root.find('a') if leaf in n.attrs.get('href','')]
         if not links:
-            if config['key']!='infantil':raise ValueError('Official competition link missing: '+leaf)
+            if config['key']!='infantil' and not config['key'].startswith('rfaf_'):raise ValueError('Official competition link missing: '+leaf)
             # The supplied public Infantil page exposes these same menu routes.
             query=team_query(config,lower=True)+'&CodJornada='+str(config.get('initial_round',1))
             return PREFIX+leaf+'?'+query
@@ -243,16 +248,17 @@ def sync(config=None,browser_reader=None):
         if parsed.scheme!='https' or parsed.hostname!='www.rfaf.es':raise ValueError('Unexpected official source')
         return url
     round_matches,numbers=calendar(calendar_page if calendar_page is not None else get(menu_link(first_page,'NFG_VisCalendario_Vis')),all_teams=True,config=config)
-    matches=[m for m in round_matches if is_club(m['home']) or is_club(m['away'])]
+    matches=[m for m in round_matches if belongs(m['home'],config) or belongs(m['away'],config)]
+    if not matches:raise ValueError('Selected club team missing from calendar')
     for match in matches:match['id']=f"{config['group_id']}-{match['round']}"
     current=max((m['round'] for m in matches if m['played']),default=1)
     current_page=first_page if current==initial_round else get(source+'&CodJornada='+str(current))
     standings_url=menu_link(current_page,'NFG_VisClasificacion')
-    table=standings(get(standings_url),team_count=config['team_count'])
+    table=standings(get(standings_url),team_count=config['team_count'],team_name=config.get('team_name',''))
     print(f'Calendar: {len(matches)} matches; standings: {len(table)} teams',flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         next_round=min((m['round'] for m in matches if not m['played']),default=31)
-        published=matches  # Every published future kickoff must be refreshed.
+        published={m['source']:m for m in round_matches}.values()  # Every published future kickoff must be refreshed.
         pages=dict(pool.map(lambda match:(match['source'],get(match['source'])),published))
         for match in round_matches:
             try:enrich(match,pages[match['source']])
@@ -266,14 +272,14 @@ def sync(config=None,browser_reader=None):
     scorers_url=menu_link(current_page,'NFG_CMP_Goleadores')
     try:goal_rows=scorers(get(scorers_url))
     except (ValueError,OSError) as error:
-        if not previous.get('scorers'):raise
-        goal_rows=previous['scorers']
+        if not previous.get('scorers') and any(m['played'] for m in matches):raise
+        goal_rows=previous.get('scorers',[])
         scorers_url=previous.get('scorers_source',scorers_url)
         print(f'Goleadores pendientes: {error}; se actualizan los horarios',flush=True)
     roster_rows=previous.get('roster',[])
-    club=next(r for r in table if is_club(r['team']))
+    club=next(r for r in table if belongs(r['team'],config))
     results_status=verify_results(matches,club,previous)
-    payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season='2026-2027',team=next(r['team'] for r in table if is_club(r['team'])),source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season=config.get('season','2026-2027'),team=club['team'],source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
     team_html=''
     try:
@@ -322,7 +328,8 @@ def sync_all():
     errors=[];updated=0
     from rfaf_browser import PublicBrowserReader
     with PublicBrowserReader() as browser_reader:
-        for config in TEAMS.values():
+        from team_imports import load_teams
+        for config in load_teams() or TEAMS.values():
             try:
                 sync(config,browser_reader)
                 updated+=1

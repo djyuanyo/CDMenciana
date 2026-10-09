@@ -36,11 +36,13 @@ service cloud.firestore {
    allow delete: if ownProfile(uid) && deleting(uid);
   }
   function clubReady(uid) { return ownProfile(uid) && !deleted(uid) && (clubAdmin() || (exists(/databases/$(database)/documents/clubUsers/$(uid)) && get(/databases/$(database)/documents/clubUsers/$(uid)).data.registrationComplete=='true')); }
+  function configuredTeam(key,id) { return key.matches('rfaf_[0-9]{1,12}_[0-9]{1,12}') && exists(/databases/$(database)/documents/clubTeams/$(key)) && get(/databases/$(database)/documents/clubTeams/$(key)).data.status=='active' && get(/databases/$(database)/documents/clubTeams/$(key)).data.teamId==id; }
+  match /clubTeams/{key} { allow get,list: if true; allow write: if false; }
   match /clubUsers/{uid}/favorites/{favorite} {
    allow get,list: if clubReady(uid);
    allow create: if clubReady(uid)
     && request.resource.data.keys().hasAll(['teamKey','teamId','teamName','createdAt']) && request.resource.data.keys().hasOnly(['teamKey','teamId','teamName','createdAt'])
-    && ((request.resource.data.teamKey=='first' && request.resource.data.teamId=='2137495') || (request.resource.data.teamKey=='filial' && request.resource.data.teamId=='48536795') || (request.resource.data.teamKey=='infantil' && request.resource.data.teamId=='34369965'))
+    && ((request.resource.data.teamKey=='first' && request.resource.data.teamId=='2137495') || (request.resource.data.teamKey=='filial' && request.resource.data.teamId=='48536795') || (request.resource.data.teamKey=='infantil' && request.resource.data.teamId=='34369965') || configuredTeam(request.resource.data.teamKey,request.resource.data.teamId))
     && favorite==request.resource.data.teamKey+'_'+request.resource.data.teamId
     && request.resource.data.teamName is string && request.resource.data.teamName.size()>0 && request.resource.data.teamName.size()<=160
     && request.resource.data.createdAt is string && request.resource.data.createdAt.size()==24;
@@ -62,7 +64,7 @@ service cloud.firestore {
     && request.resource.data.keys().hasAll(['title','body','teamKey','createdBy','createdAt','status'])
     && request.resource.data.title is string && request.resource.data.title.size()>0 && request.resource.data.title.size()<=100
     && request.resource.data.body is string && request.resource.data.body.size()>0 && request.resource.data.body.size()<=500
-    && request.resource.data.teamKey in ['all','first','filial','infantil']
+    && (request.resource.data.teamKey in ['all','first','filial','infantil'] || (request.resource.data.teamKey.matches('rfaf_[0-9]{1,12}_[0-9]{1,12}') && exists(/databases/$(database)/documents/clubTeams/$(request.resource.data.teamKey)) && get(/databases/$(database)/documents/clubTeams/$(request.resource.data.teamKey)).data.status=='active'))
     && request.resource.data.createdBy==request.auth.uid && request.resource.data.createdAt==request.time
     && request.resource.data.status=='pending';
    allow update,delete: if false;
@@ -79,3 +81,4 @@ service cloud.firestore {
   match /{document=**} { allow read,write: if false; }
  }
 }
+

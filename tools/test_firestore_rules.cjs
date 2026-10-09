@@ -22,6 +22,13 @@ async function run(){
   await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/first_321'),{...favorite,teamId:'321',role:'admin'}));
   await assertFails(setDoc(doc(anonymous,'clubUsers/fan/favorites/first_2137495'),favorite));
   await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/first_999'),{...favorite,teamId:'999'}));
+  const newFavorite={...favorite,teamKey:'rfaf_49465413_1234',teamId:'1234',teamName:'Cadete'};
+  await assertFails(setDoc(doc(fan,'clubTeams/rfaf_49465413_1234'),{teamId:'1234',status:'active'}));
+  await assertFails(setDoc(doc(owner,'clubTeams/rfaf_49465413_1234'),{teamId:'1234',status:'active'}));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/rfaf_49465413_1234_1234'),newFavorite));
+  await env.withSecurityRulesDisabled(async context=>{await setDoc(doc(context.firestore(),'clubTeams/rfaf_49465413_1234'),{teamId:'1234',status:'active'});});
+  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan/favorites/rfaf_49465413_1234_1234'),newFavorite));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/rfaf_49465413_1234_999'),{...newFavorite,teamId:'999'}));
   const notice={title:'Aviso',body:'Prueba privada',teamKey:'all',createdBy:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',createdAt:serverTimestamp(),status:'pending'};
   const noticePath='clubNotificationRequests/'+ 'a'.repeat(32);
   await assertFails(setDoc(doc(fan,noticePath),notice));

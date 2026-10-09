@@ -1,7 +1,7 @@
 /* Public sports snapshots from the club repository, with the shipped copy as fallback. */
 (() => {
   const fetchLocal = window.fetch.bind(window);
-  const allowed = /^(?:fixtures(?:-filial|-infantil)?\.json|news\.json|actas\/\d+\.json)(?:\?refresh=1)?$/;
+  const allowed = /^(?:fixtures(?:-(?:filial|infantil|rfaf_[0-9]{1,12}_[0-9]{1,12}))?\.json|club-teams\.json|news\.json|actas\/\d+\.json)(?:\?refresh=1)?$/;
   window.fetch = async (input, options) => {
     if (typeof input !== 'string' || !allowed.test(input)) return fetchLocal(input, options);
     const filename = input.split('?')[0];
@@ -15,7 +15,7 @@
       const response = await fetchLocal('https://raw.githubusercontent.com/djyuanyo/CDMenciana/main/data/' + filename, { cache: 'no-store', signal: controller.signal });
       if (!response.ok) throw Error('Fuente no disponible.');
       data = await response.json();
-      const rows = data[filename.startsWith('actas/') ? 'blocks' : filename === 'news.json' ? 'news' : 'matches'];
+      const rows = data[filename.startsWith('actas/') ? 'blocks' : filename === 'news.json' ? 'news' : filename === 'club-teams.json' ? 'teams' : 'matches'];
       if (!Array.isArray(rows) || filename !== 'news.json' && !rows.length) throw Error('Datos incompletos.');
       data.connection_state = 'live';
     } catch { data = null; }
@@ -32,3 +32,4 @@
     return new Response(JSON.stringify(data || {}), { status: data ? 200 : 503, headers: { 'Content-Type': 'application/json' } });
   };
 })();
+

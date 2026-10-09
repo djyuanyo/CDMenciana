@@ -2,7 +2,7 @@ name: Compilar APK para firma local
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/build-review-apk.yml', 'android/app/src/main/java/es/cdmenciana/app/PushPreferences.java', 'android/app/build.gradle', 'android/app/src/main/assets/fixtures.js', 'android/app/src/main/assets/fixtures-infantil.json']
+    paths: ['.github/workflows/build-review-apk.yml', 'android/app/src/main/java/es/cdmenciana/app/PushPreferences.java', 'android/app/build.gradle', 'android/app/src/main/java/es/cdmenciana/app/MainActivity.java', 'android/app/src/main/assets/offline.js', 'server/static/teams.js', 'android/app/src/main/assets/fixtures.js', 'android/app/src/main/assets/fixtures-infantil.json']
   workflow_dispatch:
 permissions:
   contents: read

@@ -29,6 +29,7 @@ class PublicBrowserReader:
             self.runtime = sync_playwright().start()
             self.browser = self.runtime.chromium.launch()
             self.page = self.browser.new_page()
+            self.page.goto('https://www.rfaf.es/pnfg/NPortada', wait_until='domcontentloaded', timeout=40000)
         self.page.goto(url, wait_until='domcontentloaded', timeout=40000)
         if '/NLogin' in self.page.url:
             raise ValueError('Public RFAF page requires a session')

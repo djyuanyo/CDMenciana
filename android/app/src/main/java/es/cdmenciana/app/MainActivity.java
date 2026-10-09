@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String getTheme(){return getPreferences(MODE_PRIVATE).getString("theme","dark");}
         @JavascriptInterface public String getTeam(){return getPreferences(MODE_PRIVATE).getString("team","first");}
         @JavascriptInterface public void setTheme(String value){if(!"dark".equals(value)&&!"light".equals(value))return;getPreferences(MODE_PRIVATE).edit().putString("theme",value).apply();runOnUiThread(()->applyNativeTheme());}
-        @JavascriptInterface public void setTeam(String value){if("first".equals(value)||"filial".equals(value)||"infantil".equals(value))getPreferences(MODE_PRIVATE).edit().putString("team",value).apply();}
+        @JavascriptInterface public void setTeam(String value){if(NotificationRoutes.validTeam(value))getPreferences(MODE_PRIVATE).edit().putString("team",value).apply();}
     }
     private int dp(int value){return Math.round(value*getResources().getDisplayMetrics().density);}
     private TextView styledText(String text,int size,int color){TextView view=new TextView(this);view.setText(text);view.setTextSize(size);view.setTextColor(color);view.setLineSpacing(dp(3),1f);return view;}
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
                     try(InputStream input=connection.getInputStream();ByteArrayOutputStream output=new ByteArrayOutputStream()){
                         byte[] buf=new byte[4096];int count;while((count=input.read(buf))!=-1){if(output.size()+count>2097152)throw new java.io.IOException("Data limit");output.write(buf,0,count);}data=output.toByteArray();
                     }
-                    JSONObject parsed=new JSONObject(new String(data,StandardCharsets.UTF_8));int itemCount=parsed.getJSONArray(filename.startsWith("actas/")?"blocks":filename.equals("news.json")?"news":"matches").length();if(!filename.equals("news.json")&&itemCount==0)throw new java.io.IOException("Empty calendar");
+                    JSONObject parsed=new JSONObject(new String(data,StandardCharsets.UTF_8));int itemCount=parsed.getJSONArray(filename.startsWith("actas/")?"blocks":filename.equals("news.json")?"news":filename.equals("club-teams.json")?"teams":"matches").length();if(!filename.equals("news.json")&&itemCount==0)throw new java.io.IOException("Empty calendar");
                     java.nio.file.Files.write(cache.toPath(),data);source="live";
                 }finally{connection.disconnect();}
             }
@@ -170,8 +170,19 @@ public class MainActivity extends Activity {
             }
         }catch(Exception ignored){}
     }
+    private org.json.JSONArray configuredTeams(){
+        for(boolean bundled:new boolean[]{false,true})try(InputStream input=bundled?getAssets().open("club-teams.json"):new java.io.FileInputStream(new java.io.File(getFilesDir(),"club-teams.json"));ByteArrayOutputStream bytes=new ByteArrayOutputStream()){
+            byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);
+            return new JSONObject(bytes.toString("UTF-8")).getJSONArray("teams");
+        }catch(Exception ignored){}
+        return new org.json.JSONArray();
+    }
+    private java.util.List<String> configuredTeamFiles(){
+        java.util.List<String> files=new java.util.ArrayList<>();files.add("fixtures.json");files.add("fixtures-filial.json");files.add("fixtures-infantil.json");
+        org.json.JSONArray teams=configuredTeams();for(int i=0;i<teams.length();i++){JSONObject team=teams.optJSONObject(i);if(team==null)continue;String file=team.optString("filename");if(file.matches("fixtures-rfaf_[0-9]{1,12}_[0-9]{1,12}\\.json"))files.add(file);}return files;
+    }
     private String roundSourceForActa(String id){
-        for(String filename:new String[]{"fixtures.json","fixtures-filial.json","fixtures-infantil.json"}){
+        for(String filename:configuredTeamFiles()){
             java.io.File cached=new java.io.File(getFilesDir(),filename);
             for(boolean bundled:new boolean[]{false,true})try(InputStream input=bundled?getAssets().open(filename):new java.io.FileInputStream(cached);ByteArrayOutputStream bytes=new ByteArrayOutputStream()){
                 byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);
@@ -179,6 +190,7 @@ public class MainActivity extends Activity {
                 for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(!id.equals(link.getQueryParameter("CodActa")))continue;String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))return source;}
             }catch(Exception ignored){}
         }
+        String chosen=getPreferences(MODE_PRIVATE).getString("team","first");org.json.JSONArray teams=configuredTeams();for(int i=0;i<teams.length();i++){JSONObject t=teams.optJSONObject(i);if(t!=null&&chosen.equals(t.optString("key"))&&t.optString("competition_id").matches("[0-9]{1,12}")&&t.optString("group_id").matches("[0-9]{1,12}")&&t.optString("season_id").matches("[0-9]{1,3}"))return "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion="+t.optString("competition_id")+"&CodGrupo="+t.optString("group_id")+"&CodTemporada="+t.optString("season_id")+"&CodJornada=1";}
         String selected=getPreferences(MODE_PRIVATE).getString("team","first");boolean filial="filial".equals(selected),infantil="infantil".equals(selected);
         return "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion="+(infantil?"49520234":filial?"49113015":"48466108")+"&CodGrupo="+(infantil?"49520774":filial?"49113036":"48466109")+"&CodTemporada=22&CodJornada=1";
     }
@@ -421,7 +433,7 @@ public class MainActivity extends Activity {
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
                     if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"),req.getUrl().getQueryParameter("refresh")!=null);
-                    if("fixtures.json".equals(name)||"fixtures-filial.json".equals(name)||"fixtures-infantil.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
+                    if(name.matches("fixtures(?:-(?:filial|infantil|rfaf_[0-9]{1,12}_[0-9]{1,12}))?\\.json")||"club-teams.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
                     if(!BundledAssets.allows(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}

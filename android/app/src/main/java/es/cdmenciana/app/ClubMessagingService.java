@@ -20,7 +20,7 @@ public final class ClubMessagingService extends FirebaseMessagingService {
     @Override public void onMessageReceived(RemoteMessage message){
         Map<String,String> data=message.getData();FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         String recipient=data.get("uid"),event=data.get("eventId"),team=data.get("teamKey"),acta=data.get("acta");
-        if(user==null||!user.getUid().equals(recipient)||!recipient.equals(ClubPush.prefs(this).getString("uid",""))||!ClubPush.permitted(this)||event==null||!event.matches("[a-f0-9]{64}")||!("first".equals(team)||"filial".equals(team)||"infantil".equals(team)||"all".equals(team)))return;
+        if(user==null||!user.getUid().equals(recipient)||!recipient.equals(ClubPush.prefs(this).getString("uid",""))||!ClubPush.permitted(this)||event==null||!event.matches("[a-f0-9]{64}")||!(NotificationRoutes.validTeam(team)||"all".equals(team)))return;
         // Keep a bounded history; stable notification tags also replace duplicate deliveries.
         String seen=ClubPush.prefs(this).getString("seen-"+recipient,"");if(java.util.Arrays.asList(seen.split(",")).contains(event))return;
         NotificationManager manager=getSystemService(NotificationManager.class);
@@ -43,3 +43,4 @@ public final class ClubMessagingService extends FirebaseMessagingService {
         String[] history=(event+(seen.isEmpty()?"":","+seen)).split(",");ClubPush.prefs(this).edit().putString("seen-"+recipient,String.join(",",java.util.Arrays.copyOf(history,Math.min(history.length,100)))).apply();
     }
 }
+

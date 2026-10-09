@@ -2,7 +2,7 @@ name: Activar envío directo en Cloudflare
 on:
   push:
     branches: [main]
-    paths: ['notification-service/**', 'functions/custom-notifications.js', '.github/workflows/deploy-notification-service.yml']
+    paths: ['notification-service/**', 'functions/custom-notifications.js', 'functions/team-catalog.js', '.github/workflows/deploy-notification-service.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tools/test_notification_service.mjs tools/test_custom_notifications.cjs
+      - run: node --test tools/test_notification_service.mjs tools/test_custom_notifications.cjs tools/test_teams_service.mjs
       - run: npm ci --prefix notification-service --ignore-scripts --no-audit --no-fund
       - name: Desplegar servicio privado de envío
         env:
@@ -55,3 +55,4 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'config: activate direct notification service'
           git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push origin HEAD:main
+
