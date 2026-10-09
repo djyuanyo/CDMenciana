@@ -103,3 +103,23 @@ document.addEventListener('submit',async event=>{
 window.addEventListener('club-favorites-state',()=>render());
 
 window.addEventListener('club-teams-state',()=>{if(!page.startsWith('Administración'))render();else CDM.shell(page,ClubAccess.user());});
+
+window.refreshScreen=async function(){
+ const current=page;
+ await Fixtures.load(true);
+ if(page!==current)return;
+ if(['Acta','Jugador'].includes(page)){await reportRoute(true);return;}
+ if(page==='Administración teams'){await ClubTeams.refresh();return;}
+ if(page==='Administración history'){await ClubNotifications.history();return;}
+ if(page==='Administración users'){await loadClubUsers();return;}
+ if(page==='Favoritos')await ClubFavorites.sync();
+ if(page==='Mi cuenta'&&window.ClubAccess?.enabled())await ClubAccess.sync();
+ if(page===current)await render();
+ if(Fixtures.error||Fixtures.newsError||ClubMatchdays.failures.size)throw Error('Actualización incompleta');
+};
+document.addEventListener('click',async event=>{
+ const button=event.target.closest('[data-home-category]');if(!button)return;
+ Fixtures.selectTeam(button.dataset.homeCategory);page='Partidos';
+ await Fixtures.loadFixtures();Fixtures.round=ClubMatchdays.round(Fixtures.data);Fixtures.manualRound=true;
+ await render();window.scrollTo(0,0);
+});

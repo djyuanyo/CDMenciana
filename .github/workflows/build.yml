@@ -22,6 +22,7 @@ jobs:
       - run: python -m unittest discover -s tools -p 'test_google_signin_config.py' -v
       - run: python -m unittest discover -s server/tests -v
       - run: node tools/test_fixtures_ui.js
+      - run: NODE_PATH=tools/node_modules node tools/test_matchday_ui.cjs
       - run: npm ci --prefix tools --ignore-scripts --no-audit --no-fund
       - run: node tools/test_report_html.js
       - run: node tools/test_team_theme.js
