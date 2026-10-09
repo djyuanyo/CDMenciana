@@ -23,22 +23,25 @@ jobs:
           import fs from 'node:fs';import crypto from 'node:crypto';import {createRequire} from 'node:module';
           const require=createRequire(process.cwd()+'/functions/package.json'),admin=require('firebase-admin');
           const credentials=JSON.parse(process.env.CDM_FIREBASE_JSON||'{}');
-          if(credentials.project_id!=='barpro-pos-menciana')throw Error('Faltan las credenciales del proyecto correcto.');
-          admin.initializeApp({credential:admin.credential.cert(credentials)});
-          const uid='cdmenciana-google-play-review-1',email='yuanyodesign+cdmenciana-play@gmail.com',password=crypto.randomBytes(24).toString('base64url');
-          let record;try{record=await admin.auth().getUserByEmail(email);}catch(e){if(e.code!=='auth/user-not-found')throw e;}
-          if(record&&record.uid!==uid)throw Error('El correo ya tiene otro usuario. No se ha modificado.');
-          if(record)await admin.auth().updateUser(uid,{password,disabled:false});
-          else await admin.auth().createUser({uid,email,password,displayName:'Revisión Google Play',emailVerified:false});
-          await admin.firestore().collection('clubUsers').doc(uid).set({name:'Revisión Google Play',email,role:'member_player',registrationType:'fan',teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'});
           const apiKey=JSON.parse(fs.readFileSync('android/app/google-services.json')).client[0].api_key[0].current_key;
+          const email='yuanyodesign+cdmenciana-play-v100@gmail.com',password=crypto.randomBytes(24).toString('base64url');
+          const signup=await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='+apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password,returnSecureToken:true})});
+          const created=await signup.json();if(!signup.ok)throw Error('No se ha creado la cuenta de revisión: '+(created.error?.message||'error de autenticación'));
+          const uid=created.localId,profile={name:'Revisión Google Play',email,role:'fan',registrationType:'fan',teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'};
+          const saved=await fetch('https://firestore.googleapis.com/v1/projects/barpro-pos-menciana/databases/(default)/documents/clubUsers/'+uid,{method:'PATCH',headers:{Authorization:'Bearer '+created.idToken,'Content-Type':'application/json'},body:JSON.stringify({fields:Object.fromEntries(Object.entries(profile).map(([key,value])=>[key,{stringValue:value}]))})});
+          if(!saved.ok)throw Error('No se ha completado el perfil de revisión.');
+          let privateZones=false;
+          if(credentials.project_id==='barpro-pos-menciana'){
+            admin.initializeApp({credential:admin.credential.cert(credentials)});
+            try{await admin.firestore().collection('clubUsers').doc(uid).update({role:'member_player'});privateZones=true;}catch{console.log('La cuenta está activa; el titular debe asignar Socio y Jugador desde el panel.');}
+          }
           const response=await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='+apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password,returnSecureToken:true})});
           const data=await response.json();if(!response.ok||data.localId!==uid)throw Error('El acceso de demostración no se ha podido validar.');
           const certificate=fs.readFileSync('play-release/upload-certificate.pem');
-          const encrypted=crypto.publicEncrypt({key:certificate,oaepHash:'sha256'},Buffer.from(JSON.stringify({uid,email,password,verified:true})));
+          const encrypted=crypto.publicEncrypt({key:certificate,oaepHash:'sha256'},Buffer.from(JSON.stringify({uid,email,password,verified:true,privateZones})));
           fs.writeFileSync('play-reviewer-encrypted.bin',encrypted,{mode:0o600});
           console.log('Cuenta de demostración verificada. Credenciales cifradas para el titular de la firma. Sin permisos de administrador.');
-          await admin.app().delete();
+          if(admin.apps.length)await admin.app().delete();
           JS
       - uses: actions/upload-artifact@v4
         with: {name: CDMenciana-acceso-revision-cifrado, path: play-reviewer-encrypted.bin, retention-days: 7}
