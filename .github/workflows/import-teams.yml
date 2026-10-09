@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: club-public-data
+  group: club-team-imports
   cancel-in-progress: false
 jobs:
   import:
