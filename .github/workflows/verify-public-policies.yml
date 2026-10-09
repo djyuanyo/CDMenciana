@@ -21,7 +21,8 @@ jobs:
               expected=pathlib.Path('server/static/'+name).read_text()
               for attempt in range(12):
                   try:
-                      r=urllib.request.urlopen(root+name,timeout=15);html=r.read().decode()
+                      request=urllib.request.Request(root+name,headers={'User-Agent':'Mozilla/5.0'})
+                      r=urllib.request.urlopen(request,timeout=15);html=r.read().decode()
                       assert r.status==200 and 'text/html' in r.headers['Content-Type']
                       assert html==expected,'La política pública debe coincidir con la incluida en la app'
                       results.append({'url':root+name,'status':r.status,'public':True,'same_as_app':True})

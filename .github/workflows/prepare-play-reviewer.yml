@@ -1,0 +1,44 @@
+name: Preparar cuenta de revisión de Google Play
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/prepare-play-reviewer.yml', 'play-release/upload-certificate.pem']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm ci --prefix functions --ignore-scripts --no-audit --no-fund
+      - name: Crear y comprobar acceso con datos de demostración
+        env:
+          CDM_FIREBASE_JSON: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';import crypto from 'node:crypto';import {createRequire} from 'node:module';
+          const require=createRequire(process.cwd()+'/functions/package.json'),admin=require('firebase-admin');
+          const credentials=JSON.parse(process.env.CDM_FIREBASE_JSON||'{}');
+          if(credentials.project_id!=='barpro-pos-menciana')throw Error('Faltan las credenciales del proyecto correcto.');
+          admin.initializeApp({credential:admin.credential.cert(credentials)});
+          const uid='cdmenciana-google-play-review-1',email='yuanyodesign+cdmenciana-play@gmail.com',password=crypto.randomBytes(24).toString('base64url');
+          let record;try{record=await admin.auth().getUserByEmail(email);}catch(e){if(e.code!=='auth/user-not-found')throw e;}
+          if(record&&record.uid!==uid)throw Error('El correo ya tiene otro usuario. No se ha modificado.');
+          if(record)await admin.auth().updateUser(uid,{password,disabled:false});
+          else await admin.auth().createUser({uid,email,password,displayName:'Revisión Google Play',emailVerified:false});
+          await admin.firestore().collection('clubUsers').doc(uid).set({name:'Revisión Google Play',email,role:'member_player',registrationType:'fan',teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'});
+          const apiKey=JSON.parse(fs.readFileSync('android/app/google-services.json')).client[0].api_key[0].current_key;
+          const response=await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='+apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password,returnSecureToken:true})});
+          const data=await response.json();if(!response.ok||data.localId!==uid)throw Error('El acceso de demostración no se ha podido validar.');
+          const certificate=fs.readFileSync('play-release/upload-certificate.pem');
+          const encrypted=crypto.publicEncrypt({key:certificate,oaepHash:'sha256'},Buffer.from(JSON.stringify({uid,email,password,verified:true})));
+          fs.writeFileSync('play-reviewer-encrypted.bin',encrypted,{mode:0o600});
+          console.log('Cuenta de demostración verificada. Credenciales cifradas para el titular de la firma. Sin permisos de administrador.');
+          await admin.app().delete();
+          JS
+      - uses: actions/upload-artifact@v4
+        with: {name: CDMenciana-acceso-revision-cifrado, path: play-reviewer-encrypted.bin, retention-days: 7}

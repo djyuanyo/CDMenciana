@@ -77,11 +77,12 @@ jobs:
         shell: bash
         run: |
           if [ -z "${CDM_SIGNING_STORE:-}" ]; then
-            echo "::error::Configura CDM_ANDROID_KEYSTORE_BASE64 para publicar una APK instalable sin romper Google Sign-In ni perder ajustes."
-            exit 1
+            echo "::notice::Pruebas y compilación Android completadas. La APK de pruebas se omite hasta configurar la firma estable. La publicación de Google Play usa el AAB de producción."
+            exit 0
           fi
           python tools/check_google_signin.py --apk android/app/build/outputs/apk/debug/app-debug.apk
       - uses: actions/upload-artifact@v4
+        if: env.CDM_SIGNING_STORE != ''
         with:
           name: CDMenciana-APK-pruebas
           path: android/app/build/outputs/apk/debug/app-debug.apk
