@@ -1,0 +1,29 @@
+name: Publicar app web y políticas de privacidad
+on:
+  push:
+    branches: [main]
+    paths: ['hosting/**', 'server/static/privacy.html', 'server/static/delete-account.html', '.github/workflows/deploy-hosting.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  hosting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: python tools/bundle_account_assets.py
+      - run: npm ci --prefix hosting --no-audit --no-fund
+      - run: npm --prefix hosting run build
+      - name: Preparar credenciales de despliegue
+        env:
+          CDM_FIREBASE_JSON: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          test -n "$CDM_FIREBASE_JSON"
+          printf '%s' "$CDM_FIREBASE_JSON" > "$RUNNER_TEMP/cdm-hosting-account.json"
+          chmod 600 "$RUNNER_TEMP/cdm-hosting-account.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/cdm-hosting-account.json" >> "$GITHUB_ENV"
+      - run: npm install --global firebase-tools@15 --no-audit --no-fund
+      - run: firebase deploy --only hosting --project barpro-pos-menciana --non-interactive

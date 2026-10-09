@@ -27,8 +27,9 @@ final class FirebaseAccount {
     interface Output { void send(String request, JSONObject data); }
     private final Activity activity;
     private final Output output;
-    private final FirebaseAuth auth;
-    private final CredentialManager credentials;
+    private FirebaseAuth auth;
+    private final boolean configured;
+    private CredentialManager credentials;
     private final FirebaseAuth.AuthStateListener listener;
     private CancellationSignal googleRequest;
     private boolean busy;
@@ -36,8 +37,8 @@ final class FirebaseAccount {
 
     FirebaseAccount(Activity activity, Output output) {
         this.activity=activity;this.output=output;
-        auth=FirebaseApp.getApps(activity).isEmpty()?null:FirebaseAuth.getInstance();
-        credentials=CredentialManager.create(activity);
+        configured=activity.getResources().getIdentifier("google_app_id","string",activity.getPackageName())!=0;
+        auth=null;credentials=null;
         listener=ignored->send("",state());
         if(auth!=null)auth.addAuthStateListener(listener);
     }
@@ -48,7 +49,7 @@ final class FirebaseAccount {
     JSONObject state() {
         JSONObject state=new JSONObject();
         try {
-            state.put("configured",auth!=null).put("google",auth!=null&&!googleClient().isEmpty());
+            state.put("configured",configured).put("google",configured&&!googleClient().isEmpty());
             FirebaseUser user=auth==null?null:auth.getCurrentUser();
             state.put("user",user==null?JSONObject.NULL:new JSONObject()
                     .put("uid",user.getUid()).put("name",user.getDisplayName()==null?"":user.getDisplayName())
@@ -86,9 +87,20 @@ final class FirebaseAccount {
         }
         return "No se pudo completar la solicitud. Vuelve a intentarlo.";
     }
+    private void activate() {
+        if(auth!=null||!configured)return;
+        if(FirebaseApp.getApps(activity).isEmpty())FirebaseApp.initializeApp(activity);
+        auth=FirebaseAuth.getInstance();credentials=CredentialManager.create(activity);
+        auth.addAuthStateListener(listener);
+    }
     void request(String id,String action,JSONObject data) {
         if(closed)return;
         if("state".equals(action)){send(id,state());return;}
+        if("resume".equals(action)){
+            activity.getSharedPreferences("club-adult",android.content.Context.MODE_PRIVATE).edit().putBoolean("approved",true).apply();activate();finish(id,"");return;
+        }
+        if(!activity.getSharedPreferences("club-adult",android.content.Context.MODE_PRIVATE).getBoolean("approved",false)){fail(id,"Completa el acceso de una persona adulta.");return;}
+        activate();
         if(auth==null){fail(id,"El acceso al club todavía no está activado.");return;}
         if("token".equals(action)) {
             FirebaseUser user=auth.getCurrentUser();
@@ -127,6 +139,7 @@ final class FirebaseAccount {
                 auth.getCurrentUser().reload().addOnCompleteListener(activity,t->{if(t.isSuccessful())finish(id,auth.getCurrentUser()!=null&&auth.getCurrentUser().isEmailVerified()?"Correo verificado.":"Tu correo todavía está pendiente de verificación.");else fail(id,error(t.getException()));});break;
             case "google": google(id);break;
             case "logout":
+                activity.getSharedPreferences("club-adult",android.content.Context.MODE_PRIVATE).edit().clear().apply();
                 auth.signOut();
                 credentials.clearCredentialStateAsync(new ClearCredentialStateRequest(),null,activity::runOnUiThread,new CredentialManagerCallback<Void,ClearCredentialException>(){
                     @Override public void onResult(Void value){finish(id,"Sesión cerrada.");}

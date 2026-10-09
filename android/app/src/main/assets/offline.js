@@ -1,5 +1,5 @@
 const main=document.getElementById('main');
-let page='Mi cuenta',playerProfileLoading=false;
+let page='Inicio',playerProfileLoading=false;
 function routeState(){
  const params=new URLSearchParams(location.hash.slice(1)),team=params.get('equipo'),acta=params.get('acta'),player=params.get('jugador');
  if(team&&!Fixtures.teams[team])return null;
@@ -8,7 +8,8 @@ function routeState(){
 }
 function render(){
  const user=window.ClubAccess?.user();
- const gate=!ClubAuth.user||ClubAccess.fetching||(!ClubAccess.administrator()&&!ClubRegistration.complete(ClubAccess.profile));
+ const publicPage=['Inicio','Partidos','Club','Clasificación','Goleadores','Acta','Jugador','Noticia','Más','Privacidad','Eliminar cuenta'].includes(page);
+ const gate=!publicPage&&(!ClubAuth.user||ClubAccess.fetching||!ClubFamilies.adult||(!ClubAccess.administrator()&&!ClubRegistration.complete(ClubAccess.profile))); 
  if(gate)page='Mi cuenta';
  document.documentElement.dataset.accountGate=String(gate);
  if(page.startsWith('Administración')&&!user?.admin)page='Mi cuenta';
@@ -16,6 +17,8 @@ function render(){
  let body='';
  const route=routeState();
  if(page==='Inicio')body=Fixtures.overview();
+ if(page==='Privacidad')body=ClubLegal.screen();
+ if(page==='Eliminar cuenta')body=ClubLegal.screen('delete');
  if(page==='Noticia')body=ClubNews.screen();
  if(page==='Favoritos')body=ClubFavorites.screen();
  if(page==='Administración'||['Administración users','Administración notifications','Administración history','Administración teams'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
@@ -76,7 +79,7 @@ document.addEventListener('click',async e=>{const button=e.target.closest('[data
 
 function newsRoute(){page='Noticia';render();window.scrollTo(0,0);}
 if(ClubNews.route())newsRoute();
-window.addEventListener('club-auth-state',()=>{if(!ClubAuth.user)page='Mi cuenta';ClubAccess.sync();render();});
+window.addEventListener('club-auth-state',()=>{if(!ClubAuth.user&&!['Inicio','Partidos','Club','Clasificación','Goleadores','Acta','Jugador','Noticia','Más','Privacidad','Eliminar cuenta'].includes(page))page='Mi cuenta';ClubAccess.sync();render();});
 window.addEventListener('club-registration-complete',()=>{page='Inicio';render();});
 window.addEventListener('club-access-state',()=>{render();if(page==='Administración users')loadClubUsers();});
 window.addEventListener('club-auth-view',()=>{if(page==='Mi cuenta')render();});

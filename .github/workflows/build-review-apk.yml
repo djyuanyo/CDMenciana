@@ -19,18 +19,18 @@ jobs:
           java-version: '17'
       - uses: android-actions/setup-android@v3
         with:
-          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
           log-accepted-android-sdk-licenses: false
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '8.11.1'
       - run: python tools/bundle_account_assets.py
       - run: gradle -p android testDebugUnitTest assembleDebug lintDebug
       - name: Preparar archivo para revisión y firma local
         run: |
           mkdir -p review-apk
           cp android/app/build/outputs/apk/debug/app-debug.apk review-apk/
-          cp "$ANDROID_HOME/build-tools/35.0.0/lib/apksigner.jar" review-apk/
+          cp "$ANDROID_HOME/build-tools/36.0.0/lib/apksigner.jar" review-apk/
       - uses: actions/upload-artifact@v4
         with:
           name: CDMenciana-revision-firma-local

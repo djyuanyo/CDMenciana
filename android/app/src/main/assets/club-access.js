@@ -75,7 +75,7 @@ window.ClubRegistration={
   const name=String(data.name||'').trim(),email=String(data.email||'').trim(),password=String(data.password||'');
   if(name.length<2||name.length>100)throw Error('Introduce tu nombre completo.');
   if(password.length<10||password.length>128)throw Error('La contraseña debe tener entre 10 y 128 caracteres.');
-  this.validate(data);
+  this.validate(data);this.guardian(data);
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
   try{
    // Create the identity without the native shell's legacy verification email.
@@ -90,6 +90,7 @@ window.ClubRegistration={
   }catch(error){if(error.name==='AbortError'||error.name==='TypeError')throw Error('No se pudo confirmar el registro. Prueba a iniciar sesión con tu correo antes de crear otra cuenta.');throw error;}
   finally{clearTimeout(timer);}
  },
+ guardian(data){if(data.registrationType==='team'&&data.teamRole==='player'&&data.guardianAccepted!=='on')throw Error('Confirma que los datos son tuyos o que actúas como tutor legal del jugador.');},
  validate(data){
   const value={name:String(data.name||'').trim(),registrationType:String(data.registrationType||''),teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'};
   if(value.name.length<2||value.name.length>100)throw Error('Introduce tu nombre completo.');
@@ -114,7 +115,7 @@ window.ClubRegistration={
  fields(data={}){
   const E=ClubAuth.escape.bind(ClubAuth),type=data.registrationType||'',team=type==='team',member=type==='member',player=team&&data.teamRole==='player';
   const options=(rows,value)=>'<option value="">Selecciona una opción</option>'+rows.map(([key,label])=>`<option value="${E(key)}"${value===key?' selected':''}>${E(label)}</option>`).join('');
-  return `<div class="registration-fields"><label class="auth-field"><span>¿Cómo formas parte del club?</span><select name="registrationType" data-registration-type required>${options([['team','Jugador/Cuerpo Técnico'],['member','Socio'],['fan','Aficionado']],type)}</select></label><label class="auth-field" data-member-field${member?'':' hidden'}><span>Número de socio</span><input name="memberNumber" inputmode="numeric" pattern="[0-9]{1,12}" maxlength="12" value="${E(data.memberNumber||'')}"${member?' required':' disabled'}></label><div data-team-fields${team?'':' hidden'}><label class="auth-field"><span>Tu función en el equipo</span><select name="teamRole" data-team-role${team?' required':' disabled'}>${options([['player','Jugador'],['staff','Cuerpo Técnico']],data.teamRole)}</select></label><label class="auth-field"><span>Categoría</span><select name="category"${team?' required':' disabled'}>${options(this.categories.map(x=>[x,x]),data.category)}</select></label></div><label class="auth-field" data-birth-field${player?'':' hidden'}><span>Fecha de nacimiento</span><input type="date" name="birthDate" min="1900-01-01" max="${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}-${String(new Date().getDate()).padStart(2,'0')}" value="${E(data.birthDate||'')}"${player?' required':' disabled'}></label></div>`;
+  return `<div class="registration-fields"><label class="auth-field"><span>¿Cómo formas parte del club?</span><select name="registrationType" data-registration-type required>${options([['team','Jugador/Cuerpo Técnico'],['member','Socio'],['fan','Aficionado']],type)}</select></label><label class="auth-field" data-member-field${member?'':' hidden'}><span>Número de socio</span><input name="memberNumber" inputmode="numeric" pattern="[0-9]{1,12}" maxlength="12" value="${E(data.memberNumber||'')}"${member?' required':' disabled'}></label><div data-team-fields${team?'':' hidden'}><label class="auth-field"><span>Tu función en el equipo</span><select name="teamRole" data-team-role${team?' required':' disabled'}>${options([['player','Jugador'],['staff','Cuerpo Técnico']],data.teamRole)}</select></label><label class="auth-field"><span>Categoría</span><select name="category"${team?' required':' disabled'}>${options(this.categories.map(x=>[x,x]),data.category)}</select></label></div><label class="auth-field" data-birth-field${player?'':' hidden'}><span>Fecha de nacimiento</span><input type="date" name="birthDate" min="1900-01-01" max="${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}-${String(new Date().getDate()).padStart(2,'0')}" value="${E(data.birthDate||'')}"${player?' required':' disabled'}></label><label class="privacy-check" data-guardian-field${player?'':' hidden'}><input type="checkbox" name="guardianAccepted"${player?' required':' disabled'}>Declaro que los datos son míos o que soy el tutor legal del jugador y autorizo el tratamiento descrito en la <a href="privacy.html">política de privacidad</a>.</label></div>`;
  },
  openDialog(){
   const dialog=document.querySelector('[data-registration-dialog]');if(!dialog||!ClubAuth.user||ClubAccess.administrator()||ClubAccess.fetching||window.ClubDeletion?.pending||this.complete(ClubAccess.profile))return;
@@ -128,12 +129,12 @@ window.ClubRegistration={
  },
  update(form){
   const type=form.elements.registrationType.value,team=type==='team',member=type==='member',player=team&&form.elements.teamRole.value==='player';
-  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player]]){
+  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player],['[data-guardian-field]',player]]){
    const group=form.querySelector(selector);group.hidden=!active;
    for(const input of group.querySelectorAll('input,select')){input.disabled=!active||ClubAuth.busy;input.required=active;}
   }
  },
- async save(data){const value=this.validate(data);await ClubAccess.saveRegistration(value);this.draft={};window.dispatchEvent(new CustomEvent('club-registration-complete'));}
+ async save(data){const value=this.validate(data);this.guardian(data);await ClubAccess.saveRegistration(value);this.draft={};window.dispatchEvent(new CustomEvent('club-registration-complete'));}
 };
 document.addEventListener('change',event=>{if(event.target.matches('[data-registration-type],[data-team-role]'))ClubRegistration.update(event.target.form);});
 document.addEventListener('input',event=>{const form=event.target.closest('[data-registration-form]');if(form)ClubRegistration.draft=Object.fromEntries(new FormData(form));});
@@ -414,3 +415,43 @@ document.addEventListener('click',async event=>{try{
  const confirm=event.target.closest('[data-team-delete-confirm]');if(confirm){confirm.disabled=true;try{await ClubTeams.remove(confirm.dataset.teamDeleteConfirm);}finally{confirm.disabled=false;}}
 if(event.target.closest('[data-teams-refresh]'))await ClubTeams.refresh();if(event.target.closest('[data-team-preview-retry]'))await ClubTeams.preview(ClubTeams.job.source,true);}catch(e){ClubTeams.say(e.message);}});
 window.addEventListener('club-auth-state',()=>{clearTimeout(ClubTeams.timer);ClubTeams.job=null;ClubTeams.revision='';ClubTeams.feedback='';});
+
+/* Public sports content is available to all ages. Account access belongs to adults. */
+window.ClubFamilies={
+ adult:false,minor:false,
+ init(){try{this.adult=localStorage.getItem('cdm-adult-access-v1')==='true';}catch{}},
+ screen(){return `<section class="auth-card family-access"><span class="auth-eyebrow">ACCESO CON CUENTA</span><h1>Tu cuenta del club</h1><p>Los partidos, resultados y noticias se pueden consultar sin crear una cuenta.</p><form data-adult-access><label class="auth-field"><span>Fecha de nacimiento de la persona que va a usar la cuenta</span><input type="date" name="adultBirthDate" required min="1900-01-01" max="${new Date().toISOString().slice(0,10)}"></label><p class="auth-access-note">Se comprueba en este dispositivo. Esta fecha no se envía ni se guarda.</p><label class="privacy-check"><input type="checkbox" name="privacy" required>He leído la <a href="privacy.html">política de privacidad</a> y entiendo el tratamiento de los datos de la cuenta.</label><button type="submit" class="auth-primary">Continuar</button><p role="status" data-adult-feedback>${this.minor?'Las cuentas son para personas adultas. Puedes seguir consultando la app sin registro. Para las funciones de cuenta, pide ayuda a tu madre, padre o tutor.':''}</p></form><button type="button" data-page="Inicio" class="auth-secondary">Consultar sin cuenta</button></section>`;},
+ check(value,now=new Date()){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))throw Error('Introduce una fecha válida.');
+  const date=new Date(value+'T12:00:00Z');if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==value||value<'1900-01-01'||date>now)throw Error('Introduce una fecha válida.');
+  const limit=new Date(now);limit.setFullYear(limit.getFullYear()-18);return value<=limit.toISOString().slice(0,10);
+ },
+ clear(){this.adult=false;this.minor=false;try{localStorage.removeItem('cdm-adult-access-v1');}catch{}}
+};
+ClubFamilies.init();
+const adultRequest=ClubAuth.request.bind(ClubAuth);
+ClubAuth.request=function(action,...args){const next=action==='state'&&ClubFamilies.adult?'resume':action;return adultRequest(next==='resume'&&!this.firebase()?'state':next,...args);};
+const accountScreen=ClubAuth.screen.bind(ClubAuth),accountPerform=ClubAuth.perform.bind(ClubAuth);
+ClubAuth.screen=function(...args){return ClubFamilies.adult?accountScreen(...args):'<div class="auth-layout">'+ClubFamilies.screen()+'</div>';};
+ClubAuth.perform=async function(action,...args){if(['login','register','google'].includes(action)&&!ClubFamilies.adult){this.showFeedback('Completa primero el acceso de una persona adulta.',true);return;}await accountPerform(action,...args);if(action==='logout'){ClubFamilies.clear();window.dispatchEvent(new CustomEvent('club-auth-view'));}};
+const clubSync=ClubAccess.sync.bind(ClubAccess),clubUser=ClubAccess.user.bind(ClubAccess),clubAdmin=ClubAccess.administrator.bind(ClubAccess),favoritesSync=ClubFavorites.sync.bind(ClubFavorites);
+ClubAccess.sync=async function(...args){if(!ClubFamilies.adult)return;return clubSync(...args);};
+ClubAccess.user=function(...args){return ClubFamilies.adult?clubUser(...args):null;};
+ClubAccess.administrator=function(...args){return ClubFamilies.adult&&clubAdmin(...args);};
+ClubFavorites.sync=async function(...args){if(!ClubFamilies.adult)return;return favoritesSync(...args);};
+document.addEventListener('submit',async event=>{
+ const form=event.target.closest('[data-adult-access]');if(!form)return;event.preventDefault();
+ const feedback=form.querySelector('[data-adult-feedback]');
+ try{if(!ClubFamilies.check(form.elements.adultBirthDate.value)){ClubFamilies.minor=true;feedback.textContent='Las cuentas son para personas adultas. Puedes consultar los partidos y noticias sin registro. Pide ayuda a tu madre, padre o tutor para las funciones de cuenta.';return;}
+  if(!form.elements.privacy.checked)throw Error('Lee la política de privacidad antes de continuar.');
+  ClubFamilies.adult=true;try{localStorage.setItem('cdm-adult-access-v1','true');}catch{}
+  await ClubAuth.request('resume');await ClubAccess.sync();window.dispatchEvent(new CustomEvent('club-auth-view'));
+ }catch(error){ClubFamilies.clear();feedback.textContent=error.message;}
+});
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[href]');if(!link||ClubFamilies.adult)return;
+ let url;try{url=new URL(link.href);}catch{return;}
+ if(url.origin===location.origin||url.protocol!=='https:')return;
+ event.preventDefault();CDM.confirm('Enlace externo','Para abrir esta página fuera de la app, pide ayuda a una persona adulta.','Cerrar');
+},true);
+window.ClubLegal={screen(kind='privacy'){return `<section class="card legal-intro"><h2>${kind==='privacy'?'Privacidad':'Eliminar tu cuenta'}</h2><p>CD Menciana · Club Deportivo Menciana</p></section><iframe class="legal-frame" title="${kind==='privacy'?'Política de privacidad':'Eliminación de cuenta'}" src="${kind==='privacy'?'privacy.html':'delete-account.html'}"></iframe>`;}};

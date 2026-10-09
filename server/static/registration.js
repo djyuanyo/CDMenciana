@@ -5,7 +5,7 @@ window.ClubRegistration={
   const name=String(data.name||'').trim(),email=String(data.email||'').trim(),password=String(data.password||'');
   if(name.length<2||name.length>100)throw Error('Introduce tu nombre completo.');
   if(password.length<10||password.length>128)throw Error('La contraseña debe tener entre 10 y 128 caracteres.');
-  this.validate(data);
+  this.validate(data);this.guardian(data);
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
   try{
    // Create the identity without the native shell's legacy verification email.
@@ -20,6 +20,7 @@ window.ClubRegistration={
   }catch(error){if(error.name==='AbortError'||error.name==='TypeError')throw Error('No se pudo confirmar el registro. Prueba a iniciar sesión con tu correo antes de crear otra cuenta.');throw error;}
   finally{clearTimeout(timer);}
  },
+ guardian(data){if(data.registrationType==='team'&&data.teamRole==='player'&&data.guardianAccepted!=='on')throw Error('Confirma que los datos son tuyos o que actúas como tutor legal del jugador.');},
  validate(data){
   const value={name:String(data.name||'').trim(),registrationType:String(data.registrationType||''),teamRole:'',memberNumber:'',category:'',birthDate:'',registrationComplete:'true'};
   if(value.name.length<2||value.name.length>100)throw Error('Introduce tu nombre completo.');
@@ -44,7 +45,7 @@ window.ClubRegistration={
  fields(data={}){
   const E=ClubAuth.escape.bind(ClubAuth),type=data.registrationType||'',team=type==='team',member=type==='member',player=team&&data.teamRole==='player';
   const options=(rows,value)=>'<option value="">Selecciona una opción</option>'+rows.map(([key,label])=>`<option value="${E(key)}"${value===key?' selected':''}>${E(label)}</option>`).join('');
-  return `<div class="registration-fields"><label class="auth-field"><span>¿Cómo formas parte del club?</span><select name="registrationType" data-registration-type required>${options([['team','Jugador/Cuerpo Técnico'],['member','Socio'],['fan','Aficionado']],type)}</select></label><label class="auth-field" data-member-field${member?'':' hidden'}><span>Número de socio</span><input name="memberNumber" inputmode="numeric" pattern="[0-9]{1,12}" maxlength="12" value="${E(data.memberNumber||'')}"${member?' required':' disabled'}></label><div data-team-fields${team?'':' hidden'}><label class="auth-field"><span>Tu función en el equipo</span><select name="teamRole" data-team-role${team?' required':' disabled'}>${options([['player','Jugador'],['staff','Cuerpo Técnico']],data.teamRole)}</select></label><label class="auth-field"><span>Categoría</span><select name="category"${team?' required':' disabled'}>${options(this.categories.map(x=>[x,x]),data.category)}</select></label></div><label class="auth-field" data-birth-field${player?'':' hidden'}><span>Fecha de nacimiento</span><input type="date" name="birthDate" min="1900-01-01" max="${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}-${String(new Date().getDate()).padStart(2,'0')}" value="${E(data.birthDate||'')}"${player?' required':' disabled'}></label></div>`;
+  return `<div class="registration-fields"><label class="auth-field"><span>¿Cómo formas parte del club?</span><select name="registrationType" data-registration-type required>${options([['team','Jugador/Cuerpo Técnico'],['member','Socio'],['fan','Aficionado']],type)}</select></label><label class="auth-field" data-member-field${member?'':' hidden'}><span>Número de socio</span><input name="memberNumber" inputmode="numeric" pattern="[0-9]{1,12}" maxlength="12" value="${E(data.memberNumber||'')}"${member?' required':' disabled'}></label><div data-team-fields${team?'':' hidden'}><label class="auth-field"><span>Tu función en el equipo</span><select name="teamRole" data-team-role${team?' required':' disabled'}>${options([['player','Jugador'],['staff','Cuerpo Técnico']],data.teamRole)}</select></label><label class="auth-field"><span>Categoría</span><select name="category"${team?' required':' disabled'}>${options(this.categories.map(x=>[x,x]),data.category)}</select></label></div><label class="auth-field" data-birth-field${player?'':' hidden'}><span>Fecha de nacimiento</span><input type="date" name="birthDate" min="1900-01-01" max="${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}-${String(new Date().getDate()).padStart(2,'0')}" value="${E(data.birthDate||'')}"${player?' required':' disabled'}></label><label class="privacy-check" data-guardian-field${player?'':' hidden'}><input type="checkbox" name="guardianAccepted"${player?' required':' disabled'}>Declaro que los datos son míos o que soy el tutor legal del jugador y autorizo el tratamiento descrito en la <a href="privacy.html">política de privacidad</a>.</label></div>`;
  },
  openDialog(){
   const dialog=document.querySelector('[data-registration-dialog]');if(!dialog||!ClubAuth.user||ClubAccess.administrator()||ClubAccess.fetching||window.ClubDeletion?.pending||this.complete(ClubAccess.profile))return;
@@ -58,12 +59,12 @@ window.ClubRegistration={
  },
  update(form){
   const type=form.elements.registrationType.value,team=type==='team',member=type==='member',player=team&&form.elements.teamRole.value==='player';
-  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player]]){
+  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player],['[data-guardian-field]',player]]){
    const group=form.querySelector(selector);group.hidden=!active;
    for(const input of group.querySelectorAll('input,select')){input.disabled=!active||ClubAuth.busy;input.required=active;}
   }
  },
- async save(data){const value=this.validate(data);await ClubAccess.saveRegistration(value);this.draft={};window.dispatchEvent(new CustomEvent('club-registration-complete'));}
+ async save(data){const value=this.validate(data);this.guardian(data);await ClubAccess.saveRegistration(value);this.draft={};window.dispatchEvent(new CustomEvent('club-registration-complete'));}
 };
 document.addEventListener('change',event=>{if(event.target.matches('[data-registration-type],[data-team-role]'))ClubRegistration.update(event.target.form);});
 document.addEventListener('input',event=>{const form=event.target.closest('[data-registration-form]');if(form)ClubRegistration.draft=Object.fromEntries(new FormData(form));});

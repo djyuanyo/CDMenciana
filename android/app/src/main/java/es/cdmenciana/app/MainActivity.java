@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
         applyNativeTheme();
         base=getPreferences(MODE_PRIVATE).getString("server", "");
         load();
-        if(push!=null)push.firstLaunch();
+        // Notifications are requested when an adult explicitly activates them.
     }
     private void configure() {
         configuring=true;

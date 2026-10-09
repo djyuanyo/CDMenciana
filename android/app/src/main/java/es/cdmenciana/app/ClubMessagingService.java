@@ -5,6 +5,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -14,10 +15,12 @@ import java.util.Map;
 /** Data messages prevent the SDK from displaying alerts for a signed-out account. */
 public final class ClubMessagingService extends FirebaseMessagingService {
     @Override public void onNewToken(String token){
+        if(!getSharedPreferences("club-adult",MODE_PRIVATE).getBoolean("approved",false)||FirebaseApp.getApps(this).isEmpty())return;
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();if(user==null||!user.getUid().equals(ClubPush.prefs(this).getString("uid","")))return;
         ClubPush.register(this,user,token,true,()->ClubPush.prefs(this).edit().putString("token",token).apply(),()->{});
     }
     @Override public void onMessageReceived(RemoteMessage message){
+        if(!getSharedPreferences("club-adult",MODE_PRIVATE).getBoolean("approved",false)||FirebaseApp.getApps(this).isEmpty())return;
         Map<String,String> data=message.getData();FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         String recipient=data.get("uid"),event=data.get("eventId"),team=data.get("teamKey"),acta=data.get("acta");
         if(user==null||!user.getUid().equals(recipient)||!recipient.equals(ClubPush.prefs(this).getString("uid",""))||!ClubPush.permitted(this)||event==null||!event.matches("[a-f0-9]{64}")||!(NotificationRoutes.validTeam(team)||"all".equals(team)))return;

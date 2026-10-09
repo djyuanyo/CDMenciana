@@ -36,6 +36,7 @@ final class ClubPush {
         else prefs(activity).edit().putBoolean("autoEnable",permitted(activity)).apply();
     }
     void request(String id,String action){
+        if(com.google.firebase.FirebaseApp.getApps(activity).isEmpty()){reply(id,false,null);return;}
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         if("bootstrap".equals(action)){
             if(user!=null&&permitted(activity)&&restoreChoice(user.getUid())){enable(id);return;}
@@ -44,6 +45,8 @@ final class ClubPush {
         if("state".equals(action)){reply(id,user!=null&&user.getUid().equals(prefs(activity).getString("uid",""))&&permitted(activity),null);return;}
         if("disable".equals(action)||"detach".equals(action)){
             if(user!=null){boolean choice=restoreChoice(user.getUid());prefs(activity).edit().putBoolean("choice-"+user.getUid(),"detach".equals(action)&&choice).apply();}
+            FirebaseMessaging.getInstance().deleteToken();
+            com.google.firebase.installations.FirebaseInstallations.getInstance().delete();
             String token=prefs(activity).getString("token","");
             prefs(activity).edit().remove("uid").remove("token").putBoolean("autoEnable",false).apply();activity.getSystemService(NotificationManager.class).cancelAll();
             if(user==null||token.isEmpty()){reply(id,false,null);return;}

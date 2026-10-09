@@ -1,0 +1,33 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),{JSDOM}=require('jsdom');
+async function run(){
+ const dom=new JSDOM('<main></main>',{url:'https://cdmenciana.web.app/',runScripts:'outside-only'}),W=dom.window,calls=[];
+ W.CDM={icon:()=>'',confirm:()=>Promise.resolve(false)};W.ClubAuthNative={request(){}};
+ W.eval(fs.readFileSync('server/static/auth.js','utf8'));
+ W.ClubAccess={sync:async()=>calls.push('sync'),user:()=>({admin:true}),administrator:()=>true};
+ W.ClubFavorites={sync:async()=>calls.push('favorites')};
+ W.ClubAuth.request=async action=>{calls.push(action);return {configured:true,user:null};};
+ W.eval(fs.readFileSync('server/static/families.js','utf8'));
+ await W.ClubAccess.sync();await W.ClubFavorites.sync();assert.deepEqual(calls,[]);
+ assert.equal(W.ClubAccess.user(),null);assert.equal(W.ClubAccess.administrator(),false);
+ await W.ClubAuth.perform('google');assert.deepEqual(calls,[]);
+ W.document.querySelector('main').innerHTML=W.ClubAuth.screen();
+ const form=W.document.querySelector('[data-adult-access]');assert(form);
+ assert.equal(form.elements.adultBirthDate.value,'','Neutral screen has no suggested age');
+ form.elements.adultBirthDate.value='2020-01-01';form.elements.privacy.checked=true;
+ form.dispatchEvent(new W.Event('submit',{bubbles:true,cancelable:true}));await Promise.resolve();
+ assert.equal(W.ClubFamilies.adult,false);assert.deepEqual(calls,[]);assert.equal(W.localStorage.length,0,'Child date is never saved');
+ form.elements.adultBirthDate.value='1980-01-01';form.elements.privacy.checked=false;
+ form.dispatchEvent(new W.Event('submit',{bubbles:true,cancelable:true}));await Promise.resolve();assert.equal(W.ClubFamilies.adult,false);
+ form.elements.privacy.checked=true;form.dispatchEvent(new W.Event('submit',{bubbles:true,cancelable:true}));
+ await new Promise(r=>setTimeout(r,0));assert.equal(W.ClubFamilies.adult,true);assert.deepEqual(calls,['resume','sync']);
+ assert.equal(W.localStorage.getItem('cdm-adult-access-v1'),'true');assert.equal(W.localStorage.length,1);
+ assert.throws(()=>W.ClubFamilies.check('2020-02-30'),/válida/);assert.equal(W.ClubFamilies.check('2008-10-09',new Date('2026-10-09T12:00:00Z')),true);
+ assert.equal(W.ClubFamilies.check('2008-10-10',new Date('2026-10-09T12:00:00Z')),false);
+ W.ClubFamilies.clear();assert.equal(W.localStorage.length,0);
+ const manifest=fs.readFileSync('android/app/src/main/AndroidManifest.xml','utf8');assert.match(manifest,/FirebaseInitProvider[\s\S]*?tools:node="remove"/);assert.match(manifest,/firebase_messaging_auto_init_enabled" android:value="false"/);
+ const registration=new JSDOM('',{runScripts:'outside-only'});registration.window.eval(fs.readFileSync('server/static/registration.js','utf8'));
+ assert.throws(()=>registration.window.ClubRegistration.guardian({registrationType:'team',teamRole:'player'}),/tutor|datos/);
+ registration.window.ClubRegistration.guardian({registrationType:'team',teamRole:'player',guardianAccepted:'on'});
+ registration.window.close();dom.window.close();console.log('Neutral age screen, no child SDK/account access, consent, no date retention, adult restoration and guardian consent passed.');
+}
+run().catch(e=>{console.error(e);process.exitCode=1;});

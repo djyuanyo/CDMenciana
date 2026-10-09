@@ -11,3 +11,4 @@
 .team-edit-form{display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:12px;padding:18px 0;border-bottom:1px solid var(--line,#45607e)}.team-edit-form label{margin:0}.team-edit-form small,.team-edit-form [role=status]{grid-column:1/-1}.team-edit-form button{justify-self:start}.team-import-summary{padding:16px 0}.team-selector{overflow-x:auto;flex-wrap:nowrap}.team-selector button{flex-shrink:0}
 
 .team-selector button{flex:1 0 120px}
+.privacy-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.6;color:var(--muted);margin:18px 0}.privacy-check input{width:18px;height:18px;flex:none;margin:3px 0 0}.privacy-check a{color:var(--sky)}.legal-frame{display:block;width:100%;min-height:75vh;border:0;border-radius:18px;background:#f8fbff}.family-access p{line-height:1.65}.family-access .auth-secondary{margin-top:15px}

@@ -1,0 +1,61 @@
+name: Preparar publicación en Google Play
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', 'server/static/**', 'hosting/**', 'tools/play-assets.cjs', 'tools/test_families.cjs', '.github/workflows/prepare-play-release.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
+          log-accepted-android-sdk-licenses: false
+      - uses: gradle/actions/setup-gradle@v4
+        with: {gradle-version: '8.11.1'}
+      - run: python tools/bundle_account_assets.py
+      - run: gradle -p android testReleaseUnitTest bundleRelease assembleRelease lintRelease
+      - name: Validar paquete de producción
+        run: |
+          mkdir -p play-release
+          curl --fail --location --silent --show-error https://github.com/google/bundletool/releases/download/1.18.3/bundletool-all-1.18.3.jar -o play-release/bundletool.jar
+          cp android/app/build/outputs/bundle/release/app-release.aab play-release/
+          cp android/app/build/outputs/apk/release/app-release-unsigned.apk play-release/
+          cp "$ANDROID_HOME/build-tools/36.0.0/lib/apksigner.jar" play-release/
+          java -jar play-release/bundletool.jar validate --bundle=play-release/app-release.aab
+          java -jar play-release/bundletool.jar dump manifest --bundle=play-release/app-release.aab > play-release/manifest.xml
+          python - <<'PY'
+          import xml.etree.ElementTree as E
+          r=E.parse('play-release/manifest.xml').getroot();a='{http://schemas.android.com/apk/res/android}'
+          assert r.attrib['package']=='es.cdmenciana.app'
+          assert r.attrib[a+'versionCode']=='100'
+          assert r.find('uses-sdk').attrib[a+'targetSdkVersion']=='36'
+          assert r.find('application').attrib.get(a+'debuggable','false')=='false'
+          assert not any('AD_ID' in p.attrib.get(a+'name','') for p in r.findall('uses-permission'))
+          assert not any(p.attrib.get(a+'name','').endswith('FirebaseInitProvider') for p in r.find('application').findall('provider'))
+          print('AAB de producción: API 36, código 100, sin depuración ni identificador publicitario.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with: {name: CDMenciana-Google-Play-1.0.0, path: play-release/, retention-days: 30}
+  store:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm ci --prefix tools --no-audit --no-fund
+      - run: node tools/test_families.cjs && node tools/test_registration.cjs && node tools/test_web_auth.cjs
+      - run: npm install --prefix tools --no-save playwright@1.62.1 --no-audit --no-fund
+      - run: npx --prefix tools playwright install --with-deps chromium
+      - run: python tools/bundle_account_assets.py
+      - run: node tools/play-assets.cjs
+      - uses: actions/upload-artifact@v4
+        with: {name: CDMenciana-ficha-Google-Play, path: play-store/, retention-days: 30}

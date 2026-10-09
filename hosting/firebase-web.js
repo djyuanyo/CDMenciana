@@ -8,15 +8,12 @@ import {
 
 // Android uses Credential Manager and its native Firebase SDK instead.
 if (!window.ClubAuthNative?.request) {
-  const auth = getAuth(initializeApp(window.CLUB_FIREBASE_CONFIG));
-  auth.languageCode = 'es';
-  const state = () => ({ configured: true, google: true, user: auth.currentUser ? {
+  let auth=null,ready=Promise.resolve();
+  const activate=()=>{if(auth)return;auth=getAuth(initializeApp(window.CLUB_FIREBASE_CONFIG));auth.languageCode='es';ready=new Promise((resolve,reject)=>{onAuthStateChanged(auth,()=>{window.ClubAuth?.update(state());resolve();},reject);});};
+  const state = () => ({ configured: true, google: true, user: auth?.currentUser ? {
     uid: auth.currentUser.uid, name: auth.currentUser.displayName || '',
     email: auth.currentUser.email || '', emailVerified: auth.currentUser.emailVerified
   } : null });
-  const ready = new Promise((resolve, reject) => {
-    onAuthStateChanged(auth, () => { window.ClubAuth?.update(state()); resolve(); }, reject);
-  });
   const errors = {
     'auth/invalid-credential': 'Revisa el correo y la contraseña.',
     'auth/wrong-password': 'Revisa el correo y la contraseña.',
@@ -36,6 +33,9 @@ if (!window.ClubAuthNative?.request) {
   window.ClubAuthWeb = {
     async request(action, data = {}) {
       try {
+        if(action==='state'&&!window.ClubFamilies?.adult)return state();
+        if(!window.ClubFamilies?.adult)throw Error('Completa el acceso de una persona adulta.');
+        activate();
         // Start Google directly in the click handler, preserving popup activation.
         if (action === 'google') {
           const provider = new GoogleAuthProvider();
@@ -58,7 +58,7 @@ if (!window.ClubAuthNative?.request) {
             if (!auth.currentUser) throw Error('Inicia sesión para continuar.');
             if (action === 'reload') await reload(auth.currentUser);
             if (action === 'token') return { ...state(), token: await getIdToken(auth.currentUser, true) };
-          } else if (action !== 'state') throw Error('Solicitud no disponible.');
+          } else if (!['state','resume'].includes(action)) throw Error('Solicitud no disponible.');
         }
         const result = { ...state(), message: ({
           register: 'Cuenta creada. Completa tus datos en la app.',

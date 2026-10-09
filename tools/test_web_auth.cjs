@@ -21,6 +21,9 @@ async function run() {
     signInWithPopup: async () => { throw { code: 'auth/popup-closed-by-user' }; }
   });
   W.eval(ui); W.eval(transport); await W.ClubAuth.init();
+  assert.equal(W.ClubAuth.user,null,'Guest mode does not initialize or restore Firebase');
+  await assert.rejects(W.ClubAuth.request('google'),/persona adulta/);
+  W.ClubFamilies={adult:true};await W.ClubAuth.request('resume');
   W.document.querySelector('main').innerHTML = W.ClubAuth.screen();
   assert(W.document.querySelector('.account-card'), 'Browser restores the identity from Firebase');
   assert(!W.document.querySelector('[data-auth-action="verify"]'), 'Registration does not require an email link');
