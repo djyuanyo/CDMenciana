@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),{JSDOM}=require('jsdom');
 async function run(){
  const dom=new JSDOM('<header id="header"></header><div id="teams"></div><section id="banner"></section><div id="tabs"></div><main id="main"></main><nav id="nav"></nav><p id="notice"></p>',{url:'https://appassets.androidplatform.net/',runScripts:'outside-only',pretendToBeVisual:true}),W=dom.window;
- W.scrollTo=()=>{};
+ W.scrollTo=()=>{};W.localStorage.setItem('cdm-adult-access-v1','true');
  W.fetch=async path=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('android/app/src/main/assets/'+String(path).split('?')[0],'utf8'))});
  for(const name of ['appearance.js','ui.js','auth.js','registration.js','club-access.js','news-reader.js','rfaf_extract.js','roster-snapshot.js','fixtures.js','offline.js'])W.eval(fs.readFileSync('android/app/src/main/assets/'+name,'utf8'));
  W.ClubAuth.user={uid:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',name:'Juanjo',email:'juanjocarrillo7@gmail.com',emailVerified:true};W.ClubAccess.sync=async()=>{};W.ClubAccess.profile={id:'ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',role:'fan',...W.ClubRegistration.validate({name:'Juanjo',registrationType:'fan'})};W.dispatchEvent(new W.CustomEvent('club-registration-complete'));

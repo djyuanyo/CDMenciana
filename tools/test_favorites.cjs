@@ -14,5 +14,9 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{JSDOM}=require
  let release;C.request=()=>new Promise(r=>release=r);const sync=F.sync();A.update({user:null});release({documents:[{name:'clubUsers/two/favorites/old',fields:{}}]});await sync;assert.equal(F.rows.length,0,'Late previous account response must not leak');
  A.user={uid:'two',email:'two@club.test'};F.serviceActive=async()=>false;await assert.rejects(F.alerts(),/todavía/);assert.equal(F.notifications,false);
  W.ClubPushNative={request(id,action){queueMicrotask(()=>F.receive(id,{ok:true,enabled:action==='enable'}));}};F.serviceActive=async()=>true;await F.alerts();assert(F.notifications);await F.detach();assert(!F.notifications);
- dom.window.close();console.log('Favorites: identity isolation, persistence/removal, safe labels, stale session replies, unavailable service, opt-in and detach passed.');
+ C.request=async()=>({documents:[]});W.ClubFamilies={adult:true};let offered=false,prompts=0,enables=0;
+ W.CDM.confirm=async()=>{prompts++;return false;};
+ W.ClubPushNative={request(id,action){if(action==='offer')offered=true;if(action==='enable')enables++;queueMicrotask(()=>F.receive(id,{ok:true,enabled:false,prompted:offered}));}};
+ await F.sync();assert.equal(prompts,1);assert.equal(enables,0,'Declining the first offer must not register push identifiers');await F.sync();assert.equal(prompts,1,'An update or refresh must not repeat the offer');
+ dom.window.close();console.log('Favorites: identity isolation, persistence/removal, safe labels, stale session replies, unavailable service, opt-in, remembered consent and detach passed.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

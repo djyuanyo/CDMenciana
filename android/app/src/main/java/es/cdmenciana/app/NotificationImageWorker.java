@@ -17,7 +17,7 @@ import java.net.URL;
 public final class NotificationImageWorker extends Worker {
     public NotificationImageWorker(Context context,WorkerParameters params){super(context,params);}
     static boolean safeUrl(String value){return value!=null&&(value.matches("https://cms\\.cdmenciana\\.es/media/[a-f0-9-]{36}/(web|thumb)")||value.matches("https://raw\\.githubusercontent\\.com/djyuanyo/CDMenciana/main/notification-images/[a-f0-9]{32}\\.jpg"));}
-    private boolean allowed(String uid){FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();return user!=null&&user.getUid().equals(uid)&&uid.equals(ClubPush.prefs(getApplicationContext()).getString("uid",""))&&ClubPush.permitted(getApplicationContext());}
+    private boolean allowed(String uid){Context context=getApplicationContext();if(!context.getSharedPreferences("club-adult",Context.MODE_PRIVATE).getBoolean("approved",false)||com.google.firebase.FirebaseApp.getApps(context).isEmpty())return false;FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();return user!=null&&user.getUid().equals(uid)&&uid.equals(ClubPush.prefs(context).getString("uid",""))&&ClubPush.permitted(context);}
     @Override public Result doWork(){
         String uid=getInputData().getString("uid"),event=getInputData().getString("eventId"),url=getInputData().getString("imageUrl");
         if(uid==null||event==null||!event.matches("[a-f0-9]{64}")||!safeUrl(url)||!allowed(uid))return Result.success();
