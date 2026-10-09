@@ -56,7 +56,7 @@ def calendar(html,all_teams=False,config=None):
             h,a=scores(cells[1]);played=h is not None
             out.append(dict(id=f"{config['group_id']}-{n}"+('-'+str(len([m for m in out if m['round']==n])+1) if all_teams else ''),round=n,home=cells[0].text(),away=cells[2].text(),home_crest='',away_crest='',date=datetime.datetime.strptime(header[2],'%d-%m-%Y').date().isoformat(),time='',venue='',state='Finalizado' if played else 'Fecha de jornada',played=played,home_score=h,away_score=a,source=source+'&CodJornada='+str(n),date_provisional=True))
     expected=config['round_count']*(config['team_count']//2 if all_teams else 1)
-    if len(out)!=expected or numbers!=list(range(1,config['round_count']+1)):raise ValueError('Incomplete official calendar')
+    if len(out)!=expected or numbers!=list(range(1,config['round_count']+1)):raise ValueError('Incomplete official calendar: '+str(len(out))+' matches; rounds '+str(numbers)+'; page '+Document(html).root.text()[:350])
     return out,numbers
 
 def standings(html,team_count=16):
