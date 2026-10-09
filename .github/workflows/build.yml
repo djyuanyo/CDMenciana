@@ -32,6 +32,7 @@ jobs:
       - run: node tools/test_web_auth.cjs
       - run: node tools/test_teams_ui.cjs
       - run: node tools/test_club_access.cjs
+      - run: node tools/test_review_demo.cjs
       - run: node tools/test_news_reader.cjs
       - run: node tools/test_favorites.cjs
       - run: node tools/test_notification_panel.cjs

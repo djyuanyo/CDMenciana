@@ -9,11 +9,12 @@ window.ClubNotifications={
  async image(file){if(!file?.size)return '';if(file.size>12*1024*1024||!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('Selecciona una foto JPG, PNG o WebP de menos de 12 MB.');const url=URL.createObjectURL(file);try{const img=new Image();img.src=url;await img.decode();if(!img.naturalWidth||!img.naturalHeight)throw Error('No se pudo abrir la imagen.');const scale=Math.min(1,1200/Math.max(img.naturalWidth,img.naturalHeight)),canvas=document.createElement('canvas');canvas.width=Math.round(img.naturalWidth*scale);canvas.height=Math.round(img.naturalHeight*scale);const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);for(const quality of [.85,.7,.55,.4]){const value=canvas.toDataURL('image/jpeg',quality).split(',')[1];if(value.length<=400000)return value;}throw Error('La imagen es demasiado compleja. Selecciona una más pequeña.');}finally{URL.revokeObjectURL(url);}},
  async prepare(values,id=this.id()){
   if(!ClubAccess.administrator())throw Error('Solo el administrador puede enviar avisos.');
+  const identity=ClubAuth.user?.uid;
   const title=String(values.title||'').trim(),body=String(values.body||'').trim(),teamKey=values.teamKey,mode=values.mode||'now',scheduledAt=mode==='scheduled'?new Date(values.scheduledAt).getTime():null;
   if(!title||title.length>100||!body||body.length>500||!(teamKey==='all'||Object.hasOwn(window.Fixtures?.teams||{first:1,filial:1,infantil:1},teamKey))||!['now','scheduled'].includes(mode))throw Error('Completa el título, el mensaje y los destinatarios.');
   if(mode==='scheduled'&&(!Number.isFinite(scheduledAt)||scheduledAt<=Date.now()||scheduledAt>Date.now()+30*86400000))throw Error('Elige una fecha y hora futura, hasta 30 días desde ahora.');
-  await this.service();const payload={id,title,body,teamKey,mode,...(scheduledAt?{scheduledAt}:{}),imageUrl:values.imageUrl||''};
-  const base64=await this.image(values.image);if(base64)payload.imageUrl=(await this.http('/images',{id:this.id(),base64})).imageUrl;return payload;
+  await this.service();if(ClubAuth.user?.uid!==identity)throw Error('La sesión ha cambiado.');const payload={id,title,body,teamKey,mode,...(scheduledAt?{scheduledAt}:{}),imageUrl:values.imageUrl||''};
+  const base64=await this.image(values.image);if(ClubAuth.user?.uid!==identity)throw Error('La sesión ha cambiado.');if(base64)payload.imageUrl=(await this.http('/images',{id:this.id(),base64})).imageUrl;return payload;
  },
  async queue(values){this.pending=await this.prepare(values);this.pendingPath='/messages';return this.sendPending();},
  async edit(id,values){this.pending={...await this.prepare({...values,mode:'scheduled'},id),revision:Number(values.revision),mutationId:this.id()};this.pendingPath='/messages/'+id+'/edit';return this.sendPending();},

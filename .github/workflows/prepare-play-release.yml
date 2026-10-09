@@ -35,17 +35,17 @@ jobs:
           import xml.etree.ElementTree as E
           r=E.parse('play-release/manifest.xml').getroot();a='{http://schemas.android.com/apk/res/android}'
           assert r.attrib['package']=='es.cdmenciana.app'
-          assert r.attrib[a+'versionCode']=='100'
+          assert r.attrib[a+'versionCode']=='101'
           assert r.find('uses-sdk').attrib[a+'targetSdkVersion']=='36'
           assert r.find('application').attrib.get(a+'debuggable','false')=='false'
           assert not any('AD_ID' in p.attrib.get(a+'name','') for p in r.findall('uses-permission'))
           assert not any('FOREGROUND_SERVICE' in p.attrib.get(a+'name','') for p in r.findall('uses-permission'))
           assert not any(p.attrib.get(a+'name','').endswith('FirebaseInitProvider') for p in r.find('application').findall('provider'))
           assert not any(p.attrib.get(a+'name','').endswith('SystemForegroundService') for p in r.find('application').findall('service'))
-          print('AAB de producción: API 36, código 100, sin depuración ni identificador publicitario.')
+          print('AAB de producción: API 36, código 101, sin depuración ni identificador publicitario.')
           PY
       - uses: actions/upload-artifact@v4
-        with: {name: CDMenciana-Google-Play-1.0.0, path: play-release/, retention-days: 30}
+        with: {name: CDMenciana-Google-Play-1.0.1, path: play-release/, retention-days: 30}
   store:
     runs-on: ubuntu-latest
     steps:
