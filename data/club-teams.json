@@ -40,27 +40,6 @@
       "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codcompeticion=49113015&codgrupo=49113036&codtemporada=22&CodJornada=1"
     },
     {
-      "competition_id": "49465203",
-      "group_id": "49465413",
-      "season_id": "22",
-      "initial_round": 3,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
-      "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
-      "competition": "2ª Andaluza Cadete F.S. (Cordoba)",
-      "group": "Grupo A",
-      "team_count": 7,
-      "round_count": 14,
-      "has_byes": true,
-      "season": "2026-2027",
-      "team_id": "485016",
-      "team_name": "C.D. MENCIANA",
-      "key": "rfaf_49465413_485016",
-      "filename": "fixtures-rfaf_49465413_485016.json",
-      "label": "Cadete",
-      "status": "active",
-      "order": 3
-    },
-    {
       "key": "infantil",
       "label": "Infantil",
       "team_id": "34369965",
@@ -73,7 +52,7 @@
       "filename": "fixtures-infantil.json",
       "initial_round": 2,
       "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2",
-      "order": 4,
+      "order": 3,
       "season_id": "22",
       "season": "2026-2027",
       "status": "active",
@@ -81,5 +60,7 @@
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2"
     }
   ],
-  "retired": []
+  "retired": [
+    "rfaf_49465413_485016"
+  ]
 }
