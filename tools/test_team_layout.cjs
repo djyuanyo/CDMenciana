@@ -8,7 +8,8 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
   await page.evaluate(()=>{window.Appearance={button:()=>''};});
   for(const key of ['first','filial','infantil']){
    const filename=key==='first'?'fixtures.json':`fixtures-${key}.json`;
-   const feed=JSON.parse(fs.readFileSync('data/'+filename,'utf8'));
+   // Layout-only model: this test must not depend on a successful RFAF sync.
+   const feed=key==='infantil'?{team:'C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA'}:JSON.parse(fs.readFileSync('data/'+filename,'utf8'));
    await page.evaluate(({key,feed})=>{Fixtures.selectedTeam=key;Fixtures.data=feed;CDM.shell('Inicio',null);const model={teams:[{name:feed.team,starters:[],bench:[],cards:[{minute:'20',name:'Jugador',type:'Amarilla'}]},{name:'Rival',starters:[],bench:[],cards:[]}],goals:[{minute:'30',name:'Jugador',type:'Gol',score:'1-0',side:0}]};document.getElementById('main').innerHTML=Fixtures.reportTimeline(model,{home:feed.team,away:'Rival'})+'<div style="height:1800px"></div>';window.scrollTo(0,0);},{key,feed});
    const metrics=await page.evaluate(()=>({goal:getComputedStyle(document.querySelector('.acta-timeline-event.goal')).boxShadow,card:getComputedStyle(document.querySelector('.acta-timeline-event.card')).boxShadow,stroke:getComputedStyle(document.querySelector('.court rect')).stroke,header:getComputedStyle(document.querySelector('#header')).position}));
    assert.notEqual(metrics.goal,'none');assert.equal(metrics.card,'none');assert.equal(metrics.header,'sticky');if(theme==='light')assert.equal(metrics.stroke,'rgb(36, 103, 184)');
