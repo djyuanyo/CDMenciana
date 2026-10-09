@@ -9,7 +9,7 @@ window.ClubMatchdays={
   }));
  },
  round(data,today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())){
-  const all=data.round_matches||data.matches||[],pending=all.filter(m=>!m.played&&m.date>=today).sort((a,b)=>Fixtures.kickoffOrder(a,b));
+  const all=data.matches||[],pending=all.filter(m=>!m.played&&m.date>=today).sort((a,b)=>Fixtures.kickoffOrder(a,b));
   if(pending.length)return String(pending[0].round);
   const upcoming=all.filter(m=>!m.played).sort((a,b)=>Number(a.round)-Number(b.round));
   if(upcoming.length)return String(upcoming[0].round);
@@ -19,21 +19,23 @@ window.ClubMatchdays={
   const E=Fixtures.esc.bind(Fixtures);let acta='';
   try{const u=new URL(m.acta_url);const id=u.searchParams.get('CodActa');if(u.protocol==='https:'&&['www.rfaf.es','rfaf.es'].includes(u.hostname)&&/^\d{1,12}$/.test(id||''))acta='#acta='+id+'&equipo='+key;}catch{}
   const team=(name,image)=>`<div class="matchday-team"><img src="${E(Fixtures.crest(name,image))}" alt="" loading="lazy"><span>${E(name)}</span></div>`;
-  return `<article class="matchday-card"><time>${E(Fixtures.date(m))}</time><div class="matchday-scoreboard">${team(m.home,m.home_crest)}<div class="matchday-result"><strong>${m.played?E(m.home_score)+' <span>–</span> '+E(m.away_score):E(m.time||'Por confirmar')}</strong><small class="${m.played?'finished':''}">${m.played?'FINALIZADO':'SIN COMENZAR'}</small></div>${team(m.away,m.away_crest)}</div>${acta?`<a class="matchday-link" href="${E(acta)}">Ver acta ${CDM.icon('arrow')}</a>`:`<button class="matchday-link" data-home-category="${E(key)}">Ver jornada ${CDM.icon('arrow')}</button>`}</article>`;
+  return `<article class="matchday-card"><div class="matchday-category-label">${E(Fixtures.teams[key].label)} · Jornada ${E(m.round)}</div><time>${E(Fixtures.date(m))}</time><div class="matchday-scoreboard">${team(m.home,m.home_crest)}<div class="matchday-result"><strong>${m.played?E(m.home_score)+' <span>–</span> '+E(m.away_score):E(m.time||'Por confirmar')}</strong><small class="${m.played?'finished':''}">${m.played?'FINALIZADO':'SIN COMENZAR'}</small></div>${team(m.away,m.away_crest)}</div>${acta?`<a class="matchday-link" href="${E(acta)}">Ver acta ${CDM.icon('arrow')}</a>`:`<button class="matchday-link" data-home-category="${E(key)}">Ver jornada ${CDM.icon('arrow')}</button>`}</article>`;
  },
  screen(){
   const E=Fixtures.esc.bind(Fixtures);
-  return '<section class="home-matchdays" aria-label="Jornadas de los equipos del club"><div class="section-heading"><h2>La jornada del club</h2></div>'+Object.entries(Fixtures.teams).map(([key,team])=>{
+  const cards=Object.entries(Fixtures.teams).map(([key,team])=>{
    const data=this.snapshots[key]||(key===Fixtures.selectedTeam?Fixtures.data:null);
-   const round=data?this.round(data):null,matches=data?(data.round_matches||data.matches||[]).filter(m=>String(m.round)===round).sort((a,b)=>Fixtures.kickoffOrder(a,b)):[];
-   return `<section class="matchday-category"><div class="section-heading"><h3>${E(team.label)}</h3><span>${round&&round!=='0'?'JORNADA '+E(round):'JORNADA'}${this.failures.has(key)&&data?' · Datos guardados':''}</span></div>${matches.length?`<div class="matchday-carousel" tabindex="0" role="region" aria-label="Partidos de ${E(team.label)}, jornada ${E(round)}">${matches.map(m=>this.card(m,key)).join('')}</div>`:`<p class="matchday-empty">${this.failures.has(key)?'No se pudo actualizar esta categoría. Desliza hacia abajo para reintentar.':data?'Jornada pendiente de publicación.':'Cargando los partidos…'}</p>`}</section>`;
-  }).join('')+'</section>';
+   const round=data?this.round(data):null;
+   const match=data?(data.matches||[]).filter(m=>String(m.round)===round).sort((a,b)=>Fixtures.kickoffOrder(a,b))[0]:null;
+   if(match)return this.card(match,key);
+   return `<article class="matchday-card matchday-placeholder"><div class="matchday-category-label">${E(team.label)}</div><p>${this.failures.has(key)?'No se pudo actualizar. Desliza hacia abajo para reintentar.':data?'Partido pendiente de publicación.':'Cargando el partido…'}</p><button class="matchday-link" data-home-category="${E(key)}">Ver calendario ${CDM.icon('arrow')}</button></article>`;
+  }).join('');
+  return `<section class="home-matchdays" aria-label="Partidos de nuestros equipos"><div class="section-heading"><h2>La jornada del club</h2><span>DESLIZA PARA VER TODOS</span></div><div class="matchday-carousel" tabindex="0" role="region" aria-label="Partidos del Primer Equipo, Filial, Infantil y demás categorías del club">${cards}</div></section>`;
  }
 };
 const loadClubFixtures=Fixtures.load.bind(Fixtures);
 Fixtures.load=async function(refresh=false){await loadClubFixtures(refresh);await ClubMatchdays.load(refresh);};
-const clubOverview=Fixtures.overview.bind(Fixtures);
-Fixtures.overview=function(){return ClubMatchdays.screen()+clubOverview();};
+Fixtures.overview=function(){return ClubMatchdays.screen()+this.status()+this.news();};
 
 /* Downward touch gestures start at the top; horizontal carousels keep native scrolling. */
 window.ClubRefresh={

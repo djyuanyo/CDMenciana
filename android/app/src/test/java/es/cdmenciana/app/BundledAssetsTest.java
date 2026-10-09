@@ -23,6 +23,8 @@ public class BundledAssetsTest {
         }
         assertTrue("No bootstrap resources checked",count>=6);
         assertTrue(BundledAssets.allows("theme.css"));
+        assertTrue(BundledAssets.allows("club-header-light.png"));
+        assertTrue(BundledAssets.allows("club-header-dark.png"));
     }
     @Test public void imagesStayAvailableWithoutOpeningOtherLocalFiles() {
         assertTrue(BundledAssets.allows("players/0123456789abcdef.webp"));
