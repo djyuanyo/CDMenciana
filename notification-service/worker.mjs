@@ -2,6 +2,7 @@ import {manageTeams,githubStore} from './teams.mjs';
 import teamCatalog from '../functions/team-catalog.js';
 import custom from '../functions/custom-notifications.js';
 import {accessToken,firebase,Timestamp} from './firebase-rest.mjs';
+import legalPages from './legal-pages.mjs';
 const ADMIN='ZJeZEjtDeMRCYL0UOuvhGt0gNCT2',EMAIL='juanjocarrillo7@gmail.com',REPO='djyuanyo/CDMenciana';
 const ORIGINS=['https://appassets.androidplatform.net','https://cdmenciana.web.app','https://cdmenciana.firebaseapp.com'];
 const error=(message,status=400)=>Object.assign(Error(message),{status});
@@ -48,6 +49,7 @@ export async function uploadImage(v,env,fetcher=fetch){
  let r=await fetcher(url,{method:'PUT',headers,body:JSON.stringify({message:'media: image for club notification',content:v.base64,branch:'main'})});if(!r.ok){if(r.status===422){const existing=await fetcher(url+'?ref=main',{headers});const data=existing.ok?await existing.json():{};if(data.content?.replace(/\s/g,'')===v.base64)return {imageUrl:`https://raw.githubusercontent.com/${REPO}/main/${path}`};}throw error('No se pudo guardar la imagen en GitHub.',502);}return {imageUrl:`https://raw.githubusercontent.com/${REPO}/main/${path}`};
 }
 export async function handle(request,env){const origin=request.headers.get('Origin'),path=new URL(request.url).pathname;try{
+ if(['GET','HEAD'].includes(request.method)&&Object.hasOwn(legalPages,path.slice(1)))return new Response(request.method==='HEAD'?null:legalPages[path.slice(1)],{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'public, max-age=3600','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Content-Security-Policy':"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'self'; form-action 'none'"}});
  if(request.method==='OPTIONS')return new Response(null,{status:ORIGINS.includes(origin)?204:403,headers:{'Access-Control-Allow-Origin':ORIGINS.includes(origin)?origin:'','Access-Control-Allow-Methods':'POST, GET, OPTIONS','Access-Control-Allow-Headers':'Authorization, Content-Type','Vary':'Origin'}});
  if(path==='/health'&&request.method==='GET')return json({ready:!!env.FIREBASE_SERVICE_ACCOUNT&&!!env.DELIVERY,images:!!env.GITHUB_IMAGE_TOKEN,scheduledManagement:true,teamManagement:true},200,origin);
  if(path==='/connection'&&request.method==='POST'){if(request.headers.get('X-Club-Internal')!==await internalKey(env))throw error('No autorizado.',403);const service=firebase(env,await accessToken(env)),owner=await service.auth.getUser(ADMIN);if(owner.disabled||owner.email?.toLowerCase()!==EMAIL)throw error('Cuenta administradora no disponible.',503);await service.db.collection('clubNotificationConfig').doc('status').get();const r=await fetch('https://api.github.com/repos/'+REPO,{headers:{Authorization:'Bearer '+env.GITHUB_IMAGE_TOKEN,'Accept':'application/vnd.github+json','User-Agent':'CDMenciana-avisos'}});if(!r.ok)throw error('La conexión con GitHub no está disponible.',503);return json({ready:!!env.DELIVERY,images:true});}

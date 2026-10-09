@@ -56,7 +56,7 @@ def main():
     parser.add_argument("--apk", required=True, type=Path)
     parser.add_argument("--config", default="android/app/google-services.json", type=Path)
     parser.add_argument("--apksigner", type=Path, default=Path(os.environ.get("ANDROID_HOME", "")) /
-                        "build-tools/35.0.0/apksigner")
+                        "build-tools/36.0.0/apksigner")
     args = parser.parse_args()
     try:
         actual = sha1_from_apk(args.apk, args.apksigner)
@@ -72,3 +72,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

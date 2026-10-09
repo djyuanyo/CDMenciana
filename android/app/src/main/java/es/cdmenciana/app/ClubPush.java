@@ -28,13 +28,7 @@ final class ClubPush {
     ClubPush(Activity activity,Output output){this.activity=activity;this.output=output;}
     static SharedPreferences prefs(Context c){return c.getSharedPreferences(PREFS,Context.MODE_PRIVATE);}
     static boolean permitted(Context c){return (Build.VERSION.SDK_INT<33||c.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)==PackageManager.PERMISSION_GRANTED)&&c.getSystemService(NotificationManager.class).areNotificationsEnabled();}
-    void reply(String id,boolean enabled,String error){try{JSONObject result=new JSONObject().put("ok",error==null).put("enabled",enabled);if(error!=null)result.put("error",error);output.send(id,result);}catch(Exception ignored){}}
-    void firstLaunch(){
-        if(prefs(activity).getBoolean("permissionAsked",false))return;
-        prefs(activity).edit().putBoolean("permissionAsked",true).apply();
-        if(Build.VERSION.SDK_INT>=33&&!permitted(activity)){waitingId="first-launch";activity.requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},PERMISSION);}
-        else prefs(activity).edit().putBoolean("autoEnable",permitted(activity)).apply();
-    }
+    void reply(String id,boolean enabled,String error){try{JSONObject result=new JSONObject().put("ok",error==null).put("enabled",enabled).put("prompted",prefs(activity).getBoolean("permissionAsked",false));if(error!=null)result.put("error",error);output.send(id,result);}catch(Exception ignored){}}
     void request(String id,String action){
         if(com.google.firebase.FirebaseApp.getApps(activity).isEmpty()){reply(id,false,null);return;}
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
@@ -43,6 +37,7 @@ final class ClubPush {
             reply(id,false,null);return;
         }
         if("state".equals(action)){reply(id,user!=null&&user.getUid().equals(prefs(activity).getString("uid",""))&&permitted(activity),null);return;}
+        if("offer".equals(action)&&user!=null){prefs(activity).edit().putBoolean("permissionAsked",true).apply();reply(id,false,null);return;}
         if("disable".equals(action)||"detach".equals(action)){
             if(user!=null){boolean choice=restoreChoice(user.getUid());prefs(activity).edit().putBoolean("choice-"+user.getUid(),"detach".equals(action)&&choice).apply();}
             FirebaseMessaging.getInstance().deleteToken();
@@ -53,6 +48,7 @@ final class ClubPush {
             register(activity,user,token,false,()->reply(id,false,null),()->reply(id,false,null));return;
         }
         if(!"enable".equals(action)||user==null){reply(id,false,"Inicia sesión para activar avisos.");return;}
+        prefs(activity).edit().putBoolean("permissionAsked",true).apply();
         if(Build.VERSION.SDK_INT>=33&&activity.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED){
             if(waitingId!=null){reply(id,false,"Ya hay una solicitud de permiso abierta.");return;}
             waitingId=id;activity.requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},PERMISSION);return;
