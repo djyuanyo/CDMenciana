@@ -1,8 +1,27 @@
 import json, sys, unittest
+from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
 from official_rfaf import Document,scores,standings,team_crests,apply_crests,verify_results,calendar,enrich,TEAMS,team_staff,staff_source,team_players,official_roster
 class OfficialRFAFTests(unittest.TestCase):
+    def test_infantil_snapshot_has_complete_verified_calendar_and_profiles(self):
+        data=json.loads((Path(__file__).resolve().parents[2]/'data/fixtures-infantil.json').read_text())
+        self.assertEqual(list(range(1,19)),data['rounds'])
+        self.assertEqual(18,len(data['matches']))
+        self.assertEqual(90,len(data['round_matches']))
+        self.assertEqual(10,len(data['standings']))
+        self.assertEqual('verified',data['results_status'])
+        self.assertTrue(all(m['home_crest'] and m['away_crest'] for m in data['round_matches']))
+        self.assertTrue(all(p['profile_url'] and p['rfaf_id'] and p['stats'] for p in data['roster']))
+
+    def test_roster_allows_a_shirt_reassigned_in_another_match(self):
+        people=[dict(name=name,number=6,acta_id=acta,id=acta,profile_url='https://www.rfaf.es/'+acta,rfaf_id=acta) for name,acta in [('PERSONA, UNO','1'),('PERSONA, DOS','2')]]
+        with patch('official_rfaf.report_roster',return_value=people):
+            self.assertEqual(2,len(official_roster([],'Club',[p['name'] for p in people])))
+            people[1]['acta_id']='1'
+            with self.assertRaisesRegex(ValueError,'Ambiguous official shirt numbers'):
+                official_roster([],'Club',[p['name'] for p in people])
+
     def test_official_roster_uses_identity_and_latest_acta_numbers(self):
         names=team_players((Path(__file__).parent/'fixtures/rfaf_first_roster.html').read_text())
         data=json.loads((Path(__file__).resolve().parents[2]/'data/fixtures.json').read_text())

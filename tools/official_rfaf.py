@@ -145,7 +145,8 @@ def official_roster(matches,team,names):
         if not player or not player.get('id') or not player.get('profile_url') or not player.get('rfaf_id'):
             raise ValueError('Official dorsal/profile not yet published for '+name)
         players.append(dict(player,name=name,position='Jugador'))
-    if len({p['number'] for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
+    # Shirts can be reassigned between matches; validate numbers within each acta.
+    if len({(p['number'],p['acta_id']) for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
     return sorted(players,key=lambda p:p['number'])
 
 def write_roster_snapshot(config,payload):
@@ -205,13 +206,15 @@ def verify_results(matches,club,previous):
     print('Score verification pending; retaining verified results and refreshing kickoff times',flush=True)
     return 'pending'
 
-def sync(config=None):
+def sync(config=None,browser_reader=None):
     config=config or TEAMS['first'];source=PREFIX+'NFG_CmpJornada?'+team_query(config)
     opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     def get(url,encoding="iso-8859-15"):
         req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/html,application/xhtml+xml','Referer':source})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
+            if not raw and browser_reader is not None and config['key']=='infantil':
+                return browser_reader.read(url)
             if not raw or (b'No se ha aceptado el cookie' in raw and ('NFG_CmpPartido' in url or 'NFG_EstadisticasJugador' in url)):
                 import subprocess,tempfile
                 with tempfile.TemporaryDirectory() as directory:
@@ -317,13 +320,15 @@ def report_roster(matches,team):
 
 def sync_all():
     errors=[];updated=0
-    for config in TEAMS.values():
-        try:
-            sync(config)
-            updated+=1
-        except Exception as error:
-            errors.append(error)
-            print(f"::warning::{config['label']}: se conserva la última copia válida ({error})",flush=True)
+    from rfaf_browser import PublicBrowserReader
+    with PublicBrowserReader() as browser_reader:
+        for config in TEAMS.values():
+            try:
+                sync(config,browser_reader)
+                updated+=1
+            except Exception as error:
+                errors.append(error)
+                print(f"::warning::{config['label']}: se conserva la última copia válida ({error})",flush=True)
     # Publish verified updates even when another competition is unavailable.
     # Keep a failing run when no team could be refreshed.
     if not updated and errors:raise RuntimeError('No se pudo actualizar ningún equipo') from errors[0]
