@@ -7,7 +7,7 @@ const data={matches:[game(1,'2026-10-01',true)],round_matches:[game(1,'2026-10-0
 assert.equal(c.round(data,'2026-10-09'),'2');assert.equal(c.round(data,'2026-10-12'),'2');assert.equal(c.round({matches:[game(1,'2026-10-01',true)]},'2026-10-09'),'1');
 f.teams={first:{label:'Primer Equipo',filename:'fixtures.json'},rfaf_10_20:{label:'Cadete',filename:'fixtures-rfaf_10_20.json'}};f.selectedTeam='first';f.data=data;
 c.snapshots={first:data,rfaf_10_20:data};
-const html=c.screen();assert.equal((html.match(/class="matchday-carousel"/g)||[]).length,2);assert.equal((html.match(/class="matchday-card"/g)||[]).length,4);assert(html.includes('Cadete'));assert(html.includes('12:00'));
+const actualRound=c.round.bind(c);c.round=data=>actualRound(data,'2026-10-09');const html=c.screen();assert.equal((html.match(/class="matchday-carousel"/g)||[]).length,2);assert.equal((html.match(/class="matchday-card"/g)||[]).length,4);assert(html.includes('Cadete'));assert(html.includes('12:00'));
 assert(c.card({...game(2,'2026-10-11',true),acta_url:'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?CodActa=123'},'rfaf_10_20').includes('#acta=123&amp;equipo=rfaf_10_20'));
 assert(!c.card({...game(2,'2026-10-11'),acta_url:'https://evil.test/?CodActa=123'},'first').includes('Ver acta'));
 const target=w.document.querySelector('main');let refreshed=0;w.refreshScreen=async()=>{refreshed++};
