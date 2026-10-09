@@ -8,8 +8,8 @@ QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTempora
 SOURCE=PREFIX+'NFG_CmpJornada?'+QUERY
 TEAMS={
     'first':dict(key='first',label='Primer equipo',team_id='2137495',competition_id='48466108',group_id='48466109',competition='3ª División F.S.',group='Grupo 17',team_count=16,round_count=30,filename='fixtures.json'),
-    'infantil':dict(key='infantil',label='Infantil',team_id='34369965',competition_id='49520234',group_id='49520774',competition='2ª Andaluza Infantil F.S. (Córdoba)',group='Grupo B',team_count=10,round_count=18,filename='fixtures-infantil.json',initial_round=2),
     'filial':dict(key='filial',label='Filial Senior',team_id='48536795',competition_id='49113015',group_id='49113036',competition='2ª Andaluza Senior F.S. (Córdoba)',group='Grupo A',team_count=8,round_count=14,filename='fixtures-filial.json'),
+    'infantil':dict(key='infantil',label='Infantil',team_id='34369965',competition_id='49520234',group_id='49520774',competition='2ª Andaluza Infantil F.S. (Córdoba)',group='Grupo B',team_count=10,round_count=18,filename='fixtures-infantil.json',initial_round=2,calendar_source='https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49520234&codgrupo=49520774&CodJornada=2'),
 }
 def team_query(config,lower=False):
     keys=('codcompeticion','codgrupo','codtemporada') if lower else ('CodCompeticion','CodGrupo','CodTemporada')
@@ -227,7 +227,8 @@ def sync(config=None):
     get('https://www.rfaf.es/pnfg/NPortada')
     print('Public session initialized',flush=True)
     initial_round=config.get('initial_round',1)
-    first_page=get(source+'&CodJornada='+str(initial_round))
+    calendar_page=get(config['calendar_source']) if config.get('calendar_source') else None
+    first_page=calendar_page if calendar_page is not None else get(source+'&CodJornada='+str(initial_round))
     def menu_link(html,leaf):
         links=[n.attrs.get('href','') for n in Document(html).root.find('a') if leaf in n.attrs.get('href','')]
         if not links:
@@ -238,7 +239,7 @@ def sync(config=None):
         url=urllib.parse.urljoin(source,links[0]);parsed=urllib.parse.urlparse(url)
         if parsed.scheme!='https' or parsed.hostname!='www.rfaf.es':raise ValueError('Unexpected official source')
         return url
-    round_matches,numbers=calendar(get(menu_link(first_page,'NFG_VisCalendario_Vis')),all_teams=True,config=config)
+    round_matches,numbers=calendar(calendar_page if calendar_page is not None else get(menu_link(first_page,'NFG_VisCalendario_Vis')),all_teams=True,config=config)
     matches=[m for m in round_matches if is_club(m['home']) or is_club(m['away'])]
     for match in matches:match['id']=f"{config['group_id']}-{match['round']}"
     current=max((m['round'] for m in matches if m['played']),default=1)
@@ -327,3 +328,4 @@ def sync_all():
     # Keep a failing run when no team could be refreshed.
     if not updated and errors:raise RuntimeError('No se pudo actualizar ningún equipo') from errors[0]
 if __name__=='__main__':sync_all()
+

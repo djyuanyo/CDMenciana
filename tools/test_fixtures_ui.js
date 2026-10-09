@@ -63,6 +63,7 @@ console.log('Structured lineups, goal minutes, referee roles, cards and both clu
 
 const events=f.reportEvents(report);
 assert(f.teams.infantil&&f.teams.infantil.group==='Grupo B'&&f.teams.infantil.filename==='fixtures-infantil.json');
+assert.deepEqual(Object.keys(f.teams),['first','filial','infantil']);
 assert.equal(events.length,11);
 assert.deepEqual(Array.from(events,e=>e.minute),["5'","13'","16'","16'","18'","21'","27'","27'","33'","36'","38'"]);
 assert.deepEqual(Array.from(events,e=>e.kind),['goal','card','card','card','card','goal','goal','card','card','card','goal']);
@@ -82,3 +83,4 @@ assert(f.reportEventIcon({kind:'card',type:'Tarjeta roja'}).includes('acta-card 
 const fallback=f.reportModel({blocks:[{kind:'table',rows:[['Local','','Visitante'],['','2 - 1','']]},{kind:'heading',text:'Goles'},{kind:'table',rows:[['Gol · 1 - 0',"(5') Jugador desconocido"],['Gol en propia puerta · 2 - 0',"(6') Otro jugador"],['Gol de penalti · 2 - 1',"(7') Rival"]]}]},{home:'Local',away:'Visitante'});
 assert.deepEqual(Array.from(fallback.goals,e=>e.side),[0,1,1]);
 console.log('Combined event chronology, author crests, stoppage minutes, staff cards, goal types and missing-roster fallback verified');
+
