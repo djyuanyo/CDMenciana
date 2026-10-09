@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-09T05:27:47.695272+00:00",
+  "status": "incomplete",
+  "stages": {
+    "CREDENTIALS": "success",
+    "FINGERPRINTS": "failure",
+    "CONFIG": "skipped",
+    "SAVE": "skipped"
+  }
+}
