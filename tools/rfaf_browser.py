@@ -44,7 +44,9 @@ class PublicBrowserReader:
         body = self.page.locator('body').inner_text()
         if any(text in body.lower() for text in ('verify you are human', 'checking your browser', 'unusual traffic', 'automated queries')):
             raise ValueError('RFAF browser verification required; keeping saved data')
-        self.page.locator('table').first.wait_for(state='attached', timeout=15000)
+        # RFAF also publishes player statistics as cards and unpublished rounds
+        # as plain text. Requiring a table turned valid pages into 15s timeouts.
+        # Return the rendered document; each parser validates its own content.
         return self.page.content()
 
     def _close(self):
