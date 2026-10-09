@@ -212,7 +212,7 @@ def sync(config=None):
         req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/html,application/xhtml+xml','Referer':source})
         with opener.open(req,timeout=40) as response:
             raw=response.read(3_000_000)
-            if (not raw or b'No se ha aceptado el cookie' in raw) and ('NFG_CmpPartido' in url or 'NFG_EstadisticasJugador' in url):
+            if not raw or (b'No se ha aceptado el cookie' in raw and ('NFG_CmpPartido' in url or 'NFG_EstadisticasJugador' in url)):
                 import subprocess,tempfile
                 with tempfile.TemporaryDirectory() as directory:
                     path=directory+'/public-cookies.txt'
