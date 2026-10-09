@@ -863,7 +863,73 @@
         "id": "263c3960c4090e8b",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81881&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "81881"
+        "rfaf_id": "81881",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:56.025840+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 0,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "CABEZAS CORDOBA, RAUL",
@@ -873,7 +939,73 @@
         "id": "21da82fb02f1f061",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113206&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "113206"
+        "rfaf_id": "113206",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:55.858414+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 0,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "JIMENEZ POYATO, VICTOR",
@@ -883,7 +1015,73 @@
         "id": "aee5a7d22f4b9ad1",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=79517&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "79517"
+        "rfaf_id": "79517",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:44.695189+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 1,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "BARBA VALVERDE, DIEGO",
@@ -893,7 +1091,73 @@
         "id": "81d78d51703fdf46",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=29702425&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "29702425"
+        "rfaf_id": "29702425",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:44.610982+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 1,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "LAMA CAMACHO, MANUEL",
@@ -903,7 +1167,73 @@
         "id": "4b5b2a48f3d99a17",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8594680&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "8594680"
+        "rfaf_id": "8594680",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "1"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:55.868319+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 0,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "CONTRERAS GOMEZ, DAVID",
@@ -913,7 +1243,73 @@
         "id": "c083afd65d7d220d",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2169707&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "2169707"
+        "rfaf_id": "2169707",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "1"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:44.793962+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 1,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "PRIEGO LUNA, IVAN",
@@ -923,7 +1319,73 @@
         "id": "751e562ce500c06c",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=28016402&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "28016402"
+        "rfaf_id": "28016402",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:56.213258+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 0,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "RUEDA MORALES, FRANCISCO JAVIER",
@@ -933,7 +1395,73 @@
         "id": "3a01bc0d5d34565e",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=79349&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "79349"
+        "rfaf_id": "79349",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "1.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:44.441059+00:00",
+        "competition_summary": {
+          "goals": 1,
+          "starts": 1,
+          "called": 1,
+          "played": 1,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       },
       {
         "name": "ROSALES MORAL, ESTEBAN",
@@ -943,12 +1471,78 @@
         "id": "acf7a4d18dfdd092",
         "acta_id": "2718118",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7257039&codacta=2718118&nueva_ventana=",
-        "rfaf_id": "7257039"
+        "rfaf_id": "7257039",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "1"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-07T16:29:44.452124+00:00",
+        "competition_summary": {
+          "goals": 0,
+          "starts": 1,
+          "called": 1,
+          "played": null,
+          "team": "C.D. APAGA Y VAMONOS",
+          "source": "actas oficiales RFAF"
+        }
       }
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-07T18:06:13.926804+00:00",
+    "roster_updated_at": "2026-10-09T10:03:15.571348+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -963,7 +1557,7 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-07T17:47:19.577490+00:00"
+    "staff_updated_at": "2026-10-09T10:02:56.570413+00:00"
   },
   "infantil": {
     "team_key": "infantil",

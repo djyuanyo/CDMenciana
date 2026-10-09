@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T16:23:38.801811+00:00",
+  "updated_at": "2026-10-09T10:02:57.725498+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5872&codacta=2718115&nueva_ventana=": {
       "name": "COBOS NAVARRO, RUBEN",
@@ -62,7 +62,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:49.931382+00:00"
+      "updated_at": "2026-10-09T10:02:58.431535+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=268736&codacta=2718115&nueva_ventana=": {
       "name": "SANCHEZ ORDOÑEZ, CRISTOBAL",
@@ -125,7 +125,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:50.113026+00:00"
+      "updated_at": "2026-10-09T10:02:58.428502+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42382&codacta=2718115&nueva_ventana=": {
       "name": "ACERO FLORES, MARIO",
@@ -188,7 +188,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:50.792241+00:00"
+      "updated_at": "2026-10-09T10:02:58.445203+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=112400&codacta=2718115&nueva_ventana=": {
       "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
@@ -251,7 +251,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:50.065724+00:00"
+      "updated_at": "2026-10-09T10:02:58.375718+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=295122&codacta=2718115&nueva_ventana=": {
       "name": "LARA SEVILLA, JOSE DAVID",
@@ -314,7 +314,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:50.102637+00:00"
+      "updated_at": "2026-10-09T10:02:58.437953+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=117008&codacta=2718115&nueva_ventana=": {
       "name": "PEDROSA ESTEPA, EMILIO",
@@ -377,14 +377,70 @@
           ]
         }
       ],
-      "updated_at": "2026-10-07T16:23:59.533225+00:00"
+      "updated_at": "2026-10-09T10:02:58.889622+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47845708&codacta=2718115&nueva_ventana=": {
       "name": "GARCIA CASADO, JAIME",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47845708&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": ""
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-09T10:02:58.873166+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=87612&codacta=2718115&nueva_ventana=": {
       "name": "ALONZO CASTILLO, ANGEL LUIS",
