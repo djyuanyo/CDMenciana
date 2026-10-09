@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Validar acceso privado a Firebase
+        id: credentials
         env:
           CDM_FIREBASE_JSON: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
         shell: bash
@@ -44,6 +45,7 @@ jobs:
       - name: Instalar Firebase CLI
         run: npm install --global firebase-tools@15 --no-audit --no-fund
       - name: Registrar las huellas de la APK entregada
+        id: fingerprints
         shell: bash
         run: |
           set -euo pipefail
@@ -79,6 +81,7 @@ jobs:
           console.log('Firebase confirma las dos huellas de la APK 0.32.0.');
           JS
       - name: Descargar configuración Android actualizada
+        id: config
         shell: bash
         run: |
           set -euo pipefail
@@ -101,6 +104,7 @@ jobs:
             sleep 12
           done
       - name: Guardar configuración pública en GitHub
+        id: save
         shell: bash
         run: |
           set -euo pipefail
@@ -113,3 +117,31 @@ jobs:
             git push origin HEAD:main
           fi
           echo 'Registro de firmas Firebase finalizado.'
+      - name: Publicar resultado del registro (sin credenciales)
+        if: always()
+        env:
+          CREDENTIALS_OUTCOME: ${{ steps.credentials.outcome }}
+          FINGERPRINTS_OUTCOME: ${{ steps.fingerprints.outcome }}
+          CONFIG_OUTCOME: ${{ steps.config.outcome }}
+          SAVE_OUTCOME: ${{ steps.save.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import datetime, json, os
+          from pathlib import Path
+          states={key:os.environ.get(key+'_OUTCOME','unknown') for key in ('CREDENTIALS','FINGERPRINTS','CONFIG','SAVE')}
+          status={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  'status':'completed' if all(v=='success' for v in states.values()) else 'incomplete',
+                  'stages':states}
+          Path('data/google-signin-repair-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('Estado de Google Sign-In: '+status['status'])
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/google-signin-repair-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'ci: estado verificable de registro de SHA Google'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
