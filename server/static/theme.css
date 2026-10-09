@@ -501,5 +501,11 @@ input[type="checkbox"] { accent-color: #3d8bdf; box-shadow: none; }
 
 .notification-history-item [hidden]{display:none!important}.notification-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}.notification-actions .account-danger{width:auto;margin-top:0}.notification-history-item [data-notification-cancel-prompt]{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:12px}.notification-history-item .card{margin-top:18px}
 
-/* Legible futsal court markings on the light team header. */
-:root[data-theme="light"] .team-cover .court{stroke:#145da8;opacity:.58}
+/* Keep navigation visible; distinguish goals from disciplinary events. */
+#header { position: sticky; top: 0; z-index: 30; background: var(--background); }
+:root[data-theme="light"] .team-cover .court { color: #2467b8; opacity: .38; }
+:root[data-theme="light"] .team-cover .court rect, :root[data-theme="light"] .team-cover .court path, :root[data-theme="light"] .team-cover .court circle { stroke: #2467b8; }
+.acta-timeline li.acta-timeline-event.goal { background: var(--surface-raised); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--raised-shadow); margin: 12px 0; padding: 14px 8px; }
+.acta-timeline li.acta-timeline-event.card { background: transparent; border: 0; box-shadow: none; margin: 0; border-radius: 0; }
+.acta-timeline-event.card .acta-timeline-stamp { background: var(--surface); border: 0; box-shadow: none; }
+.acta-timeline-event.card .acta-player-avatar { box-shadow: none; }

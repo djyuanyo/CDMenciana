@@ -38,11 +38,12 @@ final class ClubPush {
     void request(String id,String action){
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         if("bootstrap".equals(action)){
-            if(user!=null&&permitted(activity)&&prefs(activity).getBoolean("autoEnable",false)){enable(id);return;}
+            if(user!=null&&permitted(activity)&&restoreChoice(user.getUid())){enable(id);return;}
             reply(id,false,null);return;
         }
         if("state".equals(action)){reply(id,user!=null&&user.getUid().equals(prefs(activity).getString("uid",""))&&permitted(activity),null);return;}
-        if("disable".equals(action)){
+        if("disable".equals(action)||"detach".equals(action)){
+            if(user!=null){boolean choice=restoreChoice(user.getUid());prefs(activity).edit().putBoolean("choice-"+user.getUid(),"detach".equals(action)&&choice).apply();}
             String token=prefs(activity).getString("token","");
             prefs(activity).edit().remove("uid").remove("token").putBoolean("autoEnable",false).apply();activity.getSystemService(NotificationManager.class).cancelAll();
             if(user==null||token.isEmpty()){reply(id,false,null);return;}
@@ -55,6 +56,10 @@ final class ClubPush {
         }
         enable(id);
     }
+    private boolean restoreChoice(String uid){
+        SharedPreferences saved=prefs(activity);String key="choice-"+uid;
+        return PushPreferences.restore(uid,saved.getString("uid",""),saved.getBoolean("autoEnable",false),saved.contains(key),saved.getBoolean(key,false));
+    }
     void permissionResult(){String id=waitingId;waitingId=null;if(id==null)return;if("first-launch".equals(id)){prefs(activity).edit().putBoolean("autoEnable",permitted(activity)).apply();reply(id,permitted(activity),null);return;}if(!permitted(activity)){reply(id,false,"No has permitido las notificaciones. Puedes activarlas en los ajustes del móvil.");return;}enable(id);}
     private void enable(String id){
         if(!permitted(activity)){reply(id,false,"Activa las notificaciones de CD Menciana en los ajustes del móvil.");return;}
@@ -64,7 +69,7 @@ final class ClubPush {
             String token=task.getResult();register(activity,user,token,true,()->{
                 FirebaseUser current=FirebaseAuth.getInstance().getCurrentUser();
                 if(current==null||!current.getUid().equals(user.getUid())){reply(id,false,"La sesión ha cambiado.");return;}
-                prefs(activity).edit().putString("uid",user.getUid()).putString("token",token).putBoolean("autoEnable",true).apply();reply(id,true,null);
+                prefs(activity).edit().putString("uid",user.getUid()).putString("token",token).putBoolean("autoEnable",true).putBoolean("choice-"+user.getUid(),true).apply();reply(id,true,null);
             },()->reply(id,false,"No se pudo activar el aviso. Vuelve a intentarlo."));
         });
     }
@@ -84,3 +89,4 @@ final class ClubPush {
         });
     }
 }
+

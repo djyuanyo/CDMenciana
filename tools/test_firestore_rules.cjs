@@ -13,6 +13,8 @@ async function run(){
   await assertSucceeds(getDoc(doc(fan,'clubUsers/fan')));
   const favorite={teamKey:'first',teamId:'2137495',teamName:'Equipo',createdAt:'2026-10-08T16:00:00.000Z'};
   await assertSucceeds(setDoc(doc(fan,'clubUsers/fan/favorites/first_2137495'),favorite));
+  await assertSucceeds(setDoc(doc(fan,'clubUsers/fan/favorites/infantil_34369965'),{...favorite,teamKey:'infantil',teamId:'34369965',teamName:'Infantil'}));
+  await assertFails(setDoc(doc(fan,'clubUsers/fan/favorites/infantil_999'),{...favorite,teamKey:'infantil',teamId:'999'}));
   await assertSucceeds(getDocs(collection(fan,'clubUsers/fan/favorites')));
   await assertFails(getDocs(collection(owner,'clubUsers/fan/favorites')));
   await assertFails(setDoc(doc(fan,'clubUsers/another/favorites/first_2137495'),favorite));

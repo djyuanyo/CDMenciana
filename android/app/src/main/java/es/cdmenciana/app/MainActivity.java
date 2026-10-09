@@ -171,7 +171,7 @@ public class MainActivity extends Activity {
         }catch(Exception ignored){}
     }
     private String roundSourceForActa(String id){
-        for(String filename:new String[]{"fixtures.json","fixtures-filial.json"}){
+        for(String filename:new String[]{"fixtures.json","fixtures-filial.json","fixtures-infantil.json"}){
             java.io.File cached=new java.io.File(getFilesDir(),filename);
             for(boolean bundled:new boolean[]{false,true})try(InputStream input=bundled?getAssets().open(filename):new java.io.FileInputStream(cached);ByteArrayOutputStream bytes=new ByteArrayOutputStream()){
                 byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1)bytes.write(buffer,0,count);
@@ -179,8 +179,8 @@ public class MainActivity extends Activity {
                 for(int i=0;i<matches.length();i++){JSONObject match=matches.getJSONObject(i);Uri link=Uri.parse(match.optString("acta_url"));if(!id.equals(link.getQueryParameter("CodActa")))continue;String source=match.optString("source");Uri safe=Uri.parse(source);if("https".equals(safe.getScheme())&&"www.rfaf.es".equals(safe.getHost())&&"/pnfg/NPcd/NFG_CmpJornada".equals(safe.getPath()))return source;}
             }catch(Exception ignored){}
         }
-        boolean filial="filial".equals(getPreferences(MODE_PRIVATE).getString("team","first"));
-        return "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion="+(filial?"49113015":"48466108")+"&CodGrupo="+(filial?"49113036":"48466109")+"&CodTemporada=22&CodJornada=1";
+        String selected=getPreferences(MODE_PRIVATE).getString("team","first");boolean filial="filial".equals(selected),infantil="infantil".equals(selected);
+        return "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion="+(infantil?"49520234":filial?"49113015":"48466108")+"&CodGrupo="+(infantil?"49520774":filial?"49113036":"48466109")+"&CodTemporada=22&CodJornada=1";
     }
     /** Read public match reports directly when the scheduled copy is unavailable. */
     private android.webkit.WebResourceResponse publicReportResponse(String id,boolean refresh) {
@@ -421,7 +421,7 @@ public class MainActivity extends Activity {
                     String path=req.getUrl().getPath();String name=path==null?"":path.substring(1);
                     if(name.matches("actas/[0-9]{1,12}\\.json"))return publicReportResponse(name.substring(6,name.length()-5),req.getUrl().getQueryParameter("refresh")!=null);
                     if(name.matches("rfaf-player/[0-9]{1,12}\\.json"))return publicPlayerResponse(name.substring(12,name.length()-5),req.getUrl().getQueryParameter("acta"),req.getUrl().getQueryParameter("primary"),req.getUrl().getQueryParameter("refresh")!=null);
-                    if("fixtures.json".equals(name)||"fixtures-filial.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
+                    if("fixtures.json".equals(name)||"fixtures-filial.json".equals(name)||"fixtures-infantil.json".equals(name)||"news.json".equals(name))return publicDataResponse(name,req.getUrl().getQueryParameter("refresh")!=null);
                     if(!BundledAssets.allows(name))return new android.webkit.WebResourceResponse("text/plain","UTF-8",new java.io.ByteArrayInputStream(new byte[0]));
                     String mime=name.endsWith("html")?"text/html":name.endsWith("css")?"text/css":name.endsWith("js")?"application/javascript":name.endsWith("webp")?"image/webp":name.endsWith("jpg")?"image/jpeg":"image/png";
                     try{return new android.webkit.WebResourceResponse(mime,"UTF-8",getAssets().open(name));}catch(java.io.IOException ignored){}
@@ -445,3 +445,4 @@ public class MainActivity extends Activity {
     }
     @Override protected void onDestroy(){if(imageSelection!=null){imageSelection.onReceiveValue(null);imageSelection=null;}if(account!=null)account.close();if(web!=null)web.destroy();super.onDestroy();}
 }
+
