@@ -1,0 +1,115 @@
+name: Restaurar acceso Google APK 0.32.0
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/register-google-signin-sha.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: register-cdm-google-android-sha
+  cancel-in-progress: false
+jobs:
+  register:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar acceso privado a Firebase
+        env:
+          CDM_FIREBASE_JSON: ${{ secrets.CDM_FIREBASE_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$CDM_FIREBASE_JSON" ]; then
+            echo "::error::Falta el secreto CDM_FIREBASE_SERVICE_ACCOUNT en GitHub. No se ha modificado Firebase."
+            exit 1
+          fi
+          account="$RUNNER_TEMP/cdm-firebase-account.json"
+          printf '%s' "$CDM_FIREBASE_JSON" > "$account"
+          chmod 600 "$account"
+          ACCOUNT="$account" python - <<'PY'
+          import json, os
+          with open(os.environ['ACCOUNT']) as f:
+              data=json.load(f)
+          if data.get('project_id')!='barpro-pos-menciana':
+              raise SystemExit('::error::Credenciales de un proyecto Firebase diferente.')
+          print('El secreto corresponde al proyecto esperado (no se muestran credenciales).')
+          PY
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$account" >> "$GITHUB_ENV"
+      - name: Instalar Firebase CLI
+        run: npm install --global firebase-tools@15 --no-audit --no-fund
+      - name: Registrar las huellas de la APK entregada
+        shell: bash
+        run: |
+          set -euo pipefail
+          app='1:565455766174:android:4a41adf960b4e003b5718f'
+          project='barpro-pos-menciana'
+          firebase apps:android:sha:list "$app" --project "$project" --json > "$RUNNER_TEMP/current-sha.json"
+          node - <<'JS'
+          const fs=require('node:fs');
+          const data=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/current-sha.json','utf8'));
+          if(data.status==='error')throw Error('No se pueden consultar las huellas de Firebase.');
+          const items=Array.isArray(data.result)?data.result:(data.result?.shaCertificates||[]);
+          const clean=v=>String(v||'').replace(/[^0-9a-f]/gi,'').toLowerCase();
+          const hashes=[
+            '5052F436E5FC5646DF01C40B367C95C95B2FB89E',
+            'BA255B803B1A87FADB95D852085C5A21CBBE9F1873063DC06041BB1BB618AC2E'
+          ];
+          const existing=new Set(items.map(c=>clean(c.shaHash||c.certificateHash)));
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/missing-sha.txt',hashes.filter(s=>!existing.has(clean(s))).join('\n'));
+          console.log('Huellas ya registradas: '+(hashes.length-hashes.filter(s=>!existing.has(clean(s))).length));
+          JS
+          while IFS= read -r hash || [ -n "$hash" ]; do
+            if [ -n "$hash" ]; then
+              firebase apps:android:sha:create "$app" "$hash" --project "$project" --non-interactive
+            fi
+          done < "$RUNNER_TEMP/missing-sha.txt"
+          firebase apps:android:sha:list "$app" --project "$project" --json > "$RUNNER_TEMP/confirmed-sha.json"
+          node - <<'JS'
+          const fs=require('node:fs'),d=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/confirmed-sha.json','utf8'));
+          const rows=Array.isArray(d.result)?d.result:(d.result?.shaCertificates||[]);
+          const hashes=new Set(rows.map(c=>String(c.shaHash||c.certificateHash||'').replace(/[^a-f0-9]/gi,'').toLowerCase()));
+          for(const k of ['5052F436E5FC5646DF01C40B367C95C95B2FB89E','BA255B803B1A87FADB95D852085C5A21CBBE9F1873063DC06041BB1BB618AC2E'])
+            if(!hashes.has(k.toLowerCase()))throw Error('No consta una de las huellas en Firebase.');
+          console.log('Firebase confirma las dos huellas de la APK 0.32.0.');
+          JS
+      - name: Descargar configuración Android actualizada
+        shell: bash
+        run: |
+          set -euo pipefail
+          app='1:565455766174:android:4a41adf960b4e003b5718f'
+          for attempt in 1 2 3 4; do
+            firebase apps:sdkconfig ANDROID "$app" --project barpro-pos-menciana --non-interactive --out android/app/google-services.json
+            if PYTHONPATH=tools python - <<'PY'
+          import json
+          from check_google_signin import verify_google_config
+          with open('android/app/google-services.json') as file:
+              config=json.load(file)
+          verify_google_config(config, '5052F436E5FC5646DF01C40B367C95C95B2FB89E')
+          print('Cliente OAuth Android y configuración Firebase validados.')
+          PY
+            then break; fi
+            if [ "$attempt" = 4 ]; then
+              echo "::error::Las huellas constan en Firebase, pero falta regenerar el cliente OAuth Android en google-services.json."
+              exit 1
+            fi
+            sleep 12
+          done
+      - name: Guardar configuración pública en GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add android/app/google-services.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix: sincronizar OAuth Google Android de la APK 0.32.0'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          echo 'Registro de firmas Firebase finalizado.'
