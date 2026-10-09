@@ -1,7 +1,7 @@
 {
   "id": "659a0848fac8bf85b74ae931df7e9a6e",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
-  "status": "import_error",
+  "status": "complete",
   "createdAt": "2026-10-09T09:52:06.728Z",
   "preview": {
     "competition_id": "49465203",
@@ -23,10 +23,10 @@
       }
     ]
   },
-  "updatedAt": "2026-10-09T10:32:31.366268+00:00",
+  "updatedAt": "2026-10-09T11:03:13.402514+00:00",
   "selectedTeam": "485016",
   "label": "Cadete",
   "order": 3,
-  "error": "No se pudo leer toda la información pública de RFAF. Puedes reintentar; los equipos existentes se conservan.",
-  "attempts": 1
+  "attempts": 2,
+  "teamKey": "rfaf_49465413_485016"
 }
