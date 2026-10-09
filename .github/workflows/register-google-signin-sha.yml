@@ -68,7 +68,18 @@ jobs:
           JS
           while IFS= read -r hash || [ -n "$hash" ]; do
             if [ -n "$hash" ]; then
-              firebase apps:android:sha:create "$app" "$hash" --project "$project" --non-interactive
+              if ! firebase apps:android:sha:create "$app" "$hash" --project "$project" --non-interactive; then
+                python - <<'PY'
+          import re
+          from pathlib import Path
+          data=Path('firebase-debug.log').read_text(errors='replace') if Path('firebase-debug.log').exists() else ''
+          codes=sorted(set(re.findall(r'HTTP Error[: ]+([0-9]{3})|\\\"code\\\"\\s*:\\s*([0-9]{3})',data)))
+          http=','.join(a or b for a,b in codes) or 'no disponible'
+          types=[t for t in ['PERMISSION_DENIED','ALREADY_EXISTS','FAILED_PRECONDITION','INVALID_ARGUMENT','UNAUTHENTICATED','RESOURCE_EXHAUSTED'] if t in data]
+          print('::error::No se ha podido registrar la huella Android. Código HTTP: '+http+'. Tipo: '+(','.join(types) or 'no identificado')+'.')
+          PY
+                exit 1
+              fi
             fi
           done < "$RUNNER_TEMP/missing-sha.txt"
           firebase apps:android:sha:list "$app" --project "$project" --json > "$RUNNER_TEMP/confirmed-sha.json"
