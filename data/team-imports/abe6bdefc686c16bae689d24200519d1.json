@@ -1,6 +1,28 @@
 {
   "id": "abe6bdefc686c16bae689d24200519d1",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
-  "status": "preview_pending",
-  "createdAt": "2026-10-09T11:12:08.187Z"
+  "status": "preview_ready",
+  "createdAt": "2026-10-09T11:12:08.187Z",
+  "attempts": 1,
+  "preview": {
+    "competition_id": "49465203",
+    "group_id": "49465413",
+    "season_id": "22",
+    "initial_round": 3,
+    "source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
+    "calendar_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisCalendario_Vis?cod_primaria=1000120&codtemporada=22&codcompeticion=49465203&codgrupo=49465413&CodJornada=3",
+    "competition": "2ª Andaluza Cadete F.S. (Cordoba)",
+    "group": "Grupo A",
+    "team_count": 7,
+    "round_count": 14,
+    "has_byes": true,
+    "season": "2026-2027",
+    "candidates": [
+      {
+        "team_id": "485016",
+        "team_name": "C.D. MENCIANA"
+      }
+    ]
+  },
+  "updatedAt": "2026-10-09T11:12:42.242417+00:00"
 }
