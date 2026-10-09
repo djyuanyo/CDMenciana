@@ -1,8 +1,5 @@
 name: Preparar cuenta de revisión de Google Play
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/prepare-play-reviewer.yml', 'play-release/upload-certificate.pem']
   workflow_dispatch:
 permissions:
   contents: read

@@ -1,9 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" tools:node="remove" />
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 <application android:name=".ClubApplication" android:label="CD Menciana" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:allowBackup="false" android:usesCleartextTraffic="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
 <provider android:name="com.google.firebase.provider.FirebaseInitProvider" tools:node="remove" />
+<service android:name="androidx.work.impl.foreground.SystemForegroundService" tools:node="remove" />
 <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
 <meta-data android:name="firebase_analytics_collection_enabled" android:value="false" />
 <service android:name=".ClubMessagingService" android:exported="false"><intent-filter><action android:name="com.google.firebase.MESSAGING_EVENT" /></intent-filter></service>

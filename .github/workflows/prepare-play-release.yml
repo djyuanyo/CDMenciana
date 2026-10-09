@@ -39,7 +39,9 @@ jobs:
           assert r.find('uses-sdk').attrib[a+'targetSdkVersion']=='36'
           assert r.find('application').attrib.get(a+'debuggable','false')=='false'
           assert not any('AD_ID' in p.attrib.get(a+'name','') for p in r.findall('uses-permission'))
+          assert not any('FOREGROUND_SERVICE' in p.attrib.get(a+'name','') for p in r.findall('uses-permission'))
           assert not any(p.attrib.get(a+'name','').endswith('FirebaseInitProvider') for p in r.find('application').findall('provider'))
+          assert not any(p.attrib.get(a+'name','').endswith('SystemForegroundService') for p in r.find('application').findall('service'))
           print('AAB de producción: API 36, código 100, sin depuración ni identificador publicitario.')
           PY
       - uses: actions/upload-artifact@v4
