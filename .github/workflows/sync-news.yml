@@ -1,0 +1,25 @@
+name: Actualizar noticias públicas
+on:
+  push:
+    branches: [main]
+    paths: ['tools/sync_news.py', '.github/workflows/sync-news.yml']
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: {group: public-news, cancel-in-progress: false}
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: mkdir -p server/static android/app/src/main/assets
+      - run: python tools/sync_news.py
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python tools/publish_public_data.py
