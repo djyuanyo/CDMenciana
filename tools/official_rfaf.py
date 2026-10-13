@@ -193,11 +193,20 @@ def enrich(match,html):
             match.setdefault('home_team_url',urllib.parse.urljoin('https://www.rfaf.es',team_links[0].attrs.get('href','')))
             match.setdefault('away_team_url',urllib.parse.urljoin('https://www.rfaf.es',team_links[1].attrs.get('href','')))
         dates=table.find('span','horario')
-        text=' '.join(d.text() for d in dates)
+        # RFAF hides some digits behind CSS/script like the scores, so read the
+        # rendered text as well as the plain one, then the whole fixture block.
+        css=' '.join(x.text() for x in table.find('style'))
+        plain=' '.join(d.text() for d in dates);shown=' '.join(visible(d,css) for d in dates)
+        text=plain+' '+shown
         date=re.search(r'\b(\d{2}-\d{2}-\d{4})\b',text)
-        hour=re.search(r'\b(\d{2}:\d{2})\b',text)
+        clock=r'\b([01]?\d|2[0-3])[:.]([0-5]\d)\b'
+        hour=re.search(clock,text) or re.search(r'(?i)\bhora\s*:?\s*'+clock[2:],visible(table,css))
         if date:match['date']=datetime.datetime.strptime(date[1],'%d-%m-%Y').date().isoformat();match['date_provisional']=False
-        match['time']=hour[1] if hour else ''
+        if hour:match['time']=f'{int(hour[1]):02d}:{hour[2]}'
+        elif dates:
+            match['time']=''
+            if not match['played'] and (is_club(match['home']) or is_club(match['away'])):
+                print(f"Jornada {match['round']}: hora sin publicar en RFAF ({' '.join(plain.split())[:60]!r} / {' '.join(shown.split())[:60]!r})",flush=True)
         venue=next((l.text() for l in table.find('a') if 'NFG_VisCampos' in l.attrs.get('href','')),'')
         match['venue']=venue
         if not match['played']:match['state']='Programado' if date else 'Por confirmar'
@@ -264,7 +273,9 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
         today=datetime.datetime.now(datetime.timezone.utc).date()
         def needs_round(match):
             if match['round'] in relevant or (match['played'] and not match.get('acta_url')):return True
-            if not match['played'] and not match.get('date_provisional',True) and match.get('date'):
+            # Kick-off times appear in each round page days before the match,
+            # so every round of the next two weeks is read, confirmed date or not.
+            if not match['played'] and match.get('date'):
                 return abs((datetime.date.fromisoformat(match['date'])-today).days)<=14
             return False
         published={m['source']:m for m in round_matches if needs_round(m)}.values()
