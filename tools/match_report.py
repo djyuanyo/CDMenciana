@@ -1,10 +1,21 @@
 """Extract the public acta into data, never federation HTML or scripts."""
-import base64, binascii, concurrent.futures, datetime, hashlib, html as html_lib, json, re, subprocess, urllib.parse
+import base64, binascii, concurrent.futures, datetime, hashlib, html as html_lib, json, os, re, subprocess, time, urllib.parse
 from sync_fixtures import Document,normalize
 from official_rfaf import visible
 
 RFAF_HOSTS={'www.rfaf.es','rfaf.es'}
 PROFILE_CACHE='data/rfaf-player-profiles.json'
+# RFAF often answers runners with empty pages. Reuse what is already verified,
+# back off from failures, and stop fetching before the job's 15-minute limit.
+PROFILE_TTL=datetime.timedelta(hours=24)
+FAILED_RETRY=datetime.timedelta(hours=12)
+RECENT_ACTA=datetime.timedelta(days=3)
+ACTA_REFRESH=datetime.timedelta(hours=6)
+DEADLINE=time.monotonic()+float(os.environ.get('CDM_REPORT_BUDGET','540'))
+def out_of_time():return time.monotonic()>DEADLINE
+def since(value,now):
+    try:return now-datetime.datetime.fromisoformat(str(value).replace('Z','+00:00'))
+    except (ValueError,TypeError):return None
 
 def clean(text):return ' '.join(str(text or '').split())
 def person_key(name):return re.sub(r'\s+',' ',clean(name)).upper()
@@ -144,8 +155,10 @@ def player_profile(html,url,name):
     return {'name':name,'source':url,'photo_source':photo,'sections':sections,'updated_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
 
 def fresh_profile(profile,now):
-    try:return (now-datetime.datetime.fromisoformat(profile.get('updated_at','').replace('Z','+00:00'))).total_seconds()<1800
-    except (ValueError,TypeError):return False
+    age=since(profile.get('updated_at',''),now)
+    if profile.get('sections') and age is not None and age<PROFILE_TTL:return True
+    failed=since(profile.get('failed_at',''),now)
+    return failed is not None and failed<FAILED_RETRY
 
 def player_identity(ref):
     query=urllib.parse.parse_qs(urllib.parse.urlparse(ref.get('profile_url','')).query)
@@ -308,6 +321,15 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
         except (OSError,ValueError,AttributeError):return None
     def fetch_report(item):
         id,payload=item;url,match=payload;errors=[]
+        saved=prior_report(id)
+        if saved and saved.get('players'):
+            # A played match's acta is final; only recent ones are re-read, at most every few hours.
+            now=datetime.datetime.now(datetime.timezone.utc)
+            played=since((match.get('date') or '')+'T00:00:00+00:00',now)
+            checked=since(saved.get('updated_at',''),now)
+            if out_of_time() or played is None or played>RECENT_ACTA or (checked is not None and checked<ACTA_REFRESH):return id,saved
+        elif out_of_time():
+            return id,saved
         candidates=['https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id,url,
             'https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id,
             'https://www.rfaf.es/pnfg/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id+'&cod_acta='+id]
@@ -394,8 +416,11 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
         known=next((p for u,p in cache.items() if player_identity({'profile_url':u})==identity and fresh_profile(p,now)),None)
         if known:cache[url]=known
         else:refresh.append((url,ref))
+    skipped=[]
     def fetch_profile(item):
         url,ref=item
+        if out_of_time():
+            skipped.append(url);return url,cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''})
         candidates=[url]
         parsed=urllib.parse.urlparse(url)
         if '/NPcd/' in parsed.path:candidates.append(url.replace('/pnfg/NPcd/','/pnfg/',1))
@@ -407,10 +432,14 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
                 return url,player_profile(html,candidate,ref['name'])
             except (ValueError,OSError,subprocess.SubprocessError,RuntimeError):pass
         print(f"Perfil RFAF pendiente {ref['name']}",flush=True)
-        return url,cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''})
+        # Keep any verified stats and remember the failure so it is not retried every run.
+        return url,{**cache.get(url,{'name':ref['name'],'source':url,'photo_source':'','sections':[],'updated_at':''}),'failed_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
     if refresh:
+        # Never-fetched and oldest profiles first, so a time-limited run still makes progress.
+        refresh.sort(key=lambda item:cache.get(item[0],{}).get('updated_at','') or '')
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
             for url,profile in pool.map(fetch_profile,refresh):cache[url]=profile
+        if skipped:print(f'Perfiles RFAF aplazados a la siguiente ejecución: {len(skipped)}',flush=True)
     profiles_by_player={identity:cache.get(url,{}) for identity,(url,ref) in by_player.items()}
     for url,ref in refs.items():
         known=profiles_by_player.get(player_identity(ref),{})
