@@ -1,5 +1,6 @@
 """Synchronize public club news independently of RFAF availability."""
 import datetime,json,urllib.request
+from urllib.parse import urlsplit
 from sync_fixtures import ROOT
 from club_content import news,news_article,NEWS_SOURCE
 
@@ -15,7 +16,6 @@ def sync():
             req=urllib.request.Request(row['url'],headers={'User-Agent':'CDMenciana club-news-sync','Cache-Control':'no-cache'})
             with urllib.request.urlopen(req,timeout=30) as response:article_html=response.read(3_000_000).decode('utf-8')
             row['content']=news_article(article_html,row['url'])
-            from urllib.parse import urlsplit
             cover=urlsplit(row['image']).path.rsplit('/',1)[0]
             row['content']=[block for block in row['content'] if block['kind']!='image' or urlsplit(block['src']).path.rsplit('/',1)[0]!=cover]
         except Exception as error:
