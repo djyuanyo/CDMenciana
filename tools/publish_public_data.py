@@ -1,5 +1,5 @@
 """Publish snapshots on the current head without overwriting newer admin edits."""
-import os, subprocess, tempfile, sys, re
+import json, os, subprocess, tempfile, sys, re
 
 def public_path(path):
     return bool(re.fullmatch(r"data/(?:fixtures(?:-[a-z0-9_]+)?\.json|rfaf-player-profiles(?:-[a-z0-9_]+)?\.json|news\.json|club-teams\.json|roster-snapshot\.json|actas/[0-9]+\.json)",path))
@@ -11,11 +11,26 @@ def blob(ref,path):
     result=git('rev-parse',f'{ref}:{path}',check=False)
     return result.stdout.strip() if result.returncode==0 else None
 
+def without_timestamps(value):
+    # Sync runs stamp every file; a new stamp alone is not new club data.
+    if isinstance(value,dict):return {k:without_timestamps(v) for k,v in value.items() if not k.endswith('updated_at')}
+    if isinstance(value,list):return [without_timestamps(v) for v in value]
+    return value
+
+def only_timestamps_changed(ref,path):
+    if not path.endswith('.json') or not os.path.isfile(path):return False
+    old=git('show',f'{ref}:{path}',check=False)
+    if old.returncode!=0:return False
+    try:
+        with open(path,encoding='utf-8') as file:new=json.load(file)
+        return without_timestamps(json.loads(old.stdout))==without_timestamps(new)
+    except ValueError:return False
+
 def main():
     base=git('rev-parse','HEAD').stdout.strip()
     changed=set(git('diff','--name-only',base,'--','data/').stdout.splitlines())
     changed.update(git('ls-files','--others','--exclude-standard','--','data/').stdout.splitlines())
-    changed={p for p in changed if public_path(p)}
+    changed={p for p in changed if public_path(p) and not only_timestamps_changed(base,p)}
     if not changed:return
     updates={p:git('hash-object','-w',p).stdout.strip() if os.path.isfile(p) else None for p in changed}
     for attempt in range(3):

@@ -1,5 +1,5 @@
 """Public category scorers and the club's first-team roster."""
-import re
+import datetime, re
 from urllib.parse import urljoin, urlsplit
 from sync_fixtures import Document
 ROSTER_SOURCE='https://cdmenciana.es/equipos/'
@@ -42,7 +42,6 @@ def news(html):
         url=urljoin(NEWS_SOURCE,links[0].attrs.get('href',''))
         if not url.startswith(NEWS_SOURCE):raise ValueError('Unexpected news link')
         date=times[0].attrs.get('datetime','')[:10]
-        import datetime
         datetime.date.fromisoformat(date)
         category=next((n.text() for n in card.find('span') if n.text()),'Noticias')
         items.append(dict(title=headings[0].text(),date=date,category=category,url=url,image=urljoin(NEWS_SOURCE,imgs[0].attrs.get('src','')) if imgs else ''))
