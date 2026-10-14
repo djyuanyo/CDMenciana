@@ -29,8 +29,20 @@ def video(entry, kind):
     stamp = entry.get('timestamp') or entry.get('release_timestamp')
     published = datetime.datetime.fromtimestamp(stamp, datetime.timezone.utc).isoformat() if stamp else ''
     duration = entry.get('duration')
+    status = entry.get('live_status') or ('is_live' if entry.get('is_live') else '')
     return {'id': vid, 'title': (entry.get('title') or '').strip()[:200], 'published': published,
-            'duration': int(duration) if isinstance(duration, (int, float)) else None, 'kind': kind}
+            'duration': int(duration) if isinstance(duration, (int, float)) and status != 'is_live' else None, 'kind': kind,
+            'live': {'is_live': 'now', 'is_upcoming': 'upcoming'}.get(status, '')}
+
+
+def live_now():
+    """The stream on air right now, if any (the channel's /live page points to it)."""
+    result = subprocess.run([sys.executable, '-m', 'yt_dlp', '--dump-single-json', '--skip-download', '--no-warnings', CHANNEL + '/live'],
+                            capture_output=True, text=True, timeout=120)
+    if result.returncode != 0: return None  # Not live (or not readable): nothing to feature.
+    data = json.loads(result.stdout)
+    if not (data.get('is_live') or data.get('live_status') == 'is_live'): return None
+    return video({**data, 'live_status': 'is_live'}, 'streams')
 
 
 def feed(channel_id):
@@ -67,27 +79,31 @@ def sync():
             found_id, entries = flat(tab)
             channel_id = channel_id or found_id or ''
             rows = [v for v in (video(e, tab) for e in entries) if v]
-            if rows: sections.append({'key': tab, 'title': label, 'videos': rows})
+            sections.append({'key': tab, 'title': label, 'videos': rows})
         except Exception as error:
             problems.append(f'{tab}: {error}')
-    if not sections:
+    if not any(sec['videos'] for sec in sections):
+        sections = []
         # yt-dlp can be blocked from cloud runners; the feed still lists the latest uploads.
         try:
             channel_id = channel_id or channel_id_from_page()
             rows = feed(channel_id)
             for tab, label in TABS:
-                part = [r for r in rows if r['kind'] == tab]
-                if part: sections.append({'key': tab, 'title': label, 'videos': part})
+                sections.append({'key': tab, 'title': label, 'videos': [r for r in rows if r['kind'] == tab]})
         except Exception as error:
             problems.append(f'feed: {error}')
-    if not sections:
+    live = None
+    try: live = live_now()
+    except Exception as error: problems.append(f'live: {error}')
+    live = live or next((v for sec in sections for v in sec['videos'] if v.get('live') == 'now'), None)
+    if not any(sec['videos'] for sec in sections) and not live:
         print('::warning::No videos read; keeping the previous list. ' + ' | '.join(problems))
         return
     payload = {'source': CHANNEL, 'channel_id': channel_id, 'updated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-               'sections': sections, 'videos': [v for s in sections for v in s['videos']]}
+               'live': live, 'sections': sections, 'videos': [v for s in sections for v in s['videos']]}
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     summary = ', '.join('%d %s' % (len(s['videos']), s['key']) for s in sections)
-    print('CDM TV: ' + summary + (' (problems: ' + ' | '.join(problems) + ')' if problems else ''))
+    print('CDM TV: ' + summary + (' · EN DIRECTO: ' + live['id'] if live else '') + (' (problems: ' + ' | '.join(problems) + ')' if problems else ''))
 
 
 if __name__ == '__main__': sync()
