@@ -6515,7 +6515,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-14T09:41:09.859341+00:00",
+  "updated_at": "2026-10-14T09:50:32.187976+00:00",
   "rounds": [
     1,
     2,
@@ -7406,6 +7406,24 @@
     "23": "https://cdmenciana.es/images/jugadores/isaac.webp",
     "27": "https://cdmenciana.es/images/jugadores/tetur.webp"
   },
+  "club_positions": {
+    "1": "Portero",
+    "15": "Portero",
+    "25": "Portero",
+    "4": "Jugador de pista",
+    "5": "Jugador de pista",
+    "7": "Jugador de pista",
+    "8": "Jugador de pista",
+    "9": "Jugador de pista",
+    "10": "Jugador de pista",
+    "11": "Jugador de pista",
+    "13": "Jugador de pista",
+    "20": "Jugador de pista",
+    "21": "Jugador de pista",
+    "22": "Jugador de pista",
+    "23": "Jugador de pista",
+    "27": "Jugador de pista"
+  },
   "staff": [
     {
       "name": "JIMENEZ CUBERO, JOSE ANTONIO",
@@ -7429,9 +7447,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-14T09:41:10.647945+00:00",
+  "staff_updated_at": "2026-10-14T09:50:33.172199+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-14T09:42:05.804071+00:00"
+  "details_status": "verified"
 }
