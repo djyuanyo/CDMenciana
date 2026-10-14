@@ -154,21 +154,48 @@ def official_roster(matches,team,names):
     if len({(p['number'],p['acta_id']) for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
     return sorted(players,key=lambda p:p['number'])
 
-def club_photos(previous):
-    """First-team photos from the club website, keyed by shirt number; the RFAF dorsal picks the photo."""
+# The club confirms these first-team shirts are goalkeepers even when the website does not label them.
+FIRST_TEAM_GOALKEEPERS={'1','15','25'}
+
+def club_site(previous):
+    """First-team photos and positions from the club website, keyed by shirt number; the RFAF dorsal picks them."""
+    photos,positions=previous.get('club_photos',{}),previous.get('club_positions',{})
     try:
         request=urllib.request.Request(ROSTER_SOURCE,headers={'User-Agent':'CDMenciana club-roster-sync','Cache-Control':'no-cache'})
         with urllib.request.urlopen(request,timeout=30) as response:html=response.read(3_000_000).decode('utf-8')
-        return {str(p['number']):p['photo'] for p in club_roster(html)}
+        players=club_roster(html)
+        photos={str(p['number']):p['photo'] for p in players}
+        positions={str(p['number']):p['position'] for p in players}
     except Exception as error:
         print(f'Fotos de la web del club pendientes: {error}; se conservan las anteriores',flush=True)
-        return previous.get('club_photos',{})
+    positions={**positions,**{n:'Portero' for n in FIRST_TEAM_GOALKEEPERS}}
+    return photos,positions
+
+ACTA_ROLES={'ENTRENADOR':'Entrenador','2º ENTRENADOR':'Segundo entrenador','2 ENTRENADOR':'Segundo entrenador','SEGUNDO ENTRENADOR':'Segundo entrenador','DEL. CAMPO':'Delegado de campo','DEL. EQUIPO':'Delegado de equipo','ENCARGADO MATERIAL SALA':'Encargado de material','PREPARADOR FISICO':'Preparador físico','FISIOTERAPEUTA':'Fisioterapeuta','MEDICO':'Médico'}
+def staff_with_actas(staff,matches,team):
+    """Photo and acta role (Entrenador, Delegado de campo…) for each official staff member; the coach goes first."""
+    found={}
+    for match in sorted(matches,key=lambda m:m.get('round',0)):
+        acta=urllib.parse.parse_qs(urllib.parse.urlparse(match.get('acta_url','')).query).get('CodActa',[''])[0]
+        try:data=json.loads((ROOT/'data/actas'/(acta+'.json')).read_text())
+        except (OSError,ValueError):continue
+        for person in data.get('staff',[]):
+            if normalize(person.get('team','')).strip()!=normalize(team).strip():continue
+            info=found.setdefault(normalize(person.get('name','')),{})
+            if person.get('photo'):info['photo']=person['photo']
+            label=normalize(person.get('role','')).strip()
+            if label:info['role']=ACTA_ROLES.get(label,person['role'].strip().capitalize())
+    result=[]
+    for member in staff:
+        info=found.get(normalize(member.get('name','')),{})
+        result.append({**member,**({'photo':info['photo']} if info.get('photo') else {}),**({'role':info['role']} if info.get('role') else {})})
+    return sorted(result,key=lambda m:0 if m.get('role')=='Entrenador' else 1)
 
 def write_roster_snapshot(config,payload):
     path=ROOT/'data/roster-snapshot.json'
     try:teams=json.loads(path.read_text())
     except (OSError,ValueError):teams={}
-    keys=('team_key','roster','roster_source','roster_status','roster_updated_at','staff','staff_source','staff_status','staff_updated_at','club_photos')
+    keys=('team_key','roster','roster_source','roster_status','roster_updated_at','staff','staff_source','staff_status','staff_updated_at','club_photos','club_positions')
     teams[config['key']]={key:payload[key] for key in keys if key in payload}
     path.write_text(json.dumps(teams,ensure_ascii=False,indent=2)+'\n')
     script='/* Official roster identities and staff survive older cached calendars. */\nwindow.ClubRosterSnapshot='+json.dumps(teams,ensure_ascii=False,separators=(',',':'))+';\n'
@@ -326,13 +353,13 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
     club=next(r for r in table if belongs(r['team'],config))
     results_status=verify_results(matches,club,previous)
     payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season=config.get('season','2026-2027'),team=club['team'],source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
-    if config['key']=='first':payload['club_photos']=club_photos(previous)
+    if config['key']=='first':payload['club_photos'],payload['club_positions']=club_site(previous)
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
     payload['details_status']='pending' if any(html is None for html in pages.values()) else 'verified'
     team_html=''
     try:
         team_html=get(payload['staff_source'])
-        payload.update(staff=team_staff(team_html),staff_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),staff_status='verified')
+        payload.update(staff=staff_with_actas(team_staff(team_html),matches,club['team']),staff_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),staff_status='verified')
     except (ValueError,OSError) as error:
         print(f'Cuerpo técnico pendiente: {error}; se conserva la última copia válida',flush=True)
     raw=json.dumps(payload,ensure_ascii=False,indent=2)+'\n'
@@ -341,6 +368,7 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
     def complete_profiles():
         from match_report import sync_reports
         sync_reports(round_matches,get,ROOT,fixtures_filename=config['filename'])
+        payload['staff']=staff_with_actas(payload.get('staff',[]),matches,payload['team'])
         try:
             payload['roster']=official_roster(matches,payload['team'],team_players(team_html)) if config['key']=='first' else report_roster(matches,payload['team']) or roster_rows
             payload.update(roster_source=staff_source(config),roster_status='verified',roster_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
