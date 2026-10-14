@@ -2,7 +2,7 @@
 import json, os, subprocess, tempfile, sys, re
 
 def public_path(path):
-    return bool(re.fullmatch(r"data/(?:fixtures(?:-[a-z0-9_]+)?\.json|rfaf-player-profiles(?:-[a-z0-9_]+)?\.json|news\.json|club-teams\.json|roster-snapshot\.json|actas/[0-9]+\.json)",path))
+    return bool(re.fullmatch(r"data/(?:fixtures(?:-[a-z0-9_]+)?\.json|rfaf-player-profiles(?:-[a-z0-9_]+)?\.json|news\.json|videos\.json|club-teams\.json|roster-snapshot\.json|actas/[0-9]+\.json)",path))
 
 def git(*args, env=None, input=None, check=True):
     return subprocess.run(['git',*args],input=input,text=True,capture_output=True,env=env,check=check)
