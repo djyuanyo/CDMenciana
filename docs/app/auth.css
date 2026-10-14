@@ -333,3 +333,7 @@ body.tv-playing{overflow:hidden}
 .sm-list>li>div:first-child{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}.sm-list small{flex-basis:100%;color:var(--muted)}.sm-list em{font-style:normal;font-size:12px;padding:2px 8px;border-radius:999px}
 .sm-actions{display:flex;gap:6px}.sm-actions button{min-height:38px;padding:0 12px;flex:1}.sm-actions .text-action{flex:0 0 auto}
 .member-new-list li{flex-wrap:wrap;align-items:center}.member-new-list li>b{min-width:70px}.member-new-list li>span{flex:1 1 140px}.member-new-list li form{flex:1 1 100%}.member-new-list .sm-actions{flex:1 1 100%}
+
+.event-scan-off{display:inline-block;margin-left:6px;padding:3px 9px;border-radius:999px;background:#c2410c20;color:#b4390a;font-size:12px;font-weight:800}
+html[data-theme="dark"] .event-scan-off{color:#fdba74}
+.scan-off-note{display:block;margin-top:4px;font-weight:600;opacity:.85}
