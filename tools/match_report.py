@@ -268,6 +268,26 @@ def report(html):
     if not containers:raise ValueError('Acta no disponible en la fuente oficial')
     root=containers[-1];css=' '.join(n.text() for n in root.find('style'))
     blocks=[];pending=[];players={person_key(p['name']):p for p in player_refs_from_node(root,css)}
+    # Staff (Cuerpo Técnico) rows carry the person's photo next to their name; remember it with the acta's role.
+    staff=[];state={'side':'','previous':'','section':'','role':''}
+    def note(text):
+        if text in ('Titulares','Suplentes','Goles','Tarjetas','Cuerpo Técnico','Árbitros'):
+            if text=='Titulares':state['side']=state['previous']
+            state['section']=text;state['role']=''
+        elif state['section']=='Cuerpo Técnico' and text.endswith(':'):state['role']=clean(text[:-1])
+        state['previous']=text
+    def staff_rows(table):
+        for tr in table.find('tr'):
+            name=clean(' '.join(clean(visible(c,css)) for c in tr.children if c.tag in ('td','th')))
+            if ',' not in name or len(name)>120:continue
+            photo=''
+            for img in tr.find('img'):
+                if re.search(r'tarj_|icono|escudo',img.attrs.get('src','').lower()):continue
+                for attr in ('src','data-src','data-original','data-lazy-src'):
+                    photo=safe_image(img.attrs.get(attr,''),'https://www.rfaf.es/pnfg/NPcd/')
+                    if photo:break
+                if photo:break
+            staff.append({'name':name,'role':state['role'],'team':state['side'],'photo':photo})
     def remember_people(n):
         for ref in player_refs_from_node(n,css):
             key=person_key(ref['name']);prior=players.get(key,{})
@@ -275,7 +295,7 @@ def report(html):
             players[key]=ref
     def flush():
         text=clean(' '.join(pending));pending.clear()
-        if text:blocks.append({'kind':'text','text':text})
+        if text:blocks.append({'kind':'text','text':text});note(text)
     def cell(n):
         remember_people(n)
         text=clean(visible(n,css))
@@ -294,6 +314,7 @@ def report(html):
         if n.tag in ('script','style','button') or re.search(r'display\s*:\s*none',n.attrs.get('style','')):return
         if n.tag=='table':
             flush();rows=[]
+            if state['section']=='Cuerpo Técnico' and state['role']:staff_rows(n)
             for tr in n.find('tr'):
                 cells=[cell(c) for c in tr.children if c.tag in ('td','th')]
                 if any(cells):rows.append(cells)
@@ -301,7 +322,7 @@ def report(html):
             return
         if n.tag in ('h1','h2','h3','h4','h5') and not n.find('table'):
             flush();text=cell(n)
-            if text:blocks.append({'kind':'heading','text':text})
+            if text:blocks.append({'kind':'heading','text':text});note(text)
             return
         if n.tag=='br':flush();return
         for c in n.content:walk(c)
@@ -309,7 +330,7 @@ def report(html):
     if len(blocks)<10:raise ValueError('Incomplete acta')
     raw=raw_player_refs(html)
     for ref in raw:players.setdefault(person_key(ref['name']),ref)
-    return {'blocks':blocks,'players':list(players.values())}
+    return {'blocks':blocks,'players':list(players.values()),'staff':staff}
 
 def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
     urls={urllib.parse.parse_qs(urllib.parse.urlparse(m['acta_url']).query)['CodActa'][0]:(m['acta_url'],m) for m in matches if m.get('played') and m.get('acta_url')}
@@ -322,7 +343,7 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
     def fetch_report(item):
         id,payload=item;url,match=payload;errors=[]
         saved=prior_report(id)
-        if saved and saved.get('players'):
+        if saved and saved.get('players') and 'staff' in saved:
             # A played match's acta is final; only recent ones are re-read, at most every few hours.
             now=datetime.datetime.now(datetime.timezone.utc)
             played=since((match.get('date') or '')+'T00:00:00+00:00',now)
