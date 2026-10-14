@@ -556,3 +556,22 @@ a.player-photo-wrap { display: block; color: inherit; text-decoration: none; }
 @keyframes news-slider-fill { from { width: 0; } to { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { #news-slider .news-slider-bars .now i { animation: none; width: 100%; } }
 @media (min-width: 700px) { #news-slider { border-radius: 22px; overflow: hidden; margin-top: 10px; } #news-slider .news-slider-track { aspect-ratio: 21 / 9; } }
+
+/* Desktop browsers: no bottom bar; a hamburger before the logo opens the menu as a side panel. */
+.menu-btn { display: none; }
+#menu-backdrop { display: none; }
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  body { padding-bottom: 40px; }
+  #header .menu-btn { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 46px; height: 46px; margin-right: 2px; padding: 0; border-radius: 14px; border: 1px solid var(--line); background: var(--matte); color: var(--sky); cursor: pointer; box-shadow: var(--raised-shadow); }
+  #header .menu-btn svg { width: 24px; height: 24px; }
+  #header { justify-content: flex-start; }
+  #header .header-actions { margin-left: auto; }
+  html body #nav { top: 0; bottom: 0; left: 0; right: auto; width: 290px; max-width: 86vw; transform: translateX(-105%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; z-index: 60; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 6px; padding: 28px 14px; border-radius: 0 24px 24px 0; }
+  html body #nav:before { content: "Menú"; padding: 4px 12px 14px; font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+  body.menu-open #nav { transform: none; visibility: visible; transition-delay: 0s; }
+  html body #nav button { flex-direction: row; justify-content: flex-start; width: 100%; min-height: 54px; padding: 6px 10px; gap: 14px; font-size: 15px; border-radius: 16px; }
+  html body #nav button:before { display: none; }
+  html body #nav button.selected { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+  body.menu-open #menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: #04091599; }
+  #notice { bottom: 24px; }
+}

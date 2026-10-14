@@ -1,6 +1,6 @@
 /* Shared club design: public preview and authenticated interface. */
 window.CDM={
- paths:{home:'M3 10 12 3l9 7v10H15v-6H9v6H3Z',calendar:'M5 5h14v16H5ZM8 3v4m8-4v4M5 10h14',team:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m9-7a4 4 0 0 1 0 7',more:'M5 12h.01M12 12h.01M19 12h.01',tv:'M3 6h18v12H3ZM8 21h8M12 18v3M10.5 9.5v5l4-2.5Z',user:'M20 21v-2a7 7 0 0 0-14 0v2M13 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8',arrow:'m9 5 7 7-7 7',card:'M3 5h18v14H3ZM3 9h18M7 14h3',ball:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 6 4 3-1.5 5h-5L8 11Zm0-6v6M2 9l6 2m-4 8 5.5-3M20 19l-5.5-3M22 9l-6 2',chart:'M4 20V10m8 10V4m8 16v-7',lock:'M5 10h14v11H5Zm3 0V6a4 4 0 0 1 8 0v4',check:'m5 12 4 4L19 6',star:'m12 3 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3-5.6-3-5.6 3 1.1-6.3L2.9 9.6l6.3-.9Z',shield:'M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6Z',trash:'M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3',camera:'M4 8h3l2-3h6l2 3h3v12H4ZM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8',logout:'M15 17l5-5-5-5M20 12H9M12 21H5V3h7',bell:'M6 16V11a6 6 0 0 1 12 0v5l2 2H4ZM10 21h4',pin:'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6'},
+ paths:{menu:'M4 7h16M4 12h16M4 17h16',home:'M3 10 12 3l9 7v10H15v-6H9v6H3Z',calendar:'M5 5h14v16H5ZM8 3v4m8-4v4M5 10h14',team:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m9-7a4 4 0 0 1 0 7',more:'M5 12h.01M12 12h.01M19 12h.01',tv:'M3 6h18v12H3ZM8 21h8M12 18v3M10.5 9.5v5l4-2.5Z',user:'M20 21v-2a7 7 0 0 0-14 0v2M13 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8',arrow:'m9 5 7 7-7 7',card:'M3 5h18v14H3ZM3 9h18M7 14h3',ball:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 6 4 3-1.5 5h-5L8 11Zm0-6v6M2 9l6 2m-4 8 5.5-3M20 19l-5.5-3M22 9l-6 2',chart:'M4 20V10m8 10V4m8 16v-7',lock:'M5 10h14v11H5Zm3 0V6a4 4 0 0 1 8 0v4',check:'m5 12 4 4L19 6',star:'m12 3 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3-5.6-3-5.6 3 1.1-6.3L2.9 9.6l6.3-.9Z',shield:'M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6Z',trash:'M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3',camera:'M4 8h3l2-3h6l2 3h3v12H4ZM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8',logout:'M15 17l5-5-5-5M20 12H9M12 21H5V3h7',bell:'M6 16V11a6 6 0 0 1 12 0v5l2 2H4ZM10 21h4',pin:'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6'},
  icon(name){return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${this.paths[name]||this.paths.ball}"/></svg>`},
  confirm(title,message,label='Aceptar'){
   const previous=document.activeElement,dialog=document.createElement('dialog'),E=x=>Fixtures.esc(x);
@@ -17,10 +17,19 @@ window.CDM={
   document.body.appendChild(dialog);
   return new Promise(resolve=>{const finish=()=>{dialog.close();dialog.remove();previous?.focus?.({preventScroll:true});resolve();};dialog.querySelector('[data-dialog-close]').onclick=finish;dialog.addEventListener('cancel',e=>{e.preventDefault();finish();});dialog.showModal();dialog.querySelector('[data-dialog-close]').focus();});
  },
+ /* Desktop browsers get a side menu opened from the header instead of the bottom bar (the CSS only shows it there). */
+ menu(open){
+  document.body.classList.toggle('menu-open',open);
+  document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded',String(open));
+  document.querySelector('[data-menu-toggle]')?.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  let backdrop=document.getElementById('menu-backdrop');
+  if(!backdrop){backdrop=document.createElement('div');backdrop.id='menu-backdrop';document.body.append(backdrop);}
+ },
  shell(page,user){
   document.body.dataset.page=page;
+  this.menu(false);
   const nav=document.getElementById('nav'),header=document.getElementById('header'),banner=document.getElementById('banner'),tabs=document.getElementById('tabs');
-  header.innerHTML=`<div class="club-header-brand" aria-label="Club Deportivo Menciana, Apaga y Vámonos"><img class="club-header-light" src="club-header-light.png" alt="Club Deportivo Menciana · Apaga y Vámonos"><img class="club-header-dark" src="club-header-dark.png?v=1.2.1" alt="Club Deportivo Menciana · Apaga y Vámonos"></div><div class="header-actions">${Appearance.button()}<button class="profile-btn" data-page="Mi cuenta" aria-label="Mi cuenta">${this.icon('user')}</button></div>`;
+  header.innerHTML=`<button type="button" class="menu-btn" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">${this.icon('menu')}</button><div class="club-header-brand" aria-label="Club Deportivo Menciana, Apaga y Vámonos"><img class="club-header-light" src="club-header-light.png" alt="Club Deportivo Menciana · Apaga y Vámonos"><img class="club-header-dark" src="club-header-dark.png?v=1.2.1" alt="Club Deportivo Menciana · Apaga y Vámonos"></div><div class="header-actions">${Appearance.button()}<button class="profile-btn" data-page="Mi cuenta" aria-label="Mi cuenta">${this.icon('user')}</button></div>`;
   const section=['Partidos','Clasificación','Ficha de partido','Acta','Jugador'].includes(page)?'Partidos':['Club','Goleadores'].includes(page)?'Club':['Inicio'].includes(page)?'Inicio':page==='CDM TV'?'CDM TV':'';
   nav.innerHTML=[['Inicio','home','Inicio'],['Partidos','calendar','Partidos'],['Club','team','Equipo'],['CDM TV','tv','CDM TV']].map(([p,i,l])=>`<button data-page="${p}" class="${section===p?'selected':''}" ${section===p?'aria-current="page"':''}>${this.icon(i)}<span>${l}</span></button>`).join('');
   const teamPages=['Inicio','Partidos','Club','Clasificación','Goleadores'];
@@ -37,3 +46,8 @@ window.CDM={
  nextMatch(){return `<section class="match-card"><div class="section-label"><span class="live-dot"></span> PRÓXIMO PARTIDO<span class="match-status">PENDIENTE</span></div><div class="match-teams"><div><img src="crest.png" alt="CD Menciana"><strong>CD Menciana</strong></div><div class="match-time"><span>Fecha y hora</span><strong class="time-unconfirmed">POR<br>CONFIRMAR</strong><small>Calendario pendiente</small></div><div><span class="rival-placeholder">${this.icon('ball')}</span><strong>Rival pendiente</strong></div></div><div class="match-footer">${this.icon('pin')} Pabellón por confirmar<button data-page="Partidos">Ver calendario ${this.icon('arrow')}</button></div></section>`},
  accessTiles(){return `<div class="section-heading"><h2>Tu club, más cerca</h2><span>ZONA PRIVADA</span></div><div class="access-grid"><button class="access-card" data-page="Socios"><span class="access-icon">${this.icon('card')}</span><span class="access-title">Soy socio</span><span class="access-description">Carnet y ventajas</span>${this.icon('arrow')}</button><button class="access-card player-tile" data-page="Jugadores"><span class="access-icon">${this.icon('team')}</span><span class="access-title">Soy jugador</span><span class="access-description">Agenda del equipo</span>${this.icon('arrow')}</button></div>`}
 };
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-menu-toggle]'))CDM.menu(!document.body.classList.contains('menu-open'));
+ else if(document.body.classList.contains('menu-open')&&(e.target.id==='menu-backdrop'||e.target.closest('#nav button')))CDM.menu(false);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open')){CDM.menu(false);document.querySelector('[data-menu-toggle]')?.focus();}});
