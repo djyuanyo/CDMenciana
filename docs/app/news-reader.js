@@ -31,11 +31,16 @@ window.ClubNewsSlider={
   return `<div class="news-slider-track" data-slider-track>${rows.map(n=>`<a class="news-slide" href="${E(ClubNews.href(n))}">${this.photo(n)?`<img src="${E(this.photo(n))}" alt="" data-news-image>`:''}<span class="news-slide-title">${E(n.title)}</span></a>`).join('')}</div><div class="news-slider-bars" aria-hidden="true">${rows.map(()=>'<span><i></i></span>').join('')}</div>`;
  },
  mount(page){
-  let box=document.getElementById('news-slider');
-  const markup=page==='Inicio'?this.html():'';
+  const box=document.getElementById('news-slider'),markup=page==='Inicio'?this.html():'';
   if(!markup){box?.remove();return;}
-  if(!box){box=document.createElement('section');box.id='news-slider';box.setAttribute('aria-label','Últimas noticias');document.getElementById('header').after(box);}
-  box.innerHTML=markup;
+  // The page redraws several times while loading; an unchanged slider is kept so its progress bar is not restarted.
+  if(box&&box.dataset.markup===markup)return;
+  box?.remove();
+  const next=document.createElement('section');next.id='news-slider';next.setAttribute('aria-label','Últimas noticias');next.dataset.markup=markup;next.innerHTML=markup;
+  document.getElementById('header').after(next);
+  return this.start(next);
+ },
+ start(box){
   const track=box.querySelector('[data-slider-track]'),bars=[...box.querySelectorAll('.news-slider-bars span')];
   const index=()=>Math.max(0,Math.min(bars.length-1,Math.round(track.scrollLeft/(track.clientWidth||1))));
   const paint=()=>bars.forEach((bar,i)=>bar.className=i<index()?'done':i===index()?'now':'');
