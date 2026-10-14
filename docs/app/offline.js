@@ -1,0 +1,185 @@
+const main=document.getElementById('main');
+let page='Inicio',playerProfileLoading=false;
+// Pages visited, for the Android back button (see CDMBack at the end).
+const visited=[];let here=null,lastScroll=0;
+function routeState(){
+ const params=new URLSearchParams(location.hash.slice(1)),team=params.get('equipo'),acta=params.get('acta'),player=params.get('jugador');
+ if(team&&!Fixtures.teams[team])return null;
+ if(player&&/^[a-f0-9]{8,64}$/i.test(player)&&/^\d+$/.test(acta||''))return {kind:'player',player,acta,team:team||Fixtures.selectedTeam,origin:params.get('origen')==='plantilla'?'plantilla':''};
+ return /^\d+$/.test(acta||'')?{kind:'acta',acta,team:team||Fixtures.selectedTeam}:null;
+}
+function render(){
+ const user=window.ClubAccess?.user();
+ const publicPage=['Inicio','Partidos','Club','Clasificación','Goleadores','Ficha de partido','Acta','Jugador','Noticia','CDM TV','Privacidad','Eliminar cuenta'].includes(page);
+ const gate=!publicPage&&(!ClubAuth.user||ClubAccess.fetching||!ClubFamilies.ready()||(!ClubAccess.administrator()&&!ClubRegistration.complete(ClubAccess.profile))); 
+ if(gate)page='Mi cuenta';
+ document.documentElement.dataset.accountGate=String(gate);
+ if(page.startsWith('Administración')&&!user?.admin)page='Mi cuenta';
+ CDM.shell(page,user);
+ let body='';
+ const route=routeState();
+ if(page==='Ficha de partido')body=ClubMatchAlerts.screen();
+ if(page==='Inicio')body=Fixtures.overview();
+ if(page==='Privacidad')body=ClubLegal.screen();
+ if(page==='Eliminar cuenta')body=ClubLegal.screen('delete');
+ if(page==='Noticia')body=ClubNews.screen();
+ if(page==='Favoritos')body=ClubFavorites.screen();
+ if(page==='Administración'||['Administración users','Administración notifications','Administración history','Administración teams','Administración members','Administración scan','Administración events'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
+ if(page==='Partidos')body=Fixtures.calendar();
+ if(page==='Acta')body=Fixtures.decorateReportPlayers(Fixtures.report(route?.acta||''),route?.acta||'');
+ if(page==='Jugador')body=Fixtures.reportData?Fixtures.player(route?.player||'',route?.acta||'',route?.origin==='plantilla')+(playerProfileLoading?'<p class="player-profile-refresh" role="status">Actualizando estadísticas…</p>':''):'<section class="acta-panel acta-loading"><div class="acta-spinner"></div><strong>Cargando jugador</strong></section>';
+ if(page==='Club')body=Fixtures.roster();
+ if(page==='Goleadores')body=Fixtures.scorers();
+ if(page==='Clasificación')body=Fixtures.standings();
+ if(page==='CDM TV')body=window.ClubTV?ClubTV.screen():CDM.empty('CDM TV','Muy pronto.','tv');
+ if(page==='Mi cuenta')body=window.ClubAuth?ClubAuth.screen(user):CDM.empty('Mi cuenta','Accede al club desde tu cuenta.','user');
+ if(page==='Socios')body=user?.active&&(user.member||user.admin)?ClubMembership.screen():CDM.empty('Zona de socios','El administrador activa este acceso en tu cuenta.','lock');
+ if(page==='Jugadores')body=user?.active&&(user.player||user.admin)?ClubSeason.page():CDM.empty('Zona de jugadores','El administrador activa este acceso en tu cuenta.','lock');
+ main.innerHTML=body;
+ if(page==='Partidos')Fixtures.syncRoundTabs();
+ window.ClubMembership?.mounted(page);
+ window.ClubSeason?.mounted(page);
+ window.ClubEvents?.mounted(page);
+ window.ClubTV?.mounted(page);
+ remember();
+}
+// Data some pages fetch each time they open.
+function pageOpened(){if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración teams'){ClubTeams.paint();ClubTeams.refresh().catch(e=>ClubTeams.say(e.message));}else if(page==='Administración users')loadClubUsers();else if(page==='Administración history')ClubNotifications.history();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();}
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();pageOpened();window.scrollTo(0,0)}});
+document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
+document.addEventListener('click',e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;render();Fixtures.syncRoundTabs(true);}});
+render();Fixtures.load().then(()=>routeState()?reportRoute():render());
+
+let reportRequest=0;
+async function reportRoute(refresh=false){
+ const route=routeState(),request=++reportRequest;
+ if(!route){playerProfileLoading=false;if(page==='Noticia'){page='Inicio';render();}if(page==='Acta'||page==='Jugador'){page='Partidos';render();}return;}
+ if(route.team!==Fixtures.selectedTeam){Fixtures.selectTeam(route.team);await Fixtures.loadFixtures();if(request!==reportRequest)return;}
+ const id=route.acta,need=refresh||String(Fixtures.reportData?.id||'')!==id;
+ page=route.kind==='player'?'Jugador':'Acta';
+ if(need){Fixtures.reportData=null;Fixtures.reportError=false;render();window.scrollTo(0,0);await Fixtures.loadReport(id,refresh);}
+ if(request===reportRequest){
+  const current=routeState();
+  if(current&&current.acta===id){
+   if(current.kind==='player'){
+    page='Jugador';playerProfileLoading=true;render();window.scrollTo(0,0);
+    const player=current.origin==='plantilla'?Fixtures.prepareRosterPlayer(current.player,id):(Fixtures.reportData?.players||[]).find(p=>String(p.id)===String(current.player));
+    if(player)await Fixtures.loadPlayerProfile(player,id);
+    if(request===reportRequest&&routeState()?.player===current.player){playerProfileLoading=false;render();}
+   }else{
+    page='Acta';render();
+    const changed=await Fixtures.enrichReportPlayers(id);
+    if(changed&&request===reportRequest&&routeState()?.kind==='acta')render();
+   }
+  }
+ }
+}
+window.addEventListener('hashchange',()=>ClubNews.route()?newsRoute():reportRoute());
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-report-back]')){if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);reportRequest++;page='Partidos';render();window.scrollTo(0,0);}else{page='Partidos';render();}}
+ if(e.target.closest('[data-report-retry]'))reportRoute(true);
+ if(e.target.closest('[data-player-retry]')){const route=routeState(),p=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===route?.player);if(p){p._profileLoaded=false;p._refreshRequested=true;}reportRoute();}
+ const playerBack=e.target.closest('[data-player-back]');if(playerBack){if(playerBack.hasAttribute('data-roster-back')){history.replaceState(null,'',location.pathname);reportRequest++;playerProfileLoading=false;page='Club';render();window.scrollTo(0,0);}else{const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'',Fixtures.actaHref(id));reportRoute();}}}
+});
+if(routeState())reportRoute();
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-report-side]');if(b){Fixtures.reportSide=Number(b.dataset.reportSide);render();}});
+
+document.addEventListener('click',async e=>{const button=e.target.closest('[data-team]');if(!button||!Fixtures.selectTeam(button.dataset.team))return;const team=Fixtures.selectedTeam;reportRequest++;playerProfileLoading=false;if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);page='Partidos';}render();await Fixtures.loadFixtures();if(team===Fixtures.selectedTeam){render();window.scrollTo(0,0);}});
+
+function newsRoute(){page='Noticia';render();window.scrollTo(0,0);}
+if(ClubNews.route())newsRoute();
+window.addEventListener('club-auth-state',()=>{if(!ClubAuth.user&&!['Inicio','Partidos','Club','Clasificación','Goleadores','Ficha de partido','Acta','Jugador','Noticia','CDM TV','Privacidad','Eliminar cuenta'].includes(page))page='Mi cuenta';ClubAccess.sync();render();});
+window.addEventListener('club-registration-complete',()=>{page='Inicio';render();});
+window.addEventListener('club-access-state',()=>{render();if(page==='Administración users')loadClubUsers();});
+window.addEventListener('club-auth-view',()=>{if(page==='Mi cuenta')render();});
+window.ClubAuth?.init().then(async()=>{await ClubAccess.sync();if(ClubRegistration.complete(ClubAccess.profile)||ClubAccess.administrator()){if(ClubNews.route()){newsRoute();return;}if(routeState()){reportRoute();return;}if(page==='Mi cuenta')page='Inicio';}render();});
+async function loadClubUsers(){
+ if(!ClubAccess.administrator()||ClubAccess.loading)return;
+ const identity=ClubAuth.user.uid;ClubAccess.loading=true;ClubAccess.error='';render();
+ try{await ClubAccess.list();}catch(error){if(ClubAuth.user?.uid===identity)ClubAccess.error=error.message;}
+ finally{ClubAccess.loading=false;if(page==='Administración users')render();}
+}
+document.addEventListener('click',event=>{
+ if(event.target.closest('[data-news-back]')){history.replaceState(null,'',location.pathname);page='Inicio';render();window.scrollTo(0,0);}
+ if(event.target.closest('[data-reload-users]'))loadClubUsers();
+});
+document.addEventListener('input',event=>{if(event.target.matches('[data-user-search]'))document.getElementById('club-users').innerHTML=ClubAccess.rows(event.target.value);});
+document.addEventListener('submit',async event=>{
+ const form=event.target;if(!form.matches('[data-club-role]'))return;event.preventDefault();
+ const button=form.querySelector('button'),feedback=form.querySelector('.role-feedback');button.disabled=true;feedback.textContent='Guardando…';
+ try{await ClubAccess.setRole(form.dataset.clubRole,new FormData(form).get('role'));feedback.textContent='Rol guardado.';}
+ catch(error){feedback.textContent=error.message;}
+ finally{button.disabled=false;}
+});
+
+window.addEventListener('club-favorites-state',()=>render());
+
+window.addEventListener('club-teams-state',()=>{if(!page.startsWith('Administración'))render();else CDM.shell(page,ClubAccess.user());});
+
+window.refreshScreen=async function(){
+ const current=page;
+ await Fixtures.load(true);
+ if(page!==current)return;
+ if(['Ficha de partido','Acta','Jugador'].includes(page)){await reportRoute(true);return;}
+ if(page==='Administración teams'){await ClubTeams.refresh();return;}
+ if(page==='Administración history'){await ClubNotifications.history();return;}
+ if(page==='Administración users'){await loadClubUsers();return;}
+ if(page==='Favoritos')await ClubFavorites.sync();
+ if(page==='Mi cuenta'&&window.ClubAccess?.enabled())await ClubAccess.sync();
+ if(page===current)await render();
+ if(Fixtures.error||Fixtures.newsError||ClubMatchdays.failures.size)throw Error('Actualización incompleta');
+};
+document.addEventListener('click',async event=>{
+ const button=event.target.closest('[data-home-category]');if(!button)return;
+ Fixtures.selectTeam(button.dataset.homeCategory);page='Partidos';
+ await Fixtures.loadFixtures();Fixtures.round=button.dataset.homeRound||ClubMatchdays.round(Fixtures.data);Fixtures.manualRound=true;
+ await render();window.scrollTo(0,0);
+});
+
+window.addEventListener('club-match-alert-state',()=>render());
+window.addEventListener('club-match-route',()=>{page='Ficha de partido';render();window.scrollTo(0,0);});
+
+/* Android back button: closes what is open on top (a window, a sub-screen) and otherwise goes back through
+   the pages visited, with their match, player or news and their scroll position. Returns false on the first page. */
+window.addEventListener('scroll',()=>{lastScroll=window.scrollY;},{passive:true});
+function snapshot(){return {page,hash:location.hash,team:window.Fixtures?.selectedTeam||''};}
+function remember(){const now=snapshot();if(here&&(here.page!==now.page||here.hash!==now.hash||here.team!==now.team)){visited.push({...here,scroll:lastScroll});if(visited.length>50)visited.shift();}here=now;}
+window.CDMBack=function(){
+ const open=[...document.querySelectorAll('dialog[open]')].pop();
+ if(open){const cancel=new Event('cancel',{cancelable:true});open.dispatchEvent(cancel);if(open.open&&!cancel.defaultPrevented)open.close();return true;}
+ const inner=[...document.querySelectorAll('[data-tv-close],[data-season-back],[data-stats-back],[data-event-back]')].find(b=>b.offsetParent!==null||b.closest('.tv-player'));
+ if(inner){inner.click();return true;}
+ const prev=visited.pop();if(!prev)return false;
+ here={page:prev.page,hash:prev.hash,team:prev.team};
+ history.replaceState(history.state,'',location.pathname+location.search+prev.hash);reportRequest++;playerProfileLoading=false;
+ const teamChanged=prev.team&&window.Fixtures&&prev.team!==Fixtures.selectedTeam&&Fixtures.selectTeam(prev.team);
+ page=prev.page;
+ if(ClubNews.route())newsRoute();else if(routeState())reportRoute();else{render();pageOpened();}
+ if(teamChanged)Fixtures.loadFixtures().then(()=>{if(here?.team===prev.team&&!routeState())render();});
+ requestAnimationFrame(()=>window.scrollTo(0,prev.scroll||0));
+ return true;
+};
+
+/* Links to a page inside the app (#acta=…, #noticia=…) change the page without adding browser history entries:
+   the pages visited are kept by CDMBack, so Back always walks them in order (in the app and in the browser). */
+document.addEventListener('click',e=>{
+ const a=e.target.closest?.('a[href^="#"]');
+ if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||(a.target&&a.target!=='_self'))return;
+ const href=a.getAttribute('href');if(!href||href.length<2)return;
+ e.preventDefault();if(location.hash!==href)location.replace(location.pathname+location.search+href);
+});
+/* In a browser (not the Android app) the Back button would leave the site. Two history entries are kept —
+   the page as it was opened and one on top — so pressing Back lands on the first and runs CDMBack:
+   if something was open or a previous page exists it is shown and the top entry is put back; on the first page
+   Back goes on to leave the site, as usual. */
+if(!window.ClubPushNative&&window.history?.pushState){
+ try{
+  if(!history.state?.cdmBase&&!history.state?.cdmTop){history.replaceState({cdmBase:true},'',location.href);history.pushState({cdmTop:true},'',location.href);}
+  window.addEventListener('popstate',e=>{
+   if(!e.state?.cdmBase)return;
+   let handled=false;try{handled=!!window.CDMBack();}catch{}
+   if(handled)history.pushState({cdmTop:true},'',location.href);else history.back();
+  });
+ }catch{}
+}
