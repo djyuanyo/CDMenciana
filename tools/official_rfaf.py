@@ -142,16 +142,28 @@ def team_players(html):
         return names
     raise ValueError('Official roster section missing')
 
-def official_roster(matches,team,names):
-    rows={normalize(p['name']):p for p in report_roster(matches,team)}
+# First-team squad members who have not played yet: listed with zero stats until an acta brings their RFAF data.
+PENDING_PLAYERS={25:'CABALLERO LAMA, ALEJANDRO',21:'LUNA ACEITUNO, ADRIAN'}
+
+def official_roster(matches,team,names,club_numbers=()):
+    acta_rows=report_roster(matches,team)
+    rows={normalize(p['name']):p for p in acta_rows}
     players=[]
     for name in names:
         player=rows.get(normalize(name))
         if not player or not player.get('id') or not player.get('profile_url') or not player.get('rfaf_id'):
             raise ValueError('Official dorsal/profile not yet published for '+name)
         players.append(dict(player,name=name,position='Jugador'))
+    # Players in our actas wearing a shirt the club website lists for the first team (e.g. registered later on the RFAF team page).
+    listed={normalize(p['name']) for p in players};club_numbers={str(n) for n in club_numbers}
+    for player in acta_rows:
+        if normalize(player['name']) not in listed and str(player['number']) in club_numbers and player.get('id') and player.get('profile_url') and player.get('rfaf_id'):
+            players.append(dict(player,position='Jugador'))
     # Shirts can be reassigned between matches; validate numbers within each acta.
     if len({(p['number'],p['acta_id']) for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
+    taken={p['number'] for p in players}
+    for number,name in PENDING_PLAYERS.items():
+        if number not in taken:players.append(dict(name=name,number=number,position='Jugador',photo='',id='',acta_id='',profile_url='',rfaf_id='',stats=[],pending=True))
     return sorted(players,key=lambda p:p['number'])
 
 # The club confirms these first-team shirts are goalkeepers even when the website does not label them.
@@ -370,7 +382,7 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
         sync_reports(round_matches,get,ROOT,fixtures_filename=config['filename'])
         payload['staff']=staff_with_actas(payload.get('staff',[]),matches,payload['team'])
         try:
-            payload['roster']=official_roster(matches,payload['team'],team_players(team_html)) if config['key']=='first' else report_roster(matches,payload['team']) or roster_rows
+            payload['roster']=official_roster(matches,payload['team'],team_players(team_html),payload.get('club_photos',{}).keys()) if config['key']=='first' else report_roster(matches,payload['team']) or roster_rows
             payload.update(roster_source=staff_source(config),roster_status='verified',roster_updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
         except ValueError as error:
             payload.update(roster_status=previous.get('roster_status','cached'),roster_updated_at=previous.get('roster_updated_at',''))
