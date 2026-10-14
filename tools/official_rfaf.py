@@ -1,7 +1,8 @@
 """Public RFAF calendar and standings; no account or browser required."""
 import concurrent.futures, datetime, json, re, urllib.parse
 from sync_fixtures import Document, is_club, normalize, ROOT
-from club_content import scorers
+from club_content import scorers, roster as club_roster, ROSTER_SOURCE
+import urllib.request
 PREFIX='https://www.rfaf.es/pnfg/NPcd/'
 DATA_QUERY='cod_primaria=1000120&codcompeticion=48466108&codgrupo=48466109&codtemporada=22'
 QUERY='cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22'
@@ -153,11 +154,21 @@ def official_roster(matches,team,names):
     if len({(p['number'],p['acta_id']) for p in players})!=len(players):raise ValueError('Ambiguous official shirt numbers')
     return sorted(players,key=lambda p:p['number'])
 
+def club_photos(previous):
+    """First-team photos from the club website, keyed by shirt number; the RFAF dorsal picks the photo."""
+    try:
+        request=urllib.request.Request(ROSTER_SOURCE,headers={'User-Agent':'CDMenciana club-roster-sync','Cache-Control':'no-cache'})
+        with urllib.request.urlopen(request,timeout=30) as response:html=response.read(3_000_000).decode('utf-8')
+        return {str(p['number']):p['photo'] for p in club_roster(html)}
+    except Exception as error:
+        print(f'Fotos de la web del club pendientes: {error}; se conservan las anteriores',flush=True)
+        return previous.get('club_photos',{})
+
 def write_roster_snapshot(config,payload):
     path=ROOT/'data/roster-snapshot.json'
     try:teams=json.loads(path.read_text())
     except (OSError,ValueError):teams={}
-    keys=('team_key','roster','roster_source','roster_status','roster_updated_at','staff','staff_source','staff_status','staff_updated_at')
+    keys=('team_key','roster','roster_source','roster_status','roster_updated_at','staff','staff_source','staff_status','staff_updated_at','club_photos')
     teams[config['key']]={key:payload[key] for key in keys if key in payload}
     path.write_text(json.dumps(teams,ensure_ascii=False,indent=2)+'\n')
     script='/* Official roster identities and staff survive older cached calendars. */\nwindow.ClubRosterSnapshot='+json.dumps(teams,ensure_ascii=False,separators=(',',':'))+';\n'
@@ -315,6 +326,7 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
     club=next(r for r in table if belongs(r['team'],config))
     results_status=verify_results(matches,club,previous)
     payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season=config.get('season','2026-2027'),team=club['team'],source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
+    if config['key']=='first':payload['club_photos']=club_photos(previous)
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
     payload['details_status']='pending' if any(html is None for html in pages.values()) else 'verified'
     team_html=''
