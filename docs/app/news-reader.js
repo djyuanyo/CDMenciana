@@ -22,7 +22,7 @@ window.ClubNews={
 
 /* Slider of the latest published news, shown under the header on the home page. Swipe or wait: it advances by itself. */
 window.ClubNewsSlider={
- limit:5,delay:5500,timer:0,
+ limit:5,
  photo(n){const inner=(Array.isArray(n.content)?n.content:[]).find(b=>b.kind==='image'&&Fixtures.newsImage(b.src));return Fixtures.newsImage(n.image)||(inner?Fixtures.newsImage(inner.src):'');},
  slides(){return (Fixtures.newsData?.news||[]).filter(n=>ClubNews.slug(n)).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,this.limit);},
  html(){
@@ -31,7 +31,6 @@ window.ClubNewsSlider={
   return `<div class="news-slider-track" data-slider-track>${rows.map(n=>`<a class="news-slide" href="${E(ClubNews.href(n))}">${this.photo(n)?`<img src="${E(this.photo(n))}" alt="" data-news-image>`:''}<span class="news-slide-title">${E(n.title)}</span></a>`).join('')}</div><div class="news-slider-bars" aria-hidden="true">${rows.map(()=>'<span><i></i></span>').join('')}</div>`;
  },
  mount(page){
-  clearInterval(this.timer);
   let box=document.getElementById('news-slider');
   const markup=page==='Inicio'?this.html():'';
   if(!markup){box?.remove();return;}
@@ -41,10 +40,8 @@ window.ClubNewsSlider={
   const index=()=>Math.max(0,Math.min(bars.length-1,Math.round(track.scrollLeft/(track.clientWidth||1))));
   const paint=()=>bars.forEach((bar,i)=>bar.className=i<index()?'done':i===index()?'now':'');
   track.addEventListener('scroll',paint,{passive:true});paint();
-  if(bars.length>1)this.timer=setInterval(()=>{
-   if(!box.isConnected||document.hidden)return;
-   track.scrollTo({left:((index()+1)%bars.length)*track.clientWidth,behavior:'smooth'});
-  },this.delay);
+  // The white bar fills in 5 seconds (CSS); when it is full the slider moves to the next news.
+  box.addEventListener('animationend',e=>{if(bars.length>1&&e.target.parentElement.className==='now')track.scrollTo({left:((index()+1)%bars.length)*track.clientWidth,behavior:'smooth'});});
  }
 };
 (()=>{const shell=CDM.shell;CDM.shell=function(page,user){const result=shell.call(this,page,user);try{ClubNewsSlider.mount(page);}catch(e){}return result;};})();
