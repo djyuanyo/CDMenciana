@@ -840,9 +840,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645810",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645810"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515"
     },
     {
       "id": "48466109-6-3",
@@ -5721,7 +5721,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-12T20:36:47.010506+00:00",
+      "profile_updated_at": "2026-10-14T12:32:42.148051+00:00",
       "competition_summary": {}
     },
     {
@@ -5928,7 +5928,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-12T20:36:48.020936+00:00",
+      "profile_updated_at": "2026-10-14T12:32:43.199899+00:00",
       "competition_summary": {}
     },
     {
@@ -6211,7 +6211,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-12T20:36:48.973633+00:00",
+      "profile_updated_at": "2026-10-14T12:32:44.157530+00:00",
       "competition_summary": {}
     },
     {
@@ -6608,7 +6608,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-14T11:45:55.989383+00:00",
+  "updated_at": "2026-10-14T12:27:01.416930+00:00",
   "rounds": [
     1,
     2,
@@ -7544,7 +7544,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-14T11:45:57.129172+00:00",
+  "staff_updated_at": "2026-10-14T12:27:02.308624+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-14T12:34:31.634469+00:00"
 }
