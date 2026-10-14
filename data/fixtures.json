@@ -842,7 +842,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645810"
     },
     {
       "id": "48466109-6-3",
@@ -965,7 +965,27 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
     },
     {
-      "id": "48466109-7-1",
+      "id": "48466109-7",
+      "round": 7,
+      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "away": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-7-2",
       "round": 7,
       "home": "C.D. SANTAELLA 2010",
       "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
@@ -985,7 +1005,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-7-2",
+      "id": "48466109-7-3",
       "round": 7,
       "home": "C.D. LA PALMA F.S.",
       "away": "C.D. BENALUP",
@@ -1002,26 +1022,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-7",
-      "round": 7,
-      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "away": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
       "acta_url": ""
     },
     {
@@ -6608,7 +6608,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-14T10:09:03.408441+00:00",
+  "updated_at": "2026-10-14T11:45:55.989383+00:00",
   "rounds": [
     1,
     2,
@@ -7544,9 +7544,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-14T10:09:04.235836+00:00",
+  "staff_updated_at": "2026-10-14T11:45:57.129172+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-14T10:14:46.794528+00:00"
+  "details_status": "verified"
 }
