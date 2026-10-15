@@ -474,10 +474,10 @@
       "date": "2026-10-15",
       "time": "21:00",
       "venue": "Alcalá De Guadaíra - DISTRITO SUR (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 4,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645784",
@@ -4600,6 +4600,14 @@
       "average": 2.0
     },
     {
+      "name": "JIMENEZ CARRASCO, IVAN",
+      "team": "C.D. BENALUP",
+      "played": 4,
+      "goals": 6,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
       "name": "GARCIA SANZ, ADOLFO",
       "team": "C.D. SANTAELLA 2010",
       "played": 5,
@@ -4864,6 +4872,14 @@
       "average": 0.6
     },
     {
+      "name": "ALVAREZ BENITEZ, DAVID",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
       "name": "GALAN NAVARRO, PABLO ANTONIO",
       "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 5,
@@ -4992,22 +5008,6 @@
       "average": 1.0
     },
     {
-      "name": "JIMENEZ CARRASCO, IVAN",
-      "team": "C.D. BENALUP",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "TORRES TORRELO, JULIO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
       "name": "SUCINO MORENO, PABLO",
       "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "played": 3,
@@ -5088,8 +5088,24 @@
       "average": 0.5
     },
     {
+      "name": "TORRES TORRELO, JULIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "RODRIGUEZ RODRIGUEZ, JORGE",
       "team": "U.D. ALCHOYANO",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LABRADOR GARCIA, JORGE",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -5216,14 +5232,6 @@
       "average": null
     },
     {
-      "name": "MATEO RODRIGUEZ, FRANCISCO",
-      "team": "C.D. BENALUP",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "GONZALEZ ESPINOSA, ANTONIO",
       "team": "C.D. DECORSENECA",
       "played": 1,
@@ -5274,6 +5282,14 @@
     {
       "name": "SUAZO TORRES, ALEJANDRO",
       "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MATEO RODRIGUEZ, FRANCISCO",
+      "team": "C.D. BENALUP",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -5336,24 +5352,8 @@
       "average": 0.3333
     },
     {
-      "name": "LABRADOR GARCIA, JORGE",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
       "name": "BAQUERO BEGINES, ALEJANDRO",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "ENRIQUEZ PEÑA, MANUEL JESUS",
-      "team": "C.D. BENALUP",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -5440,6 +5440,22 @@
       "average": 0.25
     },
     {
+      "name": "ENRIQUEZ PEÑA, MANUEL JESUS",
+      "team": "C.D. BENALUP",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "CAMPOS ESCALERA, PABLO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
       "name": "MARQUEZ ROMERO, DANIEL",
       "team": "U.D. ALCHOYANO",
       "played": 4,
@@ -5450,22 +5466,6 @@
     {
       "name": "ZAFRA SANCHEZ, MANUEL",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "ALVAREZ BENITEZ, DAVID",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "TEROL CAMACHO, ROBERTO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -5496,14 +5496,6 @@
       "average": 0.25
     },
     {
-      "name": "VELA ACEDO, SERGIO",
-      "team": "C.D. BENALUP",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
       "name": "EL DAHER, LAUTARO",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 4,
@@ -5522,6 +5514,14 @@
     {
       "name": "BERMUDO NAVARRO, CRISTIAN",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "TEROL CAMACHO, ROBERTO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -5562,6 +5562,14 @@
     {
       "name": "LEPE GARCIA, SERGIO",
       "team": "C.D. LA PALMA F.S.",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "VELA ACEDO, SERGIO",
+      "team": "C.D. BENALUP",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -6608,7 +6616,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-15T19:29:21.046686+00:00",
+  "updated_at": "2026-10-15T21:48:29.834254+00:00",
   "rounds": [
     1,
     2,
@@ -7261,6 +7269,21 @@
     },
     {
       "position": 4,
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "points": 9,
+      "played": 5,
+      "won": 2,
+      "drawn": 3,
+      "lost": 0,
+      "gf": 19,
+      "ga": 16,
+      "gd": 3,
+      "form": "G E E E G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/01875.png"
+    },
+    {
+      "position": 5,
       "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "points": 8,
       "played": 5,
@@ -7275,7 +7298,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png"
     },
     {
-      "position": 5,
+      "position": 6,
       "team": "C.D. SANTAELLA 2010",
       "points": 8,
       "played": 5,
@@ -7288,21 +7311,6 @@
       "form": "E G P E G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
-    },
-    {
-      "position": 6,
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "points": 8,
-      "played": 4,
-      "won": 2,
-      "drawn": 2,
-      "lost": 0,
-      "gf": 15,
-      "ga": 12,
-      "gd": 3,
-      "form": "G E E G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/01875.png"
     },
     {
       "position": 7,
@@ -7397,15 +7405,15 @@
     {
       "position": 13,
       "team": "C.D. BENALUP",
-      "points": 4,
-      "played": 4,
+      "points": 5,
+      "played": 5,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
-      "gf": 14,
-      "ga": 20,
+      "gf": 18,
+      "ga": 24,
       "gd": -6,
-      "form": "P G E P",
+      "form": "P G E E P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg"
     },
@@ -7544,7 +7552,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-15T19:29:21.952155+00:00",
+  "staff_updated_at": "2026-10-15T21:48:30.827798+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
