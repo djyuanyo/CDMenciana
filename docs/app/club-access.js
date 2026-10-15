@@ -750,7 +750,7 @@ window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,ui
 
  // Door check for administrators: camera, BarcodeDetector where available, jsQR otherwise.
  scanScreen(){return `<div class="section-heading"><h2>Taquilla</h2></div><p class="scan-event" data-scan-event role="status">Comprobando el evento activo…</p><section class="card member-scan taquilla-fast"><div class="member-video"><video data-member-video playsinline muted></video><span class="member-frame" aria-hidden="true"></span><button type="button" class="member-camera-action" data-member-camera-resume>Escanear QR · automático</button></div>
- <form class="member-manual" data-member-manual><label class="auth-field"><span>Nº de socio</span><input name="number" inputmode="numeric" enterkeyhint="go" pattern="[0-9]*" maxlength="12" autocomplete="off" placeholder="Nº de socio" aria-label="Número de socio" required></label><button type="submit" class="auth-primary">Entrar</button></form><div class="guest-row"><button type="button" class="member-guest" data-member-guest="ticket">+1 no socio · entrada</button><button type="button" class="member-guest guest-alt" data-member-guest="free">+1 no socio gratis</button></div><div data-member-scan-result role="status" aria-live="polite" aria-atomic="true"><p>Listo. Acerca un carnet a la cámara.</p></div></section>`;},
+ <form class="member-manual" data-member-manual><label class="auth-field"><span>Nº de socio</span><input name="number" inputmode="numeric" enterkeyhint="go" pattern="[0-9]*" maxlength="12" autocomplete="off" placeholder="Nº de socio" aria-label="Número de socio" required></label><button type="submit" class="auth-primary">Entrar</button></form><div class="guest-row"><button type="button" class="member-guest" data-member-guest="ticket">+1 ENTRADA</button><button type="button" class="member-guest guest-alt" data-member-guest="free">+1 GRATIS</button></div><div data-member-scan-result role="status" aria-live="polite" aria-atomic="true"><p>Listo. Acerca un carnet a la cámara.</p></div></section>`;},
  scanBusy:false,
  setScanBusy(value){this.scanBusy=value;document.querySelectorAll('[data-member-manual] button,[data-member-guest]').forEach(b=>{b.disabled=value;});},
  async guest(kind='ticket'){
@@ -801,6 +801,8 @@ window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,ui
  },
  stopScan(){this.scanSession=(this.scanSession||0)+1;this.scanStarting=false;this.scanning=false;clearTimeout(this.scanTick);for(const t of this.stream?.getTracks()||[])t.stop();this.stream=null;},
  verdict(r,manual){const E=this.E.bind(this),unpaid=!r.valid&&!!r.attendance,duplicate=!!r.attendance?.duplicate,fresh=r.newMember&&!!r.attendance;return `<div class="member-verdict ${duplicate?'unpaid':r.valid?'valid':unpaid?'unpaid':'invalid'}"><span aria-hidden="true">${r.valid?'✓':unpaid?'!':'✕'}</span><strong>${fresh&&!duplicate?'Nueva alta · entrada registrada':unpaid&&!fresh?'Acceso registrado · FALTA PAGO':duplicate?'Ya había entrado':manual?(r.valid?'Socio válido':'Socio no válido'):(r.valid?'Carnet válido':'Carnet no válido')}</strong>${r.name?`<p>${E(r.name)}</p>`:''}<p>Socio nº ${E(r.memberNumber||'—')}${manual?' · número escrito a mano'+(r.source==='list'?' (sin app)':''):''}</p><p>${r.valid?'Cuota al día hasta '+E(this.date(r.paidUntil)):E(r.reason||'')}</p>${r.attendance?`<p class="member-attendance">${r.attendance.duplicate?'Ya había entrado a las '+E(window.ClubEvents?ClubEvents.clock(r.attendance.at):r.attendance.at):'Entrada registrada'} · ${E(r.attendance.event)} · ${E(r.attendance.attendees)} asistentes</p>`:''}</div>`;},
+ // Scanner sound on the phone at the door when a card is accepted (never on the member's phone).
+ beep(){try{this.sound||=new Audio('beep.mp3');this.sound.currentTime=0;const p=this.sound.play();p?.catch?.(()=>{});}catch{}},
  async verify(text){
   if(this.scanBusy)return;this.setScanBusy(true);
   const out=document.querySelector('[data-member-scan-result]'),token=String(text).match(/\/carnet\/([A-Za-z0-9_-]+\.\d+\.[0-9a-z]+\.[A-Za-z0-9_-]{22})$/)?.[1];
@@ -808,7 +810,7 @@ window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,ui
   if(!token){show('<div class="member-verdict invalid"><strong>No es un carnet del club</strong></div>');this.setScanBusy(false);return;}
   if(out)out.innerHTML='<p>Comprobando…</p>';
   try{const r=await this.http('/member/verify',{method:'POST',body:JSON.stringify({token})}),E=this.E.bind(this);
-   show(this.verdict(r,false));if(r.attendance)window.ClubEvents?.scanned(r.attendance);navigator.vibrate?.(r.valid&&!r.attendance?.duplicate?60:[60,60,60]);}
+   show(this.verdict(r,false));if(r.attendance)window.ClubEvents?.scanned(r.attendance);navigator.vibrate?.(r.valid&&!r.attendance?.duplicate?60:[60,60,60]);if(r.valid&&!r.attendance?.duplicate)this.beep();}
   catch(e){show(`<div class="member-verdict invalid"><span aria-hidden="true">✕</span><strong>No válido</strong><p>${this.E(e.message)}</p></div>`);}
   finally{this.setScanBusy(false);}
  },
