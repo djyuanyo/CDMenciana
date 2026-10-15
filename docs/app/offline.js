@@ -84,6 +84,8 @@ document.addEventListener('click',e=>{
 if(routeState())reportRoute();
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-report-side]');if(b){Fixtures.reportSide=Number(b.dataset.reportSide);render();}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-report-tab]');if(b){Fixtures.reportTab=b.dataset.reportTab;render();}});
+document.addEventListener('click',e=>{if(e.target.closest('[data-report-sort]')){Fixtures.reportByType=!Fixtures.reportByType;render();}});
 
 document.addEventListener('click',async e=>{const button=e.target.closest('[data-team]');if(!button||!Fixtures.selectTeam(button.dataset.team))return;const team=Fixtures.selectedTeam;reportRequest++;playerProfileLoading=false;if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);page='Partidos';}render();await Fixtures.loadFixtures();if(team===Fixtures.selectedTeam){render();window.scrollTo(0,0);}});
 

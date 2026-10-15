@@ -588,3 +588,63 @@ a.player-photo-wrap { display: block; color: inherit; text-decoration: none; }
 .news-share .news-share-copy { background: transparent; color: var(--text); border: 1px solid var(--line); }
 .news-share small { width: 100%; font-size: 12px; color: var(--muted); }
 .news-share small:empty { display: none; }
+
+/* Match report (finished match): photo header, score boxes, scorers, sections and a vertical event timeline. */
+.acta-stage { position: relative; margin: -4px -18px 0; padding: 14px 18px 22px; color: #fff; text-align: center; background: linear-gradient(180deg, #050b16d9 0%, #07101ea6 45%, #07101ee6 100%), url('acta-fondo.jpg') center 35% / cover no-repeat; border-radius: 0 0 26px 26px; overflow: hidden; }
+.acta-stage-top { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.acta-stage-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; min-height: 0; padding: 0; border: 0; border-radius: 50%; background: #ffffff1f; color: #fff; font-size: 20px; box-shadow: none; cursor: pointer; }
+.acta-stage-btn svg { width: 22px; height: 22px; }
+.acta-stage-league { margin: 0 0 12px; font-size: 15px; font-weight: 800; letter-spacing: .3px; }
+.acta-stage-league i { font-style: normal; opacity: .7; margin: 0 6px; }
+.acta-stage-line { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 6px 0; font-size: 14px; color: #e8eef8; }
+.acta-stage-line svg { width: 18px; height: 18px; flex: none; }
+.acta-stage-status { margin: 18px 0 8px; font-size: 15px; font-weight: 800; letter-spacing: .5px; }
+.acta-stage .acta-scoreboard { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
+.acta-stage-team { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+.acta-stage-team img, .acta-stage-team .acta-crest-placeholder { width: 64px; height: 64px; object-fit: contain; }
+.acta-stage-team strong { font-size: 30px; font-weight: 800; letter-spacing: .5px; line-height: 1; }
+.acta-stage-score { display: flex; gap: 10px; }
+.acta-stage-score b { display: grid; place-items: center; width: 54px; height: 60px; border-radius: 12px; background: #f1f3f6; color: #0f1520; font-size: 34px; font-weight: 800; }
+.acta-stage-names { display: flex; justify-content: space-between; gap: 16px; margin: 6px 0 0; font-size: 11px; color: #c7d3e4; }
+.acta-stage-names span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.acta-stage-scorers { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 14px; margin: 16px 0 4px; font-size: 13px; }
+.acta-stage-scorers ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; align-content: start; }
+.acta-stage-scorers ul.home { text-align: right; }
+.acta-stage-scorers ul.away { text-align: left; }
+.acta-stage-scorers em { font-style: normal; opacity: .85; }
+.acta-stage-divider { background: #ffffff8c; }
+.acta-stage-ball { font-size: 14px; }
+.acta-stage-crowd { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 14px 0 0; font-size: 14px; }
+.acta-stage-crowd svg { width: 22px; height: 22px; }
+.acta-sticky { position: sticky; top: 92px; z-index: 20; display: none; grid-template-columns: auto 1fr auto 1fr; align-items: center; gap: 10px; margin: 0 -18px; padding: 8px 14px; background: #0b1424f2; color: #fff; backdrop-filter: blur(10px); }
+.acta-sticky.is-visible { display: grid; }
+.acta-sticky-team { display: flex; align-items: center; gap: 10px; justify-content: flex-start; }
+.acta-sticky-team:last-child { justify-content: flex-end; }
+.acta-sticky-team img { width: 30px; height: 30px; object-fit: contain; }
+.acta-sticky-team b { font-size: 22px; }
+.acta-sticky strong { font-size: 14px; letter-spacing: .4px; }
+.acta-tabs { display: flex; gap: 6px; margin: 16px 0 12px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.acta-tabs button { flex: 1; min-height: 46px; padding: 0 10px; border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: none; color: var(--muted); font-size: 15px; font-weight: 700; box-shadow: none; cursor: pointer; }
+.acta-tabs button.active { color: var(--text); border-bottom-color: #1f9d55; }
+.acta-timeline-head, .acta-timeline-foot { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 6px 0 12px; }
+.acta-timeline-foot { margin: 12px 0 4px; }
+.acta-timeline-pill { padding: 6px 14px; border-radius: 999px; background: #0f1520; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .4px; }
+:root[data-theme="dark"] .acta-timeline-pill { background: #e8eef8; color: #0f1520; }
+.acta-timeline-final { display: flex; align-items: center; gap: 14px; font-weight: 800; color: var(--text); }
+.acta-timeline-final img { width: 26px; height: 26px; object-fit: contain; }
+.acta-timeline .acta-timeline-stamp { border-radius: 14px; }
+/* Reference style: events float on a dashed centre line with grey minute pills, no boxes. */
+.acta-timeline::before { width: 0; background: none; border-left: 2px dashed #9ac4e355; }
+.acta-timeline li.acta-timeline-event.goal, .acta-timeline li.acta-timeline-event.card { background: transparent; border: 0; box-shadow: none; margin: 0; padding: 12px 0; border-radius: 0; }
+.acta-timeline .acta-timeline-stamp, .acta-timeline-event.card .acta-timeline-stamp { min-height: 40px; padding: 4px 10px 4px 5px; border-radius: 14px; background: #2a3a52; border: 0; box-shadow: none; }
+:root[data-theme="light"] .acta-timeline .acta-timeline-stamp { background: #e7ebf0; }
+.acta-timeline time { font-size: 15px; font-weight: 800; }
+.acta-timeline-player strong { font-size: 15px; font-weight: 600; }
+.acta-stage-scorers { font-size: 12.5px; }
+.acta-timeline .acta-player-link { background: none; border: 0; box-shadow: none; }
+.acta-timeline-sort { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: -4px 0 8px; font-size: 13px; color: var(--muted); }
+.acta-timeline-sort .switch { position: relative; flex: none; display: block; box-sizing: border-box; width: 46px; height: 26px; min-width: 0; min-height: 0; padding: 0; margin: 0; border: 0; border-radius: 999px; background: #7c8b9c80; box-shadow: inset 0 1px 3px #0005; cursor: pointer; transition: background .2s; }
+.acta-timeline-sort .switch i { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px #0006; transition: transform .2s; }
+.acta-timeline-sort .switch.is-on { background: #1f9d55; }
+.acta-timeline-sort .switch.is-on i { transform: translateX(20px); }
+.acta-timeline li.acta-timeline-group { display: flex; justify-content: center; padding: 14px 0 6px; position: relative; z-index: 1; }
