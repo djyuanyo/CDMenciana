@@ -1117,7 +1117,63 @@
       "name": "VIGO PATRON, ALEJANDRO",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=232596&codacta=2645770&nueva_ventana=",
       "photo": "https://files.rfaf.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
-      "stats": [],
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
       "rfaf_id": "232596",
       "acta_id": "2645770",
       "competition_summary": {
@@ -1127,14 +1183,71 @@
         "played": null,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "profile_updated_at": "2026-10-15T10:10:38.916319+00:00"
     },
     {
       "id": "762eb03e4dd9e832",
       "name": "BARROSO GONZÁLEZ, ENRIQUE",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=593415&codacta=2645770&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
-      "stats": [],
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.5"
+            ]
+          ]
+        }
+      ],
       "rfaf_id": "593415",
       "acta_id": "2645770",
       "competition_summary": {
@@ -1144,7 +1257,8 @@
         "played": 0,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "profile_updated_at": "2026-10-15T10:10:39.936614+00:00"
     },
     {
       "id": "0d6c40fccca37b8a",

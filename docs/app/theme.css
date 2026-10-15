@@ -648,3 +648,26 @@ a.player-photo-wrap { display: block; color: inherit; text-decoration: none; }
 .acta-timeline-sort .switch.is-on { background: #1f9d55; }
 .acta-timeline-sort .switch.is-on i { transform: translateX(20px); }
 .acta-timeline li.acta-timeline-group { display: flex; justify-content: center; padding: 14px 0 6px; position: relative; z-index: 1; }
+
+/* Starting five on the futsal pitch (1-2-2): photo or number, shirt number badge and name. */
+.acta-pitch { position: relative; margin: 4px -4px 0; aspect-ratio: 10 / 11; border-radius: 16px; overflow: hidden; background: url('acta-pista.jpg') center / 100% 100% no-repeat, #5a3cd0; }
+.acta-pitch ul { list-style: none; margin: 0; padding: 0; }
+.acta-pitch .acta-pitch-player { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 3px; width: 31%; transform: translate(-50%, -40%); padding: 0; margin: 0; background: none; border: 0; box-shadow: none; text-align: center; }
+.acta-pitch .gk { left: 50%; top: 79%; }
+.acta-pitch .def-l { left: 27%; top: 50%; }
+.acta-pitch .def-r { left: 73%; top: 50%; }
+.acta-pitch .att-l { left: 33%; top: 14%; }
+.acta-pitch .att-r { left: 67%; top: 14%; }
+.acta-pitch-photo { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: #fff; color: #1b2a44; font-size: 20px; font-weight: 800; border: 3px solid #fff; box-shadow: 0 3px 8px #0006; }
+.acta-pitch .gk .acta-pitch-photo { background: #ef5a4c; color: #fff; }
+.acta-pitch .acta-number { position: absolute; top: -4px; left: calc(50% + 14px); min-width: 22px; height: 22px; padding: 0 4px; border-radius: 11px; background: #0f1520; color: #fff; font-size: 11px; font-weight: 800; line-height: 22px; }
+.acta-pitch .acta-pitch-player strong, .acta-pitch .acta-pitch-player strong a > span { max-width: 100%; color: #fff; font-size: 11.5px; font-weight: 800; line-height: 1.2; text-shadow: 0 1px 3px #000c; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-decoration: none; }
+.acta-pitch .acta-pitch-player small { color: #ffe1dc; font-size: 10px; font-weight: 800; text-transform: uppercase; text-shadow: 0 1px 3px #000c; }
+/* With the federation photo the link carries the avatar: show it in the circle's place. */
+.acta-pitch .acta-pitch-player:has(.acta-player-avatar) .acta-pitch-photo { display: none; }
+.acta-pitch .acta-player-link { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; padding: 0; background: none; border: 0; box-shadow: none; color: #fff; }
+.acta-pitch .acta-player-link .acta-player-avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 3px 8px #0006; background: #fff; }
+.acta-pitch .gk .acta-player-link .acta-player-avatar { border-color: #ef5a4c; }
+.acta-pitch span.acta-player-avatar { display: grid; place-items: center; color: #1b2a44; font-size: 16px; font-weight: 800; }
+.acta-pitch .acta-player-link span { text-align: center; }
+.acta-pitch .acta-pitch-player strong:has(a) { display: block; overflow: visible; -webkit-line-clamp: unset; }
