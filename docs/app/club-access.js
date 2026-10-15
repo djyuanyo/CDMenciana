@@ -1353,18 +1353,26 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
  hm(m){return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0');},
  day(date){return date?new Intl.DateTimeFormat('es-ES',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z')):'';},
 
- // Arrival statistics in 15-minute slots (Madrid time).
+ // Arrival statistics from the first registered entry to the last entry or access (a repeated card counts as an access).
+ // Slots are 15 minutes and grow (30 min, 1 h…) when entries span many hours, so the chart stays readable.
  stats(attendance){
-  const mins=attendance.map(a=>this.minutes(a.at)).sort((a,b)=>a-b),total=mins.length;
+  const times=attendance.map(a=>Date.parse(a.at)).filter(Number.isFinite).sort((a,b)=>a-b),total=times.length;
   if(!total)return {total:0,slots:[],peak:null};
-  const start=Math.floor(mins[0]/15)*15,end=Math.floor(mins[total-1]/15)*15,slots=[];
-  for(let m=start;m<=end;m+=15)slots.push({from:m,count:mins.filter(x=>x>=m&&x<m+15).length});
+  const first=times[0],last=times[total-1],accesses=attendance.flatMap(a=>Array.isArray(a.repeatTimes)?a.repeatTimes.map(t=>Date.parse(t)):[]).filter(Number.isFinite),end=Math.max(last,...accesses);
+  const step=[15,30,60,120,240,720,1440].find(m=>(end-first)/60000/m<48)||1440,ms=step*60000,slots=[];
+  for(let from=first;from<end||!slots.length;from+=ms){const to=Math.min(from+ms,end),closing=from+ms>=end;slots.push({from,to,count:times.filter(x=>x>=from&&(x<from+ms||closing&&x<=end)).length});}
   const top=Math.max(...slots.map(s=>s.count)),peak=slots.filter(s=>s.count===top);
-  return {total,slots,peak,top,first:this.hm(mins[0]),last:this.hm(mins[total-1]),half:this.hm(mins[Math.ceil(total/2)-1])};
+  this.multiDay=this.dateKey(first)!==this.dateKey(end);
+  return {total,slots,peak,top,step,first:this.when(first),last:this.when(last),lastAccess:this.when(end),half:this.when(times[Math.ceil(total/2)-1])};
  },
+ dateKey(ms){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(new Date(ms));},
+ // Time of an entry; the day is added when the entries of an event span more than one day.
+ when(ms){const t=this.clock(new Date(ms).toISOString());return this.multiDay?new Intl.DateTimeFormat('es-ES',{timeZone:'Europe/Madrid',day:'2-digit',month:'2-digit'}).format(new Date(ms))+' '+t:t;},
+ range(slot){return slot.to>slot.from?this.when(slot.from)+'-'+this.when(slot.to):this.when(slot.from);},
+ stepLabel(step){return step>=60?(step/60)+(step===60?' hora':' horas'):step+' minutos';},
  chart(slots,top){
   if(!slots.length)return '';const w=Math.max(280,slots.length*22),h=150,bw=w/slots.length;
-  const bars=slots.map((s,i)=>{const bh=top?Math.round((s.count/top)*(h-34)):0,x=i*bw;return `<rect x="${x+3}" y="${h-18-bh}" width="${bw-6}" height="${bh}" rx="3" class="${s.count===top?'peak':''}"><title>${this.hm(s.from)}-${this.hm(s.from+15)}: ${s.count}</title></rect>${s.count?`<text x="${x+bw/2}" y="${h-22-bh}" text-anchor="middle">${s.count}</text>`:''}${i%2===0?`<text x="${x+bw/2}" y="${h-4}" text-anchor="middle" class="axis">${this.hm(s.from)}</text>`:''}`;}).join('');
+  const bars=slots.map((s,i)=>{const bh=top?Math.round((s.count/top)*(h-34)):0,x=i*bw;return `<rect x="${x+3}" y="${h-18-bh}" width="${bw-6}" height="${bh}" rx="3" class="${s.count===top?'peak':''}"><title>${this.range(s)}: ${s.count}</title></rect>${s.count?`<text x="${x+bw/2}" y="${h-22-bh}" text-anchor="middle">${s.count}</text>`:''}${i%2===0?`<text x="${x+bw/2}" y="${h-4}" text-anchor="middle" class="axis">${this.when(s.from)}</text>`:''}`;}).join('');
   return `<div class="event-chart"><svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="Llegadas por franjas de 15 minutos">${bars}</svg></div>`;
  },
 
@@ -1400,16 +1408,16 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
   if(!r)return back+'<p role="status">Cargando informe…</p>';
   if(r.error)return back+`<p role="alert">${E(r.error)}</p>`;
   const s=this.stats(r.attendance),ev=r.event,paid=this.roster?.paid||0;
-  const peak=s.peak?s.peak.map(p=>this.hm(p.from)+'-'+this.hm(p.from+15)).join(', '):'';
+  const peak=s.peak?s.peak.map(p=>this.range(p)).join(', '):'';
   const unpaid=r.attendance.filter(a=>a.unpaid).length,guests=r.attendance.filter(a=>a.guest).length,members=s.total-guests;
   const kinds=Object.fromEntries(Object.keys(this.kinds).map(k=>[k,r.attendance.filter(a=>a.guest&&a.kind===k).length])),price=Number.isFinite(ev.price)?ev.price:null,cmp=this.season?.events?.find(x=>x.id===ev.id),fresh=r.attendance.filter(a=>a.newMember).length,repeated=r.attendance.filter(a=>a.repeats>0);
   const compare=cmp?`<section class="card event-compare"><h3>Comparativa</h3><p>${cmp.previous?`<strong class="${cmp.previous.diff>=0?'up':'down'}">${E(this.signed(cmp.previous.diff))}</strong> respecto al partido anterior (${E(cmp.previous.title)}: ${E(cmp.previous.attendees)}).`:'Es el primer partido de la temporada de esta categoría.'}</p><p><strong class="${cmp.vsAverage>=0?'up':'down'}">${E(this.signed(cmp.vsAverage))}</strong> respecto a la media de la temporada (${E(cmp.average)} asistentes).</p></section>`:'';
   const box=`<section class="card event-box"><h3>Taquilla y recaudación</h3><form class="event-price" data-event-price><label class="auth-field"><span>Precio de la entrada (€)</span><input name="price" type="number" min="0" max="1000" step="0.5" inputmode="decimal" value="${price==null?'':E(price)}" placeholder="Sin precio"></label><button type="submit" class="auth-secondary">Guardar</button></form><ul class="event-kinds"><li><span>Entradas de pago</span><b>${kinds.ticket}</b><em>${price==null?'—':E(this.euro(kinds.ticket*price))}</em></li><li><span>Entradas gratuitas</span><b>${kinds.free}</b><em>${E(this.euro(0))}</em></li><li class="total"><span>Recaudación</span><b></b><em>${price==null?'Pon el precio':E(this.euro(kinds.ticket*price))}</em></li></ul><p class="event-hint">Los socios entran con su carnet y no cuentan en la recaudación.</p><p data-event-price-status role="status"></p></section>`;
-  const extras=`${fresh?`<p class="event-note">${fresh} nueva${fresh===1?'':'s'} alta${fresh===1?'':'s'} escrita${fresh===1?'':'s'} en taquilla: su nombre aparecerá cuando subas el listado de socios actualizado.</p>`:''}${repeated.length?`<section class="card"><h3>Intentos de entrada repetidos (${repeated.reduce((n,a)=>n+a.repeats,0)})</h3><ul class="event-repeats">${repeated.map(a=>`<li><b>${E(a.memberNumber)}</b> ${E(a.name||'')} · entró a las ${E(this.clock(a.at))} · otra vez a las ${a.repeatTimes.map(t=>E(this.clock(t))).join(', ')}</li>`).join('')}</ul></section>`:''}`;const tiles=[[s.total,'Asistentes en total'],[members,'Socios'],[guests,'No socios'],[unpaid,'Entraron con pago pendiente'],[paid?Math.round(members*100/paid)+'%':'—','De los socios al día'],[s.first||'—','Primera llegada'],[s.half||'—','Ya había entrado la mitad']];
+  const extras=`${fresh?`<p class="event-note">${fresh} nueva${fresh===1?'':'s'} alta${fresh===1?'':'s'} escrita${fresh===1?'':'s'} en taquilla: su nombre aparecerá cuando subas el listado de socios actualizado.</p>`:''}${repeated.length?`<section class="card"><h3>Intentos de entrada repetidos (${repeated.reduce((n,a)=>n+a.repeats,0)})</h3><ul class="event-repeats">${repeated.map(a=>`<li><b>${E(a.memberNumber)}</b> ${E(a.name||'')} · entró a las ${E(this.clock(a.at))} · otra vez a las ${a.repeatTimes.map(t=>E(this.clock(t))).join(', ')}</li>`).join('')}</ul></section>`:''}`;const tiles=[[s.total,'Asistentes en total'],[members,'Socios'],[guests,'No socios'],[unpaid,'Entraron con pago pendiente'],[paid?Math.round(members*100/paid)+'%':'—','De los socios al día'],[s.first||'—','Primera llegada'],[s.half||'—','Ya había entrado la mitad'],[s.lastAccess||'—','Última entrada o acceso']];
   return `${back}${''}<section class="card event-head"><small>${E(this.day(ev.date))}${ev.time?' · '+E(ev.time):''}</small><h3>${E(ev.title)}</h3>${ev.place?`<p>${E(ev.place)}</p>`:''}${ev.active?'<span class="event-live">Activo: contando entradas</span>':''}</section>
   <div class="season-tiles event-tiles">${tiles.map(([v,l])=>`<div class="card"><strong>${E(v)}</strong><small>${l}</small></div>`).join('')}</div>
   ${compare}${box}${extras}
-  <section class="card"><h3>Horas punta de llegada</h3>${s.total?`<p class="event-peak">Más llegadas entre las <strong>${E(peak)}</strong> (${s.top} socios en 15 minutos). Última entrada a las ${E(s.last)}.</p>${this.chart(s.slots,s.top)}`:'<p>Todavía no ha entrado ningún socio.</p>'}</section>
+  <section class="card"><h3>Horas punta de llegada</h3>${s.total?`<p class="event-peak">Más llegadas entre las <strong>${E(peak)}</strong> (${s.top} ${s.top===1?'llegada':'llegadas'} en ${this.stepLabel(s.step)}). Primera entrada a las ${E(s.first)} y última entrada o acceso a las ${E(s.lastAccess)}.</p>${this.chart(s.slots,s.top)}`:'<p>Todavía no ha entrado ningún socio.</p>'}</section>
   <div class="event-downloads"><button type="button" class="auth-primary" data-event-pdf${s.total?'':' disabled'}>Descargar PDF</button><button type="button" class="auth-secondary" data-event-csv${s.total?'':' disabled'}>Descargar datos (CSV)</button><button type="button" class="text-action" data-event-refresh>Actualizar</button></div><p data-event-download role="status"></p>
   <section class="card event-list"><h3>Listado de asistentes (${s.total})</h3>${s.total?`<table><thead><tr><th>Hora</th><th>Nº</th><th>Nombre</th></tr></thead><tbody>${r.attendance.map(a=>`<tr${a.unpaid?' class="event-unpaid"':''}><td>${E(this.clock(a.at))}</td><td>${E(a.memberNumber||'—')}</td><td>${E(a.name)}${a.guest?' · '+E(this.kinds[a.kind]||'Entrada'):''}${a.unpaid?' <span class="event-badge">Falta pago</span>':''}${a.newMember?' <span class="event-badge new">Nueva alta</span>':''}${a.repeats?` <span class="event-badge repeat">Repetido ×${E(a.repeats)}</span>`:''}</td></tr>`).join('')}</tbody></table>`:'<p>Sin entradas registradas.</p>'}</section>`;
  },
@@ -1455,12 +1463,12 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
   const P=window.ClubReportPdf,C=P.colors,r=this.report,ev=r.event,s=this.stats(r.attendance),paid=this.roster?.paid||0,A=r.attendance;
   const guests=A.filter(a=>a.guest),members=A.length-guests.length,unpaid=A.filter(a=>a.unpaid),fresh=A.filter(a=>a.newMember),repeated=A.filter(a=>a.repeats>0),upToDate=members-unpaid.length-fresh.length;
   const kinds=Object.fromEntries(Object.keys(this.kinds).map(k=>[k,guests.filter(a=>a.kind===k).length])),price=Number.isFinite(ev.price)?ev.price:null,revenue=price==null?null:kinds.ticket*price;
-  const cmp=this.season?.events?.find(x=>x.id===ev.id),peak=s.peak?s.peak.map(p=>this.hm(p.from)+'-'+this.hm(p.from+15)).join(', '):'-';
+  const cmp=this.season?.events?.find(x=>x.id===ev.id),peak=s.peak?s.peak.map(p=>this.range(p)).join(', '):'-';
   const k=await P.create('Informe de asistencia · '+ev.title,this.day(ev.date)+(ev.time?' · '+ev.time:''),[ev.place,price==null?'Entrada sin precio':'Entrada: '+P.euro(price),ev.active?'Evento activo (datos en curso)':''].filter(Boolean));
   k.section('Resumen');
   k.tiles([[s.total,'Asistentes en total',C.navy],[members,'Socios',C.blue],[guests.length,'No socios',C.orange],[revenue==null?'-':P.euro(revenue),'Recaudación',C.green],
    [unpaid.length,'Socios con pago pendiente',C.red],[fresh.length,'Nuevas altas en taquilla',C.purple],[paid?Math.round(members*100/paid)+'%':'-','De los socios al día'+(paid?` (${paid})`:''),C.blue],[repeated.reduce((n,a)=>n+a.repeats,0),'Intentos de entrada repetidos',C.red],
-   [s.first||'-','Primera llegada'],[s.half||'-','Ya había entrado la mitad'],[s.last||'-','Última llegada'],[s.top?`${s.top} en 15 min`:'-','Hora punta: '+peak]]);
+   [s.first||'-','Primera llegada'],[s.half||'-','Ya había entrado la mitad'],[s.lastAccess||'-','Última entrada o acceso'],[s.top?`${s.top} en ${this.stepLabel(s.step)}`:'-','Hora punta: '+peak]]);
   k.section('Composición del público','Cada persona cuenta una sola vez, aunque presente el carnet varias veces.');
   k.donut([{label:'Socios al día',value:upToDate,color:C.blue},{label:'Socios con pago pendiente',value:unpaid.length,color:C.red},{label:'Nuevas altas (no están en el listado)',value:fresh.length,color:C.purple},{label:'No socios · entrada de pago',value:kinds.ticket,color:C.orange},{label:'No socios · gratis',value:kinds.free,color:C.green}],{title:'asistentes'});
   const via={qr:A.filter(a=>!a.guest&&a.via!=='manual').length,manual:A.filter(a=>!a.guest&&a.via==='manual').length};
@@ -1479,13 +1487,13 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
    ['Socios (carnet)',String(members),'Incluido','-'],
    ['No socios · entrada de pago',String(kinds.ticket),price==null?'-':P.euro(price),revenue==null?'-':P.euro(revenue)],
    ['No socios · gratis',String(kinds.free),P.euro(0),P.euro(0)]],{total:['Total',String(s.total),'',revenue==null?'-':P.euro(revenue)]});
-  k.section('Llegadas','Entradas registradas en franjas de 15 minutos (hora de Madrid).');
+  k.section('Llegadas',`Desde la primera entrada registrada hasta la última entrada o acceso, en franjas de ${this.stepLabel(s.step||15)} (hora de Madrid).`);
   if(s.total){
-   const slotOf=a=>Math.floor(this.minutes(a.at)/15)*15,per=s.slots.map(sl=>({...sl,members:A.filter(a=>!a.guest&&slotOf(a)===sl.from).length,guests:A.filter(a=>a.guest&&slotOf(a)===sl.from).length}));
-   k.bars({labels:per.map(p=>this.hm(p.from)),series:[{name:'Socios',color:C.blue,values:per.map(p=>p.members)},{name:'No socios',color:C.orange,values:per.map(p=>p.guests)}]});
-   let acc=0;const cum=[{label:this.hm(per[0].from),value:0},...per.map(p=>({label:this.hm(p.from+15),value:acc+=p.count}))];
+   const inSlot=(a,sl,i)=>{const t=Date.parse(a.at);return t>=sl.from&&(i===s.slots.length-1?t<=sl.to||t<sl.from+s.step*60000:t<sl.from+s.step*60000);},per=s.slots.map((sl,i)=>({...sl,members:A.filter(a=>!a.guest&&inSlot(a,sl,i)).length,guests:A.filter(a=>a.guest&&inSlot(a,sl,i)).length}));
+   k.bars({labels:per.map(p=>this.when(p.from)),series:[{name:'Socios',color:C.blue,values:per.map(p=>p.members)},{name:'No socios',color:C.orange,values:per.map(p=>p.guests)}]});
+   let acc=0;const cum=[{label:this.when(per[0].from),value:0},...per.map(p=>({label:this.when(p.to),value:acc+=p.count}))];
    k.line(cum,{caption:'Entradas acumuladas:'});
-   acc=0;k.table([{h:'Franja'},{h:'Llegadas',w:24,align:'right'},{h:'Socios',w:22,align:'right'},{h:'No socios',w:24,align:'right'},{h:'Acumulado',w:26,align:'right'},{h:'% acumulado',w:48}],per.map(p=>{acc+=p.count;return [{t:this.hm(p.from)+' - '+this.hm(p.from+15),bold:p.count===s.top},String(p.count),String(p.members),String(p.guests),String(acc),{bar:acc/s.total,t:Math.round(acc*100/s.total)+'%',fill:C.green}];}));
+   acc=0;k.table([{h:'Franja'},{h:'Llegadas',w:24,align:'right'},{h:'Socios',w:22,align:'right'},{h:'No socios',w:24,align:'right'},{h:'Acumulado',w:26,align:'right'},{h:'% acumulado',w:48}],per.map(p=>{acc+=p.count;return [{t:this.range(p),bold:p.count===s.top},String(p.count),String(p.members),String(p.guests),String(acc),{bar:acc/s.total,t:Math.round(acc*100/s.total)+'%',fill:C.green}];}));
   }else k.paragraph('Todavía no ha entrado nadie.');
   k.section(`Socios con pago pendiente (${unpaid.length})`,'Entraron con el carnet validado pero sin la cuota al día.');
   k.table([{h:'Hora',w:20},{h:'Nº socio',w:24},{h:'Nombre'},{h:'Pagado hasta',w:34}],unpaid.map(a=>[this.clock(a.at),a.memberNumber,a.name||'-',a.paidUntil||'-']));
