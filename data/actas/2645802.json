@@ -381,7 +381,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:39.097138+00:00",
+      "profile_updated_at": "2026-10-15T11:13:51.827277+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 2,
@@ -453,7 +453,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:44.059973+00:00",
+      "profile_updated_at": "2026-10-15T11:13:56.873840+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 4,
@@ -669,7 +669,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:46.071824+00:00",
+      "profile_updated_at": "2026-10-15T11:13:58.890712+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 1,
@@ -813,7 +813,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:42.056422+00:00",
+      "profile_updated_at": "2026-10-15T11:13:54.885238+00:00",
       "competition_summary": {
         "goals": 5,
         "starts": 3,
@@ -1605,7 +1605,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:43.058986+00:00",
+      "profile_updated_at": "2026-10-15T11:13:55.905051+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 2,
@@ -1677,7 +1677,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:40.061590+00:00",
+      "profile_updated_at": "2026-10-15T11:13:52.889652+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 5,
@@ -1749,7 +1749,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T10:14:45.532716+00:00",
+      "profile_updated_at": "2026-10-15T11:14:01.973451+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1965,7 +1965,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:41.054820+00:00",
+      "profile_updated_at": "2026-10-15T11:13:53.879583+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 4,
@@ -2037,7 +2037,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-14T06:50:45.065317+00:00",
+      "profile_updated_at": "2026-10-15T11:13:57.879992+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -2052,7 +2052,63 @@
       "name": "VIGO PATRON, ALEJANDRO",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=232596&codacta=2645802&nueva_ventana=",
       "photo": "https://files.rfaf.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
-      "stats": [],
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -2060,7 +2116,8 @@
         "played": null,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "profile_updated_at": "2026-10-15T21:55:29.120420+00:00"
     }
   ],
   "staff": [],
