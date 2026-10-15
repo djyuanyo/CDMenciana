@@ -5652,7 +5652,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:15.957750+00:00",
+      "profile_updated_at": "2026-10-15T14:33:21.985129+00:00",
       "competition_summary": {}
     },
     {
@@ -5760,7 +5760,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -5790,7 +5790,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:13.421523+00:00",
+      "profile_updated_at": "2026-10-15T14:33:17.977873+00:00",
       "competition_summary": {}
     },
     {
@@ -5829,7 +5829,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -5859,7 +5859,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:17.159357+00:00",
+      "profile_updated_at": "2026-10-15T14:33:23.934148+00:00",
       "competition_summary": {}
     },
     {
@@ -5997,7 +5997,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:14.031694+00:00",
+      "profile_updated_at": "2026-10-15T14:33:18.993377+00:00",
       "competition_summary": {}
     },
     {
@@ -6066,7 +6066,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:17.780706+00:00",
+      "profile_updated_at": "2026-10-15T14:33:24.974581+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -6142,7 +6142,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:16.545309+00:00",
+      "profile_updated_at": "2026-10-15T14:33:22.981935+00:00",
       "competition_summary": {}
     },
     {
@@ -6250,7 +6250,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -6280,7 +6280,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:12.771276+00:00",
+      "profile_updated_at": "2026-10-15T14:33:16.954729+00:00",
       "competition_summary": {}
     },
     {
@@ -6349,7 +6349,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:18.417795+00:00",
+      "profile_updated_at": "2026-10-15T14:33:25.973933+00:00",
       "competition_summary": {}
     },
     {
@@ -6400,7 +6400,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -6430,7 +6430,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:19.041499+00:00",
+      "profile_updated_at": "2026-10-15T14:33:26.971123+00:00",
       "competition_summary": {}
     },
     {
@@ -6499,7 +6499,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:14.670019+00:00",
+      "profile_updated_at": "2026-10-15T14:33:19.971673+00:00",
       "competition_summary": {}
     },
     {
@@ -6580,7 +6580,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:14:15.305808+00:00",
+      "profile_updated_at": "2026-10-15T14:33:20.968528+00:00",
       "competition_summary": {}
     }
   ],
@@ -6608,7 +6608,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-15T11:49:12.603481+00:00",
+  "updated_at": "2026-10-15T14:27:31.270091+00:00",
   "rounds": [
     1,
     2,
@@ -7544,7 +7544,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-15T11:49:13.677556+00:00",
+  "staff_updated_at": "2026-10-15T14:27:32.029824+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-15T14:37:01.559568+00:00"
 }
