@@ -262,7 +262,7 @@ def participant_refs(report_data,refs):
                 if len(matches)==1:selected[person_key(matches[0]['name'])]=matches[0]
     return list(selected.values())
 
-def report(html):
+def report(html,minimum=10):
     root=Document(html).root
     containers=[n for n in root.find('div','container') if any(h.text()=='Ficha de Partido' for h in n.find('h4'))]
     if not containers:raise ValueError('Acta no disponible en la fuente oficial')
@@ -327,7 +327,7 @@ def report(html):
         if n.tag=='br':flush();return
         for c in n.content:walk(c)
     walk(root);flush()
-    if len(blocks)<10:raise ValueError('Incomplete acta')
+    if len(blocks)<minimum:raise ValueError('Incomplete acta')
     raw=raw_player_refs(html)
     for ref in raw:players.setdefault(person_key(ref['name']),ref)
     return {'blocks':blocks,'players':list(players.values()),'staff':staff}
@@ -486,5 +486,37 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
         for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
             target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
         count+=1
+    count+=sync_previews(matches,get,root)
     print(f'Updated {count} public match reports; {linked} player links; {photos} player photos',flush=True)
+    return count
+
+def has_referees(data):
+    """True when the federation page already lists the appointed referees (a table after the «Árbitros» heading)."""
+    blocks=data.get('blocks',[]);seen=False
+    for block in blocks:
+        if block.get('kind')!='table' and normalize(block.get('text','')).strip()=='ARBITROS':seen=True;continue
+        if seen and block.get('kind')=='table':
+            return any(',' in cell for row in block.get('rows',[]) for cell in row)
+    return False
+
+def sync_previews(matches,get,root):
+    """Upcoming matches whose federation page already names the referees are saved as a «ficha previa»."""
+    count=0
+    for match in matches:
+        if out_of_time():break
+        if match.get('played') or not match.get('acta_url'):continue
+        id=urllib.parse.parse_qs(urllib.parse.urlparse(match['acta_url']).query).get('CodActa',[''])[0]
+        if not re.fullmatch(r'[0-9]{1,12}',id):continue
+        try:
+            html=get('https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id)
+            data=report(html,minimum=1)
+        except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
+            print(f'Ficha previa {id} pendiente: {error}',flush=True);continue
+        if not has_referees(data):
+            print(f'Ficha previa {id}: la federación aún no ha designado árbitros',flush=True);continue
+        data.update(id=id,source=match['acta_url'],preview=True,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
+        raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
+        for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
+            target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
+        count+=1
     return count
