@@ -2993,7 +2993,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-16T22:06:38.995792+00:00",
+  "updated_at": "2026-10-16T22:07:44.087876+00:00",
   "rounds": [
     1,
     2,
@@ -3564,7 +3564,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-16T22:06:39.637924+00:00",
+  "staff_updated_at": "2026-10-16T22:07:45.003257+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-16T22:16:53.763926+00:00"
 }
