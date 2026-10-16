@@ -94,13 +94,13 @@
       "date": "2026-10-16",
       "time": "22:00",
       "venue": "Montemayor - POLIDEPORTIVO MUNICIPAL DE MONTEMAYOR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 3,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718121",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718121&cod_acta=2718121",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315"
     },
@@ -1955,7 +1955,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-16T18:51:05.765005+00:00",
+  "updated_at": "2026-10-16T21:14:57.354102+00:00",
   "rounds": [
     1,
     2,
@@ -2407,9 +2407,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-16T18:51:06.493192+00:00",
+  "staff_updated_at": "2026-10-16T21:14:57.764222+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-16T19:00:35.601683+00:00"
+  "details_status": "verified"
 }
