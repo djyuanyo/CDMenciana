@@ -214,13 +214,13 @@
       "date": "2026-10-16",
       "time": "19:00",
       "venue": "Pabellón Baena - ALBENDIN (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 0,
+      "away_score": 2,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745956",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745956&cod_acta=2745956",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780"
     },
@@ -234,7 +234,7 @@
       "date": "2026-10-16",
       "time": "20:00",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
+      "state": "Resultado por verificar",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -307,26 +307,6 @@
     {
       "id": "49520774-4-1",
       "round": 4,
-      "home": "C.D. BOCA F.S. PRIEGO",
-      "away": "C. D. FÚTBOL SALA LUQUE",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
-      "acta_url": ""
-    },
-    {
-      "id": "49520774-4-2",
-      "round": 4,
       "home": "C.D. CABRA F.S.",
       "away": "C.D. ARAS FUTSAL",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000672841_3fc21a5b-e08c-4bf6-ae33-e6b671f9b143.JPG",
@@ -345,7 +325,7 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-3",
+      "id": "49520774-4-2",
       "round": 4,
       "home": "C.D. MIRAGENIL F.S. CODIMAR",
       "away": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
@@ -385,7 +365,7 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-5",
+      "id": "49520774-4-4",
       "round": 4,
       "home": "C.D. ASOC. JUVENIL PALENCIANA",
       "away": "C.D. ENCINAS REALES C.F.",
@@ -402,6 +382,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-4-5",
+      "round": 4,
+      "home": "C.D. BOCA F.S. PRIEGO",
+      "away": "C. D. FÚTBOL SALA LUQUE",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
       "acta_url": ""
     },
     {
@@ -1735,7 +1735,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430"
     }
   ],
-  "results_status": "verified",
+  "results_status": "pending",
   "scorers": [
     {
       "name": "SÁNCHEZ LARA, AITOR",
@@ -2066,7 +2066,7 @@
       "average": 0.5
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=2&codcompeticion=49520234&codtemporada=22&codgrupo=49520774",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=3&codcompeticion=49520234&codtemporada=22&codgrupo=49520774",
   "roster": [
     {
       "name": "JIMENEZ LAMA, LUIS",
@@ -2929,7 +2929,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-16T14:53:30.803262+00:00",
+  "updated_at": "2026-10-16T18:14:01.797150+00:00",
   "rounds": [
     1,
     2,
@@ -3002,7 +3002,7 @@
       "date": "2026-10-16",
       "time": "20:00",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
+      "state": "Resultado por verificar",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -3379,14 +3379,14 @@
       "position": 6,
       "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
       "points": 3,
-      "played": 2,
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
+      "lost": 2,
       "gf": 10,
-      "ga": 13,
-      "gd": -3,
-      "form": "G P",
+      "ga": 15,
+      "gd": -5,
+      "form": "G P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001585668_FB_IMG_1725613168543_2.jpg"
     },
@@ -3407,6 +3407,21 @@
     },
     {
       "position": 8,
+      "team": "C.D. CABRA F.S.",
+      "points": 3,
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "gf": 2,
+      "ga": 19,
+      "gd": -17,
+      "form": "P P G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000672841_3fc21a5b-e08c-4bf6-ae33-e6b671f9b143.JPG"
+    },
+    {
+      "position": 9,
       "team": "C.D. ARAS FUTSAL",
       "points": 0,
       "played": 2,
@@ -3421,7 +3436,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     },
     {
-      "position": 9,
+      "position": 10,
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "points": 0,
       "played": 2,
@@ -3434,24 +3449,9 @@
       "form": "P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
-    },
-    {
-      "position": 10,
-      "team": "C.D. CABRA F.S.",
-      "points": 0,
-      "played": 2,
-      "won": 0,
-      "drawn": 0,
-      "lost": 2,
-      "gf": 0,
-      "ga": 19,
-      "gd": -19,
-      "form": "P P",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000672841_3fc21a5b-e08c-4bf6-ae33-e6b671f9b143.JPG"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codgrupo=49520774&codcompeticion=49520234&codjornada=2",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=3&codcompeticion=49520234&codgrupo=49520774&codjornada=3",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3501,8 +3501,6 @@
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
   "staff_updated_at": "2026-10-16T14:53:31.656857+00:00",
-  "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-16T15:02:46.681323+00:00"
+  "staff_status": "cached",
+  "details_status": "verified"
 }
