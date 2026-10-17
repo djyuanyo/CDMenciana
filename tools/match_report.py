@@ -527,7 +527,7 @@ def sync_recent_reports(matches,get,root,now=None):
     now=now or datetime.datetime.now(datetime.timezone.utc)
     count=0;seen=set()
     # Newest first: an unavailable old report cannot hold up today's match.
-    for match in sorted(matches,key=lambda m:(m.get('date',''),m.get('round',0)),reverse=True):
+    for match in sorted(matches,key=lambda m:(bool(m.get('played')),m.get('date',''),m.get('round',0)),reverse=True):
         age=since((match.get('date') or '')+'T00:00:00+00:00',now)
         if age is None or not -datetime.timedelta(days=7)<=age<=datetime.timedelta(days=7):continue
         id=urllib.parse.parse_qs(urllib.parse.urlparse(match.get('acta_url','')).query).get('CodActa',[''])[0]

@@ -1,4 +1,4 @@
-"""Update only recent actas from the latest verified calendars."""
+"""Update recent actas from all verified calendars, newest played matches first."""
 import json
 from sync_fixtures import ROOT
 from rfaf_browser import PublicBrowserReader
@@ -8,12 +8,14 @@ from official_rfaf import TEAMS
 from match_report import sync_recent_reports
 
 def sync():
+    matches=[]
+    for team in load_teams() or TEAMS.values():
+        try:
+            snapshot=json.loads((ROOT/'data'/team['filename']).read_text())
+            matches.extend(snapshot.get('round_matches',snapshot.get('matches',[])))
+        except (OSError,ValueError) as error:
+            print(f"::warning::{team['label']}: calendario no disponible ({error})",flush=True)
     with PublicBrowserReader() as browser:
         reader=PublicHTTPReader(browser)
-        for team in load_teams() or TEAMS.values():
-            try:
-                snapshot=json.loads((ROOT/'data'/team['filename']).read_text())
-                sync_recent_reports(snapshot.get('round_matches',snapshot.get('matches',[])),reader.get,ROOT)
-            except (OSError,ValueError) as error:
-                print(f"::warning::{team['label']}: se conserva la última acta válida ({error})",flush=True)
+        sync_recent_reports(matches,reader.get,ROOT)
 if __name__=='__main__':sync()

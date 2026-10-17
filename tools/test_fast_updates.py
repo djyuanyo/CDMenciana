@@ -35,6 +35,12 @@ class FastReports(unittest.TestCase):
         older={**self.match,'date':'2026-09-01','acta_url':self.match['acta_url'].replace('123','99')}
         with patch.object(reports,'report',return_value={'blocks':[{'text':'Fresh'}]*10,'players':[]}) as parser:
             self.assertEqual(self.run_sync([older,self.match,self.match]),1);self.assertEqual(parser.call_count,1)
+    def test_played_matches_take_priority_over_future_previews(self):
+        future={**self.match,'date':'2026-10-20','played':False,'acta_url':self.match['acta_url'].replace('123','456')}
+        urls=[]
+        def get(url):urls.append(url);return 'official HTML'
+        with patch.object(reports,'report',return_value={'blocks':[{'text':'Fresh'}]*10,'players':[]}):reports.sync_recent_reports([future,self.match],get,self.root,NOW)
+        self.assertTrue(urls[0].endswith('CodActa=123'))
     def test_partial_refresh_preserves_participant_stats_and_portrait(self):
         url='https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?jugador=12'
         self.old['players']=[{'name':'PLAYER, ONE','profile_url':url,'photo':'portrait','stats':[{'goals':2}],'competition_summary':{'goals':2}}];self.save(self.old)
