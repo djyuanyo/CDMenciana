@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "3 - 0",
+          "5 - 0",
           ""
         ]
       ]
@@ -74,6 +74,35 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(3') GARCIA MARIN, ALFONSO"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(14') SANCHEZ CASTRO, DANIEL"
+        ],
+        [
+          "Gol en propia puerta · 3 - 0",
+          "(18') CABEZAS CORDOBA, RAUL"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(28') LOPEZ CHAVARINO, ENRIQUE"
+        ],
+        [
+          "Gol · 5 - 0",
+          "(32') GARCIA MARIN, ALFONSO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -212,6 +241,19 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(32') ARIZA NOGALES, CARLOS"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. APAGA Y VAMONOS"
     },
@@ -315,6 +357,19 @@
         [
           "",
           "LOZANO GARCIA, JULIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(34') RUZ BUJALANCE, FRANCISCO JOSE"
         ]
       ]
     }
@@ -493,6 +548,5 @@
   ],
   "id": "2718119",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718119",
-  "updated_at": "2026-10-17T18:47:47.391945+00:00",
-  "preview": true
+  "updated_at": "2026-10-17T19:25:15.550217+00:00"
 }
