@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "1 - 2",
+          "1 - 3",
           ""
         ]
       ]
@@ -74,6 +74,31 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(4') LEÑA FERNÁNDEZ, SAMUEL"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(14') CORTABARRA CASTELLON, AGUSTIN"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(14') REQUENA SANCHEZ, ALBERTO"
+        ],
+        [
+          "Gol · 1 - 3",
+          "(21') LEÑA FERNÁNDEZ, SAMUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -226,6 +251,19 @@
         [
           "",
           "GUTIERREZ GUTIERREZ, JESUS"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(14') HERRERA GARCIA, LUIS ANGEL"
         ]
       ]
     },
@@ -556,6 +594,5 @@
   ],
   "id": "2645809",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645809",
-  "updated_at": "2026-10-17T19:25:15.550217+00:00",
-  "preview": true
+  "updated_at": "2026-10-17T21:04:49.733940+00:00"
 }
