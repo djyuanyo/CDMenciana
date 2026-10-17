@@ -1034,8 +1034,6 @@
     "staff_updated_at": "2026-10-17T09:40:21.014918+00:00",
     "club_photos": {
       "1": "https://cdmenciana.es/images/jugadores/raton.webp",
-      "15": "https://cdmenciana.es/images/jugadores/melli.webp",
-      "25": "https://cdmenciana.es/images/jugadores/alex.webp?v=2",
       "4": "https://cdmenciana.es/images/jugadores/campitos.webp",
       "5": "https://cdmenciana.es/images/jugadores/cala.webp?v=2",
       "7": "https://cdmenciana.es/images/jugadores/mara.webp",
@@ -1044,16 +1042,16 @@
       "10": "https://cdmenciana.es/images/jugadores/david.webp",
       "11": "https://cdmenciana.es/images/jugadores/jesus.webp?v=2",
       "13": "https://cdmenciana.es/images/jugadores/keko.webp",
+      "15": "https://cdmenciana.es/images/jugadores/melli.webp",
       "20": "https://cdmenciana.es/images/jugadores/juanbo.webp",
       "21": "https://cdmenciana.es/images/jugadores/adri-luna.webp?v=2",
       "22": "https://cdmenciana.es/images/jugadores/borrallo.webp",
       "23": "https://cdmenciana.es/images/jugadores/isaac.webp",
+      "25": "https://cdmenciana.es/images/jugadores/alex.webp?v=2",
       "27": "https://cdmenciana.es/images/jugadores/tetur.webp"
     },
     "club_positions": {
       "1": "Portero",
-      "15": "Portero",
-      "25": "Portero",
       "4": "Jugador de pista",
       "5": "Jugador de pista",
       "7": "Jugador de pista",
@@ -1062,10 +1060,12 @@
       "10": "Jugador de pista",
       "11": "Jugador de pista",
       "13": "Jugador de pista",
+      "15": "Portero",
       "20": "Jugador de pista",
       "21": "Jugador de pista",
       "22": "Jugador de pista",
       "23": "Jugador de pista",
+      "25": "Portero",
       "27": "Jugador de pista"
     }
   },
@@ -1790,8 +1790,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19437880&codacta=2745957&nueva_ventana=",
         "rfaf_id": "19437880",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "1"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "0.5"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:36.936399+00:00",
         "competition_summary": {
           "goals": 1,
           "starts": 2,
@@ -1810,8 +1866,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988843&codacta=2745957&nueva_ventana=",
         "rfaf_id": "31988843",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Tarjeta amarilla",
+                "1"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "2"
+              ],
+              [
+                "Goles por partido",
+                "1.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:34.428506+00:00",
         "competition_summary": {
           "goals": 5,
           "starts": 2,
@@ -1830,8 +1942,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31985180&codacta=2745957&nueva_ventana=",
         "rfaf_id": "31985180",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "1.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-09T06:31:14.165722+00:00",
         "competition_summary": {
           "goals": 1,
           "starts": 0,
@@ -1850,8 +2018,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32017118&codacta=2745957&nueva_ventana=",
         "rfaf_id": "32017118",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "1"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "1"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:35.056393+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1870,8 +2094,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19379013&codacta=2745957&nueva_ventana=",
         "rfaf_id": "19379013",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "2"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "3"
+              ],
+              [
+                "Goles por partido",
+                "1.5"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:31.927152+00:00",
         "competition_summary": {
           "goals": 5,
           "starts": 3,
@@ -1890,8 +2170,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19438020&codacta=2745957&nueva_ventana=",
         "rfaf_id": "19438020",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "2"
+              ],
+              [
+                "Suplente",
+                "0"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "0.5"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:32.579344+00:00",
         "competition_summary": {
           "goals": 3,
           "starts": 3,
@@ -1910,8 +2246,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988981&codacta=2745957&nueva_ventana=",
         "rfaf_id": "31988981",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:35.682002+00:00",
         "competition_summary": {
           "goals": 2,
           "starts": 1,
@@ -1930,8 +2322,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31986770&codacta=2745957&nueva_ventana=",
         "rfaf_id": "31986770",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "7"
+              ],
+              [
+                "Goles por partido",
+                "3.5"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:33.194107+00:00",
         "competition_summary": {
           "goals": 11,
           "starts": 2,
@@ -1950,8 +2398,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19431860&codacta=2745957&nueva_ventana=",
         "rfaf_id": "19431860",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "0"
+              ],
+              [
+                "Suplente",
+                "2"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "2"
+              ],
+              [
+                "Goles por partido",
+                "1.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:36.308528+00:00",
         "competition_summary": {
           "goals": 2,
           "starts": 0,
@@ -1970,8 +2474,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19378941&codacta=2745957&nueva_ventana=",
         "rfaf_id": "19378941",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Goles por partido",
+                "0.0"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:31.257487+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -1990,8 +2550,64 @@
         "acta_id": "2745957",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31569868&codacta=2745957&nueva_ventana=",
         "rfaf_id": "31569868",
-        "stats": [],
-        "profile_updated_at": "",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "2"
+              ],
+              [
+                "Titular",
+                "1"
+              ],
+              [
+                "Suplente",
+                "1"
+              ],
+              [
+                "Jugados",
+                "2"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "0.5"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-11T11:29:33.818144+00:00",
         "competition_summary": {
           "goals": 2,
           "starts": 1,
