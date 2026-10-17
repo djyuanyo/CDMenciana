@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T09:46:09.373090+00:00",
+  "updated_at": "2026-10-17T10:24:32.463326+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5872&codacta=2718115&nueva_ventana=": {
       "name": "COBOS NAVARRO, RUBEN",
@@ -453,9 +453,64 @@
       "name": "ALONZO CASTILLO, ANGEL LUIS",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=87612&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:33.240715+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:33.102534+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=48960866&codacta=2718115&nueva_ventana=": {
       "name": "MOLERO ARJONA, JUAN BAUTISTA",
@@ -519,39 +574,259 @@
         }
       ],
       "updated_at": "2026-10-07T16:23:59.548589+00:00",
-      "failed_at": "2026-10-16T22:15:58.269283+00:00"
+      "failed_at": "2026-10-17T10:25:39.901217+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18647&codacta=2718115&nueva_ventana=": {
       "name": "LARA GARCIA, JUAN FRANCISCO",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18647&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:34.232985+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:34.097088+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18658&codacta=2718115&nueva_ventana=": {
       "name": "MORENO LINARES, JUAN FRANCISCO",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18658&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:35.424449+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:35.087374+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=268434&codacta=2718115&nueva_ventana=": {
       "name": "PULIDO MORAL, JOSÉ MARÍA",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=268434&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:36.254790+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:36.092451+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=278413&codacta=2718115&nueva_ventana=": {
       "name": "ARANDA SANTIESTEBAN, PAULINO",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=278413&codacta=2718115&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:37.241896+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:37.133308+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42612&codacta=2718115&nueva_ventana=": {
       "name": "GARCIA MARIN, ALFONSO",
@@ -2349,25 +2624,190 @@
       "name": "VELASCO AGUILAR, FRANCISCO J",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=558858&codacta=2718116&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:53.245369+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:38.103399+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=506849&codacta=2718116&nueva_ventana=": {
       "name": "ROSUA ORTIZ, JORGE",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=506849&codacta=2718116&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:50.243405+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:39.138028+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4289275&codacta=2718116&nueva_ventana=": {
       "name": "ROSUA HURTADO, PABLO",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4289275&codacta=2718116&nueva_ventana=",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-16T22:14:59.236603+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-17T10:24:40.087018+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=294102&codacta=2718116&nueva_ventana=": {
       "name": "RUIZ MARMOL, JUAN MANUEL",
@@ -2375,7 +2815,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:14:56.238332+00:00"
+      "failed_at": "2026-10-17T10:24:55.884822+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5092056&codacta=2718116&nueva_ventana=": {
       "name": "ROSUA ORTIZ, SAUL",
@@ -2383,7 +2823,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:14:57.236271+00:00"
+      "failed_at": "2026-10-17T10:24:56.897950+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45634469&codacta=2718116&nueva_ventana=": {
       "name": "MOYANO PRIETO, JORGE",
@@ -2391,7 +2831,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:14.236102+00:00"
+      "failed_at": "2026-10-17T10:24:57.915380+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319933&codacta=2718117&nueva_ventana=": {
       "name": "GOMEZ CABALLERO, FELIPE",
@@ -2399,7 +2839,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:13.243886+00:00"
+      "failed_at": "2026-10-17T10:24:58.876708+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=320868&codacta=2718117&nueva_ventana=": {
       "name": "CABRERA ROLDAN, RAFAEL",
@@ -2407,7 +2847,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:12.264722+00:00"
+      "failed_at": "2026-10-17T10:24:59.915133+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50490039&codacta=2718117&nueva_ventana=": {
       "name": "AGUNDO MEJIAS, DAVID",
@@ -2415,7 +2855,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:21.246689+00:00"
+      "failed_at": "2026-10-17T10:25:15.895860+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319898&codacta=2718117&nueva_ventana=": {
       "name": "CASAS VIVAR, ANTONIO",
@@ -2423,7 +2863,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:15.305944+00:00"
+      "failed_at": "2026-10-17T10:25:16.906919+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18763&codacta=2718117&nueva_ventana=": {
       "name": "BERGILLOS PORRAS, ALBERTO",
@@ -2431,7 +2871,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:32.249015+00:00"
+      "failed_at": "2026-10-17T10:25:17.881442+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37030953&codacta=2718117&nueva_ventana=": {
       "name": "GONZÁLEZ LEÓN, PABLO",
@@ -2439,7 +2879,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:33.257466+00:00"
+      "failed_at": "2026-10-17T10:25:18.904114+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81839&codacta=2718117&nueva_ventana=": {
       "name": "MORALES MUÑOZ, JUAN CARLOS",
@@ -2447,7 +2887,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:34.240593+00:00"
+      "failed_at": "2026-10-17T10:25:19.911774+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=77524&codacta=2718117&nueva_ventana=": {
       "name": "MORILLO AREVALO, RAFAEL",
@@ -2455,7 +2895,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:35.662852+00:00"
+      "failed_at": "2026-10-17T10:25:35.905158+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42475&codacta=2718117&nueva_ventana=": {
       "name": "LUQUE JIMENEZ, JACOB LUIS",
@@ -2463,7 +2903,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:41.276207+00:00"
+      "failed_at": "2026-10-17T10:25:36.895085+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42593&codacta=2718117&nueva_ventana=": {
       "name": "CASTRO VERA, MANUEL",
@@ -2527,7 +2967,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:03.163024+00:00",
-      "failed_at": "2026-10-16T22:16:01.260181+00:00"
+      "failed_at": "2026-10-17T10:25:56.924943+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=318784&codacta=2718117&nueva_ventana=": {
       "name": "GAMIZ FERNANDEZ, FRANCISCO",
@@ -2591,7 +3031,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:03.343793+00:00",
-      "failed_at": "2026-10-16T22:16:09.270088+00:00"
+      "failed_at": "2026-10-17T10:25:57.912684+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=506415&codacta=2718117&nueva_ventana=": {
       "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
@@ -2655,7 +3095,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:02.657573+00:00",
-      "failed_at": "2026-10-16T22:15:55.266753+00:00"
+      "failed_at": "2026-10-17T10:25:55.886388+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45690391&codacta=2718117&nueva_ventana=": {
       "name": "POLONIO PEREZ, JESUS",
@@ -2735,7 +3175,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.672252+00:00",
-      "failed_at": "2026-10-16T22:16:11.258574+00:00"
+      "failed_at": "2026-10-17T10:25:59.894048+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=48004114&codacta=2718117&nueva_ventana=": {
       "name": "MONTERO SALAS, FELIPE",
@@ -2799,7 +3239,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.817304+00:00",
-      "failed_at": "2026-10-16T22:16:18.247911+00:00"
+      "failed_at": "2026-10-17T10:26:11.887610+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=112382&codacta=2718117&nueva_ventana=": {
       "name": "ESPEJO CARMONA, FRANCISCO MANUEL",
@@ -2863,7 +3303,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.512768+00:00",
-      "failed_at": "2026-10-16T22:16:12.258275+00:00"
+      "failed_at": "2026-10-17T10:25:58.900020+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=276987&codacta=2718117&nueva_ventana=": {
       "name": "ZARCOS PAREDES, IVAN",
@@ -2927,7 +3367,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.983369+00:00",
-      "failed_at": "2026-10-16T22:16:31.247952+00:00"
+      "failed_at": "2026-10-17T10:26:18.898292+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18036697&codacta=2718117&nueva_ventana=": {
       "name": "PULIDO CUENCA, MARIO",
@@ -2991,7 +3431,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.651275+00:00",
-      "failed_at": "2026-10-16T22:16:25.252297+00:00"
+      "failed_at": "2026-10-17T10:26:20.899345+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49942173&codacta=2718117&nueva_ventana=": {
       "name": "LOPEZ PINTOR, CRISTIAN",
@@ -3055,7 +3495,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.972738+00:00",
-      "failed_at": "2026-10-16T22:16:29.245195+00:00"
+      "failed_at": "2026-10-17T10:26:17.912507+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=83278&codacta=2718117&nueva_ventana=": {
       "name": "VARO PALMA, JESUS",
@@ -3119,7 +3559,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:33.644004+00:00",
-      "failed_at": "2026-10-16T22:16:45.257970+00:00"
+      "failed_at": "2026-10-17T10:26:38.303869+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40231436&codacta=2718117&nueva_ventana=": {
       "name": "SERRANO AGUILERA, RAUL",
@@ -3183,7 +3623,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:33.433662+00:00",
-      "failed_at": "2026-10-16T22:16:38.249416+00:00"
+      "failed_at": "2026-10-17T10:26:32.298345+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=470456&codacta=2718117&nueva_ventana=": {
       "name": "TORREBLANCA SOLIS, CRISTIAN",
@@ -3247,7 +3687,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:33.270352+00:00",
-      "failed_at": "2026-10-16T22:16:32.258567+00:00"
+      "failed_at": "2026-10-17T10:26:19.907668+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7257039&codacta=2718118&nueva_ventana=": {
       "name": "ROSALES MORAL, ESTEBAN",
@@ -3311,7 +3751,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:44.452124+00:00",
-      "failed_at": "2026-10-16T22:16:50.264315+00:00"
+      "failed_at": "2026-10-17T10:26:40.277328+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=79517&codacta=2718118&nueva_ventana=": {
       "name": "JIMENEZ POYATO, VICTOR",
@@ -3375,7 +3815,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:44.695189+00:00",
-      "failed_at": "2026-10-16T22:16:53.251981+00:00"
+      "failed_at": "2026-10-17T10:26:44.525154+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=29702425&codacta=2718118&nueva_ventana=": {
       "name": "BARBA VALVERDE, DIEGO",
@@ -3439,7 +3879,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:44.610982+00:00",
-      "failed_at": "2026-10-16T22:16:51.259360+00:00"
+      "failed_at": "2026-10-17T10:26:41.357681+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2169707&codacta=2718118&nueva_ventana=": {
       "name": "CONTRERAS GOMEZ, DAVID",
@@ -3567,7 +4007,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:44.441059+00:00",
-      "failed_at": "2026-10-16T22:16:49.267626+00:00"
+      "failed_at": "2026-10-17T10:26:39.304180+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81881&codacta=2718118&nueva_ventana=": {
       "name": "JIMENEZ ROMERO, CARLOS",
@@ -5175,7 +5615,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:52.245375+00:00"
+      "failed_at": "2026-10-17T10:25:37.900922+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=459288&codacta=2718121&nueva_ventana=": {
       "name": "HUESO PRIEGO, HUGO",
@@ -5183,7 +5623,7 @@
       "photo_source": "",
       "sections": [],
       "updated_at": "",
-      "failed_at": "2026-10-16T22:15:49.265707+00:00"
+      "failed_at": "2026-10-17T10:25:38.885488+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=9504127&codacta=2718121&nueva_ventana=": {
       "name": "ESQUIVEL FERNANDEZ, MARCELO",
@@ -5247,7 +5687,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.672252+00:00",
-      "failed_at": "2026-10-16T22:16:11.258574+00:00"
+      "failed_at": "2026-10-17T10:25:59.894048+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=48004114&codacta=2718121&nueva_ventana=": {
       "name": "MONTERO SALAS, FELIPE",
@@ -5311,7 +5751,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.817304+00:00",
-      "failed_at": "2026-10-16T22:16:18.247911+00:00"
+      "failed_at": "2026-10-17T10:26:11.887610+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=112382&codacta=2718121&nueva_ventana=": {
       "name": "ESPEJO CARMONA, FRANCISCO MANUEL",
@@ -5375,7 +5815,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:10.512768+00:00",
-      "failed_at": "2026-10-16T22:16:12.258275+00:00"
+      "failed_at": "2026-10-17T10:25:58.900020+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=276987&codacta=2718121&nueva_ventana=": {
       "name": "ZARCOS PAREDES, IVAN",
@@ -5439,7 +5879,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.983369+00:00",
-      "failed_at": "2026-10-16T22:16:31.247952+00:00"
+      "failed_at": "2026-10-17T10:26:18.898292+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18036697&codacta=2718121&nueva_ventana=": {
       "name": "PULIDO CUENCA, MARIO",
@@ -5503,7 +5943,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.651275+00:00",
-      "failed_at": "2026-10-16T22:16:25.252297+00:00"
+      "failed_at": "2026-10-17T10:26:20.899345+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49942173&codacta=2718121&nueva_ventana=": {
       "name": "LOPEZ PINTOR, CRISTIAN",
@@ -5567,7 +6007,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:22.972738+00:00",
-      "failed_at": "2026-10-16T22:16:29.245195+00:00"
+      "failed_at": "2026-10-17T10:26:17.912507+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40231436&codacta=2718121&nueva_ventana=": {
       "name": "SERRANO AGUILERA, RAUL",
@@ -5631,7 +6071,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:33.433662+00:00",
-      "failed_at": "2026-10-16T22:16:38.249416+00:00"
+      "failed_at": "2026-10-17T10:26:32.298345+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=470456&codacta=2718121&nueva_ventana=": {
       "name": "TORREBLANCA SOLIS, CRISTIAN",
@@ -5695,7 +6135,7 @@
         }
       ],
       "updated_at": "2026-10-07T16:29:33.270352+00:00",
-      "failed_at": "2026-10-16T22:16:32.258567+00:00"
+      "failed_at": "2026-10-17T10:26:19.907668+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=43911&codacta=2718121&nueva_ventana=": {
       "name": "ARCE CID, CARLOS",
