@@ -260,7 +260,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745958",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745958&cod_acta=2745958",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923"
     },
@@ -2993,7 +2993,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-17T16:29:08.549075+00:00",
+  "updated_at": "2026-10-17T17:10:35.039297+00:00",
   "rounds": [
     1,
     2,
@@ -3366,6 +3366,21 @@
   "standings": [
     {
       "position": 1,
+      "team": "C.D. TOXAR",
+      "points": 9,
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 35,
+      "ga": 4,
+      "gd": 31,
+      "form": "G G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png"
+    },
+    {
+      "position": 2,
       "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
       "points": 9,
       "played": 3,
@@ -3380,32 +3395,17 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png"
     },
     {
-      "position": 2,
-      "team": "C.D. TOXAR",
-      "points": 6,
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 24,
-      "ga": 4,
-      "gd": 20,
-      "form": "G G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png"
-    },
-    {
       "position": 3,
       "team": "C.D. ENCINAS REALES C.F.",
       "points": 6,
-      "played": 2,
+      "played": 3,
       "won": 2,
       "drawn": 0,
-      "lost": 0,
+      "lost": 1,
       "gf": 12,
-      "ga": 2,
-      "gd": 10,
-      "form": "G G",
+      "ga": 13,
+      "gd": -1,
+      "form": "G G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
     },
