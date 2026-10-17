@@ -134,13 +134,13 @@
       "date": "2026-10-17",
       "time": "20:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795"
     },
@@ -1084,6 +1084,14 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "GARCIA MARIN, ALFONSO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
       "name": "PINO AGUILAR, PABLO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
@@ -1132,6 +1140,22 @@
       "average": 1.0
     },
     {
+      "name": "LOPEZ CHAVARINO, ENRIQUE",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SANCHEZ CASTRO, DANIEL",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "CASTRO VERA, MANUEL",
       "team": "C.D. EGA FUTSAL",
       "played": 0,
@@ -1156,40 +1180,8 @@
       "average": 1.0
     },
     {
-      "name": "HURTADO MOLINA, CRISTOBAL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "LOPEZ CHAVARINO, SERGIO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "SOTO CORTES, RAMON",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ROPERO LUQUE, ANTONIO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "LOPEZ CHAVARINO, ENRIQUE",
-      "team": "C.D. CARCABUEY",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1212,40 +1204,8 @@
       "average": 1.0
     },
     {
-      "name": "SANCHEZ CASTRO, DANIEL",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RUIZ MARMOL, JUAN MANUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RAMIREZ REINA, JOSE",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
       "team": "C.D. APAGA Y VAMONOS",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "GARCIA MARIN, ALFONSO",
-      "team": "C.D. CARCABUEY",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1276,8 +1236,32 @@
       "average": 0.5
     },
     {
+      "name": "RUIZ MARMOL, JUAN MANUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "SANTAELLA GOMEZ, JOSE ANTONIO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
+      "team": "C.D. VILLA DE BENAMEJI",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RAMIREZ REINA, JOSE",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1292,8 +1276,40 @@
       "average": 0.5
     },
     {
+      "name": "ROPERO LUQUE, ANTONIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "CABELLO MORON, ALVARO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTÍN BORREGO, SAMUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LOPEZ CHAVARINO, SERGIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "HURTADO MOLINA, CRISTOBAL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1308,7 +1324,7 @@
       "average": null
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=1&codcompeticion=49113015&codtemporada=22&codgrupo=49113036",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=2&codcompeticion=49113015&codtemporada=22&codgrupo=49113036",
   "roster": [
     {
       "name": "JIMENEZ ROMERO, CARLOS",
@@ -2019,7 +2035,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-17T18:46:49.578861+00:00",
+  "updated_at": "2026-10-17T19:24:17.643930+00:00",
   "rounds": [
     1,
     2,
@@ -2068,13 +2084,13 @@
       "date": "2026-10-17",
       "time": "20:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795"
     },
@@ -2311,6 +2327,36 @@
   "standings": [
     {
       "position": 1,
+      "team": "C.D. CARCABUEY",
+      "points": 6,
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 11,
+      "ga": 0,
+      "gd": 11,
+      "form": "G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
+    },
+    {
+      "position": 2,
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "points": 6,
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 11,
+      "ga": 8,
+      "gd": 3,
+      "form": "G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
+    },
+    {
+      "position": 3,
       "team": "C.D. EGA FUTSAL",
       "points": 3,
       "played": 1,
@@ -2325,52 +2371,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png"
     },
     {
-      "position": 2,
-      "team": "C.D. CARCABUEY",
-      "points": 3,
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 6,
-      "ga": 0,
-      "gd": 6,
-      "form": "G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
-    },
-    {
-      "position": 3,
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "points": 3,
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "form": "G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
-    },
-    {
       "position": 4,
-      "team": "C.D. APAGA Y VAMONOS",
-      "points": 1,
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "form": "E",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
-    },
-    {
-      "position": 5,
       "team": "C.D. FUTBOL SALA LUQUE",
       "points": 1,
       "played": 1,
@@ -2385,32 +2386,47 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
     },
     {
-      "position": 6,
+      "position": 5,
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "points": 0,
-      "played": 1,
+      "points": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "gf": 3,
-      "ga": 4,
+      "gf": 4,
+      "ga": 5,
       "gd": -1,
-      "form": "P",
+      "form": "P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png"
     },
     {
+      "position": 6,
+      "team": "C.D. APAGA Y VAMONOS",
+      "points": 1,
+      "played": 2,
+      "won": 0,
+      "drawn": 1,
+      "lost": 1,
+      "gf": 1,
+      "ga": 6,
+      "gd": -5,
+      "form": "E P",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
+    },
+    {
       "position": 7,
       "team": "C.D. VILLA DE BENAMEJI",
-      "points": 0,
-      "played": 1,
+      "points": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "gf": 0,
-      "ga": 6,
+      "gf": 1,
+      "ga": 7,
       "gd": -6,
-      "form": "P",
+      "form": "P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png"
     },
@@ -2418,19 +2434,19 @@
       "position": 8,
       "team": "C.D. MONTILLA FUTSAL",
       "points": 0,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "gf": 0,
-      "ga": 10,
-      "gd": -10,
-      "form": "P",
+      "lost": 2,
+      "gf": 5,
+      "ga": 17,
+      "gd": -12,
+      "form": "P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codgrupo=49113036&codcompeticion=49113015&codjornada=1",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=2&codcompeticion=49113015&codgrupo=49113036&codjornada=2",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -2471,7 +2487,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-17T18:46:50.478583+00:00",
+  "staff_updated_at": "2026-10-17T19:24:18.409438+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
