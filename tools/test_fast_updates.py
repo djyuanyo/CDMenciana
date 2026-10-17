@@ -37,10 +37,10 @@ class FastReports(unittest.TestCase):
             self.assertEqual(self.run_sync([older,self.match,self.match]),1);self.assertEqual(parser.call_count,1)
     def test_partial_refresh_preserves_participant_stats_and_portrait(self):
         url='https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?jugador=12'
-        self.old['players']=[{'name':'PLAYER, ONE','profile_url':url,'photo':'portrait','stats':[{'goals':2}]}];self.save(self.old)
+        self.old['players']=[{'name':'PLAYER, ONE','profile_url':url,'photo':'portrait','stats':[{'goals':2}],'competition_summary':{'goals':2}}];self.save(self.old)
         with patch.object(reports,'report',return_value={'blocks':[{'text':'Fresh'}]*10,'players':[{'name':'PLAYER, ONE','profile_url':url}]}):self.run_sync()
         player=json.loads((self.root/'data/actas/123.json').read_text())['players'][0]
-        self.assertEqual(player['photo'],'portrait');self.assertEqual(player['stats'],[{'goals':2}])
+        self.assertEqual(player['photo'],'portrait');self.assertEqual(player['stats'],[{'goals':2}]);self.assertEqual(player['competition_summary'],{'goals':2})
     def test_next_match_without_referees_does_not_replace_saved_report(self):
         before=(self.root/'data/actas/123.json').read_bytes()
         with patch.object(reports,'report',return_value={'blocks':[{'kind':'paragraph','text':'Pending'}],'players':[]}):self.assertEqual(self.run_sync([{**self.match,'played':False}]),0)

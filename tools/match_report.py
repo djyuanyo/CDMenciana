@@ -545,6 +545,11 @@ def sync_recent_reports(matches,get,root,now=None):
             data.update(id=id,source=url,updated_at=now.isoformat())
             if not match.get('played'):data['preview']=True
             data=merge_saved_players(data,old)
+            saved={player_identity(p):p for p in old.get('players',[])}
+            for player in data.get('players',[]):
+                previous=saved.get(player_identity(player),{})
+                for field in ('competition_summary','rfaf_id','acta_id'):
+                    if field not in player and field in previous:player[field]=previous[field]
         except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
             print(f'Acta rápida {id}: se conserva la última copia válida ({error})',flush=True)
             continue
