@@ -415,7 +415,15 @@ def report_roster(matches,team):
                 if len(cells)<2 or not cells[0].isdigit():continue
                 name=' '.join(cells[1:]);ref=refs.get(normalize(name),{})
                 rfaf_id=urllib.parse.parse_qs(urllib.parse.urlparse(ref.get('profile_url','')).query).get('jugador',[''])[0]
+                known=players.get(normalize(name),{})
                 players[normalize(name)]=dict(name=name,number=int(cells[0]),position='Jugador de pista',photo=ref.get('photo',''),id=ref.get('id',''),acta_id=acta,profile_url=ref.get('profile_url',''),rfaf_id=rfaf_id,stats=ref.get('stats',[]),profile_updated_at=ref.get('profile_updated_at',''),competition_summary=ref.get('competition_summary',{}))
+                current=players[normalize(name)]
+                if rfaf_id and known.get('rfaf_id')==rfaf_id:
+                    if not current['stats'] and known.get('stats'):
+                        current['stats']=known['stats'];current['profile_updated_at']=known.get('profile_updated_at','')
+                    if not current['photo']:current['photo']=known.get('photo','')
+                    if not current['competition_summary']:current['competition_summary']=known.get('competition_summary',{})
+
     return sorted(players.values(),key=lambda p:(p['number'],p['name']))
 
 def sync_all(with_profiles=True):
@@ -442,4 +450,5 @@ def sync_all(with_profiles=True):
     # Keep a failing run when no team could be refreshed.
     if not updated and errors:raise RuntimeError('No se pudo actualizar ningún equipo') from errors[0]
 if __name__=='__main__':sync_all()
+
 
