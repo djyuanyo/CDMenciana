@@ -252,15 +252,15 @@
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png",
       "date": "2026-10-17",
-      "time": "18:00",
+      "time": "17:50",
       "venue": "Encinas Reales - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 0,
+      "away_score": 13,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745958&cod_acta=2745958",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745958&cod_acta=2745958",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923"
     },
@@ -2993,7 +2993,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-17T17:11:50.080325+00:00",
+  "updated_at": "2026-10-17T18:47:09.177921+00:00",
   "rounds": [
     1,
     2,
@@ -3372,9 +3372,9 @@
       "won": 3,
       "drawn": 0,
       "lost": 0,
-      "gf": 35,
+      "gf": 37,
       "ga": 4,
-      "gd": 31,
+      "gd": 33,
       "form": "G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png"
@@ -3403,8 +3403,8 @@
       "drawn": 0,
       "lost": 1,
       "gf": 12,
-      "ga": 13,
-      "gd": -1,
+      "ga": 15,
+      "gd": -3,
       "form": "G G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
@@ -3568,7 +3568,5 @@
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
   "staff_updated_at": "2026-10-17T13:45:02.201077+00:00",
   "staff_status": "cached",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-17T17:21:02.225894+00:00"
+  "details_status": "verified"
 }
