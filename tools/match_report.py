@@ -174,6 +174,11 @@ def merge_saved_players(data,old):
         if not ref.get('photo'):ref['photo']=previous.get('photo','')
         if not ref.get('stats') and previous.get('stats'):
             ref['stats']=previous['stats'];ref['profile_updated_at']=previous.get('profile_updated_at','')
+    # Preserve the same named official's verified portrait after a partial refresh.
+    prior_staff={(normalize(p.get('team','')).strip(),person_key(p.get('name',''))):p for p in (old or {}).get('staff',[])}
+    for person in data.get('staff',[]):
+        previous=prior_staff.get((normalize(person.get('team','')).strip(),person_key(person.get('name',''))),{})
+        if not person.get('photo') and previous.get('photo'):person['photo']=previous['photo']
     return data
 
 def competition_summaries(reports,matches,scorers=()):
