@@ -19,10 +19,9 @@ window.ClubMatchdays={
   return String(Math.max(0,...all.map(m=>Number(m.round)||0)));
  },
  card(m,key){
-  const E=Fixtures.esc.bind(Fixtures);let acta='';
-  try{const u=new URL(m.acta_url);const id=u.searchParams.get('CodActa');if(m.played&&u.protocol==='https:'&&['www.rfaf.es','rfaf.es'].includes(u.hostname)&&/^\d{1,12}$/.test(id||''))acta='#acta='+id+'&equipo='+key;}catch{}
+  const E=Fixtures.esc.bind(Fixtures),acta=Fixtures.matchSheetHref(m,key);
   const team=(name,image)=>`<div class="matchday-team"><img src="${E(Fixtures.crest(name,image))}" alt="" loading="lazy"><span>${E(name)}</span></div>`;
-  return `<article class="matchday-card"><div class="matchday-category-label">${E(Fixtures.teams[key].label)} · Jornada ${E(m.round)}</div><div class="matchday-top"><time>${E(Fixtures.date(m))}</time>${window.ClubMatchAlerts?ClubMatchAlerts.button(m,key):''}</div><div class="matchday-scoreboard">${team(m.home,m.home_crest)}<div class="matchday-result"><strong class="${!m.played&&!m.time?'time-unconfirmed':''}">${m.played?E(m.home_score)+' <span>–</span> '+E(m.away_score):E(m.time||'Por confirmar')}</strong><small class="${m.played?'finished':''}">${m.played?'FINALIZADO':'SIN COMENZAR'}</small></div>${team(m.away,m.away_crest)}</div>${acta?`<a class="matchday-link" href="${E(acta)}">Ver acta ${CDM.icon('arrow')}</a>`:`<button class="matchday-link" data-home-category="${E(key)}" data-home-round="${E(m.round)}">Ver jornada ${CDM.icon('arrow')}</button>`}</article>`;
+  return `<article class="matchday-card"><div class="matchday-category-label">${E(Fixtures.teams[key].label)} · Jornada ${E(m.round)}</div><div class="matchday-top"><time>${E(Fixtures.date(m))}</time>${window.ClubMatchAlerts?ClubMatchAlerts.button(m,key):''}</div><div class="matchday-scoreboard">${team(m.home,m.home_crest)}<div class="matchday-result"><strong class="${!m.played&&!m.time?'time-unconfirmed':''}">${m.played?E(m.home_score)+' <span>–</span> '+E(m.away_score):E(m.time||'Por confirmar')}</strong><small class="${m.played?'finished':''}">${m.played?'FINALIZADO':'SIN COMENZAR'}</small></div>${team(m.away,m.away_crest)}</div>${acta?`<a class="matchday-link" href="${E(acta)}">${m.played?'Ver acta':'Ficha del partido'} ${CDM.icon('arrow')}</a>`:`<button class="matchday-link" data-home-category="${E(key)}" data-home-round="${E(m.round)}">Ver jornada ${CDM.icon('arrow')}</button>`}</article>`;
  },
  screen(){
   const E=Fixtures.esc.bind(Fixtures);

@@ -77,7 +77,7 @@ async function reportRoute(refresh=false){
 window.addEventListener('hashchange',()=>ClubNews.route()?newsRoute():reportRoute());
 document.addEventListener('click',e=>{
  if(e.target.closest('[data-report-back]')){if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);reportRequest++;page='Partidos';render();window.scrollTo(0,0);}else{page='Partidos';render();}}
- if(e.target.closest('[data-report-retry]'))reportRoute(true);
+ if(e.target.closest('[data-report-retry]')){if(ClubMatchAlerts.route())ClubMatchAlerts.open();else reportRoute(true);}
  if(e.target.closest('[data-player-retry]')){const route=routeState(),p=(Fixtures.reportData?.players||[]).find(p=>String(p.id)===route?.player);if(p){p._profileLoaded=false;p._refreshRequested=true;}reportRoute();}
  const playerBack=e.target.closest('[data-player-back]');if(playerBack){if(playerBack.hasAttribute('data-roster-back')){history.replaceState(null,'',location.pathname);reportRequest++;playerProfileLoading=false;page='Club';render();window.scrollTo(0,0);}else{const id=playerBack.dataset.acta;if(/^\d+$/.test(id)){history.replaceState(null,'',Fixtures.actaHref(id));reportRoute();}}}
 });
@@ -123,7 +123,8 @@ window.refreshScreen=async function(){
  const current=page;
  await Fixtures.load(true);
  if(page!==current)return;
- if(['Ficha de partido','Acta','Jugador'].includes(page)){await reportRoute(true);return;}
+ if(page==='Ficha de partido'){await ClubMatchAlerts.open();return;}
+ if(['Acta','Jugador'].includes(page)){await reportRoute(true);return;}
  if(page==='Administración teams'){await ClubTeams.refresh();return;}
  if(page==='Administración history'){await ClubNotifications.history();return;}
  if(page==='Administración users'){await loadClubUsers();return;}

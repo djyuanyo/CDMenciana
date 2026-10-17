@@ -94,13 +94,13 @@
       "date": "2026-10-16",
       "time": "22:00",
       "venue": "Montemayor - POLIDEPORTIVO MUNICIPAL DE MONTEMAYOR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 7,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718121",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718121&cod_acta=2718121",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315"
     },
@@ -1084,20 +1084,20 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "PINO AGUILAR, PABLO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 3,
+      "penalties": 1,
+      "average": 1.5
+    },
+    {
       "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
       "team": "C.D. EGA FUTSAL",
       "played": 0,
       "goals": 3,
       "penalties": 0,
       "average": null
-    },
-    {
-      "name": "QUERO LUQUE, RUBEN",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
     },
     {
       "name": "BERGILLOS PORRAS, ALBERTO",
@@ -1108,12 +1108,44 @@
       "average": 2.0
     },
     {
+      "name": "ARCE CID, CARLOS",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "TORREBLANCA SOLIS, CRISTIAN",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "QUERO LUQUE, RUBEN",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "CASTRO VERA, MANUEL",
       "team": "C.D. EGA FUTSAL",
       "played": 0,
       "goals": 2,
       "penalties": 0,
       "average": null
+    },
+    {
+      "name": "PULIDO MORAL, JOSÉ MARÍA",
+      "team": "C.D. CARCABUEY",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "AGUNDO MEJIAS, DAVID",
@@ -1140,6 +1172,14 @@
       "average": 1.0
     },
     {
+      "name": "SOTO CORTES, RAMON",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "ROPERO LUQUE, ANTONIO",
       "team": "C.D. CARCABUEY",
       "played": 1,
@@ -1156,11 +1196,11 @@
       "average": 1.0
     },
     {
-      "name": "PINO AGUILAR, PABLO",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "name": "CASADO RUZ, RAFAEL",
+      "team": "C.D. MONTILLA FUTSAL",
       "played": 1,
       "goals": 1,
-      "penalties": 1,
+      "penalties": 0,
       "average": 1.0
     },
     {
@@ -1188,14 +1228,6 @@
       "average": 1.0
     },
     {
-      "name": "PULIDO MORAL, JOSÉ MARÍA",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "RAMIREZ REINA, JOSE",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 1,
@@ -1206,14 +1238,6 @@
     {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
       "team": "C.D. APAGA Y VAMONOS",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MILLAN MUÑOZ, ALEJANDRO",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1234,6 +1258,46 @@
       "goals": 1,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "LEON ALCAIDE, CRISTIAN",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MEMBIELA GARCIA, JORGE",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "SANTAELLA GOMEZ, JOSE ANTONIO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MILLAN MUÑOZ, ALEJANDRO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CABELLO MORON, ALVARO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
     },
     {
       "name": "MORALES MUÑOZ, JUAN CARLOS",
@@ -1955,7 +2019,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-15T10:30:07.508229+00:00",
+  "updated_at": "2026-10-17T09:41:28.674305+00:00",
   "rounds": [
     1,
     2,
@@ -2405,9 +2469,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-15T10:30:08.617574+00:00",
+  "staff_updated_at": "2026-10-17T09:41:30.283390+00:00",
   "staff_status": "verified",
   "details_status": "verified",
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-15T10:39:36.785050+00:00"
+  "roster_updated_at": "2026-10-17T09:51:00.215568+00:00"
 }

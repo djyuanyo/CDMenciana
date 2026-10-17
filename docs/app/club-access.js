@@ -665,8 +665,21 @@ window.ClubMatchAlerts={rows:[],catalog:new Map(),sequence:0,busy:false,error:''
  async sync(){const seq=++this.sequence,identity=ClubAuth.user;this.rows=[];this.error='';if(!identity||!ClubAccess.user()?.active)return;try{const result=await this.http('GET');if(seq!==this.sequence||ClubAuth.user?.uid!==identity.uid)return;this.rows=result.rows||[];}catch(error){if(seq===this.sequence)this.error=error.message;}if(seq===this.sequence)window.dispatchEvent(new CustomEvent('club-match-alert-state'));},
  async toggle(id){if(this.busy)return;const identity=ClubAuth.user,match=this.catalog.get(id);if(!identity||!ClubAccess.user()?.active||!match)throw Error('Inicia sesión y completa tu registro para activar la campana.');const selected=this.selected(id);if(match.played&&!selected)return;this.busy=true;try{if(!selected){if(!window.ClubPushNative)throw Error('Los avisos están disponibles en la app Android.');const result=await ClubFavorites.native('enable');if(!result.enabled)throw Error('Activa el permiso de notificaciones en tu móvil.');ClubFavorites.notifications=true;}if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');const result=await this.http('POST',{teamKey:match.teamKey,matchId:match.matchId,season:match.season,remove:selected});if(ClubAuth.user?.uid===identity.uid){if(selected)this.rows=this.rows.filter(r=>r.id!==id);else{this.rows=this.rows.filter(r=>r.id!==id);this.rows.push(result.row);}}this.error='';}finally{this.busy=false;window.dispatchEvent(new CustomEvent('club-match-alert-state'));}},
  route(){const p=new URLSearchParams(location.hash.slice(1)),match=p.get('partido'),team=p.get('equipo');return /^[\d-]{1,64}$/.test(match||'')&&Object.hasOwn(Fixtures.teams,team||'')?{match,team}:null;},
- async open(){const route=this.route();if(!route)return;const seq=++this._routeSequence;Fixtures.selectTeam(route.team);this.loading=true;window.dispatchEvent(new CustomEvent('club-match-route'));await Fixtures.loadFixtures(true);if(this._routeSequence!==seq||this.route()?.match!==route.match)return;this.loading=false;window.dispatchEvent(new CustomEvent('club-match-route'));},
- screen(){const route=this.route(),m=[...(Fixtures.data.round_matches||[]),...(Fixtures.data.matches||[])].find(m=>this.key(m)===route?.match);return `<button type="button" class="auth-text-button" data-page="Partidos">← Volver al calendario</button><div class="section-heading"><h2>Ficha del partido</h2></div>`+(this.loading?'<section class="card"><p role="status">Actualizando el partido…</p></section>':m?Fixtures.card(m):'<section class="card"><p>El partido aún no está disponible. Actualiza el calendario.</p></section>');}
+ fixture(){const route=this.route();return [...(Fixtures.data.round_matches||[]),...(Fixtures.data.matches||[])].find(m=>this.key(m)===route?.match);},
+ reportId(m){try{return new URL(Fixtures.actaUrl(m)||Fixtures.previaUrl(m)).searchParams.get('CodActa')||'';}catch{return '';}},
+ async open(){
+  const seq=++this._routeSequence,route=this.route();if(!route)return;
+  Fixtures.selectTeam(route.team);this.loading=true;Fixtures.reportData=null;Fixtures.reportError=false;window.dispatchEvent(new CustomEvent('club-match-route'));
+  await Fixtures.loadFixtures(true);
+  if(this._routeSequence!==seq||this.route()?.match!==route.match||this.route()?.team!==route.team)return;
+  const match=this.fixture(),id=match?this.reportId(match):'';
+  if(id)await Fixtures.loadReport(id,true);
+  if(this._routeSequence!==seq||this.route()?.match!==route.match||this.route()?.team!==route.team)return;
+  this.loading=false;window.dispatchEvent(new CustomEvent('club-match-route'));
+  if(id&&await Fixtures.enrichReportPlayers(id)&&this._routeSequence===seq&&this.route()?.match===route.match)window.dispatchEvent(new CustomEvent('club-match-route'));
+ },
+ screen(){const m=this.fixture();return `<div class="section-heading"><h2>Ficha del partido</h2></div>`+(this.loading?'<section class="card"><p role="status">Actualizando el partido…</p></section>':m?(m.played&&!this.reportId(m)?Fixtures.card(m):Fixtures.decorateReportPlayers(Fixtures.report(this.reportId(m),m),this.reportId(m))):'<section class="card"><p>El partido aún no está disponible. Actualiza el calendario.</p></section>');}
+
 };
 window.addEventListener('club-access-state',()=>ClubMatchAlerts.sync());
 window.addEventListener('club-auth-state',()=>{ClubMatchAlerts.rows=[];ClubMatchAlerts.sequence++;});
