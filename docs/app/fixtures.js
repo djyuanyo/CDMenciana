@@ -118,7 +118,7 @@ window.Fixtures={data:{matches:[]},round:null,error:false,manualRound:false,asse
   const n=this.attendance?.[this.matchKey(m)];const crowd=Number.isInteger(n)&&n>0?`<p class="acta-stage-crowd">${CDM.icon('team')}<span><b>${E(n.toLocaleString('es-ES'))}</b> ${n===1?'Espectador':'Espectadores'}</span></p>`:'';
   const venue=model.venue||m?.venue||'',when=[this.reportShortDate(m),m?.time&&/^\d{2}:\d{2}$/.test(m.time)?m.time+' h':''].filter(Boolean).join(' · ');
   const box=v=>`<b>${v==null||v===''?'–':E(v)}</b>`;
-  return `<section class="acta-stage" aria-label="Resultado del partido"><div class="acta-stage-top"><button type="button" class="acta-stage-btn" data-report-back aria-label="Volver al calendario">${CDM.icon('back')}</button><button type="button" class="acta-stage-btn" data-report-retry aria-label="Actualizar acta">⟳</button></div>
+  return `<section class="acta-stage" aria-label="Resultado del partido"><div class="acta-stage-top"><button type="button" class="acta-stage-btn" data-report-back aria-label="Volver al calendario">${CDM.icon('back')}</button>${window.ClubMatchAlerts&&m?ClubMatchAlerts.button(m):''}<button type="button" class="acta-stage-btn" data-report-retry aria-label="Actualizar acta">⟳</button></div>
    <p class="acta-stage-league">${E(competition)}${m?.round?` <i aria-hidden="true">|</i> JORNADA ${E(m.round)}`:''}</p>
    ${venue?`<p class="acta-stage-line">${CDM.icon('pin')}<span>${E(venue)}</span></p>`:''}${when?`<p class="acta-stage-line">${CDM.icon('calendar')}<span>${E(when)}</span></p>`:''}
    <p class="acta-stage-status">${previa?'FICHA DEL PARTIDO':'FINALIZADO'}</p>
