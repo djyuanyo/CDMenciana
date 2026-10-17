@@ -1,0 +1,15 @@
+name: Verificar actualización rápida
+on:
+  pull_request:
+    paths: ['tools/*.py', '.github/workflows/*.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m unittest discover -s tools -p test_fast_updates.py -v
+      - run: python -m compileall -q tools
