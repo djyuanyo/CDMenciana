@@ -499,8 +499,22 @@ def has_referees(data):
             return any(',' in cell for row in block.get('rows',[]) for cell in row)
     return False
 
+def has_preview_details(data):
+    """Referees, published participants or a venue can appear before the final acta."""
+    if has_referees(data) or data.get('players'):return True
+    section=''
+    for block in data.get('blocks',[]):
+        if block.get('kind')!='table':
+            section=normalize(block.get('text','')).strip()
+        else:
+            for row in block.get('rows',[]):
+                text=' '.join(str(cell) for cell in row)
+                if section in ('TITULARES','SUPLENTES') and ',' in text:return True
+                if re.match(r'(?i)^Estadio:\s*\S',text.strip()):return True
+    return False
+
 def sync_previews(matches,get,root):
-    """Upcoming matches whose federation page already names the referees are saved as a «ficha previa»."""
+    """Save available venue, referees and players before a match has finished."""
     count=0
     for match in matches:
         if out_of_time():break
@@ -512,8 +526,8 @@ def sync_previews(matches,get,root):
             data=report(html,minimum=1)
         except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
             print(f'Ficha previa {id} pendiente: {error}',flush=True);continue
-        if not has_referees(data):
-            print(f'Ficha previa {id}: la federación aún no ha designado árbitros',flush=True);continue
+        if not has_preview_details(data):
+            print(f'Ficha previa {id}: la federación aún no ha publicado árbitros, jugadores ni ubicación',flush=True);continue
         data.update(id=id,source=match['acta_url'],preview=True,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
         raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
         for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
@@ -541,7 +555,7 @@ def sync_recent_reports(matches,get,root,now=None):
         url='https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id
         try:
             data=report(get(url),minimum=10 if match.get('played') else 1)
-            if not match.get('played') and not has_referees(data):continue
+            if not match.get('played') and not has_preview_details(data):continue
             data.update(id=id,source=url,updated_at=now.isoformat())
             if not match.get('played'):data['preview']=True
             data=merge_saved_players(data,old)
