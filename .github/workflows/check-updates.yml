@@ -13,4 +13,5 @@ jobs:
         with: {python-version: '3.12'}
       - run: python -m unittest discover -s tools -p test_fast_updates.py -v
       - run: python -m unittest discover -s tools -p test_match_preview.py -v
+      - run: python -m unittest discover -s tools -p test_staff_portraits.py -v
       - run: python -m compileall -q tools
