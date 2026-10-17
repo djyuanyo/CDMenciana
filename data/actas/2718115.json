@@ -435,8 +435,8 @@
       "profile_updated_at": "2026-10-14T09:05:30.338934+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 1,
-        "called": 1,
+        "starts": 2,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -508,7 +508,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -579,8 +579,8 @@
       "profile_updated_at": "2026-10-14T09:05:32.343300+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 1,
-        "called": 1,
+        "starts": 2,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -650,10 +650,10 @@
       ],
       "profile_updated_at": "2026-10-14T09:05:28.563333+00:00",
       "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 1,
-        "played": null,
+        "goals": 1,
+        "starts": 2,
+        "called": 2,
+        "played": 2,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -723,8 +723,8 @@
       "profile_updated_at": "2026-10-14T09:05:31.374389+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 1,
-        "called": 1,
+        "starts": 2,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -792,7 +792,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-09T10:02:58.889622+00:00",
+      "profile_updated_at": "2026-10-17T13:50:28.404047+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -864,11 +864,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-09T10:02:58.873166+00:00",
+      "profile_updated_at": "2026-10-17T13:50:27.438718+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 1,
+        "starts": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -939,7 +939,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -1012,7 +1012,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -1083,7 +1083,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -1227,7 +1227,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 1,
-        "called": 1,
+        "called": 2,
         "played": 1,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1299,7 +1299,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1368,12 +1368,12 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:30.980202+00:00",
+      "profile_updated_at": "2026-10-17T13:50:32.599101+00:00",
       "competition_summary": {
-        "goals": 1,
-        "starts": 1,
-        "called": 1,
-        "played": 1,
+        "goals": 3,
+        "starts": 2,
+        "called": 2,
+        "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       }
@@ -1440,12 +1440,12 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:32.958247+00:00",
+      "profile_updated_at": "2026-10-17T13:50:34.412727+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 1,
-        "called": 1,
-        "played": 1,
+        "starts": 2,
+        "called": 2,
+        "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       }
@@ -1512,12 +1512,12 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:33.950079+00:00",
+      "profile_updated_at": "2026-10-17T13:50:35.403263+00:00",
       "competition_summary": {
-        "goals": 1,
-        "starts": 1,
-        "called": 1,
-        "played": 1,
+        "goals": 2,
+        "starts": 2,
+        "called": 2,
+        "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       }
@@ -1584,11 +1584,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:25.274560+00:00",
+      "profile_updated_at": "2026-10-17T13:50:29.438341+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 1,
+        "starts": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1656,11 +1656,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:26.938428+00:00",
+      "profile_updated_at": "2026-10-17T13:50:30.409207+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 1,
+        "starts": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1728,11 +1728,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:29.944621+00:00",
+      "profile_updated_at": "2026-10-17T13:50:31.395355+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1800,12 +1800,12 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:31.962153+00:00",
+      "profile_updated_at": "2026-10-17T13:50:33.410389+00:00",
       "competition_summary": {
-        "goals": 1,
+        "goals": 2,
         "starts": 0,
-        "called": 1,
-        "played": 1,
+        "called": 2,
+        "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       }
@@ -1872,11 +1872,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:34.939199+00:00",
+      "profile_updated_at": "2026-10-17T13:50:36.397481+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
@@ -1948,8 +1948,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 1,
-        "played": 1,
+        "called": 2,
+        "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       }
@@ -2020,7 +2020,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
