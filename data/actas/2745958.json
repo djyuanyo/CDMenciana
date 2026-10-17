@@ -10,7 +10,7 @@
     },
     {
       "kind": "heading",
-      "text": "Temporada 2026-2027 Jornada 3 17-10-2026 18:00 h"
+      "text": "Temporada 2026-2027 Jornada 3 17-10-2026 17:50 h"
     },
     {
       "kind": "heading",
@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 11",
+          "0 - 13",
           ""
         ]
       ]
@@ -62,6 +62,67 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(2') SEVILLA ARROYO, JUAN"
+        ],
+        [
+          "Gol · 0 - 2",
+          "(3') GALLEGO SALAMANCA, JORGE"
+        ],
+        [
+          "Gol · 0 - 3",
+          "(5') SEVILLA ARROYO, JUAN"
+        ],
+        [
+          "Gol · 0 - 4",
+          "(7') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol · 0 - 5",
+          "(8') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol · 0 - 6",
+          "(11') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol · 0 - 7",
+          "(12') CALIZ SANCHEZ, ALONSO"
+        ],
+        [
+          "Gol · 0 - 8",
+          "(15') JIMENEZ MUDARRA, DANIEL"
+        ],
+        [
+          "Gol · 0 - 9",
+          "(17') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol · 0 - 10",
+          "(18') JIMENEZ MUDARRA, DANIEL"
+        ],
+        [
+          "Gol · 0 - 11",
+          "(19') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol · 0 - 12",
+          "(26') GALLEGO SALAMANCA, JORGE"
+        ],
+        [
+          "Gol · 0 - 13",
+          "(32') CALIZ SANCHEZ, ALONSO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -195,6 +256,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta roja",
+          "(13') SÁNCHEZ LARA, AITOR"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(36') LEBRÓN SÁNCHEZ, ISRAEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(36') ESPADAS PÉREZ, MIGUEL ÁNGEL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. TOXAR"
     },
@@ -291,6 +373,19 @@
         [
           "",
           "CANO BRIONES, MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(31') ROSA RICO, CRISTIAN"
         ]
       ]
     }
@@ -433,6 +528,5 @@
   ],
   "id": "2745958",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745958",
-  "updated_at": "2026-10-17T17:11:13.177904+00:00",
-  "preview": true
+  "updated_at": "2026-10-17T18:47:47.391945+00:00"
 }
