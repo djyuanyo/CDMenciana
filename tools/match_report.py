@@ -10,7 +10,7 @@ PROFILE_CACHE='data/rfaf-player-profiles.json'
 PROFILE_TTL=datetime.timedelta(hours=24)
 FAILED_RETRY=datetime.timedelta(hours=12)
 RECENT_ACTA=datetime.timedelta(days=3)
-ACTA_REFRESH=datetime.timedelta(hours=6)
+ACTA_REFRESH=datetime.timedelta(minutes=5)
 DEADLINE=time.monotonic()+float(os.environ.get('CDM_REPORT_BUDGET','540'))
 def out_of_time():return time.monotonic()>DEADLINE
 def since(value,now):
@@ -344,7 +344,7 @@ def sync_reports(matches,get,root,fixtures_filename='fixtures.json'):
         id,payload=item;url,match=payload;errors=[]
         saved=prior_report(id)
         if saved and saved.get('players') and 'staff' in saved:
-            # A played match's acta is final; only recent ones are re-read, at most every few hours.
+            # Recent actas can still be corrected after the result is first published.
             now=datetime.datetime.now(datetime.timezone.utc)
             played=since((match.get('date') or '')+'T00:00:00+00:00',now)
             checked=since(saved.get('updated_at',''),now)
@@ -519,4 +519,38 @@ def sync_previews(matches,get,root):
         for folder in ['data/actas','server/static/actas','android/app/src/main/assets/actas']:
             target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
         count+=1
+    return count
+
+
+def sync_recent_reports(matches,get,root,now=None):
+    """Publish recent actas before optional historical player/profile enrichment."""
+    now=now or datetime.datetime.now(datetime.timezone.utc)
+    count=0;seen=set()
+    # Newest first: an unavailable old report cannot hold up today's match.
+    for match in sorted(matches,key=lambda m:(m.get('date',''),m.get('round',0)),reverse=True):
+        age=since((match.get('date') or '')+'T00:00:00+00:00',now)
+        if age is None or not -datetime.timedelta(days=7)<=age<=datetime.timedelta(days=7):continue
+        id=urllib.parse.parse_qs(urllib.parse.urlparse(match.get('acta_url','')).query).get('CodActa',[''])[0]
+        if not re.fullmatch(r'[0-9]{1,12}',id) or id in seen:continue
+        seen.add(id)
+        try:old=json.loads((root/'data/actas'/(id+'.json')).read_text(encoding='utf-8'))
+        except (OSError,ValueError):old={}
+        checked=since(old.get('updated_at',''),now)
+        if old.get('blocks') and checked is not None and datetime.timedelta(0)<=checked<ACTA_REFRESH and bool(old.get('preview'))==(not bool(match.get('played'))):continue
+        if out_of_time():break
+        url='https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa='+id
+        try:
+            data=report(get(url),minimum=10 if match.get('played') else 1)
+            if not match.get('played') and not has_referees(data):continue
+            data.update(id=id,source=url,updated_at=now.isoformat())
+            if not match.get('played'):data['preview']=True
+            data=merge_saved_players(data,old)
+        except (ValueError,OSError,subprocess.SubprocessError,RuntimeError) as error:
+            print(f'Acta rápida {id}: se conserva la última copia válida ({error})',flush=True)
+            continue
+        raw=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
+        for folder in ('data/actas','server/static/actas','android/app/src/main/assets/actas'):
+            target=root/folder/(id+'.json');target.parent.mkdir(parents=True,exist_ok=True);target.write_text(raw,encoding='utf-8')
+        count+=1
+    print(f'Updated {count} recent public match reports without waiting for player profiles',flush=True)
     return count
