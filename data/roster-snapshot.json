@@ -93,11 +93,11 @@
             "rows": [
               [
                 "Convocados",
-                "3"
+                "4"
               ],
               [
                 "Titular",
-                "1"
+                "2"
               ],
               [
                 "Suplente",
@@ -105,7 +105,7 @@
               ],
               [
                 "Jugados",
-                "2"
+                "3"
               ]
             ]
           },
@@ -144,7 +144,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-17T19:31:19.892679+00:00",
+        "profile_updated_at": "2026-10-18T20:50:29.688796+00:00",
         "competition_summary": {}
       },
       {
@@ -1072,7 +1072,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-18T14:13:31.361819+00:00",
+    "roster_updated_at": "2026-10-18T20:50:30.951816+00:00",
     "staff": [
       {
         "name": "JIMENEZ CUBERO, JOSE ANTONIO",
@@ -1101,7 +1101,7 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-18T14:03:40.442088+00:00",
+    "staff_updated_at": "2026-10-18T20:44:39.231359+00:00",
     "club_photos": {
       "1": "https://cdmenciana.es/images/jugadores/raton.webp",
       "15": "https://cdmenciana.es/images/jugadores/melli.webp",
@@ -1909,7 +1909,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-18T14:13:31.667621+00:00",
+    "roster_updated_at": "2026-10-18T20:54:24.625601+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -1926,7 +1926,7 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-18T14:03:48.443271+00:00"
+    "staff_updated_at": "2026-10-18T20:44:47.238523+00:00"
   },
   "infantil": {
     "team_key": "infantil",
@@ -2770,7 +2770,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-18T14:13:32.394331+00:00",
+    "roster_updated_at": "2026-10-18T20:54:25.299520+00:00",
     "staff": [
       {
         "name": "GODOY RUIZ, CRISTINA",
@@ -4709,7 +4709,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-18T14:13:32.001437+00:00",
+    "roster_updated_at": "2026-10-18T20:54:24.956983+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -4726,6 +4726,6 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-18T14:03:57.425955+00:00"
+    "staff_updated_at": "2026-10-18T20:44:56.289928+00:00"
   }
 }

@@ -391,7 +391,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
@@ -404,10 +404,10 @@
       "photo": "data:image/jpeg;base64,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",
       "stats": [],
       "competition_summary": {
-        "goals": 1,
-        "starts": 1,
-        "called": 1,
-        "played": 1,
+        "goals": 2,
+        "starts": 2,
+        "called": 2,
+        "played": 2,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }
@@ -421,8 +421,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 1,
-        "called": 1,
-        "played": 1,
+        "called": 2,
+        "played": 2,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }
@@ -451,8 +451,8 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 1,
-        "played": 1,
+        "called": 2,
+        "played": 2,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }
@@ -481,8 +481,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 1,
-        "played": 0,
+        "called": 2,
+        "played": 1,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }
@@ -495,8 +495,8 @@
       "stats": [],
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 1,
+        "starts": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
@@ -511,7 +511,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
@@ -581,10 +581,10 @@
       ],
       "profile_updated_at": "2026-10-07T16:29:03.163024+00:00",
       "competition_summary": {
-        "goals": 2,
-        "starts": 0,
-        "called": 1,
-        "played": 0,
+        "goals": 3,
+        "starts": 1,
+        "called": 2,
+        "played": 1,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }
@@ -654,8 +654,8 @@
       "profile_updated_at": "2026-10-07T16:29:03.343793+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 1,
+        "starts": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
@@ -727,8 +727,8 @@
       "competition_summary": {
         "goals": 3,
         "starts": 0,
-        "called": 1,
-        "played": 0,
+        "called": 2,
+        "played": 1,
         "team": "C.D. EGA FUTSAL",
         "source": "actas oficiales RFAF"
       }

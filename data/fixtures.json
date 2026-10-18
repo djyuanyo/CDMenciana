@@ -5781,11 +5781,11 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -5793,7 +5793,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5832,7 +5832,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T19:31:19.892679+00:00",
+      "profile_updated_at": "2026-10-18T20:50:29.688796+00:00",
       "competition_summary": {}
     },
     {
@@ -6782,7 +6782,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-18T20:43:11.814164+00:00",
+  "updated_at": "2026-10-18T20:44:38.269811+00:00",
   "rounds": [
     1,
     2,
@@ -7719,7 +7719,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-18T20:43:13.091915+00:00",
+  "staff_updated_at": "2026-10-18T20:44:39.231359+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-18T20:50:30.951816+00:00"
 }
