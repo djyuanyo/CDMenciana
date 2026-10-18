@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 3",
+          "0 - 9",
           ""
         ]
       ]
@@ -62,6 +62,51 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(4') ROMERO MONTES, FÁTIMA"
+        ],
+        [
+          "Gol · 0 - 2",
+          "(5') MARTÍN CÁLIZ, ALEJANDRO"
+        ],
+        [
+          "Gol · 0 - 3",
+          "(16') ROMERO MONTES, FÁTIMA"
+        ],
+        [
+          "Gol · 0 - 4",
+          "(24') HIDALGO ROPERO, ALEX"
+        ],
+        [
+          "Gol · 0 - 5",
+          "(27') SÁNCHEZ BERMÚDEZ, DANIEL"
+        ],
+        [
+          "Gol · 0 - 6",
+          "(28') SÁNCHEZ BERMÚDEZ, DANIEL"
+        ],
+        [
+          "Gol · 0 - 7",
+          "(32') MARTÍN CÁLIZ, ALEJANDRO"
+        ],
+        [
+          "Gol · 0 - 8",
+          "(39') SÁNCHEZ BERMÚDEZ, DANIEL"
+        ],
+        [
+          "Gol · 0 - 9",
+          "(39') ROMERO MONTES, FÁTIMA"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -191,6 +236,19 @@
         [
           "",
           "BURGUILLOS EGEA, ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(35') TELLADO LÓPEZ, DAVID"
         ]
       ]
     },
@@ -481,6 +539,6 @@
   ],
   "id": "2745955",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745955",
-  "updated_at": "2026-10-18T09:57:47.705319+00:00",
+  "updated_at": "2026-10-18T13:54:01.849635+00:00",
   "preview": true
 }
