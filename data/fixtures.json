@@ -980,9 +980,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
       "id": "48466109-7-2",
@@ -1100,9 +1100,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645817",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645817"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154"
     },
     {
       "id": "48466109-7-8",
@@ -5757,14 +5757,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:27.215244+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 4,
-        "played": null,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "CAMPOS AGUACIL, MANUEL",
@@ -5902,14 +5895,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:23.233213+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 5,
-        "played": null,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "MARAÑON BAENA, JESUS",
@@ -5978,14 +5964,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:29.188877+00:00",
-      "competition_summary": {
-        "goals": 1,
-        "starts": 4,
-        "called": 5,
-        "played": 4,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
@@ -6123,14 +6102,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:24.210939+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 4,
-        "played": null,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "SANCHEZ TIENDA, DAVID",
@@ -6199,14 +6171,7 @@
         }
       ],
       "profile_updated_at": "2026-10-15T14:33:24.974581+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 2,
-        "played": null,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "CUBERO CUBERO, JESUS",
@@ -6275,14 +6240,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:28.194032+00:00",
-      "competition_summary": {
-        "goals": 2,
-        "starts": 0,
-        "called": 5,
-        "played": 3,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "RODRIGUEZ JIMENEZ, SERGIO",
@@ -6420,14 +6378,7 @@
         }
       ],
       "profile_updated_at": "2026-10-15T14:33:16.954729+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 4,
-        "played": null,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "BONILLA ACEITUNO, JUAN",
@@ -6496,14 +6447,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:30.204562+00:00",
-      "competition_summary": {
-        "goals": 1,
-        "starts": 0,
-        "called": 5,
-        "played": 3,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "LUNA ACEITUNO, ADRIAN",
@@ -6584,14 +6528,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:31.193735+00:00",
-      "competition_summary": {
-        "goals": 3,
-        "starts": 2,
-        "called": 5,
-        "played": 4,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "CABALLERO LAMA, ISAAC",
@@ -6660,14 +6597,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:25.182263+00:00",
-      "competition_summary": {
-        "goals": 4,
-        "starts": 3,
-        "called": 5,
-        "played": 5,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     },
     {
       "name": "CABALLERO LAMA, ALEJANDRO",
@@ -6748,14 +6678,7 @@
         }
       ],
       "profile_updated_at": "2026-10-18T14:09:26.188944+00:00",
-      "competition_summary": {
-        "goals": 2,
-        "starts": 1,
-        "called": 5,
-        "played": 4,
-        "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-        "source": "actas oficiales RFAF"
-      }
+      "competition_summary": {}
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
@@ -6782,7 +6705,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-18T23:12:19.714191+00:00",
+  "updated_at": "2026-10-18T23:13:30.420765+00:00",
   "rounds": [
     1,
     2,
@@ -6953,9 +6876,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
       "id": "48466109-8",
@@ -7719,7 +7642,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-18T23:12:20.782086+00:00",
+  "staff_updated_at": "2026-10-18T23:13:31.244962+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-18T23:23:04.096252+00:00"
 }

@@ -464,11 +464,11 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -476,7 +476,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -510,7 +510,7 @@
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.3"
             ]
           ]
         }
@@ -525,7 +525,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:58:55.108904+00:00"
+      "profile_updated_at": "2026-10-18T23:19:19.407977+00:00"
     },
     {
       "id": "6a3687251c229d1c",
@@ -538,7 +538,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -546,7 +546,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -580,11 +580,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.5"
             ]
           ]
         }
@@ -599,7 +599,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:58:56.071879+00:00"
+      "profile_updated_at": "2026-10-18T23:19:20.388534+00:00"
     },
     {
       "id": "5ee56efca9fadcec",
@@ -612,7 +612,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -620,7 +620,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -673,7 +673,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:58:57.086566+00:00"
+      "profile_updated_at": "2026-10-18T23:19:21.388603+00:00"
     },
     {
       "id": "84349abb8b78af34",
@@ -747,7 +747,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:58:58.086607+00:00"
+      "profile_updated_at": "2026-10-18T23:19:22.407536+00:00"
     },
     {
       "id": "53cdaa0b092467c4",
@@ -760,7 +760,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -768,7 +768,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -821,7 +821,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:58:59.052600+00:00"
+      "profile_updated_at": "2026-10-18T23:19:23.379167+00:00"
     },
     {
       "id": "29983deb1da0ca5b",
@@ -895,7 +895,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:59:00.069970+00:00"
+      "profile_updated_at": "2026-10-18T23:19:24.372122+00:00"
     },
     {
       "id": "142c63ed9fb2e561",
@@ -908,93 +908,19 @@
           "rows": [
             [
               "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
               "3"
             ],
             [
-              "Titular",
-              "2"
-            ],
-            [
               "Suplente",
               "1"
             ],
             [
               "Jugados",
-              "2"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.7"
-            ]
-          ]
-        }
-      ],
-      "rfaf_id": "202228",
-      "acta_id": "2645769",
-      "competition_summary": {
-        "goals": 2,
-        "starts": 2,
-        "called": 3,
-        "played": 2,
-        "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-        "source": "actas oficiales RFAF"
-      },
-      "profile_updated_at": "2026-10-16T14:59:01.106498+00:00"
-    },
-    {
-      "id": "5ae0151e2a81367e",
-      "name": "MARTINEZ GUTIERREZ, IGNACIO ANTONIO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22703&codacta=2645769&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "4"
-            ],
-            [
-              "Jugados",
-              "0"
+              "3"
             ]
           ]
         },
@@ -1033,6 +959,80 @@
           ]
         }
       ],
+      "rfaf_id": "202228",
+      "acta_id": "2645769",
+      "competition_summary": {
+        "goals": 2,
+        "starts": 2,
+        "called": 3,
+        "played": 2,
+        "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+        "source": "actas oficiales RFAF"
+      },
+      "profile_updated_at": "2026-10-18T23:19:25.376796+00:00"
+    },
+    {
+      "id": "5ae0151e2a81367e",
+      "name": "MARTINEZ GUTIERREZ, IGNACIO ANTONIO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22703&codacta=2645769&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
       "rfaf_id": "22703",
       "acta_id": "2645769",
       "competition_summary": {
@@ -1043,7 +1043,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:59:02.129930+00:00"
+      "profile_updated_at": "2026-10-18T23:19:26.393011+00:00"
     },
     {
       "id": "ad3c50517741726f",
@@ -1117,7 +1117,7 @@
         "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-16T14:59:03.054733+00:00"
+      "profile_updated_at": "2026-10-18T23:19:27.363007+00:00"
     },
     {
       "id": "7a3a7d0530668800",
