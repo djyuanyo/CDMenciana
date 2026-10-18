@@ -154,13 +154,13 @@
       "date": "2026-10-18",
       "time": "18:30",
       "venue": "Luque - PABELLON MUNICIPAL DEPORTES",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 2,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718122&cod_acta=2718122",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718122&cod_acta=2718122",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261"
     },
@@ -1084,6 +1084,22 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "CASTRO VERA, MANUEL",
+      "team": "C.D. EGA FUTSAL",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
+      "team": "C.D. EGA FUTSAL",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
       "name": "GARCIA MARIN, ALFONSO",
       "team": "C.D. CARCABUEY",
       "played": 2,
@@ -1098,22 +1114,6 @@
       "goals": 3,
       "penalties": 1,
       "average": 1.5
-    },
-    {
-      "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
-      "team": "C.D. EGA FUTSAL",
-      "played": 0,
-      "goals": 3,
-      "penalties": 0,
-      "average": null
-    },
-    {
-      "name": "BERGILLOS PORRAS, ALBERTO",
-      "team": "C.D. EGA FUTSAL",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
     },
     {
       "name": "ARCE CID, CARLOS",
@@ -1132,6 +1132,22 @@
       "average": 2.0
     },
     {
+      "name": "LOPEZ CHAVARINO, ENRIQUE",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "BERGILLOS PORRAS, ALBERTO",
+      "team": "C.D. EGA FUTSAL",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "QUERO LUQUE, RUBEN",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
@@ -1140,8 +1156,8 @@
       "average": 1.0
     },
     {
-      "name": "LOPEZ CHAVARINO, ENRIQUE",
-      "team": "C.D. CARCABUEY",
+      "name": "CABRERA ROLDAN, RAFAEL",
+      "team": "C.D. EGA FUTSAL",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -1156,23 +1172,7 @@
       "average": 1.0
     },
     {
-      "name": "CASTRO VERA, MANUEL",
-      "team": "C.D. EGA FUTSAL",
-      "played": 0,
-      "goals": 2,
-      "penalties": 0,
-      "average": null
-    },
-    {
-      "name": "PULIDO MORAL, JOSÉ MARÍA",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "AGUNDO MEJIAS, DAVID",
+      "name": "MORALES MUÑOZ, JUAN CARLOS",
       "team": "C.D. EGA FUTSAL",
       "played": 1,
       "goals": 1,
@@ -1180,8 +1180,8 @@
       "average": 1.0
     },
     {
-      "name": "SOTO CORTES, RAMON",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "name": "LEON PEREZ, RUBEN",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1196,8 +1196,16 @@
       "average": 1.0
     },
     {
-      "name": "CABRERA ROLDAN, RAFAEL",
-      "team": "C.D. EGA FUTSAL",
+      "name": "PULIDO MORAL, JOSÉ MARÍA",
+      "team": "C.D. CARCABUEY",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SOTO CORTES, RAMON",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1212,20 +1220,60 @@
       "average": 1.0
     },
     {
-      "name": "JIMENEZ CAÑADAS, ALVARO",
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "LEON ALCAIDE, CRISTIAN",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 1,
       "goals": 1,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "ROPERO LUQUE, ANTONIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTÍN BORREGO, SAMUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "AGUNDO MEJIAS, DAVID",
+      "team": "C.D. EGA FUTSAL",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "GONZALEZ JIMENEZ, JAVIER",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LOPEZ CHAVARINO, SERGIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "HURTADO MOLINA, CRISTOBAL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
     },
     {
       "name": "MEMBIELA GARCIA, JORGE",
@@ -1276,8 +1324,8 @@
       "average": 0.5
     },
     {
-      "name": "ROPERO LUQUE, ANTONIO",
-      "team": "C.D. CARCABUEY",
+      "name": "JIMENEZ CAÑADAS, ALVARO",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1290,38 +1338,6 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.5
-    },
-    {
-      "name": "MARTÍN BORREGO, SAMUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "LOPEZ CHAVARINO, SERGIO",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "HURTADO MOLINA, CRISTOBAL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "MORALES MUÑOZ, JUAN CARLOS",
-      "team": "C.D. EGA FUTSAL",
-      "played": 0,
-      "goals": 1,
-      "penalties": 0,
-      "average": null
     }
   ],
   "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=2&codcompeticion=49113015&codtemporada=22&codgrupo=49113036",
@@ -2115,7 +2131,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-18T17:25:49.899159+00:00",
+  "updated_at": "2026-10-18T19:24:38.876224+00:00",
   "rounds": [
     1,
     2,
@@ -2413,8 +2429,8 @@
       "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gf": 12,
-      "ga": 1,
+      "gf": 13,
+      "ga": 2,
       "gd": 11,
       "form": "G G",
       "sanction": 0,
@@ -2473,8 +2489,8 @@
       "won": 0,
       "drawn": 1,
       "lost": 1,
-      "gf": 2,
-      "ga": 3,
+      "gf": 3,
+      "ga": 4,
       "gd": -1,
       "form": "E P",
       "sanction": 0,
@@ -2567,9 +2583,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-18T17:25:50.786143+00:00",
+  "staff_updated_at": "2026-10-18T19:24:39.649658+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-18T17:35:26.399467+00:00"
+  "details_status": "verified"
 }
