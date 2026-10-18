@@ -280,7 +280,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745955",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745955&cod_acta=2745955",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925"
     },
@@ -2988,7 +2988,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-18T09:40:06.214062+00:00",
+  "updated_at": "2026-10-18T09:57:12.945553+00:00",
   "rounds": [
     1,
     2,
@@ -3390,6 +3390,21 @@
     },
     {
       "position": 3,
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "points": 6,
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "gf": 13,
+      "ga": 9,
+      "gd": 4,
+      "form": "P G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg"
+    },
+    {
+      "position": 4,
       "team": "C.D. ENCINAS REALES C.F.",
       "points": 6,
       "played": 3,
@@ -3402,21 +3417,6 @@
       "form": "G G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
-    },
-    {
-      "position": 4,
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "points": 3,
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gf": 10,
-      "ga": 9,
-      "gd": 1,
-      "form": "P G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg"
     },
     {
       "position": 5,
@@ -3482,14 +3482,14 @@
       "position": 9,
       "team": "C.D. ARAS FUTSAL",
       "points": 0,
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "gf": 9,
-      "ga": 16,
-      "gd": -7,
-      "form": "P P",
+      "ga": 19,
+      "gd": -10,
+      "form": "P P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     },
@@ -3562,7 +3562,5 @@
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
   "staff_updated_at": "2026-10-17T13:45:02.201077+00:00",
   "staff_status": "cached",
-  "details_status": "pending",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-18T09:49:23.607642+00:00"
+  "details_status": "pending"
 }
