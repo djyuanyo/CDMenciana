@@ -154,13 +154,13 @@
       "date": "2026-10-18",
       "time": "13:15",
       "venue": "Lucena - PABELLON MUNICIPAL ERNESTINA MAENZA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 0,
+      "away_score": 10,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718900",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718900&cod_acta=2718900",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981"
     },
@@ -834,12 +834,28 @@
       "average": 3.5
     },
     {
+      "name": "RODRIGUEZ GOMEZ, MANUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 3,
+      "goals": 6,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
       "name": "PEDROSA HIDALGO, PABLO",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 3,
       "penalties": 0,
       "average": 1.5
+    },
+    {
+      "name": "MARQUEZ QUERO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "MARIN URBANO, ADRIAN",
@@ -866,14 +882,6 @@
       "average": 2.0
     },
     {
-      "name": "ARCOS MORENO, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
-    },
-    {
       "name": "AGUILAR HOYOS, ALVARO",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 1,
@@ -882,48 +890,16 @@
       "average": 2.0
     },
     {
-      "name": "MONTES MESA, ALVARO",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MARIN MEDINA, PABLO",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MAIRELES RAMÍREZ, MANUEL",
-      "team": "C.D. ARAS FUTSAL A",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RODRIGUEZ GOMEZ, MANUEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PEDROSA HIDALGO, JESÚS",
+      "name": "ARCOS MORENO, CARLOS",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
+      "played": 1,
       "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 2.0
     },
     {
-      "name": "MARQUEZ QUERO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "SANCHEZ CAÑETE, ANGEL",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -938,12 +914,44 @@
       "average": 1.0
     },
     {
-      "name": "SANCHEZ CAÑETE, ANGEL",
+      "name": "PEDROSA HIDALGO, JESÚS",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 2,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "MARIN MEDINA, PABLO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MONTES MESA, ALVARO",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MONZON CAMPAÑA, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "CAMPAÑA JARABA, JUAN",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
     },
     {
       "name": "JURADO ORDOÑEZ, MARCOS",
@@ -956,6 +964,22 @@
     {
       "name": "DE LA TORRE RAMIREZ, RODRIGO",
       "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "team": "C.D. ARAS FUTSAL A",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "POLICARPO GOMEZ, FRANCISCO",
+      "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -986,38 +1010,6 @@
       "average": 1.0
     },
     {
-      "name": "MONZON CAMPAÑA, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ABOUELALAM EL BARHMI, ADAM",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "PRIETO MORENO, PABLO",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "ROLDAN CABEZA, ALBERTO",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
       "team": "C.D. ARAS FUTSAL A",
       "played": 2,
@@ -1034,7 +1026,15 @@
       "average": 0.5
     },
     {
-      "name": "CAMPAÑA JARABA, JUAN",
+      "name": "ROLDAN CABEZA, ALBERTO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PALOMARES CANTILLO, JOSE",
       "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 1,
@@ -1042,8 +1042,8 @@
       "average": 0.5
     },
     {
-      "name": "POLICARPO GOMEZ, FRANCISCO",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "PRIETO MORENO, PABLO",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1052,6 +1052,14 @@
     {
       "name": "DOMINGUEZ SANCHEZ, DAVID",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "ARJONA GARCIA, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1090,14 +1098,6 @@
       "average": 0.5
     },
     {
-      "name": "PEREZ REYES, MARIO",
-      "team": "C.D. ARAS FUTSAL A",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "GORDILLO MOLINA, JUAN JOSE",
       "team": "C.D. MENCIANA",
       "played": 2,
@@ -1114,16 +1114,24 @@
       "average": 0.5
     },
     {
-      "name": "ARJONA GARCIA, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "RODRIGUEZ GOMEZ, JOAQUIN",
+      "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "VERA TORRES, RAFAEL",
+      "name": "ABOUELALAM EL BARHMI, ADAM",
       "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PEREZ REYES, MARIO",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1131,6 +1139,14 @@
     },
     {
       "name": "JIMENEZ POYATO, JOSE ANTONIO",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "VERA TORRES, RAFAEL",
       "team": "C.D. MENCIANA",
       "played": 3,
       "goals": 1,
@@ -3069,7 +3085,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-18T09:56:58.532698+00:00",
+  "updated_at": "2026-10-18T13:53:06.836116+00:00",
   "rounds": [
     1,
     2,
@@ -3353,6 +3369,21 @@
     },
     {
       "position": 3,
+      "team": "C.D. SANTAELLA 2010",
+      "points": 6,
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "gf": 20,
+      "ga": 12,
+      "gd": 8,
+      "form": "P G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
+    },
+    {
+      "position": 4,
       "team": "C.D. CARCABUEY",
       "points": 3,
       "played": 2,
@@ -3365,21 +3396,6 @@
       "form": "G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
-    },
-    {
-      "position": 4,
-      "team": "C.D. SANTAELLA 2010",
-      "points": 3,
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gf": 10,
-      "ga": 12,
-      "gd": -2,
-      "form": "P G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
     },
     {
       "position": 5,
@@ -3415,14 +3431,14 @@
       "position": 7,
       "team": "C.D. ARAS FUTSAL \"A\"",
       "points": 0,
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "gf": 4,
-      "ga": 22,
-      "gd": -18,
-      "form": "P P",
+      "ga": 32,
+      "gd": -28,
+      "form": "P P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
@@ -3468,7 +3484,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-18T09:56:59.439921+00:00",
+  "staff_updated_at": "2026-10-18T13:53:07.749538+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
