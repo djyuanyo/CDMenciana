@@ -3085,7 +3085,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-18T21:41:09.510081+00:00",
+  "updated_at": "2026-10-18T23:12:35.136695+00:00",
   "rounds": [
     1,
     2,
@@ -3443,7 +3443,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=3&codcompeticion=49465203&codgrupo=49465413&codjornada=3",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codgrupo=49465413&codcompeticion=49465203&codjornada=3",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3484,7 +3484,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-18T21:41:10.102012+00:00",
+  "staff_updated_at": "2026-10-18T23:12:35.832519+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

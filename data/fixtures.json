@@ -982,10 +982,30 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
     },
     {
       "id": "48466109-7-2",
+      "round": 7,
+      "home": "C.D. DEPORTE Y OCIO (ADYO)",
+      "away": "C.D. VILLALBA F.S.",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002205899_logo_ADYO_512x512.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Luisiana (La) - LA LUISIANA PABELLÓN MUNICIPAL(Pabellón)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-7-3",
       "round": 7,
       "home": "C.D. SANTAELLA 2010",
       "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
@@ -1005,7 +1025,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-7-3",
+      "id": "48466109-7-4",
       "round": 7,
       "home": "C.D. LA PALMA F.S.",
       "away": "C.D. BENALUP",
@@ -1022,26 +1042,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-7-4",
-      "round": 7,
-      "home": "C.D. DECORSENECA",
-      "away": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Córdoba - IMD VALDEOLLEROS PABELLON",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
       "acta_url": ""
     },
     {
@@ -1067,26 +1067,6 @@
     {
       "id": "48466109-7-6",
       "round": 7,
-      "home": "C.D. DEPORTE Y OCIO (ADYO)",
-      "away": "C.D. VILLALBA F.S.",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002205899_logo_ADYO_512x512.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Luisiana (La) - LA LUISIANA PABELLÓN MUNICIPAL(Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-7-7",
-      "round": 7,
       "home": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "away": "CIRCULO MERCANTIL E INDUSTRIAL",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg",
@@ -1103,6 +1083,26 @@
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
       "acta_url": ""
+    },
+    {
+      "id": "48466109-7-7",
+      "round": 7,
+      "home": "C.D. DECORSENECA",
+      "away": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Córdoba - IMD VALDEOLLEROS PABELLON",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645817"
     },
     {
       "id": "48466109-7-8",
@@ -6782,7 +6782,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-18T21:40:52.125709+00:00",
+  "updated_at": "2026-10-18T23:12:19.714191+00:00",
   "rounds": [
     1,
     2,
@@ -6955,7 +6955,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
     },
     {
       "id": "48466109-8",
@@ -7719,7 +7719,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-18T21:40:53.217205+00:00",
+  "staff_updated_at": "2026-10-18T23:12:20.782086+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
