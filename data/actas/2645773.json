@@ -302,11 +302,11 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -314,7 +314,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -327,7 +327,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "4"
+              "5"
             ],
             [
               "Doble tarjeta amarilla",
@@ -348,7 +348,7 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.8"
             ]
           ]
         }
@@ -363,7 +363,7 @@
         "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T00:36:41.549510+00:00"
+      "profile_updated_at": "2026-10-18T17:31:22.407244+00:00"
     },
     {
       "id": "1a675f51cb7472fe",
@@ -1264,7 +1264,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -1272,11 +1272,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -1306,11 +1306,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.6"
             ]
           ]
         }
@@ -1325,7 +1325,7 @@
         "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T00:36:42.534495+00:00"
+      "profile_updated_at": "2026-10-18T17:31:23.423404+00:00"
     },
     {
       "id": "74415359dc794f7c",
@@ -2142,7 +2142,8 @@
       }
     }
   ],
+  "staff": [],
   "id": "2645773",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645773&cod_acta=2645773",
-  "updated_at": "2026-10-11T15:41:23.766620+00:00"
+  "updated_at": "2026-10-18T17:31:07.767950+00:00"
 }
