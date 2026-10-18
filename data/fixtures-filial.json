@@ -160,7 +160,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718122",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718122&cod_acta=2718122",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261"
     },
@@ -2115,7 +2115,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-18T17:03:28.619079+00:00",
+  "updated_at": "2026-10-18T17:24:15.448431+00:00",
   "rounds": [
     1,
     2,
@@ -2407,6 +2407,21 @@
   "standings": [
     {
       "position": 1,
+      "team": "C.D. EGA FUTSAL",
+      "points": 6,
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 12,
+      "ga": 1,
+      "gd": 11,
+      "form": "G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png"
+    },
+    {
+      "position": 2,
       "team": "C.D. CARCABUEY",
       "points": 6,
       "played": 2,
@@ -2421,7 +2436,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
     },
     {
-      "position": 2,
+      "position": 3,
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "points": 6,
       "played": 2,
@@ -2436,37 +2451,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
     },
     {
-      "position": 3,
-      "team": "C.D. EGA FUTSAL",
-      "points": 3,
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 10,
-      "ga": 0,
-      "gd": 10,
-      "form": "G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png"
-    },
-    {
       "position": 4,
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "points": 1,
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "form": "E",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
-    },
-    {
-      "position": 5,
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "points": 1,
       "played": 2,
@@ -2479,6 +2464,21 @@
       "form": "P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png"
+    },
+    {
+      "position": 5,
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "points": 1,
+      "played": 2,
+      "won": 0,
+      "drawn": 1,
+      "lost": 1,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "form": "E P",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
     },
     {
       "position": 6,
@@ -2567,7 +2567,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-18T17:03:29.212862+00:00",
+  "staff_updated_at": "2026-10-18T17:24:16.222235+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
