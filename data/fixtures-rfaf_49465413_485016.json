@@ -3069,7 +3069,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-18T05:44:58.524592+00:00",
+  "updated_at": "2026-10-18T09:39:52.819983+00:00",
   "rounds": [
     1,
     2,
@@ -3468,7 +3468,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-18T05:44:59.452115+00:00",
+  "staff_updated_at": "2026-10-18T09:39:53.719717+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-18T09:49:23.199222+00:00"
 }
