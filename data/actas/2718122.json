@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "1 - 2",
+          "2 - 3",
           ""
         ]
       ]
@@ -74,6 +74,35 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol en propia puerta · 0 - 1",
+          "(5') OSUNA BAENA, FRANCISCO JAVIER"
+        ],
+        [
+          "Gol · 0 - 2",
+          "(8') CABRERA ROLDAN, RAFAEL"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(17') LEON PEREZ, RUBEN"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(32') GONZALEZ JIMENEZ, JAVIER"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(34') CASTRO VERA, MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -212,6 +241,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(19') PESCADOR JIMENEZ, JULIAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(25') JIMENEZ CAÑADAS, ALVARO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(37') LEON ORTIZ, RAUL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. EGA FUTSAL"
     },
@@ -333,6 +383,31 @@
         [
           "",
           "MORA RIVERA, SERGIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(9') PONFERRADA MORILLO, FRANCISCO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(17') LUQUE JIMENEZ, JACOB LUIS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') CABRERA ROLDAN, RAFAEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(33') CASTRO VERA, MANUEL"
         ]
       ]
     }
@@ -523,6 +598,5 @@
   ],
   "id": "2718122",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718122",
-  "updated_at": "2026-10-18T17:25:21.384668+00:00",
-  "preview": true
+  "updated_at": "2026-10-18T19:25:48.503858+00:00"
 }
