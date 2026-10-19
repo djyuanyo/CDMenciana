@@ -366,6 +366,8 @@ def sync(config=None,browser_reader=None,public_source=None,defer_profiles=False
     results_status=verify_results(matches,club,previous)
     payload=dict(team_key=config['key'],team_label=config['label'],competition_id=config['competition_id'],group_id=config['group_id'],round_matches=round_matches,results_status=results_status,scorers=goal_rows,scorers_source=scorers_url,roster=roster_rows,roster_source=previous.get('roster_source',staff_source(config)),photo_assets=json.loads((ROOT/'data/player-assets.json').read_text()) if (ROOT/'data/player-assets.json').exists() else {},competition=config['competition'],group=config['group'],season=config.get('season','2026-2027'),team=club['team'],source=source,updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),rounds=numbers,unpublished_rounds=[],matches=matches,standings=table,standings_source=standings_url,crest_assets=json.loads((ROOT/'data/crest-assets.json').read_text()) if (ROOT/'data/crest-assets.json').exists() else {})
     if config['key']=='first':payload['club_photos'],payload['club_positions']=club_site(previous)
+    # Results-only refreshes retain the verified roster/statistics freshness markers.
+    payload.update({field:previous[field] for field in ('roster_status','roster_updated_at','stats_updated_at') if field in previous})
     payload.update(staff=previous.get('staff',[]),staff_source=staff_source(config),staff_updated_at=previous.get('staff_updated_at',''),staff_status='cached')
     payload['details_status']='pending' if any(html is None for html in pages.values()) else 'verified'
     team_html=''
