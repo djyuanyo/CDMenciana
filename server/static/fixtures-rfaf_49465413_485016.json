@@ -187,6 +187,26 @@
     {
       "id": "49465413-4-1",
       "round": 4,
+      "home": "C.D. SANTAELLA 2010",
+      "away": "C.D. CARCABUEY",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
+      "acta_url": ""
+    },
+    {
+      "id": "49465413-4-2",
+      "round": 4,
       "home": "C.D. ENCINAS REALES C.F.",
       "away": "C.D. MIRAGENIL F.S. CODIMAR",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
@@ -205,7 +225,7 @@
       "acta_url": ""
     },
     {
-      "id": "49465413-4-2",
+      "id": "49465413-4-3",
       "round": 4,
       "home": "C.D. BOCA F.S. PRIEGO",
       "away": "C.D. ARAS FUTSAL \"A\"",
@@ -222,26 +242,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
-      "acta_url": ""
-    },
-    {
-      "id": "49465413-4-3",
-      "round": 4,
-      "home": "C.D. SANTAELLA 2010",
-      "away": "C.D. CARCABUEY",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
       "acta_url": ""
     },
     {
@@ -3336,7 +3336,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-19T19:22:52.368463+00:00",
+  "updated_at": "2026-10-19T23:42:05.381544+00:00",
   "rounds": [
     1,
     2,
@@ -3720,6 +3720,7 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png": "crests/39d571410234085e.png",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
+  "roster_status": "verified",
   "roster_updated_at": "2026-10-19T20:13:58.293333+00:00",
   "stats_updated_at": "2026-10-19T20:13:58.293333+00:00",
   "staff": [
@@ -3737,8 +3738,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-19T19:22:53.181310+00:00",
+  "staff_updated_at": "2026-10-19T23:42:06.749566+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified"
+  "details_status": "verified"
 }

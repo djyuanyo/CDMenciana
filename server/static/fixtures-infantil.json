@@ -305,26 +305,6 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
     },
     {
-      "id": "49520774-4-1",
-      "round": 4,
-      "home": "C.D. CABRA F.S.",
-      "away": "C.D. ARAS FUTSAL",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000672841_3fc21a5b-e08c-4bf6-ae33-e6b671f9b143.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Cabra - PABELLON MUNICIPAL DE DEPORTES",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588",
-      "acta_url": ""
-    },
-    {
       "id": "49520774-4",
       "round": 4,
       "home": "C.D. TOXAR",
@@ -342,6 +322,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-4-2",
+      "round": 4,
+      "home": "C.D. CABRA F.S.",
+      "away": "C.D. ARAS FUTSAL",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000672841_3fc21a5b-e08c-4bf6-ae33-e6b671f9b143.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Cabra - PABELLON MUNICIPAL DE DEPORTES",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588",
       "acta_url": ""
     },
     {
@@ -3081,7 +3081,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-19T19:12:06.998358+00:00",
+  "updated_at": "2026-10-19T23:42:17.064060+00:00",
   "rounds": [
     1,
     2,
@@ -3629,6 +3629,8 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png": "crests/39d571410234085e.png",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-19T19:21:23.324042+00:00",
   "staff": [
     {
       "name": "GODOY RUIZ, CRISTINA",
@@ -3654,9 +3656,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-19T19:12:07.995047+00:00",
+  "staff_updated_at": "2026-10-19T23:42:17.861579+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified",
-  "roster_updated_at": "2026-10-19T19:21:23.324042+00:00"
+  "details_status": "verified"
 }

@@ -965,6 +965,26 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
     },
     {
+      "id": "48466109-7-1",
+      "round": 7,
+      "home": "C.D. LA PALMA F.S.",
+      "away": "C.D. BENALUP",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001802982_LA_PALMA_F__TBOL_SALA_LOGO_COLOR_1.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "LA PALMA DEL CONDADO PABELLÓN MUNICIPAL (Pabellón)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
+      "acta_url": ""
+    },
+    {
       "id": "48466109-7",
       "round": 7,
       "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
@@ -985,7 +1005,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
-      "id": "48466109-7-2",
+      "id": "48466109-7-3",
       "round": 7,
       "home": "C.D. DEPORTE Y OCIO (ADYO)",
       "away": "C.D. VILLALBA F.S.",
@@ -1005,47 +1025,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715"
     },
     {
-      "id": "48466109-7-3",
-      "round": 7,
-      "home": "C.D. SANTAELLA 2010",
-      "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000001254_04404.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043",
-      "acta_url": ""
-    },
-    {
       "id": "48466109-7-4",
-      "round": 7,
-      "home": "C.D. LA PALMA F.S.",
-      "away": "C.D. BENALUP",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001802982_LA_PALMA_F__TBOL_SALA_LOGO_COLOR_1.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "LA PALMA DEL CONDADO PABELLÓN MUNICIPAL (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-7-5",
       "round": 7,
       "home": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "away": "CIRCULO MERCANTIL E INDUSTRIAL",
@@ -1062,10 +1042,10 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645813"
     },
     {
-      "id": "48466109-7-6",
+      "id": "48466109-7-5",
       "round": 7,
       "home": "C.D. DECORSENECA",
       "away": "CD CÁDIZ FUTSAL YOU ASESORÍA",
@@ -1085,7 +1065,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154"
     },
     {
-      "id": "48466109-7-7",
+      "id": "48466109-7-6",
       "round": 7,
       "home": "C.D. OLIMPIC DE TRIANA",
       "away": "U.D. ALCHOYANO",
@@ -1105,7 +1085,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819"
     },
     {
-      "id": "48466109-7-8",
+      "id": "48466109-7-7",
       "round": 7,
       "home": "C.D. ALCALA DE GUADAIRA F.S.",
       "away": "C.D. ISLEÑO SAN FERNANDO F.S.",
@@ -1122,6 +1102,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-7-8",
+      "round": 7,
+      "home": "C.D. SANTAELLA 2010",
+      "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000001254_04404.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043",
       "acta_url": ""
     },
     {
@@ -6719,7 +6719,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-19T19:11:46.968130+00:00",
+  "updated_at": "2026-10-19T23:41:42.340497+00:00",
   "rounds": [
     1,
     2,
@@ -7629,6 +7629,7 @@
     "23": "Jugador de pista",
     "27": "Jugador de pista"
   },
+  "roster_status": "verified",
   "roster_updated_at": "2026-10-19T19:22:32.891464+00:00",
   "stats_updated_at": "2026-10-19T19:22:32.891464+00:00",
   "staff": [
@@ -7658,8 +7659,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-19T19:11:47.829119+00:00",
+  "staff_updated_at": "2026-10-19T23:41:47.273056+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "roster_status": "verified"
+  "details_status": "verified"
 }
