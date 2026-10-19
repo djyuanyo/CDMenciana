@@ -2,7 +2,7 @@
   "blocks": [
     {
       "kind": "text",
-      "text": "Acta del partido"
+      "text": "Generar PDF Acta del partido"
     },
     {
       "kind": "heading",
@@ -140,7 +140,7 @@
   "players": [],
   "staff": [],
   "id": "2645816",
-  "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645816",
-  "updated_at": "2026-10-19T19:11:21.317719+00:00",
-  "preview": true
+  "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645816",
+  "preview": true,
+  "updated_at": "2026-10-19T23:48:28.723778+00:00"
 }
