@@ -772,7 +772,8 @@
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "da13a617452b8127",
@@ -930,7 +931,8 @@
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "cd043044a15f7496",
@@ -1376,7 +1378,8 @@
         "played": 5,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "bc316f7942b68f74",
@@ -1390,7 +1393,8 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c5bf42c605d8354a",
@@ -1404,7 +1408,8 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "5598fec234515217",
@@ -1417,7 +1422,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -1425,7 +1430,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -1468,7 +1473,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T00:12:23.402986+00:00",
+      "profile_updated_at": "2026-10-19T01:23:48.931789+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 4,
@@ -1490,7 +1495,8 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c8b7f42309bf5149",
@@ -1504,7 +1510,8 @@
         "played": 2,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "537ba096a8b83621",
@@ -1518,7 +1525,8 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "273a536a64a87118",
@@ -1532,7 +1540,8 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     }
   ],
   "staff": [

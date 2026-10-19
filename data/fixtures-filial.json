@@ -2131,7 +2131,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-18T23:42:13.185899+00:00",
+  "updated_at": "2026-10-19T01:18:17.646918+00:00",
   "rounds": [
     1,
     2,
@@ -2583,7 +2583,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-18T23:42:13.990896+00:00",
+  "staff_updated_at": "2026-10-19T01:18:18.769191+00:00",
   "staff_status": "verified",
-  "details_status": "verified"
+  "details_status": "verified",
+  "roster_status": "verified",
+  "roster_updated_at": "2026-10-19T01:27:47.748678+00:00"
 }
