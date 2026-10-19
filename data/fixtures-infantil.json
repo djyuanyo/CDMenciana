@@ -325,26 +325,6 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-2",
-      "round": 4,
-      "home": "C.D. MIRAGENIL F.S. CODIMAR",
-      "away": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001585668_FB_IMG_1725613168543_2.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430",
-      "acta_url": ""
-    },
-    {
       "id": "49520774-4",
       "round": 4,
       "home": "C.D. TOXAR",
@@ -365,7 +345,7 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-4",
+      "id": "49520774-4-3",
       "round": 4,
       "home": "C.D. ASOC. JUVENIL PALENCIANA",
       "away": "C.D. ENCINAS REALES C.F.",
@@ -385,7 +365,7 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-5",
+      "id": "49520774-4-4",
       "round": 4,
       "home": "C.D. BOCA F.S. PRIEGO",
       "away": "C. D. FÚTBOL SALA LUQUE",
@@ -402,6 +382,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-4-5",
+      "round": 4,
+      "home": "C.D. MIRAGENIL F.S. CODIMAR",
+      "away": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001585668_FB_IMG_1725613168543_2.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430",
       "acta_url": ""
     },
     {
@@ -3081,7 +3081,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-19T06:59:53.395835+00:00",
+  "updated_at": "2026-10-19T13:16:53.330932+00:00",
   "rounds": [
     1,
     2,
@@ -3654,7 +3654,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-19T06:59:54.263002+00:00",
+  "staff_updated_at": "2026-10-19T13:16:54.046340+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

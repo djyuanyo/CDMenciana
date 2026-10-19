@@ -205,26 +205,6 @@
       "acta_url": ""
     },
     {
-      "id": "49113036-3-3",
-      "round": 3,
-      "home": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "away": "C.D. FUTBOL SALA LUQUE",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
-      "acta_url": ""
-    },
-    {
       "id": "49113036-3",
       "round": 3,
       "home": "C.D. APAGA Y VAMONOS",
@@ -242,6 +222,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261",
+      "acta_url": ""
+    },
+    {
+      "id": "49113036-3-4",
+      "round": 3,
+      "home": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "away": "C.D. FUTBOL SALA LUQUE",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "acta_url": ""
     },
     {
@@ -2131,7 +2131,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-19T06:59:40.401623+00:00",
+  "updated_at": "2026-10-19T13:16:39.989648+00:00",
   "rounds": [
     1,
     2,
@@ -2583,7 +2583,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-19T06:59:41.258871+00:00",
+  "staff_updated_at": "2026-10-19T13:16:40.821131+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
