@@ -40,13 +40,13 @@ window.ClubNews={
 
 /* Slider of the latest published news, shown under the header on the home page. Swipe or wait: it advances by itself. */
 window.ClubNewsSlider={
- limit:5,
+ limit:3,
  photo(n){const inner=(Array.isArray(n.content)?n.content:[]).find(b=>b.kind==='image'&&Fixtures.newsImage(b.src));return Fixtures.newsImage(n.image)||(inner?Fixtures.newsImage(inner.src):'');},
  slides(){return (Fixtures.newsData?.news||[]).filter(n=>ClubNews.slug(n)).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,this.limit);},
  html(){
   const rows=this.slides(),E=value=>Fixtures.esc(value);
   if(!rows.length)return '';
-  return `<div class="news-slider-track" data-slider-track>${rows.map(n=>`<a class="news-slide" href="${E(ClubNews.href(n))}">${this.photo(n)?`<img src="${E(this.photo(n))}" alt="" data-news-image>`:''}<span class="news-slide-title">${E(n.title)}</span></a>`).join('')}</div><div class="news-slider-bars" aria-hidden="true">${rows.map(()=>'<span><i></i></span>').join('')}</div>`;
+  return `<div class="section-heading news-slider-heading"><h2>Últimas noticias</h2><button type="button" class="text-action" data-page="Noticias">Ver más ${CDM.icon('arrow')}</button></div><div class="news-slider-track" data-slider-track>${rows.map(n=>`<a class="news-slide read-news" href="${E(ClubNews.href(n))}">${this.photo(n)?`<img src="${E(this.photo(n))}" alt="" data-news-image>`:''}<span class="news-slide-title">${E(n.title)}</span></a>`).join('')}</div><div class="news-slider-bars" aria-hidden="true">${rows.map(()=>'<span><i></i></span>').join('')}</div>`;
  },
  mount(page){
   const box=document.getElementById('news-slider'),markup=page==='Inicio'?this.html():'';

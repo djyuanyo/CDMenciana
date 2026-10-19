@@ -114,13 +114,13 @@
       "date": "2026-10-17",
       "time": "18:00",
       "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 1,
+      "away_score": 1,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718120",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718120&cod_acta=2718120",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515"
     },
@@ -134,13 +134,13 @@
       "date": "2026-10-17",
       "time": "20:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718119",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795"
     },
@@ -154,38 +154,18 @@
       "date": "2026-10-18",
       "time": "18:30",
       "venue": "Luque - PABELLON MUNICIPAL DEPORTES",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 2,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718122",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718122&cod_acta=2718122",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261"
     },
     {
       "id": "49113036-3-1",
-      "round": 3,
-      "home": "C.D. CARCABUEY",
-      "away": "C.D. ASOC. JUVENIL PALENCIANA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
-      "acta_url": ""
-    },
-    {
-      "id": "49113036-3-2",
       "round": 3,
       "home": "C.D. VILLA DE BENAMEJI",
       "away": "C.D. MONTILLA FUTSAL",
@@ -205,23 +185,23 @@
       "acta_url": ""
     },
     {
-      "id": "49113036-3-3",
+      "id": "49113036-3-2",
       "round": 3,
-      "home": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "away": "C.D. FUTBOL SALA LUQUE",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "home": "C.D. CARCABUEY",
+      "away": "C.D. ASOC. JUVENIL PALENCIANA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
       "date": "2026-10-25",
       "time": "",
-      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
+      "venue": "Carcabuey - PABELLON MUNICIPAL",
       "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
       "acta_url": ""
     },
     {
@@ -242,6 +222,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261",
+      "acta_url": ""
+    },
+    {
+      "id": "49113036-3-4",
+      "round": 3,
+      "home": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "away": "C.D. FUTBOL SALA LUQUE",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "acta_url": ""
     },
     {
@@ -1084,28 +1084,36 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "CASTRO VERA, MANUEL",
+      "team": "C.D. EGA FUTSAL",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
+      "team": "C.D. EGA FUTSAL",
+      "played": 1,
+      "goals": 3,
+      "penalties": 0,
+      "average": 3.0
+    },
+    {
+      "name": "GARCIA MARIN, ALFONSO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
       "name": "PINO AGUILAR, PABLO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
       "goals": 3,
       "penalties": 1,
       "average": 1.5
-    },
-    {
-      "name": "CASTILLO RAMIREZ, VICTOR MANUEL",
-      "team": "C.D. EGA FUTSAL",
-      "played": 0,
-      "goals": 3,
-      "penalties": 0,
-      "average": null
-    },
-    {
-      "name": "BERGILLOS PORRAS, ALBERTO",
-      "team": "C.D. EGA FUTSAL",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
     },
     {
       "name": "ARCE CID, CARLOS",
@@ -1124,6 +1132,22 @@
       "average": 2.0
     },
     {
+      "name": "LOPEZ CHAVARINO, ENRIQUE",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "BERGILLOS PORRAS, ALBERTO",
+      "team": "C.D. EGA FUTSAL",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "QUERO LUQUE, RUBEN",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
@@ -1132,39 +1156,47 @@
       "average": 1.0
     },
     {
-      "name": "CASTRO VERA, MANUEL",
+      "name": "CABRERA ROLDAN, RAFAEL",
       "team": "C.D. EGA FUTSAL",
-      "played": 0,
+      "played": 2,
       "goals": 2,
       "penalties": 0,
-      "average": null
+      "average": 1.0
+    },
+    {
+      "name": "SANCHEZ CASTRO, DANIEL",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MORALES MUÑOZ, JUAN CARLOS",
+      "team": "C.D. EGA FUTSAL",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "LEON PEREZ, RUBEN",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "CASADO RUZ, RAFAEL",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "PULIDO MORAL, JOSÉ MARÍA",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "AGUNDO MEJIAS, DAVID",
-      "team": "C.D. EGA FUTSAL",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "HURTADO MOLINA, CRISTOBAL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "LOPEZ CHAVARINO, SERGIO",
       "team": "C.D. CARCABUEY",
       "played": 1,
       "goals": 1,
@@ -1180,80 +1212,8 @@
       "average": 1.0
     },
     {
-      "name": "ROPERO LUQUE, ANTONIO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "LOPEZ CHAVARINO, ENRIQUE",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "CASADO RUZ, RAFAEL",
-      "team": "C.D. MONTILLA FUTSAL",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "CABRERA ROLDAN, RAFAEL",
-      "team": "C.D. EGA FUTSAL",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "SANCHEZ CASTRO, DANIEL",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RUIZ MARMOL, JUAN MANUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RAMIREZ REINA, JOSE",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
       "team": "C.D. APAGA Y VAMONOS",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "GARCIA MARIN, ALFONSO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "JIMENEZ CAÑADAS, ALVARO",
-      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1268,8 +1228,64 @@
       "average": 1.0
     },
     {
+      "name": "ROPERO LUQUE, ANTONIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTÍN BORREGO, SAMUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "AGUNDO MEJIAS, DAVID",
+      "team": "C.D. EGA FUTSAL",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "GONZALEZ JIMENEZ, JAVIER",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LOPEZ CHAVARINO, SERGIO",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "HURTADO MOLINA, CRISTOBAL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "MEMBIELA GARCIA, JORGE",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RUIZ MARMOL, JUAN MANUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1284,8 +1300,32 @@
       "average": 0.5
     },
     {
+      "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
+      "team": "C.D. VILLA DE BENAMEJI",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RAMIREZ REINA, JOSE",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "MILLAN MUÑOZ, ALEJANDRO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "JIMENEZ CAÑADAS, ALVARO",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1298,17 +1338,9 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.5
-    },
-    {
-      "name": "MORALES MUÑOZ, JUAN CARLOS",
-      "team": "C.D. EGA FUTSAL",
-      "played": 0,
-      "goals": 1,
-      "penalties": 0,
-      "average": null
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=1&codcompeticion=49113015&codtemporada=22&codgrupo=49113036",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=2&codcompeticion=49113015&codtemporada=22&codgrupo=49113036",
   "roster": [
     {
       "name": "JIMENEZ ROMERO, CARLOS",
@@ -2019,7 +2051,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-17T16:20:38.405299+00:00",
+  "updated_at": "2026-10-19T18:53:28.863153+00:00",
   "rounds": [
     1,
     2,
@@ -2068,13 +2100,13 @@
       "date": "2026-10-17",
       "time": "20:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=2",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718119",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718119&cod_acta=2718119",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795"
     },
@@ -2312,105 +2344,105 @@
     {
       "position": 1,
       "team": "C.D. EGA FUTSAL",
-      "points": 3,
-      "played": 1,
-      "won": 1,
+      "points": 6,
+      "played": 2,
+      "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gf": 10,
-      "ga": 0,
-      "gd": 10,
-      "form": "G",
+      "gf": 13,
+      "ga": 2,
+      "gd": 11,
+      "form": "G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png"
     },
     {
       "position": 2,
       "team": "C.D. CARCABUEY",
-      "points": 3,
-      "played": 1,
-      "won": 1,
+      "points": 6,
+      "played": 2,
+      "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gf": 6,
+      "gf": 11,
       "ga": 0,
-      "gd": 6,
-      "form": "G",
+      "gd": 11,
+      "form": "G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
     },
     {
       "position": 3,
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "points": 3,
-      "played": 1,
-      "won": 1,
+      "points": 6,
+      "played": 2,
+      "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "form": "G",
+      "gf": 11,
+      "ga": 8,
+      "gd": 3,
+      "form": "G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
     },
     {
       "position": 4,
-      "team": "C.D. APAGA Y VAMONOS",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "points": 1,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "drawn": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "form": "E",
+      "lost": 1,
+      "gf": 4,
+      "ga": 5,
+      "gd": -1,
+      "form": "P E",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png"
     },
     {
       "position": 5,
       "team": "C.D. FUTBOL SALA LUQUE",
       "points": 1,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "drawn": 1,
-      "lost": 0,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "form": "E",
+      "lost": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "form": "E P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
     },
     {
       "position": 6,
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "points": 0,
-      "played": 1,
+      "team": "C.D. APAGA Y VAMONOS",
+      "points": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "gf": 3,
-      "ga": 4,
-      "gd": -1,
-      "form": "P",
+      "gf": 1,
+      "ga": 6,
+      "gd": -5,
+      "form": "E P",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
     },
     {
       "position": 7,
       "team": "C.D. VILLA DE BENAMEJI",
-      "points": 0,
-      "played": 1,
+      "points": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "gf": 0,
-      "ga": 6,
+      "gf": 1,
+      "ga": 7,
       "gd": -6,
-      "form": "P",
+      "form": "P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png"
     },
@@ -2418,19 +2450,19 @@
       "position": 8,
       "team": "C.D. MONTILLA FUTSAL",
       "points": 0,
-      "played": 1,
+      "played": 2,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "gf": 0,
-      "ga": 10,
-      "gd": -10,
-      "form": "P",
+      "lost": 2,
+      "gf": 5,
+      "ga": 17,
+      "gd": -12,
+      "form": "P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codgrupo=49113036&codcompeticion=49113015&codjornada=1",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=2&codcompeticion=49113015&codgrupo=49113036&codjornada=2",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -2469,9 +2501,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-17T16:20:39.082053+00:00",
+  "staff_updated_at": "2026-10-19T18:53:29.734319+00:00",
   "staff_status": "verified",
   "details_status": "verified",
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-17T16:31:20.632150+00:00"
+  "roster_updated_at": "2026-10-19T19:03:00.679919+00:00"
 }

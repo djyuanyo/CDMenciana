@@ -10,7 +10,7 @@ function routeState(){
 }
 function render(){
  const user=window.ClubAccess?.user();
- const publicPage=['Inicio','Partidos','Club','Clasificación','Goleadores','Ficha de partido','Acta','Jugador','Noticia','CDM TV','Privacidad','Eliminar cuenta'].includes(page);
+ const publicPage=['Inicio','Partidos','Club','Clasificación','Goleadores','Ficha de partido','Acta','Jugador','Noticia','Noticias','CDM TV','Privacidad','Eliminar cuenta'].includes(page);
  const gate=!publicPage&&(!ClubAuth.user||ClubAccess.fetching||!ClubFamilies.ready()||(!ClubAccess.administrator()&&!ClubRegistration.complete(ClubAccess.profile))); 
  if(gate)page='Mi cuenta';
  document.documentElement.dataset.accountGate=String(gate);
@@ -23,6 +23,7 @@ function render(){
  if(page==='Privacidad')body=ClubLegal.screen();
  if(page==='Eliminar cuenta')body=ClubLegal.screen('delete');
  if(page==='Noticia')body=ClubNews.screen();
+ if(page==='Noticias')body=Fixtures.news();
  if(page==='Favoritos')body=ClubFavorites.screen();
  if(page==='Administración'||['Administración users','Administración notifications','Administración history','Administración teams','Administración members','Administración scan','Administración events'].includes(page))body=ClubAccess.screen(page.split(' ')[1]||'home');
  if(page==='Partidos')body=Fixtures.calendar();
@@ -89,7 +90,8 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-report-sort]'))
 
 document.addEventListener('click',async e=>{const button=e.target.closest('[data-team]');if(!button||!Fixtures.selectTeam(button.dataset.team))return;const team=Fixtures.selectedTeam;reportRequest++;playerProfileLoading=false;if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);page='Partidos';}render();await Fixtures.loadFixtures();if(team===Fixtures.selectedTeam){render();window.scrollTo(0,0);}});
 
-function newsRoute(){page='Noticia';render();window.scrollTo(0,0);}
+let newsBackPage='Noticias';
+function newsRoute(){if(page!=='Noticia')newsBackPage=page==='Inicio'?'Inicio':'Noticias';page='Noticia';render();window.scrollTo(0,0);}
 if(ClubNews.route())newsRoute();
 window.addEventListener('club-auth-state',()=>{if(!ClubAuth.user&&!['Inicio','Partidos','Club','Clasificación','Goleadores','Ficha de partido','Acta','Jugador','Noticia','CDM TV','Privacidad','Eliminar cuenta'].includes(page))page='Mi cuenta';ClubAccess.sync();render();});
 window.addEventListener('club-registration-complete',()=>{page='Inicio';render();});
@@ -103,7 +105,7 @@ async function loadClubUsers(){
  finally{ClubAccess.loading=false;if(page==='Administración users')render();}
 }
 document.addEventListener('click',event=>{
- if(event.target.closest('[data-news-back]')){history.replaceState(null,'',location.pathname);page='Inicio';render();window.scrollTo(0,0);}
+ if(event.target.closest('[data-news-back]')){history.replaceState(null,'',location.pathname);page=newsBackPage;render();window.scrollTo(0,0);}
  if(event.target.closest('[data-reload-users]'))loadClubUsers();
 });
 document.addEventListener('input',event=>{if(event.target.matches('[data-user-search]'))document.getElementById('club-users').innerHTML=ClubAccess.rows(event.target.value);});

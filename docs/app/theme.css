@@ -706,3 +706,11 @@ a.player-photo-wrap { display: block; color: inherit; text-decoration: none; }
  .news-compact .news-cover { min-height: 136px; }
  .news-compact .news-body { padding: 22px; }
 }
+
+/* Home has only three news slides; the full list lives on Noticias. */
+#news-slider { padding: 0 18px; }
+#news-slider .news-slider-heading { margin: 16px 0 12px; }
+#news-slider .news-slider-heading h2 { font-size: 20px; }
+#news-slider .news-slider-track { border-radius: 16px; }
+#news-slider .news-slider-bars { left: 36px; right: 36px; }
+@media(min-width:700px){#news-slider{border-radius:0;overflow:visible;}}
