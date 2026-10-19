@@ -1,9 +1,6 @@
 """Publish snapshots on the current head without overwriting newer admin edits."""
 import json, os, subprocess, tempfile, sys, re
 
-def public_path(path):
-    return bool(re.fullmatch(r"data/(?:fixtures(?:-[a-z0-9_]+)?\.json|rfaf-player-profiles(?:-[a-z0-9_]+)?\.json|news\.json|videos\.json|club-teams\.json|roster-snapshot\.json|actas/[0-9]+\.json)",path))
-
 def git(*args, env=None, input=None, check=True):
     return subprocess.run(['git',*args],input=input,text=True,capture_output=True,env=env,check=check)
 
@@ -26,17 +23,44 @@ def only_timestamps_changed(ref,path):
         return without_timestamps(json.loads(old.stdout))==without_timestamps(new)
     except ValueError:return False
 
+def merge_player_statistics(current,incoming):
+    """Merge only newer totals for exact federation IDs; retain current calendar/admin data."""
+    if current.get('team_key')!=incoming.get('team_key') or current.get('season')!=incoming.get('season'):return None
+    fresh={str(p.get('rfaf_id')):p for p in incoming.get('roster',[]) if str(p.get('rfaf_id','')).isdigit()}
+    changed=False
+    for row in current.get('roster',[]):
+        player=fresh.get(str(row.get('rfaf_id','')))
+        if not player or not player.get('stats') or player.get('profile_updated_at','')<=row.get('profile_updated_at',''):continue
+        for key in ('stats','profile_updated_at','stats_round'):
+            if key in player:row[key]=player[key]
+        changed=True
+    if not changed:return None
+    for key in ('roster_updated_at','stats_updated_at'):
+        current[key]=max(current.get(key,''),incoming.get(key,''))
+    return current
+
 def main():
     base=git('rev-parse','HEAD').stdout.strip()
-    changed=set(git('diff','--name-only',base,'--','data/').stdout.splitlines())
-    changed.update(git('ls-files','--others','--exclude-standard','--','data/').stdout.splitlines())
-    changed={p for p in changed if public_path(p) and not only_timestamps_changed(base,p)}
+    changed=set(git('diff','--name-only',base,'--','data/','server/static/','android/app/src/main/assets/').stdout.splitlines())
+    changed.update(git('ls-files','--others','--exclude-standard','--','data/','server/static/','android/app/src/main/assets/').stdout.splitlines())
+    changed={p for p in changed if not only_timestamps_changed(base,p)}
     if not changed:return
     updates={p:git('hash-object','-w',p).stdout.strip() if os.path.isfile(p) else None for p in changed}
     for attempt in range(3):
         git('fetch','origin','main')
         head=git('rev-parse','origin/main').stdout.strip()
         conflicts={p for p in changed if blob(base,p)!=blob(head,p)}
+        if '--player-stats' in sys.argv:
+            for path in list(conflicts):
+                if not re.fullmatch(r'(?:data|server/static|android/app/src/main/assets)/fixtures(?:-[a-z0-9_]+)?\.json',path):continue
+                try:
+                    current=json.loads(git('show',f'{head}:{path}').stdout)
+                    with open(path,encoding='utf-8') as file:incoming=json.load(file)
+                    merged=merge_player_statistics(current,incoming)
+                    if merged is not None:
+                        updates[path]=git('hash-object','-w','--stdin',input=json.dumps(merged,ensure_ascii=False,indent=2)+'\n').stdout.strip()
+                        conflicts.remove(path)
+                except (OSError,ValueError):pass
         if '--imports' in sys.argv and (blob(base,'data/club-teams.json')!=blob(head,'data/club-teams.json') or any(p.startswith('data/team-imports/') for p in conflicts)):
             print('::warning::A newer administrator request exists; retaining it for the next import run.')
             return
