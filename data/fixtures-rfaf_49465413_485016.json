@@ -187,6 +187,26 @@
     {
       "id": "49465413-4-1",
       "round": 4,
+      "home": "C.D. ENCINAS REALES C.F.",
+      "away": "C.D. MIRAGENIL F.S. CODIMAR",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "date": "2026-10-25",
+      "time": "",
+      "venue": "Encinas Reales - PABELLON MUNICIPAL",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
+      "acta_url": ""
+    },
+    {
+      "id": "49465413-4-2",
+      "round": 4,
       "home": "C.D. BOCA F.S. PRIEGO",
       "away": "C.D. ARAS FUTSAL \"A\"",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
@@ -205,7 +225,7 @@
       "acta_url": ""
     },
     {
-      "id": "49465413-4-2",
+      "id": "49465413-4-3",
       "round": 4,
       "home": "C.D. SANTAELLA 2010",
       "away": "C.D. CARCABUEY",
@@ -222,26 +242,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
-      "acta_url": ""
-    },
-    {
-      "id": "49465413-4-3",
-      "round": 4,
-      "home": "C.D. ENCINAS REALES C.F.",
-      "away": "C.D. MIRAGENIL F.S. CODIMAR",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Encinas Reales - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
       "acta_url": ""
     },
     {
@@ -3085,7 +3085,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-19T14:36:40.306904+00:00",
+  "updated_at": "2026-10-19T19:03:04.491456+00:00",
   "rounds": [
     1,
     2,
@@ -3484,7 +3484,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-19T14:36:40.998296+00:00",
+  "staff_updated_at": "2026-10-19T19:03:05.356072+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
