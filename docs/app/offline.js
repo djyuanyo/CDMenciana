@@ -45,7 +45,7 @@ function render(){
  remember();
 }
 // Data some pages fetch each time they open.
-function pageOpened(){if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración teams'){ClubTeams.paint();ClubTeams.refresh().catch(e=>ClubTeams.say(e.message));}else if(page==='Administración users')loadClubUsers();else if(page==='Administración history')ClubNotifications.history();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();}
+function pageOpened(){if(page==='Club')refreshVisibleStats().catch(()=>{});else if(page==='Favoritos'){ClubFavorites.sync();ClubFavorites.loadCatalog();}else if(page==='Administración teams'){ClubTeams.paint();ClubTeams.refresh().catch(e=>ClubTeams.say(e.message));}else if(page==='Administración users')loadClubUsers();else if(page==='Administración history')ClubNotifications.history();else if(ClubAccess.enabled()&&['Mi cuenta','Socios','Jugadores'].includes(page))ClubAccess.sync();}
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;if(routeState()||ClubNews.route()||window.ClubMatchAlerts?.route()){history.replaceState(null,'',location.pathname);reportRequest++;}render();pageOpened();window.scrollTo(0,0)}});
 document.addEventListener('click',async e=>{if(e.target.closest('[data-refresh-fixtures]')){const b=e.target.closest('button');b.disabled=true;b.textContent='Actualizando…';await Fixtures.load(true);render();}});
 document.addEventListener('click',e=>{const tab=e.target.closest('.round-tabs [data-round]');if(tab){Fixtures.round=tab.dataset.round;Fixtures.manualRound=true;render();Fixtures.syncRoundTabs(true);}});
@@ -188,3 +188,13 @@ if(!window.ClubPushNative&&window.history?.pushState){
   });
  }catch{}
 }
+
+/* Recheck public player totals while the squad/profile is open or resumes. */
+let statsRefreshing=false;
+async function refreshVisibleStats(){
+ if(statsRefreshing||document.visibilityState!=='visible'||!['Club','Jugador'].includes(page))return;
+ const screen=page,team=Fixtures.selectedTeam;statsRefreshing=true;
+ try{await Fixtures.loadFixtures(true);if(page===screen&&team===Fixtures.selectedTeam){for(const p of Fixtures.reportData?.players||[])Fixtures.currentPlayerStats(p);render();}}finally{statsRefreshing=false;}
+}
+document.addEventListener('visibilitychange',()=>refreshVisibleStats().catch(()=>{}));
+setInterval(()=>refreshVisibleStats().catch(()=>{}),5*60*1000);

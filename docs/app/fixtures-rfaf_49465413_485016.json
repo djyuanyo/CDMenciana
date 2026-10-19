@@ -1171,7 +1171,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1179,11 +1179,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1222,7 +1222,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T22:51:50.388945+00:00",
+      "profile_updated_at": "2026-10-19T19:06:31.026202+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1230,7 +1230,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "TORO BRIONES, DANIEL",
@@ -1298,7 +1299,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T22:52:01.591995+00:00",
+      "profile_updated_at": "2026-10-19T19:06:32.015324+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1306,7 +1307,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "PEREZ REYES, MARIO",
@@ -1323,11 +1325,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -1335,7 +1337,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1369,12 +1371,12 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-09T11:45:40.463796+00:00",
+      "profile_updated_at": "2026-10-19T19:06:33.019363+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1382,7 +1384,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "GONZALEZ DELGADO, MARCOS",
@@ -3488,5 +3491,6 @@
   "staff_status": "verified",
   "details_status": "verified",
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-19T19:03:00.962125+00:00"
+  "roster_updated_at": "2026-10-19T19:06:30.044936+00:00",
+  "stats_updated_at": "2026-10-19T19:06:30.044936+00:00"
 }

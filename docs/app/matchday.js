@@ -37,7 +37,7 @@ window.ClubMatchdays={
 };
 const loadClubFixtures=Fixtures.load.bind(Fixtures);
 Fixtures.load=async function(refresh=false){await loadClubFixtures(refresh);await ClubMatchdays.load(refresh);};
-Fixtures.overview=function(){return ClubMatchdays.screen()+this.status()+this.news();};
+Fixtures.overview=function(){return ClubMatchdays.screen()+this.status();};
 
 /* Downward touch gestures start at the top; horizontal carousels keep native scrolling. */
 window.ClubRefresh={

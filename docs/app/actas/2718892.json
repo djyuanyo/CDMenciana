@@ -1216,7 +1216,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1224,11 +1224,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1275,7 +1275,8 @@
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-13T22:51:50.388945+00:00"
+      "profile_updated_at": "2026-10-19T19:06:31.026202+00:00",
+      "stats_round": 3
     },
     {
       "id": "1f6f21c59591c9a8",
