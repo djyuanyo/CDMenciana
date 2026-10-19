@@ -1716,7 +1716,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1724,7 +1724,7 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
@@ -1758,11 +1758,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.5"
             ]
           ]
         }
@@ -1777,7 +1777,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T09:28:18.707319+00:00"
+      "profile_updated_at": "2026-10-19T06:22:31.331057+00:00"
     },
     {
       "id": "40e7ffece44d3de0",
@@ -1790,11 +1790,11 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -1802,7 +1802,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1851,7 +1851,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T10:24:17.772033+00:00"
+      "profile_updated_at": "2026-10-19T06:22:29.336354+00:00"
     },
     {
       "id": "d30ca327edb99237",
@@ -2012,7 +2012,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -2020,7 +2020,7 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
@@ -2073,7 +2073,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T09:28:19.680680+00:00"
+      "profile_updated_at": "2026-10-19T06:22:32.352754+00:00"
     }
   ],
   "staff": [],
