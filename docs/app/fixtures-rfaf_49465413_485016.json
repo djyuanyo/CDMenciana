@@ -134,13 +134,13 @@
       "date": "2026-10-17",
       "time": "16:15",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 4,
+      "away_score": 6,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718899",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718899&cod_acta=2718899",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
@@ -180,9 +180,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718901",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
+      "acta_url": ""
     },
     {
       "id": "49465413-4-1",
@@ -818,20 +818,20 @@
   "results_status": "verified",
   "scorers": [
     {
-      "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 4,
-      "penalties": 0,
+      "name": "MONTES RECIO, SERGIO",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 8,
+      "penalties": 1,
       "average": 4.0
     },
     {
-      "name": "MONTES RECIO, SERGIO",
-      "team": "C.D. MENCIANA",
-      "played": 1,
-      "goals": 4,
+      "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 7,
       "penalties": 0,
-      "average": 4.0
+      "average": 3.5
     },
     {
       "name": "PEDROSA HIDALGO, PABLO",
@@ -840,6 +840,14 @@
       "goals": 3,
       "penalties": 0,
       "average": 1.5
+    },
+    {
+      "name": "MARIN URBANO, ADRIAN",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "RODRIGUEZ GÓMEZ, JOSE MANUEL",
@@ -874,48 +882,16 @@
       "average": 2.0
     },
     {
-      "name": "MARQUEZ QUERO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "SANCHEZ CAÑETE, ANGEL",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MARIN URBANO, ADRIAN",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "DE LA TORRE RAMIREZ, RODRIGO",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "JURADO ORDOÑEZ, MARCOS",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "MONTES MESA, ALVARO",
       "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MARIN MEDINA, PABLO",
+      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -946,12 +922,44 @@
       "average": 1.0
     },
     {
+      "name": "MARQUEZ QUERO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "ALONSO GAZQUEZ, KEVIN",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 2,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "SANCHEZ CAÑETE, ANGEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "JURADO ORDOÑEZ, MARCOS",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "DE LA TORRE RAMIREZ, RODRIGO",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
     },
     {
       "name": "TEJERO RUZ, DANIEL",
@@ -962,72 +970,8 @@
       "average": null
     },
     {
-      "name": "MARIN MEDINA, MANUEL",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "COBO COMINO, DAVID",
       "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "CASTRO MONTES, MANUEL",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MARIN MEDINA, PABLO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "CAÑETE PEREA, CARLOS",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ROLDAN CABEZA, ALBERTO",
-      "team": "C.D. CARCABUEY",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ABOUELALAM EL BARHMI, ADAM",
-      "team": "C.D. MENCIANA",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "MONZON CAMPAÑA, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PRIEGO MONTES, LUIS",
-      "team": "C.D. MENCIANA",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1042,15 +986,15 @@
       "average": 1.0
     },
     {
-      "name": "DOMINGUEZ SANCHEZ, DAVID",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 2,
+      "name": "MONZON CAMPAÑA, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
-      "name": "JIMENEZ POYATO, JOSE ANTONIO",
+      "name": "ABOUELALAM EL BARHMI, ADAM",
       "team": "C.D. MENCIANA",
       "played": 2,
       "goals": 1,
@@ -1060,6 +1004,14 @@
     {
       "name": "PRIETO MORENO, PABLO",
       "team": "C.D. ENCINAS REALES C.F.",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "ROLDAN CABEZA, ALBERTO",
+      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1098,16 +1050,32 @@
       "average": 0.5
     },
     {
-      "name": "ARJONA GARCIA, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "VERA TORRES, RAFAEL",
-      "team": "C.D. MENCIANA",
+      "name": "MARIN MEDINA, MANUEL",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CASTRO MONTES, MANUEL",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CAÑETE PEREA, CARLOS",
+      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1136,9 +1104,41 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.5
+    },
+    {
+      "name": "PRIEGO MONTES, LUIS",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "ARJONA GARCIA, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "VERA TORRES, RAFAEL",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "JIMENEZ POYATO, JOSE ANTONIO",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=2&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=3&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
   "roster": [
     {
       "name": "TORO BRIONES, DANIEL",
@@ -3049,7 +3049,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-17T10:19:07.314333+00:00",
+  "updated_at": "2026-10-17T16:20:47.398417+00:00",
   "rounds": [
     1,
     2,
@@ -3118,13 +3118,13 @@
       "date": "2026-10-17",
       "time": "16:15",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 4,
+      "away_score": 6,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718899",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718899&cod_acta=2718899",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
@@ -3304,15 +3304,15 @@
     {
       "position": 1,
       "team": "C.D. MENCIANA",
-      "points": 6,
-      "played": 2,
-      "won": 2,
+      "points": 9,
+      "played": 3,
+      "won": 3,
       "drawn": 0,
       "lost": 0,
-      "gf": 18,
-      "ga": 0,
-      "gd": 18,
-      "form": "G G",
+      "gf": 24,
+      "ga": 4,
+      "gd": 20,
+      "form": "G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png"
     },
@@ -3335,14 +3335,14 @@
       "position": 3,
       "team": "C.D. CARCABUEY",
       "points": 3,
-      "played": 1,
+      "played": 2,
       "won": 1,
       "drawn": 0,
-      "lost": 0,
-      "gf": 10,
-      "ga": 4,
-      "gd": 6,
-      "form": "G",
+      "lost": 1,
+      "gf": 14,
+      "ga": 10,
+      "gd": 4,
+      "form": "G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
     },
@@ -3407,7 +3407,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=2&codcompeticion=49465203&codgrupo=49465413&codjornada=2",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=3&codcompeticion=49465203&codgrupo=49465413&codjornada=3",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3446,9 +3446,9 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-17T10:19:08.289926+00:00",
+  "staff_updated_at": "2026-10-17T16:20:48.383682+00:00",
   "staff_status": "verified",
   "details_status": "verified",
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-17T10:28:30.787614+00:00"
+  "roster_updated_at": "2026-10-17T16:31:20.866185+00:00"
 }
