@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T19:04:19.826545+00:00",
+  "updated_at": "2026-10-19T19:11:19.895146+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41413481&codacta=2718896&nueva_ventana=": {
       "name": "GARCÍA PÉREZ, ADRIÁN",
@@ -63,7 +63,7 @@
         }
       ],
       "updated_at": "2026-10-09T11:45:40.436324+00:00",
-      "failed_at": "2026-10-17T09:49:26.817492+00:00"
+      "failed_at": "2026-10-19T19:11:19.895146+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38164217&codacta=2718891&nueva_ventana=": {
       "name": "REYES DELGADO, MANUEL",
@@ -131,7 +131,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718896&nueva_ventana=": {
       "name": "PEREZ REYES, MARIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -139,11 +139,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -151,7 +151,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -185,17 +185,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.463796+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:28.095123+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718896&nueva_ventana=": {
       "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -254,12 +255,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.423978+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:37.936418+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718896&nueva_ventana=": {
       "name": "MAIRELES RAMÍREZ, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -267,11 +269,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -279,7 +281,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -313,17 +315,213 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.401701+00:00",
-      "failed_at": "2026-10-17T09:49:24.796568+00:00"
+      "updated_at": "2026-10-19T19:11:43.130431+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718896&nueva_ventana=": {
       "name": "GONZALEZ DELGADO, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:29.075339+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718896&nueva_ventana=": {
+      "name": "LUQUE PÉREZ, JOSÉ",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:38.984280+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718896&nueva_ventana=": {
+      "name": "RUIZ FERNÁNDEZ, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:32.943808+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718896&nueva_ventana=": {
+      "name": "DELGADO ROMÁN, HUGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -382,32 +580,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-09T10:32:06.189339+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718896&nueva_ventana=": {
-      "name": "LUQUE PÉREZ, JOSÉ",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718896&nueva_ventana=",
-      "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718896&nueva_ventana=": {
-      "name": "RUIZ FERNÁNDEZ, MARIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718896&nueva_ventana=",
-      "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718896&nueva_ventana=": {
-      "name": "DELGADO ROMÁN, HUGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718896&nueva_ventana=",
-      "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-17T19:34:29.668559+00:00"
+      "updated_at": "2026-10-19T19:11:44.911199+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=30800742&codacta=2718891&nueva_ventana=": {
       "name": "RODRÍGUEZ JIMÉNEZ, LUCAS",
@@ -1488,7 +1663,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718892&nueva_ventana=": {
       "name": "MONTILLA ALTEZ, ISMAEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1496,7 +1671,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1504,11 +1679,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1547,12 +1722,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:50.388945+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:26.137784+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718896&nueva_ventana=": {
       "name": "MARIN URBANO, ADRIAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1560,7 +1736,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1568,11 +1744,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1602,7 +1778,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
@@ -1611,12 +1787,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:51.347067+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:31.923809+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718896&nueva_ventana=": {
       "name": "GORDILLO MOLINA, JUAN JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1675,12 +1852,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:52.371973+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:33.938550+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718896&nueva_ventana=": {
       "name": "DE LA TORRE RAMIREZ, RODRIGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1688,11 +1866,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -1700,7 +1878,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1734,17 +1912,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:53.840596+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:36.928140+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752553&codacta=2718892&nueva_ventana=": {
       "name": "ÉCIJA BUJALANCE, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752553&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752553&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1803,12 +1982,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:54.404198+00:00",
-      "failed_at": "2026-10-17T10:06:38.321820+00:00"
+      "updated_at": "2026-10-19T19:11:50.887098+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718892&nueva_ventana=": {
       "name": "CORTES BLANCA, SOFIA",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1816,7 +1996,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1824,11 +2004,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1867,12 +2047,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:55.397590+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:30.145239+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718896&nueva_ventana=": {
       "name": "JURADO ORDOÑEZ, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1880,11 +2061,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -1892,7 +2073,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1926,17 +2107,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:56.431281+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:35.911743+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718892&nueva_ventana=": {
       "name": "PRIEGO MONTES, LUIS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1944,11 +2126,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -1956,7 +2138,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1990,17 +2172,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:57.395993+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:40.194887+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718896&nueva_ventana=": {
       "name": "VERA TORRES, RAFAEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2008,7 +2191,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -2016,11 +2199,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -2054,17 +2237,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:58.624181+00:00",
-      "failed_at": "2026-10-17T10:06:57.312909+00:00"
+      "updated_at": "2026-10-19T19:11:44.080728+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718896&nueva_ventana=": {
       "name": "JIMENEZ POYATO, JOSE ANTONIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2072,7 +2256,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -2080,11 +2264,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -2118,17 +2302,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:59.701751+00:00",
-      "failed_at": "2026-10-17T10:06:58.311165+00:00"
+      "updated_at": "2026-10-19T19:11:48.062932+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718896&nueva_ventana=": {
       "name": "MONTES MESA, ALVARO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2187,12 +2372,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:00.719286+00:00",
-      "failed_at": "2026-10-17T10:06:59.340101+00:00"
+      "updated_at": "2026-10-19T19:11:50.050194+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27016442&codacta=2718896&nueva_ventana=": {
       "name": "TORO BRIONES, DANIEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27016442&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27016442&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2251,12 +2437,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:01.591995+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:27.058512+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718896&nueva_ventana=": {
       "name": "MONTES RECIO, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2264,11 +2451,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -2276,7 +2463,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -2306,7 +2493,7 @@
           "rows": [
             [
               "Total",
-              "4"
+              "8"
             ],
             [
               "Goles por partido",
@@ -2315,12 +2502,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:02.589809+00:00",
-      "failed_at": "2026-10-17T10:07:01.467655+00:00"
+      "updated_at": "2026-10-19T19:11:41.929471+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718896&nueva_ventana=": {
       "name": "GOMEZ CUBERO, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2328,11 +2516,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -2340,7 +2528,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -2379,12 +2567,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:03.687219+00:00",
-      "failed_at": "2026-10-17T10:07:17.319117+00:00"
+      "updated_at": "2026-10-19T19:11:46.899051+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718896&nueva_ventana=": {
       "name": "ABOUELALAM EL BARHMI, ADAM",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2392,7 +2581,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -2400,11 +2589,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -2438,17 +2627,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:04.630077+00:00",
-      "failed_at": "2026-10-17T10:07:18.307288+00:00"
+      "updated_at": "2026-10-19T19:11:51.899163+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718896&nueva_ventana=": {
       "name": "GONZALEZ DELGADO, LEO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2456,7 +2646,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -2464,7 +2654,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -2507,12 +2697,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:05.405425+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:31.206757+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36764049&codacta=2718896&nueva_ventana=": {
       "name": "ESCALONA QUIRÓS, JUAN ANTONIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36764049&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36764049&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2571,12 +2762,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:06.399541+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:35.089484+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41524062&codacta=2718896&nueva_ventana=": {
       "name": "GARCÍA MIRANDA, JESÚS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41524062&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41524062&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2635,12 +2827,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:07.403844+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:40.917269+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718896&nueva_ventana=": {
       "name": "RAMÍREZ PÉREZ, DIEGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2648,7 +2841,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -2656,7 +2849,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -2699,8 +2892,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:08.592359+00:00",
-      "failed_at": "2026-10-17T10:07:30.317776+00:00"
+      "updated_at": "2026-10-19T19:11:48.900657+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25301986&codacta=2718897&nueva_ventana=": {
       "name": "VERDUGO MORALES, JOSE FRANCISCO",
@@ -3068,11 +3262,11 @@
         }
       ],
       "updated_at": "2026-10-09T11:45:40.436324+00:00",
-      "failed_at": "2026-10-17T09:49:26.817492+00:00"
+      "failed_at": "2026-10-19T19:11:19.895146+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718891&nueva_ventana=": {
       "name": "PEREZ REYES, MARIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3080,11 +3274,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -3092,7 +3286,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -3126,17 +3320,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.463796+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:28.095123+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718891&nueva_ventana=": {
       "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45756575&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3195,12 +3390,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.423978+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:37.936418+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718891&nueva_ventana=": {
       "name": "MAIRELES RAMÍREZ, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3208,11 +3404,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -3220,7 +3416,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -3254,17 +3450,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.401701+00:00",
-      "failed_at": "2026-10-17T09:49:24.796568+00:00"
+      "updated_at": "2026-10-19T19:11:43.130431+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718891&nueva_ventana=": {
       "name": "GONZALEZ DELGADO, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3272,11 +3469,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -3284,7 +3481,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -3293,11 +3490,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -3323,8 +3520,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-09T10:32:06.189339+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:29.075339+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=34679956&codacta=2718892&nueva_ventana=": {
       "name": "RUIZ RUIZ, AITOR MANUEL",
@@ -3840,7 +4038,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718892&nueva_ventana=": {
       "name": "MARIN URBANO, ADRIAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3848,7 +4046,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -3856,11 +4054,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -3890,7 +4088,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
@@ -3899,12 +4097,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:51.347067+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:31.923809+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718892&nueva_ventana=": {
       "name": "GORDILLO MOLINA, JUAN JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32753076&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3963,12 +4162,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:52.371973+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:33.938550+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718892&nueva_ventana=": {
       "name": "DE LA TORRE RAMIREZ, RODRIGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3976,11 +4176,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -3988,7 +4188,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -4022,17 +4222,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:53.840596+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:36.928140+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718892&nueva_ventana=": {
       "name": "JURADO ORDOÑEZ, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4040,11 +4241,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -4052,7 +4253,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -4086,17 +4287,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:56.431281+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:35.911743+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718892&nueva_ventana=": {
       "name": "VERA TORRES, RAFAEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4104,7 +4306,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -4112,11 +4314,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -4150,17 +4352,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:58.624181+00:00",
-      "failed_at": "2026-10-17T10:06:57.312909+00:00"
+      "updated_at": "2026-10-19T19:11:44.080728+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718892&nueva_ventana=": {
       "name": "JIMENEZ POYATO, JOSE ANTONIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4168,7 +4371,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -4176,11 +4379,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -4214,17 +4417,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:59.701751+00:00",
-      "failed_at": "2026-10-17T10:06:58.311165+00:00"
+      "updated_at": "2026-10-19T19:11:48.062932+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718892&nueva_ventana=": {
       "name": "MONTES MESA, ALVARO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15704994&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4283,8 +4487,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:00.719286+00:00",
-      "failed_at": "2026-10-17T10:06:59.340101+00:00"
+      "updated_at": "2026-10-19T19:11:50.050194+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25301986&codacta=2806232&nueva_ventana=": {
       "name": "VERDUGO MORALES, JOSE FRANCISCO",
@@ -4877,7 +5082,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718899&nueva_ventana=": {
       "name": "MONTILLA ALTEZ, ISMAEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45834497&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4885,7 +5090,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -4893,11 +5098,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -4936,12 +5141,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:50.388945+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:26.137784+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718899&nueva_ventana=": {
       "name": "MARIN URBANO, ADRIAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752743&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -4949,7 +5155,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -4957,11 +5163,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -4991,7 +5197,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
@@ -5000,12 +5206,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:51.347067+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:31.923809+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718899&nueva_ventana=": {
       "name": "DE LA TORRE RAMIREZ, RODRIGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25147085&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5013,11 +5220,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -5025,7 +5232,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5059,17 +5266,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:53.840596+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:36.928140+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718899&nueva_ventana=": {
       "name": "CORTES BLANCA, SOFIA",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=18930956&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5077,7 +5285,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -5085,11 +5293,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -5128,12 +5336,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:55.397590+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:30.145239+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718899&nueva_ventana=": {
       "name": "JURADO ORDOÑEZ, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22326017&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5141,11 +5350,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -5153,7 +5362,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5187,17 +5396,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:56.431281+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:35.911743+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718899&nueva_ventana=": {
       "name": "PRIEGO MONTES, LUIS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718892&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752967&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5205,11 +5415,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -5217,7 +5427,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -5251,17 +5461,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:57.395993+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:40.194887+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718899&nueva_ventana=": {
       "name": "VERA TORRES, RAFAEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499406&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5269,7 +5480,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -5277,11 +5488,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5315,17 +5526,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:58.624181+00:00",
-      "failed_at": "2026-10-17T10:06:57.312909+00:00"
+      "updated_at": "2026-10-19T19:11:44.080728+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718899&nueva_ventana=": {
       "name": "JIMENEZ POYATO, JOSE ANTONIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499440&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5333,7 +5545,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -5341,11 +5553,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5379,17 +5591,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:51:59.701751+00:00",
-      "failed_at": "2026-10-17T10:06:58.311165+00:00"
+      "updated_at": "2026-10-19T19:11:48.062932+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718899&nueva_ventana=": {
       "name": "MONTES RECIO, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32752892&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5397,11 +5610,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -5409,7 +5622,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -5439,7 +5652,7 @@
           "rows": [
             [
               "Total",
-              "4"
+              "8"
             ],
             [
               "Goles por partido",
@@ -5448,12 +5661,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:02.589809+00:00",
-      "failed_at": "2026-10-17T10:07:01.467655+00:00"
+      "updated_at": "2026-10-19T19:11:41.929471+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718899&nueva_ventana=": {
       "name": "GOMEZ CUBERO, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8499457&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5461,11 +5675,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -5473,7 +5687,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -5512,12 +5726,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:03.687219+00:00",
-      "failed_at": "2026-10-17T10:07:17.319117+00:00"
+      "updated_at": "2026-10-19T19:11:46.899051+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718899&nueva_ventana=": {
       "name": "ABOUELALAM EL BARHMI, ADAM",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26220225&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5525,7 +5740,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -5533,11 +5748,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -5571,13 +5786,14 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:04.630077+00:00",
-      "failed_at": "2026-10-17T10:07:18.307288+00:00"
+      "updated_at": "2026-10-19T19:11:51.899163+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15753742&codacta=2718899&nueva_ventana=": {
       "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
@@ -5597,11 +5813,68 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37086927&codacta=2718899&nueva_ventana=": {
       "name": "MORENO JIMENEZ, DANIEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37086927&codacta=2718899&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37086927&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-17T19:34:43.669569+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:45.928227+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41413481&codacta=2718900&nueva_ventana=": {
       "name": "GARCÍA PÉREZ, ADRIÁN",
@@ -5665,7 +5938,7 @@
         }
       ],
       "updated_at": "2026-10-09T11:45:40.436324+00:00",
-      "failed_at": "2026-10-17T09:49:26.817492+00:00"
+      "failed_at": "2026-10-19T19:11:19.895146+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38164217&codacta=2718900&nueva_ventana=": {
       "name": "REYES DELGADO, MANUEL",
@@ -5676,7 +5949,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718900&nueva_ventana=": {
       "name": "PEREZ REYES, MARIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32792076&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5684,11 +5957,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -5696,7 +5969,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5730,17 +6003,18 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.463796+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:28.095123+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718900&nueva_ventana=": {
       "name": "MAIRELES RAMÍREZ, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41522239&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5748,11 +6022,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -5760,7 +6034,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5794,17 +6068,18 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-09T11:45:40.401701+00:00",
-      "failed_at": "2026-10-17T09:49:24.796568+00:00"
+      "updated_at": "2026-10-19T19:11:43.130431+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718900&nueva_ventana=": {
       "name": "GONZALEZ DELGADO, MARCOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114138&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5812,11 +6087,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -5824,7 +6099,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -5833,11 +6108,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -5863,28 +6138,143 @@
           ]
         }
       ],
-      "updated_at": "2026-10-09T10:32:06.189339+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:29.075339+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718900&nueva_ventana=": {
       "name": "LUQUE PÉREZ, JOSÉ",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:38.984280+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718900&nueva_ventana=": {
       "name": "RUIZ FERNÁNDEZ, MARIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
-      "sections": [],
-      "updated_at": "",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:32.943808+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718900&nueva_ventana=": {
       "name": "GONZALEZ DELGADO, LEO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114064&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5892,7 +6282,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -5900,7 +6290,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -5943,12 +6333,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:05.405425+00:00",
-      "failed_at": "2026-10-19T19:04:19.826545+00:00"
+      "updated_at": "2026-10-19T19:11:31.206757+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718900&nueva_ventana=": {
       "name": "RAMÍREZ PÉREZ, DIEGO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718896&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718899&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5956,7 +6347,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -5964,7 +6355,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -6007,8 +6398,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-13T22:52:08.592359+00:00",
-      "failed_at": "2026-10-17T10:07:30.317776+00:00"
+      "updated_at": "2026-10-19T19:11:48.900657+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49874798&codacta=2718900&nueva_ventana=": {
       "name": "FERNANDEZ DELGADO, JAVIER",
