@@ -1000,9 +1000,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
       "id": "48466109-7-3",
@@ -1060,9 +1060,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645817",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645817"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154"
     },
     {
       "id": "48466109-7-6",
@@ -5756,9 +5756,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:24.082534+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:42.270207+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CAMPOS AGUACIL, MANUEL",
@@ -5826,9 +5825,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:25.084558+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:43.336458+00:00",
+      "competition_summary": {}
     },
     {
       "name": "BAENA PRIEGO, ALBERTO",
@@ -5896,9 +5894,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:25.878659+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:44.316108+00:00",
+      "competition_summary": {}
     },
     {
       "name": "MARAÑON BAENA, JESUS",
@@ -5966,9 +5963,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:27.131376+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:45.154104+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
@@ -6036,9 +6032,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:28.117174+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:46.372571+00:00",
+      "competition_summary": {}
     },
     {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
@@ -6106,9 +6101,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:28.908376+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:47.127572+00:00",
+      "competition_summary": {}
     },
     {
       "name": "SANCHEZ TIENDA, DAVID",
@@ -6176,9 +6170,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:30.082365+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:48.164647+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CUBERO CUBERO, JESUS",
@@ -6246,9 +6239,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:30.906081+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:49.140302+00:00",
+      "competition_summary": {}
     },
     {
       "name": "RODRIGUEZ JIMENEZ, SERGIO",
@@ -6316,9 +6308,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:32.026097+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:50.328212+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
@@ -6386,9 +6377,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:33.106533+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:51.155677+00:00",
+      "competition_summary": {}
     },
     {
       "name": "BONILLA ACEITUNO, JUAN",
@@ -6456,9 +6446,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:33.886491+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:52.149526+00:00",
+      "competition_summary": {}
     },
     {
       "name": "LUNA ACEITUNO, ADRIAN",
@@ -6538,9 +6527,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:34.888634+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:53.327516+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CABALLERO LAMA, ISAAC",
@@ -6608,9 +6596,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:36.078225+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:54.388597+00:00",
+      "competition_summary": {}
     },
     {
       "name": "CABALLERO LAMA, ALEJANDRO",
@@ -6690,9 +6677,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T21:26:36.913237+00:00",
-      "competition_summary": {},
-      "stats_round": 6
+      "profile_updated_at": "2026-10-20T07:38:55.145063+00:00",
+      "competition_summary": {}
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
@@ -6719,7 +6705,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-20T21:25:17.208608+00:00",
+  "updated_at": "2026-10-20T22:21:05.013404+00:00",
   "rounds": [
     1,
     2,
@@ -6890,9 +6876,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645815"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
       "id": "48466109-8",
@@ -7630,7 +7616,7 @@
     "27": "Jugador de pista"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-20T21:26:17.469635+00:00",
+  "roster_updated_at": "2026-10-20T22:26:46.331632+00:00",
   "stats_updated_at": "2026-10-20T21:26:17.469635+00:00",
   "staff": [
     {
@@ -7659,7 +7645,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-20T21:25:18.068406+00:00",
+  "staff_updated_at": "2026-10-20T22:21:05.951440+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
