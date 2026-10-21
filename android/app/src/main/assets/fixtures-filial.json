@@ -182,7 +182,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718124"
     },
     {
       "id": "49113036-3-2",
@@ -202,7 +202,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718123"
     },
     {
       "id": "49113036-3",
@@ -2368,7 +2368,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-21T13:50:13.343927+00:00",
+  "updated_at": "2026-10-21T18:39:32.670012+00:00",
   "rounds": [
     1,
     2,
@@ -2823,7 +2823,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-21T13:50:14.197023+00:00",
+  "staff_updated_at": "2026-10-21T18:39:33.165317+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
