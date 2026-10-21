@@ -320,9 +320,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965"
     },
     {
       "id": "49520774-4-2",
@@ -347,26 +347,6 @@
     {
       "id": "49520774-4-3",
       "round": 4,
-      "home": "C.D. ASOC. JUVENIL PALENCIANA",
-      "away": "C.D. ENCINAS REALES C.F.",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
-      "date": "2026-10-25",
-      "time": "",
-      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
-      "acta_url": ""
-    },
-    {
-      "id": "49520774-4-4",
-      "round": 4,
       "home": "C.D. BOCA F.S. PRIEGO",
       "away": "C. D. FÚTBOL SALA LUQUE",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
@@ -385,7 +365,7 @@
       "acta_url": ""
     },
     {
-      "id": "49520774-4-5",
+      "id": "49520774-4-4",
       "round": 4,
       "home": "C.D. MIRAGENIL F.S. CODIMAR",
       "away": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
@@ -402,6 +382,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-4-5",
+      "round": 4,
+      "home": "C.D. ASOC. JUVENIL PALENCIANA",
+      "away": "C.D. ENCINAS REALES C.F.",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
+      "date": "2026-10-25",
+      "time": "18:00",
+      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
       "acta_url": ""
     },
     {
@@ -3081,7 +3081,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-20T21:25:38.173175+00:00",
+  "updated_at": "2026-10-21T07:39:57.275831+00:00",
   "rounds": [
     1,
     2,
@@ -3180,9 +3180,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965"
     },
     {
       "id": "49520774-5",
@@ -3656,7 +3656,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-20T21:25:38.585370+00:00",
+  "staff_updated_at": "2026-10-21T07:39:57.883927+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
