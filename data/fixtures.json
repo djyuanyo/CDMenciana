@@ -1127,6 +1127,26 @@
     {
       "id": "48466109-8-1",
       "round": 8,
+      "home": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "away": "C.D. OLIMPIC DE TRIANA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
+      "date": "2026-11-01",
+      "time": "",
+      "venue": "Cádiz - Francisco Blanca Pabellon",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-8-2",
+      "round": 8,
       "home": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "away": "C.D. DEPORTE Y OCIO (ADYO)",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000001254_04404.jpg",
@@ -1145,7 +1165,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-8-2",
+      "id": "48466109-8-3",
       "round": 8,
       "home": "CIRCULO MERCANTIL E INDUSTRIAL",
       "away": "C.D. SANTAELLA 2010",
@@ -1165,7 +1185,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-8-3",
+      "id": "48466109-8-4",
       "round": 8,
       "home": "C.D. BENALUP",
       "away": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
@@ -1185,7 +1205,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-8-4",
+      "id": "48466109-8-5",
       "round": 8,
       "home": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "away": "C.D. LA PALMA F.S.",
@@ -1222,26 +1242,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-8-6",
-      "round": 8,
-      "home": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "away": "C.D. OLIMPIC DE TRIANA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
-      "date": "2026-11-01",
-      "time": "",
-      "venue": "Cádiz - CENTRO HISTORICO PABELLON PVO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
       "acta_url": ""
     },
     {
@@ -6719,7 +6719,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-23T01:32:19.211316+00:00",
+  "updated_at": "2026-10-23T07:32:15.889884+00:00",
   "rounds": [
     1,
     2,
@@ -7659,7 +7659,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-23T01:32:20.318390+00:00",
+  "staff_updated_at": "2026-10-23T07:32:17.106148+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
