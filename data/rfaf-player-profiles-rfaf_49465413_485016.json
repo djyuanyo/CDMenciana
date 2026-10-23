@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T15:54:14.512195+00:00",
+  "updated_at": "2026-10-23T18:32:27.151595+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41413481&codacta=2718896&nueva_ventana=": {
       "name": "GARCÍA PÉREZ, ADRIÁN",
@@ -6485,6 +6485,204 @@
       "photo_source": "",
       "sections": [],
       "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718891&nueva_ventana=": {
+      "name": "LUQUE PÉREZ, JOSÉ",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41621166&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:38.984280+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3,
+      "failed_at": "2026-10-23T15:54:14.512195+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718891&nueva_ventana=": {
+      "name": "RUIZ FERNÁNDEZ, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46198671&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:32.943808+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3,
+      "failed_at": "2026-10-23T15:54:14.512195+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718891&nueva_ventana=": {
+      "name": "DELGADO ROMÁN, HUGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49791280&codacta=2718899&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-19T19:11:44.911199+00:00",
+      "stats_signature": "4d6c7a3df782c642",
+      "stats_round": 3,
+      "failed_at": "2026-10-19T23:47:22.329346+00:00"
     }
   }
 }
