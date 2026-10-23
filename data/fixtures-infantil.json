@@ -305,27 +305,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
     },
     {
-      "id": "49520774-4",
-      "round": 4,
-      "home": "C.D. TOXAR",
-      "away": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png",
-      "date": "2026-10-23",
-      "time": "18:30",
-      "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963",
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965"
-    },
-    {
-      "id": "49520774-4-2",
+      "id": "49520774-4-1",
       "round": 4,
       "home": "C.D. CABRA F.S.",
       "away": "C.D. ARAS FUTSAL",
@@ -345,7 +325,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588"
     },
     {
-      "id": "49520774-4-3",
+      "id": "49520774-4-2",
       "round": 4,
       "home": "C.D. BOCA F.S. PRIEGO",
       "away": "C. D. FÚTBOL SALA LUQUE",
@@ -365,7 +345,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003"
     },
     {
-      "id": "49520774-4-4",
+      "id": "49520774-4-3",
       "round": 4,
       "home": "C.D. MIRAGENIL F.S. CODIMAR",
       "away": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
@@ -385,7 +365,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430"
     },
     {
-      "id": "49520774-4-5",
+      "id": "49520774-4-4",
       "round": 4,
       "home": "C.D. ASOC. JUVENIL PALENCIANA",
       "away": "C.D. ENCINAS REALES C.F.",
@@ -403,6 +383,26 @@
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745964",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116"
+    },
+    {
+      "id": "49520774-4",
+      "round": 4,
+      "home": "C.D. TOXAR",
+      "away": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png",
+      "date": "2026-10-26",
+      "time": "19:00",
+      "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "acta_url": "",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965"
     },
     {
       "id": "49520774-5-1",
@@ -3081,7 +3081,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-22T01:33:47.941994+00:00",
+  "updated_at": "2026-10-23T11:36:20.982583+00:00",
   "rounds": [
     1,
     2,
@@ -3171,8 +3171,8 @@
       "away": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png",
-      "date": "2026-10-23",
-      "time": "18:30",
+      "date": "2026-10-26",
+      "time": "19:00",
       "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
       "state": "Programado",
       "played": false,
@@ -3180,7 +3180,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745963",
+      "acta_url": "",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965"
     },
@@ -3657,7 +3657,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-22T01:33:48.538418+00:00",
+  "staff_updated_at": "2026-10-23T11:36:21.619260+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
