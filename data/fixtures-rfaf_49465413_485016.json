@@ -196,11 +196,11 @@
       "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
       "state": "Finalizado",
       "played": true,
-      "home_score": 0,
-      "away_score": 0,
+      "home_score": 4,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718904",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718904&cod_acta=2718904",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815"
     },
@@ -818,6 +818,14 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
+      "team": "C.D. CARCABUEY",
+      "played": 3,
+      "goals": 10,
+      "penalties": 0,
+      "average": 3.3333
+    },
+    {
       "name": "MONTES RECIO, SERGIO",
       "team": "C.D. MENCIANA",
       "played": 2,
@@ -826,20 +834,12 @@
       "average": 4.0
     },
     {
-      "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 7,
-      "penalties": 0,
-      "average": 3.5
-    },
-    {
       "name": "RODRIGUEZ GOMEZ, MANUEL",
       "team": "C.D. SANTAELLA 2010",
-      "played": 3,
-      "goals": 6,
+      "played": 4,
+      "goals": 7,
       "penalties": 0,
-      "average": 2.0
+      "average": 1.75
     },
     {
       "name": "PEDROSA HIDALGO, PABLO",
@@ -850,20 +850,28 @@
       "average": 1.5
     },
     {
-      "name": "MARQUEZ QUERO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 3,
-      "goals": 3,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "MARIN URBANO, ADRIAN",
       "team": "C.D. MENCIANA",
       "played": 3,
       "goals": 3,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "MARQUEZ QUERO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "CAMPAÑA JARABA, JUAN",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
     },
     {
       "name": "RODRIGUEZ GÓMEZ, JOSE MANUEL",
@@ -874,16 +882,16 @@
       "average": 2.0
     },
     {
-      "name": "BERMUDEZ GONZALEZ, VICTOR",
-      "team": "C.D. BOCA F.S. PRIEGO",
+      "name": "AGUILAR HOYOS, ALVARO",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 1,
       "goals": 2,
       "penalties": 0,
       "average": 2.0
     },
     {
-      "name": "AGUILAR HOYOS, ALVARO",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "BERMUDEZ GONZALEZ, VICTOR",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 1,
       "goals": 2,
       "penalties": 0,
@@ -930,28 +938,20 @@
       "average": 1.0
     },
     {
+      "name": "SALINAS JARABA, JOSE MARIA",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "MONTES MESA, ALVARO",
       "team": "C.D. MENCIANA",
       "played": 2,
       "goals": 2,
       "penalties": 0,
       "average": 1.0
-    },
-    {
-      "name": "MONZON CAMPAÑA, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "CAMPAÑA JARABA, JUAN",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
     },
     {
       "name": "JURADO ORDOÑEZ, MARCOS",
@@ -972,6 +972,14 @@
     {
       "name": "MAIRELES RAMÍREZ, MANUEL",
       "team": "C.D. ARAS FUTSAL A",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "MONZON CAMPAÑA, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -1002,12 +1010,12 @@
       "average": 1.0
     },
     {
-      "name": "SALINAS JARABA, JOSE MARIA",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 1,
+      "name": "RIVAS CARMONA, PEDRO",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 2,
       "goals": 1,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.5
     },
     {
       "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
@@ -1020,14 +1028,6 @@
     {
       "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "ROLDAN CABEZA, ALBERTO",
-      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1058,8 +1058,8 @@
       "average": 0.5
     },
     {
-      "name": "ARJONA GARCIA, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "RODRIGUEZ GOMEZ, JOAQUIN",
+      "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1082,16 +1082,8 @@
       "average": 0.5
     },
     {
-      "name": "CAÑETE PEREA, CARLOS",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "RIVAS CARMONA, PEDRO",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "name": "ARJONA GARCIA, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1114,14 +1106,6 @@
       "average": 0.5
     },
     {
-      "name": "RODRIGUEZ GOMEZ, JOAQUIN",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "ABOUELALAM EL BARHMI, ADAM",
       "team": "C.D. MENCIANA",
       "played": 2,
@@ -1130,8 +1114,32 @@
       "average": 0.5
     },
     {
+      "name": "NIETO PERDIGÓN, JOSE ÁNGEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CAÑETE PEREA, CARLOS",
+      "team": "C.D. CARCABUEY",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
       "name": "PEREZ REYES, MARIO",
       "team": "C.D. ARAS FUTSAL A",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ROLDAN CABEZA, ALBERTO",
+      "team": "C.D. CARCABUEY",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -3309,7 +3317,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-23T18:23:07.448963+00:00",
+  "updated_at": "2026-10-23T19:44:35.749473+00:00",
   "rounds": [
     1,
     2,
@@ -3716,7 +3724,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-23T18:23:08.550733+00:00",
+  "staff_updated_at": "2026-10-23T19:44:36.258479+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
