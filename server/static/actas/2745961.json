@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "5 - 4",
           ""
         ]
       ]
@@ -62,6 +62,51 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(2') MONTES MARTIN, ALEJANDRO"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(19') ARROYO CHACON, DAVID"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(19') CORPAS CRIADO, NATALIA MARIA"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(24') RUIZ GONZÁLEZ, JESÚS"
+        ],
+        [
+          "Gol · 3 - 2",
+          "(27') ARROYO MONTES, DANIEL"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(34') CASTRO LUQUE, ANTONIO"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(35') MONTES MARTIN, ALEJANDRO"
+        ],
+        [
+          "Gol · 5 - 3",
+          "(38') CORPAS CRIADO, NATALIA MARIA"
+        ],
+        [
+          "Gol · 5 - 4",
+          "(39') SOME LOPEZ, ALVARO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -208,6 +253,19 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(6') PALOMEQUE LORENZO, FRANCISCO LUIS"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. ARAS FUTSAL"
     },
@@ -316,6 +374,23 @@
         [
           "",
           "BURGUILLOS EGEA, ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(34') ORTEGA LÓPEZ, ÁNGEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(37') SOME LOPEZ, ALVARO"
         ]
       ]
     }
@@ -500,6 +575,5 @@
   ],
   "id": "2745961",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745961",
-  "updated_at": "2026-10-24T14:33:42.286357+00:00",
-  "preview": true
+  "updated_at": "2026-10-24T17:25:24.903501+00:00"
 }
