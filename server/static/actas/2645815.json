@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "2 - 2",
+          "4 - 3",
           ""
         ]
       ]
@@ -74,6 +74,43 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(2') GARCIA PERALTA, ADRIAN"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(6') BONILLA ACEITUNO, JUAN"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(9') MONTERO MIRANDA, DIEGO"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(10') TAMAJON GOMEZ, JAVIER JESUS"
+        ],
+        [
+          "Gol · 3 - 2",
+          "(27') BORRALLO LOPEZ, CARLOS"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(27') BATALLA BUTRON, DANIEL"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(33') RODRIGUEZ JIMENEZ, SERGIO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -222,6 +259,43 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(15') BONILLA ACEITUNO, JUAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(18') MARAÑON BAENA, JESUS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(27') BORRALLO LOPEZ, CARLOS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(27') BONILLA ACEITUNO, JUAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(28') JIMENEZ CUBERO, JOSE ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(29') CUBERO CUBERO, JESUS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(31') CABEZAS CORDOBA, FRANCISCO MANUEL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. UNION DEPORTIVA LOS AMIGOS"
     },
@@ -312,6 +386,31 @@
         [
           "",
           "BARBOSA MENEZES, ADRIANO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(10') CALLERO ORTIZ, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(23') CALLERO ORTIZ, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(30') IBAÑEZ FERNANDEZ, ADRIAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(34') MONTERO MIRANDA, DIEGO"
         ]
       ]
     }
@@ -496,6 +595,5 @@
   ],
   "id": "2645815",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645815",
-  "updated_at": "2026-10-24T18:10:40.301780+00:00",
-  "preview": true
+  "updated_at": "2026-10-24T19:41:09.747414+00:00"
 }

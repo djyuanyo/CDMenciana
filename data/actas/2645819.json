@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "8 - 3",
           ""
         ]
       ]
@@ -74,6 +74,59 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(2') MOYANO PULIDO, ANTONIO JESUS"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(3') MOYANO PULIDO, ANTONIO JESUS"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(14') RODRIGUEZ CALZADO, DANIEL"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(19') GONZALEZ LEON, ALBERTO"
+        ],
+        [
+          "Gol en propia puerta · 4 - 1",
+          "(19') LOZANO BARRETO, NICOLAS AGUSTIN"
+        ],
+        [
+          "Gol · 5 - 1",
+          "(22') LEON GONZALEZ, SERGIO"
+        ],
+        [
+          "Gol · 6 - 1",
+          "(30') LOZANO BARRETO, NICOLAS AGUSTIN"
+        ],
+        [
+          "Gol · 6 - 2",
+          "(33') MORENO PEREZ, SANTOS"
+        ],
+        [
+          "Gol · 7 - 2",
+          "(35') LOZANO BARRETO, NICOLAS AGUSTIN"
+        ],
+        [
+          "Gol · 7 - 3",
+          "(36') PEREZ GARRIDO, IVAN"
+        ],
+        [
+          "Gol en propia puerta · 8 - 3",
+          "(39') RODRIGUEZ ROMERO, JUAN"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -225,6 +278,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(15') LOPEZ MOLINA, MANUEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(26') LOZANO BARRETO, NICOLAS AGUSTIN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(27') LOPEZ ARCE, JOSE ANGEL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. VILLALBA F.S."
     },
@@ -341,6 +415,27 @@
         [
           "",
           "VILLARIN REBOLLO, LORENZO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(27') GARCIA GARRIDO, EZEQUIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') BENITEZ GIL, DANIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') RODRIGUEZ ROMERO, JUAN"
         ]
       ]
     }
@@ -525,6 +620,5 @@
   ],
   "id": "2645819",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645819",
-  "updated_at": "2026-10-24T17:25:24.903501+00:00",
-  "preview": true
+  "updated_at": "2026-10-24T19:41:09.747414+00:00"
 }

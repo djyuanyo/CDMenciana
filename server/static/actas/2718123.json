@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "4 - 3",
           ""
         ]
       ]
@@ -74,6 +74,43 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(5') GARCIA MARIN, ALFONSO"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(7') SANCHEZ CASTRO, DANIEL"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(9') ROSUA ORTIZ, SAUL"
+        ],
+        [
+          "Gol · 3 - 1",
+          "(17') LOPEZ CHAVARINO, ENRIQUE"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(18') LOPEZ CHAVARINO, SERGIO"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(29') ORELLANA ARIZA, JUAN FRANCISCO"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(34') HURTADO MOLINA, CRISTOBAL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -199,6 +236,23 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(14') BENITEZ GARCIA, JUAN ANDRES"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(32') GARCIA MARIN, ALFONSO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. ASOC. JUVENIL PALENCIANA"
     },
@@ -315,6 +369,23 @@
         [
           "",
           "GALVEZ PEREZ, MARIA CRISTINA"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(24') HURTADO MOLINA, CRISTOBAL"
+        ],
+        [
+          "Tarjeta roja",
+          "(38') YUST ESPINOSA, JAIME"
         ]
       ]
     }
@@ -493,6 +564,5 @@
   ],
   "id": "2718123",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718123",
-  "updated_at": "2026-10-24T18:10:40.301780+00:00",
-  "preview": true
+  "updated_at": "2026-10-24T19:41:09.747414+00:00"
 }
