@@ -79,6 +79,39 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(1') LARA SEVILLA, JOSE DAVID"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(3') OSUNA PRIETO, ISMAEL"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(6') LARA GARCIA, JUAN FRANCISCO"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(17') ACERO FLORES, MARIO"
+        ],
+        [
+          "Gol · 5 - 0",
+          "(21') GARCIA CASADO, JAIME"
+        ],
+        [
+          "Gol · 6 - 0",
+          "(39') ACERO FLORES, ADRIAN"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Benamejí - PABELLON MUNICIPAL ALBERTO AGUILAR LEIVA"
         ],
         [
@@ -207,6 +240,19 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(35') PEDROSA ESTEPA, EMILIO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. MONTILLA FUTSAL"
     },
@@ -310,6 +356,27 @@
         [
           "",
           "BLAZQUEZ NAVARRO, MARCO ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(14') VARO PALMA, JESUS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') SERRANO AGUILERA, RAUL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') SERRANO AGUILERA, RAUL"
         ]
       ]
     }
@@ -482,6 +549,5 @@
   ],
   "id": "2718124",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718124",
-  "updated_at": "2026-10-24T17:25:24.903501+00:00",
-  "preview": true
+  "updated_at": "2026-10-24T18:10:40.301780+00:00"
 }
