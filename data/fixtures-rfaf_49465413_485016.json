@@ -234,13 +234,13 @@
       "date": "2026-10-24",
       "time": "19:30",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 7,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718905&cod_acta=2718905",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718905&cod_acta=2718905",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605"
     },
@@ -3317,7 +3317,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-24T18:11:06.240688+00:00",
+  "updated_at": "2026-10-24T19:40:19.901586+00:00",
   "rounds": [
     1,
     2,
@@ -3724,7 +3724,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-24T18:11:07.342287+00:00",
+  "staff_updated_at": "2026-10-24T19:40:20.559080+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
