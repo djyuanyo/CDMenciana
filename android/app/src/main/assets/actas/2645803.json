@@ -1454,7 +1454,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1462,7 +1462,7 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
@@ -1475,11 +1475,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1496,16 +1496,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "1.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-15T14:33:14.002761+00:00"
+      "profile_updated_at": "2026-10-24T11:01:03.364159+00:00"
     },
     {
       "id": "3cf55bbd7427eb41",
