@@ -17,7 +17,7 @@
             "rows": [
               [
                 "Convocados",
-                "5"
+                "6"
               ],
               [
                 "Titular",
@@ -25,11 +25,11 @@
               ],
               [
                 "Suplente",
-                "1"
+                "2"
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -68,8 +68,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:40.181001+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:53.305274+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CAMPOS AGUACIL, MANUEL",
@@ -86,7 +87,7 @@
             "rows": [
               [
                 "Convocados",
-                "4"
+                "5"
               ],
               [
                 "Titular",
@@ -94,11 +95,11 @@
               ],
               [
                 "Suplente",
-                "2"
+                "3"
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -137,8 +138,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:41.944631+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:54.063344+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "BAENA PRIEGO, ALBERTO",
@@ -155,7 +157,7 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
@@ -163,11 +165,11 @@
               ],
               [
                 "Suplente",
-                "2"
+                "3"
               ],
               [
                 "Jugados",
-                "5"
+                "6"
               ]
             ]
           },
@@ -206,8 +208,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:41.087880+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:55.080529+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "MARAÑON BAENA, JESUS",
@@ -224,11 +227,11 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
-                "5"
+                "6"
               ],
               [
                 "Suplente",
@@ -236,7 +239,7 @@
               ],
               [
                 "Jugados",
-                "5"
+                "6"
               ]
             ]
           },
@@ -249,7 +252,7 @@
               ],
               [
                 "Tarjeta amarilla",
-                "3"
+                "4"
               ],
               [
                 "Doble tarjeta amarilla",
@@ -275,8 +278,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:43.133508+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:56.066801+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
@@ -287,75 +291,6 @@
         "acta_id": "2645815",
         "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=",
         "rfaf_id": "42592",
-        "stats": [
-          {
-            "title": "Partidos",
-            "rows": [
-              [
-                "Convocados",
-                "4"
-              ],
-              [
-                "Titular",
-                "2"
-              ],
-              [
-                "Suplente",
-                "2"
-              ],
-              [
-                "Jugados",
-                "3"
-              ]
-            ]
-          },
-          {
-            "title": "Sanciones",
-            "rows": [
-              [
-                "Total",
-                "0"
-              ],
-              [
-                "Tarjeta amarilla",
-                "0"
-              ],
-              [
-                "Doble tarjeta amarilla",
-                "0"
-              ],
-              [
-                "Tarjeta roja",
-                "0"
-              ]
-            ]
-          },
-          {
-            "title": "Goles",
-            "rows": [
-              [
-                "Total",
-                "0"
-              ],
-              [
-                "Goles por partido",
-                "0.0"
-              ]
-            ]
-          }
-        ],
-        "profile_updated_at": "2026-10-23T22:41:44.106527+00:00",
-        "competition_summary": {}
-      },
-      {
-        "name": "TAMAJON GOMEZ, JAVIER JESUS",
-        "number": 9,
-        "position": "Jugador",
-        "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC0AJYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1SiloqiAopaKLAFFLRSAKKXtn0qKa4jiQszAAck9hQBIOtFc7deNNIswwM4kYcYQZqqnxA0bjdMeenGaB2OsxxSAc1k2XijSNQGIbyPdj7rHFbCkMMggg9KQDcCkxTyOaCKYEYHWjFIMliAcYPNONADCKZipaZQAw0U4iigCUClooqiRaMUUooGGKZPNFbQtLM6pGoyWY4AFLNMlvC80rBUjUsxPQAV4J4o8Wal421k6fppZLJDjGcZHqaT0Gld2R2etfFi0iuXttIga6YceYeFJ9u5rnmuvEmvkyXt89vA//ACyj4OPTipdH8OWulxKAN8x+9If6V0MECgDArmnW7HbTwyWsjFtvDtv5QRtzAf3jmpx4ctQciMfSujig7AVOYMDpWXNI6OSPY4648OWzcqpUjupwahhvvEXhpg9leNc2i8mGX5sCuvlgBqnPagg8U41JIidGL6C6T8U7G6lSG/t3tZGIBcHKg/0rvvNWSBZImVlYZVgcgivGNc8MxX0Lvb/u7gDI9G+tReA/Gl5oWprouqE/ZmkCDeeYyeOPaumE1JHFUpOB7BDcSeaysPxq4MkU7CsAwAI9aXtV2MhmKbin0hp2ER0UtFFgJaSiimIKcDTaB1oA8x+LfiS4tYI9EtGKtOm+YjuvQLWB4Y0qPSrBTgedINzmpPiFC9z8SIUfmPykOPpWlEvyKB6Vz1pWVjrw0Ve5dh5ate3RVxWRFhQK0IJCTwa5jvNRMDpTiQOtVo2bqTTm+YUxWJDsbNV5kUj3pSFz71DM2D1oGUJlwa4Txxph2LqMK4dOHI6/Wu8mcHOaxtWiW4sJo2GQVNVTlZmNSN0dD8L/ABPJrehfZLp991a4G49WQ9DXd14t8Hv3fiO9jOeISMfiK9pNdp5r3EpDS0hpiG0UUUAS4ppozRmixIUd6KKLBc8j+IbrH46t37i2UH8zS28m6JCOhFM+Jo/4q+2462y/+hGopJksbBXboAOPWueqrs7KDsjWhORVyByh6V59J4hvmdjFEwXsKrjxLrMbHG1AfU1kqR0e27I9WS4AGDxTzKoGQa4DTfEF3KVE5DZ710yzu0G7BqWrM1jK6NR7lQwqNyGzkj2ridT1K4DOquV7cHpWANR1kPmKUso9Wq1G6IlUaeiPR7g9cGsa/kKwOK52DW9QiwZUY/rWu1yL/TpJUGCBkj0pclnch1OZWND4TRqviXVjxnycj/voV67XlfwojzrGqS4H+qA/8er1SuxbHny3EpDQaKYhDRQTRQFx1ApBTqZIlFL1qG7uUs7Ke5k+5Ehc/hQCV9Dy74owbNfsbjs8O38Q3/16o3cayQoHGdoFT+KNVl8SpYymKMCCXIZD1ViOv5U1k3sVAzXLUknqjvo03HSRzjys05htIFdu8knCj6Vn24udQuTbS+WhGTnbgdPWuybTDjdGQpqIaVcSnEkihfYc1Kkuxs6b6MwdKt5UkIIPBxXoEKj+zcfxbaw0tFt2CKScdzW7FIv2XHTis5O7Nox0OJ1m3kVt0alsnsKzJ7m90x4lj2yb1ycLnHtXavarMxRuAehqs+kyxt+7kIHuKuMkkZypt7M56K6kkCC6tthbBDqOK2ra2WO2lAH31P8AKrS6W38Z3/hUhiEYAxgDijm1E4aGj8Ko8Pqb44+UZr0nFeWeFdU/4R221ApD5jyTYAc7VVR3zXo2k6nDq+nR3kB+V+CM9COorqjJPQ8+pTlH3nsWj1pKcRSVRkNNFKaKACn8UhGaKoQvSs3xAN3h++UDOYWFaNVNWiM2lXUS9WiIH5UpLQqHxI8cbZaWETcLll49ea04eX3DpWXrEAexY55SPI/CrOk3S3VjFJnnGDXFb3T1ZNKZuRENgHvUsmyOMsSAMVVjmKjHpVW6MtydgOFqTW6FDI7ltwC+9ahmtBAEMgBx1rzzXLh4b1IftjRBT0Q8/jSy3U725/0oqpGA461Sg7GbqpOx2nmojBtwZa0o2jmQEEEGvPPC94ZJ2t5rpnOeA55NdlGHt3+U5Wk1ylRkpK5dn/drlQOKzrl+N1XJJA8fXmsbVrgW+nzOTyFOPrSW4py0G2hW+huAXBVWOF9a7/wHH5XhwoBgCd/5CvMfDILRCUn7xOa9Y8JxeXoSHpvcsP0H9K2pr3zmrv8Aco2z0ptOpK6bHnjTRSmiiwXHUUlFMBc0EBlIIyCMUlKDQB5r4k0CayW4IjL2rhtrAZxnsa8+0K9NqrRsejHivoe4QPA6kDBBHNfOF+htNYuowMBJW4/GsXTS2OlVnK1+h1/9oxpCZHYbQM1hSeJbi6naG1UAngHHSsqW7Mlm8RY5I4xVrTPDzNaicXEkUjdcAVlyqOrN1KUnZEMuiiaYy3N0Mn8xV37LpBthB50uQc5zxmr1t4ctWfdPdyuf9ojFan9iWOVIdcfQU7nQqUexy0WmWsE/m293lxyMVbXxHcwXYilIJA5rQuPDGnmVpInkRj3V8VzutaKLDFyJ3ds45PQUaN2ZnUjyq8TsV1JJYBIpwCM1g65fGe1KKe9Z8F75VkkYOfrUbs88YQDJdwBRGFmYyqXR2Hhixku9OtooIt0rZ6DoCepr16ytls7KG3TGEUD8ap6Do1vo2mQW8CKCEAZ8cscd60q2hDl1OerVc0o9EIaSlNJWhiJRQaKAHUUlFMkKUdKSloARuVIrwvx5Zmw8TTSlMRzHIGMV7r1rzn4raQ02jfbIVUujrkY5xUyRcHZnkz7UYMRwfSup025ZtOVR2HTvXFpd5i2OPmB6mtW11T7OMhhtHesZwujrp1EmWr2S8ZjtLKB78CqELag0oUzsF9jT7jVvOyc8dMVDa3ygkk4xzmhRshSndnYaVbzFB5zMR1yab4jRP7P2kck1jWniBlZRuwuear6trBuhsVsgGs1TfNc1dVctjKDOP3bE+lbehqk2r2cG0uFkDH8652a8LygDvXb/AA40uS+1cTshKI2QwGR9DXRY5ZSPdoj+5XPpSmhFCoFA4FFWYCU3FOpKBiYopaKAGZpc02gmmIdmlzTM0oNADs1k+J40l8PXiuARs/rWqWA6kCuS8aeIIrK1h09BvkvGK57BR1P8qUtE2VBXkkeGa3pRtJS0f3M9cVirKwBBbp1r0nULNLpRvAOK4PWtPe0mIVT5Q5zjiopz5tGb1abi7opNKyhcNwTTnnChcH8qrKyvDsY4IPBpuCy4JG4e9bWMS0lyWJyePanCZgck5yaqoh3Yx+Rq5a2cs3Kr3HFJ2Q1diQwtNL8memRXu/wutBaWdxE4/eYVxXnekaIIzHPImHHNddY62/h64S52s8RIWULwdvqPpWDqLmSNlSbgz1rNJWfcava2cUUlyzJHIQofHygnpmrFteW95H5ltPHKnqjZrZqxyX1sTmkopKBgaKQnmigCPNL2rOvdd0rTywur+CNl6qXBP5VxGt/EaWXdDokJAyQbiRc/kP8AGgznVhDdnodzd29nEZbmZIoxyWdsCuA8QfEqONzb6Kok7G5deB/ujvXN2+ia74pEl3PcSSqv8UzHH/AR0rpNP8Fada2UbXKCecNljkgD2AqowlIwdSpU+FWRU8I3eqavrq3d6808SqwEhJ2qx9PSr3jnT5HWyvUUlbeQq+OwbHP6V1tpHCkQjgjSNccKo4p9zAs8bJIgZWG1lYda0dL3OU6KCdJq+p5fIoKA4zWZe2KXKFGXKN1rrtT0OWzZmhRpLfqMclfY1iMoOeleZKMqbsz1k4zjocfd+FbdkJgLI3YVkSeG543ADg5HNegOg64FVHiTf2q41mZSopnMWfhtmYF34xggV0mn6PHbDAGc96uQxqBxV+MADPFKVVsqNJIIYwgAouLf7VJBbjrLKqD8Tinqfm4GT04rqPD+iyC4W9u02so/dIRyD6mlSg5yVh1JqETY17T3vvDlxaQqrTSLiMHs2eK8mjsfEOiajc3MKXNqtuAXdTxj39RXtzIAVBPCDJrOtoEvHuFmQSRyAqysMgivUlTUjxalPnd+pxGk/FOWOPy9VsTIVxmaDj8wa7nTPE2kavEr2l7ESeqOdrD8DWBqvgbRHSIJE8LbhuWJuG/Oua1P4fXEElzc2Mokhh5RADvPtmsnTkiVKtBaq56zmivG4NV8XaJbRq73IhcfJ5i78fjzRUFLEx6pnR2vgbTo/PS7aWZ3+47HBX3HrWrpvh7T9El8yO13M6bWdyW3Dv7V0SwBj5TcMPumlRMloJR16H0NdnLFdC1Tj2K8YSKIeXjyTxgDG2oJoFwzJ07irEa+VOY3HDfKfenhAjFT1HH1FNlGfEWReO1X4XWb0D9x61C0OyQgdDyKaY2ByoxSGTSQAnpg1k3mg2d0S0luA5/jQ7TWvHcEjbKOfWph5bcZ/A1EoqWjLjJrY4m48JxNny7h1/3lzWe/g25LZW6gP1B/wr0jyAewNMkswednNYPDw7GqrzXU86XwtfRkfPCf+BVcg8NTuR508aL6Lya7JrE+h/KpIbBy3IAH1oWGpjeIn0MzTdEtrXBij3SD/lo/J/D0rbjRYug3N3NSFIbZPmbJ9B3qBmeRc42qeiit4xUVoc8pOTuyG7n/AHLRoc55Y+tLYL5cTPjtRNCFjC9Xc4q9BEI0K+gqyTJuNzyJkdWqzOpWDyV4X+L3NKQJb+NB0BzTpuWP1p31AqxwiSAdCAe9FWbQfIw9DRVXDQsTja6MODux+FLOAJI370UVmhkN6o+Vu4NI45Q9yKKKYDTyme6nipiig5AoopARzRqRnFRKA0RJ6joaKKAFV2EJYE5pI7mUkguTRRUlETXEhbGat2/zLkkmiimISMedc/PzjtVoKDJ06UUUxEEI8zUGLc7elWU5SQ+9FFAFO05u3J6hTSyd6KKfUTCyQNvB9aKKKBM//9k=",
-        "id": "87bee839e4e4253a",
-        "acta_id": "2645815",
-        "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=",
-        "rfaf_id": "7155",
         "stats": [
           {
             "title": "Partidos",
@@ -387,7 +322,7 @@
               ],
               [
                 "Tarjeta amarilla",
-                "0"
+                "1"
               ],
               [
                 "Doble tarjeta amarilla",
@@ -413,8 +348,79 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:44.963461+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:57.360231+00:00",
+        "competition_summary": {},
+        "stats_round": 7
+      },
+      {
+        "name": "TAMAJON GOMEZ, JAVIER JESUS",
+        "number": 9,
+        "position": "Jugador",
+        "photo": "data:image/jpeg;base64,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",
+        "id": "87bee839e4e4253a",
+        "acta_id": "2645815",
+        "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=",
+        "rfaf_id": "7155",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "6"
+              ],
+              [
+                "Titular",
+                "2"
+              ],
+              [
+                "Suplente",
+                "4"
+              ],
+              [
+                "Jugados",
+                "5"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "0.2"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-10-24T19:47:58.088246+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "SANCHEZ TIENDA, DAVID",
@@ -482,8 +488,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:45.961275+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:47:59.113188+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CUBERO CUBERO, JESUS",
@@ -500,11 +507,11 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
-                "0"
+                "1"
               ],
               [
                 "Suplente",
@@ -512,7 +519,7 @@
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -525,7 +532,7 @@
               ],
               [
                 "Tarjeta amarilla",
-                "1"
+                "2"
               ],
               [
                 "Doble tarjeta amarilla",
@@ -551,8 +558,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:47.134746+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:00.283840+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "RODRIGUEZ JIMENEZ, SERGIO",
@@ -569,7 +577,7 @@
             "rows": [
               [
                 "Convocados",
-                "5"
+                "6"
               ],
               [
                 "Titular",
@@ -577,11 +585,11 @@
               ],
               [
                 "Suplente",
-                "4"
+                "5"
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -611,17 +619,18 @@
             "rows": [
               [
                 "Total",
-                "3"
+                "4"
               ],
               [
                 "Goles por partido",
-                "0.6"
+                "0.7"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:48.108555+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:01.065597+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CORDOBA CORTES, JUAN FRANCISCO",
@@ -638,11 +647,11 @@
             "rows": [
               [
                 "Convocados",
-                "4"
+                "5"
               ],
               [
                 "Titular",
-                "1"
+                "2"
               ],
               [
                 "Suplente",
@@ -650,7 +659,7 @@
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -689,8 +698,9 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:48.948480+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:02.288517+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "BONILLA ACEITUNO, JUAN",
@@ -707,7 +717,7 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
@@ -715,11 +725,11 @@
               ],
               [
                 "Suplente",
-                "6"
+                "7"
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -736,7 +746,7 @@
               ],
               [
                 "Doble tarjeta amarilla",
-                "0"
+                "1"
               ],
               [
                 "Tarjeta roja",
@@ -749,17 +759,18 @@
             "rows": [
               [
                 "Total",
-                "1"
+                "2"
               ],
               [
                 "Goles por partido",
-                "0.2"
+                "0.3"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:50.153002+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:03.062386+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "LUNA ACEITUNO, ADRIAN",
@@ -788,11 +799,11 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
-                "2"
+                "3"
               ],
               [
                 "Suplente",
@@ -800,7 +811,7 @@
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -813,7 +824,7 @@
               ],
               [
                 "Tarjeta amarilla",
-                "2"
+                "3"
               ],
               [
                 "Doble tarjeta amarilla",
@@ -830,17 +841,18 @@
             "rows": [
               [
                 "Total",
-                "3"
+                "4"
               ],
               [
                 "Goles por partido",
-                "0.5"
+                "0.6"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:50.963063+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:04.066143+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CABALLERO LAMA, ISAAC",
@@ -857,11 +869,11 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
-                "3"
+                "4"
               ],
               [
                 "Suplente",
@@ -869,7 +881,7 @@
               ],
               [
                 "Jugados",
-                "5"
+                "6"
               ]
             ]
           },
@@ -903,13 +915,14 @@
               ],
               [
                 "Goles por partido",
-                "0.7"
+                "0.6"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:52.140083+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:05.075876+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       },
       {
         "name": "CABALLERO LAMA, ALEJANDRO",
@@ -938,7 +951,7 @@
             "rows": [
               [
                 "Convocados",
-                "6"
+                "7"
               ],
               [
                 "Titular",
@@ -946,11 +959,11 @@
               ],
               [
                 "Suplente",
-                "5"
+                "6"
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -989,13 +1002,14 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T22:41:53.097791+00:00",
-        "competition_summary": {}
+        "profile_updated_at": "2026-10-24T19:48:06.306692+00:00",
+        "competition_summary": {},
+        "stats_round": 7
       }
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-24T18:12:21.214368+00:00",
+    "roster_updated_at": "2026-10-24T19:47:45.595312+00:00",
     "staff": [
       {
         "name": "JIMENEZ CUBERO, JOSE ANTONIO",
@@ -1024,7 +1038,7 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-24T18:10:54.221003+00:00",
+    "staff_updated_at": "2026-10-24T19:40:07.354846+00:00",
     "club_photos": {
       "1": "https://cdmenciana.es/images/jugadores/raton.webp",
       "15": "https://cdmenciana.es/images/jugadores/melli.webp",
@@ -1131,7 +1145,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:19.043304+00:00",
+        "profile_updated_at": "2026-10-24T19:48:07.141226+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1139,7 +1153,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "CABEZAS CORDOBA, RAUL",
@@ -1207,7 +1222,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:19.847583+00:00",
+        "profile_updated_at": "2026-10-24T19:48:08.298772+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -1215,7 +1230,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "JIMENEZ POYATO, VICTOR",
@@ -1283,7 +1299,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:20.861192+00:00",
+        "profile_updated_at": "2026-10-24T19:48:09.120502+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 2,
@@ -1291,7 +1307,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "BARBA VALVERDE, DIEGO",
@@ -1359,7 +1376,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:21.839494+00:00",
+        "profile_updated_at": "2026-10-24T19:48:10.117031+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 2,
@@ -1367,7 +1384,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "LAMA CAMACHO, MANUEL",
@@ -1435,7 +1453,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:22.856137+00:00",
+        "profile_updated_at": "2026-10-24T19:48:11.114807+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1443,7 +1461,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "CONTRERAS GOMEZ, DAVID",
@@ -1511,7 +1530,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:23.846382+00:00",
+        "profile_updated_at": "2026-10-24T19:48:12.119836+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 2,
@@ -1519,7 +1538,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "PRIEGO BAENA, FELICIANO",
@@ -1587,7 +1607,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:25.053231+00:00",
+        "profile_updated_at": "2026-10-24T19:48:13.116896+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1595,7 +1615,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "RUZ BUJALANCE, FRANCISCO JOSE",
@@ -1663,7 +1684,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:25.852361+00:00",
+        "profile_updated_at": "2026-10-24T19:48:14.135280+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1671,7 +1692,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "GOMEZ CUBERO, DANIEL",
@@ -1739,7 +1761,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:26.842426+00:00",
+        "profile_updated_at": "2026-10-24T19:48:15.129743+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1747,7 +1769,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "AGUIRREZABAL HERNANDEZ, PEDRO IGNACIO",
@@ -1815,7 +1838,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:27.827786+00:00",
+        "profile_updated_at": "2026-10-24T19:48:16.115347+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1823,7 +1846,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "PRIEGO LUNA, IVAN",
@@ -1891,7 +1915,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:28.866691+00:00",
+        "profile_updated_at": "2026-10-24T19:48:17.134330+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -1899,7 +1923,8 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "RUEDA MORALES, FRANCISCO JAVIER",
@@ -1967,7 +1992,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:29.859280+00:00",
+        "profile_updated_at": "2026-10-24T19:48:18.113475+00:00",
         "competition_summary": {
           "goals": 1,
           "starts": 1,
@@ -1975,7 +2000,8 @@
           "played": 1,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       },
       {
         "name": "ROSALES MORAL, ESTEBAN",
@@ -2043,7 +2069,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-10-23T05:59:30.864468+00:00",
+        "profile_updated_at": "2026-10-24T19:48:19.131683+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 2,
@@ -2051,12 +2077,13 @@
           "played": null,
           "team": "C.D. APAGA Y VAMONOS",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 2
       }
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "roster_status": "verified",
-    "roster_updated_at": "2026-10-24T18:18:34.738929+00:00",
+    "roster_updated_at": "2026-10-24T19:48:06.527495+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -2073,7 +2100,7 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "staff_status": "verified",
-    "staff_updated_at": "2026-10-24T18:11:01.075259+00:00"
+    "staff_updated_at": "2026-10-24T19:40:14.365091+00:00"
   },
   "infantil": {
     "team_key": "infantil",

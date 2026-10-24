@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T18:11:15.645859+00:00",
+  "updated_at": "2026-10-24T19:47:45.595312+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645772&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
@@ -698,7 +698,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645764&nueva_ventana=": {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -706,11 +706,11 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -718,7 +718,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -757,13 +757,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.948480+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:02.288517+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645764&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -771,7 +771,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -779,11 +779,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -822,78 +822,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645764&nueva_ventana=": {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.963461+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645764&nueva_ventana=": {
-      "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -905,273 +840,13 @@
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
               "4"
             ],
             [
-              "Goles por partido",
-              "0.7"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645764&nueva_ventana=": {
-      "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "5"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645764&nueva_ventana=": {
-      "name": "LUNA CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "4"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:40.181001+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645764&nueva_ventana=": {
-      "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645764&nueva_ventana=": {
-      "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "5"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
               "Jugados",
               "5"
             ]
@@ -1182,141 +857,11 @@
           "rows": [
             [
               "Total",
-              "3"
-            ],
-            [
-              "Tarjeta amarilla",
-              "3"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645764&nueva_ventana=": {
-      "name": "SANCHEZ TIENDA, DAVID",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "2"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
               "0"
             ],
             [
               "Tarjeta amarilla",
               "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:45.961275+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645764&nueva_ventana=": {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1342,13 +887,143 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645764&nueva_ventana=": {
-      "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645764&nueva_ventana=": {
+      "name": "CABALLERO LAMA, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645764&nueva_ventana=": {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645764&nueva_ventana=": {
+      "name": "LUNA CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -1360,11 +1035,76 @@
             ],
             [
               "Titular",
-              "2"
+              "4"
             ],
             [
               "Suplente",
-              "4"
+              "2"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645764&nueva_ventana=": {
+      "name": "CUBERO CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
             ],
             [
               "Jugados",
@@ -1377,7 +1117,202 @@
           "rows": [
             [
               "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645764&nueva_ventana=": {
+      "name": "MARAÑON BAENA, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
               "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "4"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645764&nueva_ventana=": {
+      "name": "SANCHEZ TIENDA, DAVID",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:59.113188+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645764&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -1398,18 +1333,83 @@
           "rows": [
             [
               "Total",
-              "3"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645764&nueva_ventana=": {
+      "name": "BORRALLO LOPEZ, CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "3"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645764&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
@@ -2681,7 +2681,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645781&nueva_ventana=": {
       "name": "LUNA CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2689,7 +2689,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -2697,11 +2697,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -2740,13 +2740,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:40.181001+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645781&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2754,7 +2754,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -2762,11 +2762,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -2805,13 +2805,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645781&nueva_ventana=": {
       "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2819,11 +2819,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
@@ -2831,7 +2831,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -2844,7 +2844,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -2870,13 +2870,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645781&nueva_ventana=": {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -2884,7 +2884,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -2892,76 +2892,11 @@
             ],
             [
               "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
               "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.963461+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645781&nueva_ventana=": {
-      "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
             ],
             [
               "Jugados",
-              "3"
+              "5"
             ]
           ]
         },
@@ -2970,76 +2905,11 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
               "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645781&nueva_ventana=": {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -3065,13 +2935,143 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645781&nueva_ventana=": {
+      "name": "CUBERO CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645781&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645781&nueva_ventana=": {
       "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3079,11 +3079,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -3091,7 +3091,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -3104,7 +3104,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -3121,22 +3121,22 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645781&nueva_ventana=": {
       "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3144,11 +3144,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -3156,7 +3156,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -3190,18 +3190,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645781&nueva_ventana=": {
       "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -3209,7 +3209,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -3217,11 +3217,11 @@
             ],
             [
               "Suplente",
-              "5"
+              "6"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -3260,9 +3260,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45364409&codacta=2645788&nueva_ventana=": {
       "name": "LOZANO BARRETO, NICOLAS AGUSTIN",
@@ -5492,7 +5492,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645790&nueva_ventana=": {
       "name": "LUNA CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5500,7 +5500,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -5508,11 +5508,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -5551,13 +5551,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:40.181001+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645790&nueva_ventana=": {
       "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5565,11 +5565,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
@@ -5577,7 +5577,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -5590,7 +5590,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -5616,13 +5616,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645790&nueva_ventana=": {
       "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5630,11 +5630,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -5642,7 +5642,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -5655,7 +5655,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -5672,22 +5672,22 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645790&nueva_ventana=": {
       "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5695,11 +5695,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -5707,7 +5707,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -5741,18 +5741,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645790&nueva_ventana=": {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5760,11 +5760,11 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -5772,7 +5772,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -5811,13 +5811,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.948480+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:02.288517+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645790&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5825,7 +5825,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -5833,11 +5833,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -5876,13 +5876,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645790&nueva_ventana=": {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5890,7 +5890,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -5898,11 +5898,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -5932,22 +5932,22 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:44.963461+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645790&nueva_ventana=": {
       "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -5955,11 +5955,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -5967,7 +5967,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -5980,7 +5980,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -6006,13 +6006,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645790&nueva_ventana=": {
       "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6020,7 +6020,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -6028,11 +6028,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -6049,7 +6049,7 @@
             ],
             [
               "Doble tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Tarjeta roja",
@@ -6062,22 +6062,22 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.2"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645790&nueva_ventana=": {
       "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6085,7 +6085,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -6093,11 +6093,11 @@
             ],
             [
               "Suplente",
-              "5"
+              "6"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -6136,13 +6136,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645773&nueva_ventana=": {
       "name": "LUNA CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6150,7 +6150,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -6158,11 +6158,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -6201,13 +6201,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:40.181001+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645773&nueva_ventana=": {
       "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6215,11 +6215,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
@@ -6227,7 +6227,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -6240,7 +6240,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -6266,13 +6266,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645773&nueva_ventana=": {
       "name": "SANCHEZ TIENDA, DAVID",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=20514830&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6331,13 +6331,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:45.961275+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:59.113188+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645773&nueva_ventana=": {
       "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6345,11 +6345,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -6357,7 +6357,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -6370,7 +6370,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -6387,22 +6387,22 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645773&nueva_ventana=": {
       "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6410,11 +6410,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -6422,7 +6422,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -6456,18 +6456,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645773&nueva_ventana=": {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6475,11 +6475,11 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -6487,7 +6487,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -6526,13 +6526,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.948480+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:02.288517+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645773&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6540,7 +6540,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -6548,11 +6548,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -6591,13 +6591,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645773&nueva_ventana=": {
       "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -6605,137 +6605,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645773&nueva_ventana=": {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Goles por partido",
-              "0.2"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645773&nueva_ventana=": {
-      "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -6743,7 +6613,7 @@
             ],
             [
               "Suplente",
-              "5"
+              "6"
             ],
             [
               "Jugados",
@@ -6760,6 +6630,136 @@
             ],
             [
               "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645773&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645773&nueva_ventana=": {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
               "1"
             ],
             [
@@ -6786,9 +6786,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7933242&codacta=2645794&nueva_ventana=": {
       "name": "VENEGAS GUIMERANS, ALBERTO",
@@ -18453,137 +18453,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645790&nueva_ventana=": {
       "name": "CAMPOS AGUACIL, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:41.944631+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645790&nueva_ventana=": {
-      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.106527+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645790&nueva_ventana=": {
-      "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -18595,15 +18465,145 @@
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
-              "4"
+              "3"
             ],
             [
               "Jugados",
               "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:54.063344+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645790&nueva_ventana=": {
+      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:57.360231+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645790&nueva_ventana=": {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "5"
             ]
           ]
         },
@@ -18633,18 +18633,18 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.108555+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=71166&codacta=2645781&nueva_ventana=": {
       "name": "CAMPAÑA POZO, FRANCISCO JAVIER",
@@ -21769,7 +21769,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645798&nueva_ventana=": {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -21777,11 +21777,11 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -21789,7 +21789,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -21828,13 +21828,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.948480+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:02.288517+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645798&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -21842,7 +21842,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -21850,11 +21850,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -21893,78 +21893,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645798&nueva_ventana=": {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.963461+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645798&nueva_ventana=": {
-      "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -21976,208 +21911,13 @@
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
               "4"
             ],
             [
-              "Goles por partido",
-              "0.7"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645798&nueva_ventana=": {
-      "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "5"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645798&nueva_ventana=": {
-      "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645798&nueva_ventana=": {
-      "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "5"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
               "Jugados",
               "5"
             ]
@@ -22188,76 +21928,11 @@
           "rows": [
             [
               "Total",
-              "3"
+              "0"
             ],
             [
               "Tarjeta amarilla",
-              "3"
-            ],
-            [
-              "Doble tarjeta amarilla",
               "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645798&nueva_ventana=": {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -22283,13 +21958,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645798&nueva_ventana=": {
-      "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645798&nueva_ventana=": {
+      "name": "CABALLERO LAMA, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -22297,15 +21972,145 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "2"
+              "4"
             ],
             [
               "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
               "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645798&nueva_ventana=": {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645798&nueva_ventana=": {
+      "name": "CUBERO CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
             ],
             [
               "Jugados",
@@ -22318,7 +22123,137 @@
           "rows": [
             [
               "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645798&nueva_ventana=": {
+      "name": "MARAÑON BAENA, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
               "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "4"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645798&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -22339,18 +22274,83 @@
           "rows": [
             [
               "Total",
-              "3"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645798&nueva_ventana=": {
+      "name": "BORRALLO LOPEZ, CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "3"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645797&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
@@ -25031,7 +25031,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645798&nueva_ventana=": {
       "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -25039,7 +25039,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -25047,11 +25047,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -25064,7 +25064,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -25090,13 +25090,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:44.106527+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:57.360231+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645798&nueva_ventana=": {
       "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -25104,7 +25104,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -25112,11 +25112,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -25146,18 +25146,18 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.108555+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=29842107&codacta=2645797&nueva_ventana=": {
       "name": "AGUAYO PEREZ, ALVARO",
@@ -31459,137 +31459,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645773&nueva_ventana=": {
       "name": "CAMPOS AGUACIL, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:41.944631+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645773&nueva_ventana=": {
-      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.106527+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645773&nueva_ventana=": {
-      "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -31601,15 +31471,145 @@
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
-              "4"
+              "3"
             ],
             [
               "Jugados",
               "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:54.063344+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645773&nueva_ventana=": {
+      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:57.360231+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645773&nueva_ventana=": {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "5"
             ]
           ]
         },
@@ -31639,18 +31639,18 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.108555+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=455339&codacta=2645775&nueva_ventana=": {
       "name": "LEDESMA REVUELTO, MARIO DANIEL",
@@ -32550,137 +32550,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645781&nueva_ventana=": {
       "name": "CAMPOS AGUACIL, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:41.944631+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645781&nueva_ventana=": {
-      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.106527+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645781&nueva_ventana=": {
-      "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -32692,15 +32562,145 @@
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
-              "4"
+              "3"
             ],
             [
               "Jugados",
               "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:54.063344+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645781&nueva_ventana=": {
+      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:57.360231+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645781&nueva_ventana=": {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "5"
             ]
           ]
         },
@@ -32730,18 +32730,18 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.108555+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=29842107&codacta=2645782&nueva_ventana=": {
       "name": "AGUAYO PEREZ, ALVARO",
@@ -71628,7 +71628,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645807&nueva_ventana=": {
       "name": "CAMPOS AGUACIL, MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -71636,7 +71636,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -71644,11 +71644,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -71687,13 +71687,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.944631+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:54.063344+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=": {
       "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -71701,7 +71701,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -71709,11 +71709,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -71743,18 +71743,18 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:48.108555+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=29842107&codacta=2645805&nueva_ventana=": {
       "name": "AGUAYO PEREZ, ALVARO",
@@ -72269,7 +72269,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=": {
       "name": "BAENA PRIEGO, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -72277,7 +72277,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -72285,11 +72285,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -72328,78 +72328,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:41.087880+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=": {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:44.963461+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=": {
-      "name": "CABALLERO LAMA, ISAAC",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=0",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -72411,273 +72346,13 @@
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
               "4"
             ],
             [
-              "Goles por partido",
-              "0.7"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:52.140083+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=": {
-      "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "5"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:53.097791+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=": {
-      "name": "LUNA CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "4"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "1"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:40.181001+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=": {
-      "name": "CUBERO CUBERO, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:47.134746+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=": {
-      "name": "MARAÑON BAENA, JESUS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "5"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
               "Jugados",
               "5"
             ]
@@ -72688,76 +72363,11 @@
           "rows": [
             [
               "Total",
-              "3"
+              "0"
             ],
             [
               "Tarjeta amarilla",
-              "3"
-            ],
-            [
-              "Doble tarjeta amarilla",
               "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.3"
-            ]
-          ]
-        }
-      ],
-      "updated_at": "2026-10-23T22:41:43.133508+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
-    },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=": {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=0",
-      "photo_source": "",
-      "sections": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "6"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Tarjeta amarilla",
-              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -72783,13 +72393,143 @@
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.153002+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
-    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=": {
-      "name": "BORRALLO LOPEZ, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=0",
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645807&nueva_ventana=": {
+      "name": "CABALLERO LAMA, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645807&nueva_ventana=": {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645807&nueva_ventana=": {
+      "name": "LUNA CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
       "photo_source": "",
       "sections": [
         {
@@ -72801,11 +72541,76 @@
             ],
             [
               "Titular",
-              "2"
+              "4"
             ],
             [
               "Suplente",
-              "4"
+              "2"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645807&nueva_ventana=": {
+      "name": "CUBERO CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
             ],
             [
               "Jugados",
@@ -72818,7 +72623,137 @@
           "rows": [
             [
               "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645807&nueva_ventana=": {
+      "name": "MARAÑON BAENA, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
               "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "4"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645807&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -72839,18 +72774,83 @@
           "rows": [
             [
               "Total",
-              "3"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-23T22:41:50.963063+00:00",
-      "stats_signature": "f350a4ab539be62d",
-      "stats_round": 6
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645807&nueva_ventana=": {
+      "name": "BORRALLO LOPEZ, CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "3"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645806&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
@@ -76653,6 +76653,851 @@
       ],
       "updated_at": "2026-10-22T14:02:06.381074+00:00",
       "failed_at": "2026-10-24T14:41:41.766472+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=": {
+      "name": "LUNA CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=319856&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:53.305274+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=": {
+      "name": "CAMPOS AGUACIL, MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42515&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:54.063344+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=": {
+      "name": "BAENA PRIEGO, ALBERTO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7503&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "3"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:55.080529+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=": {
+      "name": "MARAÑON BAENA, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "4"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:56.066801+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=": {
+      "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42592&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:57.360231+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=": {
+      "name": "TAMAJON GOMEZ, JAVIER JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7155&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.2"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:47:58.088246+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=": {
+      "name": "CUBERO CUBERO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4300950&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:00.283840+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=": {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7500&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:01.065597+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=": {
+      "name": "CORDOBA CORTES, JUAN FRANCISCO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42718&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:02.288517+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=": {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=113183&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:03.062386+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=": {
+      "name": "BORRALLO LOPEZ, CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80981&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "3"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:04.066143+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=": {
+      "name": "CABALLERO LAMA, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=80976&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:05.075876+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=": {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42566&codacta=2645815&nueva_ventana=0",
+      "photo_source": "",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-10-24T19:48:06.306692+00:00",
+      "stats_signature": "f0f9928df7d3458c",
+      "stats_round": 7
     }
   }
 }
