@@ -329,7 +329,65 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:56.268795+00:00"
     },
     {
       "id": "b326176738b26e0e",
@@ -343,7 +401,8 @@
         "played": 3,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "fed5f61beb994f5a",
@@ -357,7 +416,65 @@
         "played": 4,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.8"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:58.242779+00:00"
     },
     {
       "id": "e0c4b6ec36673b39",
@@ -371,7 +488,8 @@
         "played": 4,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f34acb87d7ca4d75",
@@ -385,7 +503,8 @@
         "played": 2,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "257f4bde63629f70",
@@ -471,7 +590,65 @@
         "played": 4,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "7"
+            ],
+            [
+              "Goles por partido",
+              "1.8"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:57.273085+00:00"
     },
     {
       "id": "197876706f9e86cf",
@@ -485,7 +662,8 @@
         "played": 2,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "d0426cc5aef585b9",
@@ -499,7 +677,8 @@
         "played": 2,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "909acf1f65544cd9",
@@ -513,7 +692,8 @@
         "played": 3,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "d2c12ca0b8709408",
@@ -527,7 +707,8 @@
         "played": 2,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "06666088f135dafd",
@@ -541,7 +722,8 @@
         "played": 1,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "b990c26f486f5ed4",
@@ -555,7 +737,65 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:40.037817+00:00"
     },
     {
       "id": "71576ff67b6d7c31",
@@ -569,7 +809,65 @@
         "played": 3,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:41.991101+00:00"
     },
     {
       "id": "10eb9331e7fd5760",
@@ -583,7 +881,65 @@
         "played": 3,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "10"
+            ],
+            [
+              "Goles por partido",
+              "3.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:36.997537+00:00"
     },
     {
       "id": "dedee84cf0ccb56c",
@@ -597,7 +953,65 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:37.999555+00:00"
     },
     {
       "id": "17c1a6951bc7e9be",
@@ -611,7 +1025,65 @@
         "played": 3,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:39.009497+00:00"
     },
     {
       "id": "1193acf7ba82e0ff",
@@ -625,7 +1097,65 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:41.006280+00:00"
     },
     {
       "id": "01eb7f3e4f33bc84",
@@ -639,7 +1169,65 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:43.049582+00:00"
     },
     {
       "id": "d0ca6b6929aa9548",
@@ -653,7 +1241,65 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T20:56:44.995842+00:00"
     }
   ],
   "staff": [

@@ -382,11 +382,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "4"
             ],
             [
               "Titular",
-              "2"
+              "4"
             ],
             [
               "Suplente",
@@ -394,7 +394,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "4"
             ]
           ]
         },
@@ -433,7 +433,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-09T11:45:40.436324+00:00",
+      "profile_updated_at": "2026-10-24T20:56:33.044135+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -454,7 +454,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "3"
             ],
             [
               "Titular",
@@ -462,7 +462,7 @@
             ],
             [
               "Suplente",
-              "0"
+              "2"
             ],
             [
               "Jugados",
@@ -505,7 +505,15 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-09T11:45:40.465591+00:00"
+      "profile_updated_at": "2026-10-24T20:56:34.034506+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 0,
+        "called": 1,
+        "played": null,
+        "team": "C.D. BOCA F.S. PRIEGO",
+        "source": "actas oficiales RFAF"
+      }
     },
     {
       "id": "462334d873a558c6",
@@ -664,7 +672,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -672,7 +680,7 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
@@ -706,16 +714,16 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.8"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:43.130431+00:00",
+      "profile_updated_at": "2026-10-24T20:56:35.023153+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1088,7 +1096,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:51.684331+00:00"
+      "profile_updated_at": "2026-10-24T20:56:36.026050+00:00"
     },
     {
       "id": "6b1abf8139ad02fa",
@@ -1101,11 +1109,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -1113,7 +1121,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1143,11 +1151,11 @@
           "rows": [
             [
               "Total",
-              "7"
+              "10"
             ],
             [
               "Goles por partido",
-              "3.5"
+              "3.3"
             ]
           ]
         }
@@ -1160,7 +1168,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:52.658168+00:00"
+      "profile_updated_at": "2026-10-24T20:56:36.997537+00:00"
     },
     {
       "id": "64be2c86bb245026",
@@ -1173,11 +1181,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -1185,7 +1193,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1232,7 +1240,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:53.915160+00:00"
+      "profile_updated_at": "2026-10-24T20:56:37.999555+00:00"
     },
     {
       "id": "e46ef9556a62adb5",
@@ -1245,11 +1253,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "3"
             ],
             [
               "Suplente",
@@ -1257,7 +1265,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "3"
             ]
           ]
         },
@@ -1291,7 +1299,7 @@
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.3"
             ]
           ]
         }
@@ -1304,7 +1312,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T09:46:17.424405+00:00"
+      "profile_updated_at": "2026-10-24T20:56:39.009497+00:00"
     },
     {
       "id": "aada1538616e992a",
@@ -1389,11 +1397,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "2"
             ],
             [
               "Suplente",
@@ -1401,7 +1409,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "3"
             ]
           ]
         },
@@ -1448,7 +1456,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-17T09:46:20.047864+00:00"
+      "profile_updated_at": "2026-10-24T20:56:40.037817+00:00"
     },
     {
       "id": "410a02c3883c2d09",
@@ -1461,7 +1469,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1469,7 +1477,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -1507,7 +1515,7 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
@@ -1520,7 +1528,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:54.611671+00:00"
+      "profile_updated_at": "2026-10-24T20:56:41.006280+00:00"
     },
     {
       "id": "b0a5a0184a748df5",
@@ -1533,11 +1541,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -1545,7 +1553,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1579,7 +1587,7 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
@@ -1592,7 +1600,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:55.594481+00:00"
+      "profile_updated_at": "2026-10-24T20:56:41.991101+00:00"
     },
     {
       "id": "b6c5b6fcf1c42587",
@@ -1605,7 +1613,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "3"
             ],
             [
               "Titular",
@@ -1613,11 +1621,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "3"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1626,11 +1634,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1647,16 +1655,16 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.7"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T22:51:35.727223+00:00",
+      "profile_updated_at": "2026-10-24T20:56:43.049582+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 0,
@@ -1736,7 +1744,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:56.582490+00:00"
+      "profile_updated_at": "2026-10-24T20:56:44.056023+00:00"
     },
     {
       "id": "05bf21f83fab7cd8",
@@ -1749,7 +1757,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1757,7 +1765,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -1808,7 +1816,7 @@
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-19T23:48:57.573208+00:00"
+      "profile_updated_at": "2026-10-24T20:56:44.995842+00:00"
     }
   ],
   "staff": [
