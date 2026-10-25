@@ -1114,13 +1114,13 @@
       "date": "2026-10-25",
       "time": "13:30",
       "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 1,
+      "away_score": 5,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645812&cod_acta=2645812",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645812&cod_acta=2645812",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043"
     },
@@ -4576,6 +4576,14 @@
   "results_status": "verified",
   "scorers": [
     {
+      "name": "BERLANGA HIDALGO, DAYRON",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 7,
+      "goals": 10,
+      "penalties": 0,
+      "average": 1.4286
+    },
+    {
       "name": "MOYANO PULIDO, ANTONIO JESUS",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
       "played": 6,
@@ -4616,14 +4624,6 @@
       "average": 1.6
     },
     {
-      "name": "BERLANGA HIDALGO, DAYRON",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 6,
-      "goals": 8,
-      "penalties": 0,
-      "average": 1.3333
-    },
-    {
       "name": "ROLDAN AGUILERA, JESUS",
       "team": "C.D. OLIMPIC DE TRIANA",
       "played": 6,
@@ -4640,14 +4640,6 @@
       "average": 1.3333
     },
     {
-      "name": "GARCIA SANZ, ADOLFO",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 6,
-      "goals": 7,
-      "penalties": 0,
-      "average": 1.1667
-    },
-    {
       "name": "WARSCHKE ACERO, GONZALO",
       "team": "C.D. LA PALMA F.S.",
       "played": 6,
@@ -4658,8 +4650,16 @@
     {
       "name": "MUÑOZ LARIOS, MARCOS JOSE",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 6,
-      "goals": 6,
+      "played": 7,
+      "goals": 7,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GARCIA SANZ, ADOLFO",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 7,
+      "goals": 7,
       "penalties": 0,
       "average": 1.0
     },
@@ -4738,10 +4738,10 @@
     {
       "name": "TOSINA LUQUE, DIEGO",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
+      "played": 3,
       "goals": 4,
       "penalties": 0,
-      "average": 2.0
+      "average": 1.3333
     },
     {
       "name": "GUIJARRO VALLES, RAFAEL",
@@ -4896,14 +4896,6 @@
       "average": 0.75
     },
     {
-      "name": "SANCHEZ PEREZ DE AZPILLA, TOMAS",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 4,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.75
-    },
-    {
       "name": "RUIZ PEÑA, PABLO",
       "team": "C.D. BENALUP",
       "played": 4,
@@ -4936,7 +4928,7 @@
       "average": 0.6
     },
     {
-      "name": "BAJO PAVÉS, CARLOS",
+      "name": "SANCHEZ PEREZ DE AZPILLA, TOMAS",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 5,
       "goals": 3,
@@ -4976,16 +4968,16 @@
       "average": 0.5
     },
     {
-      "name": "BORJAS LOZANO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "LABRADOR GARCIA, JORGE",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 6,
       "goals": 3,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "LABRADOR GARCIA, JORGE",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "name": "ZAFRA SANCHEZ, MANUEL",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 6,
       "goals": 3,
       "penalties": 0,
@@ -5002,6 +4994,14 @@
     {
       "name": "DELIS LOPEZ, JOSE",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 6,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "BAJO PAVÉS, CARLOS",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 6,
       "goals": 3,
       "penalties": 0,
@@ -5030,6 +5030,14 @@
       "goals": 3,
       "penalties": 0,
       "average": 0.5
+    },
+    {
+      "name": "BORJAS LOZANO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 7,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.4286
     },
     {
       "name": "RAMOS ORTAS, SAMUEL",
@@ -5064,14 +5072,6 @@
       "average": 1.0
     },
     {
-      "name": "LARA LUQUE, SAMUEL",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "IBAÑEZ FERNANDEZ, ADRIAN",
       "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 2,
@@ -5080,8 +5080,8 @@
       "average": 1.0
     },
     {
-      "name": "RAMIREZ CRESPIN, ANDRES",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "LARA LUQUE, SAMUEL",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -5120,16 +5120,16 @@
       "average": 0.6667
     },
     {
-      "name": "SAUCES JIMENEZ, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "FERNANDEZ GOMEZ, JAVIER",
+      "team": "C.D. DECORSENECA",
       "played": 4,
       "goals": 2,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "FERNANDEZ GOMEZ, JAVIER",
-      "team": "C.D. DECORSENECA",
+      "name": "RAMIREZ CRESPIN, ANDRES",
+      "team": "C.D. SANTAELLA 2010",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -5216,14 +5216,6 @@
       "average": 0.5
     },
     {
-      "name": "LÓPEZ TORRES, ÁLVARO",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "GOMEZ VERDUGO, JOSE",
       "team": "C.D. SANTAELLA 2010",
       "played": 4,
@@ -5238,6 +5230,14 @@
       "goals": 2,
       "penalties": 0,
       "average": 0.5
+    },
+    {
+      "name": "SAUCES JIMENEZ, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 5,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.4
     },
     {
       "name": "RIOS AIDO, FRANCISCO JOSE",
@@ -5272,14 +5272,6 @@
       "average": 0.4
     },
     {
-      "name": "ZAFRA SANCHEZ, MANUEL",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
       "name": "VERANO VALENCIA, JESUS",
       "team": "U.D. ALCHOYANO",
       "played": 5,
@@ -5296,7 +5288,7 @@
       "average": 0.4
     },
     {
-      "name": "RODRIGUEZ SOTILLO, RUBÉN",
+      "name": "LÓPEZ TORRES, ÁLVARO",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 5,
       "goals": 2,
@@ -5336,8 +5328,8 @@
       "average": 0.3333
     },
     {
-      "name": "ONIEVA LORA, JOSE",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "RODRIGUEZ SOTILLO, RUBÉN",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 6,
       "goals": 2,
       "penalties": 0,
@@ -5370,6 +5362,14 @@
     {
       "name": "CALDERON LOZADA, GUILLERMO",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 7,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2857
+    },
+    {
+      "name": "ONIEVA LORA, JOSE",
+      "team": "C.D. SANTAELLA 2010",
       "played": 7,
       "goals": 2,
       "penalties": 0,
@@ -5416,14 +5416,6 @@
       "average": 0.5
     },
     {
-      "name": "ARROYO JIMENEZ, JESUS",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "BERNAL MORENO, JAVIER",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 2,
@@ -5456,22 +5448,6 @@
       "average": 0.5
     },
     {
-      "name": "PAEZ MURILLO, MOISES",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "JARABA MARTIN, SERGIO",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "DELGADO ROMERO, ISRAEL",
       "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "played": 2,
@@ -5482,6 +5458,14 @@
     {
       "name": "RGUIGUE MEKLAA, SOUFIANE",
       "team": "C.D. LA PALMA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ARROYO JIMENEZ, JESUS",
+      "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -5528,8 +5512,24 @@
       "average": 0.3333
     },
     {
+      "name": "PAEZ MURILLO, MOISES",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
       "team": "C.D. LA PALMA F.S.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "JARABA MARTIN, SERGIO",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -5664,22 +5664,6 @@
       "average": 0.2
     },
     {
-      "name": "CAMPAÑA POZO, JOSE MANUEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 5,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.2
-    },
-    {
-      "name": "GOMEZ ROSA, MIGUEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 6,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.1667
-    },
-    {
       "name": "CAMPOS ESCALERA, PABLO",
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 6,
@@ -5712,6 +5696,14 @@
       "average": 0.1667
     },
     {
+      "name": "CAMPAÑA POZO, JOSE MANUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
       "name": "VELA ACEDO, SERGIO",
       "team": "C.D. BENALUP",
       "played": 6,
@@ -5726,6 +5718,22 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.1667
+    },
+    {
+      "name": "GRANADOS MOYANO, FRANCISCO",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
+      "name": "GOMEZ ROSA, MIGUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 7,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1429
     },
     {
       "name": "TEROL CAMACHO, ROBERTO",
@@ -6799,7 +6807,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-25T13:50:00.205712+00:00",
+  "updated_at": "2026-10-25T16:18:19.926183+00:00",
   "rounds": [
     1,
     2,
@@ -7460,9 +7468,9 @@
       "won": 4,
       "drawn": 0,
       "lost": 3,
-      "gf": 40,
+      "gf": 42,
       "ga": 31,
-      "gd": 9,
+      "gd": 11,
       "form": "P G G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000001254_04404.jpg"
@@ -7491,8 +7499,8 @@
       "drawn": 2,
       "lost": 2,
       "gf": 24,
-      "ga": 20,
-      "gd": 4,
+      "ga": 22,
+      "gd": 2,
       "form": "P E G G P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
@@ -7740,7 +7748,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-25T13:50:01.237160+00:00",
+  "staff_updated_at": "2026-10-25T16:18:20.837213+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
