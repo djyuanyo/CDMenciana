@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "2 - 3",
           ""
         ]
       ]
@@ -74,6 +74,35 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(2') LOPEZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(21') CORTABARRA CASTELLON, AGUSTIN"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(36') RIOS AIDO, FRANCISCO JOSE"
+        ],
+        [
+          "Gol · 1 - 3",
+          "(38') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(39') CARICOL MARQUEZ, DAVID"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -217,6 +246,39 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(8') FERNANDEZ ANDRADES, JAIME"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(12') GIL MARTIN, JAVIER JACOB"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') ALFONSO CARRASCO, JOSE JUSTO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(24') BUEZAS HUMANES, GONZALO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(25') MOLINA CASTRO, FRANCISCO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(35') CARICOL MARQUEZ, DAVID"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "U.D. ALCHOYANO"
     },
@@ -262,7 +324,7 @@
       "kind": "table",
       "rows": [
         [
-          "21",
+          "16",
           "",
           "FERNANDEZ ALMAGRO, GABRIEL JUAN"
         ],
@@ -343,6 +405,35 @@
         [
           "",
           "GUTIERREZ GUTIERREZ, JESUS"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(12') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(13') MARQUEZ ROMERO, DANIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(21') BAZAN MUÑOZ, JUAN ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(28') VAZQUEZ ALVAREZ, MARCOS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(38') FERNANDEZ ALMAGRO, GABRIEL JUAN"
         ]
       ]
     }
@@ -545,6 +636,5 @@
   ],
   "id": "2645816",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645816",
-  "updated_at": "2026-10-25T11:29:09.738447+00:00",
-  "preview": true
+  "updated_at": "2026-10-25T13:51:13.745244+00:00"
 }

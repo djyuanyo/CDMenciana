@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "5 - 3",
           ""
         ]
       ]
@@ -74,6 +74,47 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(2') LABRADOR GARCIA, JORGE"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(12') ALVAREZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(17') PAREJO BEGINES, JESUS"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(22') PAREJO BEGINES, JESUS"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(22') PEREZ MUÑOZ, SAMUEL"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(29') SANCHEZ SANCHEZ, CARLOS"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(30') CASAL RAMOS, JESUS"
+        ],
+        [
+          "Gol · 5 - 3",
+          "(36') LAINEZ TAPIA, ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -230,6 +271,23 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(17') CATALAN CASADO, JOSE ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') LAINEZ TAPIA, ANTONIO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. ISLEÑO SAN FERNANDO F.S."
     },
@@ -338,6 +396,35 @@
         [
           "",
           "GAGO SANCHEZ, MIGUEL ANGEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(5') GALLEGO FERNANDEZ, DIEGO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(14') DIAZ PLAZUELO, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(25') GAGO SANCHEZ, MIGUEL ANGEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(29') BELGRANO PAEZ, BRYAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(32') SUCINO MORENO, PABLO"
         ]
       ]
     }
@@ -534,6 +621,5 @@
   ],
   "id": "2645818",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645818",
-  "updated_at": "2026-10-25T11:29:09.738447+00:00",
-  "preview": true
+  "updated_at": "2026-10-25T13:51:13.745244+00:00"
 }
