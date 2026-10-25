@@ -2487,7 +2487,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-25T19:07:39.909862+00:00",
+  "updated_at": "2026-10-25T19:47:22.657949+00:00",
   "rounds": [
     1,
     2,
@@ -2801,9 +2801,9 @@
       "won": 3,
       "drawn": 0,
       "lost": 0,
-      "gf": 14,
-      "ga": 8,
-      "gd": 6,
+      "gf": 16,
+      "ga": 11,
+      "gd": 5,
       "form": "G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
@@ -2876,9 +2876,9 @@
       "won": 0,
       "drawn": 1,
       "lost": 2,
-      "gf": 3,
-      "ga": 7,
-      "gd": -4,
+      "gf": 6,
+      "ga": 9,
+      "gd": -3,
       "form": "E P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
@@ -2943,7 +2943,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-25T19:07:40.864861+00:00",
+  "staff_updated_at": "2026-10-25T19:47:23.474816+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
