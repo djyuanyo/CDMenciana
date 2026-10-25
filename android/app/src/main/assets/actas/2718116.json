@@ -749,11 +749,11 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -761,7 +761,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -800,7 +800,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:42.967081+00:00",
+      "profile_updated_at": "2026-10-25T16:25:34.229439+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -872,7 +872,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:43.992477+00:00",
+      "profile_updated_at": "2026-10-25T16:25:35.226227+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -893,7 +893,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -901,11 +901,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -935,16 +935,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:44.967108+00:00",
+      "profile_updated_at": "2026-10-25T16:25:36.212980+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1016,7 +1016,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:45.961435+00:00",
+      "profile_updated_at": "2026-10-25T16:25:37.199046+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1037,7 +1037,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1045,11 +1045,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1058,11 +1058,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1088,7 +1088,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:46.967252+00:00",
+      "profile_updated_at": "2026-10-25T16:25:38.227957+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1160,7 +1160,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:47.952273+00:00",
+      "profile_updated_at": "2026-10-25T16:25:39.202773+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1181,7 +1181,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1189,11 +1189,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1223,16 +1223,16 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Goles por partido",
-              "1.0"
+              "1.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-13T17:55:49.108876+00:00",
+      "profile_updated_at": "2026-10-25T16:25:40.200918+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 0,
@@ -1309,7 +1309,7 @@
         "goals": 1,
         "starts": 2,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1450,10 +1450,10 @@
       ],
       "profile_updated_at": "2026-10-21T13:55:55.345701+00:00",
       "competition_summary": {
-        "goals": 1,
+        "goals": 2,
         "starts": 2,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1525,7 +1525,7 @@
         "goals": 1,
         "starts": 3,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1956,7 +1956,7 @@
         "goals": 1,
         "starts": 0,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       },
@@ -2028,7 +2028,7 @@
         "goals": 1,
         "starts": 0,
         "called": 3,
-        "played": null,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       },
