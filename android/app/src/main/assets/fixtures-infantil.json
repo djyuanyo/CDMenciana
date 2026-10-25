@@ -340,7 +340,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745960",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745960&cod_acta=2745960",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003"
     },
@@ -3081,7 +3081,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-25T01:12:00.054522+00:00",
+  "updated_at": "2026-10-25T11:28:25.417528+00:00",
   "rounds": [
     1,
     2,
