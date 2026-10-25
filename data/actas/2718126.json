@@ -79,6 +79,47 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(5') MARMOL TIENDA, JOSE"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(10') CABRERA ROLDAN, RAFAEL"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(14') CONTRERAS GOMEZ, DAVID"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(15') CASTILLO RAMIREZ, VICTOR MANUEL"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(23') CASTRO VERA, MANUEL"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(25') CONTRERAS GOMEZ, DAVID"
+        ],
+        [
+          "Gol · 3 - 4",
+          "(29') AGUNDO MEJIAS, DAVID"
+        ],
+        [
+          "Gol · 4 - 4",
+          "(37') JIMENEZ ROMERO, CARLOS"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)"
         ],
         [
@@ -212,6 +253,31 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(16') CONTRERAS GOMEZ, DAVID"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(16') ROSALES MORAL, ESTEBAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(16') RUZ BUJALANCE, FRANCISCO JOSE"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(17') MARMOL TIENDA, JOSE"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. EGA FUTSAL"
     },
@@ -333,6 +399,27 @@
         [
           "",
           "MORA RIVERA, SERGIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(13') CUMPLIDO MESA, MIGUEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(16') LUQUE JIMENEZ, JACOB LUIS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(16') MORILLO AREVALO, RAFAEL"
         ]
       ]
     }
@@ -523,6 +610,5 @@
   ],
   "id": "2718126",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718126",
-  "updated_at": "2026-10-25T13:51:13.745244+00:00",
-  "preview": true
+  "updated_at": "2026-10-25T16:19:33.953765+00:00"
 }
