@@ -234,13 +234,13 @@
       "date": "2026-10-25",
       "time": "19:00",
       "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718125&cod_acta=2718125",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718125&cod_acta=2718125",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659"
     },
@@ -1112,14 +1112,6 @@
       "average": 1.3333
     },
     {
-      "name": "PINO AGUILAR, PABLO",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 2,
-      "goals": 3,
-      "penalties": 1,
-      "average": 1.5
-    },
-    {
       "name": "SANCHEZ CASTRO, DANIEL",
       "team": "C.D. CARCABUEY",
       "played": 3,
@@ -1136,8 +1128,24 @@
       "average": 1.0
     },
     {
+      "name": "PINO AGUILAR, PABLO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 3,
+      "goals": 3,
+      "penalties": 1,
+      "average": 1.0
+    },
+    {
       "name": "LOPEZ CHAVARINO, ENRIQUE",
       "team": "C.D. CARCABUEY",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "GONZALEZ JIMENEZ, JAVIER",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 3,
       "goals": 3,
       "penalties": 0,
@@ -1152,7 +1160,15 @@
       "average": 2.0
     },
     {
-      "name": "QUERO LUQUE, RUBEN",
+      "name": "ARCE CID, CARLOS",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 2,
+      "goals": 2,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "LEON ALCAIDE, CRISTIAN",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
       "goals": 2,
@@ -1160,12 +1176,20 @@
       "average": 1.0
     },
     {
-      "name": "ARCE CID, CARLOS",
-      "team": "C.D. MONTILLA FUTSAL",
-      "played": 2,
+      "name": "LOPEZ CHAVARINO, SERGIO",
+      "team": "C.D. CARCABUEY",
+      "played": 3,
       "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.6667
+    },
+    {
+      "name": "QUERO LUQUE, RUBEN",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
     },
     {
       "name": "BERGILLOS PORRAS, ALBERTO",
@@ -1176,16 +1200,8 @@
       "average": 0.6667
     },
     {
-      "name": "CONTRERAS GOMEZ, DAVID",
-      "team": "C.D. APAGA Y VAMONOS",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "LOPEZ CHAVARINO, SERGIO",
-      "team": "C.D. CARCABUEY",
+      "name": "MILLAN MUÑOZ, ALEJANDRO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -1200,6 +1216,22 @@
       "average": 0.6667
     },
     {
+      "name": "CONTRERAS GOMEZ, DAVID",
+      "team": "C.D. APAGA Y VAMONOS",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "CABELLO MORON, ALVARO",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
       "name": "AGUNDO MEJIAS, DAVID",
       "team": "C.D. EGA FUTSAL",
       "played": 3,
@@ -1208,20 +1240,12 @@
       "average": 0.6667
     },
     {
-      "name": "MARMOL TIENDA, JOSE",
-      "team": "C.D. APAGA Y VAMONOS",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "SOTO CORTES, RAMON",
+      "name": "SANTAELLA GOMEZ, JOSE ANTONIO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 1,
-      "goals": 1,
+      "played": 3,
+      "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.6667
     },
     {
       "name": "ORELLANA ARIZA, JUAN FRANCISCO",
@@ -1232,8 +1256,8 @@
       "average": 1.0
     },
     {
-      "name": "LEON PEREZ, RUBEN",
-      "team": "C.D. FUTBOL SALA LUQUE",
+      "name": "MARMOL TIENDA, JOSE",
+      "team": "C.D. APAGA Y VAMONOS",
       "played": 1,
       "goals": 1,
       "penalties": 0,
@@ -1248,14 +1272,6 @@
       "average": 1.0
     },
     {
-      "name": "LEON ALCAIDE, CRISTIAN",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 1,
-      "goals": 1,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
       "team": "C.D. APAGA Y VAMONOS",
       "played": 1,
@@ -1264,16 +1280,8 @@
       "average": 1.0
     },
     {
-      "name": "MEMBIELA GARCIA, JORGE",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "SANTAELLA GOMEZ, JOSE ANTONIO",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "name": "PULIDO MORAL, JOSÉ MARÍA",
+      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1288,15 +1296,7 @@
       "average": 0.5
     },
     {
-      "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
-      "team": "C.D. VILLA DE BENAMEJI",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "CABELLO MORON, ALVARO",
+      "name": "CORNEJO JIMENEZ, PABLO JESUS",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
       "goals": 1,
@@ -1304,8 +1304,8 @@
       "average": 0.5
     },
     {
-      "name": "MORALES MUÑOZ, JUAN CARLOS",
-      "team": "C.D. EGA FUTSAL",
+      "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
+      "team": "C.D. VILLA DE BENAMEJI",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1320,15 +1320,23 @@
       "average": 0.5
     },
     {
-      "name": "PULIDO MORAL, JOSÉ MARÍA",
-      "team": "C.D. CARCABUEY",
+      "name": "MORALES MUÑOZ, JUAN CARLOS",
+      "team": "C.D. EGA FUTSAL",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "MILLAN MUÑOZ, ALEJANDRO",
+      "name": "LEON PEREZ, RUBEN",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "SOTO CORTES, RAMON",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
       "goals": 1,
@@ -1336,23 +1344,7 @@
       "average": 0.5
     },
     {
-      "name": "JIMENEZ CAÑADAS, ALVARO",
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "GONZALEZ JIMENEZ, JAVIER",
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "ROSUA ORTIZ, SAUL",
+      "name": "RAMIREZ REINA, JOSE",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 1,
@@ -1360,8 +1352,8 @@
       "average": 0.3333
     },
     {
-      "name": "GARCIA CASADO, JAIME",
-      "team": "C.D. VILLA DE BENAMEJI",
+      "name": "MEMBIELA GARCIA, JORGE",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1376,16 +1368,40 @@
       "average": 0.3333
     },
     {
-      "name": "MARTÍN BORREGO, SAMUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "name": "ACERO FLORES, MARIO",
+      "team": "C.D. VILLA DE BENAMEJI",
       "played": 3,
       "goals": 1,
       "penalties": 0,
       "average": 0.3333
     },
     {
-      "name": "ACERO FLORES, MARIO",
+      "name": "GARCIA CASADO, JAIME",
       "team": "C.D. VILLA DE BENAMEJI",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "JIMENEZ CAÑADAS, ALVARO",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "MARIN CALVO, ALBERTO",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "MARTÍN BORREGO, SAMUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1400,7 +1416,15 @@
       "average": 0.3333
     },
     {
-      "name": "RAMIREZ REINA, JOSE",
+      "name": "RUIZ MARMOL, JUAN MANUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ROSUA ORTIZ, SAUL",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 1,
@@ -1418,14 +1442,6 @@
     {
       "name": "LARA SEVILLA, JOSE DAVID",
       "team": "C.D. VILLA DE BENAMEJI",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "RUIZ MARMOL, JUAN MANUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -2614,7 +2630,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-25T19:47:22.657949+00:00",
+  "updated_at": "2026-10-25T21:52:55.619136+00:00",
   "rounds": [
     1,
     2,
@@ -3070,7 +3086,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-25T19:47:23.474816+00:00",
+  "staff_updated_at": "2026-10-25T21:52:56.530336+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
