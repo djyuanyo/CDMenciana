@@ -431,7 +431,8 @@
         "played": null,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "0a88f6d4f813a40e",
@@ -517,7 +518,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8644de39f6de43dd",
@@ -603,7 +605,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "78fca143ad26155e",
@@ -617,7 +620,8 @@
         "played": null,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "22547198279de5c5",
@@ -631,7 +635,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "038a30174cf48d5f",
@@ -645,7 +650,8 @@
         "played": null,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "5b19c1359de79a69",
@@ -659,7 +665,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "09fd5c2b7d0a3ff3",
@@ -673,7 +680,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f673c39491b15fa8",
@@ -687,7 +695,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "fb9f3d17bc3528b9",
@@ -701,7 +710,8 @@
         "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3b7860003a83d9f2",
@@ -1003,7 +1013,65 @@
         "played": 0,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T01:17:11.428984+00:00"
     },
     {
       "id": "776a353f0ed38d70",
@@ -1017,7 +1085,65 @@
         "played": null,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T01:17:09.427044+00:00"
     },
     {
       "id": "4355dbdb9954a375",
@@ -1247,7 +1373,65 @@
         "played": null,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T01:17:12.420446+00:00"
     },
     {
       "id": "34d5e9632bb725fb",
@@ -1383,7 +1567,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-24T20:56:54.050632+00:00",
+      "profile_updated_at": "2026-10-25T01:17:00.383911+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
