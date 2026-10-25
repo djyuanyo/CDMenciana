@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "3 - 1",
+          "14 - 4",
           ""
         ]
       ]
@@ -62,6 +62,87 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(1') CASTELL REQUENA, ESTEBAN"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(3') CASTELL REQUENA, ESTEBAN"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(15') CASTELL REQUENA, ESTEBAN"
+        ],
+        [
+          "Gol · 3 - 1",
+          "(19') GONZALEZ BUJALANCE, JESUS"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(21') SERRANO MONTILLA, DANIEL"
+        ],
+        [
+          "Gol · 5 - 1",
+          "(22') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 6 - 1",
+          "(24') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 7 - 1",
+          "(25') PEREZ PIÑA, PABLO"
+        ],
+        [
+          "Gol · 8 - 1",
+          "(27') MARTIN GRANADOS, RUBEN"
+        ],
+        [
+          "Gol · 9 - 1",
+          "(28') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 9 - 2",
+          "(29') LOZANO CRUZ, IKER"
+        ],
+        [
+          "Gol · 9 - 3",
+          "(30') LUNA CORPAS, DAVID"
+        ],
+        [
+          "Gol · 10 - 3",
+          "(34') SERRANO MONTILLA, DANIEL"
+        ],
+        [
+          "Gol · 11 - 3",
+          "(34') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 11 - 4",
+          "(34') MOYANO NUCETE, JESUS"
+        ],
+        [
+          "Gol · 12 - 4",
+          "(35') MERINO CEJUDO, SAMUEL"
+        ],
+        [
+          "Gol · 13 - 4",
+          "(39') LUNA MEJIAS, ROQUE"
+        ],
+        [
+          "Gol · 14 - 4",
+          "(39') GARCIA BORREGO, CRISTIAN"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -420,6 +501,6 @@
   ],
   "id": "2745962",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745962",
-  "updated_at": "2026-10-25T17:19:38.268070+00:00",
+  "updated_at": "2026-10-25T19:07:13.339774+00:00",
   "preview": true
 }
