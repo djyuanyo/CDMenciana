@@ -487,11 +487,11 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -499,7 +499,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -538,7 +538,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T20:50:28.728085+00:00"
+      "profile_updated_at": "2026-10-25T19:13:15.027316+00:00"
     },
     {
       "id": "bb1e425d14ded8cd",
@@ -1056,7 +1056,8 @@
       "id": "0145ba4c9f159ab2",
       "name": "RUIZ PALOMINO, PABLO",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2030955&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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"
+      "photo": "data:image/jpeg;base64,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",
+      "stats": []
     },
     {
       "id": "f771e2c3f1e9cf88",
@@ -1069,7 +1070,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -1077,11 +1078,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1120,7 +1121,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T20:50:26.733616+00:00"
+      "profile_updated_at": "2026-10-25T19:13:13.049118+00:00"
     },
     {
       "id": "7b295c0a71143fb4",
@@ -1133,19 +1134,19 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "7"
             ],
             [
               "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
               "3"
             ],
             [
-              "Jugados",
+              "Suplente",
               "4"
+            ],
+            [
+              "Jugados",
+              "5"
             ]
           ]
         },
@@ -1184,7 +1185,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T09:45:30.133867+00:00",
+      "profile_updated_at": "2026-10-25T19:12:59.074738+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 3,
@@ -1205,7 +1206,79 @@
           "rows": [
             [
               "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
               "5"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:13:00.024920+00:00",
+      "competition_summary": {
+        "goals": 2,
+        "starts": 5,
+        "called": 7,
+        "played": 7,
+        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "94f4eaa6ea911410",
+      "name": "GONZALEZ VILLALOBOS, SERGIO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=54452&codacta=2645813&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
             ],
             [
               "Titular",
@@ -1213,7 +1286,238 @@
             ],
             [
               "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:13:01.029863+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 3,
+        "called": 4,
+        "played": null,
+        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "fc21a20f11ca4894",
+      "name": "MELÉNDEZ GONZÁLEZ, ÁLVARO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19127866&codacta=2645813&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
               "2"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:13:19.062242+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 2,
+        "called": 6,
+        "played": null,
+        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "836b9375b41458e2",
+      "name": "BENEYTO CASTAÑEDA, RUBEN",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=83108&codacta=2645813&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 2,
+        "called": 4,
+        "played": null,
+        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+        "source": "actas oficiales RFAF"
+      },
+      "stats": []
+    },
+    {
+      "id": "7883890302a9cbfb",
+      "name": "ALONSO RUIZ, SANTIAGO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2344699&codacta=2645813&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:13:18.067805+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 4,
+        "called": 6,
+        "played": null,
+        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "53fc640f8abe72e2",
+      "name": "REINA COTO, MANUEL",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=91916&codacta=2645813&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "3"
             ],
             [
               "Jugados",
@@ -1256,309 +1560,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T09:45:31.404414+00:00",
-      "competition_summary": {
-        "goals": 2,
-        "starts": 5,
-        "called": 7,
-        "played": 7,
-        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "94f4eaa6ea911410",
-      "name": "GONZALEZ VILLALOBOS, SERGIO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=54452&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "3"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "2"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-18T09:45:32.147908+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 4,
-        "played": null,
-        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "fc21a20f11ca4894",
-      "name": "MELÉNDEZ GONZÁLEZ, ÁLVARO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19127866&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "4"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-18T23:19:15.402804+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 2,
-        "called": 6,
-        "played": null,
-        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "836b9375b41458e2",
-      "name": "BENEYTO CASTAÑEDA, RUBEN",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=83108&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 2,
-        "called": 4,
-        "played": null,
-        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "7883890302a9cbfb",
-      "name": "ALONSO RUIZ, SANTIAGO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2344699&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "5"
-            ],
-            [
-              "Titular",
-              "4"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-18T23:19:14.393420+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 4,
-        "called": 6,
-        "played": null,
-        "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "53fc640f8abe72e2",
-      "name": "REINA COTO, MANUEL",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=91916&codacta=2645813&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "4"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "2"
-            ],
-            [
-              "Jugados",
-              "4"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-18T23:19:16.392191+00:00",
+      "profile_updated_at": "2026-10-25T19:13:20.027649+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1580,7 +1582,8 @@
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "31a4f39cabe65691",
@@ -1593,7 +1596,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -1601,11 +1604,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1639,12 +1642,12 @@
             ],
             [
               "Goles por partido",
-              "0.8"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T23:19:12.412673+00:00",
+      "profile_updated_at": "2026-10-25T19:13:16.052694+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 4,
@@ -1738,7 +1741,8 @@
         "played": 6,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "85707aee97e7e329",
