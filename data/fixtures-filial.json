@@ -1500,7 +1500,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:55.091280+00:00",
+      "profile_updated_at": "2026-10-25T19:48:44.775385+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1508,7 +1508,8 @@
         "played": 3,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "CABEZAS CORDOBA, RAUL",
@@ -1576,7 +1577,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:55.847760+00:00",
+      "profile_updated_at": "2026-10-25T19:48:45.980808+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1584,7 +1585,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "JIMENEZ POYATO, VICTOR",
@@ -1652,7 +1654,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:56.847381+00:00",
+      "profile_updated_at": "2026-10-25T19:48:47.028258+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 3,
@@ -1660,7 +1662,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "MARMOL TIENDA, JOSE",
@@ -1671,8 +1674,64 @@
       "acta_id": "2718126",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8765078&codacta=2718126&nueva_ventana=",
       "rfaf_id": "8765078",
-      "stats": [],
-      "profile_updated_at": "",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:48:47.831529+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1680,7 +1739,8 @@
         "played": 1,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "BARBA VALVERDE, DIEGO",
@@ -1748,7 +1808,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:57.872934+00:00",
+      "profile_updated_at": "2026-10-25T19:48:49.005685+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 3,
@@ -1756,7 +1816,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "LAMA CAMACHO, MANUEL",
@@ -1824,7 +1885,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:59.065852+00:00",
+      "profile_updated_at": "2026-10-25T19:48:49.795894+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1832,7 +1893,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "CONTRERAS GOMEZ, DAVID",
@@ -1900,7 +1962,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:19:59.857759+00:00",
+      "profile_updated_at": "2026-10-25T19:48:50.774858+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
@@ -1908,7 +1970,8 @@
         "played": 3,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "BONILLA BONILLA, RAFAEL",
@@ -1919,8 +1982,64 @@
       "acta_id": "2718126",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4156673&codacta=2718126&nueva_ventana=",
       "rfaf_id": "4156673",
-      "stats": [],
-      "profile_updated_at": "",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-25T19:48:51.819889+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1928,7 +2047,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "PRIEGO BAENA, FELICIANO",
@@ -1996,7 +2116,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:20:01.087274+00:00",
+      "profile_updated_at": "2026-10-25T19:48:52.770348+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -2004,7 +2124,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "RUZ BUJALANCE, FRANCISCO JOSE",
@@ -2072,7 +2193,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:20:03.333593+00:00",
+      "profile_updated_at": "2026-10-25T19:48:53.975876+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -2080,7 +2201,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "GOMEZ CUBERO, DANIEL",
@@ -2148,7 +2270,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:20:03.990188+00:00",
+      "profile_updated_at": "2026-10-25T19:48:55.039661+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -2156,7 +2278,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "AGUIRREZABAL HERNANDEZ, PEDRO IGNACIO",
@@ -2224,7 +2347,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:20:04.956088+00:00",
+      "profile_updated_at": "2026-10-25T19:48:55.957931+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -2232,7 +2355,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "PRIEGO LUNA, IVAN",
@@ -2300,7 +2424,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T16:20:06.101006+00:00",
+      "profile_updated_at": "2026-10-25T19:48:56.943718+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -2308,7 +2432,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
@@ -2384,7 +2509,8 @@
         "played": 1,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "name": "ROSALES MORAL, ESTEBAN",
@@ -2460,7 +2586,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
@@ -2926,8 +3053,8 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-25T19:17:20.699736+00:00",
-  "stats_updated_at": "2026-10-25T16:19:54.205989+00:00",
+  "roster_updated_at": "2026-10-25T19:48:44.181817+00:00",
+  "stats_updated_at": "2026-10-25T19:48:44.181817+00:00",
   "staff": [
     {
       "name": "LOZANO GARCIA, JULIO",
