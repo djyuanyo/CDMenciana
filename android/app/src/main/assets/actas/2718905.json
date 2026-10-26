@@ -494,11 +494,11 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -506,7 +506,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -545,7 +545,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:28.095123+00:00"
+      "profile_updated_at": "2026-10-25T22:09:01.557542+00:00",
+      "stats_round": 3
     },
     {
       "id": "ef7bc5446bbbaefd",
@@ -621,7 +622,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:48.900657+00:00"
+      "profile_updated_at": "2026-10-19T19:11:48.900657+00:00",
+      "stats_round": 3
     },
     {
       "id": "5e85d518ca5cb292",
@@ -640,7 +642,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -648,7 +650,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -665,7 +667,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -691,7 +693,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:31.206757+00:00"
+      "profile_updated_at": "2026-10-25T22:09:04.534943+00:00",
+      "stats_round": 3
     },
     {
       "id": "f0d87112abe32e2e",
@@ -704,7 +707,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -712,7 +715,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -755,7 +758,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:32.943808+00:00"
+      "profile_updated_at": "2026-10-25T22:09:06.521403+00:00",
+      "stats_round": 3
     },
     {
       "id": "1d6ac3cf9d896a4e",
@@ -768,7 +772,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -776,7 +780,7 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
@@ -819,7 +823,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:29.075339+00:00"
+      "profile_updated_at": "2026-10-25T22:09:02.535604+00:00",
+      "stats_round": 3
     },
     {
       "id": "f85e3e4134a8d747",
@@ -883,7 +888,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:37.936418+00:00"
+      "profile_updated_at": "2026-10-19T19:11:37.936418+00:00",
+      "stats_round": 3
     },
     {
       "id": "ae75a4eb62fc143e",
@@ -953,7 +959,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:43.130431+00:00"
+      "profile_updated_at": "2026-10-19T19:11:43.130431+00:00",
+      "stats_round": 3
     }
   ],
   "staff": [
