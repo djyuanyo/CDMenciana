@@ -430,7 +430,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -460,7 +460,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T06:20:44.339446+00:00",
+      "profile_updated_at": "2026-10-26T23:17:30.562614+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 2,
@@ -502,7 +502,7 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
@@ -532,7 +532,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T06:20:45.366904+00:00",
+      "profile_updated_at": "2026-10-26T23:17:31.389350+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
@@ -554,7 +554,8 @@
         "played": 2,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "46981922fa9a87b4",
@@ -588,7 +589,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -618,7 +619,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T06:20:47.353342+00:00",
+      "profile_updated_at": "2026-10-26T23:17:33.394380+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
@@ -640,7 +641,65 @@
         "played": null,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:37.390276+00:00"
     },
     {
       "id": "52a5bac41723cea1",
@@ -654,7 +713,65 @@
         "played": null,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:35.390939+00:00"
     },
     {
       "id": "9fdd88efb095fbff",
@@ -668,7 +785,8 @@
         "played": 2,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3a4fa10f5751e9a3",
@@ -732,7 +850,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T06:20:46.357525+00:00",
+      "profile_updated_at": "2026-10-26T23:17:32.420319+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 1,
@@ -754,7 +872,65 @@
         "played": 3,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:36.388058+00:00"
     },
     {
       "id": "82da22d0106d763d",
@@ -768,7 +944,65 @@
         "played": 3,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:34.415135+00:00"
     },
     {
       "id": "227b22f011967819",
@@ -782,7 +1016,65 @@
         "played": 2,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.5"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:38.408306+00:00"
     },
     {
       "id": "f3687114503e8d05",
@@ -796,7 +1088,65 @@
         "played": 3,
         "team": "C.D. MIRAGENIL F.S. NOLITO'S",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-26T23:17:39.388506+00:00"
     },
     {
       "id": "040453315e966781",
@@ -810,7 +1160,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8e0809a71ed1bdde",
@@ -824,7 +1175,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f4d4232143b1fdc4",
@@ -838,7 +1190,8 @@
         "played": 3,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "76492e8c9720f4e4",
@@ -852,7 +1205,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "a96ce7c2aac548ee",
@@ -866,7 +1220,8 @@
         "played": 3,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "0fe0fbbd618ee218",
@@ -880,7 +1235,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "78310c22fccfa2a6",
@@ -894,7 +1250,8 @@
         "played": 2,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "535048bb15a731fc",
@@ -908,7 +1265,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "02f12d919a4535a7",
@@ -922,7 +1280,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "5034c82d5794f688",
@@ -936,7 +1295,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3463321691581c85",
@@ -950,7 +1310,8 @@
         "played": 3,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     }
   ],
   "staff": [
