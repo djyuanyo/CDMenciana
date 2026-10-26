@@ -395,11 +395,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -407,7 +407,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -441,12 +441,12 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-11T11:29:36.936399+00:00",
+      "profile_updated_at": "2026-10-26T00:30:20.581750+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -454,7 +454,8 @@
         "played": 3,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 3
     },
     {
       "id": "9de89df8c3bb39af",
