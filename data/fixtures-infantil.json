@@ -2379,8 +2379,7 @@
         "played": 3,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 3
+      }
     },
     {
       "name": "JIMENEZ CORDOBA, ANGELA",
@@ -3167,7 +3166,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-26T00:20:49.699916+00:00",
+  "updated_at": "2026-10-26T06:15:10.563673+00:00",
   "rounds": [
     1,
     2,
@@ -3717,7 +3716,8 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-10-26T00:30:19.720268+00:00",
+  "roster_updated_at": "2026-10-26T06:24:24.295126+00:00",
+  "stats_updated_at": "2026-10-26T00:30:19.720268+00:00",
   "staff": [
     {
       "name": "LUNA ACEITUNO, ADRIAN",
@@ -3744,8 +3744,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-26T00:20:50.131719+00:00",
+  "staff_updated_at": "2026-10-26T06:15:11.434876+00:00",
   "staff_status": "verified",
-  "details_status": "verified",
-  "stats_updated_at": "2026-10-26T00:30:19.720268+00:00"
+  "details_status": "verified"
 }
