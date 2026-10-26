@@ -431,7 +431,8 @@
         "played": null,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "0a88f6d4f813a40e",
@@ -497,10 +498,10 @@
       ],
       "profile_updated_at": "2026-10-14T09:05:35.721701+00:00",
       "competition_summary": {
-        "goals": 2,
+        "goals": 5,
         "starts": 1,
         "called": 2,
-        "played": 1,
+        "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
       }
@@ -511,13 +512,14 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47673135&codacta=2718906&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 2,
+        "goals": 5,
         "starts": 3,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8644de39f6de43dd",
@@ -583,10 +585,10 @@
       ],
       "profile_updated_at": "2026-10-14T09:05:34.752801+00:00",
       "competition_summary": {
-        "goals": 2,
+        "goals": 4,
         "starts": 2,
         "called": 2,
-        "played": 1,
+        "played": 2,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
       }
@@ -600,10 +602,11 @@
         "goals": 1,
         "starts": 1,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "78fca143ad26155e",
@@ -614,10 +617,11 @@
         "goals": 1,
         "starts": 2,
         "called": 3,
-        "played": null,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "22547198279de5c5",
@@ -628,10 +632,11 @@
         "goals": 2,
         "starts": 0,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "038a30174cf48d5f",
@@ -642,10 +647,11 @@
         "goals": 2,
         "starts": 0,
         "called": 3,
-        "played": null,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "5b19c1359de79a69",
@@ -656,10 +662,11 @@
         "goals": 3,
         "starts": 0,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "09fd5c2b7d0a3ff3",
@@ -670,10 +677,11 @@
         "goals": 1,
         "starts": 0,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f673c39491b15fa8",
@@ -681,13 +689,14 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45186433&codacta=2718906&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 1,
+        "goals": 5,
         "starts": 2,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "fb9f3d17bc3528b9",
@@ -695,13 +704,14 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49671054&codacta=2718906&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 2,
+        "goals": 5,
         "starts": 1,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. ENCINAS REALES C.F.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3b7860003a83d9f2",
@@ -914,7 +924,7 @@
         "goals": 1,
         "starts": 3,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
       }
@@ -983,10 +993,10 @@
       ],
       "profile_updated_at": "2026-10-24T23:21:11.063686+00:00",
       "competition_summary": {
-        "goals": 1,
+        "goals": 2,
         "starts": 3,
         "called": 3,
-        "played": 2,
+        "played": 3,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
       }
@@ -1058,7 +1068,7 @@
         "goals": 2,
         "starts": 1,
         "called": 2,
-        "played": 0,
+        "played": 1,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
       }
@@ -1490,7 +1500,7 @@
         "goals": 2,
         "starts": 1,
         "called": 3,
-        "played": null,
+        "played": 3,
         "team": "C.D. MIRAGENIL F.S. CODIMAR",
         "source": "actas oficiales RFAF"
       }

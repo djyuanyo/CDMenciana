@@ -811,7 +811,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "e697741e915c1c1b",
@@ -1040,7 +1041,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -1048,7 +1049,7 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
@@ -1065,7 +1066,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1082,16 +1083,16 @@
           "rows": [
             [
               "Total",
-              "7"
+              "8"
             ],
             [
               "Goles por partido",
-              "1.2"
+              "1.1"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T17:17:07.973887+00:00",
+      "profile_updated_at": "2026-10-26T00:31:59.098547+00:00",
       "competition_summary": {
         "goals": 8,
         "starts": 2,
@@ -1329,7 +1330,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6c6cc6db68dc32ed",
@@ -1415,7 +1417,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "48a456adf29eec69",
@@ -1428,11 +1431,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -1440,7 +1443,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -1453,7 +1456,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1474,12 +1477,12 @@
             ],
             [
               "Goles por partido",
-              "0.2"
+              "0.1"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T22:25:36.980223+00:00",
+      "profile_updated_at": "2026-10-26T00:32:12.625857+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1645,7 +1648,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "53b4e6277137731e",
@@ -1659,7 +1663,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "b934417541f42163",
@@ -1673,7 +1678,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "50048d25dea3951c",
@@ -1759,7 +1765,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "47a02c7033cdeda6",
@@ -1773,7 +1780,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "849a4aa2251ee723",

@@ -861,7 +861,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -869,11 +869,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -912,7 +912,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T22:25:38.711648+00:00"
+      "profile_updated_at": "2026-10-26T00:32:14.643224+00:00"
     },
     {
       "id": "7efce4af55945683",
@@ -1053,7 +1053,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -1061,11 +1061,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1078,7 +1078,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1104,7 +1104,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T22:25:37.730907+00:00"
+      "profile_updated_at": "2026-10-26T00:32:13.610073+00:00"
     },
     {
       "id": "6b31a080153cca5e",
@@ -1381,11 +1381,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
@@ -1393,7 +1393,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -1432,7 +1432,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-17T22:25:44.765173+00:00",
+      "profile_updated_at": "2026-10-26T00:32:20.721601+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 7,
@@ -1526,7 +1526,8 @@
         "played": 6,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "dfba139eb02436dd",
@@ -1684,7 +1685,8 @@
         "played": 4,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8af4122cc9336fb4",
