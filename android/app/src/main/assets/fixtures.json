@@ -1247,26 +1247,6 @@
     {
       "id": "48466109-8-7",
       "round": 8,
-      "home": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "away": "C.D. DECORSENECA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001284111_logo_isle_90_.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
-      "date": "2026-11-01",
-      "time": "",
-      "venue": "San Fernando - PABELLON BAHIA SUR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-8-8",
-      "round": 8,
       "home": "C.D. VILLALBA F.S.",
       "away": "C.D. ALCALA DE GUADAIRA F.S.",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
@@ -1282,6 +1262,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-8-8",
+      "round": 8,
+      "home": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "away": "C.D. DECORSENECA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001284111_logo_isle_90_.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
+      "date": "2026-11-01",
+      "time": "",
+      "venue": "San Fernando - PABELLON BAHIA SUR",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
       "acta_url": ""
     },
     {
@@ -6793,7 +6793,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-26T06:14:48.523961+00:00",
+  "updated_at": "2026-10-26T11:01:02.964280+00:00",
   "rounds": [
     1,
     2,
@@ -7734,7 +7734,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-26T06:14:49.493131+00:00",
+  "staff_updated_at": "2026-10-26T11:01:03.825063+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
