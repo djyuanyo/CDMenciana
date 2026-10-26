@@ -314,10 +314,10 @@
       "date": "2026-10-24",
       "time": "16:45",
       "venue": "Cabra - PABELLON MUNICIPAL DE DEPORTES",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745961&cod_acta=2745961",
@@ -334,10 +334,10 @@
       "date": "2026-10-25",
       "time": "11:30",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 3,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745960&cod_acta=2745960",
@@ -354,13 +354,13 @@
       "date": "2026-10-25",
       "time": "17:00",
       "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 14,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745962",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745962&cod_acta=2745962",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430"
     },
@@ -374,13 +374,13 @@
       "date": "2026-10-25",
       "time": "18:00",
       "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 6,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=4",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745964",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745964&cod_acta=2745964",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116"
     },
@@ -394,7 +394,7 @@
       "date": "2026-10-26",
       "time": "19:00",
       "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -414,14 +414,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780",
+      "acta_url": ""
     },
     {
       "id": "49520774-5-2",
@@ -433,14 +434,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Lucena - PABELLON CUBIERTO MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
+      "acta_url": ""
     },
     {
       "id": "49520774-5-3",
@@ -452,14 +454,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Pabellón Baena - ALBENDIN (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34387430",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
+      "acta_url": ""
     },
     {
       "id": "49520774-5",
@@ -471,14 +474,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
+      "acta_url": ""
     },
     {
       "id": "49520774-5-5",
@@ -490,14 +494,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Luque - PABELLON MUNICIPAL DEPORTES",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
+      "acta_url": ""
     },
     {
       "id": "49520774-6-1",
@@ -1770,6 +1775,14 @@
       "average": 2.0
     },
     {
+      "name": "AGUILAR ARJONA, MARTIN",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 4,
+      "goals": 6,
+      "penalties": 0,
+      "average": 1.5
+    },
+    {
       "name": "JIMENEZ CORDOBA, ANGELA",
       "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
       "played": 3,
@@ -1778,15 +1791,15 @@
       "average": 1.6667
     },
     {
-      "name": "SEVILLA ARROYO, JUAN",
-      "team": "C.D. TOXAR",
+      "name": "LAMA CAMACHO, ALBERTO",
+      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
       "played": 3,
       "goals": 5,
       "penalties": 0,
       "average": 1.6667
     },
     {
-      "name": "AGUILAR ARJONA, MARTIN",
+      "name": "CARNERERO FERNÁNDEZ, DYLAN",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 5,
@@ -1802,12 +1815,52 @@
       "average": 1.6667
     },
     {
-      "name": "LAMA CAMACHO, ALBERTO",
-      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
+      "name": "SEVILLA ARROYO, JUAN",
+      "team": "C.D. TOXAR",
       "played": 3,
       "goals": 5,
       "penalties": 0,
       "average": 1.6667
+    },
+    {
+      "name": "LOZANO CRUZ, IKER",
+      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "MUÑOZ REJANO, EZEQUIEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.25
+    },
+    {
+      "name": "SOME LOPEZ, ALVARO",
+      "team": "C.D. ARAS FUTSAL",
+      "played": 4,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.25
+    },
+    {
+      "name": "CASTELL REQUENA, ESTEBAN",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.25
+    },
+    {
+      "name": "GONZALEZ BUJALANCE, JESUS",
+      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "played": 4,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.25
     },
     {
       "name": "GALLEGO SALAMANCA, JORGE",
@@ -1818,28 +1871,20 @@
       "average": 2.0
     },
     {
-      "name": "LOZANO CRUZ, IKER",
-      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "name": "MEJÍAS HUETO, IGNACIO",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 4,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "SÁNCHEZ BERMÚDEZ, DANIEL",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 2,
-      "goals": 4,
+      "goals": 3,
       "penalties": 0,
-      "average": 2.0
-    },
-    {
-      "name": "SOME LOPEZ, ALVARO",
-      "team": "C.D. ARAS FUTSAL",
-      "played": 3,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.3333
-    },
-    {
-      "name": "GONZALEZ BUJALANCE, JESUS",
-      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
-      "played": 3,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.3333
+      "average": 1.5
     },
     {
       "name": "MARIN CAMPOS, PAULA",
@@ -1874,16 +1919,8 @@
       "average": 1.5
     },
     {
-      "name": "SÁNCHEZ BERMÚDEZ, DANIEL",
+      "name": "MARTÍN CÁLIZ, ALEJANDRO",
       "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
-      "goals": 3,
-      "penalties": 0,
-      "average": 1.5
-    },
-    {
-      "name": "MEJÍAS HUETO, IGNACIO",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 3,
       "penalties": 0,
@@ -1898,36 +1935,28 @@
       "average": 1.0
     },
     {
-      "name": "CARNERERO FERNÁNDEZ, DYLAN",
+      "name": "ESPADAS DE LA TORRE, JOSE ANGEL",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 2,
-      "goals": 2,
+      "played": 4,
+      "goals": 3,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.75
     },
     {
-      "name": "CARRILLO AGUILERA, ELÍAS",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
-      "goals": 2,
+      "name": "CORPAS CRIADO, NATALIA MARIA",
+      "team": "C.D. CABRA F.S.",
+      "played": 4,
+      "goals": 3,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.75
     },
     {
-      "name": "MARTÍN CÁLIZ, ALEJANDRO",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
-      "goals": 2,
+      "name": "MONTES MARTIN, ALEJANDRO",
+      "team": "C.D. ARAS FUTSAL",
+      "played": 4,
+      "goals": 3,
       "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ORTIZ JURADO, HECTOR",
-      "team": "C. D. FÚTBOL SALA LUQUE",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
+      "average": 0.75
     },
     {
       "name": "JIMENEZ MUDARRA, DANIEL",
@@ -1938,71 +1967,15 @@
       "average": 1.0
     },
     {
-      "name": "ESPADAS DE LA TORRE, JOSE ANGEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 3,
+      "name": "QUINTERO POSTIGO, VÍCTOR",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 2,
       "goals": 2,
       "penalties": 0,
-      "average": 0.6667
+      "average": 1.0
     },
     {
-      "name": "CASTELL REQUENA, ESTEBAN",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "LEBRÓN SÁNCHEZ, ISRAEL",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "ESPADAS DE LA TORRE, MARIO",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "CASADO PÉREZ, MARTÍN",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "ALMANSA POLO, ALEJANDRO",
-      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "BONILLA FERNANDEZ, ALVARO",
-      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "CALIZ SANCHEZ, ALONSO",
-      "team": "C.D. TOXAR",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "BAENA RABADAN, PACO",
+      "name": "ORTIZ JURADO, HECTOR",
       "team": "C. D. FÚTBOL SALA LUQUE",
       "played": 3,
       "goals": 2,
@@ -2018,12 +1991,100 @@
       "average": 0.6667
     },
     {
-      "name": "QUINTERO POSTIGO, VÍCTOR",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 1,
-      "goals": 1,
+      "name": "ESPADAS DE LA TORRE, MARIO",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 3,
+      "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.6667
+    },
+    {
+      "name": "BONILLA FERNANDEZ, ALVARO",
+      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "CARRILLO AGUILERA, ELÍAS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "SERRANO MONTILLA, DANIEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "CALIZ SANCHEZ, ALONSO",
+      "team": "C.D. TOXAR",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "GARCIA BORREGO, CRISTIAN",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "ALMANSA POLO, ALEJANDRO",
+      "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "ARROYO CHACON, DAVID",
+      "team": "C.D. CABRA F.S.",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MARTIN GRANADOS, RUBEN",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "LEBRÓN SÁNCHEZ, ISRAEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CASADO PÉREZ, MARTÍN",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "BAENA RABADAN, PACO",
+      "team": "C. D. FÚTBOL SALA LUQUE",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
     },
     {
       "name": "HIDALGO ROPERO, ALEX",
@@ -2034,40 +2095,32 @@
       "average": 1.0
     },
     {
-      "name": "GUTIÉRREZ MATAS, MANUELA",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
+      "name": "RUIZ GONZÁLEZ, JESÚS",
+      "team": "C.D. ARAS FUTSAL",
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
-      "name": "GARCIA BORREGO, CRISTIAN",
+      "name": "PEREZ PIÑA, PABLO",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 2,
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
-      "name": "ECIJA GARCIA, DANIEL",
-      "team": "C.D. CABRA F.S.",
-      "played": 2,
+      "name": "MOYANO NUCETE, JESUS",
+      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
       "name": "LEON VALLE, ANGEL",
       "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "ORTIZ JURADO, ANGELICA",
-      "team": "C. D. FÚTBOL SALA LUQUE",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -2082,56 +2135,24 @@
       "average": 0.5
     },
     {
-      "name": "COBOS AYORA, HUGO",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "name": "ECIJA GARCIA, DANIEL",
+      "team": "C.D. CABRA F.S.",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "MONTES MARTIN, ALEJANDRO",
-      "team": "C.D. ARAS FUTSAL",
-      "played": 3,
+      "name": "LUNA CORPAS, DAVID",
+      "team": "C. D. ALBENDÍN CAPRICHO DEL GUADAJOZ",
+      "played": 2,
       "goals": 1,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.5
     },
     {
-      "name": "CABALLERO MOLINA, JAVIER",
-      "team": "C.D. ARAS FUTSAL",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "TELLADO LÓPEZ, DAVID",
-      "team": "C.D. ARAS FUTSAL",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "CORPAS CRIADO, NATALIA MARIA",
-      "team": "C.D. CABRA F.S.",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "MUÑOZ REJANO, EZEQUIEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "SABARIEGO DÍAZ, PABLO",
-      "team": "C.D. CABRA F.S.",
+      "name": "COBOS AYORA, HUGO",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -2146,7 +2167,7 @@
       "average": 0.3333
     },
     {
-      "name": "ARROYO CHACON, DAVID",
+      "name": "ARROYO MONTES, DANIEL",
       "team": "C.D. CABRA F.S.",
       "played": 3,
       "goals": 1,
@@ -2162,7 +2183,31 @@
       "average": 0.3333
     },
     {
-      "name": "OSUNA CAÑETE, DIEGO",
+      "name": "MERINO CEJUDO, SAMUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "GUTIÉRREZ MATAS, MANUELA",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "CABALLERO MOLINA, JAVIER",
+      "team": "C.D. ARAS FUTSAL",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ORTIZ JURADO, ANGELICA",
       "team": "C. D. FÚTBOL SALA LUQUE",
       "played": 3,
       "goals": 1,
@@ -2170,24 +2215,8 @@
       "average": 0.3333
     },
     {
-      "name": "EXPOSITO MARIN, CARLOS",
-      "team": "C. D. FÚTBOL SALA LUQUE",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "LOPEZ JIMENEZ, MANUEL",
-      "team": "C. D. FÚTBOL SALA LUQUE",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "POZO QUESADA, MARCOS",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "name": "GRANDE SANCHEZ, ANGEL",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -2202,20 +2231,76 @@
       "average": 0.3333
     },
     {
-      "name": "MARTIN GRANADOS, RUBEN",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
+      "name": "TELLADO LÓPEZ, DAVID",
+      "team": "C.D. ARAS FUTSAL",
+      "played": 4,
       "goals": 1,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.25
+    },
+    {
+      "name": "SABARIEGO DÍAZ, PABLO",
+      "team": "C.D. CABRA F.S.",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "CASTRO LUQUE, ANTONIO",
+      "team": "C.D. CABRA F.S.",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "OSUNA CAÑETE, DIEGO",
+      "team": "C. D. FÚTBOL SALA LUQUE",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "EXPOSITO MARIN, CARLOS",
+      "team": "C. D. FÚTBOL SALA LUQUE",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "LUNA MEJIAS, ROQUE",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "LOPEZ JIMENEZ, MANUEL",
+      "team": "C. D. FÚTBOL SALA LUQUE",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "POZO QUESADA, MARCOS",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
     },
     {
       "name": "LOZANO DELGADO, GERMAN",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 3,
+      "played": 4,
       "goals": 1,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.25
     }
   ],
   "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=3&codcompeticion=49520234&codtemporada=22&codgrupo=49520774",
@@ -3081,7 +3166,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-10-25T16:18:52.743690+00:00",
+  "updated_at": "2026-10-26T00:20:49.699916+00:00",
   "rounds": [
     1,
     2,
@@ -3174,7 +3259,7 @@
       "date": "2026-10-26",
       "time": "19:00",
       "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -3194,14 +3279,15 @@
       "date": "2026-11-08",
       "time": "",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
+      "acta_url": ""
     },
     {
       "id": "49520774-6",
@@ -3657,7 +3743,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-10-25T01:10:26.209663+00:00",
-  "staff_status": "cached",
-  "details_status": "pending"
+  "staff_updated_at": "2026-10-26T00:20:50.131719+00:00",
+  "staff_status": "verified",
+  "details_status": "verified"
 }

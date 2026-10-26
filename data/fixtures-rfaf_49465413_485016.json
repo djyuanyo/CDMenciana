@@ -845,12 +845,52 @@
       "average": 1.75
     },
     {
-      "name": "PEDROSA HIDALGO, PABLO",
+      "name": "ARCOS MORENO, CARLOS",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 2,
-      "goals": 3,
+      "goals": 5,
       "penalties": 0,
-      "average": 1.5
+      "average": 2.5
+    },
+    {
+      "name": "SANCHEZ CAÑETE, ANGEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "ALONSO GAZQUEZ, KEVIN",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.6667
+    },
+    {
+      "name": "BERMUDEZ GONZALEZ, VICTOR",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 2,
+      "goals": 4,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "AGUILAR HOYOS, ALVARO",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 2,
+      "goals": 4,
+      "penalties": 0,
+      "average": 2.0
     },
     {
       "name": "MARIN URBANO, ADRIAN",
@@ -861,8 +901,16 @@
       "average": 1.0
     },
     {
-      "name": "MARQUEZ QUERO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "PEDROSA HIDALGO, PABLO",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 3,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 4,
       "goals": 3,
       "penalties": 0,
@@ -877,6 +925,22 @@
       "average": 0.75
     },
     {
+      "name": "MARQUEZ QUERO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 4,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.75
+    },
+    {
+      "name": "TEJERO RUZ, DANIEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
       "name": "RODRIGUEZ GÓMEZ, JOSE MANUEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 1,
@@ -885,48 +949,8 @@
       "average": 2.0
     },
     {
-      "name": "AGUILAR HOYOS, ALVARO",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
-    },
-    {
-      "name": "BERMUDEZ GONZALEZ, VICTOR",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
-    },
-    {
-      "name": "ARCOS MORENO, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 1,
-      "goals": 2,
-      "penalties": 0,
-      "average": 2.0
-    },
-    {
-      "name": "SANCHEZ CAÑETE, ANGEL",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "ALONSO GAZQUEZ, KEVIN",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PEDROSA HIDALGO, JESÚS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "SALINAS JARABA, JOSE MARIA",
+      "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -941,14 +965,6 @@
       "average": 1.0
     },
     {
-      "name": "SALINAS JARABA, JOSE MARIA",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "MONTES MESA, ALVARO",
       "team": "C.D. MENCIANA",
       "played": 2,
@@ -957,8 +973,16 @@
       "average": 1.0
     },
     {
-      "name": "JURADO ORDOÑEZ, MARCOS",
-      "team": "C.D. MENCIANA",
+      "name": "JIMENEZ BORREGO, ISRAEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -973,7 +997,31 @@
       "average": 0.6667
     },
     {
-      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "name": "GENIL MENDOZA, JOSE",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "PEDROSA HIDALGO, JESÚS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "JURADO ORDOÑEZ, MARCOS",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
       "team": "C.D. ARAS FUTSAL A",
       "played": 3,
       "goals": 2,
@@ -997,12 +1045,12 @@
       "average": 0.6667
     },
     {
-      "name": "TEJERO RUZ, DANIEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 0,
-      "goals": 2,
+      "name": "MOLINA AGUILERA, RAUL",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 1,
+      "goals": 1,
       "penalties": 0,
-      "average": null
+      "average": 1.0
     },
     {
       "name": "COBO COMINO, DAVID",
@@ -1013,56 +1061,24 @@
       "average": 1.0
     },
     {
-      "name": "RIVAS CARMONA, PEDRO",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
+      "name": "ARANDA MONTES, OMAR",
       "team": "C.D. ARAS FUTSAL A",
-      "played": 2,
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
-      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
+      "name": "GUTIÉRREZ MATAS, MANUELA",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 1,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 1.0
     },
     {
-      "name": "PALOMARES CANTILLO, JOSE",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "PRIETO MORENO, PABLO",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "DOMINGUEZ SANCHEZ, DAVID",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "RODRIGUEZ GOMEZ, JOAQUIN",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "PÉREZ-ROSAS MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1085,32 +1101,32 @@
       "average": 0.5
     },
     {
-      "name": "ARJONA GARCIA, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "RAMÍREZ PÉREZ, DIEGO",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "GORDILLO MOLINA, JUAN JOSE",
-      "team": "C.D. MENCIANA",
+      "name": "LOPERA MOLINA, PABLO",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "PRIEGO MONTES, LUIS",
-      "team": "C.D. MENCIANA",
+      "name": "PALOMARES CANTILLO, JOSE",
+      "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "ABOUELALAM EL BARHMI, ADAM",
-      "team": "C.D. MENCIANA",
+      "name": "RODRIGUEZ GOMEZ, JOAQUIN",
+      "team": "C.D. SANTAELLA 2010",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1125,6 +1141,62 @@
       "average": 0.5
     },
     {
+      "name": "ABOUELALAM EL BARHMI, ADAM",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "ROLDAN MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PRIEGO MONTES, LUIS",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "GORDILLO MOLINA, JUAN JOSE",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "VERA TORRES, RAFAEL",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ARJONA GARCIA, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "MORENO VAZQUEZ, JONATAN",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
       "name": "CAÑETE PEREA, CARLOS",
       "team": "C.D. CARCABUEY",
       "played": 3,
@@ -1133,8 +1205,16 @@
       "average": 0.3333
     },
     {
-      "name": "PEREZ REYES, MARIO",
-      "team": "C.D. ARAS FUTSAL A",
+      "name": "RIVAS CARMONA, PEDRO",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "PRIETO MORENO, PABLO",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1157,12 +1237,12 @@
       "average": 0.3333
     },
     {
-      "name": "VERA TORRES, RAFAEL",
-      "team": "C.D. MENCIANA",
-      "played": 3,
+      "name": "PEREZ REYES, MARIO",
+      "team": "C.D. ARAS FUTSAL A",
+      "played": 4,
       "goals": 1,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.25
     }
   ],
   "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=3&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
@@ -3347,7 +3427,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-25T21:54:29.641302+00:00",
+  "updated_at": "2026-10-26T00:20:40.933548+00:00",
   "rounds": [
     1,
     2,
@@ -3755,7 +3835,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-25T21:54:30.600891+00:00",
+  "staff_updated_at": "2026-10-26T00:20:41.405308+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
