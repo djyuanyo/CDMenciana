@@ -1166,19 +1166,19 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "7"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
-              "5"
+              "6"
             ],
             [
               "Jugados",
-              "4"
+              "6"
             ]
           ]
         },
@@ -1187,11 +1187,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1208,11 +1208,11 @@
           "rows": [
             [
               "Total",
-              "3"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.7"
             ]
           ]
         }
@@ -1225,7 +1225,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-18T09:45:13.170181+00:00"
+      "profile_updated_at": "2026-10-26T13:09:30.459075+00:00"
     },
     {
       "id": "e0893861c44fff04",
@@ -1790,7 +1790,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
@@ -1798,11 +1798,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1832,16 +1832,16 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.4"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-22T14:02:08.361189+00:00",
+      "profile_updated_at": "2026-10-26T13:09:41.457449+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,

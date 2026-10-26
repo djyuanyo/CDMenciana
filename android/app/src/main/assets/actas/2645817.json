@@ -1309,11 +1309,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -1321,7 +1321,7 @@
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1360,7 +1360,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-18T09:45:17.145906+00:00",
+      "profile_updated_at": "2026-10-26T13:09:34.451662+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1526,7 +1526,8 @@
         "played": 6,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "dfba139eb02436dd",
@@ -1684,7 +1685,8 @@
         "played": 4,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8af4122cc9336fb4",
