@@ -1526,8 +1526,7 @@
         "played": 6,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "dfba139eb02436dd",
@@ -1605,7 +1604,7 @@
       "id": "09ed1254afda9568",
       "name": "COELLO FORERO, DANIEL",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=724248&codacta=2645817&nueva_ventana=",
-      "photo": "https://files.rfaf.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
       "stats": [
         {
           "title": "Partidos",
@@ -1685,14 +1684,13 @@
         "played": 4,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "8af4122cc9336fb4",
       "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2096347&codacta=2645817&nueva_ventana=",
-      "photo": "https://files.rfaf.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
       "stats": [
         {
           "title": "Partidos",
@@ -1836,7 +1834,7 @@
       "id": "d2c4ce4977157a3d",
       "name": "VIGO PATRON, ALEJANDRO",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=232596&codacta=2645817&nueva_ventana=",
-      "photo": "https://files.rfaf.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
       "stats": [
         {
           "title": "Partidos",
@@ -2017,5 +2015,5 @@
   ],
   "id": "2645817",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645817",
-  "updated_at": "2026-10-27T05:58:12.626566+00:00"
+  "updated_at": "2026-10-27T14:33:18.858791+00:00"
 }
