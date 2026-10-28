@@ -245,6 +245,26 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659"
     },
     {
+      "id": "49113036-4-1",
+      "round": 4,
+      "home": "C.D. MONTILLA FUTSAL",
+      "away": "C.D. CARCABUEY",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
+      "date": "2026-11-08",
+      "time": "",
+      "venue": "Montemayor - POLIDEPORTIVO MUNICIPAL DE MONTEMAYOR",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=4",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
+      "acta_url": ""
+    },
+    {
       "id": "49113036-4",
       "round": 4,
       "home": "C.D. ASOC. JUVENIL PALENCIANA",
@@ -262,26 +282,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-      "acta_url": ""
-    },
-    {
-      "id": "49113036-4-2",
-      "round": 4,
-      "home": "C.D. MONTILLA FUTSAL",
-      "away": "C.D. CARCABUEY",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
-      "date": "2026-11-08",
-      "time": "",
-      "venue": "Montemayor - POLIDEPORTIVO MUNICIPAL DE MONTEMAYOR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=4",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "acta_url": ""
     },
     {
@@ -2630,7 +2630,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-10-28T05:42:53.025955+00:00",
+  "updated_at": "2026-10-28T12:54:04.197931+00:00",
   "rounds": [
     1,
     2,
@@ -3086,7 +3086,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-10-28T05:42:53.911479+00:00",
+  "staff_updated_at": "2026-10-28T12:54:05.035659+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
