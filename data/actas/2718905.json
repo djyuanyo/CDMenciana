@@ -539,7 +539,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:20.943700+00:00"
+      "profile_updated_at": "2026-10-28T18:58:20.943700+00:00",
+      "stats_round": 3
     },
     {
       "id": "e7d2d632f4b9bab4",
@@ -603,7 +604,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T22:09:01.557542+00:00"
+      "profile_updated_at": "2026-10-28T23:15:23.597472+00:00",
+      "stats_round": 3
     },
     {
       "id": "ef7bc5446bbbaefd",
@@ -679,7 +681,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:16.947310+00:00"
+      "profile_updated_at": "2026-10-28T23:15:44.624319+00:00",
+      "stats_round": 3
     },
     {
       "id": "5e85d518ca5cb292",
@@ -719,7 +722,7 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
@@ -749,7 +752,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T22:09:04.534943+00:00"
+      "profile_updated_at": "2026-10-28T23:15:26.603496+00:00",
+      "stats_round": 3
     },
     {
       "id": "f0d87112abe32e2e",
@@ -813,7 +817,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T22:09:06.521403+00:00"
+      "profile_updated_at": "2026-10-28T23:15:28.637256+00:00",
+      "stats_round": 3
     },
     {
       "id": "1d6ac3cf9d896a4e",
@@ -877,7 +882,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T22:09:02.535604+00:00"
+      "profile_updated_at": "2026-10-28T23:15:24.590824+00:00",
+      "stats_round": 3
     },
     {
       "id": "f85e3e4134a8d747",
@@ -890,7 +896,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -898,7 +904,7 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
@@ -932,16 +938,17 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.7"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-19T19:11:37.936418+00:00"
+      "profile_updated_at": "2026-10-28T23:15:33.608791+00:00",
+      "stats_round": 3
     },
     {
       "id": "ae75a4eb62fc143e",
@@ -1011,7 +1018,8 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:09.963387+00:00"
+      "profile_updated_at": "2026-10-28T23:15:38.603914+00:00",
+      "stats_round": 3
     }
   ],
   "staff": [
