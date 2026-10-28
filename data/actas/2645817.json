@@ -912,7 +912,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T00:32:14.643224+00:00"
+      "profile_updated_at": "2026-10-28T13:01:55.363704+00:00"
     },
     {
       "id": "7efce4af55945683",
@@ -1074,7 +1074,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -1104,7 +1104,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T00:32:13.610073+00:00"
+      "profile_updated_at": "2026-10-28T13:01:54.342323+00:00"
     },
     {
       "id": "6b31a080153cca5e",
@@ -1432,7 +1432,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T00:32:20.721601+00:00",
+      "profile_updated_at": "2026-10-28T13:02:01.357736+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 7,
@@ -1526,7 +1526,8 @@
         "played": 6,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "dfba139eb02436dd",
@@ -1684,7 +1685,8 @@
         "played": 4,
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "8af4122cc9336fb4",
