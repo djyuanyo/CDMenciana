@@ -543,7 +543,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -573,7 +573,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T13:09:43.455092+00:00",
+      "profile_updated_at": "2026-10-29T02:37:12.256498+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 6,
@@ -645,7 +645,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T13:09:12.883529+00:00",
+      "profile_updated_at": "2026-10-29T02:36:44.065051+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 4,
@@ -789,7 +789,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T13:09:17.435213+00:00",
+      "profile_updated_at": "2026-10-29T02:36:46.070857+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1293,7 +1293,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T13:09:18.650782+00:00",
+      "profile_updated_at": "2026-10-29T02:36:47.058659+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 1,
@@ -1365,7 +1365,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-26T13:09:19.439807+00:00",
+      "profile_updated_at": "2026-10-29T02:36:48.040108+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1387,7 +1387,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6c6cc6db68dc32ed",
@@ -1473,7 +1474,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "48a456adf29eec69",
@@ -1703,7 +1705,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "53b4e6277137731e",
@@ -1717,7 +1720,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "b934417541f42163",
@@ -1731,7 +1735,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "50048d25dea3951c",
@@ -1817,7 +1822,8 @@
         "played": 5,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "47a02c7033cdeda6",
@@ -1831,7 +1837,8 @@
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "849a4aa2251ee723",
