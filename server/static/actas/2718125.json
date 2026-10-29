@@ -676,7 +676,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:54.046903+00:00",
+      "profile_updated_at": "2026-10-29T10:04:48.207104+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
@@ -748,7 +748,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:58.125703+00:00",
+      "profile_updated_at": "2026-10-29T10:04:49.196369+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -820,7 +820,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:56.032023+00:00",
+      "profile_updated_at": "2026-10-29T10:04:50.210826+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1036,7 +1036,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:57.116227+00:00",
+      "profile_updated_at": "2026-10-29T10:04:47.193946+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 0,
@@ -1180,7 +1180,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:58:58.846126+00:00",
+      "profile_updated_at": "2026-10-29T10:04:51.192439+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1252,7 +1252,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T18:59:00.016059+00:00",
+      "profile_updated_at": "2026-10-29T10:04:52.199767+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 0,
@@ -1396,7 +1396,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:20:54.760576+00:00",
+      "profile_updated_at": "2026-10-29T10:05:15.208299+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1468,7 +1468,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:20:55.852101+00:00",
+      "profile_updated_at": "2026-10-29T10:05:16.198814+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 1,
@@ -1612,7 +1612,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:20:50.105988+00:00",
+      "profile_updated_at": "2026-10-29T10:05:13.197855+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 3,
@@ -1684,7 +1684,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:20:51.206601+00:00",
+      "profile_updated_at": "2026-10-29T10:05:14.215924+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1778,7 +1778,65 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-29T10:05:12.220899+00:00"
     },
     {
       "id": "02f12d919a4535a7",
