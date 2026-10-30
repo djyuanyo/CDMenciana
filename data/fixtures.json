@@ -1160,9 +1160,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645827",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645827"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515"
     },
     {
       "id": "48466109-8-3",
@@ -1407,26 +1407,6 @@
     {
       "id": "48466109-9-7",
       "round": 9,
-      "home": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "away": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
-      "date": "2026-11-08",
-      "time": "",
-      "venue": "Bormujos - PABELLON JUAN MANUEL ACEVEDO (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=9",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-9-8",
-      "round": 9,
       "home": "C.D. OLIMPIC DE TRIANA",
       "away": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
@@ -1442,6 +1422,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-9-8",
+      "round": 9,
+      "home": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "away": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
+      "date": "2026-11-08",
+      "time": "",
+      "venue": "Bormujos - PABELLON JUAN MANUEL ACEVEDO (Pabellón)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=9",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
       "acta_url": ""
     },
     {
@@ -6773,7 +6773,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-10-29T15:38:13.665244+00:00",
+  "updated_at": "2026-10-30T12:57:50.125852+00:00",
   "rounds": [
     1,
     2,
@@ -7712,7 +7712,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-10-29T15:38:14.753363+00:00",
+  "staff_updated_at": "2026-10-30T12:57:51.373084+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
