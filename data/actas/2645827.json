@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "2 - 2",
+          "3 - 7",
           ""
         ]
       ]
@@ -74,6 +74,55 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(2') ALVAREZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(15') MORENO PEREZ, SANTOS"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(18') BENITEZ GIL, DANIEL"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(19') ALVAREZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(22') CUMPLIDO SANCHEZ, JAIME"
+        ],
+        [
+          "Gol · 2 - 4",
+          "(24') LAINEZ TAPIA, ANTONIO"
+        ],
+        [
+          "Gol · 2 - 5",
+          "(27') ALVAREZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 2 - 6",
+          "(28') TEROL CAMACHO, ROBERTO"
+        ],
+        [
+          "Gol · 3 - 6",
+          "(29') MORENO PEREZ, SANTOS"
+        ],
+        [
+          "Gol · 3 - 7",
+          "(30') BERRO BARNETO, DANIEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -230,6 +279,31 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(18') MORENO PEREZ, SANTOS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') TALHA BARRERO, MOHAMED"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(23') GARCIA GARRIDO, EZEQUIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(31') INFANTES DE LOS SANTOS, JUAN DIEGO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. ALCALA DE GUADAIRA F.S."
     },
@@ -356,6 +430,27 @@
         [
           "",
           "REINA MAQUEDA, PABLO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(6') MARTINEZ GARCIA, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(18') LABRADOR GARCIA, JORGE"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(31') CAMPOS ESCALERA, PABLO"
         ]
       ]
     }
@@ -564,5 +659,5 @@
   ],
   "id": "2645827",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645827",
-  "updated_at": "2026-10-30T20:49:09.897702+00:00"
+  "updated_at": "2026-10-30T22:39:20.606173+00:00"
 }
