@@ -407,7 +407,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
@@ -415,11 +415,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "0"
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -453,12 +453,12 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:14.242868+00:00",
+      "profile_updated_at": "2026-10-21T13:55:53.380645+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -551,11 +551,11 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
@@ -563,7 +563,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -597,12 +597,12 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:17.252571+00:00",
+      "profile_updated_at": "2026-10-21T13:55:56.342995+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -623,11 +623,11 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
@@ -635,7 +635,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -644,7 +644,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Tarjeta amarilla",
@@ -656,7 +656,7 @@
             ],
             [
               "Tarjeta roja",
-              "1"
+              "0"
             ]
           ]
         },
@@ -674,7 +674,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:18.210057+00:00",
+      "profile_updated_at": "2026-10-21T13:55:57.359996+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 3,
@@ -695,7 +695,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
@@ -703,11 +703,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "0"
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -716,11 +716,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -737,16 +737,16 @@
           "rows": [
             [
               "Total",
-              "2"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:16.185919+00:00",
+      "profile_updated_at": "2026-10-21T13:55:55.345701+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 2,
@@ -767,7 +767,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
@@ -775,11 +775,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "2"
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -813,12 +813,12 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:32.207824+00:00",
+      "profile_updated_at": "2026-10-24T18:16:24.183756+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -962,7 +962,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:15.223298+00:00",
+      "profile_updated_at": "2026-10-21T13:55:54.349145+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1127,7 +1127,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "2"
             ],
             [
               "Titular",
@@ -1135,11 +1135,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "2"
             ],
             [
               "Jugados",
-              "3"
+              "2"
             ]
           ]
         },
@@ -1153,6 +1153,222 @@
             [
               "Tarjeta amarilla",
               "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T18:16:25.158769+00:00",
+      "competition_summary": {
+        "goals": 1,
+        "starts": 0,
+        "called": 3,
+        "played": 3,
+        "team": "C.D. ASOC. JUVENIL PALENCIANA",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "fdf87e34897b89a5",
+      "name": "MOYANO PRIETO, JORGE",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45634469&codacta=2718120&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-24T18:16:26.179470+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 0,
+        "called": 3,
+        "played": null,
+        "team": "C.D. ASOC. JUVENIL PALENCIANA",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "13abbbe47335b558",
+      "name": "COBOS NAVARRO, RUBEN",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5872&codacta=2718120&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-30T02:04:30.878826+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 3,
+        "called": 3,
+        "played": null,
+        "team": "C.D. VILLA DE BENAMEJI",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "8b5c971cf152bf9d",
+      "name": "GARCIA CASADO, JAIME",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47845708&codacta=2718120&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC0AJYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1TQR/xNF/3TVS+H/Ewuf+urfzNXdC/wCQmv8Aumql8P8AiYXP/XVv5mu1fH8jkfwFXFdH4b/495/98fyrnsV0Xhz/AI95v94fypVvgHS+I2q4nUP+Qjcf9dDXbVA1lauxZraFmPJJQEmuenPkZtUhzI4euk8N/wDHtN/v/wBK0/sNmP8Al1g/79ivPPEfxR0/R2ns9CskubhCVaQYWIMO4x979B71c6nOrJERp8ju2elFlUZYgfU0uc18jav4h17V74yajqVxMzH7u87FHsvQfQU+HxHrtkrfYtTvYB0IjuGXP5Gp9kw9t5H1tRXzDpPxI8T6TOsqapPdDOXiu5DKrD2ycj8K7rS/jvAsoi1rTSgIz5tq2f8Ax0/40nSkilVi9z2SuS13/kLS/Rf5CpNP+I3hTUokeHWYELfwy5Qj656VvxpYX8a3Ma29wkgysqhXDD2PeiEuR3Y5rnVkziq2vDf/AB+S/wDXP+tbv2Cz/wCfWD/v2KfHbQQsWihjQnglVAq51lKNrERpOLuS1yevf8hR/wDdFdZXK67/AMhRv90UqHxFVvhMqin4NFdZympogxqS/wC6aq3w/wBPuP8Arq386uaMMaiv+6arXo/064/66N/Osl8Zq/hKmK6Dw9xBN/vD+VYWK3/D4/cTf7w/lSq/COl8RsVl6/r9j4b0t7+/ciMHaqqMs7HooHrwal1u+bTdDvr1Mb4YWdMjOWxx+uK+XvEPiXVvEUwl1O/d1hyq9AF56AAVzRjc3lKx1viX4r6zqkd1a2hFtayPtVUH7zb6Fv54rgEvm3Om3JP3j6VSnmAUEhsbgQfT8Kie4Rn/AHI2gYznvW6SRg23qXZJRy7xjjsPf9arPcTyPuUgp/Cg6D60hWSY4VcrnOPQ09bGXhTwzEDk4A7U7oOV9CLZJHcDzPlYn+tNmfeu1hl0PX0/xqZx+6aGVjkH5cMDgVGLYopVfnB+XPWq5ieRosWMkEbq37x1PHBxiu08NeN9U8KXJME73FjnJtm5U/n0+o/+tXE2aLb7WbPlsOoHPWrU0zSusyAeSg2uwHPPrUSd2XGNlofT/hbxtpXiu2R7N2jn25eGQYKnuAehrpK+VPDusPoWuQ3+nz5libLJnAkA6qfqCa+o7G9i1CyiuoCTHIuQD1B7g+4PFYTVnobRba1LFctrg/4mbf7orqa5jWx/xMm/3RV0fiIq/CZeKKfiiuu5zmto4xqC/wC6aq3g/wBNn/66N/Or+kRk3Zbsq1Xv4tl9KPVt3581in75o17pR21u6EMQy/7w/lWPtq5p959jkIYZjbrjqKKibjZBB2Zznxe11tM0G2sYpSkl47bgO6LjPP1K/rXzvqEuSBESdjBh35Ga9N+Nl/FdeJLONJWKJajK4xglj/hXCaX4futUjMwGEzjmso+6rs2tzOyMK1guNRlEQV2J546Cus0rwjK0e6eIBewPWuq0Xw1Bp6k4+YnJzXRRRRoMBaiVVvY6qWHS1ZyUXhaOOIBU2n1xQ3hPzAwGSD612yqv92pFRR0UZrFzZ1KjFnl83hCW2YyNEzr32Jk0kOgu8TSvF5cS/cBX5iO+f1/SvV41G37opwiQjBVTntij2jF9XieR/wBgXE0UgthHIrLt34xz6e9YOoaRd6UPLkyOArqvcete+CwteSkao3t0rC8RaAl/p0o2Deqnaf6VUarTMqmGjbTc8X02aKNwhX5u7e1fUfw5jlHgu0nmzvuWefB9CeD+OM/jXy7BaCN5mOQUGBgfp+VfUngZ5LDwNpEOoSKsywDAJ5Ckkr/47it567HBDTc6mub1kZ1Fv90Vrvqtqqkq5c+gFYNxK1zO0rdW7elOlFp3FUkmrFbbRUu2iui5gdJYW32eD5h87cn2qDVLUyKJlHKjDfStKiuNSd7nU4q1jl9tJtrXutNyxeH8V/wrPaJkOGUg+4rdSTMXFo8O+JSSDxnIZcMvkp5Y9FI/+KzW/wCH4Y10eEKMfLmqHxQgP/CU27kYDWy849GatDQ226XCW4GzvxWFVnTQWpqKlSohz0qst7bgHEikjrzUY1qz37TPHkdt1ZWO1SSNRVI7UrErnA6VFb31vNjDqc981YzHKcAioaN09NBqO2AMCrESScmoTPbQZ3Nz701Nbsg+0zoG9N1L0HzJbmoiccinTQq1u4YfeBGKgTUYCvDg+mCOaFn8xN27IPelqTKSZ4fr9qYLm4CgKryYx6Yr33Td76XaPI26RoULN6naMmvJfF9mi3FwCMYbeD655/rXrHh8mTw5prkYJto8jGP4RXfSd0eNVjaRc20bam21JFayynCIT79q0bMrFbbRW7bafHCuZAHc+o4FFZuqjRUy7RRRWBsFIQD1FLSMwVSzEAAZJPagDxf4u27S+LtKiB+WSAKFxwCXIP8ASsPWb9rCOO0gHzEAZ3YxXR+PdQs9Y8Y6QbSUyCBWDnaRyDnjI5H0rD1CKHzmmZSSOpx+lJs0hFs5Oew1a7kLrLgnoC5PH1qFNAvYZPMnuU3dlU1dnt/EF7MwiKWkJHygn5vbNVYtJ1YTIl248vdl3EocsMc/KRjrTu2aKKT2ZrabNPbOI2Y/XqDXb6UZJguRniuFsrKeOUBgwO/j3Fej6WRGF4xxWUjqpo5zxRb3EDsUJCv0Gec1wt5p11NIrG8SOQdNz16b4rs3vFARSWOWBB6VwFxpE0tkBHOYbzeS5L4TGOBxycHHWimya0F2uS6fp+twmNmuo3RRgZOQe9dLp+r3dhKsV7AFiJPzrnB965ix8NavsaSPVYopzyojZmX8dxrrtHW98oW2qwo0oOPMTG1x689PpTnKxnCn2TQeM7RJNPiugOWGw4755FeheDYvtXh7TDJnAtkJBOSeK4vxJCo8MSqgAWLaRjsOn9a6/wAG6taR6Zp9pubetukZbb8obHStKcrRMK1NueiOxWKNR8qKPoKfRRQZBRRRQAmQe4o3D1FVIB+9FMkX9431NVYVy9uX1H51znjrUGsfCd20TYkkAjUg+vX9M1p7a5vxxbmfw9GP4Rcpu+h4pSVkaUdaiTPP4LOWGKwa5ZpJlUsXYYIJByP1H5VdFurrnaOazWuHn1Y7n4Rim0nuf/1V0NvHvUZUYArE7JaSZky6azAgSMV77lGKpnSAGz8x5x0rqHQYOKoXMyQpluT2A71RotUZ8Fikbgnrmuhsl3cjOKo20UjPukUZx0Hata0GDjipew4PUdcwLcKBkEgcViT6FbSMS0WCTyRXSzwPGnmopye3rWa9/Gl0IblfKYjKt2asupvo9GZtroUMcgKl8fWtqOwSGMAA5PqKsQhB8xPHXNaSwrsLgZoJloc5q8CvpF1ESMGM5z9M1V1mwlhtdNvIWeJIrgAxqcDBHBP+e9XtdcR2Fy3by2z+VZlrLcEXOmzTGaOMAozHpggg/wAqYUl77Z65CxeCNj1ZQT+VOLAdSKjg4t4v9wfyqtc8zH6V1JXPGloXdy/3h+dFZuBRVcpPMWYR+8FMcfO31NPi++Ka332+tLqAzFZXiaDz/DlwnGNynn61r1HdWiX2nz2z9HHB9D1H60paoqDtJM8YvLeO3vrSTcTO7FXYDAbjr/n1rbguVUMARx71keIlktdQtopo5IpUkOQRjtjj8+DUcF35zsinJ2/rWLO26czVuNSWOItnt9KwxeNcP53ZTlc98Vk6pfj7W0DsVjTluep9Kh/tRngd7VPM28KF9aZpKaWhNq3iHVxerHFbqIe7tJjP5Vr2Xih0uIYWfDEchj0P1rkPKub64w8VwXB+bC8gH+VX/sd2zD/RpQydCV6/496bijOFR3udDfeI/EVtqQa0sEubbdhW80sWH0A4rY1mS61DS4buWPypI13GPjPNclZXd4kypMCpBGBjnHTNdFD4gtmQ2s5Mp5VmA471m1bY2jUXU0dC1dpIUDtz0Oa6lLwOnX7wzXlb3RsLt3hcPCDk47D1rsLC9M9l5wO1cZznioloa8ykibxC3maPMBjc/wAgHuatf2YEeIW4UmVw0z9yAeAPxx+Vc5rt4s+n4U7jvUqTz1PWu/0W3+2TRvtYKnLEjH4U0noZRqKPNJnVRjYir6DFVp+ZTVrNVpf9Ya6onlsixRTqKomxJH9+kb7x+tKn3qQ9TUlCVJH0NR09DxQwRzXxAsY7rwtPc+UXmsyJkIHIwefwxnP0rxbTdQWDUyJDhZG4BPYcV9E3ttHfWNxZy58qeNonx6MMH+dfNWuWj6TrF5pkin7RbPtHGcj+E8eowaiSNISsyzr+iyS6sJYjuiuBuHopxg/oKzYY9V0qeG1DQxQO2DKqH8+TXU6Dc/brNVkDEKobn1/Gtb7DFOjRyoCD0J7VCdtGdnKpLmRUh8MX01o11HqQbbEHI9W9B/jWs3hzxDapCkd9bzK7BSWX7hx69xWQ/hqxWUyeQwbbjchwcfhV61tfLhCRXN2uxtwHnOOfz+tNp9GVGMujLj+E9cje4Ju7MqgQgkYDlj06cVzvime90K5Wye0tNQaQAqISUfsDwBwK6UaTHfhku5Z5lfG4SOW6H1Nadp4bsbST7T5YaTtnmoem5XJLqzyqw03VbYzNeI0QYEFM7iMjgH9K6uWRtJ8JQRmTM+wAkDrxzXRa1ZpJbFl4ZQT9TXAa1qAlvhvYeVAVChR97jP9B+dK/MTP92rI6Lw/bRajrOnWc7fO0omYdchPmI/Ej9a9kh+8fpXmfwx0h3afXpgw8xPs8KuOQAQWYH0JA59q9Lj6mt4KyOCpLmkT5qCT79SZqKT71UiGNxRRRTEPU80HrQooZSDUlCUK2O1JmkpgP3j0ryv4reEopbSXxFYxt9sjx56rzvTp09Rx+teoEgDJPFcx4yvIBocsErANOQiJnlu5/QUgSuzxPwte+RcISw2k8KW6j1rvyS4DDGcc4rzrUdOl0+7a7s/unLMmOB7j8+lbGm+KFnSEIyAjO4k4z+dZtX1R1UqnL7sjp5DIIyQW6VQlXVS4EDyKM8H1p9vqYuWyZFXPqen5fzq7FqdtIM7ymASpf8umaWptzJmjpdvdqd0spYenpW+CxGMnFc9b6tbIAjz4cAEhR0J/lTZfE6whicCMEbi+BwQP8f8AOKzlFs1VWKRPrt6ltA4kJ2FTkA8/hXA6XpX/AAkutwaZbSSLA6fv5wOY1z7/AMRwMfnijWNWuNY1Vra3c+YCQzHG0DI6jsRXRrM3hXQJ9QtkDTQASliOXOe/rwaqK5Wl3OapJ1Lvoj1bTbGDTdPhsrZNkMKhEXOeBV1W21xvgv4haR4uiEMUnkagFy9s55PqVPcfrXYV0tW3OJakm8elMY5OaSikMKKKKLisSdSh+tK5w5+majDADHfPFOJ3Nz1xSGMAyCaMUm4IhJrm9e+IHhzw65hu9QSS6/59rf8AeSfiB938cU0m9gNm/u47a3kllYJHEpd2PRQBkmvBbXxDdeMPHl1eyFhZ28TLBF2QEgD8SMk0eLviVqPiEXFrbqLTT5BtMQwXdf8Aab39B+tSeBVhGiSMigOZTvI6k+9VOLhBthSanUSXQtanbZjYgdgOtcRc2lxbStNacknDoB1B7/X/AAr0q5gLwtXO3NjJFIHbPXBbb6+vrXNCVjrqQucpHr7WoO8Hcefn4IOam/4SlGJJl2Lgjg9f88Vp3WmR3HWNXBORlc/SsdvDUcs+0Q7ST0A/pmtbxZlaa2LR8URYcRkkngMOp4q0P7T1dI0dVtYtoLOeWOOOBnjtWrovhq2tvmaONt2MnHPHXmuitrFCVaKMBcZ2lRnGOP51nKaWxapyfxFLRdFi0+JHA5bhcnIGe5+uf5Vu69ZS3Pg/UIAC8zWxIA7kDOPzqzZ2e1wxzkcdsYrTlG23YHptrHmfMmdKguRo+bbaaawu1nt5XhuIXDI6nBU19I+AfiFa+JNOS31CaKDVI8KysQom9GX39RXiHxDhit9fiaGNEMyEvgYyQetYlvM0WCGIIr1mlUjc8V3pysfYtGDXivgH4nX6TW+j6ghvVkO2GVpcSD0XJ4b2yR6Z6V7HaX9veqTExDj70bja6/UHkVzyhKJrGakWQB3oooqCyEt81c74q8e6F4QhP9oXG+6K5S1hw0jfh2Hua8j8WfGi+vFe08PobSE8G5kGZW+nZf1P0ry2aSS4le4upHd3O5mY5Zj9TW8KLerM5VEtjtvFvxb8Q+I/MhtpTpmn5/1cB+dh/tP1/AYFcjp6/u2nbq54z1NZcjNO4ReB0AHatlRshVF6AV0KKWxlKTtqK8mc811nw8vv395Ys3JxIg/Q1x2O9WNKv20rWLe7U4AO1z7Goqw5otFUZ8k0z2pl46VWmtxIpAHFT2t3Hd2yyKQcjNKxwa8tppnsqzRiPp4TcByCelQtbbHBIB9OOfzrcfY/DcH1qNIA0o+6QO5p3J5ELp0BKYI3ZPet+K0UAFhyetR2kMaICSPwq3JKij5R9c1jJm0YpEqhR35qrezARMPWlknCjOa53X9Yis7OWV3ACgk1dODbJqTSR5d46uRc+JQqnIijx+dYKvjmnXU73l7NdSZ3SNn6DtUR4UmvZhHlikeDUlzSbLMd48TK8bFXRgysOCCOhr6Q8K+KdM8W2EDK/laisYMkWdrA92Qjtn/69fMOc5Nb2iXUsdussUjJJE/yshwVPXIP410Yeiqs+S9jnrScI8x9TLd6hbDa0aXi9mDCN/xHQ/UY+lFeRaP8U9Ss7fytQt0vsD5ZN3lv+PBB/KinLLaifwkLGafEeNxgE5NQTOzMcmiisDqQ2Ljc3cY/nWsWO38KKKTCRHklahl+4aKKZJ6L4DvZ59OCSNkIxQfQV3iRqy5NFFebV+Jnr0PgRFNCmOlVMbH4JoorE6EaFrIxIGatnJ7miipW43sZ99K6RnBrx3xLeT3OsTpI52owUKOmOtFFduGWpw4t+6ZMgAP4VBMe1FFdp5hGOgrt/AOi2mq6Tr0lxvD2saSRsjY5+bIPqOBRRWtBtVFYmqrwZSxRRRX0h45//9k=",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1178,223 +1394,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:33.190756+00:00",
-      "competition_summary": {
-        "goals": 1,
-        "starts": 0,
-        "called": 3,
-        "played": 3,
-        "team": "C.D. ASOC. JUVENIL PALENCIANA",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "fdf87e34897b89a5",
-      "name": "MOYANO PRIETO, JORGE",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45634469&codacta=2718120&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "3"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "3"
-            ],
-            [
-              "Jugados",
-              "3"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-29T21:56:34.201965+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 0,
-        "called": 3,
-        "played": null,
-        "team": "C.D. ASOC. JUVENIL PALENCIANA",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "13abbbe47335b558",
-      "name": "COBOS NAVARRO, RUBEN",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5872&codacta=2718120&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "2"
-            ],
-            [
-              "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "0"
-            ],
-            [
-              "Jugados",
-              "2"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-21T13:56:04.357636+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 3,
-        "played": null,
-        "team": "C.D. VILLA DE BENAMEJI",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "8b5c971cf152bf9d",
-      "name": "GARCIA CASADO, JAIME",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47845708&codacta=2718120&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "2"
-            ],
-            [
-              "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "2"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-10-22T22:28:09.131820+00:00",
+      "profile_updated_at": "2026-10-30T02:04:35.855376+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1415,11 +1415,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -1427,7 +1427,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1457,16 +1457,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-22T07:42:02.956938+00:00",
+      "profile_updated_at": "2026-10-30T02:04:32.854133+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -1538,7 +1538,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:22.223945+00:00",
+      "profile_updated_at": "2026-10-21T13:56:02.350719+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1559,7 +1559,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1567,11 +1567,11 @@
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1601,16 +1601,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-22T07:42:01.909260+00:00",
+      "profile_updated_at": "2026-10-30T02:04:33.853116+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1631,7 +1631,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1639,11 +1639,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1682,7 +1682,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-21T13:56:03.359564+00:00",
+      "profile_updated_at": "2026-10-30T02:04:31.852213+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1898,7 +1898,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T21:56:31.214693+00:00",
+      "profile_updated_at": "2026-10-24T18:16:23.160854+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1919,7 +1919,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1927,11 +1927,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1970,7 +1970,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-20T15:13:11.211701+00:00",
+      "profile_updated_at": "2026-10-30T02:04:36.856103+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1991,7 +1991,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1999,11 +1999,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -2033,16 +2033,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-22T07:42:08.911427+00:00",
+      "profile_updated_at": "2026-10-30T02:04:37.852555+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
