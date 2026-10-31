@@ -79,6 +79,59 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(4') MATEO RODRIGUEZ, FRANCISCO"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(6') JIMENEZ PEÑA, ALEJANDRO"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(7') BAQUERO BEGINES, ALEJANDRO"
+        ],
+        [
+          "Gol · 3 - 1",
+          "(22') ENRIQUEZ PEÑA, MANUEL JESUS"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(23') MATEO RODRIGUEZ, FRANCISCO"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(26') BERNAL MORENO, JAVIER"
+        ],
+        [
+          "Gol · 5 - 2",
+          "(30') BREA PARRADO, CHRISTIAN"
+        ],
+        [
+          "Gol · 5 - 3",
+          "(34') SOTO REYES, PABLO"
+        ],
+        [
+          "Gol · 6 - 3",
+          "(34') COBELO DORADO, CHRISTIAN"
+        ],
+        [
+          "Gol · 7 - 3",
+          "(35') MATEO RODRIGUEZ, FRANCISCO"
+        ],
+        [
+          "Gol · 7 - 4",
+          "(37') SUAREZ CARRERA, JOSE MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Benalup-Casas Viejas - 28 DE FEBRERO PABELLON MPAL"
         ],
         [
@@ -171,6 +224,32 @@
     {
       "kind": "heading",
       "text": "Cuerpo Técnico"
+    },
+    {
+      "kind": "text",
+      "text": "DEL. Campo:"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "",
+          "MONTIANO NUÑEZ, SEBASTIAN"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "DEL. Equipo:"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "",
+          "JIMENEZ CARRASCO, PEDRO DOMINGO"
+        ]
+      ]
     },
     {
       "kind": "text",
@@ -299,6 +378,31 @@
         [
           "",
           "No presenta"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(18') MUÑOZ ROLDAN, JESUS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(22') CASTILLEJO PUIG, JOSE LUIS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(23') BERNAL MORENO, JAVIER"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(35') MARIN VAZQUEZ, JOSE ANTONIO"
         ]
       ]
     }
@@ -457,6 +561,18 @@
   ],
   "staff": [
     {
+      "name": "MONTIANO NUÑEZ, SEBASTIAN",
+      "role": "DEL. Campo",
+      "team": "C.D. BENALUP",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg"
+    },
+    {
+      "name": "JIMENEZ CARRASCO, PEDRO DOMINGO",
+      "role": "DEL. Equipo",
+      "team": "C.D. BENALUP",
+      "photo": "data:image/jpeg;base64,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"
+    },
+    {
       "name": "GUILLEN FERNANDEZ, LUIS MIGUEL",
       "role": "Entrenador",
       "team": "C.D. BENALUP",
@@ -471,6 +587,5 @@
   ],
   "id": "2645822",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645822",
-  "updated_at": "2026-10-31T18:35:34.828375+00:00",
-  "preview": true
+  "updated_at": "2026-10-31T21:38:11.628932+00:00"
 }

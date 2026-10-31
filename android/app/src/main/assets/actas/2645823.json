@@ -79,6 +79,47 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(2') IBAÑEZ FERNANDEZ, ADRIAN"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(13') CUERDA RODRIGUEZ, ANTONIO JESUS"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(18') CALLERO ORTIZ, SERGIO"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(19') LOPEZ HERNANDEZ, JOSE IVAN"
+        ],
+        [
+          "Gol en propia puerta · 2 - 3",
+          "(24') BATALLA BUTRON, DANIEL"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(24') BATALLA BUTRON, DANIEL"
+        ],
+        [
+          "Gol · 3 - 4",
+          "(34') RGUIGUE MEKLAA, SOUFIANE"
+        ],
+        [
+          "Gol · 4 - 4",
+          "(39') MONTERO MIRANDA, DIEGO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Puerto Real - PABELLON SALA DE BARRIO (RIO SAN PEDRO)"
         ],
         [
@@ -217,6 +258,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(35') IBAÑEZ FERNANDEZ, ADRIAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(37') CALLERO ORTIZ, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(37') CALLERO ORTIZ, SERGIO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. LA PALMA F.S. SMURFIT WESTROCK"
     },
@@ -338,6 +400,27 @@
         [
           "",
           "LEPE ALONSO, JOSE MIGUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(23') CUERDA RODRIGUEZ, ANTONIO JESUS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(34') RGUIGUE MEKLAA, SOUFIANE"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(37') LOPEZ HERNANDEZ, JOSE IVAN"
         ]
       ]
     }
@@ -534,6 +617,5 @@
   ],
   "id": "2645823",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645823",
-  "updated_at": "2026-10-31T18:35:34.828375+00:00",
-  "preview": true
+  "updated_at": "2026-10-31T21:38:11.628932+00:00"
 }
