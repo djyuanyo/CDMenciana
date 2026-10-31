@@ -472,7 +472,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-27T07:59:08.264864+00:00"
+      "profile_updated_at": "2026-10-31T22:36:34.823636+00:00"
     },
     {
       "id": "a9fd754365a0c106",
@@ -536,7 +536,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:55.044781+00:00"
+      "profile_updated_at": "2026-10-31T13:46:35.547895+00:00"
     },
     {
       "id": "d79b0f13181cacda",
@@ -664,7 +664,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:50.063934+00:00"
+      "profile_updated_at": "2026-10-31T13:46:30.403540+00:00"
     },
     {
       "id": "0bc87b2468e489e9",
@@ -728,7 +728,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T19:13:13.049118+00:00"
+      "profile_updated_at": "2026-10-30T20:55:02.885894+00:00"
     },
     {
       "id": "a8c20b772d78da0e",
@@ -792,7 +792,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:49.078773+00:00"
+      "profile_updated_at": "2026-10-31T13:46:29.392835+00:00"
     },
     {
       "id": "7a56e18f6e60eab8",
@@ -856,7 +856,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:52.035433+00:00"
+      "profile_updated_at": "2026-10-31T13:46:32.361483+00:00"
     },
     {
       "id": "9c13bbb6ecfa5466",
@@ -920,7 +920,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-25T19:13:15.027316+00:00"
+      "profile_updated_at": "2026-10-30T20:55:04.967585+00:00"
     },
     {
       "id": "6f85673df164b360",
@@ -984,7 +984,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:56.055522+00:00"
+      "profile_updated_at": "2026-10-31T13:46:36.370243+00:00"
     },
     {
       "id": "49cee795553f2739",
@@ -1048,7 +1048,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:36:57.086018+00:00"
+      "profile_updated_at": "2026-10-31T13:46:37.358574+00:00"
     },
     {
       "id": "2276b5220cb1427c",
@@ -1176,7 +1176,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:31:40.715417+00:00"
+      "profile_updated_at": "2026-10-31T13:46:21.364195+00:00"
     },
     {
       "id": "dbf4016a31d36057",
@@ -1314,10 +1314,10 @@
       ],
       "profile_updated_at": "2026-10-27T02:12:07.337802+00:00",
       "competition_summary": {
-        "goals": 3,
-        "starts": 6,
-        "called": 7,
-        "played": 7,
+        "goals": 6,
+        "starts": 7,
+        "called": 8,
+        "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1388,7 +1388,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 5,
+        "called": 6,
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1460,8 +1460,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 2,
-        "called": 3,
-        "played": 3,
+        "called": 4,
+        "played": 4,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1530,10 +1530,10 @@
       ],
       "profile_updated_at": "2026-10-27T02:12:03.329769+00:00",
       "competition_summary": {
-        "goals": 7,
-        "starts": 6,
-        "called": 7,
-        "played": 7,
+        "goals": 8,
+        "starts": 7,
+        "called": 8,
+        "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1603,8 +1603,8 @@
       "profile_updated_at": "2026-10-29T16:58:05.280375+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 3,
-        "called": 7,
+        "starts": 4,
+        "called": 8,
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1674,10 +1674,10 @@
       ],
       "profile_updated_at": "2026-10-30T08:41:27.760029+00:00",
       "competition_summary": {
-        "goals": 2,
+        "goals": 3,
         "starts": 2,
-        "called": 7,
-        "played": 7,
+        "called": 8,
+        "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1748,8 +1748,8 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 4,
-        "played": 4,
+        "called": 5,
+        "played": 5,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1818,10 +1818,10 @@
       ],
       "profile_updated_at": "2026-10-24T14:39:58.922916+00:00",
       "competition_summary": {
-        "goals": 1,
+        "goals": 2,
         "starts": 1,
-        "called": 4,
-        "played": 3,
+        "called": 5,
+        "played": 4,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1892,8 +1892,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 7,
-        "played": 6,
+        "called": 8,
+        "played": 7,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
