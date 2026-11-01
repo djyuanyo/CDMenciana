@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-31T22:33:00.327581+00:00",
+  "updated_at": "2026-11-01T02:15:45.993245+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645772&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -62,8 +62,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324682&codacta=2645772&nueva_ventana=": {
       "name": "MARTÍN SERRANO, CARLOS",
@@ -194,7 +195,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645772&nueva_ventana=": {
       "name": "PICHARDO BENJUMEA, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645780&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -253,8 +254,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:26.384377+00:00",
-      "failed_at": "2026-10-31T13:47:53.219754+00:00"
+      "updated_at": "2026-11-01T02:16:09.510179+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19065485&codacta=2645772&nueva_ventana=": {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
@@ -322,8 +324,8 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645772&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -351,7 +353,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -381,12 +383,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645772&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -394,11 +397,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -406,7 +409,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -440,13 +443,14 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645772&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -514,7 +518,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645772&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -522,7 +526,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -530,11 +534,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -568,13 +572,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45364409&codacta=2645772&nueva_ventana=": {
       "name": "LOZANO BARRETO, NICOLAS AGUSTIN",
@@ -764,7 +769,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -829,7 +834,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -894,7 +899,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -959,7 +964,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1024,7 +1029,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1089,7 +1094,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1154,7 +1159,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1219,7 +1224,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1284,7 +1289,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:25.800030+00:00",
+      "updated_at": "2026-11-01T02:16:00.241435+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1349,7 +1354,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -1414,14 +1419,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645764&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -1479,13 +1484,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645764&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -1513,7 +1519,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -1543,8 +1549,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5368954&codacta=2645764&nueva_ventana=": {
       "name": "LEPE GARCIA, SERGIO",
@@ -1612,7 +1619,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645764&nueva_ventana=": {
       "name": "PICHARDO BENJUMEA, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645780&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -1671,8 +1678,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:26.384377+00:00",
-      "failed_at": "2026-10-31T13:47:53.219754+00:00"
+      "updated_at": "2026-11-01T02:16:09.510179+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19065485&codacta=2645764&nueva_ventana=": {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
@@ -1804,7 +1812,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645764&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -1812,11 +1820,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -1824,7 +1832,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -1858,17 +1866,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645764&nueva_ventana=": {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -1876,7 +1885,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -1884,11 +1893,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1922,13 +1931,14 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:21.375993+00:00",
-      "failed_at": "2026-10-31T13:47:41.237501+00:00"
+      "updated_at": "2026-11-01T02:16:03.326351+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645764&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -1996,7 +2006,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645764&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -2004,7 +2014,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -2012,11 +2022,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -2050,13 +2060,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=7933242&codacta=2645779&nueva_ventana=": {
       "name": "VENEGAS GUIMERANS, ALBERTO",
@@ -2752,7 +2763,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -2817,7 +2828,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -2882,7 +2893,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -2947,7 +2958,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3012,7 +3023,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3077,7 +3088,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3142,7 +3153,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3207,7 +3218,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3272,7 +3283,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -3405,8 +3416,8 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645780&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -3434,7 +3445,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -3464,8 +3475,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645780&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -3597,7 +3609,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645780&nueva_ventana=": {
       "name": "PICHARDO BENJUMEA, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645780&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=116848&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -3656,12 +3668,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:26.384377+00:00",
-      "failed_at": "2026-10-31T13:47:53.219754+00:00"
+      "updated_at": "2026-11-01T02:16:09.510179+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645780&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -3669,11 +3682,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -3681,7 +3694,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -3715,17 +3728,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645780&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -3733,7 +3747,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -3741,11 +3755,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -3779,13 +3793,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19065485&codacta=2645780&nueva_ventana=": {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
@@ -5559,7 +5574,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5624,7 +5639,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5689,7 +5704,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5754,7 +5769,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5819,7 +5834,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5884,7 +5899,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -5949,7 +5964,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6014,7 +6029,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6079,7 +6094,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6144,7 +6159,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6209,7 +6224,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6274,7 +6289,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6339,7 +6354,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:25.800030+00:00",
+      "updated_at": "2026-11-01T02:16:00.241435+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6404,7 +6419,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6469,7 +6484,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6534,7 +6549,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6599,7 +6614,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6664,7 +6679,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6729,7 +6744,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -6794,7 +6809,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -7433,8 +7448,8 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645789&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -7462,7 +7477,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -7492,12 +7507,13 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645789&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -7505,11 +7521,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -7517,7 +7533,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -7551,13 +7567,14 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645789&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -7689,8 +7706,8 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645789&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -7748,8 +7765,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324682&codacta=2645789&nueva_ventana=": {
       "name": "MARTÍN SERRANO, CARLOS",
@@ -7816,7 +7834,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645789&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -7824,7 +7842,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -7832,11 +7850,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -7870,13 +7888,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19065485&codacta=2645789&nueva_ventana=": {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
@@ -7944,7 +7963,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645789&nueva_ventana=": {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645789&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -8003,7 +8022,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T22:36:31.841755+00:00"
+      "updated_at": "2026-11-01T02:16:07.285714+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4506585&codacta=2645772&nueva_ventana=": {
       "name": "PICHARDO SORIANO, AMALIO",
@@ -18499,7 +18520,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -18564,7 +18585,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -18629,7 +18650,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -21813,7 +21834,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -21878,7 +21899,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -21943,7 +21964,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22008,7 +22029,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22073,7 +22094,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22138,7 +22159,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22203,7 +22224,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22268,7 +22289,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -22333,14 +22354,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645797&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -22398,13 +22419,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645797&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -22432,7 +22454,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -22462,8 +22484,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5368954&codacta=2645797&nueva_ventana=": {
       "name": "LEPE GARCIA, SERGIO",
@@ -22595,7 +22618,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645797&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -22603,11 +22626,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -22615,7 +22638,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -22649,17 +22672,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645797&nueva_ventana=": {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -22667,7 +22691,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -22675,11 +22699,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -22713,13 +22737,14 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:21.375993+00:00",
-      "failed_at": "2026-10-31T13:47:41.237501+00:00"
+      "updated_at": "2026-11-01T02:16:03.326351+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645797&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -22787,7 +22812,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645797&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -22795,7 +22820,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -22803,11 +22828,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -22841,13 +22866,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4506585&codacta=2645797&nueva_ventana=": {
       "name": "PICHARDO SORIANO, AMALIO",
@@ -25073,7 +25099,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -25138,7 +25164,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -26100,7 +26126,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645764&nueva_ventana=": {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645789&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -26159,7 +26185,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T22:36:31.841755+00:00"
+      "updated_at": "2026-11-01T02:16:07.285714+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=4506585&codacta=2645764&nueva_ventana=": {
       "name": "PICHARDO SORIANO, AMALIO",
@@ -26354,7 +26382,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645772&nueva_ventana=": {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645789&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -26413,7 +26441,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T22:36:31.841755+00:00"
+      "updated_at": "2026-11-01T02:16:07.285714+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=11911106&codacta=2645774&nueva_ventana=": {
       "name": "ALFONSO CARRASCO, JOSE JUSTO",
@@ -26481,7 +26511,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645780&nueva_ventana=": {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645789&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=115084&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -26540,7 +26570,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T22:36:31.841755+00:00"
+      "updated_at": "2026-11-01T02:16:07.285714+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=11911106&codacta=2645782&nueva_ventana=": {
       "name": "ALFONSO CARRASCO, JOSE JUSTO",
@@ -31491,7 +31523,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -31556,7 +31588,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -31621,7 +31653,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -32579,7 +32611,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -32644,7 +32676,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -32709,7 +32741,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -71580,7 +71612,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -71645,7 +71677,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72221,7 +72253,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72286,7 +72318,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72351,7 +72383,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72416,7 +72448,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72481,7 +72513,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72546,7 +72578,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72611,7 +72643,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72676,7 +72708,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -72741,14 +72773,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645806&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -72806,13 +72838,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645806&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -72840,7 +72873,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -72870,8 +72903,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19065485&codacta=2645806&nueva_ventana=": {
       "name": "BEL MAMOUN KHARBOUCH, ILYAS",
@@ -72939,7 +72973,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645806&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -72947,11 +72981,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -72959,7 +72993,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -72993,17 +73027,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645806&nueva_ventana=": {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -73011,7 +73046,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -73019,11 +73054,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -73057,13 +73092,14 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:21.375993+00:00",
-      "failed_at": "2026-10-31T13:47:41.237501+00:00"
+      "updated_at": "2026-11-01T02:16:03.326351+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645806&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -73131,7 +73167,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645806&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -73139,7 +73175,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -73147,11 +73183,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -73185,13 +73221,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=2030955&codacta=2645805&nueva_ventana=": {
       "name": "RUIZ PALOMINO, PABLO",
@@ -75103,8 +75140,8 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=": {
       "name": "MEDRANO GARCIA, CARLOS",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=425112&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -75162,13 +75199,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:05.339941+00:00",
-      "failed_at": "2026-10-31T22:35:47.139407+00:00"
+      "updated_at": "2026-11-01T02:15:53.539270+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=": {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645814&nueva_ventana=",
-      "photo_source": "",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=368902&codacta=2645824&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
           "title": "Partidos",
@@ -75196,7 +75234,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -75226,8 +75264,9 @@
           ]
         }
       ],
-      "updated_at": "2026-10-27T02:12:06.353337+00:00",
-      "failed_at": "2026-10-31T22:35:56.153101+00:00"
+      "updated_at": "2026-11-01T02:15:58.292437+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=5368954&codacta=2645814&nueva_ventana=": {
       "name": "LEPE GARCIA, SERGIO",
@@ -75359,7 +75398,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -75367,11 +75406,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -75379,7 +75418,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -75413,17 +75452,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=": {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -75431,7 +75471,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -75439,11 +75479,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -75477,13 +75517,14 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:21.375993+00:00",
-      "failed_at": "2026-10-31T13:47:41.237501+00:00"
+      "updated_at": "2026-11-01T02:16:03.326351+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645814&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -75551,7 +75592,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -75559,7 +75600,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -75567,11 +75608,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -75605,13 +75646,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19242035&codacta=2645814&nueva_ventana=": {
       "name": "VELA ACEDO, SERGIO",
@@ -76632,7 +76674,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -76697,7 +76739,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -76762,7 +76804,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -76827,7 +76869,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -76892,7 +76934,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -76957,7 +76999,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77022,7 +77064,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77087,7 +77129,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77152,7 +77194,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77217,7 +77259,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77282,7 +77324,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77347,7 +77389,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -77412,7 +77454,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87168,7 +87210,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:28.761539+00:00",
+      "updated_at": "2026-11-01T02:16:05.245061+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87233,7 +87275,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:21.946067+00:00",
+      "updated_at": "2026-11-01T02:15:55.448026+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87298,7 +87340,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.957340+00:00",
+      "updated_at": "2026-11-01T02:15:59.476043+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87363,7 +87405,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:31.765476+00:00",
+      "updated_at": "2026-11-01T02:16:10.244955+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87428,7 +87470,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:32.795006+00:00",
+      "updated_at": "2026-11-01T02:16:11.270002+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87493,7 +87535,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.040489+00:00",
+      "updated_at": "2026-11-01T02:15:52.451032+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87558,7 +87600,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:26.978864+00:00",
+      "updated_at": "2026-11-01T02:16:02.330745+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87623,7 +87665,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:22.952377+00:00",
+      "updated_at": "2026-11-01T02:15:56.260335+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87688,7 +87730,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:25.800030+00:00",
+      "updated_at": "2026-11-01T02:16:00.241435+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87753,7 +87795,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:29.763670+00:00",
+      "updated_at": "2026-11-01T02:16:06.264539+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87818,7 +87860,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:30.804652+00:00",
+      "updated_at": "2026-11-01T02:16:08.267825+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -87952,7 +87994,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645823&nueva_ventana=": {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=17159&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -87960,11 +88002,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -87972,7 +88014,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -88006,17 +88048,18 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-30T08:46:50.649743+00:00",
-      "failed_at": "2026-10-31T13:50:04.818465+00:00"
+      "updated_at": "2026-11-01T02:16:01.472249+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645823&nueva_ventana=": {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=730959&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -88024,7 +88067,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -88032,11 +88075,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -88070,13 +88113,14 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:21.375993+00:00",
-      "failed_at": "2026-10-31T13:47:41.237501+00:00"
+      "updated_at": "2026-11-01T02:16:03.326351+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=25324720&codacta=2645823&nueva_ventana=": {
       "name": "WARSCHKE ACERO, GONZALO",
@@ -88144,7 +88188,7 @@
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645823&nueva_ventana=": {
       "name": "PRUDENCIO MINCHON, PABLO",
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645814&nueva_ventana=",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=504334&codacta=2645824&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
       "sections": [
         {
@@ -88152,7 +88196,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -88160,11 +88204,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -88198,13 +88242,14 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "updated_at": "2026-10-29T17:03:24.395843+00:00",
-      "failed_at": "2026-10-31T13:47:44.222158+00:00"
+      "updated_at": "2026-11-01T02:16:12.499969+00:00",
+      "stats_signature": "f1c352ec8948f1d8",
+      "stats_round": 8
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=39943792&codacta=2645822&nueva_ventana=": {
       "name": "EL DAHER, LAUTARO",
@@ -90234,7 +90279,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:20.958488+00:00",
+      "updated_at": "2026-11-01T02:15:54.247091+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -90299,7 +90344,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:24.211059+00:00",
+      "updated_at": "2026-11-01T02:15:57.255627+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
@@ -90364,7 +90409,7 @@
           ]
         }
       ],
-      "updated_at": "2026-10-31T21:38:27.777221+00:00",
+      "updated_at": "2026-11-01T02:16:04.273545+00:00",
       "stats_signature": "f1c352ec8948f1d8",
       "stats_round": 8
     },
