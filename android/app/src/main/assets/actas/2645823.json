@@ -981,11 +981,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -993,7 +993,7 @@
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -1027,12 +1027,13 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:50.649743+00:00"
+      "profile_updated_at": "2026-11-01T06:43:19.951711+00:00",
+      "stats_round": 8
     },
     {
       "id": "d448d5a8812f04b4",
@@ -1139,7 +1140,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -1147,11 +1148,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "1"
+              "2"
             ]
           ]
         },
@@ -1185,12 +1186,12 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T17:03:21.375993+00:00",
+      "profile_updated_at": "2026-11-01T06:43:22.118203+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1198,7 +1199,8 @@
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 8
     },
     {
       "id": "d39029caaaf2d8ab",
@@ -1275,7 +1277,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1283,11 +1285,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -1321,12 +1323,13 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T17:03:24.395843+00:00"
+      "profile_updated_at": "2026-11-01T06:43:30.768948+00:00",
+      "stats_round": 8
     },
     {
       "id": "c5c0270ac82bc5b2",
