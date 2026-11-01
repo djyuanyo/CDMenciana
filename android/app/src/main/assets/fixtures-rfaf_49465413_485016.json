@@ -314,14 +314,15 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
+      "acta_url": ""
     },
     {
       "id": "49465413-6-2",
@@ -333,14 +334,15 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Encinas Reales - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
+      "acta_url": ""
     },
     {
       "id": "49465413-6-3",
@@ -352,14 +354,15 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
+      "acta_url": ""
     },
     {
       "id": "49465413-7-1",
@@ -3400,7 +3403,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-10-31T22:31:06.953388+00:00",
+  "updated_at": "2026-11-01T02:14:32.178203+00:00",
   "rounds": [
     1,
     2,
@@ -3509,14 +3512,15 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
+      "acta_url": ""
     },
     {
       "id": "49465413-7",
@@ -3808,7 +3812,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-10-31T22:31:07.846470+00:00",
+  "staff_updated_at": "2026-11-01T02:14:33.151561+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
