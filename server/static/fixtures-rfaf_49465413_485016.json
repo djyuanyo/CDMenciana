@@ -267,26 +267,6 @@
     {
       "id": "49465413-5-2",
       "round": 5,
-      "home": "C.D. CARCABUEY",
-      "away": "C.D. BOCA F.S. PRIEGO",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
-      "date": "2026-11-08",
-      "time": "",
-      "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=5",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "acta_url": ""
-    },
-    {
-      "id": "49465413-5-3",
-      "round": 5,
       "home": "C.D. ARAS FUTSAL \"A\"",
       "away": "C.D. ENCINAS REALES C.F.",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg",
@@ -302,6 +282,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
+      "acta_url": ""
+    },
+    {
+      "id": "49465413-5-3",
+      "round": 5,
+      "home": "C.D. CARCABUEY",
+      "away": "C.D. BOCA F.S. PRIEGO",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
+      "date": "2026-11-08",
+      "time": "",
+      "venue": "Carcabuey - PABELLON MUNICIPAL",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=5",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "acta_url": ""
     },
     {
@@ -3431,7 +3431,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-01T20:32:23.754820+00:00",
+  "updated_at": "2026-11-02T00:45:13.926406+00:00",
   "rounds": [
     1,
     2,
@@ -3840,7 +3840,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-01T20:32:24.667653+00:00",
+  "staff_updated_at": "2026-11-02T00:45:14.553807+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

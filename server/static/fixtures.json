@@ -1285,7 +1285,27 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155"
     },
     {
-      "id": "48466109-9-1",
+      "id": "48466109-9",
+      "round": 9,
+      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "away": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
+      "date": "2026-11-08",
+      "time": "",
+      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=9",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-9-2",
       "round": 9,
       "home": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "away": "CIRCULO MERCANTIL E INDUSTRIAL",
@@ -1305,7 +1325,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-9-2",
+      "id": "48466109-9-3",
       "round": 9,
       "home": "C.D. SANTAELLA 2010",
       "away": "C.D. BENALUP",
@@ -1325,7 +1345,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-9-3",
+      "id": "48466109-9-4",
       "round": 9,
       "home": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "away": "U.D. ALCHOYANO",
@@ -1342,26 +1362,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-9",
-      "round": 9,
-      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "away": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
-      "date": "2026-11-08",
-      "time": "",
-      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=9",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
       "acta_url": ""
     },
     {
@@ -7390,7 +7390,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-01T20:32:07.909819+00:00",
+  "updated_at": "2026-11-02T00:44:53.367955+00:00",
   "rounds": [
     1,
     2,
@@ -8330,7 +8330,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-01T20:32:08.685950+00:00",
+  "staff_updated_at": "2026-11-02T00:44:54.615124+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
