@@ -174,13 +174,13 @@
       "date": "2026-11-02",
       "time": "17:00",
       "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 3,
+      "away_score": 2,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=3",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2813602",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2813602&cod_acta=2813602",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291"
     },
@@ -856,8 +856,8 @@
       "average": 2.5
     },
     {
-      "name": "SANCHEZ CAÑETE, ANGEL",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "BERMUDEZ GONZALEZ, VICTOR",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 3,
       "goals": 5,
       "penalties": 0,
@@ -880,12 +880,12 @@
       "average": 1.6667
     },
     {
-      "name": "BERMUDEZ GONZALEZ, VICTOR",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
-      "goals": 4,
+      "name": "SANCHEZ CAÑETE, ANGEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
+      "goals": 5,
       "penalties": 0,
-      "average": 2.0
+      "average": 1.6667
     },
     {
       "name": "AGUILAR HOYOS, ALVARO",
@@ -912,14 +912,6 @@
       "average": 1.0
     },
     {
-      "name": "MAIRELES RAMÍREZ, MANUEL",
-      "team": "C.D. ARAS FUTSAL A",
-      "played": 4,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.75
-    },
-    {
       "name": "CAMPAÑA JARABA, JUAN",
       "team": "C.D. SANTAELLA 2010",
       "played": 4,
@@ -936,12 +928,12 @@
       "average": 0.75
     },
     {
-      "name": "TEJERO RUZ, DANIEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 1,
-      "goals": 2,
+      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "team": "C.D. ARAS FUTSAL A",
+      "played": 4,
+      "goals": 3,
       "penalties": 0,
-      "average": 2.0
+      "average": 0.75
     },
     {
       "name": "RODRIGUEZ GÓMEZ, JOSE MANUEL",
@@ -952,16 +944,24 @@
       "average": 2.0
     },
     {
-      "name": "SALINAS JARABA, JOSE MARIA",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "TEJERO RUZ, DANIEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 1,
+      "goals": 2,
+      "penalties": 0,
+      "average": 2.0
+    },
+    {
+      "name": "MARIN MEDINA, PABLO",
+      "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 2,
       "penalties": 0,
       "average": 1.0
     },
     {
-      "name": "MARIN MEDINA, PABLO",
-      "team": "C.D. CARCABUEY",
+      "name": "MOLINA AGUILERA, RAUL",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -976,16 +976,16 @@
       "average": 1.0
     },
     {
-      "name": "JIMENEZ BORREGO, ISRAEL",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 3,
+      "name": "SALINAS JARABA, JOSE MARIA",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
       "goals": 2,
       "penalties": 0,
-      "average": 0.6667
+      "average": 1.0
     },
     {
-      "name": "DOMINGUEZ SANCHEZ, DAVID",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "name": "JURADO ORDOÑEZ, MARCOS",
+      "team": "C.D. MENCIANA",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -1000,14 +1000,6 @@
       "average": 0.6667
     },
     {
-      "name": "GENIL MENDOZA, JOSE",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
       "name": "PEDROSA HIDALGO, JESÚS",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 3,
@@ -1016,16 +1008,8 @@
       "average": 0.6667
     },
     {
-      "name": "JURADO ORDOÑEZ, MARCOS",
-      "team": "C.D. MENCIANA",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
-      "team": "C.D. ARAS FUTSAL A",
+      "name": "JIMENEZ BORREGO, ISRAEL",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 3,
       "goals": 2,
       "penalties": 0,
@@ -1048,20 +1032,28 @@
       "average": 0.6667
     },
     {
-      "name": "MOLINA AGUILERA, RAUL",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 1,
-      "goals": 1,
+      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
+      "team": "C.D. ARAS FUTSAL A",
+      "played": 3,
+      "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.6667
     },
     {
-      "name": "COBO COMINO, DAVID",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 1,
-      "goals": 1,
+      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 2,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.6667
+    },
+    {
+      "name": "GENIL MENDOZA, JOSE",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
     },
     {
       "name": "ARANDA MONTES, OMAR",
@@ -1080,8 +1072,8 @@
       "average": 1.0
     },
     {
-      "name": "PÉREZ-ROSAS MONTES, CARLOS",
-      "team": "C.D. BOCA F.S. PRIEGO",
+      "name": "PEREZ MORON, MANUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1089,14 +1081,6 @@
     },
     {
       "name": "MARIN MEDINA, MANUEL",
-      "team": "C.D. CARCABUEY",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "CASTRO MONTES, MANUEL",
       "team": "C.D. CARCABUEY",
       "played": 2,
       "goals": 1,
@@ -1112,8 +1096,32 @@
       "average": 0.5
     },
     {
-      "name": "LOPERA MOLINA, PABLO",
+      "name": "CASTRO MONTES, MANUEL",
+      "team": "C.D. CARCABUEY",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "COBO COMINO, DAVID",
       "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "GORDILLO MOLINA, JUAN JOSE",
+      "team": "C.D. MENCIANA",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PRIEGO MONTES, LUIS",
+      "team": "C.D. MENCIANA",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1136,8 +1144,8 @@
       "average": 0.5
     },
     {
-      "name": "NIETO PERDIGÓN, JOSE ÁNGEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "REJANO RIVAS, SAMUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1152,32 +1160,48 @@
       "average": 0.5
     },
     {
-      "name": "ROLDAN MONTES, CARLOS",
+      "name": "NIETO PERDIGÓN, JOSE ÁNGEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "JIMENEZ POYATO, JOSE ANTONIO",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "LOPERA MOLINA, PABLO",
       "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 2,
+      "played": 3,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.3333
     },
     {
-      "name": "PRIEGO MONTES, LUIS",
-      "team": "C.D. MENCIANA",
-      "played": 2,
+      "name": "ROLDAN CABEZA, ALBERTO",
+      "team": "C.D. CARCABUEY",
+      "played": 3,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.3333
     },
     {
-      "name": "GORDILLO MOLINA, JUAN JOSE",
-      "team": "C.D. MENCIANA",
-      "played": 2,
+      "name": "PRIETO MORENO, PABLO",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 3,
       "goals": 1,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.3333
     },
     {
-      "name": "VERA TORRES, RAFAEL",
-      "team": "C.D. MENCIANA",
+      "name": "MORENO VAZQUEZ, JONATAN",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1192,8 +1216,32 @@
       "average": 0.3333
     },
     {
-      "name": "MORENO VAZQUEZ, JONATAN",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "ROLDAN MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "PÉREZ-ROSAS MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "VERA TORRES, RAFAEL",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "IZZA SÁNCHEZ, JORGE",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1210,34 +1258,10 @@
     {
       "name": "RIVAS CARMONA, PEDRO",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
+      "played": 4,
       "goals": 1,
       "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "PRIETO MORENO, PABLO",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "ROLDAN CABEZA, ALBERTO",
-      "team": "C.D. CARCABUEY",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "JIMENEZ POYATO, JOSE ANTONIO",
-      "team": "C.D. MENCIANA",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
+      "average": 0.25
     },
     {
       "name": "PEREZ REYES, MARIO",
@@ -3431,7 +3455,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-02T07:42:38.162886+00:00",
+  "updated_at": "2026-11-02T18:41:37.521079+00:00",
   "rounds": [
     1,
     2,
@@ -3747,33 +3771,33 @@
     },
     {
       "position": 5,
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "points": 0,
-      "played": 1,
-      "won": 0,
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "points": 3,
+      "played": 3,
+      "won": 1,
       "drawn": 0,
-      "lost": 1,
-      "gf": 3,
-      "ga": 8,
-      "gd": -5,
-      "form": "P",
+      "lost": 2,
+      "gf": 7,
+      "ga": 14,
+      "gd": -7,
+      "form": "P P G",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
     },
     {
       "position": 6,
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "points": 0,
       "played": 2,
       "won": 0,
       "drawn": 0,
       "lost": 2,
-      "gf": 4,
-      "ga": 12,
-      "gd": -8,
+      "gf": 5,
+      "ga": 11,
+      "gd": -6,
       "form": "P P",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg"
     },
     {
       "position": 7,
@@ -3840,7 +3864,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-02T07:42:38.895164+00:00",
+  "staff_updated_at": "2026-11-02T18:41:38.152729+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
