@@ -573,7 +573,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T02:37:12.256498+00:00",
+      "profile_updated_at": "2026-11-03T01:43:00.413628+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 6,
@@ -933,7 +933,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:36.779094+00:00",
+      "profile_updated_at": "2026-11-03T01:43:12.393464+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1475,7 +1475,64 @@
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.5"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T01:42:57.395680+00:00"
     },
     {
       "id": "48a456adf29eec69",
@@ -1706,7 +1763,64 @@
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T01:42:46.403779+00:00"
     },
     {
       "id": "53b4e6277137731e",
@@ -1823,7 +1937,64 @@
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T01:42:48.401137+00:00"
     },
     {
       "id": "47a02c7033cdeda6",
@@ -1838,7 +2009,64 @@
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T01:42:49.403386+00:00"
     },
     {
       "id": "849a4aa2251ee723",

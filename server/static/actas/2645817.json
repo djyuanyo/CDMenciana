@@ -413,7 +413,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -421,11 +421,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -464,7 +464,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:38.118606+00:00"
+      "profile_updated_at": "2026-11-03T01:43:13.400678+00:00"
     },
     {
       "id": "de2394576042ded7",
@@ -989,11 +989,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -1001,7 +1001,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -1035,12 +1035,12 @@
             ],
             [
               "Goles por partido",
-              "0.2"
+              "0.1"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:30.641175+00:00"
+      "profile_updated_at": "2026-11-03T01:43:07.399067+00:00"
     },
     {
       "id": "ff4242efe5ed7a78",
@@ -1686,7 +1686,64 @@
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.2"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T01:42:52.399272+00:00"
     },
     {
       "id": "8af4122cc9336fb4",
@@ -1822,7 +1879,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-29T09:59:42.096730+00:00",
+      "profile_updated_at": "2026-11-03T01:43:01.397005+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
