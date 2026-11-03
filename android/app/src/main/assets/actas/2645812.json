@@ -847,7 +847,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-02T00:51:58.446049+00:00",
+      "profile_updated_at": "2026-11-03T09:39:39.225811+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 4,
@@ -934,7 +934,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-02T00:52:00.405090+00:00",
+      "profile_updated_at": "2026-11-03T09:39:42.232095+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -1101,7 +1101,64 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "5"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-03T18:00:05.137799+00:00"
     },
     {
       "id": "9f81aea5a4746385",
@@ -1280,11 +1337,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -1292,7 +1349,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -1322,16 +1379,16 @@
           "rows": [
             [
               "Total",
-              "3"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:43.629658+00:00"
+      "profile_updated_at": "2026-11-03T18:00:04.142702+00:00"
     },
     {
       "id": "e9c8f94d1684e995",
@@ -1344,7 +1401,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1352,11 +1409,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -1395,7 +1452,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T08:46:41.626713+00:00"
+      "profile_updated_at": "2026-11-03T18:00:01.978472+00:00"
     },
     {
       "id": "e7dbbf7865b9c589",
