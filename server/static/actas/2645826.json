@@ -420,11 +420,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -432,7 +432,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -441,11 +441,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -471,7 +471,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T22:36:40.823223+00:00",
+      "profile_updated_at": "2026-11-04T06:27:31.594530+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -973,7 +973,8 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6af5d90f65a0c714",
@@ -987,7 +988,8 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "d2c9aaa48efe036d",
@@ -1093,7 +1095,7 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
@@ -1123,7 +1125,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-03T01:42:58.383721+00:00"
+      "profile_updated_at": "2026-11-04T06:27:59.028069+00:00"
     },
     {
       "id": "6e2e47cd998b76a3",
@@ -1584,7 +1586,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1592,11 +1594,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -1626,7 +1628,7 @@
           "rows": [
             [
               "Total",
-              "4"
+              "5"
             ],
             [
               "Goles por partido",
@@ -1635,7 +1637,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-01T09:22:32.216792+00:00"
+      "profile_updated_at": "2026-11-04T06:27:43.041827+00:00"
     },
     {
       "id": "88647e45c2131edf",
@@ -1763,7 +1765,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-03T01:42:59.788525+00:00"
+      "profile_updated_at": "2026-11-04T06:28:00.084203+00:00"
     },
     {
       "id": "b18f1921fd277376",
@@ -1968,7 +1970,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1976,11 +1978,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -2010,16 +2012,16 @@
           "rows": [
             [
               "Total",
-              "6"
+              "8"
             ],
             [
               "Goles por partido",
-              "0.9"
+              "1.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-01T09:22:33.592352+00:00"
+      "profile_updated_at": "2026-11-04T06:27:45.035018+00:00"
     }
   ],
   "staff": [
