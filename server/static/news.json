@@ -1,13 +1,30 @@
 {
   "source": "https://cdmenciana.es/noticias/",
-  "updated_at": "2026-11-04T23:54:02.802286+00:00",
+  "updated_at": "2026-11-06T14:57:42.916149+00:00",
   "news": [
+    {
+      "title": "PREVIA | El cadete abre el fin de semana este viernes",
+      "date": "2026-11-06",
+      "category": "previa, futbol sala, doña mencia",
+      "url": "https://cdmenciana.es/noticias/previa-fin-de-semana-cadete/",
+      "image": "https://cms.cdmenciana.es/media/be52f01a-c059-4619-a60a-9ab690a7af7a/web",
+      "content": [
+        {
+          "kind": "paragraph",
+          "text": "El filial sub23 retornará a la competición visitando el sábado (19h) al AJ Palenciana. Los pupilos de Julio Lozano , tras empatar ante el Ega Futsal, tendrán una dura salida ante uno de los equipos que aspiran al play off. Con muchos jugadores tocados, la convocatoria saldrá de las horas previas al choque."
+        },
+        {
+          "kind": "paragraph",
+          "text": "La gran cita en el PMD Julio Priego la tendremos en la tarde del sábado (19h), cuando el primer equipo RAVI Obras & Servicios FS recibirá al Cádiz Futsal en la novena jornada de la Tercera División Nacional. Tras la meritoria victoria en Alcalá, los de José Antonio Jiménez quieren mantener la buena racha ante un gran equipo gaditano. Borrallo, Adri, Alex y Luna , por lesión, bajas confirmadas para el duelo de este 7 de noviembre. Además, el Infantil Centro Cicloturista Subbética , previsto para el sábado a mediodía, jugará finalmente el encuentro ante AJ Palenciana el lunes 16 de noviembre (19:30h). Este aplazamiento se debe a la solicitud del equipo rival por la coincidencia de horarios en otras competiciones de fútbol."
+        }
+      ]
+    },
     {
       "title": "LAS SELECCIONES PROVINCIALES RETOMAN SU ACTIVIDAD",
       "date": "2026-11-04",
       "category": "selecciones, fútbol sala, doña mencia,",
       "url": "https://cdmenciana.es/noticias/selecciones-provinciales-retoman-actividad/",
-      "image": "https://cms.cdmenciana.es/media/307a3ecb-5412-4a50-8838-9c2846c2595f/web",
+      "image": "https://cms.cdmenciana.es/media/307a3ecb-5412-4a50-8838-9c2846c2595f/thumb",
       "content": [
         {
           "kind": "paragraph",
@@ -145,31 +162,6 @@
         {
           "kind": "paragraph",
           "text": "La crítica a los colegiados tampoco resta mérito al filial blanquiverde, al que felicitamos por su justa victoria. Para el Menciana queda una derrota dolorosa y una lección que debe servir para crecer: mantener la cabeza dentro del partido, incluso cuando las decisiones y las circunstancias resultan adversas."
-        }
-      ]
-    },
-    {
-      "title": "El derbi se queda en casa: Juanbo y Mara sellan el triunfo ante el Santaella",
-      "date": "2026-10-03",
-      "category": "Primer equipo",
-      "url": "https://cdmenciana.es/noticias/victoria-derbi-cd-santaella-2-0/",
-      "image": "https://cms.cdmenciana.es/media/bf11d2db-fe97-4fb6-a952-cb7337fba035/thumb",
-      "content": [
-        {
-          "kind": "paragraph",
-          "text": "El primer equipo, patrocinado por RAVI Obras y Servicios, sumó una nueva victoria en casa tras imponerse por 2-0 al CD Santaella en un derbi provincial marcado por el trabajo y la seriedad del conjunto menciano."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Los tantos de Juanbo y Mara, ambos en la segunda mitad, resolvieron el encuentro y permitieron sumar tres puntos más en este arranque liguero. El equipo completó una sólida actuación y mantuvo su portería a cero."
-        },
-        {
-          "kind": "paragraph",
-          "text": "Con este triunfo, nuestros jugadores mantienen las buenas sensaciones de las primeras jornadas y afrontan con confianza el siguiente compromiso."
-        },
-        {
-          "kind": "paragraph",
-          "text": "El próximo domingo, el primer equipo visitará al Córdoba Patrimonio de la Humanidad B en el Palacio de Vista Alegre, donde buscará dar continuidad a este buen inicio de competición."
         }
       ]
     }
