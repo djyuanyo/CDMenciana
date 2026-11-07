@@ -713,7 +713,23 @@ document.addEventListener('click',async e=>{const button=e.target.closest('[data
 window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,uid:'',scripts:{},stream:null,scanning:false,scanResult:null,members:null,membersError:'',
  E(v){return ClubAuth.escape(v);},
  load(src){return this.scripts[src]||=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>{delete this.scripts[src];reject(Error('No se pudo cargar el lector.'));};document.head.append(s);});},
- async http(path,options={}){const identity=ClubAuth.user;if(!identity)throw Error('Inicia sesión para continuar.');const credentials=await ClubAuth.request('token');if(!credentials.token||ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');const endpoint=await ClubNotifications.service();const r=await fetch(endpoint+path,{...options,headers:{Authorization:'Bearer '+credentials.token,'Content-Type':'application/json'},cache:'no-store',signal:AbortSignal.timeout(20000)});const data=await r.json().catch(()=>({}));if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');if(!r.ok)throw Error(data.error||'No se pudo conectar con el club.');return data;},
+ async http(path,options={}){
+  const identity=ClubAuth.user;if(!identity)throw Error('Inicia sesión para continuar.');
+  const credentials=await ClubAuth.request('token');if(!credentials.token||ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
+  const endpoint=await ClubNotifications.service(),read=!options.method||options.method==='GET';
+  for(let attempt=0;attempt<(read?2:1);attempt++){
+   if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
+   try{
+    const r=await fetch(endpoint+path,{...options,headers:{Authorization:'Bearer '+credentials.token,'Content-Type':'application/json'},cache:'no-store',signal:AbortSignal.timeout(read?9000:15000)}),data=await r.json().catch(()=>{throw new TypeError('Invalid response');});
+    if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');if(!r.ok)throw Object.assign(Error(data.error||'No se pudo conectar con el club.'),{status:r.status});return data;
+   }catch(error){
+    if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
+    const retry=error.name==='AbortError'||error.name==='TimeoutError'||error instanceof TypeError||[408,429,502,503,504].includes(error.status);
+    if(read&&attempt===0&&retry)continue;
+    if(retry)throw Object.assign(Error(read?'No se ha podido conectar con el club. Comprueba la conexión y pulsa Actualizar.':'No se ha podido confirmar la operación. Actualiza los datos antes de volver a intentarlo.'),{status:error.status});throw error;
+   }
+  }
+ },
  date(v){return v?v.split('-').reverse().join('/'):'';},
  status(card){return card.status==='active'?['active','Cuota al día hasta '+this.date(card.paidUntil)]:card.status==='expired'?['expired','Cuota caducada el '+this.date(card.paidUntil)]:['pending','Cuota pendiente de confirmar por el club'];},
 
@@ -1070,6 +1086,7 @@ document.addEventListener('submit',async e=>{
  finally{button.disabled=false;}M.paintSeasons();
 });
 document.addEventListener('input',e=>{const box=e.target.closest?.('[data-sm-search]');if(!box)return;const M=ClubMembership;M.smFilter=box.value;const list=document.querySelector('[data-sm-list]');if(list)list.innerHTML=M.smRows();});
+
 
 /* Zona de jugadores: convocatorias. Staff call their category; players answer Voy / No voy / Duda. */
 window.ClubCallups={data:null,loadedAt:0,error:'',loading:false,uid:'',creating:false,open:{},
@@ -1436,10 +1453,10 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
  // The taquilla web page opens with this secret link, without signing in; a new link cancels the old one.
  doorMarkup(){
   const E=this.E.bind(this),d=this.door,status=this.doorStatus?`<p class="door-status" role="status">${E(this.doorStatus)}</p>`:'';
-  if(!d)return `<section class="card door-link"><h3>Web de taquilla</h3><p role="status">Cargando enlace…</p>${status}</section>`;
+  if(!d)return `<section class="card door-link"><h3>Web de taquilla</h3>${this.doorStatus?status+'<button type="button" class="auth-secondary" data-door-retry>Reintentar conexión</button>':'<p role="status">Cargando enlace…</p>'}</section>`;
   return `<section class="card door-link"><h3>Web de taquilla</h3>${d.link?`<p>Comparte este enlace con quien esté en la puerta. Lo abre en el móvil y escanea sin iniciar sesión.</p><input class="door-url" readonly value="${E(d.link)}" aria-label="Enlace de taquilla" data-door-url><div class="event-actions"><button type="button" class="auth-primary" data-door-copy>Copiar enlace</button><button type="button" class="auth-secondary" data-door-new>Generar otro</button><button type="button" class="text-action" data-door-off>Desactivar</button></div><p class="door-hint">Quien tenga el enlace puede validar carnets. Si se comparte con quien no debe, pulsa «Generar otro» y el anterior deja de funcionar.</p>`:`<p>Crea un enlace para que el personal de taquilla escanee los carnets desde el navegador del móvil, sin iniciar sesión.</p><button type="button" class="auth-primary" data-door-new>Crear enlace</button>`}${status}</section>`;
  },
- async loadDoor(){try{this.door=await this.http('/admin/door');}catch(e){this.doorStatus=e.message;}this.paint();},
+ async loadDoor(){this.doorStatus='';try{this.door=await this.http('/admin/door');}catch(e){this.doorStatus=e.message;}this.paint();},
  reportMarkup(){
   const E=this.E.bind(this),r=this.report;
   const back='<button type="button" class="event-back" data-event-back>← Eventos</button>';
@@ -1594,7 +1611,8 @@ window.ClubEvents={list:null,listError:'',report:null,reportId:'',roster:null,bu
 };
 document.addEventListener('click',async e=>{
  const V=ClubEvents,t=e.target;let b;
- if(t.closest('[data-events-reload]')){V.list=null;V.paint();V.loadList();if(V.reportId)V.openReport(V.reportId);}
+ if(t.closest('[data-door-retry]')){V.doorStatus='';V.paint();V.loadDoor();}
+ if(t.closest('[data-events-reload]')){V.list=null;V.doorStatus='';V.paint();V.loadList();V.loadDoor();if(V.reportId)V.openReport(V.reportId);}
  if((b=t.closest('[data-event-report]')))V.openReport(b.dataset.eventReport);
  if(t.closest('[data-event-back]')){V.reportId='';V.report=null;V.paint();V.loadList();}
  if(t.closest('[data-event-refresh]')&&V.reportId)V.openReport(V.reportId);
@@ -1624,6 +1642,7 @@ document.addEventListener('change',e=>{
  const pick=e.target.closest?.('[data-events-season]');if(!pick)return;const V=ClubEvents;V.seasonId=pick.value===V.seasons?.current?'':pick.value;V.roster=null;
  if(V.statsOpen){V.season=null;V.paint();V.loadSeason();}else{V.reportId='';V.report=null;V.list=null;V.season=null;V.paint();V.loadList();}
 });
+
 
 /* CDM TV: the club's YouTube channel, in the order YouTube shows it. The list is published by the public repository every 10 minutes. */
 window.ClubTV={data:null,error:'',loading:false,loadedAt:0,section:'',

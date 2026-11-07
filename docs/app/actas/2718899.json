@@ -381,7 +381,8 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6c89b75c2ac56a6d",
@@ -395,7 +396,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "dd539bf7d78b7563",
@@ -409,7 +411,8 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c29c229fd1b18dbe",
@@ -423,7 +426,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2ea3773cf1b305a0",
@@ -437,7 +441,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6b187f2e68ce6c8f",
@@ -451,7 +456,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "47b38f7277b953ed",
@@ -465,7 +471,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "39dd019a77a06e2e",
@@ -479,7 +486,8 @@
         "played": 2,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "02ca8b75ec349b96",
@@ -493,7 +501,8 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "858622c4a92b9670",
@@ -507,7 +516,8 @@
         "played": null,
         "team": "C.D. CARCABUEY",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "b676a70fad351d29",
@@ -521,7 +531,66 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:11:35.175755+00:00",
+      "stats_round": 3
     },
     {
       "id": "1dd20281c8101c9b",
@@ -535,7 +604,65 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:51:56.431281+00:00"
     },
     {
       "id": "a210fd494c420e6c",
@@ -549,7 +676,65 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:51:53.840596+00:00"
     },
     {
       "id": "c98d1a64fe2aae02",
@@ -563,7 +748,65 @@
         "played": 2,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:51:57.395993+00:00"
     },
     {
       "id": "a0e8ae8eac523cf9",
@@ -577,7 +820,65 @@
         "played": 2,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "4.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:52:02.589809+00:00"
     },
     {
       "id": "4f9c150baea8026a",
@@ -591,7 +892,66 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:06:31.026202+00:00",
+      "stats_round": 3
     },
     {
       "id": "763aab549b40e7fc",
@@ -605,7 +965,65 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:51:55.397590+00:00"
     },
     {
       "id": "8fcabb90ecbf2e58",
@@ -619,7 +1037,65 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "1.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-13T22:51:51.347067+00:00"
     },
     {
       "id": "4856356bc64c43aa",
@@ -633,7 +1109,66 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:11:36.150295+00:00",
+      "stats_round": 3
     },
     {
       "id": "d2d6dfeda1d5cd4a",
@@ -647,7 +1182,66 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:11:34.011356+00:00",
+      "stats_round": 3
     },
     {
       "id": "e7b175636545b015",
@@ -661,7 +1255,66 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "3"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:11:36.987653+00:00",
+      "stats_round": 3
     },
     {
       "id": "616be0fc59748cff",
@@ -675,7 +1328,66 @@
         "played": 2,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "2"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.5"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-10-19T19:11:41.323075+00:00",
+      "stats_round": 3
     }
   ],
   "staff": [
