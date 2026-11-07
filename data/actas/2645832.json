@@ -79,6 +79,39 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(13') SANCHEZ TIENDA, DAVID"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(21') SANCHEZ TIENDA, DAVID"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(22') CEPERO ANGERIZ, MARIO"
+        ],
+        [
+          "Gol · 3 - 1",
+          "(31') RODRIGUEZ JIMENEZ, SERGIO"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(32') SANCHEZ TIENDA, DAVID"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(34') CEPERO ANGERIZ, MARIO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)"
         ],
         [
@@ -222,6 +255,19 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(30') RODRIGUEZ JIMENEZ, SERGIO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "CD CÁDIZ FUTSAL YOU ASESORÍA"
     },
@@ -330,6 +376,19 @@
         [
           "",
           "RUGERO SANCHEZ, CRISTIAN"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta roja",
+          "(20') COELLO FORERO, DANIEL"
         ]
       ]
     }
@@ -526,6 +585,5 @@
   ],
   "id": "2645832",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645832",
-  "updated_at": "2026-11-07T19:38:36.164572+00:00",
-  "preview": true
+  "updated_at": "2026-11-07T22:47:10.032350+00:00"
 }

@@ -79,6 +79,43 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 1 - 0",
+          "(2') ROSUA ORTIZ, SAUL"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(7') ORELLANA ARIZA, JUAN FRANCISCO"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(14') VELASCO AGUILAR, MANUEL JESUS"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(24') GABRIEL VELASCO, ANTONIO"
+        ],
+        [
+          "Gol · 5 - 0",
+          "(27') GABRIEL VELASCO, ANTONIO"
+        ],
+        [
+          "Gol · 5 - 1",
+          "(31') BARBA VALVERDE, DIEGO"
+        ],
+        [
+          "Gol · 6 - 1",
+          "(32') HURTADO MOLINA, CRISTOBAL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO"
         ],
         [
@@ -220,6 +257,19 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(37') VELASCO AGUILAR, MANUEL JESUS"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. APAGA Y VAMONOS"
     },
@@ -315,6 +365,19 @@
         [
           "",
           "LOZANO GARCIA, JULIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(37') LOZANO GARCIA, JULIO"
         ]
       ]
     }
@@ -493,6 +556,5 @@
   ],
   "id": "2718127",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718127",
-  "updated_at": "2026-11-07T19:38:36.164572+00:00",
-  "preview": true
+  "updated_at": "2026-11-07T22:47:10.032350+00:00"
 }
