@@ -461,9 +461,9 @@
       "profile_updated_at": "2026-10-21T13:55:53.380645+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 2,
-        "called": 3,
-        "played": 3,
+        "starts": 3,
+        "called": 4,
+        "played": 4,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -533,8 +533,8 @@
       "profile_updated_at": "2026-10-24T18:16:51.190489+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 2,
-        "called": 3,
+        "starts": 3,
+        "called": 4,
         "played": null,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
@@ -605,9 +605,9 @@
       "profile_updated_at": "2026-10-21T13:55:56.342995+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 3,
-        "called": 3,
-        "played": 3,
+        "starts": 4,
+        "called": 4,
+        "played": 4,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -748,10 +748,10 @@
       ],
       "profile_updated_at": "2026-10-21T13:55:55.345701+00:00",
       "competition_summary": {
-        "goals": 2,
-        "starts": 2,
-        "called": 3,
-        "played": 3,
+        "goals": 3,
+        "starts": 3,
+        "called": 4,
+        "played": 4,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -894,7 +894,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 2,
+        "called": 3,
         "played": null,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
@@ -964,10 +964,10 @@
       ],
       "profile_updated_at": "2026-10-21T13:55:54.349145+00:00",
       "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 2,
-        "played": null,
+        "goals": 1,
+        "starts": 2,
+        "called": 3,
+        "played": 3,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1038,7 +1038,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 3,
+        "called": 4,
         "played": null,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
@@ -1052,7 +1052,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": null,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
@@ -1180,10 +1180,10 @@
       ],
       "profile_updated_at": "2026-10-24T18:16:25.158769+00:00",
       "competition_summary": {
-        "goals": 1,
+        "goals": 2,
         "starts": 0,
-        "called": 3,
-        "played": 3,
+        "called": 4,
+        "played": 4,
         "team": "C.D. ASOC. JUVENIL PALENCIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1711,11 +1711,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "1"
             ],
             [
               "Titular",
-              "1"
+              "0"
             ],
             [
               "Suplente",
@@ -1723,7 +1723,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "1"
             ]
           ]
         },
@@ -1762,7 +1762,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T18:55:22.300988+00:00"
+      "profile_updated_at": "2026-10-20T15:13:04.210138+00:00"
     },
     {
       "id": "bf14a6a402243bb9",
@@ -1783,7 +1783,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "1"
             ],
             [
               "Titular",
@@ -1791,11 +1791,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "1"
             ],
             [
               "Jugados",
-              "2"
+              "1"
             ]
           ]
         },
@@ -1825,16 +1825,16 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T18:55:23.285653+00:00"
+      "profile_updated_at": "2026-10-20T15:13:05.220814+00:00"
     },
     {
       "id": "48efc0d36497b5f0",
