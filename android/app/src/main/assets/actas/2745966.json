@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "3 - 11",
           ""
         ]
       ]
@@ -62,6 +62,71 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(1') CABALLERO MOLINA, JAVIER"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(4') PEREZ PIÑA, PABLO"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(7') RUIZ GONZÁLEZ, JESÚS"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(22') CASTELL REQUENA, ESTEBAN"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(25') MURIEL JURADO, ANTONIO JESUS"
+        ],
+        [
+          "Gol · 2 - 4",
+          "(26') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 2 - 5",
+          "(27') MUÑOZ REJANO, EZEQUIEL"
+        ],
+        [
+          "Gol · 2 - 6",
+          "(29') SERRANO MONTILLA, DANIEL"
+        ],
+        [
+          "Gol · 2 - 7",
+          "(32') SERRANO MONTILLA, DANIEL"
+        ],
+        [
+          "Gol · 3 - 7",
+          "(33') LEIVA TORRALBO, JORGE"
+        ],
+        [
+          "Gol · 3 - 8",
+          "(34') LUNA MEJIAS, ROQUE"
+        ],
+        [
+          "Gol · 3 - 9",
+          "(35') MERINO CEJUDO, SAMUEL"
+        ],
+        [
+          "Gol · 3 - 10",
+          "(38') CALERO JIMÉNEZ, ANGEL"
+        ],
+        [
+          "Gol · 3 - 11",
+          "(39') SERRANO MONTILLA, DANIEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -196,6 +261,19 @@
         [
           "",
           "BURGUILLOS EGEA, ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(29') SOME LOPEZ, ALVARO"
         ]
       ]
     },
@@ -481,5 +559,5 @@
   ],
   "id": "2745966",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745966",
-  "updated_at": "2026-11-07T14:03:06.860444+00:00"
+  "updated_at": "2026-11-07T18:49:26.860116+00:00"
 }
