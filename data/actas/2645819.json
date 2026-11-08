@@ -452,19 +452,19 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "7"
             ]
           ]
         },
@@ -503,7 +503,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:21.930793+00:00"
+      "profile_updated_at": "2026-11-08T02:36:57.122131+00:00"
     },
     {
       "id": "b24b6e1186bc1e7f",
@@ -516,7 +516,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -524,11 +524,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -567,7 +567,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:17.953858+00:00"
+      "profile_updated_at": "2026-11-08T02:36:55.108580+00:00"
     },
     {
       "id": "cf3c4dc5aa7f35d6",
@@ -580,11 +580,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "6"
             ],
             [
               "Suplente",
@@ -592,7 +592,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "7"
             ]
           ]
         },
@@ -601,11 +601,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -622,16 +622,16 @@
           "rows": [
             [
               "Total",
-              "2"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:23.967028+00:00"
+      "profile_updated_at": "2026-11-08T02:36:59.122498+00:00"
     },
     {
       "id": "e055aa1a0b89d128",
@@ -644,19 +644,19 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "7"
             ],
             [
               "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
               "3"
             ],
             [
-              "Jugados",
+              "Suplente",
               "4"
+            ],
+            [
+              "Jugados",
+              "6"
             ]
           ]
         },
@@ -665,11 +665,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -686,7 +686,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
@@ -695,7 +695,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T13:46:12.367704+00:00"
+      "profile_updated_at": "2026-11-08T02:37:00.141837+00:00"
     },
     {
       "id": "027256a4e3cd214b",
@@ -708,19 +708,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -750,16 +750,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.1"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T13:46:16.540327+00:00"
+      "profile_updated_at": "2026-11-08T02:37:01.124623+00:00"
     },
     {
       "id": "a6788a1798a75168",
@@ -772,19 +772,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "3"
-            ],
-            [
-              "Suplente",
               "4"
             ],
             [
+              "Suplente",
+              "5"
+            ],
+            [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -814,16 +814,16 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.1"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:16.973499+00:00"
+      "profile_updated_at": "2026-11-08T02:36:54.184742+00:00"
     },
     {
       "id": "9d71da7260639e0b",
@@ -836,7 +836,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
@@ -844,11 +844,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "8"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -861,7 +861,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -882,12 +882,12 @@
             ],
             [
               "Goles por partido",
-              "1.3"
+              "1.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:22.989099+00:00"
+      "profile_updated_at": "2026-11-08T02:36:58.129292+00:00"
     },
     {
       "id": "d99042883d0e64cb",
@@ -1092,7 +1092,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
@@ -1100,11 +1100,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "8"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1113,7 +1113,7 @@
           "rows": [
             [
               "Total",
-              "4"
+              "5"
             ],
             [
               "Tarjeta amarilla",
@@ -1121,7 +1121,7 @@
             ],
             [
               "Doble tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Tarjeta roja",
@@ -1138,12 +1138,12 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T13:46:39.367209+00:00"
+      "profile_updated_at": "2026-11-08T02:37:02.133010+00:00"
     },
     {
       "id": "87038a8fc9cfd001",

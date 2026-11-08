@@ -1527,7 +1527,64 @@
         "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
         "source": "actas oficiales RFAF"
       },
-      "stats": []
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "8"
+            ],
+            [
+              "Titular",
+              "7"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-08T02:36:48.140731+00:00"
     },
     {
       "id": "dfba139eb02436dd",
@@ -1540,7 +1597,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1548,11 +1605,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1591,7 +1648,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-04T15:33:15.452976+00:00",
+      "profile_updated_at": "2026-11-08T02:36:49.139295+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
@@ -1612,11 +1669,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -1624,7 +1681,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -1645,7 +1702,7 @@
             ],
             [
               "Tarjeta roja",
-              "0"
+              "1"
             ]
           ]
         },
@@ -1663,7 +1720,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-04T22:02:50.542040+00:00",
+      "profile_updated_at": "2026-11-08T02:36:46.130824+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 4,
@@ -1900,7 +1957,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1908,11 +1965,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1951,7 +2008,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:47.385534+00:00",
+      "profile_updated_at": "2026-11-08T02:36:50.130627+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1972,7 +2029,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "3"
             ],
             [
               "Titular",
@@ -1980,11 +2037,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "1"
             ],
             [
               "Jugados",
-              "4"
+              "3"
             ]
           ]
         },
@@ -2023,7 +2080,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T22:52:52.328103+00:00",
+      "profile_updated_at": "2026-11-03T18:00:21.133397+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 2,

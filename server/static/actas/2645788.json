@@ -1188,19 +1188,19 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "7"
             ]
           ]
         },
@@ -1247,7 +1247,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-30T20:55:21.930793+00:00"
+      "profile_updated_at": "2026-11-08T02:36:57.122131+00:00"
     },
     {
       "id": "7e375988c667843d",
@@ -1260,7 +1260,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1268,11 +1268,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -1319,7 +1319,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-30T20:55:17.953858+00:00"
+      "profile_updated_at": "2026-11-08T02:36:55.108580+00:00"
     },
     {
       "id": "9b18b8d92afd9099",
@@ -1332,11 +1332,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "6"
             ],
             [
               "Suplente",
@@ -1344,7 +1344,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "7"
             ]
           ]
         },
@@ -1353,15 +1353,87 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
               "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "5"
+            ],
+            [
+              "Goles por partido",
+              "0.6"
+            ]
+          ]
+        }
+      ],
+      "competition_summary": {
+        "goals": 0,
+        "starts": 3,
+        "called": 4,
+        "played": null,
+        "team": "C.D. DEPORTE Y OCIO (ADYO)",
+        "source": "actas oficiales RFAF"
+      },
+      "profile_updated_at": "2026-11-08T02:36:59.122498+00:00"
+    },
+    {
+      "id": "9cbecc6573a881b2",
+      "name": "BERMUDO NAVARRO, CRISTIAN",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=112102&codacta=2645788&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "8"
+            ],
+            [
+              "Titular",
+              "5"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "8"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "1"
             ],
             [
               "Tarjeta roja",
@@ -1384,78 +1456,6 @@
         }
       ],
       "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 4,
-        "played": null,
-        "team": "C.D. DEPORTE Y OCIO (ADYO)",
-        "source": "actas oficiales RFAF"
-      },
-      "profile_updated_at": "2026-10-30T20:55:23.967028+00:00"
-    },
-    {
-      "id": "9cbecc6573a881b2",
-      "name": "BERMUDO NAVARRO, CRISTIAN",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=112102&codacta=2645788&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "6"
-            ],
-            [
-              "Titular",
-              "5"
-            ],
-            [
-              "Suplente",
-              "1"
-            ],
-            [
-              "Jugados",
-              "6"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Tarjeta amarilla",
-              "1"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "1"
-            ],
-            [
-              "Goles por partido",
-              "0.2"
-            ]
-          ]
-        }
-      ],
-      "competition_summary": {
         "goals": 1,
         "starts": 5,
         "called": 5,
@@ -1463,7 +1463,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-30T20:55:18.971265+00:00"
+      "profile_updated_at": "2026-11-08T02:36:56.136722+00:00"
     },
     {
       "id": "0ea48359783e9c95",
@@ -1548,19 +1548,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "3"
-            ],
-            [
-              "Suplente",
               "4"
             ],
             [
+              "Suplente",
+              "5"
+            ],
+            [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1590,11 +1590,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.1"
             ]
           ]
         }
@@ -1607,7 +1607,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-30T20:55:16.973499+00:00"
+      "profile_updated_at": "2026-11-08T02:36:54.184742+00:00"
     },
     {
       "id": "7841e62dbcff1c2f",
@@ -1620,7 +1620,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
@@ -1628,11 +1628,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "8"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1645,7 +1645,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1666,7 +1666,7 @@
             ],
             [
               "Goles por partido",
-              "1.3"
+              "1.0"
             ]
           ]
         }
@@ -1679,7 +1679,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-30T20:55:22.989099+00:00"
+      "profile_updated_at": "2026-11-08T02:36:58.129292+00:00"
     },
     {
       "id": "4a91038be25a489e",
@@ -1692,19 +1692,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1734,11 +1734,11 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Goles por partido",
-              "0.0"
+              "0.1"
             ]
           ]
         }
@@ -1751,7 +1751,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-31T13:46:16.540327+00:00"
+      "profile_updated_at": "2026-11-08T02:37:01.124623+00:00"
     },
     {
       "id": "9b527b5bc3e93845",
@@ -1823,7 +1823,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-03T09:39:59.241889+00:00"
+      "profile_updated_at": "2026-11-07T07:17:18.212515+00:00"
     },
     {
       "id": "d6fabf46505ce056",
@@ -1836,7 +1836,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
@@ -1844,11 +1844,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "8"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1857,7 +1857,7 @@
           "rows": [
             [
               "Total",
-              "4"
+              "5"
             ],
             [
               "Tarjeta amarilla",
@@ -1865,7 +1865,7 @@
             ],
             [
               "Doble tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Tarjeta roja",
@@ -1882,12 +1882,12 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T13:46:39.367209+00:00",
+      "profile_updated_at": "2026-11-08T02:37:02.133010+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 0,
@@ -2039,7 +2039,7 @@
         "team": "C.D. DEPORTE Y OCIO (ADYO)",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-03T09:40:00.217891+00:00"
+      "profile_updated_at": "2026-11-07T07:17:19.193687+00:00"
     }
   ],
   "staff": [
