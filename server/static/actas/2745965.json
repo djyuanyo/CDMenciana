@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "8 - 1",
           ""
         ]
       ]
@@ -62,6 +62,51 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(2') GRANDE SANCHEZ, ANGEL"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(3') QUINTERO POSTIGO, VÍCTOR"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(4') QUINTERO POSTIGO, VÍCTOR"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(14') MARTÍN CÁLIZ, ALEJANDRO"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(31') CORPAS CRIADO, NATALIA MARIA"
+        ],
+        [
+          "Gol · 5 - 1",
+          "(35') VALDIVIA NOCETE, HUGO"
+        ],
+        [
+          "Gol · 6 - 1",
+          "(37') SÁNCHEZ BERMÚDEZ, DANIEL"
+        ],
+        [
+          "Gol · 7 - 1",
+          "(38') SÁNCHEZ BERMÚDEZ, DANIEL"
+        ],
+        [
+          "Gol · 8 - 1",
+          "(39') CARRILLO AGUILERA, ELÍAS"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -481,6 +526,6 @@
   ],
   "id": "2745965",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745965",
-  "updated_at": "2026-11-08T09:18:08.228648+00:00",
+  "updated_at": "2026-11-08T10:23:16.489682+00:00",
   "preview": true
 }
