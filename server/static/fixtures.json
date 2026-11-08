@@ -1447,6 +1447,26 @@
     {
       "id": "48466109-10-1",
       "round": 10,
+      "home": "C.D. VILLALBA F.S.",
+      "away": "C.D. OLIMPIC DE TRIANA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
+      "date": "2026-11-15",
+      "time": "",
+      "venue": "VILLALBA DE ALCOR, PABELLON MPAL.",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-10-2",
+      "round": 10,
       "home": "CIRCULO MERCANTIL E INDUSTRIAL",
       "away": "C.D. DEPORTE Y OCIO (ADYO)",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg",
@@ -1465,7 +1485,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-10-2",
+      "id": "48466109-10-3",
       "round": 10,
       "home": "C.D. BENALUP",
       "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
@@ -1485,7 +1505,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-10-3",
+      "id": "48466109-10-4",
       "round": 10,
       "home": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "away": "C.D. SANTAELLA 2010",
@@ -1505,7 +1525,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-10-4",
+      "id": "48466109-10-5",
       "round": 10,
       "home": "U.D. ALCHOYANO",
       "away": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
@@ -1525,7 +1545,7 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-10-5",
+      "id": "48466109-10-6",
       "round": 10,
       "home": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "away": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
@@ -1542,6 +1562,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-10-7",
+      "round": 10,
+      "home": "C.D. ALCALA DE GUADAIRA F.S.",
+      "away": "C.D. DECORSENECA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/01875.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
+      "date": "2026-11-15",
+      "time": "",
+      "venue": "Alcalá De Guadaíra - DISTRITO SUR (Pabellón)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
       "acta_url": ""
     },
     {
@@ -1562,46 +1602,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-10-7",
-      "round": 10,
-      "home": "C.D. VILLALBA F.S.",
-      "away": "C.D. OLIMPIC DE TRIANA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
-      "date": "2026-11-15",
-      "time": "",
-      "venue": "VILLALBA DE ALCOR, PABELLON MPAL.",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-10-8",
-      "round": 10,
-      "home": "C.D. ALCALA DE GUADAIRA F.S.",
-      "away": "C.D. DECORSENECA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/01875.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
-      "date": "2026-11-15",
-      "time": "",
-      "venue": "Alcalá De Guadaíra - DISTRITO SUR (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
       "acta_url": ""
     },
     {
@@ -7443,7 +7443,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-08T21:12:40.149778+00:00",
+  "updated_at": "2026-11-08T23:56:55.784171+00:00",
   "rounds": [
     1,
     2,
@@ -8384,7 +8384,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-08T21:12:41.286977+00:00",
+  "staff_updated_at": "2026-11-08T23:56:56.871145+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
