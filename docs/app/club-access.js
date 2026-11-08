@@ -142,16 +142,19 @@ window.ClubRegistration={
   if(!/^(\+34)?[6789]\d{8}$/.test(phone)&&!/^\+(?!34)[1-9]\d{7,14}$/.test(phone))throw Error('Introduce un teléfono válido.');
   return {dni,phone};
  },
+ // The account birth date asked right after signing up; a player registering themself does not type it again.
+ knownBirth(){const f=window.ClubFamilies;return f&&f.uid===ClubAuth.user?.uid&&/^\d{4}-\d{2}-\d{2}$/.test(f.birthDate||'')?f.birthDate:'';},
  complete(profile){try{return profile?.registrationComplete==='true'&&!!this.validate(profile);}catch{return false;}},
  split(name){const parts=String(name||'').trim().split(/\s+/);return {first:parts.shift()||'',last:parts.join(' ')};},
  fields(data={}){
-  const E=ClubAuth.escape.bind(ClubAuth),type=data.registrationType||'',team=type==='team',member=type==='member',player=team&&data.teamRole==='player',personal=this.needsPrivate(type);
+  const E=ClubAuth.escape.bind(ClubAuth),type=data.registrationType||'',team=type==='team',member=type==='member',player=team&&data.teamRole==='player',personal=this.needsPrivate(type),known=this.knownBirth(),other=data.otherPlayer==='on',askBirth=player&&(!known||other);
   const options=(rows,value)=>'<option value="">Selecciona una opción</option>'+rows.map(([key,label])=>`<option value="${E(key)}"${value===key?' selected':''}>${E(label)}</option>`).join('');
   const field=(attr,on,label,input)=>`<label class="auth-field" ${attr}${on?'':' hidden'}><span>${label}</span>${input(on)}</label>`;
   const state=on=>on?' required':' disabled';
   return `<div class="registration-fields"><label class="auth-field"><span>¿Cómo formas parte del club?</span><select name="registrationType" data-registration-type required>${options(this.types,type)}</select></label>
   <div data-team-fields${team?'':' hidden'}><label class="auth-field"><span>Tu función en el equipo</span><select name="teamRole" data-team-role${state(team)}>${options([['player','Jugador'],['staff','Cuerpo técnico']],data.teamRole)}</select></label><label class="auth-field"><span>Categoría donde ${data.teamRole==='staff'?'entrenas':'juegas'}</span><select name="category"${state(team)}>${options(this.categories.map(x=>[x,x]),data.category)}</select></label></div>
-  ${field('data-birth-field',player,'Fecha de nacimiento del jugador',on=>`<input type="date" name="birthDate" min="1900-01-01" max="${new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(new Date())}" value="${E(data.birthDate||'')}"${state(on)}>`)}
+  <label class="privacy-check" data-other-field${player&&known?'':' hidden'}><input type="checkbox" name="otherPlayer" data-other-player${other?' checked':''}${player&&known?'':' disabled'}>Registro a otra persona como su tutor/a (el jugador no soy yo)</label>
+  ${field('data-birth-field',askBirth,'Fecha de nacimiento del jugador',on=>`<input type="date" name="birthDate" min="1900-01-01" max="${new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(new Date())}" value="${E(data.birthDate||'')}"${state(on)}>`)}
   <div data-private-fields${personal?'':' hidden'}>${field('',true,'DNI o NIE',on=>`<input name="dni" autocomplete="off" autocapitalize="characters" maxlength="12" placeholder="12345678Z" value="${E(data.dni||'')}"${state(personal)}>`)}${field('',true,'Teléfono',on=>`<input name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="600 000 000" value="${E(data.phone||'')}"${state(personal)}>`)}<p class="auth-access-note">El DNI y el teléfono solo los ve la administración del club.</p></div>
   ${field('data-member-field',member,'Número de socio',on=>`<input name="memberNumber" inputmode="numeric" pattern="[0-9]{1,12}" maxlength="12" value="${E(data.memberNumber||'')}"${state(on)}>`)}
   <label class="privacy-check" data-guardian-field${player?'':' hidden'}><input type="checkbox" name="guardianAccepted"${state(player)}>Declaro que los datos son míos o que soy el tutor legal del jugador y autorizo el tratamiento descrito en la <a href="privacy.html">política de privacidad</a>.</label></div>`;
@@ -167,9 +170,10 @@ window.ClubRegistration={
   return `<dialog class="registration-dialog" data-registration-dialog aria-labelledby="registration-title" aria-describedby="registration-description"><div class="auth-layout"><section class="auth-card"><div class="auth-brand"><img src="crest.png" alt="Escudo del CD Menciana"><span class="auth-eyebrow">COMPLETA TU REGISTRO</span></div><h1 id="registration-title">Completa tu registro</h1><p id="registration-description" class="auth-subtitle">Antes de continuar, completa tus datos. También son obligatorios al entrar con Google.</p>${ClubAuth.feedback()}${ClubAccess.error?`<p role="alert" class="auth-feedback is-error">${E(ClubAccess.error)}</p>`:''}<form data-registration-form><div class="registration-name"><label class="auth-field"><span>Nombre</span><input name="firstName" autocomplete="given-name" minlength="2" maxlength="50" required value="${E(data.firstName??split.first)}"></label><label class="auth-field"><span>Apellidos</span><input name="lastName" autocomplete="family-name" minlength="2" maxlength="60" required value="${E(data.lastName??split.last)}"></label></div>${this.fields(data)}<button type="submit" class="auth-primary">Completar registro ${CDM.icon('arrow')}</button></form><p class="auth-access-note">El club revisará los datos de socios y equipos para activar sus accesos.</p><button type="button" data-auth-action="logout" class="auth-text-button">Cerrar sesión</button>${window.ClubDeletion?ClubDeletion.button():''}</section></div></dialog>`;
  },
  update(form){
-  const type=form.elements.registrationType.value,team=type==='team',member=type==='member',player=team&&form.elements.teamRole.value==='player';
+  const type=form.elements.registrationType.value,team=type==='team',member=type==='member',player=team&&form.elements.teamRole.value==='player',known=this.knownBirth(),other=!!form.elements.otherPlayer?.checked;
+  const choice=form.querySelector('[data-other-field]');if(choice){choice.hidden=!(player&&known);choice.querySelector('input').disabled=!(player&&known)||ClubAuth.busy;}
   const category=form.querySelector('[data-team-fields] label:last-child span');if(category)category.textContent='Categoría donde '+(form.elements.teamRole.value==='staff'?'entrenas':'juegas');
-  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player],['[data-guardian-field]',player],['[data-private-fields]',this.needsPrivate(type)]]){
+  for(const [selector,active] of [['[data-member-field]',member],['[data-team-fields]',team],['[data-birth-field]',player&&(!known||other)],['[data-guardian-field]',player],['[data-private-fields]',this.needsPrivate(type)]]){
    const group=form.querySelector(selector);group.hidden=!active;
    for(const input of group.querySelectorAll('input,select')){input.disabled=!active||ClubAuth.busy;input.required=active;}
   }
@@ -183,14 +187,17 @@ window.ClubRegistration={
  // Any registration error also opens a window the person has to close, so it cannot go unnoticed.
  failed(error){window.CDM?.alert?.('No se ha podido completar el registro',error?.message||'Revisa los datos y vuelve a intentarlo.');},
  async save(data){
+  const known=this.knownBirth();if(data.registrationType==='team'&&data.teamRole==='player'&&data.otherPlayer!=='on'&&known)data={...data,birthDate:known};
   const value=this.validate(data);this.guardian(data);const secret=this.needsPrivate(value.registrationType)?this.privateValue(data):null,member=value.registrationType==='member';
   // Socios must match the club's list (number, DNI and phone) before the account is created.
   if(member)await this.post('/member/check',{memberNumber:value.memberNumber,dni:secret.dni,phone:secret.phone});
   if(secret)await this.savePrivate(secret);
   await ClubAccess.saveRegistration(value);
+  // The club administrator gets a notification about the new account; a failure never blocks the registration.
+  this.post('/account/registered',{}).catch(()=>{});
   if(member){try{const claim=await this.post('/member/claim',{});this.notice=claim.verified?'Alta de socio validada. Ya tienes tu carnet en la Zona de socios.':'Tu número de socio no tiene DNI o teléfono en el listado del club. El club validará tu alta.';if(claim.verified)await ClubAccess.sync();ClubAuth.showFeedback(this.notice,!claim.verified);}catch(error){ClubAuth.showFeedback(error.message,true);this.failed(error);}}this.draft={};window.dispatchEvent(new CustomEvent('club-registration-complete'));}
 };
-document.addEventListener('change',event=>{if(event.target.matches('[data-registration-type],[data-team-role]'))ClubRegistration.update(event.target.form);});
+document.addEventListener('change',event=>{if(event.target.matches('[data-registration-type],[data-team-role],[data-other-player]'))ClubRegistration.update(event.target.form);});
 document.addEventListener('input',event=>{const form=event.target.closest('[data-registration-form]');if(form)ClubRegistration.draft=Object.fromEntries(new FormData(form));});
 document.addEventListener('submit',async event=>{
  const form=event.target.closest('[data-registration-form]');if(!form)return;event.preventDefault();if(ClubAuth.busy)return;
