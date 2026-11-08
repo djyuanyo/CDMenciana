@@ -374,14 +374,15 @@
       "date": "2026-11-22",
       "time": "",
       "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
+      "acta_url": ""
     },
     {
       "id": "49465413-7",
@@ -393,14 +394,15 @@
       "date": "2026-11-22",
       "time": "",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
+      "acta_url": ""
     },
     {
       "id": "49465413-7-3",
@@ -412,14 +414,15 @@
       "date": "2026-11-22",
       "time": "",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
+      "acta_url": ""
     },
     {
       "id": "49465413-8-1",
@@ -3454,7 +3457,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-07T18:48:32.216917+00:00",
+  "updated_at": "2026-11-08T02:21:27.669596+00:00",
   "rounds": [
     1,
     2,
@@ -3583,14 +3586,15 @@
       "date": "2026-11-22",
       "time": "",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
+      "acta_url": ""
     },
     {
       "id": "49465413-8",
@@ -3863,7 +3867,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-07T18:48:33.170830+00:00",
+  "staff_updated_at": "2026-11-08T02:21:28.571377+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
