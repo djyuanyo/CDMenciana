@@ -390,11 +390,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -402,7 +402,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -441,7 +441,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:56.659287+00:00"
+      "profile_updated_at": "2026-11-08T10:29:01.060785+00:00"
     },
     {
       "id": "6cc87d8dac8e41d6",
@@ -518,11 +518,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -530,7 +530,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -569,7 +569,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:50.684698+00:00"
+      "profile_updated_at": "2026-11-08T10:28:55.084053+00:00"
     },
     {
       "id": "85c50505d9d9ad1e",
@@ -1287,7 +1287,8 @@
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "a0c66a2136382103",
@@ -1445,7 +1446,8 @@
         "played": 7,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "163f347ba8ecb255",
@@ -1603,7 +1605,8 @@
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "13a3983701280536",
