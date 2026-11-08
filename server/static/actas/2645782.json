@@ -496,8 +496,8 @@
       "profile_updated_at": "2026-11-07T01:03:59.400251+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 6,
-        "called": 7,
+        "starts": 7,
+        "called": 8,
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -568,8 +568,8 @@
       "profile_updated_at": "2026-11-06T15:17:43.653424+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 6,
-        "called": 6,
+        "starts": 7,
+        "called": 7,
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -638,10 +638,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 8,
-        "starts": 5,
-        "called": 7,
-        "played": 6,
+        "goals": 12,
+        "starts": 6,
+        "called": 8,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -711,8 +711,8 @@
       ],
       "competition_summary": {
         "goals": 0,
-        "starts": 2,
-        "called": 6,
+        "starts": 3,
+        "called": 7,
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -784,7 +784,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 2,
-        "called": 6,
+        "called": 7,
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -854,10 +854,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 0,
+        "goals": 1,
         "starts": 1,
-        "called": 7,
-        "played": null,
+        "called": 8,
+        "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -926,10 +926,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 3,
+        "goals": 4,
         "starts": 4,
-        "called": 6,
-        "played": 6,
+        "called": 7,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1000,7 +1000,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 4,
-        "called": 7,
+        "called": 8,
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -1070,10 +1070,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 8,
+        "goals": 9,
         "starts": 2,
-        "called": 7,
-        "played": 6,
+        "called": 8,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1144,7 +1144,7 @@
       "competition_summary": {
         "goals": 3,
         "starts": 1,
-        "called": 7,
+        "called": 8,
         "played": 5,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -1214,10 +1214,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 0,
+        "goals": 1,
         "starts": 0,
-        "called": 7,
-        "played": null,
+        "called": 8,
+        "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1286,10 +1286,10 @@
         }
       ],
       "competition_summary": {
-        "goals": 8,
+        "goals": 9,
         "starts": 0,
-        "called": 6,
-        "played": 5,
+        "called": 7,
+        "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1360,7 +1360,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 7,
+        "called": 8,
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
@@ -1570,19 +1570,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "7"
+              "8"
             ],
             [
               "Suplente",
-              "0"
+              "1"
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1612,16 +1612,16 @@
           "rows": [
             [
               "Total",
-              "10"
+              "14"
             ],
             [
               "Goles por partido",
-              "1.4"
+              "1.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T22:36:24.833822+00:00"
+      "profile_updated_at": "2026-11-08T17:11:19.006235+00:00"
     },
     {
       "id": "92ad5100de56d9b6",
@@ -1634,19 +1634,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "3"
-            ],
-            [
-              "Suplente",
               "4"
             ],
             [
+              "Suplente",
+              "5"
+            ],
+            [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1676,7 +1676,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
@@ -1685,7 +1685,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-31T22:36:23.844219+00:00"
+      "profile_updated_at": "2026-11-08T17:11:19.972195+00:00"
     },
     {
       "id": "6e144c7c23f38991",
@@ -1749,7 +1749,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:36.546266+00:00"
+      "profile_updated_at": "2026-11-08T10:29:17.996997+00:00"
     },
     {
       "id": "c8d1631ac46482a4",
@@ -1813,7 +1813,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:51.668092+00:00"
+      "profile_updated_at": "2026-11-08T10:28:56.081819+00:00"
     },
     {
       "id": "ea5d917cd8f59170",
@@ -1877,7 +1877,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:53.654266+00:00"
+      "profile_updated_at": "2026-11-08T10:28:58.042099+00:00"
     },
     {
       "id": "fc2fabda2a12b65e",
@@ -2005,7 +2005,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:54.679450+00:00"
+      "profile_updated_at": "2026-11-08T10:28:59.057916+00:00"
     },
     {
       "id": "9f8479e11dbe8273",
@@ -2082,11 +2082,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "6"
+              "8"
             ],
             [
               "Suplente",
@@ -2094,7 +2094,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -2111,7 +2111,7 @@
             ],
             [
               "Doble tarjeta amarilla",
-              "0"
+              "1"
             ],
             [
               "Tarjeta roja",
@@ -2124,16 +2124,16 @@
           "rows": [
             [
               "Total",
-              "7"
+              "8"
             ],
             [
               "Goles por partido",
-              "1.0"
+              "0.9"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:06.959511+00:00"
+      "profile_updated_at": "2026-11-08T17:11:17.985534+00:00"
     }
   ],
   "staff": [

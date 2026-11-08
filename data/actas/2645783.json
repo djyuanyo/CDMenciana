@@ -1129,19 +1129,19 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -1180,11 +1180,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-30T20:55:10.956429+00:00",
+      "profile_updated_at": "2026-11-08T17:11:32.021300+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 4,
-        "called": 7,
+        "starts": 5,
+        "called": 8,
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
@@ -1256,8 +1256,8 @@
       "competition_summary": {
         "goals": 2,
         "starts": 6,
-        "called": 8,
-        "played": 8,
+        "called": 9,
+        "played": 9,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
       }
@@ -1345,7 +1345,7 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "8"
             ],
             [
               "Titular",
@@ -1353,11 +1353,11 @@
             ],
             [
               "Suplente",
-              "3"
+              "5"
             ],
             [
               "Jugados",
-              "4"
+              "6"
             ]
           ]
         },
@@ -1387,24 +1387,24 @@
           "rows": [
             [
               "Total",
-              "5"
+              "7"
             ],
             [
               "Goles por partido",
-              "0.8"
+              "0.9"
             ]
           ]
         }
       ],
       "competition_summary": {
-        "goals": 6,
+        "goals": 7,
         "starts": 3,
-        "called": 7,
-        "played": 6,
+        "called": 8,
+        "played": 7,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-10-24T14:34:13.240234+00:00"
+      "profile_updated_at": "2026-11-08T17:11:38.021347+00:00"
     },
     {
       "id": "d073e31dc63b5099",
@@ -1544,7 +1544,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 4,
-        "called": 8,
+        "called": 9,
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
@@ -1561,19 +1561,19 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "7"
             ],
             [
               "Titular",
-              "1"
-            ],
-            [
-              "Suplente",
               "3"
             ],
             [
-              "Jugados",
+              "Suplente",
               "4"
+            ],
+            [
+              "Jugados",
+              "7"
             ]
           ]
         },
@@ -1582,11 +1582,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "0"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1612,11 +1612,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-10-24T14:39:51.754628+00:00",
+      "profile_updated_at": "2026-11-08T17:11:36.010927+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 2,
-        "called": 6,
+        "starts": 3,
+        "called": 7,
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
