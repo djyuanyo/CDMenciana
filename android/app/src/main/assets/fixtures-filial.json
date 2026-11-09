@@ -367,26 +367,6 @@
     {
       "id": "49113036-5-3",
       "round": 5,
-      "home": "C.D. CARCABUEY",
-      "away": "C.D. FUTBOL SALA LUQUE",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
-      "date": "2026-11-15",
-      "time": "",
-      "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
-      "acta_url": ""
-    },
-    {
-      "id": "49113036-5-4",
-      "round": 5,
       "home": "C.D. ASOC. JUVENIL PALENCIANA",
       "away": "C.D. MONTILLA FUTSAL",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
@@ -402,6 +382,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
+      "acta_url": ""
+    },
+    {
+      "id": "49113036-5-4",
+      "round": 5,
+      "home": "C.D. CARCABUEY",
+      "away": "C.D. FUTBOL SALA LUQUE",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "date": "2026-11-15",
+      "time": "",
+      "venue": "Carcabuey - PABELLON MUNICIPAL",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
       "acta_url": ""
     },
     {
@@ -2671,7 +2671,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-11-09T18:49:44.482640+00:00",
+  "updated_at": "2026-11-09T23:30:56.651623+00:00",
   "rounds": [
     1,
     2,
@@ -3129,7 +3129,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-11-09T18:49:45.390103+00:00",
+  "staff_updated_at": "2026-11-09T23:30:57.902253+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
