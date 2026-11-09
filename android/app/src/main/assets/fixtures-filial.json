@@ -325,23 +325,23 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515"
     },
     {
-      "id": "49113036-5-1",
+      "id": "49113036-5",
       "round": 5,
-      "home": "C.D. ASOC. JUVENIL PALENCIANA",
-      "away": "C.D. MONTILLA FUTSAL",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg",
+      "home": "C.D. APAGA Y VAMONOS",
+      "away": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
       "date": "2026-11-15",
       "time": "",
-      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
+      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
       "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
       "acta_url": ""
     },
     {
@@ -385,23 +385,23 @@
       "acta_url": ""
     },
     {
-      "id": "49113036-5",
+      "id": "49113036-5-4",
       "round": 5,
-      "home": "C.D. APAGA Y VAMONOS",
-      "away": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "home": "C.D. ASOC. JUVENIL PALENCIANA",
+      "away": "C.D. MONTILLA FUTSAL",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg",
       "date": "2026-11-15",
       "time": "",
-      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
+      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
       "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484315",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334",
       "acta_url": ""
     },
     {
@@ -2671,7 +2671,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-11-09T08:00:18.582279+00:00",
+  "updated_at": "2026-11-09T14:25:06.732580+00:00",
   "rounds": [
     1,
     2,
@@ -3129,7 +3129,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-11-09T08:00:19.508008+00:00",
+  "staff_updated_at": "2026-11-09T14:25:07.376586+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
