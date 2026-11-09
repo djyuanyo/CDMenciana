@@ -477,7 +477,8 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "4911390df9ec99de",
@@ -491,7 +492,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "1cdae497b3bb44b4",
@@ -505,7 +507,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2c361d71da3bdee5",
@@ -878,7 +881,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -886,11 +889,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -924,12 +927,12 @@
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T07:17:26.186938+00:00",
+      "profile_updated_at": "2026-11-09T18:55:20.956339+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 1,
@@ -951,7 +954,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3a0b89eb8a3d9079",
@@ -1037,7 +1041,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2965b3744a19c532",
