@@ -325,6 +325,26 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515"
     },
     {
+      "id": "49113036-5-1",
+      "round": 5,
+      "home": "C.D. VILLA DE BENAMEJI",
+      "away": "C.D. EGA FUTSAL",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png",
+      "date": "2026-11-15",
+      "time": "",
+      "venue": "Benamejí - PABELLON MUNICIPAL ALBERTO AGUILAR LEIVA",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261",
+      "acta_url": ""
+    },
+    {
       "id": "49113036-5",
       "round": 5,
       "home": "C.D. APAGA Y VAMONOS",
@@ -345,7 +365,7 @@
       "acta_url": ""
     },
     {
-      "id": "49113036-5-2",
+      "id": "49113036-5-3",
       "round": 5,
       "home": "C.D. CARCABUEY",
       "away": "C.D. FUTBOL SALA LUQUE",
@@ -362,26 +382,6 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659",
-      "acta_url": ""
-    },
-    {
-      "id": "49113036-5-3",
-      "round": 5,
-      "home": "C.D. VILLA DE BENAMEJI",
-      "away": "C.D. EGA FUTSAL",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/04335.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001587127_Escudo_egafutsal.png",
-      "date": "2026-11-15",
-      "time": "",
-      "venue": "Benamejí - PABELLON MUNICIPAL ALBERTO AGUILAR LEIVA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=433515",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=40276261",
       "acta_url": ""
     },
     {
@@ -2686,7 +2686,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-11-09T14:25:06.732580+00:00",
+  "updated_at": "2026-11-09T18:48:22.219571+00:00",
   "rounds": [
     1,
     2,
@@ -3144,7 +3144,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-11-09T14:25:07.376586+00:00",
+  "staff_updated_at": "2026-11-09T18:48:23.027061+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
