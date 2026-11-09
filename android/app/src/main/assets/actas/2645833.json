@@ -870,8 +870,7 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "142b9166c8b48d95",
@@ -1101,8 +1100,7 @@
         "played": 5,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "67088e523a4e1d3e",
@@ -1116,8 +1114,7 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "7962dc22ff8c4e3e",
@@ -1131,8 +1128,7 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "1ca4c170bbb016b8",
@@ -1146,8 +1142,7 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "30447485e7fb7c5f",
@@ -1778,14 +1773,6 @@
       "name": "DELGADO ROMERO, ISRAEL",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=48388782&codacta=2645833&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 1,
-        "called": 1,
-        "played": null,
-        "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
-        "source": "actas oficiales RFAF"
-      },
       "stats": [
         {
           "title": "Partidos",
@@ -1843,7 +1830,15 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-09T08:05:48.033952+00:00"
+      "profile_updated_at": "2026-11-09T08:05:48.033952+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 1,
+        "called": 1,
+        "played": null,
+        "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+        "source": "actas oficiales RFAF"
+      }
     },
     {
       "id": "a42a6ade88b81157",
@@ -1950,5 +1945,5 @@
   ],
   "id": "2645833",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645833",
-  "updated_at": "2026-11-09T05:45:31.832597+00:00"
+  "updated_at": "2026-11-09T14:26:08.357105+00:00"
 }
