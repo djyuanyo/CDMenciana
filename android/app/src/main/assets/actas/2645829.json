@@ -404,11 +404,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -416,7 +416,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -455,7 +455,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:04:01.399285+00:00",
+      "profile_updated_at": "2026-11-09T01:02:33.058117+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 4,
@@ -477,7 +477,8 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "4911390df9ec99de",
@@ -491,7 +492,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "1cdae497b3bb44b4",
@@ -505,7 +507,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2c361d71da3bdee5",
@@ -734,7 +737,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -742,11 +745,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -776,16 +779,16 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:04:00.384251+00:00",
+      "profile_updated_at": "2026-11-09T01:02:32.082583+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 3,
@@ -951,7 +954,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3a0b89eb8a3d9079",
@@ -964,7 +968,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "9"
             ],
             [
               "Titular",
@@ -972,11 +976,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -1010,12 +1014,12 @@
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:48.677107+00:00",
+      "profile_updated_at": "2026-11-09T01:02:23.059480+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 2,
@@ -1037,7 +1041,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2965b3744a19c532",
@@ -1267,7 +1272,8 @@
         "played": 6,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f52cb4436c90e844",
@@ -1281,7 +1287,8 @@
         "played": null,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "ef05767a2a35acbc",
@@ -1295,7 +1302,8 @@
         "played": 8,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3ae75b68f284fc05",
@@ -1525,7 +1533,8 @@
         "played": 4,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "42f2cde8d2ef3182",
@@ -1539,7 +1548,8 @@
         "played": 5,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3e2feb259594b896",

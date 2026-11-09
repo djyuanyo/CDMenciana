@@ -437,11 +437,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
@@ -449,7 +449,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -488,7 +488,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:59.400251+00:00",
+      "profile_updated_at": "2026-11-09T01:02:31.058820+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 7,
@@ -509,11 +509,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
@@ -521,7 +521,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -560,7 +560,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:43.653424+00:00",
+      "profile_updated_at": "2026-11-09T01:02:18.057581+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 7,
@@ -653,11 +653,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
@@ -665,7 +665,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -695,16 +695,16 @@
           "rows": [
             [
               "Total",
-              "8"
+              "12"
             ],
             [
               "Goles por partido",
-              "1.1"
+              "1.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:54.408306+00:00",
+      "profile_updated_at": "2026-11-09T01:02:27.070689+00:00",
       "competition_summary": {
         "goals": 12,
         "starts": 6,
@@ -870,7 +870,8 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "142b9166c8b48d95",
@@ -883,7 +884,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -891,7 +892,7 @@
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
@@ -934,7 +935,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:55.381693+00:00",
+      "profile_updated_at": "2026-11-09T01:02:28.068563+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 4,
@@ -955,7 +956,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -963,7 +964,7 @@
             ],
             [
               "Suplente",
-              "5"
+              "6"
             ],
             [
               "Jugados",
@@ -980,7 +981,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "4"
+              "5"
             ],
             [
               "Doble tarjeta amarilla",
@@ -997,7 +998,7 @@
           "rows": [
             [
               "Total",
-              "8"
+              "9"
             ],
             [
               "Goles por partido",
@@ -1006,7 +1007,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T00:23:57.611251+00:00",
+      "profile_updated_at": "2026-11-09T01:02:10.083498+00:00",
       "competition_summary": {
         "goals": 9,
         "starts": 2,
@@ -1100,7 +1101,8 @@
         "played": 5,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "67088e523a4e1d3e",
@@ -1114,7 +1116,8 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "7962dc22ff8c4e3e",
@@ -1128,7 +1131,8 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "1ca4c170bbb016b8",
@@ -1142,7 +1146,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "30447485e7fb7c5f",
@@ -1363,11 +1368,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
@@ -1375,7 +1380,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -1388,7 +1393,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1414,7 +1419,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-06T15:17:45.656440+00:00"
+      "profile_updated_at": "2026-11-09T01:02:20.087679+00:00"
     },
     {
       "id": "48e51894ecec3e85",
@@ -1715,7 +1720,7 @@
           "rows": [
             [
               "Convocados",
-              "1"
+              "2"
             ],
             [
               "Titular",
@@ -1723,7 +1728,7 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
@@ -1766,7 +1771,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-05T11:02:46.738547+00:00"
+      "profile_updated_at": "2026-11-09T01:02:08.079890+00:00"
     },
     {
       "id": "dc8bee085d342e2f",
@@ -1780,7 +1785,8 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "a42a6ade88b81157",
