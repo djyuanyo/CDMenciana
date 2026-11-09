@@ -870,7 +870,8 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "142b9166c8b48d95",
@@ -1100,7 +1101,8 @@
         "played": 5,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "67088e523a4e1d3e",
@@ -1114,7 +1116,8 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "7962dc22ff8c4e3e",
@@ -1128,7 +1131,8 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "1ca4c170bbb016b8",
@@ -1142,7 +1146,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "30447485e7fb7c5f",
@@ -1780,7 +1785,65 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "2"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-09T08:05:48.033952+00:00"
     },
     {
       "id": "a42a6ade88b81157",
