@@ -477,7 +477,8 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "4911390df9ec99de",
@@ -491,7 +492,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "1cdae497b3bb44b4",
@@ -505,7 +507,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2c361d71da3bdee5",
@@ -662,7 +665,7 @@
           "rows": [
             [
               "Convocados",
-              "4"
+              "5"
             ],
             [
               "Titular",
@@ -670,11 +673,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -708,12 +711,12 @@
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.2"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T10:29:13.079726+00:00",
+      "profile_updated_at": "2026-11-10T09:59:19.808083+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -951,7 +954,8 @@
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3a0b89eb8a3d9079",
@@ -1037,7 +1041,8 @@
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2965b3744a19c532",
@@ -1050,11 +1055,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -1062,7 +1067,7 @@
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1101,7 +1106,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T10:29:12.050865+00:00",
+      "profile_updated_at": "2026-11-10T09:59:18.777503+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 4,
