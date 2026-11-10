@@ -541,7 +541,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:36:57.122131+00:00"
+      "profile_updated_at": "2026-11-10T02:17:49.679298+00:00"
     },
     {
       "id": "462f2e708f616eee",
@@ -575,7 +575,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Tarjeta amarilla",
@@ -605,7 +605,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:36:59.122498+00:00"
+      "profile_updated_at": "2026-11-10T02:17:51.873499+00:00"
     },
     {
       "id": "0fe97c8c31a7e827",
@@ -669,7 +669,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:37:01.124623+00:00"
+      "profile_updated_at": "2026-11-10T02:17:53.851843+00:00"
     },
     {
       "id": "406c07cef5c3328d",
@@ -861,7 +861,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:36:54.184742+00:00"
+      "profile_updated_at": "2026-11-10T02:17:46.893644+00:00"
     },
     {
       "id": "d16d8fc87b7ceedb",
@@ -895,7 +895,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Tarjeta amarilla",
@@ -925,7 +925,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:37:00.141837+00:00"
+      "profile_updated_at": "2026-11-10T02:17:52.704056+00:00"
     },
     {
       "id": "e782043bca5d7208",
@@ -959,7 +959,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -989,7 +989,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:36:56.136722+00:00"
+      "profile_updated_at": "2026-11-10T02:17:48.693641+00:00"
     },
     {
       "id": "b2dfbbe46f13cbc4",
@@ -1117,7 +1117,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:37:02.133010+00:00"
+      "profile_updated_at": "2026-11-10T02:17:54.687667+00:00"
     },
     {
       "id": "6119128335de94b3",
@@ -1151,7 +1151,7 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
@@ -1181,7 +1181,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:37:03.095212+00:00"
+      "profile_updated_at": "2026-11-10T02:17:55.705454+00:00"
     },
     {
       "id": "b7af9c5be0348903",
@@ -1215,7 +1215,7 @@
           "rows": [
             [
               "Total",
-              "0"
+              "1"
             ],
             [
               "Tarjeta amarilla",
@@ -1245,7 +1245,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-08T02:36:58.129292+00:00"
+      "profile_updated_at": "2026-11-10T02:17:50.680394+00:00"
     },
     {
       "id": "b7dbb3e8e7ad3bb7",
@@ -1619,7 +1619,8 @@
         "played": null,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "598f3b6e088051cf",
@@ -1633,7 +1634,8 @@
         "played": 9,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c4a433597926f356",
