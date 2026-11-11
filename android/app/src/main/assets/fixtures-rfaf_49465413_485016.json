@@ -320,9 +320,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
     {
       "id": "49465413-6-2",
@@ -340,9 +340,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718913",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718913"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815"
     },
     {
       "id": "49465413-6-3",
@@ -360,9 +360,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718914",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718914"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605"
     },
     {
       "id": "49465413-7-1",
@@ -1367,8 +1367,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "TORO BRIONES, DANIEL",
@@ -1444,8 +1443,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "PEREZ REYES, MARIO",
@@ -1521,8 +1519,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "GONZALEZ DELGADO, MARCOS",
@@ -1598,8 +1595,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "CORTES BLANCA, SOFIA",
@@ -1675,8 +1671,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "GONZALEZ DELGADO, LEO",
@@ -1752,8 +1747,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "MARIN URBANO, ADRIAN",
@@ -1829,8 +1823,7 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "RUIZ FERNÁNDEZ, MARIO",
@@ -1906,8 +1899,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "GORDILLO MOLINA, JUAN JOSE",
@@ -1983,8 +1975,7 @@
         "played": 2,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "ESCALONA QUIRÓS, JUAN ANTONIO",
@@ -2060,8 +2051,7 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "JURADO ORDOÑEZ, MARCOS",
@@ -2137,8 +2127,7 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 5
+      }
     },
     {
       "name": "DE LA TORRE RAMIREZ, RODRIGO",
@@ -3457,7 +3446,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-11T21:57:59.283366+00:00",
+  "updated_at": "2026-11-11T21:59:29.472733+00:00",
   "rounds": [
     1,
     2,
@@ -3572,9 +3561,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
     {
       "id": "49465413-7",
@@ -3845,7 +3834,7 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-11T07:22:51.959733+00:00",
+  "roster_updated_at": "2026-11-11T22:09:10.247210+00:00",
   "stats_updated_at": "2026-11-11T07:22:51.959733+00:00",
   "staff": [
     {
@@ -3867,7 +3856,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-11T21:57:59.937430+00:00",
+  "staff_updated_at": "2026-11-11T21:59:30.574778+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
