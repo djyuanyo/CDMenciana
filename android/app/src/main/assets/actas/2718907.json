@@ -412,7 +412,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T23:02:38.719281+00:00",
+      "profile_updated_at": "2026-11-12T03:08:17.336717+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 2,
@@ -420,7 +420,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "20975cf934d6655d",
@@ -484,7 +485,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T23:02:44.725044+00:00",
+      "profile_updated_at": "2026-11-12T03:08:23.397128+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 3,
@@ -492,7 +493,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "ac8992c8715e1380",
@@ -505,11 +507,11 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -517,7 +519,7 @@
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -547,16 +549,16 @@
           "rows": [
             [
               "Total",
-              "8"
+              "10"
             ],
             [
               "Goles por partido",
-              "4.0"
+              "3.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-04T22:02:38.166250+00:00",
+      "profile_updated_at": "2026-11-12T03:08:33.132606+00:00",
       "competition_summary": {
         "goals": 10,
         "starts": 3,
@@ -564,7 +566,8 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "ae50680e86194e08",
@@ -844,7 +847,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T23:02:42.566184+00:00",
+      "profile_updated_at": "2026-11-12T03:08:21.147234+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -852,7 +855,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "3489e35a43ab5dbd",
@@ -916,7 +920,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T23:02:48.571455+00:00",
+      "profile_updated_at": "2026-11-12T03:08:27.326540+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 1,
@@ -924,7 +928,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "7a5490cb4172cc1a",
@@ -937,7 +942,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -945,11 +950,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "3"
+              "4"
             ]
           ]
         },
@@ -983,12 +988,12 @@
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:15:32.611129+00:00",
+      "profile_updated_at": "2026-11-12T03:08:28.147706+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 2,
@@ -996,7 +1001,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "58e2b3426f3850fd",
@@ -1009,7 +1015,7 @@
           "rows": [
             [
               "Convocados",
-              "2"
+              "3"
             ],
             [
               "Titular",
@@ -1017,11 +1023,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -1055,12 +1061,12 @@
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-10-28T23:15:35.769134+00:00",
+      "profile_updated_at": "2026-11-12T03:08:31.131318+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 1,
@@ -1068,7 +1074,8 @@
         "played": 3,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 5
     },
     {
       "id": "eb23e2c97b28a191",
