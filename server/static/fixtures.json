@@ -1507,26 +1507,6 @@
     {
       "id": "48466109-10-4",
       "round": 10,
-      "home": "U.D. ALCHOYANO",
-      "away": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001162576_PCD_UD_ALCHOYANO___3288.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg",
-      "date": "2026-11-14",
-      "time": "20:00",
-      "venue": "Alcalá De Los Gazules - PICO DEL CAMPO PABELLON POLIDEPORTIVO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
-      "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645839",
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
-    },
-    {
-      "id": "48466109-10-5",
-      "round": 10,
       "home": "C.D. VILLALBA F.S.",
       "away": "C.D. OLIMPIC DE TRIANA",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
@@ -1542,7 +1522,27 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645842"
+    },
+    {
+      "id": "48466109-10-5",
+      "round": 10,
+      "home": "U.D. ALCHOYANO",
+      "away": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001162576_PCD_UD_ALCHOYANO___3288.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg",
+      "date": "2026-11-14",
+      "time": "20:15",
+      "venue": "Alcalá De Los Gazules - PICO DEL CAMPO PABELLON POLIDEPORTIVO",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
+      "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645839",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
     },
     {
       "id": "48466109-10-6",
@@ -1562,7 +1562,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645837"
     },
     {
       "id": "48466109-10-7",
@@ -7512,7 +7512,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-12T03:00:26.281275+00:00",
+  "updated_at": "2026-11-12T10:59:31.552768+00:00",
   "rounds": [
     1,
     2,
@@ -8453,7 +8453,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-12T03:00:27.453958+00:00",
+  "staff_updated_at": "2026-11-12T10:59:32.640758+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
