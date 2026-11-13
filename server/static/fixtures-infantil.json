@@ -500,9 +500,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745968",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745968"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
     },
     {
       "id": "49520774-6-1",
@@ -514,10 +514,10 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 9,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
@@ -533,10 +533,10 @@
       "date": "2026-11-15",
       "time": "",
       "venue": "Fuente-Tójar - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 13,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
@@ -3174,7 +3174,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-11-12T23:56:13.412278+00:00",
+  "updated_at": "2026-11-13T20:38:55.965541+00:00",
   "rounds": [
     1,
     2,
@@ -3293,9 +3293,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745968",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745968"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677"
     },
     {
       "id": "49520774-6",
