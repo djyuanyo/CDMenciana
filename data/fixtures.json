@@ -1534,13 +1534,13 @@
       "date": "2026-11-14",
       "time": "20:20",
       "venue": "Alcalá De Los Gazules - PICO DEL CAMPO PABELLON POLIDEPORTIVO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 5,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645839&cod_acta=2645839",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645839&cod_acta=2645839",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
     },
@@ -7533,7 +7533,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-14T21:29:46.767811+00:00",
+  "updated_at": "2026-11-14T23:17:27.092665+00:00",
   "rounds": [
     1,
     2,
@@ -8474,7 +8474,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-14T21:29:47.725793+00:00",
+  "staff_updated_at": "2026-11-14T23:17:28.177362+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
