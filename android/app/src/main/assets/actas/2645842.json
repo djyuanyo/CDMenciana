@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "3 - 8",
           ""
         ]
       ]
@@ -74,6 +74,59 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(1') MENCHEN MARTÍNEZ, SANTIAGO"
+        ],
+        [
+          "Gol · 0 - 2",
+          "(5') CARICOL MARQUEZ, DAVID"
+        ],
+        [
+          "Gol · 0 - 3",
+          "(7') CARICOL MARQUEZ, DAVID"
+        ],
+        [
+          "Gol · 1 - 3",
+          "(17') RODRIGUEZ ROMERO, JUAN"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(21') RODRIGUEZ ROMERO, JUAN"
+        ],
+        [
+          "Gol · 2 - 4",
+          "(22') LOPEZ BENITEZ, DAVID"
+        ],
+        [
+          "Gol · 2 - 5",
+          "(24') MENCHEN MARTÍNEZ, SANTIAGO"
+        ],
+        [
+          "Gol · 2 - 6",
+          "(26') CARICOL MARQUEZ, DAVID"
+        ],
+        [
+          "Gol · 3 - 6",
+          "(33') MORENO PEREZ, SANTOS"
+        ],
+        [
+          "Gol · 3 - 7",
+          "(34') FERNANDEZ ANDRADES, JAIME"
+        ],
+        [
+          "Gol · 3 - 8",
+          "(38') ROLDAN AGUILERA, JESUS"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -225,6 +278,31 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(7') RODRIGUEZ ROMERO, JUAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(22') TALHA BARRERO, MOHAMED"
+        ],
+        [
+          "Tarjeta roja",
+          "(29') BENITEZ GIL, DANIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(34') RODRIGUEZ ROMERO, MARCO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. OLIMPIC DE TRIANA"
     },
@@ -333,6 +411,19 @@
         [
           "",
           "No presenta"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(15') BUEZAS HUMANES, GONZALO"
         ]
       ]
     }
@@ -517,6 +608,5 @@
   ],
   "id": "2645842",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645842",
-  "updated_at": "2026-11-14T19:27:50.299004+00:00",
-  "preview": true
+  "updated_at": "2026-11-14T21:30:58.986255+00:00"
 }

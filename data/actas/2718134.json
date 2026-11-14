@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "2 - 4",
+          "2 - 6",
           ""
         ]
       ]
@@ -74,6 +74,47 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(3') SANTAELLA GOMEZ, JOSE ANTONIO"
+        ],
+        [
+          "Gol · 0 - 2",
+          "(9') DOMINGUEZ POYATO, FRANCISCO MANUEL"
+        ],
+        [
+          "Gol · 0 - 3",
+          "(9') PINO AGUILAR, PABLO"
+        ],
+        [
+          "Gol · 1 - 3",
+          "(14') PRIEGO LUNA, IVAN"
+        ],
+        [
+          "Gol · 1 - 4",
+          "(16') SANTAELLA GOMEZ, JOSE ANTONIO"
+        ],
+        [
+          "Gol · 2 - 4",
+          "(18') RUZ BUJALANCE, FRANCISCO JOSE"
+        ],
+        [
+          "Gol · 2 - 5",
+          "(33') SANTAELLA GOMEZ, JOSE ANTONIO"
+        ],
+        [
+          "Gol · 2 - 6",
+          "(34') LEON ALCAIDE, CRISTIAN"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -212,6 +253,23 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(18') CABEZAS CORDOBA, RAUL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') BARBA VALVERDE, DIEGO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. MIRAGENIL F.S. NOLITO'S"
     },
@@ -328,6 +386,23 @@
         [
           "",
           "BASCON CABELLO, JOSE MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(31') CABELLO MORON, ALVARO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(32') MILLAN MUÑOZ, ALEJANDRO"
         ]
       ]
     }
@@ -512,6 +587,5 @@
   ],
   "id": "2718134",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718134",
-  "updated_at": "2026-11-14T19:27:50.299004+00:00",
-  "preview": true
+  "updated_at": "2026-11-14T21:30:58.986255+00:00"
 }
