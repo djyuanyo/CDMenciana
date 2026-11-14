@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "3 - 3",
+          "5 - 5",
           ""
         ]
       ]
@@ -74,6 +74,55 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(4') VAZQUEZ ALVAREZ, MARCOS"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(5') BAQUERO BEGINES, ALEJANDRO"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(9') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(14') MARTÍN RUIZ, CARLOS"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(16') MORALES RODRIGUEZ, IVAN"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(17') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(21') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Gol · 4 - 4",
+          "(24') BAQUERO BEGINES, ALEJANDRO"
+        ],
+        [
+          "Gol · 5 - 4",
+          "(29') RIOS AIDO, FRANCISCO JOSE"
+        ],
+        [
+          "Gol · 5 - 5",
+          "(39') RUIZ PALOMINO, PABLO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -235,6 +284,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(9') HERRERA GARCIA, LUIS ANGEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') RIOS AIDO, FRANCISCO JOSE"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') GUTIERREZ GUTIERREZ, JESUS"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA"
     },
@@ -343,6 +413,23 @@
         [
           "",
           "BOIXO ARAGON, MANUEL ANGEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(17') BAQUERO BEGINES, ALEJANDRO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(26') EL DAHER, LAUTARO"
         ]
       ]
     }
@@ -545,6 +632,5 @@
   ],
   "id": "2645839",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645839",
-  "updated_at": "2026-11-14T21:30:58.986255+00:00",
-  "preview": true
+  "updated_at": "2026-11-14T23:18:41.129208+00:00"
 }
