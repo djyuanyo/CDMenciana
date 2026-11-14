@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "3 - 2",
+          "4 - 5",
           ""
         ]
       ]
@@ -74,6 +74,51 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 0 - 1",
+          "(4') CASTILLO RAMIREZ, VICTOR MANUEL"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(9') ACERO FLORES, MARIO"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(11') LUQUE JIMENEZ, JACOB LUIS"
+        ],
+        [
+          "Gol en propia puerta · 2 - 2",
+          "(11') MORILLO AREVALO, RAFAEL"
+        ],
+        [
+          "Gol · 3 - 2",
+          "(17') ALONZO CASTILLO, ANGEL LUIS"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(23') CASTRO VERA, MANUEL"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(31') ACERO FLORES, MARIO"
+        ],
+        [
+          "Gol · 4 - 4",
+          "(34') AGUNDO MEJIAS, DAVID"
+        ],
+        [
+          "Gol · 4 - 5",
+          "(39') CUMPLIDO MESA, MIGUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -212,6 +257,31 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(22') ALONZO CASTILLO, ANGEL LUIS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(28') CHACON TORRES, JOSE ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(31') COBOS NAVARRO, RUBEN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') BERDUN SALERNO, RAFAEL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. EGA FUTSAL"
     },
@@ -333,6 +403,23 @@
         [
           "",
           "MORA RIVERA, SERGIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(9') CUMPLIDO MESA, MIGUEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(10') MUÑOZ MOLINA, ISMAEL"
         ]
       ]
     }
@@ -523,6 +610,5 @@
   ],
   "id": "2718133",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718133",
-  "updated_at": "2026-11-14T17:08:52.175570+00:00",
-  "preview": true
+  "updated_at": "2026-11-14T19:27:50.299004+00:00"
 }
