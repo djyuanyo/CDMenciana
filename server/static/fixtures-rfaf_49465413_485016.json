@@ -314,13 +314,13 @@
       "date": "2026-11-14",
       "time": "11:00",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 1,
+      "away_score": 9,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718912&cod_acta=2718912",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
@@ -829,10 +829,10 @@
     {
       "name": "MONTES RECIO, SERGIO",
       "team": "C.D. MENCIANA",
-      "played": 3,
-      "goals": 10,
+      "played": 4,
+      "goals": 11,
       "penalties": 1,
-      "average": 3.3333
+      "average": 2.75
     },
     {
       "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
@@ -867,7 +867,7 @@
       "average": 2.6667
     },
     {
-      "name": "SANCHEZ CAÑETE, ANGEL",
+      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 4,
       "goals": 7,
@@ -875,7 +875,7 @@
       "average": 1.75
     },
     {
-      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
+      "name": "SANCHEZ CAÑETE, ANGEL",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 4,
       "goals": 7,
@@ -893,10 +893,26 @@
     {
       "name": "BERMUDEZ GONZALEZ, VICTOR",
       "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 4,
+      "played": 5,
+      "goals": 7,
+      "penalties": 0,
+      "average": 1.4
+    },
+    {
+      "name": "VERA TORRES, RAFAEL",
+      "team": "C.D. MENCIANA",
+      "played": 5,
       "goals": 6,
       "penalties": 0,
-      "average": 1.5
+      "average": 1.2
+    },
+    {
+      "name": "MARIN URBANO, ADRIAN",
+      "team": "C.D. MENCIANA",
+      "played": 5,
+      "goals": 6,
+      "penalties": 0,
+      "average": 1.2
     },
     {
       "name": "MOLINA AGUILERA, RAUL",
@@ -915,14 +931,6 @@
       "average": 1.0
     },
     {
-      "name": "MARIN URBANO, ADRIAN",
-      "team": "C.D. MENCIANA",
-      "played": 4,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "MARQUEZ QUERO, RAFAEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 5,
@@ -931,16 +939,16 @@
       "average": 0.8
     },
     {
-      "name": "PEDROSA HIDALGO, JESÚS",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 4,
-      "goals": 3,
+      "name": "DE LA TORRE RAMIREZ, RODRIGO",
+      "team": "C.D. MENCIANA",
+      "played": 5,
+      "goals": 4,
       "penalties": 0,
-      "average": 0.75
+      "average": 0.8
     },
     {
-      "name": "VERA TORRES, RAFAEL",
-      "team": "C.D. MENCIANA",
+      "name": "JIMENEZ BORREGO, ISRAEL",
+      "team": "C.D. ENCINAS REALES C.F.",
       "played": 4,
       "goals": 3,
       "penalties": 0,
@@ -955,7 +963,7 @@
       "average": 0.75
     },
     {
-      "name": "JIMENEZ BORREGO, ISRAEL",
+      "name": "PEDROSA HIDALGO, JESÚS",
       "team": "C.D. ENCINAS REALES C.F.",
       "played": 4,
       "goals": 3,
@@ -971,16 +979,16 @@
       "average": 0.75
     },
     {
-      "name": "CAMPAÑA JARABA, JUAN",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 5,
       "goals": 3,
       "penalties": 0,
       "average": 0.6
     },
     {
-      "name": "MAIRELES RAMÍREZ, MANUEL",
-      "team": "C.D. ARAS FUTSAL A",
+      "name": "CAMPAÑA JARABA, JUAN",
+      "team": "C.D. SANTAELLA 2010",
       "played": 5,
       "goals": 3,
       "penalties": 0,
@@ -1003,30 +1011,6 @@
       "average": 1.0
     },
     {
-      "name": "MARIN MEDINA, PABLO",
-      "team": "C.D. CARCABUEY",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "DOMINGUEZ SANCHEZ, DAVID",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "MONTES MESA, ALVARO",
-      "team": "C.D. MENCIANA",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
       "name": "MONZON CAMPAÑA, RAFAEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 3,
@@ -1043,16 +1027,40 @@
       "average": 0.6667
     },
     {
-      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
-      "team": "C.D. ARAS FUTSAL A",
+      "name": "MARIN MEDINA, PABLO",
+      "team": "C.D. CARCABUEY",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "PRIEGO MONTES, LUIS",
+      "team": "C.D. MENCIANA",
       "played": 4,
       "goals": 2,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "DE LA TORRE RAMIREZ, RODRIGO",
-      "team": "C.D. MENCIANA",
+      "name": "GENIL MENDOZA, JOSE",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -1069,6 +1077,14 @@
     {
       "name": "ARJONA GARCIA, CARLOS",
       "team": "C.D. ENCINAS REALES C.F.",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "MONTES MESA, ALVARO",
+      "team": "C.D. MENCIANA",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -1099,14 +1115,6 @@
       "average": 0.5
     },
     {
-      "name": "GENIL MENDOZA, JOSE",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "GUTIÉRREZ MATAS, MANUELA",
       "team": "C.D. BOCA F.S. PRIEGO",
       "played": 1,
@@ -1115,16 +1123,16 @@
       "average": 1.0
     },
     {
-      "name": "GONZALEZ ZAVOIANU, LEONARDO",
-      "team": "C.D. BOCA F.S. PRIEGO",
+      "name": "PEREZ MORON, MANUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "PEREZ MORON, MANUEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "name": "ARANDA MONTES, OMAR",
+      "team": "C.D. ARAS FUTSAL A",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1139,8 +1147,8 @@
       "average": 0.5
     },
     {
-      "name": "ARANDA MONTES, OMAR",
-      "team": "C.D. ARAS FUTSAL A",
+      "name": "GONZALEZ ZAVOIANU, LEONARDO",
+      "team": "C.D. BOCA F.S. PRIEGO",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -1187,24 +1195,8 @@
       "average": 0.3333
     },
     {
-      "name": "PRIEGO MONTES, LUIS",
-      "team": "C.D. MENCIANA",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
       "name": "IZZA SÁNCHEZ, JORGE",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "ABOUELALAM EL BARHMI, ADAM",
-      "team": "C.D. MENCIANA",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1259,16 +1251,8 @@
       "average": 0.25
     },
     {
-      "name": "PÉREZ-ROSAS MONTES, CARLOS",
-      "team": "C.D. BOCA F.S. PRIEGO",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "ROLDAN MONTES, CARLOS",
-      "team": "C.D. BOCA F.S. PRIEGO",
+      "name": "ABOUELALAM EL BARHMI, ADAM",
+      "team": "C.D. MENCIANA",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -1289,9 +1273,25 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.25
+    },
+    {
+      "name": "PÉREZ-ROSAS MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "ROLDAN MONTES, CARLOS",
+      "team": "C.D. BOCA F.S. PRIEGO",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=5&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=6&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
   "roster": [
     {
       "name": "MONTILLA ALTEZ, ISMAEL",
@@ -3446,7 +3446,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-14T10:26:24.609694+00:00",
+  "updated_at": "2026-11-14T14:29:52.474153+00:00",
   "rounds": [
     1,
     2,
@@ -3555,13 +3555,13 @@
       "date": "2026-11-14",
       "time": "11:00",
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 1,
+      "away_score": 9,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=6",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718912",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718912&cod_acta=2718912",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
     },
@@ -3703,6 +3703,21 @@
   "standings": [
     {
       "position": 1,
+      "team": "C.D. MENCIANA",
+      "points": 15,
+      "played": 5,
+      "won": 5,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 39,
+      "ga": 6,
+      "gd": 33,
+      "form": "G G G G G",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png"
+    },
+    {
+      "position": 2,
       "team": "C.D. ENCINAS REALES C.F.",
       "points": 12,
       "played": 4,
@@ -3715,21 +3730,6 @@
       "form": "G G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
-    },
-    {
-      "position": 2,
-      "team": "C.D. MENCIANA",
-      "points": 12,
-      "played": 4,
-      "won": 4,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 30,
-      "ga": 5,
-      "gd": 25,
-      "form": "G G G G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png"
     },
     {
       "position": 3,
@@ -3765,14 +3765,14 @@
       "position": 5,
       "team": "C.D. BOCA F.S. PRIEGO",
       "points": 4,
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 1,
-      "lost": 2,
-      "gf": 16,
-      "ga": 19,
-      "gd": -3,
-      "form": "P P G E",
+      "lost": 3,
+      "gf": 17,
+      "ga": 28,
+      "gd": -11,
+      "form": "P P G E P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg"
     },
@@ -3807,7 +3807,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=5&codcompeticion=49465203&codgrupo=49465413&codjornada=5",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=6&codcompeticion=49465203&codgrupo=49465413&codjornada=6",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3852,11 +3852,12 @@
     {
       "name": "RUEDA MORALES, FRANCISCO JAVIER",
       "group": "assistants",
-      "role": "Auxiliar"
+      "role": "Entrenador practicas sala",
+      "photo": "data:image/jpeg;base64,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"
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-14T10:26:25.505665+00:00",
+  "staff_updated_at": "2026-11-14T14:29:53.392642+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
