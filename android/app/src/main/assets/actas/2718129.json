@@ -386,7 +386,8 @@
         "played": 3,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "dd6bc8b7633a38e8",
@@ -400,7 +401,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "b7a064726432477c",
@@ -414,7 +416,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "545368080de4b9e4",
@@ -428,7 +431,8 @@
         "played": 4,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "9b7f1c5a804412ba",
@@ -442,7 +446,8 @@
         "played": 4,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "a96c5b2f0e098ba8",
@@ -456,7 +461,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "63db926d323a4fd8",
@@ -470,7 +476,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c51c06e9cebae7c0",
@@ -484,7 +491,8 @@
         "played": 4,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "270270928f1ffce2",
@@ -498,7 +506,8 @@
         "played": 3,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6569afc91614fea3",
@@ -512,7 +521,8 @@
         "played": null,
         "team": "C.D. FUTBOL SALA LUQUE",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "7d6ff51392a2aa1f",
@@ -580,7 +590,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 4,
-        "called": 4,
+        "called": 5,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -651,8 +661,8 @@
       "profile_updated_at": "2026-11-11T06:24:52.557700+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 2,
-        "called": 4,
+        "starts": 3,
+        "called": 5,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -722,10 +732,10 @@
       ],
       "profile_updated_at": "2026-11-11T06:24:53.547845+00:00",
       "competition_summary": {
-        "goals": 1,
-        "starts": 4,
-        "called": 4,
-        "played": 4,
+        "goals": 3,
+        "starts": 5,
+        "called": 5,
+        "played": 5,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -795,9 +805,9 @@
       "profile_updated_at": "2026-11-11T06:24:54.548646+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 3,
-        "called": 3,
-        "played": 3,
+        "starts": 4,
+        "called": 4,
+        "played": 4,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -867,9 +877,9 @@
       "profile_updated_at": "2026-11-11T06:24:55.559257+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 3,
-        "called": 4,
-        "played": 4,
+        "starts": 4,
+        "called": 5,
+        "played": 5,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -939,8 +949,8 @@
       "profile_updated_at": "2026-11-11T06:25:01.565964+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 2,
+        "starts": 1,
+        "called": 3,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -958,7 +968,8 @@
         "played": 2,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "541cea03c3a41a01",
@@ -1098,8 +1109,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 2,
-        "called": 4,
-        "played": 4,
+        "called": 5,
+        "played": 5,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -1168,10 +1179,10 @@
       ],
       "profile_updated_at": "2026-11-11T06:24:58.570037+00:00",
       "competition_summary": {
-        "goals": 0,
+        "goals": 1,
         "starts": 0,
-        "called": 3,
-        "played": null,
+        "called": 4,
+        "played": 4,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }
@@ -1242,7 +1253,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 4,
+        "called": 5,
         "played": null,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
@@ -1314,8 +1325,8 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 4,
-        "played": 4,
+        "called": 5,
+        "played": 5,
         "team": "C.D. VILLA DE BENAMEJI",
         "source": "actas oficiales RFAF"
       }

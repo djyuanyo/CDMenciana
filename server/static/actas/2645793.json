@@ -562,11 +562,11 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "7"
             ],
             [
               "Titular",
-              "7"
+              "6"
             ],
             [
               "Suplente",
@@ -574,7 +574,7 @@
             ],
             [
               "Jugados",
-              "8"
+              "7"
             ]
           ]
         },
@@ -604,11 +604,11 @@
           "rows": [
             [
               "Total",
-              "4"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.4"
             ]
           ]
         }
@@ -621,7 +621,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-11T22:04:53.433032+00:00"
+      "profile_updated_at": "2026-11-08T02:36:47.123791+00:00"
     },
     {
       "id": "9c00708c3ce273e5",
@@ -634,7 +634,7 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
@@ -642,11 +642,11 @@
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -688,12 +688,12 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 5,
+        "called": 6,
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T17:57:39.722698+00:00"
+      "profile_updated_at": "2026-11-15T09:32:13.719227+00:00"
     },
     {
       "id": "d2959c0204fef97e",
@@ -759,9 +759,9 @@
       ],
       "profile_updated_at": "2026-10-31T22:36:32.848835+00:00",
       "competition_summary": {
-        "goals": 0,
+        "goals": 1,
         "starts": 1,
-        "called": 4,
+        "called": 5,
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
@@ -778,11 +778,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -790,7 +790,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -803,7 +803,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -831,13 +831,13 @@
       ],
       "competition_summary": {
         "goals": 2,
-        "starts": 2,
-        "called": 9,
+        "starts": 3,
+        "called": 10,
         "played": 5,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T02:17:45.677422+00:00"
+      "profile_updated_at": "2026-11-15T09:32:12.531376+00:00"
     },
     {
       "id": "c19720e87a67305d",
@@ -850,11 +850,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "6"
             ],
             [
               "Titular",
-              "4"
+              "3"
             ],
             [
               "Suplente",
@@ -862,7 +862,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "5"
             ]
           ]
         },
@@ -892,20 +892,20 @@
           "rows": [
             [
               "Total",
-              "6"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.9"
+              "0.8"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-11T22:04:42.445467+00:00",
+      "profile_updated_at": "2026-11-05T11:02:31.715366+00:00",
       "competition_summary": {
         "goals": 6,
-        "starts": 4,
-        "called": 7,
+        "starts": 5,
+        "called": 8,
         "played": 6,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
@@ -922,11 +922,11 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "7"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -934,7 +934,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -947,7 +947,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -964,24 +964,24 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.6"
             ]
           ]
         }
       ],
       "competition_summary": {
         "goals": 3,
-        "starts": 4,
-        "called": 6,
+        "starts": 5,
+        "called": 7,
         "played": 6,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-04T15:33:10.433928+00:00"
+      "profile_updated_at": "2026-11-15T09:32:10.550840+00:00"
     },
     {
       "id": "78ff2e313203f425",
@@ -1138,7 +1138,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -1146,11 +1146,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "8"
             ],
             [
               "Jugados",
-              "4"
+              "5"
             ]
           ]
         },
@@ -1192,12 +1192,12 @@
       "competition_summary": {
         "goals": 2,
         "starts": 0,
-        "called": 7,
+        "called": 8,
         "played": 4,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T02:17:42.670095+00:00"
+      "profile_updated_at": "2026-11-15T09:32:15.536136+00:00"
     },
     {
       "id": "d667c99c8013359c",
@@ -1264,8 +1264,8 @@
       "profile_updated_at": "2026-11-10T17:57:35.653496+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 1,
-        "called": 4,
+        "starts": 2,
+        "called": 5,
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
@@ -1408,7 +1408,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 4,
-        "called": 9,
+        "called": 10,
         "played": null,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1426,7 +1426,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
@@ -1434,11 +1434,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "8"
+              "9"
             ]
           ]
         },
@@ -1451,7 +1451,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1480,12 +1480,12 @@
       "competition_summary": {
         "goals": 2,
         "starts": 8,
-        "called": 9,
+        "called": 10,
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:24.790520+00:00"
+      "profile_updated_at": "2026-11-15T09:31:49.551447+00:00"
     },
     {
       "id": "422f6126f4320338",
@@ -1498,7 +1498,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
@@ -1506,11 +1506,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "8"
+              "9"
             ]
           ]
         },
@@ -1552,12 +1552,12 @@
       "competition_summary": {
         "goals": 2,
         "starts": 7,
-        "called": 9,
+        "called": 10,
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:25.755807+00:00"
+      "profile_updated_at": "2026-11-15T09:31:47.122328+00:00"
     },
     {
       "id": "cbff0d77de89b96f",
@@ -1624,7 +1624,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 6,
-        "called": 9,
+        "called": 10,
         "played": 9,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1697,7 +1697,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 8,
+        "called": 9,
         "played": 6,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1767,8 +1767,8 @@
       ],
       "competition_summary": {
         "goals": 0,
-        "starts": 4,
-        "called": 8,
+        "starts": 5,
+        "called": 9,
         "played": null,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1841,7 +1841,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 5,
-        "called": 8,
+        "called": 9,
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1911,8 +1911,8 @@
       ],
       "competition_summary": {
         "goals": 4,
-        "starts": 1,
-        "called": 9,
+        "starts": 2,
+        "called": 10,
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
@@ -1930,11 +1930,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
-              "3"
+              "4"
             ],
             [
               "Suplente",
@@ -1942,7 +1942,7 @@
             ],
             [
               "Jugados",
-              "8"
+              "9"
             ]
           ]
         },
@@ -1976,20 +1976,20 @@
             ],
             [
               "Goles por partido",
-              "0.9"
+              "0.8"
             ]
           ]
         }
       ],
       "competition_summary": {
         "goals": 8,
-        "starts": 3,
-        "called": 9,
+        "starts": 4,
+        "called": 10,
         "played": 9,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:26.785120+00:00"
+      "profile_updated_at": "2026-11-15T09:31:53.532737+00:00"
     },
     {
       "id": "34cab0b2e2b61f72",
@@ -2002,11 +2002,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
-              "1"
+              "2"
             ],
             [
               "Suplente",
@@ -2014,7 +2014,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -2048,20 +2048,20 @@
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
       "competition_summary": {
         "goals": 5,
-        "starts": 1,
-        "called": 9,
+        "starts": 2,
+        "called": 10,
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:27.793456+00:00"
+      "profile_updated_at": "2026-11-15T09:31:47.146012+00:00"
     },
     {
       "id": "97faf2af2cf3bd1a",
@@ -2074,7 +2074,7 @@
           "rows": [
             [
               "Convocados",
-              "3"
+              "4"
             ],
             [
               "Titular",
@@ -2082,11 +2082,11 @@
             ],
             [
               "Suplente",
-              "2"
+              "3"
             ],
             [
               "Jugados",
-              "2"
+              "3"
             ]
           ]
         },
@@ -2116,11 +2116,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.7"
+              "1.0"
             ]
           ]
         }
@@ -2128,12 +2128,12 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 3,
+        "called": 4,
         "played": 2,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:11.742114+00:00"
+      "profile_updated_at": "2026-11-15T09:31:50.496525+00:00"
     },
     {
       "id": "1307a21fb1c98f03",
@@ -2218,11 +2218,11 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "9"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
@@ -2230,7 +2230,7 @@
             ],
             [
               "Jugados",
-              "6"
+              "7"
             ]
           ]
         },
@@ -2271,13 +2271,13 @@
       ],
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
-        "called": 8,
+        "starts": 1,
+        "called": 9,
         "played": null,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:29.793540+00:00"
+      "profile_updated_at": "2026-11-15T09:31:51.535024+00:00"
     },
     {
       "id": "3a7be338d7da457f",
@@ -2290,7 +2290,7 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "8"
             ],
             [
               "Titular",
@@ -2298,11 +2298,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "7"
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -2344,12 +2344,12 @@
       "competition_summary": {
         "goals": 3,
         "starts": 1,
-        "called": 7,
+        "called": 8,
         "played": 5,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-10T09:59:15.784130+00:00"
+      "profile_updated_at": "2026-11-15T09:31:52.552672+00:00"
     }
   ],
   "staff": [
