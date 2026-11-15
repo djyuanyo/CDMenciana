@@ -1774,14 +1774,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Benalup-Casas Viejas - 28 DE FEBRERO PABELLON MPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-2",
@@ -1793,14 +1794,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Puerto Real - PABELLON SALA DE BARRIO (RIO SAN PEDRO)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-3",
@@ -1812,14 +1814,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Alcalá De Los Gazules - PICO DEL CAMPO PABELLON POLIDEPORTIVO",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-4",
@@ -1831,14 +1834,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Cádiz - CENTRO HISTORICO PABELLON PVO",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-5",
@@ -1850,14 +1854,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "San Fernando - PABELLON BAHIA SUR",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-6",
@@ -1868,13 +1873,16 @@
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001802982_LA_PALMA_F__TBOL_SALA_LOGO_COLOR_1.jpg",
       "date": "2026-11-29",
       "time": "",
-      "venue": "",
-      "state": "Fecha de jornada",
+      "venue": "VILLALBA DE ALCOR, PABELLON MPAL.",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
-      "date_provisional": true
+      "date_provisional": false,
+      "acta_url": "",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617"
     },
     {
       "id": "48466109-12",
@@ -1886,14 +1894,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Alcalá De Guadaíra - DISTRITO SUR (Pabellón)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+      "acta_url": ""
     },
     {
       "id": "48466109-12-8",
@@ -1905,14 +1914,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Córdoba - IMD VALDEOLLEROS PABELLON",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
+      "acta_url": ""
     },
     {
       "id": "48466109-13-1",
@@ -7533,7 +7543,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-14T23:17:27.092665+00:00",
+  "updated_at": "2026-11-15T01:55:19.899332+00:00",
   "rounds": [
     1,
     2,
@@ -7798,14 +7808,15 @@
       "date": "2026-11-29",
       "time": "",
       "venue": "Alcalá De Guadaíra - DISTRITO SUR (Pabellón)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+      "acta_url": ""
     },
     {
       "id": "48466109-13",
@@ -8474,7 +8485,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-14T23:17:28.177362+00:00",
+  "staff_updated_at": "2026-11-15T01:55:20.854114+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
