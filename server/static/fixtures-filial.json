@@ -374,13 +374,13 @@
       "date": "2026-11-15",
       "time": "18:00",
       "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 7,
+      "away_score": 2,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718131",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718131&cod_acta=2718131",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35668504",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48774334"
     },
@@ -394,13 +394,13 @@
       "date": "2026-11-15",
       "time": "20:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 1,
+      "away_score": 1,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22&CodJornada=5",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718132",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718132&cod_acta=2718132",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24274894",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=35246659"
     },
@@ -1132,22 +1132,6 @@
       "average": 1.0
     },
     {
-      "name": "LOPEZ CHAVARINO, SERGIO",
-      "team": "C.D. CARCABUEY",
-      "played": 4,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "GARCIA MARIN, ALFONSO",
-      "team": "C.D. CARCABUEY",
-      "played": 4,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
       "name": "PINO AGUILAR, PABLO",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 4,
@@ -1164,12 +1148,36 @@
       "average": 0.8
     },
     {
-      "name": "TORREBLANCA SOLIS, CRISTIAN",
-      "team": "C.D. MONTILLA FUTSAL",
-      "played": 2,
-      "goals": 3,
+      "name": "GARCIA MARIN, ALFONSO",
+      "team": "C.D. CARCABUEY",
+      "played": 5,
+      "goals": 4,
       "penalties": 0,
-      "average": 1.5
+      "average": 0.8
+    },
+    {
+      "name": "MARTÍN BORREGO, SAMUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 5,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.8
+    },
+    {
+      "name": "LOPEZ CHAVARINO, SERGIO",
+      "team": "C.D. CARCABUEY",
+      "played": 5,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.8
+    },
+    {
+      "name": "HURTADO MOLINA, CRISTOBAL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 5,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.8
     },
     {
       "name": "SANCHEZ CASTRO, DANIEL",
@@ -1180,24 +1188,16 @@
       "average": 1.0
     },
     {
-      "name": "LOPEZ CHAVARINO, ENRIQUE",
-      "team": "C.D. CARCABUEY",
-      "played": 4,
+      "name": "TORREBLANCA SOLIS, CRISTIAN",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 3,
       "goals": 3,
       "penalties": 0,
-      "average": 0.75
+      "average": 1.0
     },
     {
       "name": "BERGILLOS PORRAS, ALBERTO",
       "team": "C.D. EGA FUTSAL",
-      "played": 4,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.75
-    },
-    {
-      "name": "GONZALEZ JIMENEZ, JAVIER",
-      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 4,
       "goals": 3,
       "penalties": 0,
@@ -1212,16 +1212,32 @@
       "average": 0.75
     },
     {
-      "name": "HURTADO MOLINA, CRISTOBAL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 4,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.75
-    },
-    {
       "name": "ACERO FLORES, MARIO",
       "team": "C.D. VILLA DE BENAMEJI",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "LOPEZ CHAVARINO, ENRIQUE",
+      "team": "C.D. CARCABUEY",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "ROSUA ORTIZ, SAUL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "GONZALEZ JIMENEZ, JAVIER",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 5,
       "goals": 3,
       "penalties": 0,
@@ -1238,10 +1254,10 @@
     {
       "name": "GABRIEL VELASCO, ANTONIO",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 1,
+      "played": 2,
       "goals": 2,
       "penalties": 0,
-      "average": 2.0
+      "average": 1.0
     },
     {
       "name": "ORELLANA ARIZA, JUAN FRANCISCO",
@@ -1254,18 +1270,34 @@
     {
       "name": "ARCE CID, CARLOS",
       "team": "C.D. MONTILLA FUTSAL",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PULIDO MORAL, JOSÉ MARÍA",
-      "team": "C.D. CARCABUEY",
       "played": 3,
       "goals": 2,
       "penalties": 0,
       "average": 0.6667
+    },
+    {
+      "name": "PULIDO CUENCA, MARIO",
+      "team": "C.D. MONTILLA FUTSAL",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "RUIZ MARMOL, JUAN MANUEL",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "PULIDO MORAL, JOSÉ MARÍA",
+      "team": "C.D. CARCABUEY",
+      "played": 4,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.5
     },
     {
       "name": "CABELLO MORON, ALVARO",
@@ -1284,7 +1316,7 @@
       "average": 0.5
     },
     {
-      "name": "ROSUA ORTIZ, SAUL",
+      "name": "VELASCO AGUILAR, MANUEL JESUS",
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
       "played": 4,
       "goals": 2,
@@ -1316,6 +1348,22 @@
       "average": 1.0
     },
     {
+      "name": "DOMINGUEZ POYATO, FRANCISCO MANUEL",
+      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "OSUNA PRIETO, ISMAEL",
+      "team": "C.D. VILLA DE BENAMEJI",
+      "played": 2,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "ACERO FLORES, ADRIAN",
       "team": "C.D. VILLA DE BENAMEJI",
       "played": 2,
@@ -1340,14 +1388,6 @@
       "average": 0.5
     },
     {
-      "name": "SOTO CORTES, RAMON",
-      "team": "C.D. MIRAGENIL F.S. NOLITO'S",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "LEON PEREZ, RUBEN",
       "team": "C.D. FUTBOL SALA LUQUE",
       "played": 2,
@@ -1356,52 +1396,12 @@
       "average": 0.5
     },
     {
-      "name": "DOMINGUEZ POYATO, FRANCISCO MANUEL",
+      "name": "SOTO CORTES, RAMON",
       "team": "C.D. MIRAGENIL F.S. NOLITO'S",
       "played": 2,
       "goals": 1,
       "penalties": 0,
       "average": 0.5
-    },
-    {
-      "name": "OSUNA PRIETO, ISMAEL",
-      "team": "C.D. VILLA DE BENAMEJI",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "VELASCO AGUILAR, MANUEL JESUS",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "GALISTEO ARREBOLA, ANTONIO",
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "CUMPLIDO MESA, MIGUEL",
-      "team": "C.D. EGA FUTSAL",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "BRAVO LOPEZ, NACHO",
-      "team": "C.D. FUTBOL SALA LUQUE",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
     },
     {
       "name": "CORNEJO JIMENEZ, PABLO JESUS",
@@ -1412,16 +1412,8 @@
       "average": 0.3333
     },
     {
-      "name": "MORALES MUÑOZ, JUAN CARLOS",
+      "name": "CUMPLIDO MESA, MIGUEL",
       "team": "C.D. EGA FUTSAL",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "ROPERO LUQUE, ANTONIO",
-      "team": "C.D. CARCABUEY",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1444,32 +1436,16 @@
       "average": 0.3333
     },
     {
-      "name": "RUIZ MARMOL, JUAN MANUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "name": "MORALES MUÑOZ, JUAN CARLOS",
+      "team": "C.D. EGA FUTSAL",
       "played": 3,
       "goals": 1,
       "penalties": 0,
       "average": 0.3333
     },
     {
-      "name": "CASADO RUZ, RAFAEL",
-      "team": "C.D. MONTILLA FUTSAL",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "MARTÍN BORREGO, SAMUEL",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "JIMENEZ CAÑADAS, ALVARO",
-      "team": "C.D. FUTBOL SALA LUQUE",
+      "name": "ROPERO LUQUE, ANTONIO",
+      "team": "C.D. CARCABUEY",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -1477,6 +1453,22 @@
     },
     {
       "name": "PACHECO ESCOBAR, FRANCISCO ANTONIO",
+      "team": "C.D. VILLA DE BENAMEJI",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "GALISTEO ARREBOLA, ANTONIO",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 4,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "ALONZO CASTILLO, ANGEL LUIS",
       "team": "C.D. VILLA DE BENAMEJI",
       "played": 4,
       "goals": 1,
@@ -1492,15 +1484,7 @@
       "average": 0.25
     },
     {
-      "name": "ALONZO CASTILLO, ANGEL LUIS",
-      "team": "C.D. VILLA DE BENAMEJI",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "MARIN CALVO, ALBERTO",
+      "name": "BRAVO LOPEZ, NACHO",
       "team": "C.D. FUTBOL SALA LUQUE",
       "played": 4,
       "goals": 1,
@@ -1508,16 +1492,16 @@
       "average": 0.25
     },
     {
-      "name": "RAMIREZ REINA, JOSE",
-      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "name": "CASADO RUZ, RAFAEL",
+      "team": "C.D. MONTILLA FUTSAL",
       "played": 4,
       "goals": 1,
       "penalties": 0,
       "average": 0.25
     },
     {
-      "name": "LARA SEVILLA, JOSE DAVID",
-      "team": "C.D. VILLA DE BENAMEJI",
+      "name": "JIMENEZ ROMERO, CARLOS",
+      "team": "C.D. APAGA Y VAMONOS",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -1525,6 +1509,14 @@
     },
     {
       "name": "LARA GARCIA, JUAN FRANCISCO",
+      "team": "C.D. VILLA DE BENAMEJI",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "LARA SEVILLA, JOSE DAVID",
       "team": "C.D. VILLA DE BENAMEJI",
       "played": 5,
       "goals": 1,
@@ -1540,6 +1532,22 @@
       "average": 0.2
     },
     {
+      "name": "LEON ORTIZ, RAUL",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "RAMIREZ REINA, JOSE",
+      "team": "C.D. ASOC. JUVENIL PALENCIANA",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
       "name": "GARCIA CASADO, JAIME",
       "team": "C.D. VILLA DE BENAMEJI",
       "played": 5,
@@ -1548,8 +1556,16 @@
       "average": 0.2
     },
     {
-      "name": "JIMENEZ ROMERO, CARLOS",
-      "team": "C.D. APAGA Y VAMONOS",
+      "name": "MARIN CALVO, ALBERTO",
+      "team": "C.D. FUTBOL SALA LUQUE",
+      "played": 5,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "JIMENEZ CAÑADAS, ALVARO",
+      "team": "C.D. FUTBOL SALA LUQUE",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -2738,7 +2754,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-11-15T09:26:33.987990+00:00",
+  "updated_at": "2026-11-15T21:49:20.055036+00:00",
   "rounds": [
     1,
     2,
@@ -3050,15 +3066,15 @@
     {
       "position": 2,
       "team": "C.D. CARCABUEY",
-      "points": 12,
-      "played": 4,
+      "points": 13,
+      "played": 5,
       "won": 4,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "gf": 18,
-      "ga": 4,
+      "gf": 19,
+      "ga": 5,
       "gd": 14,
-      "form": "G G G G",
+      "form": "G G G G E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
     },
@@ -3080,30 +3096,30 @@
     {
       "position": 4,
       "team": "C.D. ASOC. JUVENIL PALENCIANA",
-      "points": 4,
-      "played": 4,
-      "won": 1,
+      "points": 7,
+      "played": 5,
+      "won": 2,
       "drawn": 1,
       "lost": 2,
-      "gf": 13,
-      "ga": 10,
-      "gd": 3,
-      "form": "P E P G",
+      "gf": 20,
+      "ga": 12,
+      "gd": 8,
+      "form": "P E P G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png"
     },
     {
       "position": 5,
       "team": "C.D. FUTBOL SALA LUQUE",
-      "points": 4,
-      "played": 4,
+      "points": 5,
+      "played": 5,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
-      "gf": 9,
-      "ga": 9,
+      "gf": 10,
+      "ga": 10,
       "gd": 0,
-      "form": "E P P G",
+      "form": "E P P G E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg"
     },
@@ -3141,14 +3157,14 @@
       "position": 8,
       "team": "C.D. MONTILLA FUTSAL",
       "points": 0,
-      "played": 4,
+      "played": 5,
       "won": 0,
       "drawn": 0,
-      "lost": 4,
-      "gf": 6,
-      "ga": 26,
-      "gd": -20,
-      "form": "P P P P",
+      "lost": 5,
+      "gf": 8,
+      "ga": 33,
+      "gd": -25,
+      "form": "P P P P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg"
     }
@@ -3197,7 +3213,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-11-15T09:26:34.925643+00:00",
+  "staff_updated_at": "2026-11-15T21:49:20.962083+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
