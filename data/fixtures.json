@@ -1554,13 +1554,13 @@
       "date": "2026-11-15",
       "time": "12:00",
       "venue": "Benalup-Casas Viejas - 28 DE FEBRERO PABELLON MPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 4,
+      "away_score": 5,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645837",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645837&cod_acta=2645837",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043"
     },
@@ -1574,13 +1574,13 @@
       "date": "2026-11-15",
       "time": "12:30",
       "venue": "San Juan de Azn - PABELLON SANTA ISABEL (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 3,
+      "away_score": 8,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645836",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645836&cod_acta=2645836",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625"
     },
@@ -1594,13 +1594,13 @@
       "date": "2026-11-15",
       "time": "12:30",
       "venue": "San Fernando - PABELLON BAHIA SUR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645841",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645841&cod_acta=2645841",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495"
     },
@@ -1722,7 +1722,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645844"
     },
     {
       "id": "48466109-11-7",
@@ -1742,7 +1742,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645850"
     },
     {
       "id": "48466109-11-8",
@@ -1762,7 +1762,7 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1013915",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
-      "acta_url": ""
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645847"
     },
     {
       "id": "48466109-12-1",
@@ -4574,58 +4574,66 @@
     {
       "name": "BERLANGA HIDALGO, DAYRON",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 9,
+      "played": 10,
       "goals": 14,
       "penalties": 0,
-      "average": 1.5556
+      "average": 1.4
     },
     {
       "name": "ROLDAN AGUILERA, JESUS",
       "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 7,
-      "goals": 12,
-      "penalties": 0,
-      "average": 1.7143
-    },
-    {
-      "name": "JIMENEZ CARRASCO, IVAN",
-      "team": "C.D. BENALUP",
       "played": 8,
-      "goals": 12,
+      "goals": 13,
       "penalties": 0,
-      "average": 1.5
-    },
-    {
-      "name": "MORENO PEREZ, SANTOS",
-      "team": "C.D. VILLALBA F.S.",
-      "played": 7,
-      "goals": 10,
-      "penalties": 0,
-      "average": 1.4286
-    },
-    {
-      "name": "LEÑA FERNÁNDEZ, SAMUEL",
-      "team": "C.D. DECORSENECA",
-      "played": 8,
-      "goals": 10,
-      "penalties": 0,
-      "average": 1.25
-    },
-    {
-      "name": "MENCHEN MARTÍNEZ, SANTIAGO",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 6,
-      "goals": 9,
-      "penalties": 0,
-      "average": 1.5
+      "average": 1.625
     },
     {
       "name": "CARICOL MARQUEZ, DAVID",
       "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 7,
-      "goals": 9,
+      "played": 8,
+      "goals": 12,
       "penalties": 0,
-      "average": 1.2857
+      "average": 1.5
+    },
+    {
+      "name": "JIMENEZ CARRASCO, IVAN",
+      "team": "C.D. BENALUP",
+      "played": 9,
+      "goals": 12,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "MENCHEN MARTÍNEZ, SANTIAGO",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 7,
+      "goals": 11,
+      "penalties": 0,
+      "average": 1.5714
+    },
+    {
+      "name": "MORENO PEREZ, SANTOS",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 8,
+      "goals": 11,
+      "penalties": 0,
+      "average": 1.375
+    },
+    {
+      "name": "LEÑA FERNÁNDEZ, SAMUEL",
+      "team": "C.D. DECORSENECA",
+      "played": 9,
+      "goals": 11,
+      "penalties": 0,
+      "average": 1.2222
+    },
+    {
+      "name": "GARCIA SANZ, ADOLFO",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 10,
+      "goals": 10,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "MOYANO PULIDO, ANTONIO JESUS",
@@ -4636,12 +4644,52 @@
       "average": 1.125
     },
     {
+      "name": "WARSCHKE ACERO, GONZALO",
+      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
+      "played": 9,
+      "goals": 9,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
+      "name": "RODRIGUEZ GUERRA, ALBERTO",
+      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
+      "played": 6,
+      "goals": 8,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "MATEO RODRIGUEZ, FRANCISCO",
+      "team": "C.D. BENALUP",
+      "played": 6,
+      "goals": 8,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
+      "name": "RODRIGUEZ JIMENEZ, SERGIO",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 7,
+      "goals": 8,
+      "penalties": 0,
+      "average": 1.1429
+    },
+    {
       "name": "CORTABARRA CASTELLON, AGUSTIN",
       "team": "U.D. ALCHOYANO",
       "played": 7,
       "goals": 8,
       "penalties": 0,
       "average": 1.1429
+    },
+    {
+      "name": "SALVADOR FERNANDEZ, FERNANDO",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 8,
+      "goals": 8,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "MUÑOZ LARIOS, MARCOS JOSE",
@@ -4652,8 +4700,8 @@
       "average": 0.8889
     },
     {
-      "name": "GARCIA SANZ, ADOLFO",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "MORALES RODRIGUEZ, IVAN",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 9,
       "goals": 8,
       "penalties": 0,
@@ -4662,74 +4710,50 @@
     {
       "name": "ALVAREZ BENITEZ, DAVID",
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 9,
+      "played": 10,
       "goals": 8,
       "penalties": 0,
-      "average": 0.8889
+      "average": 0.8
     },
     {
-      "name": "RODRIGUEZ GUERRA, ALBERTO",
-      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
-      "played": 5,
+      "name": "TOSINA LUQUE, DIEGO",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 6,
       "goals": 7,
       "penalties": 0,
-      "average": 1.4
+      "average": 1.1667
     },
     {
-      "name": "SALVADOR FERNANDEZ, FERNANDO",
-      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "name": "CALLERO ORTIZ, SERGIO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 7,
       "goals": 7,
       "penalties": 0,
       "average": 1.0
     },
     {
-      "name": "MORALES RODRIGUEZ, IVAN",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "name": "LEON GONZALEZ, SERGIO",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
       "played": 8,
       "goals": 7,
-      "penalties": 0,
+      "penalties": 1,
       "average": 0.875
+    },
+    {
+      "name": "HERRERA GARCIA, LUIS ANGEL",
+      "team": "U.D. ALCHOYANO",
+      "played": 9,
+      "goals": 7,
+      "penalties": 0,
+      "average": 0.7778
     },
     {
       "name": "ZAFRA SANCHEZ, MANUEL",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 8,
+      "played": 9,
       "goals": 7,
       "penalties": 0,
-      "average": 0.875
-    },
-    {
-      "name": "WARSCHKE ACERO, GONZALO",
-      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
-      "played": 8,
-      "goals": 7,
-      "penalties": 0,
-      "average": 0.875
-    },
-    {
-      "name": "MATEO RODRIGUEZ, FRANCISCO",
-      "team": "C.D. BENALUP",
-      "played": 5,
-      "goals": 6,
-      "penalties": 0,
-      "average": 1.2
-    },
-    {
-      "name": "LOPEZ HERNANDEZ, JOSE IVAN",
-      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
-      "played": 5,
-      "goals": 6,
-      "penalties": 0,
-      "average": 1.2
-    },
-    {
-      "name": "RODRIGUEZ JIMENEZ, SERGIO",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "played": 6,
-      "goals": 6,
-      "penalties": 0,
-      "average": 1.0
+      "average": 0.7778
     },
     {
       "name": "GARCIA PERALTA, ADRIAN",
@@ -4740,8 +4764,16 @@
       "average": 1.0
     },
     {
-      "name": "CALLERO ORTIZ, SERGIO",
-      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "name": "RUIZ GONZALEZ, RAFAEL",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 6,
+      "goals": 6,
+      "penalties": 1,
+      "average": 1.0
+    },
+    {
+      "name": "LOPEZ HERNANDEZ, JOSE IVAN",
+      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "played": 6,
       "goals": 6,
       "penalties": 0,
@@ -4756,20 +4788,44 @@
       "average": 1.0
     },
     {
-      "name": "BORJAS LOZANO, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "BATALLA BUTRON, DANIEL",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 9,
       "goals": 6,
       "penalties": 0,
       "average": 0.6667
     },
     {
-      "name": "TOSINA LUQUE, DIEGO",
+      "name": "RODRIGUEZ SOTILLO, RUBÉN",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 5,
+      "played": 9,
+      "goals": 6,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "BORJAS LOZANO, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 10,
+      "goals": 6,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "RUIZ PALOMINO, PABLO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 10,
+      "goals": 6,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "SANCHEZ TIENDA, DAVID",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 4,
       "goals": 5,
       "penalties": 0,
-      "average": 1.0
+      "average": 1.25
     },
     {
       "name": "GUIJARRO VALLES, RAFAEL",
@@ -4788,32 +4844,32 @@
       "average": 1.0
     },
     {
-      "name": "RUIZ GONZALEZ, RAFAEL",
+      "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
       "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 5,
+      "played": 6,
       "goals": 5,
-      "penalties": 1,
-      "average": 1.0
+      "penalties": 0,
+      "average": 0.8333
     },
     {
-      "name": "LEON GONZALEZ, SERGIO",
-      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "name": "SAUCES JIMENEZ, RAFAEL",
+      "team": "C.D. SANTAELLA 2010",
       "played": 7,
       "goals": 5,
-      "penalties": 1,
+      "penalties": 0,
       "average": 0.7143
     },
     {
-      "name": "LABRADOR GARCIA, JORGE",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "name": "LOPEZ BENITEZ, DAVID",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 8,
       "goals": 5,
       "penalties": 0,
       "average": 0.625
     },
     {
-      "name": "BATALLA BUTRON, DANIEL",
-      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "name": "BAQUERO BEGINES, ALEJANDRO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 8,
       "goals": 5,
       "penalties": 0,
@@ -4828,32 +4884,48 @@
       "average": 0.625
     },
     {
+      "name": "CEPERO ANGERIZ, MARIO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 9,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.5556
+    },
+    {
+      "name": "LABRADOR GARCIA, JORGE",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 9,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.5556
+    },
+    {
+      "name": "BAJO PAVÉS, CARLOS",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "played": 9,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.5556
+    },
+    {
+      "name": "CALDERON LOZADA, GUILLERMO",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 9,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.5556
+    },
+    {
       "name": "CRESPO LUNA, MIGUEL",
       "team": "C.D. DECORSENECA",
-      "played": 9,
+      "played": 10,
       "goals": 5,
       "penalties": 0,
-      "average": 0.5556
+      "average": 0.5
     },
     {
-      "name": "RUIZ PALOMINO, PABLO",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "played": 9,
-      "goals": 5,
-      "penalties": 0,
-      "average": 0.5556
-    },
-    {
-      "name": "CASAL RAMOS, JESUS",
-      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "played": 3,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.3333
-    },
-    {
-      "name": "SANCHEZ TIENDA, DAVID",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "name": "RIESGO BARRAU, ROBERTO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 3,
       "goals": 4,
       "penalties": 0,
@@ -4868,6 +4940,14 @@
       "average": 1.0
     },
     {
+      "name": "CASAL RAMOS, JESUS",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 4,
+      "goals": 4,
+      "penalties": 0,
+      "average": 1.0
+    },
+    {
       "name": "SOTO REYES, PABLO",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 5,
@@ -4876,8 +4956,8 @@
       "average": 0.8
     },
     {
-      "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "name": "IBAÑEZ FERNANDEZ, ADRIAN",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 5,
       "goals": 4,
       "penalties": 0,
@@ -4908,14 +4988,6 @@
       "average": 0.5714
     },
     {
-      "name": "LOPEZ BENITEZ, DAVID",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 7,
-      "goals": 4,
-      "penalties": 0,
-      "average": 0.5714
-    },
-    {
       "name": "BORRALLO LOPEZ, CARLOS",
       "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
       "played": 7,
@@ -4924,15 +4996,15 @@
       "average": 0.5714
     },
     {
-      "name": "SANCHEZ PEREZ DE AZPILLA, TOMAS",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "name": "COBELO DORADO, CHRISTIAN",
+      "team": "C.D. BENALUP",
       "played": 7,
       "goals": 4,
       "penalties": 0,
       "average": 0.5714
     },
     {
-      "name": "PEREZ GARRIDO, IVAN",
+      "name": "RODRIGUEZ ROMERO, JUAN",
       "team": "C.D. VILLALBA F.S.",
       "played": 7,
       "goals": 4,
@@ -4940,15 +5012,15 @@
       "average": 0.5714
     },
     {
-      "name": "CEPERO ANGERIZ, MARIO",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 8,
+      "name": "JULIAN PAEZ, SERGIO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "played": 7,
       "goals": 4,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.5714
     },
     {
-      "name": "HERRERA GARCIA, LUIS ANGEL",
+      "name": "RIOS AIDO, FRANCISCO JOSE",
       "team": "U.D. ALCHOYANO",
       "played": 8,
       "goals": 4,
@@ -4956,8 +5028,16 @@
       "average": 0.5
     },
     {
-      "name": "CABALLERO LAMA, ISAAC",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "name": "BELGRANO PAEZ, BRYAN",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 8,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "SANCHEZ PEREZ DE AZPILLA, TOMAS",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 8,
       "goals": 4,
       "penalties": 0,
@@ -4972,15 +5052,7 @@
       "average": 0.5
     },
     {
-      "name": "BAJO PAVÉS, CARLOS",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 8,
-      "goals": 4,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "CALDERON LOZADA, GUILLERMO",
+      "name": "DELIS LOPEZ, JOSE",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
       "played": 8,
       "goals": 4,
@@ -4988,20 +5060,28 @@
       "average": 0.5
     },
     {
-      "name": "LAINEZ TAPIA, ANTONIO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "name": "PEREZ GARRIDO, IVAN",
+      "team": "C.D. VILLALBA F.S.",
       "played": 8,
       "goals": 4,
       "penalties": 0,
       "average": 0.5
     },
     {
-      "name": "RODRIGUEZ SOTILLO, RUBÉN",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 8,
+      "name": "CABALLERO LAMA, ISAAC",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 9,
       "goals": 4,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.4444
+    },
+    {
+      "name": "LAINEZ TAPIA, ANTONIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 9,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.4444
     },
     {
       "name": "OLMEDO ZARZUELA, PEDRO",
@@ -5020,28 +5100,12 @@
       "average": 1.0
     },
     {
-      "name": "IBAÑEZ FERNANDEZ, ADRIAN",
-      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "played": 4,
+      "name": "PEREZ MUÑOZ, SAMUEL",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 3,
       "goals": 3,
       "penalties": 0,
-      "average": 0.75
-    },
-    {
-      "name": "MOLERO PEÑA, JOSE MARIA",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
-    },
-    {
-      "name": "BENITEZ GIL, DANIEL",
-      "team": "C.D. VILLALBA F.S.",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
+      "average": 1.0
     },
     {
       "name": "MONTORI CAMACHO, JAVIER",
@@ -5052,16 +5116,32 @@
       "average": 0.6
     },
     {
-      "name": "CATALAN CASADO, JOSE ANTONIO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 5,
+      "name": "MOLERO PEÑA, JOSE MARIA",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 6,
       "goals": 3,
       "penalties": 0,
-      "average": 0.6
+      "average": 0.5
     },
     {
-      "name": "SAUCES JIMENEZ, RAFAEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "BENITEZ GIL, DANIEL",
+      "team": "C.D. VILLALBA F.S.",
+      "played": 6,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "DOPICO UROZ, JESUS VICENTE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 6,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CATALAN CASADO, JOSE ANTONIO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 6,
       "goals": 3,
       "penalties": 0,
@@ -5070,94 +5150,38 @@
     {
       "name": "SUCINO MORENO, PABLO",
       "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "played": 6,
+      "played": 7,
       "goals": 3,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.4286
+    },
+    {
+      "name": "GALLEGO FERNANDEZ, DIEGO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "played": 7,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.4286
     },
     {
       "name": "SANCHEZ SANCHEZ, CARLOS",
       "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "played": 6,
+      "played": 7,
       "goals": 3,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.4286
     },
     {
       "name": "RUIZ PEÑA, PABLO",
       "team": "C.D. BENALUP",
-      "played": 6,
+      "played": 7,
       "goals": 3,
       "penalties": 0,
-      "average": 0.5
+      "average": 0.4286
     },
     {
       "name": "RODRIGUEZ CALZADO, DANIEL",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
-      "played": 6,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "JULIAN PAEZ, SERGIO",
-      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "played": 6,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "RIOS AIDO, FRANCISCO JOSE",
-      "team": "U.D. ALCHOYANO",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "RUIZ MANCHA, JUAN RAMON",
-      "team": "C.D. DECORSENECA",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "CARRILLO RUBIO, ANTONIO JESUS",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "BAQUERO BEGINES, ALEJANDRO",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "DELIS LOPEZ, JOSE",
-      "team": "C.D. DEPORTE Y OCIO (ADYO)",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "ARRIAZA FRANCO, JORGE",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 7,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.4286
-    },
-    {
-      "name": "GARCIA CUESTA, EMILIO",
-      "team": "C.D. DECORSENECA",
       "played": 7,
       "goals": 3,
       "penalties": 0,
@@ -5172,40 +5196,80 @@
       "average": 0.4286
     },
     {
-      "name": "RAMOS ORTAS, SAMUEL",
+      "name": "RUIZ MANCHA, JUAN RAMON",
       "team": "C.D. DECORSENECA",
+      "played": 8,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.375
+    },
+    {
+      "name": "CARRILLO RUBIO, ANTONIO JESUS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 8,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.375
+    },
+    {
+      "name": "ARRIAZA FRANCO, JORGE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 8,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.375
+    },
+    {
+      "name": "GARCIA CUESTA, EMILIO",
+      "team": "C.D. DECORSENECA",
+      "played": 8,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.375
+    },
+    {
+      "name": "MARAÑON BAENA, JESUS",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
       "played": 9,
       "goals": 3,
       "penalties": 0,
       "average": 0.3333
+    },
+    {
+      "name": "CARMONA CARMONA, ALEJANDRO",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 10,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.3
+    },
+    {
+      "name": "RAMOS ORTAS, SAMUEL",
+      "team": "C.D. DECORSENECA",
+      "played": 10,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.3
+    },
+    {
+      "name": "GARCIA DOMINGUEZ, MANUEL",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "played": 10,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.3
     },
     {
       "name": "ONIEVA LORA, JOSE",
       "team": "C.D. SANTAELLA 2010",
-      "played": 9,
+      "played": 10,
       "goals": 3,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.3
     },
     {
       "name": "PEINADO LOPEZ, ALBERTO",
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "RIESGO BARRAU, ROBERTO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 2,
-      "goals": 2,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PEREZ MUÑOZ, SAMUEL",
-      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "played": 2,
       "goals": 2,
       "penalties": 0,
@@ -5221,6 +5285,14 @@
     },
     {
       "name": "BERNAL MORENO, JAVIER",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 3,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "MARTÍN RUIZ, CARLOS",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 3,
       "goals": 2,
@@ -5244,16 +5316,8 @@
       "average": 0.5
     },
     {
-      "name": "DIAZ PLAZUELO, SERGIO",
-      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "MONTERO MIRANDA, DIEGO",
-      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "name": "VAZQUEZ ALVAREZ, MARCOS",
+      "team": "U.D. ALCHOYANO",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -5268,22 +5332,6 @@
       "average": 0.4
     },
     {
-      "name": "SUAREZ CARRERA, JOSE MANUEL",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
-      "name": "LARA LUQUE, SAMUEL",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
       "name": "CAMPAÑA POZO, FRANCISCO JAVIER",
       "team": "C.D. SANTAELLA 2010",
       "played": 5,
@@ -5292,23 +5340,15 @@
       "average": 0.4
     },
     {
-      "name": "DOPICO UROZ, JESUS VICENTE",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "name": "DIAZ PLAZUELO, SERGIO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "played": 5,
       "goals": 2,
       "penalties": 0,
       "average": 0.4
     },
     {
-      "name": "ENRIQUEZ GONZALEZ, JOSE LUIS",
-      "team": "C.D. BENALUP",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
-      "name": "VEGA CORBELLA, FRANCISCO",
+      "name": "MONTERO MIRANDA, DIEGO",
       "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 5,
       "goals": 2,
@@ -5316,16 +5356,24 @@
       "average": 0.4
     },
     {
-      "name": "FERNANDEZ GOMEZ, JAVIER",
-      "team": "C.D. DECORSENECA",
+      "name": "SUAREZ CARRERA, JOSE MANUEL",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 6,
       "goals": 2,
       "penalties": 0,
       "average": 0.3333
     },
     {
-      "name": "RODRIGUEZ RODRIGUEZ, JORGE",
-      "team": "U.D. ALCHOYANO",
+      "name": "SUAZO TORRES, ALEJANDRO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 6,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "LARA LUQUE, SAMUEL",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 6,
       "goals": 2,
       "penalties": 0,
@@ -5340,96 +5388,72 @@
       "average": 0.3333
     },
     {
-      "name": "BONILLA ACEITUNO, JUAN",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "name": "ENRIQUEZ GONZALEZ, JOSE LUIS",
+      "team": "C.D. BENALUP",
       "played": 6,
       "goals": 2,
       "penalties": 0,
       "average": 0.3333
     },
     {
-      "name": "GALLEGO FERNANDEZ, DIEGO",
-      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
+      "name": "VEGA CORBELLA, FRANCISCO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 6,
       "goals": 2,
       "penalties": 0,
       "average": 0.3333
+    },
+    {
+      "name": "FERNANDEZ GOMEZ, JAVIER",
+      "team": "C.D. DECORSENECA",
+      "played": 7,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2857
+    },
+    {
+      "name": "RODRIGUEZ RODRIGUEZ, JORGE",
+      "team": "U.D. ALCHOYANO",
+      "played": 7,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2857
+    },
+    {
+      "name": "BONILLA ACEITUNO, JUAN",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 7,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2857
     },
     {
       "name": "PAREJO BEGINES, JESUS",
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 6,
+      "played": 7,
       "goals": 2,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.2857
     },
     {
       "name": "BREA PARRADO, CHRISTIAN",
       "team": "C.D. BENALUP",
-      "played": 6,
+      "played": 7,
       "goals": 2,
       "penalties": 0,
-      "average": 0.3333
+      "average": 0.2857
     },
     {
       "name": "MATEOS CASTELLET, JAIME",
       "team": "C.D. BENALUP",
-      "played": 6,
+      "played": 7,
       "goals": 2,
       "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "COBELO DORADO, CHRISTIAN",
-      "team": "C.D. BENALUP",
-      "played": 6,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "RODRIGUEZ ROMERO, JUAN",
-      "team": "C.D. VILLALBA F.S.",
-      "played": 6,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.3333
+      "average": 0.2857
     },
     {
       "name": "CUBERO CUBERO, JESUS",
       "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "played": 6,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.3333
-    },
-    {
-      "name": "BELGRANO PAEZ, BRYAN",
-      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "played": 7,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.2857
-    },
-    {
-      "name": "ENRIQUEZ PEÑA, MANUEL JESUS",
-      "team": "C.D. BENALUP",
-      "played": 7,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.2857
-    },
-    {
-      "name": "BUEZAS HUMANES, GONZALO",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 7,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.2857
-    },
-    {
-      "name": "VERANO VALENCIA, JESUS",
-      "team": "U.D. ALCHOYANO",
       "played": 7,
       "goals": 2,
       "penalties": 0,
@@ -5444,40 +5468,24 @@
       "average": 0.2857
     },
     {
-      "name": "FLORES RUBIANO, DANIEL",
-      "team": "C.D. DECORSENECA",
-      "played": 7,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.2857
-    },
-    {
-      "name": "TORRES TORRELO, JULIO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 8,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "MARAÑON BAENA, JESUS",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "played": 8,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "CAMPOS ESCALERA, PABLO",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 8,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "BERMUDO NAVARRO, CRISTIAN",
+      "name": "LOPEZ ARCE, JOSE ANGEL",
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 8,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "ENRIQUEZ PEÑA, MANUEL JESUS",
+      "team": "C.D. BENALUP",
+      "played": 8,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "BUEZAS HUMANES, GONZALO",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 8,
       "goals": 2,
       "penalties": 0,
@@ -5492,7 +5500,23 @@
       "average": 0.25
     },
     {
-      "name": "TEROL CAMACHO, ROBERTO",
+      "name": "VERANO VALENCIA, JESUS",
+      "team": "U.D. ALCHOYANO",
+      "played": 8,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "FLORES RUBIANO, DANIEL",
+      "team": "C.D. DECORSENECA",
+      "played": 8,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.25
+    },
+    {
+      "name": "TORRES TORRELO, JULIO",
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 9,
       "goals": 2,
@@ -5500,12 +5524,44 @@
       "average": 0.2222
     },
     {
-      "name": "GARCIA DOMINGUEZ, MANUEL",
-      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "name": "CAMPOS ESCALERA, PABLO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 9,
       "goals": 2,
       "penalties": 0,
       "average": 0.2222
+    },
+    {
+      "name": "BERMUDO NAVARRO, CRISTIAN",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 9,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2222
+    },
+    {
+      "name": "PAREJA GONZALEZ, JESUS",
+      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "played": 9,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2222
+    },
+    {
+      "name": "TEROL CAMACHO, ROBERTO",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
+      "played": 10,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.2
+    },
+    {
+      "name": "GRANADOS GONZALEZ, FRANCISCO",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 1,
+      "goals": 1,
+      "penalties": 0,
+      "average": 1.0
     },
     {
       "name": "SOTO BERNAL, JESUS",
@@ -5524,14 +5580,6 @@
       "average": 1.0
     },
     {
-      "name": "GIL CODES, RUBÉN",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "TEROL CAMACHO, ALVARO",
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 2,
@@ -5540,8 +5588,8 @@
       "average": 0.5
     },
     {
-      "name": "MARTÍN RUIZ, CARLOS",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "name": "AL LAL GRIMALDI, JOSE LUIS",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "played": 2,
       "goals": 1,
       "penalties": 0,
@@ -5564,16 +5612,16 @@
       "average": 0.5
     },
     {
-      "name": "PICHARDO BENJUMEA, JUAN MANUEL",
-      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
+      "name": "GIL CODES, RUBÉN",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 3,
       "goals": 1,
       "penalties": 0,
       "average": 0.3333
     },
     {
-      "name": "VAZQUEZ ALVAREZ, MARCOS",
-      "team": "U.D. ALCHOYANO",
+      "name": "PICHARDO BENJUMEA, JUAN MANUEL",
+      "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -5596,16 +5644,8 @@
       "average": 0.3333
     },
     {
-      "name": "JIMENEZ PEÑA, ALEJANDRO",
-      "team": "C.D. BENALUP",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "CARRASCO MELGAR, PEDRO",
-      "team": "U.D. ALCHOYANO",
+      "name": "FOLGOSO PECCI, ALVARO",
+      "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -5614,14 +5654,6 @@
     {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
       "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "MURILLO PULIDO, ALEJANDRO",
-      "team": "C.D. DECORSENECA",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -5660,15 +5692,7 @@
       "average": 0.2
     },
     {
-      "name": "SUAZO TORRES, ALEJANDRO",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 5,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.2
-    },
-    {
-      "name": "FLOR GARCIA, RAUL",
+      "name": "JIMENEZ PEÑA, ALEJANDRO",
       "team": "C.D. BENALUP",
       "played": 5,
       "goals": 1,
@@ -5700,15 +5724,15 @@
       "average": 0.2
     },
     {
-      "name": "GONZALEZ ESPINOSA, ANTONIO",
-      "team": "C.D. DECORSENECA",
+      "name": "GONZALEZ CRESPO, JESUS",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "played": 5,
       "goals": 1,
       "penalties": 0,
       "average": 0.2
     },
     {
-      "name": "GARCIA JIMENEZ, MIGUEL",
+      "name": "CARRASCO MELGAR, PEDRO",
       "team": "U.D. ALCHOYANO",
       "played": 5,
       "goals": 1,
@@ -5716,8 +5740,8 @@
       "average": 0.2
     },
     {
-      "name": "PAEZ MURILLO, MOISES",
-      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
+      "name": "MURILLO PULIDO, ALEJANDRO",
+      "team": "C.D. DECORSENECA",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -5732,16 +5756,32 @@
       "average": 0.2
     },
     {
-      "name": "MARTIN RODRIGO, JUAN CARLOS",
-      "team": "C.D. OLIMPIC DE TRIANA",
+      "name": "FLOR GARCIA, RAUL",
+      "team": "C.D. BENALUP",
       "played": 6,
       "goals": 1,
       "penalties": 0,
       "average": 0.1667
     },
     {
-      "name": "FERNANDEZ MATEO, IGNACIO",
-      "team": "C.D. OLIMPIC DE TRIANA",
+      "name": "GONZALEZ ESPINOSA, ANTONIO",
+      "team": "C.D. DECORSENECA",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
+      "name": "GARCIA JIMENEZ, MIGUEL",
+      "team": "U.D. ALCHOYANO",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
+      "name": "PAEZ MURILLO, MOISES",
+      "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
       "played": 6,
       "goals": 1,
       "penalties": 0,
@@ -5756,24 +5796,24 @@
       "average": 0.1429
     },
     {
-      "name": "LOPEZ ARCE, JOSE ANGEL",
-      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "name": "MARTIN RODRIGO, JUAN CARLOS",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 7,
       "goals": 1,
       "penalties": 0,
       "average": 0.1429
     },
     {
-      "name": "PEREZ CORTES, ANIBAL",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "name": "BENEYTO CASTAÑEDA, RUBEN",
+      "team": "CIRCULO MERCANTIL E INDUSTRIAL",
       "played": 7,
       "goals": 1,
       "penalties": 0,
       "average": 0.1429
     },
     {
-      "name": "LEDESMA REVUELTO, MARIO DANIEL",
-      "team": "C.D. DECORSENECA",
+      "name": "FERNANDEZ MATEO, IGNACIO",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 7,
       "goals": 1,
       "penalties": 0,
@@ -5788,44 +5828,12 @@
       "average": 0.1429
     },
     {
-      "name": "CAMPAÑA POZO, JOSE MANUEL",
-      "team": "C.D. SANTAELLA 2010",
+      "name": "CURBELO PEREZ, MARCOS AURELIO",
+      "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
       "played": 7,
       "goals": 1,
       "penalties": 0,
       "average": 0.1429
-    },
-    {
-      "name": "LOPEZ FEIJOO, RAUL",
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "played": 7,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.1429
-    },
-    {
-      "name": "GOMEZ ROSA, MIGUEL",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 8,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.125
-    },
-    {
-      "name": "BAENA PRIEGO, ALBERTO",
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "played": 8,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.125
-    },
-    {
-      "name": "RODRIGUEZ BLANCO, JESUS",
-      "team": "C.D. DECORSENECA",
-      "played": 8,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.125
     },
     {
       "name": "JIMENEZ MÁRQUEZ, AGUSTÍN",
@@ -5836,16 +5844,24 @@
       "average": 0.125
     },
     {
-      "name": "MARQUEZ ROMERO, DANIEL",
-      "team": "U.D. ALCHOYANO",
+      "name": "FERNANDEZ ANDRADES, JAIME",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 8,
       "goals": 1,
       "penalties": 0,
       "average": 0.125
     },
     {
-      "name": "PAREJA GONZALEZ, JESUS",
-      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "name": "PEREZ CORTES, ANIBAL",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 8,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.125
+    },
+    {
+      "name": "LEDESMA REVUELTO, MARIO DANIEL",
+      "team": "C.D. DECORSENECA",
       "played": 8,
       "goals": 1,
       "penalties": 0,
@@ -5868,15 +5884,15 @@
       "average": 0.125
     },
     {
-      "name": "VELA ACEDO, SERGIO",
-      "team": "C.D. BENALUP",
+      "name": "CAMPAÑA POZO, JOSE MANUEL",
+      "team": "C.D. SANTAELLA 2010",
       "played": 8,
       "goals": 1,
       "penalties": 0,
       "average": 0.125
     },
     {
-      "name": "EL DAHER, LAUTARO",
+      "name": "LOPEZ FEIJOO, RAUL",
       "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
       "played": 8,
       "goals": 1,
@@ -5892,16 +5908,56 @@
       "average": 0.125
     },
     {
-      "name": "CUMPLIDO SANCHEZ, JAIME",
-      "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "played": 8,
+      "name": "GOMEZ ROSA, MIGUEL",
+      "team": "C.D. SANTAELLA 2010",
+      "played": 9,
       "goals": 1,
       "penalties": 0,
-      "average": 0.125
+      "average": 0.1111
     },
     {
-      "name": "CARMONA CARMONA, ALEJANDRO",
-      "team": "C.D. DEPORTE Y OCIO (ADYO)",
+      "name": "BAENA PRIEGO, ALBERTO",
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "RODRIGUEZ BLANCO, JESUS",
+      "team": "C.D. DECORSENECA",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "MARQUEZ ROMERO, DANIEL",
+      "team": "U.D. ALCHOYANO",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "VELA ACEDO, SERGIO",
+      "team": "C.D. BENALUP",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "EL DAHER, LAUTARO",
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "CUMPLIDO SANCHEZ, JAIME",
+      "team": "C.D. ALCALA DE GUADAIRA F.S.",
       "played": 9,
       "goals": 1,
       "penalties": 0,
@@ -5916,7 +5972,7 @@
       "average": null
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=9&codcompeticion=48466108&codtemporada=22&codgrupo=48466109",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=10&codcompeticion=48466108&codtemporada=22&codgrupo=48466109",
   "roster": [
     {
       "name": "LUNA CUBERO, JESUS",
@@ -7522,7 +7578,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-15T09:26:24.253528+00:00",
+  "updated_at": "2026-11-15T17:10:03.588596+00:00",
   "rounds": [
     1,
     2,
@@ -7747,13 +7803,13 @@
       "date": "2026-11-15",
       "time": "12:30",
       "venue": "San Fernando - PABELLON BAHIA SUR",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 5,
+      "away_score": 4,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=10",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645841",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645841&cod_acta=2645841",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2065721",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495"
     },
@@ -8134,195 +8190,195 @@
     {
       "position": 1,
       "team": "C.D. DECORSENECA",
-      "points": 23,
-      "played": 9,
+      "points": 24,
+      "played": 10,
       "won": 7,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 0,
-      "gf": 40,
-      "ga": 14,
+      "gf": 42,
+      "ga": 16,
       "gd": 26,
-      "form": "G G G G G",
+      "form": "G G G G E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG"
     },
     {
       "position": 2,
       "team": "C.D. OLIMPIC DE TRIANA",
-      "points": 18,
-      "played": 8,
-      "won": 6,
+      "points": 21,
+      "played": 9,
+      "won": 7,
       "drawn": 0,
       "lost": 2,
-      "gf": 42,
-      "ga": 21,
-      "gd": 21,
-      "form": "G G G P G",
+      "gf": 50,
+      "ga": 24,
+      "gd": 26,
+      "form": "G G P G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg"
     },
     {
       "position": 3,
       "team": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
-      "points": 18,
-      "played": 9,
-      "won": 6,
+      "points": 21,
+      "played": 10,
+      "won": 7,
       "drawn": 0,
       "lost": 3,
-      "gf": 58,
-      "ga": 38,
-      "gd": 20,
+      "gf": 63,
+      "ga": 42,
+      "gd": 21,
       "form": "G G G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000001254_04404.jpg"
     },
     {
       "position": 4,
-      "team": "C.D. BENALUP",
-      "points": 17,
-      "played": 9,
-      "won": 5,
-      "drawn": 2,
-      "lost": 2,
-      "gf": 36,
-      "ga": 33,
-      "gd": 3,
-      "form": "P G G G G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg"
-    },
-    {
-      "position": 5,
       "team": "C.D. ALCALA DE GUADAIRA F.S.",
-      "points": 16,
-      "played": 9,
+      "points": 17,
+      "played": 10,
       "won": 4,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 1,
-      "gf": 36,
-      "ga": 28,
+      "gf": 38,
+      "ga": 30,
       "gd": 8,
-      "form": "G E G G P",
+      "form": "E G G P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/01875.png"
     },
     {
-      "position": 6,
-      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "points": 16,
-      "played": 9,
+      "position": 5,
+      "team": "C.D. BENALUP",
+      "points": 17,
+      "played": 10,
       "won": 5,
-      "drawn": 1,
-      "lost": 3,
-      "gf": 30,
-      "ga": 32,
-      "gd": -2,
-      "form": "P P G G G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
-    },
-    {
-      "position": 7,
-      "team": "C.D. SANTAELLA 2010",
-      "points": 14,
-      "played": 9,
-      "won": 4,
       "drawn": 2,
       "lost": 3,
-      "gf": 32,
-      "ga": 29,
-      "gd": 3,
-      "form": "G G P G P",
+      "gf": 40,
+      "ga": 38,
+      "gd": 2,
+      "form": "G G G G P",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg"
     },
     {
-      "position": 8,
+      "position": 6,
       "team": "C.D. DEPORTE Y OCIO (ADYO)",
-      "points": 13,
-      "played": 9,
-      "won": 4,
+      "points": 16,
+      "played": 10,
+      "won": 5,
       "drawn": 1,
       "lost": 4,
-      "gf": 38,
-      "ga": 31,
-      "gd": 7,
-      "form": "E P G P G",
+      "gf": 46,
+      "ga": 34,
+      "gd": 12,
+      "form": "P G P G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002205899_logo_ADYO_512x512.jpg"
     },
     {
-      "position": 9,
-      "team": "U.D. ALCHOYANO",
-      "points": 13,
-      "played": 9,
-      "won": 4,
+      "position": 7,
+      "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "points": 16,
+      "played": 10,
+      "won": 5,
       "drawn": 1,
       "lost": 4,
-      "gf": 31,
-      "ga": 25,
+      "gf": 34,
+      "ga": 37,
+      "gd": -3,
+      "form": "P G G G P",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG"
+    },
+    {
+      "position": 8,
+      "team": "C.D. SANTAELLA 2010",
+      "points": 15,
+      "played": 10,
+      "won": 4,
+      "drawn": 3,
+      "lost": 3,
+      "gf": 37,
+      "ga": 34,
+      "gd": 3,
+      "form": "G P G P E",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg"
+    },
+    {
+      "position": 9,
+      "team": "U.D. ALCHOYANO",
+      "points": 14,
+      "played": 10,
+      "won": 4,
+      "drawn": 2,
+      "lost": 4,
+      "gf": 36,
+      "ga": 30,
       "gd": 6,
-      "form": "P P G P E",
+      "form": "P G P E E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001162576_PCD_UD_ALCHOYANO___3288.jpg"
     },
     {
       "position": 10,
-      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
-      "points": 11,
-      "played": 9,
-      "won": 3,
-      "drawn": 2,
-      "lost": 4,
-      "gf": 33,
-      "ga": 43,
-      "gd": -10,
-      "form": "P P E P G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg"
-    },
-    {
-      "position": 11,
       "team": "C.D. ISLEÑO SAN FERNANDO F.S.",
-      "points": 11,
-      "played": 9,
-      "won": 3,
+      "points": 14,
+      "played": 10,
+      "won": 4,
       "drawn": 2,
       "lost": 4,
-      "gf": 25,
-      "ga": 37,
-      "gd": -12,
-      "form": "E G P P P",
+      "gf": 30,
+      "ga": 41,
+      "gd": -11,
+      "form": "G P P P G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001284111_logo_isle_90_.png"
     },
     {
-      "position": 12,
+      "position": 11,
       "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "points": 9,
-      "played": 8,
-      "won": 2,
+      "points": 12,
+      "played": 9,
+      "won": 3,
       "drawn": 3,
       "lost": 3,
-      "gf": 27,
-      "ga": 28,
-      "gd": -1,
-      "form": "E E E P P",
+      "gf": 34,
+      "ga": 31,
+      "gd": 3,
+      "form": "E E P P G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png"
+    },
+    {
+      "position": 12,
+      "team": "HAMAR CLUB DEPORTIVO GSPORT CIUDAD INMOBILIARIA",
+      "points": 12,
+      "played": 10,
+      "won": 3,
+      "drawn": 3,
+      "lost": 4,
+      "gf": 38,
+      "ga": 48,
+      "gd": -10,
+      "form": "P E P G E",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000844206_20201013_014741.jpg"
     },
     {
       "position": 13,
       "team": "CIRCULO MERCANTIL E INDUSTRIAL",
       "points": 8,
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 2,
-      "lost": 5,
-      "gf": 25,
-      "ga": 42,
-      "gd": -17,
-      "form": "G P E P P",
+      "lost": 6,
+      "gf": 28,
+      "ga": 50,
+      "gd": -22,
+      "form": "P E P P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg"
     },
@@ -8330,29 +8386,29 @@
       "position": 14,
       "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "points": 6,
-      "played": 9,
+      "played": 10,
       "won": 1,
       "drawn": 3,
-      "lost": 5,
-      "gf": 34,
-      "ga": 38,
-      "gd": -4,
-      "form": "P G P E E",
+      "lost": 6,
+      "gf": 37,
+      "ga": 45,
+      "gd": -8,
+      "form": "G P E E P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001802982_LA_PALMA_F__TBOL_SALA_LOGO_COLOR_1.jpg"
     },
     {
       "position": 15,
       "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "points": 5,
-      "played": 9,
+      "points": 6,
+      "played": 10,
       "won": 1,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 6,
-      "gf": 31,
-      "ga": 45,
+      "gf": 36,
+      "ga": 50,
       "gd": -14,
-      "form": "P P P E P",
+      "form": "P P E P E",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg"
     },
@@ -8360,19 +8416,19 @@
       "position": 16,
       "team": "C.D. VILLALBA F.S.",
       "points": 1,
-      "played": 9,
+      "played": 10,
       "won": 0,
       "drawn": 1,
-      "lost": 8,
-      "gf": 23,
-      "ga": 57,
-      "gd": -34,
-      "form": "E P P P P",
+      "lost": 9,
+      "gf": 26,
+      "ga": 65,
+      "gd": -39,
+      "form": "P P P P P",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=9&codcompeticion=48466108&codgrupo=48466109&codjornada=9",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=10&codcompeticion=48466108&codgrupo=48466109&codjornada=10",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -8464,7 +8520,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-15T09:26:24.943099+00:00",
+  "staff_updated_at": "2026-11-15T17:10:04.754807+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
