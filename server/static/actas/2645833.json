@@ -565,7 +565,7 @@
         "goals": 1,
         "starts": 8,
         "called": 8,
-        "played": null,
+        "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       }
@@ -706,10 +706,10 @@
       ],
       "profile_updated_at": "2026-11-10T17:57:41.637914+00:00",
       "competition_summary": {
-        "goals": 12,
+        "goals": 13,
         "starts": 6,
         "called": 9,
-        "played": 7,
+        "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       }
@@ -853,7 +853,7 @@
         "goals": 1,
         "starts": 1,
         "called": 9,
-        "played": 6,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       }
@@ -864,10 +864,10 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=12483&codacta=2645833&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 4,
+        "goals": 5,
         "starts": 4,
         "called": 8,
-        "played": 7,
+        "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -940,7 +940,7 @@
         "goals": 2,
         "starts": 4,
         "called": 9,
-        "played": 7,
+        "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1009,10 +1009,10 @@
       ],
       "profile_updated_at": "2026-11-10T17:57:24.661943+00:00",
       "competition_summary": {
-        "goals": 9,
+        "goals": 12,
         "starts": 2,
         "called": 9,
-        "played": 7,
+        "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       }
@@ -1098,7 +1098,7 @@
         "goals": 3,
         "starts": 1,
         "called": 9,
-        "played": 5,
+        "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1113,7 +1113,7 @@
         "goals": 1,
         "starts": 1,
         "called": 9,
-        "played": 6,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },
@@ -1125,10 +1125,10 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8535386&codacta=2645833&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 9,
+        "goals": 11,
         "starts": 1,
         "called": 8,
-        "played": 6,
+        "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
       },

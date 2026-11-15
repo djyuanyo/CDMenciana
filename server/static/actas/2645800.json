@@ -1073,19 +1073,19 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "10"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
-              "8"
+              "9"
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1119,12 +1119,12 @@
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.3"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:43.384196+00:00"
+      "profile_updated_at": "2026-11-15T17:16:45.466859+00:00"
     },
     {
       "id": "d9cb624041675025",
@@ -1201,7 +1201,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "10"
             ],
             [
               "Titular",
@@ -1209,11 +1209,11 @@
             ],
             [
               "Suplente",
-              "8"
+              "10"
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1252,7 +1252,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:45.377086+00:00"
+      "profile_updated_at": "2026-11-15T17:16:53.247088+00:00"
     },
     {
       "id": "1447556af910fb62",
@@ -1265,7 +1265,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "10"
             ],
             [
               "Titular",
@@ -1273,11 +1273,11 @@
             ],
             [
               "Suplente",
-              "8"
+              "10"
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1316,7 +1316,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-07T01:03:46.385370+00:00"
+      "profile_updated_at": "2026-11-15T17:16:47.005974+00:00"
     },
     {
       "id": "305852222913e9e3",
@@ -1401,11 +1401,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "8"
             ],
             [
               "Titular",
-              "8"
+              "7"
             ],
             [
               "Suplente",
@@ -1413,7 +1413,7 @@
             ],
             [
               "Jugados",
-              "9"
+              "8"
             ]
           ]
         },
@@ -1430,7 +1430,7 @@
             ],
             [
               "Doble tarjeta amarilla",
-              "3"
+              "2"
             ],
             [
               "Tarjeta roja",
@@ -1443,21 +1443,21 @@
           "rows": [
             [
               "Total",
-              "6"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.6"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-15T09:32:09.502181+00:00",
+      "profile_updated_at": "2026-11-10T17:57:38.667983+00:00",
       "competition_summary": {
-        "goals": 5,
+        "goals": 6,
         "starts": 8,
         "called": 9,
-        "played": 8,
+        "played": 9,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -1617,7 +1617,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "7"
             ],
             [
               "Titular",
@@ -1625,11 +1625,11 @@
             ],
             [
               "Suplente",
-              "5"
+              "4"
             ],
             [
               "Jugados",
-              "5"
+              "4"
             ]
           ]
         },
@@ -1642,7 +1642,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "6"
+              "5"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1650,7 +1650,7 @@
             ],
             [
               "Tarjeta roja",
-              "1"
+              "0"
             ]
           ]
         },
@@ -1659,21 +1659,21 @@
           "rows": [
             [
               "Total",
-              "4"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.5"
+              "0.4"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-15T09:32:14.535290+00:00",
+      "profile_updated_at": "2026-11-10T17:57:40.722092+00:00",
       "competition_summary": {
-        "goals": 3,
+        "goals": 4,
         "starts": 3,
         "called": 8,
-        "played": 4,
+        "played": 5,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -1689,7 +1689,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "7"
             ],
             [
               "Titular",
@@ -1697,11 +1697,11 @@
             ],
             [
               "Suplente",
-              "7"
+              "6"
             ],
             [
               "Jugados",
-              "4"
+              "3"
             ]
           ]
         },
@@ -1740,7 +1740,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-15T09:32:11.724732+00:00",
+      "profile_updated_at": "2026-11-10T02:17:37.273829+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1958,10 +1958,10 @@
       ],
       "profile_updated_at": "2026-11-05T11:02:31.715366+00:00",
       "competition_summary": {
-        "goals": 6,
+        "goals": 7,
         "starts": 5,
         "called": 8,
-        "played": 6,
+        "played": 7,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -2049,11 +2049,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "6"
             ],
             [
               "Titular",
-              "5"
+              "4"
             ],
             [
               "Suplente",
@@ -2061,7 +2061,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "6"
             ]
           ]
         },
@@ -2074,7 +2074,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "1"
             ],
             [
               "Doble tarjeta amarilla",
@@ -2091,21 +2091,21 @@
           "rows": [
             [
               "Total",
-              "4"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-15T09:32:10.550840+00:00",
+      "profile_updated_at": "2026-11-04T15:33:10.433928+00:00",
       "competition_summary": {
-        "goals": 3,
+        "goals": 4,
         "starts": 5,
         "called": 7,
-        "played": 6,
+        "played": 7,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -2121,11 +2121,11 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "9"
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
@@ -2133,7 +2133,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "6"
             ]
           ]
         },
@@ -2146,7 +2146,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -2172,12 +2172,12 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-15T09:32:12.531376+00:00",
+      "profile_updated_at": "2026-11-10T02:17:45.677422+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 3,
         "called": 10,
-        "played": 5,
+        "played": 6,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
