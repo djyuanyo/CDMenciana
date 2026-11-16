@@ -1687,26 +1687,6 @@
     {
       "id": "48466109-11-5",
       "round": 11,
-      "home": "C.D. DEPORTE Y OCIO (ADYO)",
-      "away": "C.D. DECORSENECA",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002205899_logo_ADYO_512x512.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
-      "date": "2026-11-22",
-      "time": "",
-      "venue": "Cañada Rosal - POLIDEPORTIVO MUNICIPAL (Pabellón)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
-      "acta_url": ""
-    },
-    {
-      "id": "48466109-11-6",
-      "round": 11,
       "home": "CIRCULO MERCANTIL E INDUSTRIAL",
       "away": "C.D. BENALUP",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg",
@@ -1725,7 +1705,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731"
     },
     {
-      "id": "48466109-11-7",
+      "id": "48466109-11-6",
       "round": 11,
       "home": "C.D. OLIMPIC DE TRIANA",
       "away": "C.D. ALCALA DE GUADAIRA F.S.",
@@ -1743,6 +1723,26 @@
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645850",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=187515"
+    },
+    {
+      "id": "48466109-11-7",
+      "round": 11,
+      "home": "C.D. DEPORTE Y OCIO (ADYO)",
+      "away": "C.D. DECORSENECA",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002205899_logo_ADYO_512x512.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000978449_a90c0f5e_dc3c_426b_827e_377b068aa927_copia.JPG",
+      "date": "2026-11-22",
+      "time": "",
+      "venue": "Luisiana (La) - LA LUISIANA PABELLÓN MUNICIPAL(Pabellón)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=20710155",
+      "acta_url": ""
     },
     {
       "id": "48466109-11-8",
@@ -7656,7 +7656,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-16T18:54:15.191256+00:00",
+  "updated_at": "2026-11-16T20:29:17.206698+00:00",
   "rounds": [
     1,
     2,
@@ -8598,7 +8598,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-16T18:54:16.197774+00:00",
+  "staff_updated_at": "2026-11-16T20:29:18.389079+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
