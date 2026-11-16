@@ -218,6 +218,32 @@
     },
     {
       "kind": "text",
+      "text": "DEL. Campo:"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "",
+          "NO PRESENTA NO PRESENTA, NO PRESENTA"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "DEL. Equipo:"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "",
+          "NO PRESENTA NO PRESENTA, NO PRESENTA"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
       "text": "Entrenador:"
     },
     {
@@ -531,8 +557,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:18.833409+00:00",
-      "stats_round": 10
+      "profile_updated_at": "2026-11-16T01:37:18.833409+00:00"
     },
     {
       "id": "7ed0b75fd609bdbb",
@@ -596,8 +621,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:27.805168+00:00",
-      "stats_round": 10
+      "profile_updated_at": "2026-11-16T01:37:27.805168+00:00"
     },
     {
       "id": "537b5709de1dcb61",
@@ -697,8 +721,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:24.639142+00:00",
-      "stats_round": 10
+      "profile_updated_at": "2026-11-16T01:37:24.639142+00:00"
     },
     {
       "id": "62d66ce313a7300a",
@@ -762,8 +785,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:29.825954+00:00",
-      "stats_round": 10
+      "profile_updated_at": "2026-11-16T01:37:29.825954+00:00"
     },
     {
       "id": "29867582623aa070",
@@ -833,11 +855,22 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:38.644184+00:00",
-      "stats_round": 10
+      "profile_updated_at": "2026-11-16T01:37:38.644184+00:00"
     }
   ],
   "staff": [
+    {
+      "name": "NO PRESENTA NO PRESENTA, NO PRESENTA",
+      "role": "DEL. Campo",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg"
+    },
+    {
+      "name": "NO PRESENTA NO PRESENTA, NO PRESENTA",
+      "role": "DEL. Equipo",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg"
+    },
     {
       "name": "RUGERO SANCHEZ, CRISTIAN",
       "role": "Entrenador",
@@ -871,5 +904,5 @@
   ],
   "id": "2645840",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645840",
-  "updated_at": "2026-11-15T21:55:40.718238+00:00"
+  "updated_at": "2026-11-16T02:07:49.997215+00:00"
 }
