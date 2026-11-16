@@ -365,26 +365,6 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605"
     },
     {
-      "id": "49465413-7-1",
-      "round": 7,
-      "home": "C.D. SANTAELLA 2010",
-      "away": "C.D. BOCA F.S. PRIEGO",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
-      "date": "2026-11-22",
-      "time": "",
-      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
-      "acta_url": ""
-    },
-    {
       "id": "49465413-7",
       "round": 7,
       "home": "C.D. MENCIANA",
@@ -402,6 +382,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
+      "acta_url": ""
+    },
+    {
+      "id": "49465413-7-2",
+      "round": 7,
+      "home": "C.D. SANTAELLA 2010",
+      "away": "C.D. BOCA F.S. PRIEGO",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
+      "date": "2026-11-22",
+      "time": "",
+      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
       "acta_url": ""
     },
     {
@@ -3493,7 +3493,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-16T02:08:11.656382+00:00",
+  "updated_at": "2026-11-16T18:54:32.612173+00:00",
   "rounds": [
     1,
     2,
@@ -3905,7 +3905,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-16T02:08:12.530328+00:00",
+  "staff_updated_at": "2026-11-16T18:54:33.058614+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

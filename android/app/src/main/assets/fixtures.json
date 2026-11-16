@@ -1625,23 +1625,23 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-11-2",
+      "id": "48466109-11",
       "round": 11,
-      "home": "C.D. SANTAELLA 2010",
-      "away": "U.D. ALCHOYANO",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001162576_PCD_UD_ALCHOYANO___3288.jpg",
+      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "away": "C.D. VILLALBA F.S.",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
       "date": "2026-11-22",
       "time": "",
-      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
+      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
       "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
       "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
       "acta_url": ""
     },
     {
@@ -1665,23 +1665,23 @@
       "acta_url": ""
     },
     {
-      "id": "48466109-11",
+      "id": "48466109-11-4",
       "round": 11,
-      "home": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
-      "away": "C.D. VILLALBA F.S.",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000296951_Escudo_oficial_Apaga_y_Vamonos.JPG",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
+      "home": "C.D. SANTAELLA 2010",
+      "away": "U.D. ALCHOYANO",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001162576_PCD_UD_ALCHOYANO___3288.jpg",
       "date": "2026-11-22",
       "time": "",
-      "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
+      "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
       "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
       "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=436620",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
       "acta_url": ""
     },
     {
@@ -7656,7 +7656,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-16T02:07:55.752701+00:00",
+  "updated_at": "2026-11-16T18:54:15.191256+00:00",
   "rounds": [
     1,
     2,
@@ -8598,7 +8598,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-16T02:07:56.533089+00:00",
+  "staff_updated_at": "2026-11-16T18:54:16.197774+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
