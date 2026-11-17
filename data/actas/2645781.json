@@ -434,7 +434,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:17.710885+00:00",
+      "profile_updated_at": "2026-11-16T20:30:36.027554+00:00",
       "stats_round": 10
     },
     {
@@ -564,7 +564,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:21.196242+00:00",
+      "profile_updated_at": "2026-11-16T20:30:39.048730+00:00",
       "stats_round": 10
     },
     {
@@ -629,7 +629,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:21.847717+00:00",
+      "profile_updated_at": "2026-11-16T20:30:40.240519+00:00",
       "stats_round": 10
     },
     {
@@ -694,7 +694,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:22.621766+00:00",
+      "profile_updated_at": "2026-11-16T20:30:42.038111+00:00",
       "stats_round": 10
     },
     {
@@ -759,7 +759,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:25.802385+00:00",
+      "profile_updated_at": "2026-11-16T20:30:44.228977+00:00",
       "stats_round": 10
     },
     {
@@ -824,7 +824,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:28.807159+00:00",
+      "profile_updated_at": "2026-11-16T20:30:47.221172+00:00",
       "stats_round": 10
     },
     {
@@ -889,7 +889,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:30.791495+00:00",
+      "profile_updated_at": "2026-11-16T20:30:49.215397+00:00",
       "stats_round": 10
     },
     {
@@ -954,7 +954,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:32.816089+00:00",
+      "profile_updated_at": "2026-11-16T20:30:51.039255+00:00",
       "stats_round": 10
     },
     {
@@ -1019,7 +1019,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:34.929547+00:00",
+      "profile_updated_at": "2026-11-16T20:30:53.967681+00:00",
       "stats_round": 10
     },
     {
@@ -1084,7 +1084,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:36.795130+00:00",
+      "profile_updated_at": "2026-11-16T20:30:55.765170+00:00",
       "stats_round": 10
     },
     {
@@ -1149,7 +1149,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T01:37:37.620113+00:00",
+      "profile_updated_at": "2026-11-16T20:30:57.962836+00:00",
       "stats_round": 10
     },
     {
@@ -1235,11 +1235,11 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "7"
             ],
             [
               "Titular",
-              "9"
+              "6"
             ],
             [
               "Suplente",
@@ -1247,7 +1247,7 @@
             ],
             [
               "Jugados",
-              "10"
+              "7"
             ]
           ]
         },
@@ -1256,7 +1256,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -1277,11 +1277,11 @@
           "rows": [
             [
               "Total",
-              "6"
+              "3"
             ],
             [
               "Goles por partido",
-              "0.6"
+              "0.4"
             ]
           ]
         }
@@ -1294,7 +1294,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:28.013809+00:00"
+      "profile_updated_at": "2026-10-27T02:12:07.337802+00:00"
     },
     {
       "id": "cc210e43a0fbbed5",
@@ -1307,19 +1307,19 @@
           "rows": [
             [
               "Convocados",
-              "8"
-            ],
-            [
-              "Titular",
               "6"
             ],
             [
+              "Titular",
+              "5"
+            ],
+            [
               "Suplente",
-              "2"
+              "1"
             ],
             [
               "Jugados",
-              "8"
+              "6"
             ]
           ]
         },
@@ -1349,11 +1349,11 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Goles por partido",
-              "0.1"
+              "0.0"
             ]
           ]
         }
@@ -1366,7 +1366,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:30.005525+00:00"
+      "profile_updated_at": "2026-10-27T02:12:02.491702+00:00"
     },
     {
       "id": "46eb5927e7b8426f",
@@ -1451,19 +1451,19 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "7"
             ],
             [
               "Titular",
-              "8"
+              "6"
             ],
             [
               "Suplente",
-              "2"
+              "1"
             ],
             [
               "Jugados",
-              "10"
+              "7"
             ]
           ]
         },
@@ -1472,11 +1472,11 @@
           "rows": [
             [
               "Total",
-              "6"
+              "4"
             ],
             [
               "Tarjeta amarilla",
-              "6"
+              "5"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1484,7 +1484,7 @@
             ],
             [
               "Tarjeta roja",
-              "1"
+              "0"
             ]
           ]
         },
@@ -1493,7 +1493,7 @@
           "rows": [
             [
               "Total",
-              "10"
+              "7"
             ],
             [
               "Goles por partido",
@@ -1510,7 +1510,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:27.011223+00:00"
+      "profile_updated_at": "2026-10-27T02:12:03.329769+00:00"
     },
     {
       "id": "e8dd137b6d461f3b",
@@ -1523,11 +1523,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "8"
             ],
             [
               "Titular",
-              "5"
+              "4"
             ],
             [
               "Suplente",
@@ -1535,7 +1535,7 @@
             ],
             [
               "Jugados",
-              "9"
+              "8"
             ]
           ]
         },
@@ -1582,7 +1582,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:30.997252+00:00"
+      "profile_updated_at": "2026-11-09T01:02:33.058117+00:00"
     },
     {
       "id": "a570224ac326ebe9",
@@ -1595,19 +1595,19 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "4"
             ],
             [
               "Titular",
-              "2"
+              "0"
             ],
             [
               "Suplente",
-              "5"
+              "4"
             ],
             [
               "Jugados",
-              "7"
+              "4"
             ]
           ]
         },
@@ -1654,7 +1654,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:34.003367+00:00"
+      "profile_updated_at": "2026-10-24T14:39:56.722006+00:00"
     },
     {
       "id": "dd1195e3c7fbba42",
@@ -1811,7 +1811,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "6"
             ],
             [
               "Titular",
@@ -1819,11 +1819,11 @@
             ],
             [
               "Suplente",
-              "9"
+              "6"
             ],
             [
               "Jugados",
-              "8"
+              "5"
             ]
           ]
         },
@@ -1853,11 +1853,11 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Goles por partido",
-              "0.1"
+              "0.0"
             ]
           ]
         }
@@ -1870,7 +1870,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:34.978030+00:00"
+      "profile_updated_at": "2026-10-24T14:39:57.753836+00:00"
     },
     {
       "id": "38a19d868ca117e3",
@@ -1883,19 +1883,19 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "5"
             ],
             [
               "Titular",
-              "1"
+              "0"
             ],
             [
               "Suplente",
-              "7"
+              "5"
             ],
             [
               "Jugados",
-              "8"
+              "5"
             ]
           ]
         },
@@ -1929,7 +1929,7 @@
             ],
             [
               "Goles por partido",
-              "0.1"
+              "0.2"
             ]
           ]
         }
@@ -1942,7 +1942,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:32.996888+00:00"
+      "profile_updated_at": "2026-10-24T14:39:55.732585+00:00"
     },
     {
       "id": "78c6825750935ce5",
@@ -1955,11 +1955,11 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "9"
             ],
             [
               "Titular",
-              "3"
+              "2"
             ],
             [
               "Suplente",
@@ -1967,7 +1967,7 @@
             ],
             [
               "Jugados",
-              "9"
+              "8"
             ]
           ]
         },
@@ -2014,7 +2014,7 @@
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-16T02:13:31.996638+00:00"
+      "profile_updated_at": "2026-11-10T17:57:37.636391+00:00"
     }
   ],
   "staff": [
