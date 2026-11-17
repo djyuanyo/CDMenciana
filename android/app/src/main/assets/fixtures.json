@@ -1280,7 +1280,7 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=8",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2815948",
+      "acta_url": "",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=33701154",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=1009518"
     },
@@ -1620,9 +1620,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645845",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645845"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997"
     },
     {
       "id": "48466109-11-2",
@@ -4582,18 +4582,10 @@
     {
       "name": "ROLDAN AGUILERA, JESUS",
       "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 8,
+      "played": 9,
       "goals": 13,
       "penalties": 0,
-      "average": 1.625
-    },
-    {
-      "name": "CARICOL MARQUEZ, DAVID",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 8,
-      "goals": 12,
-      "penalties": 0,
-      "average": 1.5
+      "average": 1.4444
     },
     {
       "name": "JIMENEZ CARRASCO, IVAN",
@@ -4604,12 +4596,20 @@
       "average": 1.3333
     },
     {
+      "name": "CARICOL MARQUEZ, DAVID",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 9,
+      "goals": 12,
+      "penalties": 0,
+      "average": 1.3333
+    },
+    {
       "name": "MENCHEN MARTÍNEZ, SANTIAGO",
       "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 7,
+      "played": 8,
       "goals": 11,
       "penalties": 0,
-      "average": 1.5714
+      "average": 1.375
     },
     {
       "name": "MORENO PEREZ, SANTOS",
@@ -4764,14 +4764,6 @@
       "average": 1.0
     },
     {
-      "name": "RUIZ GONZALEZ, RAFAEL",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 6,
-      "goals": 6,
-      "penalties": 1,
-      "average": 1.0
-    },
-    {
       "name": "LOPEZ HERNANDEZ, JOSE IVAN",
       "team": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "played": 6,
@@ -4786,6 +4778,14 @@
       "goals": 6,
       "penalties": 0,
       "average": 1.0
+    },
+    {
+      "name": "RUIZ GONZALEZ, RAFAEL",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 7,
+      "goals": 6,
+      "penalties": 1,
+      "average": 0.8571
     },
     {
       "name": "BATALLA BUTRON, DANIEL",
@@ -4844,14 +4844,6 @@
       "average": 1.0
     },
     {
-      "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 6,
-      "goals": 5,
-      "penalties": 0,
-      "average": 0.8333
-    },
-    {
       "name": "SAUCES JIMENEZ, RAFAEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 7,
@@ -4860,12 +4852,12 @@
       "average": 0.7143
     },
     {
-      "name": "LOPEZ BENITEZ, DAVID",
-      "team": "C.D. OLIMPIC DE TRIANA",
-      "played": 8,
+      "name": "ORTIZ DE GALISTEO TORTI, JUAN CARLOS",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 7,
       "goals": 5,
       "penalties": 0,
-      "average": 0.625
+      "average": 0.7143
     },
     {
       "name": "BAQUERO BEGINES, ALEJANDRO",
@@ -4882,6 +4874,14 @@
       "goals": 5,
       "penalties": 0,
       "average": 0.625
+    },
+    {
+      "name": "LOPEZ BENITEZ, DAVID",
+      "team": "C.D. OLIMPIC DE TRIANA",
+      "played": 9,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.5556
     },
     {
       "name": "CEPERO ANGERIZ, MARIO",
@@ -5212,14 +5212,6 @@
       "average": 0.375
     },
     {
-      "name": "ARRIAZA FRANCO, JORGE",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 8,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.375
-    },
-    {
       "name": "GARCIA CUESTA, EMILIO",
       "team": "C.D. DECORSENECA",
       "played": 8,
@@ -5230,6 +5222,14 @@
     {
       "name": "MARAÑON BAENA, JESUS",
       "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
+      "played": 9,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ARRIAZA FRANCO, JORGE",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "played": 9,
       "goals": 3,
       "penalties": 0,
@@ -5708,24 +5708,8 @@
       "average": 0.2
     },
     {
-      "name": "VIGO PATRON, ALEJANDRO",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-      "played": 5,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.2
-    },
-    {
       "name": "GONZALEZ SANABRIA, CARLOS",
       "team": "CIRCULO MERCANTIL E INDUSTRIAL",
-      "played": 5,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.2
-    },
-    {
-      "name": "GONZALEZ CRESPO, JESUS",
-      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "played": 5,
       "goals": 1,
       "penalties": 0,
@@ -5764,8 +5748,24 @@
       "average": 0.1667
     },
     {
+      "name": "VIGO PATRON, ALEJANDRO",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
       "name": "GONZALEZ ESPINOSA, ANTONIO",
       "team": "C.D. DECORSENECA",
+      "played": 6,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1667
+    },
+    {
+      "name": "GONZALEZ CRESPO, JESUS",
+      "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
       "played": 6,
       "goals": 1,
       "penalties": 0,
@@ -5838,14 +5838,6 @@
     {
       "name": "JIMENEZ MÁRQUEZ, AGUSTÍN",
       "team": "C.D. SANTAELLA 2010",
-      "played": 8,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.125
-    },
-    {
-      "name": "FERNANDEZ ANDRADES, JAIME",
-      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 8,
       "goals": 1,
       "penalties": 0,
@@ -5934,6 +5926,14 @@
     {
       "name": "MARQUEZ ROMERO, DANIEL",
       "team": "U.D. ALCHOYANO",
+      "played": 9,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.1111
+    },
+    {
+      "name": "FERNANDEZ ANDRADES, JAIME",
+      "team": "C.D. OLIMPIC DE TRIANA",
       "played": 9,
       "goals": 1,
       "penalties": 0,
@@ -7656,7 +7656,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-17T19:33:07.040399+00:00",
+  "updated_at": "2026-11-17T22:23:27.938481+00:00",
   "rounds": [
     1,
     2,
@@ -8598,7 +8598,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-17T19:33:08.572658+00:00",
+  "staff_updated_at": "2026-11-17T22:23:29.118588+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
