@@ -437,7 +437,8 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "4f1283d77490584b",
@@ -523,7 +524,8 @@
         "played": 7,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c51df9f5918ed5b5",
@@ -969,7 +971,8 @@
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f37ea79ba3ac230b",
@@ -983,7 +986,8 @@
         "played": 4,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "625625d1eb5243e6",
@@ -1119,7 +1123,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-16T02:13:28.013809+00:00",
+      "profile_updated_at": "2026-11-18T04:24:18.510299+00:00",
       "competition_summary": {
         "goals": 6,
         "starts": 9,
@@ -1357,7 +1361,65 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "4"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "4"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-18T04:30:53.762724+00:00"
     },
     {
       "id": "f1471413f6002698",
@@ -1371,7 +1433,8 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "7b5bef8088285041",
@@ -1385,7 +1448,8 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "19f4efcfb2aab8cc",
@@ -1399,7 +1463,8 @@
         "played": 1,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "ea2e3796f700aaf1",
