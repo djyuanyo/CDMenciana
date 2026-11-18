@@ -729,8 +729,7 @@
         "played": 6,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "2ccc3d944f57dd3f",
@@ -888,8 +887,7 @@
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "0f92050c94f98130",
@@ -903,8 +901,7 @@
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "bfa7acdf2c98a7e2",
@@ -990,8 +987,7 @@
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "01d0e94ec5a7e5e4",
@@ -1077,8 +1073,7 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "9c307a965700aec4",
@@ -1092,8 +1087,7 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "901edb52cb012203",
@@ -1107,8 +1101,7 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "fbbabf728ba9ffac",
@@ -1122,8 +1115,7 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "147cc1fbbb1f1887",
@@ -1137,8 +1129,7 @@
         "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "e755367817626bc6",
@@ -1152,22 +1143,13 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "17a281b0f5bea635",
       "name": "ROLDAN AGUILERA, JESUS",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81811&codacta=2645842&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
-      "competition_summary": {
-        "goals": 13,
-        "starts": 6,
-        "called": 9,
-        "played": 9,
-        "team": "C.D. OLIMPIC DE TRIANA",
-        "source": "actas oficiales RFAF"
-      },
       "stats": [
         {
           "title": "Partidos",
@@ -1225,7 +1207,15 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-18T04:22:39.386320+00:00"
+      "profile_updated_at": "2026-11-18T04:22:39.386320+00:00",
+      "competition_summary": {
+        "goals": 13,
+        "starts": 6,
+        "called": 9,
+        "played": 9,
+        "team": "C.D. OLIMPIC DE TRIANA",
+        "source": "actas oficiales RFAF"
+      }
     },
     {
       "id": "a0b7c0e60a408467",
@@ -1239,8 +1229,7 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "01d8f89e2823e7e8",
@@ -1254,8 +1243,7 @@
         "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "9fcd9b3a7914189f",
@@ -1269,8 +1257,7 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "795e380e8794e37c",
@@ -1284,8 +1271,7 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     },
     {
       "id": "aa3355d572cb2586",
@@ -1299,8 +1285,7 @@
         "played": 6,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      },
-      "stats": []
+      }
     }
   ],
   "staff": [
@@ -1337,5 +1322,5 @@
   ],
   "id": "2645842",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645842",
-  "updated_at": "2026-11-18T01:53:19.942028+00:00"
+  "updated_at": "2026-11-18T09:31:44.341412+00:00"
 }
