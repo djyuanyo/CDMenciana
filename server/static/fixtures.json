@@ -1660,9 +1660,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645849",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645849"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715"
     },
     {
       "id": "48466109-11-4",
@@ -6041,8 +6041,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:37.902074+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "MEDRANO GARCIA, CARLOS",
@@ -6118,8 +6117,7 @@
         "played": null,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "CAMPOS ALGUACIL, MANUEL",
@@ -6326,8 +6324,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:41.100784+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "MARAÑON BAENA, JESUS",
@@ -6396,8 +6393,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:42.078747+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "CABEZAS CORDOBA, FRANCISCO MANUEL",
@@ -6466,8 +6462,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:43.042634+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "DEL VALLE MALDONADO, JUAN MANUEL",
@@ -6543,8 +6538,7 @@
         "played": 7,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "TAMAJON GOMEZ, JAVIER JESUS",
@@ -6613,8 +6607,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:45.869440+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "SANCHEZ TIENDA, DAVID",
@@ -6683,8 +6676,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:46.873385+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "RODRIGUEZ GUERRA, ALBERTO",
@@ -6760,8 +6752,7 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "CUBERO CUBERO, JESUS",
@@ -6830,8 +6821,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:49.066147+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "PICHARDO SORIANO, ANTONIO JOSE",
@@ -6907,8 +6897,7 @@
         "played": null,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "RODRIGUEZ JIMENEZ, SERGIO",
@@ -6977,8 +6966,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:51.546420+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "CORDOBA CORTES, JUAN FRANCISCO",
@@ -7047,8 +7035,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:52.115393+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "BONILLA ACEITUNO, JUAN",
@@ -7117,8 +7104,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:53.121644+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
@@ -7194,8 +7180,7 @@
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "BORRALLO LOPEZ, CARLOS",
@@ -7264,8 +7249,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:55.361650+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "PICHARDO BENJUMEA, JUAN MANUEL",
@@ -7341,8 +7325,7 @@
         "played": 3,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     },
     {
       "name": "CABALLERO LAMA, ISAAC",
@@ -7411,8 +7394,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:57.304149+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "CABALLERO LAMA, ALEJANDRO",
@@ -7481,8 +7463,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:58.355641+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "CARRILLO RUBIO, ANTONIO JESUS",
@@ -7551,8 +7532,7 @@
         }
       ],
       "profile_updated_at": "2026-11-18T18:22:59.092742+00:00",
-      "competition_summary": {},
-      "stats_round": 10
+      "competition_summary": {}
     },
     {
       "name": "PRUDENCIO MINCHON, PABLO",
@@ -7628,8 +7608,7 @@
         "played": 4,
         "team": "C.D. LA PALMA F.S.",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 10
+      }
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
@@ -7656,7 +7635,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-18T18:21:25.700423+00:00",
+  "updated_at": "2026-11-18T21:58:23.402428+00:00",
   "rounds": [
     1,
     2,
@@ -7907,9 +7886,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=11",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645849",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645849"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=625715"
     },
     {
       "id": "48466109-12",
@@ -8569,7 +8548,7 @@
     "27": "Jugador de pista"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-18T18:22:31.719100+00:00",
+  "roster_updated_at": "2026-11-18T22:08:14.631405+00:00",
   "stats_updated_at": "2026-11-18T18:22:31.719100+00:00",
   "staff": [
     {
@@ -8598,7 +8577,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-18T18:21:26.784388+00:00",
+  "staff_updated_at": "2026-11-18T21:58:24.493128+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
