@@ -1,13 +1,34 @@
 {
   "source": "https://cdmenciana.es/noticias/",
-  "updated_at": "2026-11-17T01:07:51.568139+00:00",
+  "updated_at": "2026-11-19T21:47:50.581990+00:00",
   "news": [
+    {
+      "title": "DÍA DEL CLUB 2026",
+      "date": "2026-11-19",
+      "category": "ACTIVIDADES",
+      "url": "https://cdmenciana.es/noticias/dia-del-club-2026/",
+      "image": "https://cms.cdmenciana.es/media/c6ffa568-401d-49c4-a76d-14cfd2c91f98/web",
+      "content": [
+        {
+          "kind": "paragraph",
+          "text": "Este s ábado 21 de noviembre celebramos, como cada año, el Día del club donde tendremos la foto de la temporada con todos los equipo de la estructura , así como partidos oficiales durante todo el sábado."
+        },
+        {
+          "kind": "paragraph",
+          "text": "11h PARTIDOS DE LA ESCUELA 12:45h LIGA CADETE - Encinas Reales FS 14:15h FOTO DE CLUB (Rogamos estén presentes todos deportistas y monitores) 14:45h COMIDA DE CONVIVENCIA (Paella, montaditos, hamburguesa...) 17:00h LIGA - FILIAL SÉNIOR \"B\" - Montilla Futsal Viña Sur 19:30h LIGA - SÉNIOR 3ª DIVISIÓN NACIONAL - CD Villalba FS (Huelva)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Os invitamos a deportistas, monitores, familias, aficionados, socios y amigos a acompañarnos en esta jornada festiva en el Pabellón Alcalde Julio Priego."
+        }
+      ]
+    },
     {
       "title": "EL PRIMER EQUIPO SE VIENE DE VACÍO DE SAN FERNANDO",
       "date": "2026-11-16",
       "category": "cronica, primer equipo,",
       "url": "https://cdmenciana.es/noticias/el-primer-equipo-se-viene-de-vacio/",
-      "image": "https://cms.cdmenciana.es/media/c403cb0f-6536-49b5-9fca-fa69515936c5/web",
+      "image": "https://cms.cdmenciana.es/media/c403cb0f-6536-49b5-9fca-fa69515936c5/thumb",
       "content": [
         {
           "kind": "paragraph",
@@ -109,19 +130,6 @@
       "category": "senior, fútbol sala, filial, ega futsla,",
       "url": "https://cdmenciana.es/noticias/meritorio-empate-filial-ante-ega-futsal/",
       "image": "https://cms.cdmenciana.es/media/7180355d-a562-4d56-be3e-1c9c58652cd3/thumb"
-    },
-    {
-      "title": "VICTORIA PARA EL PRIMER EQUIPOS TRAS TRES DERROTAS CONSECUTIVAS",
-      "date": "2026-10-29",
-      "category": "crónica, primer equipo, fútbol sala,",
-      "url": "https://cdmenciana.es/noticias/victoria-para-el-primer-equipo-ante-puerto-real/",
-      "image": "https://cms.cdmenciana.es/media/1656b8bc-44a7-4fb2-851f-84bb6a37a567/thumb",
-      "content": [
-        {
-          "kind": "paragraph",
-          "text": "https://youtu.be/nC0IKcRaCoM"
-        }
-      ]
     }
   ]
 }
