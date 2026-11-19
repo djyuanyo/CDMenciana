@@ -616,11 +616,11 @@
       "venue": "Priego De Córdoba - PABELLON DE DEPORTES RAFA LOPEZ",
       "state": "Finalizado",
       "played": true,
-      "home_score": 0,
-      "away_score": 0,
+      "home_score": 2,
+      "away_score": 6,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745976",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745976&cod_acta=2745976",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923"
     },
@@ -3184,7 +3184,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-11-19T17:15:02.132942+00:00",
+  "updated_at": "2026-11-19T21:33:24.009244+00:00",
   "rounds": [
     1,
     2,
