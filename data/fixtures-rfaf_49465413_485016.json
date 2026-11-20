@@ -2618,7 +2618,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "VERA TORRES, RAFAEL",
@@ -2694,7 +2695,8 @@
         "played": 5,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "DELGADO ROMÁN, HUGO",
@@ -2770,7 +2772,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "MORENO JIMENEZ, DANIEL",
@@ -2846,7 +2849,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "GOMEZ CUBERO, PABLO",
@@ -2922,7 +2926,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "JIMENEZ POYATO, JOSE ANTONIO",
@@ -2998,7 +3003,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "RAMÍREZ PÉREZ, DIEGO",
@@ -3074,7 +3080,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "MONTES MESA, ALVARO",
@@ -3150,7 +3157,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "ÉCIJA BUJALANCE, SERGIO",
@@ -3226,7 +3234,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "ABOUELALAM EL BARHMI, ADAM",
@@ -3302,7 +3311,8 @@
         "played": 4,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "TORO BRIONES, DANIEL",
@@ -3378,7 +3388,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "GARCÍA PÉREZ, ADRIÁN",
@@ -3454,7 +3465,8 @@
         "played": null,
         "team": "C.D. MENCIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
@@ -3870,8 +3882,8 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-20T20:29:22.244293+00:00",
-  "stats_updated_at": "2026-11-20T13:18:52.560730+00:00",
+  "roster_updated_at": "2026-11-20T21:20:14.945948+00:00",
+  "stats_updated_at": "2026-11-20T21:20:14.945948+00:00",
   "staff": [
     {
       "name": "LOZANO GARCIA, JULIO",
