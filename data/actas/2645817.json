@@ -1432,7 +1432,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-19T21:40:10.953038+00:00",
+      "profile_updated_at": "2026-11-20T11:51:16.262246+00:00",
       "competition_summary": {
         "goals": 5,
         "starts": 9,
@@ -1584,7 +1584,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-19T21:40:12.953836+00:00"
+      "profile_updated_at": "2026-11-20T11:51:17.861161+00:00"
     },
     {
       "id": "dfba139eb02436dd",
@@ -1597,7 +1597,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "8"
             ],
             [
               "Titular",
@@ -1605,7 +1605,7 @@
             ],
             [
               "Suplente",
-              "6"
+              "5"
             ],
             [
               "Jugados",
@@ -1639,7 +1639,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "2"
             ],
             [
               "Goles por partido",
@@ -1648,7 +1648,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-19T21:40:14.938755+00:00",
+      "profile_updated_at": "2026-11-10T02:17:44.893393+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 3,
@@ -1864,7 +1864,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-19T21:40:09.943981+00:00",
+      "profile_updated_at": "2026-11-20T11:51:14.839229+00:00",
       "competition_summary": {
         "goals": 5,
         "starts": 4,
@@ -1885,7 +1885,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "8"
             ],
             [
               "Titular",
@@ -1893,79 +1893,7 @@
             ],
             [
               "Suplente",
-              "9"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "2"
-            ],
-            [
-              "Goles por partido",
-              "0.2"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-11-19T21:40:13.953768+00:00",
-      "competition_summary": {
-        "goals": 2,
-        "starts": 0,
-        "called": 9,
-        "played": 6,
-        "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "d2c4ce4977157a3d",
-      "name": "VIGO PATRON, ALEJANDRO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=232596&codacta=2645817&nueva_ventana=",
-      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "9"
-            ],
-            [
-              "Titular",
-              "0"
-            ],
-            [
-              "Suplente",
-              "9"
+              "8"
             ],
             [
               "Jugados",
@@ -2008,7 +1936,79 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-19T21:40:15.934964+00:00",
+      "profile_updated_at": "2026-11-10T17:57:33.665554+00:00",
+      "competition_summary": {
+        "goals": 2,
+        "starts": 0,
+        "called": 9,
+        "played": 6,
+        "team": "CD CÁDIZ FUTSAL YOU ASESORÍA",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "d2c4ce4977157a3d",
+      "name": "VIGO PATRON, ALEJANDRO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=232596&codacta=2645817&nueva_ventana=",
+      "photo": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/retrato_licencia.jpg",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "8"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "8"
+            ],
+            [
+              "Jugados",
+              "5"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.1"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-10T02:17:41.707796+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
