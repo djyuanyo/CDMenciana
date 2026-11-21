@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "4 - 1",
+          "11 - 3",
           ""
         ]
       ]
@@ -62,6 +62,71 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(11') ABOUELALAM EL BARHMI, ADAM"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(12') PRIEGO MONTES, LUIS"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(15') ABOUELALAM EL BARHMI, ADAM"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(17') VERA TORRES, RAFAEL"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(18') AGUILAR HOYOS, ALVARO"
+        ],
+        [
+          "Gol · 4 - 2",
+          "(23') SANCHEZ CAÑETE, ANGEL"
+        ],
+        [
+          "Gol · 4 - 3",
+          "(24') MORENO VAZQUEZ, JONATAN"
+        ],
+        [
+          "Gol · 5 - 3",
+          "(24') MONTES RECIO, SERGIO"
+        ],
+        [
+          "Gol · 6 - 3",
+          "(25') ABOUELALAM EL BARHMI, ADAM"
+        ],
+        [
+          "Gol · 7 - 3",
+          "(26') VERA TORRES, RAFAEL"
+        ],
+        [
+          "Gol · 8 - 3",
+          "(30') MONTES RECIO, SERGIO"
+        ],
+        [
+          "Gol · 9 - 3",
+          "(33') MONTES MESA, ALVARO"
+        ],
+        [
+          "Gol · 10 - 3",
+          "(35') JURADO ORDOÑEZ, MARCOS"
+        ],
+        [
+          "Gol · 11 - 3",
+          "(35') JURADO ORDOÑEZ, MARCOS"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -183,6 +248,23 @@
         [
           "",
           "LOZANO GARCIA, JULIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(14') MONTES RECIO, SERGIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(30') PRIEGO MONTES, LUIS"
         ]
       ]
     },
@@ -310,6 +392,23 @@
           "PEREZ ZAMBRANA, HUGO"
         ]
       ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(8') RAMÍREZ AGUAYO, ISAAC"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(16') ALONSO GAZQUEZ, KEVIN"
+        ]
+      ]
     }
   ],
   "players": [
@@ -387,8 +486,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:23.703548+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:23.703548+00:00"
     },
     {
       "id": "6c64b531d856fddb",
@@ -452,8 +550,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:25.718570+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:25.718570+00:00"
     },
     {
       "id": "5ee8c575493115fd",
@@ -517,8 +614,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:33.912997+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:33.912997+00:00"
     },
     {
       "id": "6afcd9e7d6b668c6",
@@ -582,8 +678,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:28.939590+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:28.939590+00:00"
     },
     {
       "id": "8a6d3e21d29c5278",
@@ -671,8 +766,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:29.930613+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:29.930613+00:00"
     },
     {
       "id": "926a2624958d773a",
@@ -736,8 +830,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T17:37:31.740018+00:00",
-      "stats_round": 7
+      "profile_updated_at": "2026-11-21T17:37:31.740018+00:00"
     },
     {
       "id": "a1759e7f5e9a3db7",
@@ -846,5 +939,5 @@
   ],
   "id": "2718916",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718916",
-  "updated_at": "2026-11-21T17:32:06.794815+00:00"
+  "updated_at": "2026-11-21T22:22:02.633541+00:00"
 }
