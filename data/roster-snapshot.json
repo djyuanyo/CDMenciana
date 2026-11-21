@@ -1662,7 +1662,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
     "roster_status": "verified",
-    "roster_updated_at": "2026-11-21T17:32:20.127750+00:00",
+    "roster_updated_at": "2026-11-21T17:37:16.829447+00:00",
     "staff": [
       {
         "name": "JIMENEZ CUBERO, JOSE ANTONIO",
@@ -2890,7 +2890,7 @@
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
     "roster_status": "verified",
-    "roster_updated_at": "2026-11-21T17:32:51.937489+00:00",
+    "roster_updated_at": "2026-11-21T17:37:17.973802+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -4939,19 +4939,19 @@
             "rows": [
               [
                 "Convocados",
-                "3"
+                "5"
               ],
               [
                 "Titular",
-                "3"
+                "4"
               ],
               [
                 "Suplente",
-                "0"
+                "1"
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -4964,7 +4964,7 @@
               ],
               [
                 "Tarjeta amarilla",
-                "0"
+                "1"
               ],
               [
                 "Doble tarjeta amarilla",
@@ -4981,16 +4981,16 @@
             "rows": [
               [
                 "Total",
-                "10"
+                "13"
               ],
               [
                 "Goles por partido",
-                "3.3"
+                "2.6"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-11-12T18:57:14.070596+00:00",
+        "profile_updated_at": "2026-11-21T17:37:23.703548+00:00",
         "competition_summary": {
           "goals": 11,
           "starts": 3,
@@ -4998,7 +4998,8 @@
           "played": 4,
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
-        }
+        },
+        "stats_round": 7
       },
       {
         "name": "MAIRELES RAMÍREZ, MANUEL",
@@ -5066,7 +5067,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:12.649323+00:00",
+        "profile_updated_at": "2026-11-21T17:37:24.703062+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -5075,7 +5076,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "VERA TORRES, RAFAEL",
@@ -5092,11 +5093,11 @@
             "rows": [
               [
                 "Convocados",
-                "5"
+                "6"
               ],
               [
                 "Titular",
-                "3"
+                "4"
               ],
               [
                 "Suplente",
@@ -5104,7 +5105,7 @@
               ],
               [
                 "Jugados",
-                "5"
+                "6"
               ]
             ]
           },
@@ -5134,16 +5135,16 @@
             "rows": [
               [
                 "Total",
-                "6"
+                "8"
               ],
               [
                 "Goles por partido",
-                "1.2"
+                "1.3"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:13.851818+00:00",
+        "profile_updated_at": "2026-11-21T17:37:25.718570+00:00",
         "competition_summary": {
           "goals": 6,
           "starts": 3,
@@ -5152,7 +5153,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "DELGADO ROMÁN, HUGO",
@@ -5169,7 +5170,7 @@
             "rows": [
               [
                 "Convocados",
-                "3"
+                "4"
               ],
               [
                 "Titular",
@@ -5177,7 +5178,7 @@
               ],
               [
                 "Suplente",
-                "3"
+                "4"
               ],
               [
                 "Jugados",
@@ -5220,7 +5221,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:14.643365+00:00",
+        "profile_updated_at": "2026-11-21T17:37:26.890666+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -5229,7 +5230,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "MORENO JIMENEZ, DANIEL",
@@ -5297,7 +5298,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:15.669082+00:00",
+        "profile_updated_at": "2026-11-21T17:37:27.725304+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -5306,7 +5307,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "GOMEZ CUBERO, PABLO",
@@ -5323,7 +5324,7 @@
             "rows": [
               [
                 "Convocados",
-                "3"
+                "4"
               ],
               [
                 "Titular",
@@ -5331,11 +5332,11 @@
               ],
               [
                 "Suplente",
-                "2"
+                "3"
               ],
               [
                 "Jugados",
-                "3"
+                "4"
               ]
             ]
           },
@@ -5374,7 +5375,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:16.636228+00:00",
+        "profile_updated_at": "2026-11-21T17:37:28.939590+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -5383,7 +5384,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "JIMENEZ POYATO, JOSE ANTONIO",
@@ -5400,7 +5401,7 @@
             "rows": [
               [
                 "Convocados",
-                "5"
+                "6"
               ],
               [
                 "Titular",
@@ -5408,7 +5409,84 @@
               ],
               [
                 "Suplente",
+                "6"
+              ],
+              [
+                "Jugados",
                 "5"
+              ]
+            ]
+          },
+          {
+            "title": "Sanciones",
+            "rows": [
+              [
+                "Total",
+                "0"
+              ],
+              [
+                "Tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Doble tarjeta amarilla",
+                "0"
+              ],
+              [
+                "Tarjeta roja",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Goles",
+            "rows": [
+              [
+                "Total",
+                "1"
+              ],
+              [
+                "Goles por partido",
+                "0.2"
+              ]
+            ]
+          }
+        ],
+        "profile_updated_at": "2026-11-21T17:37:29.930613+00:00",
+        "competition_summary": {
+          "goals": 1,
+          "starts": 0,
+          "called": 5,
+          "played": 4,
+          "team": "C.D. MENCIANA",
+          "source": "actas oficiales RFAF"
+        },
+        "stats_round": 7
+      },
+      {
+        "name": "RAMÍREZ PÉREZ, DIEGO",
+        "number": 14,
+        "position": "Jugador de pista",
+        "photo": "data:image/jpeg;base64,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",
+        "id": "90f166ed594d7796",
+        "acta_id": "2718896",
+        "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718896&nueva_ventana=",
+        "rfaf_id": "50093929",
+        "stats": [
+          {
+            "title": "Partidos",
+            "rows": [
+              [
+                "Convocados",
+                "5"
+              ],
+              [
+                "Titular",
+                "2"
+              ],
+              [
+                "Suplente",
+                "3"
               ],
               [
                 "Jugados",
@@ -5451,84 +5529,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:17.854391+00:00",
-        "competition_summary": {
-          "goals": 1,
-          "starts": 0,
-          "called": 5,
-          "played": 4,
-          "team": "C.D. MENCIANA",
-          "source": "actas oficiales RFAF"
-        },
-        "stats_round": 6
-      },
-      {
-        "name": "RAMÍREZ PÉREZ, DIEGO",
-        "number": 14,
-        "position": "Jugador de pista",
-        "photo": "data:image/jpeg;base64,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",
-        "id": "90f166ed594d7796",
-        "acta_id": "2718896",
-        "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50093929&codacta=2718896&nueva_ventana=",
-        "rfaf_id": "50093929",
-        "stats": [
-          {
-            "title": "Partidos",
-            "rows": [
-              [
-                "Convocados",
-                "4"
-              ],
-              [
-                "Titular",
-                "1"
-              ],
-              [
-                "Suplente",
-                "3"
-              ],
-              [
-                "Jugados",
-                "3"
-              ]
-            ]
-          },
-          {
-            "title": "Sanciones",
-            "rows": [
-              [
-                "Total",
-                "0"
-              ],
-              [
-                "Tarjeta amarilla",
-                "0"
-              ],
-              [
-                "Doble tarjeta amarilla",
-                "0"
-              ],
-              [
-                "Tarjeta roja",
-                "0"
-              ]
-            ]
-          },
-          {
-            "title": "Goles",
-            "rows": [
-              [
-                "Total",
-                "1"
-              ],
-              [
-                "Goles por partido",
-                "0.3"
-              ]
-            ]
-          }
-        ],
-        "profile_updated_at": "2026-11-15T17:17:18.876527+00:00",
+        "profile_updated_at": "2026-11-21T17:37:30.775077+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 0,
@@ -5537,7 +5538,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "MONTES MESA, ALVARO",
@@ -5554,7 +5555,7 @@
             "rows": [
               [
                 "Convocados",
-                "4"
+                "5"
               ],
               [
                 "Titular",
@@ -5562,11 +5563,11 @@
               ],
               [
                 "Suplente",
-                "2"
+                "3"
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -5596,16 +5597,16 @@
             "rows": [
               [
                 "Total",
-                "2"
+                "3"
               ],
               [
                 "Goles por partido",
-                "0.5"
+                "0.6"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:19.868953+00:00",
+        "profile_updated_at": "2026-11-21T17:37:31.740018+00:00",
         "competition_summary": {
           "goals": 2,
           "starts": 2,
@@ -5614,7 +5615,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "ÉCIJA BUJALANCE, SERGIO",
@@ -5682,7 +5683,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:20.793869+00:00",
+        "profile_updated_at": "2026-11-21T17:37:32.889759+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -5691,7 +5692,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "ABOUELALAM EL BARHMI, ADAM",
@@ -5708,11 +5709,11 @@
             "rows": [
               [
                 "Convocados",
-                "4"
+                "5"
               ],
               [
                 "Titular",
-                "2"
+                "3"
               ],
               [
                 "Suplente",
@@ -5720,7 +5721,7 @@
               ],
               [
                 "Jugados",
-                "4"
+                "5"
               ]
             ]
           },
@@ -5750,16 +5751,16 @@
             "rows": [
               [
                 "Total",
-                "1"
+                "4"
               ],
               [
                 "Goles por partido",
-                "0.3"
+                "0.8"
               ]
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:21.843717+00:00",
+        "profile_updated_at": "2026-11-21T17:37:33.912997+00:00",
         "competition_summary": {
           "goals": 1,
           "starts": 2,
@@ -5768,7 +5769,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "TORO BRIONES, DANIEL",
@@ -5836,7 +5837,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:22.645081+00:00",
+        "profile_updated_at": "2026-11-21T17:37:34.941886+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -5845,7 +5846,7 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       },
       {
         "name": "GARCÍA PÉREZ, ADRIÁN",
@@ -5862,7 +5863,7 @@
             "rows": [
               [
                 "Convocados",
-                "5"
+                "6"
               ],
               [
                 "Titular",
@@ -5870,7 +5871,7 @@
               ],
               [
                 "Suplente",
-                "1"
+                "2"
               ],
               [
                 "Jugados",
@@ -5913,7 +5914,7 @@
             ]
           }
         ],
-        "profile_updated_at": "2026-11-15T17:17:23.626278+00:00",
+        "profile_updated_at": "2026-11-21T17:37:35.932311+00:00",
         "competition_summary": {
           "goals": 0,
           "starts": 1,
@@ -5922,12 +5923,12 @@
           "team": "C.D. MENCIANA",
           "source": "actas oficiales RFAF"
         },
-        "stats_round": 6
+        "stats_round": 7
       }
     ],
     "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
     "roster_status": "verified",
-    "roster_updated_at": "2026-11-21T10:12:57.686692+00:00",
+    "roster_updated_at": "2026-11-21T17:37:18.149304+00:00",
     "staff": [
       {
         "name": "LOZANO GARCIA, JULIO",
@@ -5950,6 +5951,6 @@
     ],
     "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
     "staff_status": "verified",
-    "staff_updated_at": "2026-11-21T01:36:12.192491+00:00"
+    "staff_updated_at": "2026-11-21T17:31:16.577917+00:00"
   }
 }
