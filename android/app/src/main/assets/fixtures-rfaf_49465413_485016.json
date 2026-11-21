@@ -374,13 +374,13 @@
       "date": "2026-11-21",
       "time": "12:45",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 11,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718916",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718916&cod_acta=2718916",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766"
     },
@@ -394,13 +394,13 @@
       "date": "2026-11-21",
       "time": "13:00",
       "venue": "Carcabuey - PABELLON MUNICIPAL",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 6,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718917",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718917&cod_acta=2718917",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317"
     },
@@ -830,60 +830,60 @@
   "results_status": "verified",
   "scorers": [
     {
-      "name": "ARCOS MORENO, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 4,
-      "goals": 12,
-      "penalties": 0,
-      "average": 3.0
-    },
-    {
       "name": "MONTES RECIO, SERGIO",
       "team": "C.D. MENCIANA",
-      "played": 4,
-      "goals": 11,
+      "played": 5,
+      "goals": 13,
       "penalties": 1,
-      "average": 2.75
+      "average": 2.6
+    },
+    {
+      "name": "ARCOS MORENO, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 5,
+      "goals": 12,
+      "penalties": 0,
+      "average": 2.4
     },
     {
       "name": "AGUILAR HOYOS, ALVARO",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 4,
-      "goals": 10,
+      "played": 5,
+      "goals": 11,
       "penalties": 0,
-      "average": 2.5
+      "average": 2.2
     },
     {
       "name": "MONTES ZAMORANO, ANTONIO JOAQUIN",
       "team": "C.D. CARCABUEY",
-      "played": 5,
+      "played": 6,
       "goals": 10,
       "penalties": 0,
-      "average": 2.0
+      "average": 1.6667
     },
     {
       "name": "ALONSO GAZQUEZ, KEVIN",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
+      "played": 6,
       "goals": 9,
       "penalties": 0,
-      "average": 1.8
+      "average": 1.5
     },
     {
-      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
-      "goals": 7,
+      "name": "VERA TORRES, RAFAEL",
+      "team": "C.D. MENCIANA",
+      "played": 6,
+      "goals": 8,
       "penalties": 0,
-      "average": 1.4
+      "average": 1.3333
     },
     {
       "name": "SANCHEZ CAÑETE, ANGEL",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
-      "goals": 7,
+      "played": 6,
+      "goals": 8,
       "penalties": 0,
-      "average": 1.4
+      "average": 1.3333
     },
     {
       "name": "BERMUDEZ GONZALEZ, VICTOR",
@@ -902,8 +902,16 @@
       "average": 1.4
     },
     {
-      "name": "VERA TORRES, RAFAEL",
-      "team": "C.D. MENCIANA",
+      "name": "MIGUELES DOMÍNGUEZ, VÍCTOR",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 7,
+      "penalties": 0,
+      "average": 1.1667
+    },
+    {
+      "name": "CASTRO MONTES, MANUEL",
+      "team": "C.D. CARCABUEY",
       "played": 5,
       "goals": 6,
       "penalties": 0,
@@ -912,18 +920,34 @@
     {
       "name": "MARIN URBANO, ADRIAN",
       "team": "C.D. MENCIANA",
-      "played": 5,
+      "played": 6,
       "goals": 6,
       "penalties": 0,
-      "average": 1.2
+      "average": 1.0
+    },
+    {
+      "name": "RUIZ GARCIA, RAFAEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 4,
+      "goals": 5,
+      "penalties": 0,
+      "average": 1.25
     },
     {
       "name": "PEDROSA HIDALGO, PABLO",
       "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
+      "played": 6,
       "goals": 5,
       "penalties": 0,
-      "average": 1.0
+      "average": 0.8333
+    },
+    {
+      "name": "ROLDAN CABEZA, ALBERTO",
+      "team": "C.D. CARCABUEY",
+      "played": 6,
+      "goals": 5,
+      "penalties": 0,
+      "average": 0.8333
     },
     {
       "name": "TEJERO RUZ, DANIEL",
@@ -934,14 +958,6 @@
       "average": 2.0
     },
     {
-      "name": "RUIZ GARCIA, RAFAEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.3333
-    },
-    {
       "name": "MOLINA AGUILERA, RAUL",
       "team": "C.D. BOCA F.S. PRIEGO",
       "played": 3,
@@ -950,23 +966,15 @@
       "average": 1.3333
     },
     {
-      "name": "CASTRO MONTES, MANUEL",
-      "team": "C.D. CARCABUEY",
-      "played": 4,
-      "goals": 4,
-      "penalties": 0,
-      "average": 1.0
-    },
-    {
-      "name": "PEDROSA HIDALGO, JESÚS",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "JURADO ORDOÑEZ, MARCOS",
+      "team": "C.D. MENCIANA",
       "played": 5,
       "goals": 4,
       "penalties": 0,
       "average": 0.8
     },
     {
-      "name": "DE LA TORRE RAMIREZ, RODRIGO",
+      "name": "ABOUELALAM EL BARHMI, ADAM",
       "team": "C.D. MENCIANA",
       "played": 5,
       "goals": 4,
@@ -982,40 +990,32 @@
       "average": 0.8
     },
     {
-      "name": "MAIRELES RAMÍREZ, MANUEL",
-      "team": "C.D. ARAS FUTSAL A",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
-    },
-    {
-      "name": "CAÑETE PEREA, CARLOS",
-      "team": "C.D. CARCABUEY",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
-    },
-    {
-      "name": "ROLDAN CABEZA, ALBERTO",
-      "team": "C.D. CARCABUEY",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
-    },
-    {
-      "name": "JIMENEZ BORREGO, ISRAEL",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
-      "goals": 3,
-      "penalties": 0,
-      "average": 0.6
-    },
-    {
       "name": "MORENO VAZQUEZ, JONATAN",
       "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "DE LA TORRE RAMIREZ, RODRIGO",
+      "team": "C.D. MENCIANA",
+      "played": 6,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "PEDROSA HIDALGO, JESÚS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 4,
+      "penalties": 0,
+      "average": 0.6667
+    },
+    {
+      "name": "MONTES MESA, ALVARO",
+      "team": "C.D. MENCIANA",
       "played": 5,
       "goals": 3,
       "penalties": 0,
@@ -1030,6 +1030,38 @@
       "average": 0.6
     },
     {
+      "name": "MAIRELES RAMÍREZ, MANUEL",
+      "team": "C.D. ARAS FUTSAL A",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "PRIEGO MONTES, LUIS",
+      "team": "C.D. MENCIANA",
+      "played": 5,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.6
+    },
+    {
+      "name": "JIMENEZ BORREGO, ISRAEL",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
+      "name": "CAÑETE PEREA, CARLOS",
+      "team": "C.D. CARCABUEY",
+      "played": 6,
+      "goals": 3,
+      "penalties": 0,
+      "average": 0.5
+    },
+    {
       "name": "RODRIGUEZ GÓMEZ, JOSE MANUEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 2,
@@ -1038,15 +1070,7 @@
       "average": 1.0
     },
     {
-      "name": "PEREZ MORON, MANUEL",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 3,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.6667
-    },
-    {
-      "name": "MONZON CAMPAÑA, RAFAEL",
+      "name": "SALINAS JARABA, JOSE MARIA",
       "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 2,
@@ -1054,7 +1078,7 @@
       "average": 0.6667
     },
     {
-      "name": "SALINAS JARABA, JOSE MARIA",
+      "name": "MONZON CAMPAÑA, RAFAEL",
       "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 2,
@@ -1070,14 +1094,6 @@
       "average": 0.5
     },
     {
-      "name": "MONTES MESA, ALVARO",
-      "team": "C.D. MENCIANA",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
       "name": "IZZA SÁNCHEZ, JORGE",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 4,
@@ -1086,40 +1102,8 @@
       "average": 0.5
     },
     {
-      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "name": "PEREZ MORON, MANUEL",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "MARIN MEDINA, PABLO",
-      "team": "C.D. CARCABUEY",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "PRIEGO MONTES, LUIS",
-      "team": "C.D. MENCIANA",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "JIMENEZ LOPEZ, ANTONIO JESUS",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 4,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "JURADO ORDOÑEZ, MARCOS",
-      "team": "C.D. MENCIANA",
       "played": 4,
       "goals": 2,
       "penalties": 0,
@@ -1134,22 +1118,6 @@
       "average": 0.5
     },
     {
-      "name": "RIVAS CARMONA, PEDRO",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
-      "name": "ARJONA GARCIA, CARLOS",
-      "team": "C.D. ENCINAS REALES C.F.",
-      "played": 5,
-      "goals": 2,
-      "penalties": 0,
-      "average": 0.4
-    },
-    {
       "name": "TRUJILLO MARTÍNEZ, GUILLERMO",
       "team": "C.D. ARAS FUTSAL A",
       "played": 5,
@@ -1158,12 +1126,68 @@
       "average": 0.4
     },
     {
-      "name": "PRIETO MORENO, PABLO",
-      "team": "C.D. ENCINAS REALES C.F.",
+      "name": "JIMENEZ LOPEZ, ANTONIO JESUS",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 5,
       "goals": 2,
       "penalties": 0,
       "average": 0.4
+    },
+    {
+      "name": "MARIN MEDINA, MANUEL",
+      "team": "C.D. CARCABUEY",
+      "played": 5,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.4
+    },
+    {
+      "name": "RIVAS CARMONA, PEDRO",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 5,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.4
+    },
+    {
+      "name": "MARIN MEDINA, PABLO",
+      "team": "C.D. CARCABUEY",
+      "played": 5,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.4
+    },
+    {
+      "name": "DOMINGUEZ SANCHEZ, DAVID",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 5,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.4
+    },
+    {
+      "name": "MORAL SANCHEZ, RAFAEL",
+      "team": "C.D. CARCABUEY",
+      "played": 6,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "ARJONA GARCIA, CARLOS",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "PRIETO MORENO, PABLO",
+      "team": "C.D. ENCINAS REALES C.F.",
+      "played": 6,
+      "goals": 2,
+      "penalties": 0,
+      "average": 0.3333
     },
     {
       "name": "GUTIÉRREZ MATAS, MANUELA",
@@ -1174,15 +1198,7 @@
       "average": 1.0
     },
     {
-      "name": "GORDILLO MOLINA, JUAN JOSE",
-      "team": "C.D. MENCIANA",
-      "played": 2,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.5
-    },
-    {
-      "name": "REJANO RIVAS, SAMUEL",
+      "name": "DELGADO LEAL, JOSE DANIEL",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 2,
       "goals": 1,
@@ -1196,14 +1212,6 @@
       "goals": 1,
       "penalties": 0,
       "average": 0.5
-    },
-    {
-      "name": "PALOMARES CANTILLO, JOSE",
-      "team": "C.D. SANTAELLA 2010",
-      "played": 3,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.3333
     },
     {
       "name": "ARANDA MONTES, OMAR",
@@ -1222,8 +1230,16 @@
       "average": 0.3333
     },
     {
-      "name": "RUIZ MARTÍNEZ, JOSÉ ANTONIO",
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "name": "GORDILLO MOLINA, JUAN JOSE",
+      "team": "C.D. MENCIANA",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
+      "name": "PALOMARES CANTILLO, JOSE",
+      "team": "C.D. SANTAELLA 2010",
       "played": 3,
       "goals": 1,
       "penalties": 0,
@@ -1246,6 +1262,14 @@
       "average": 0.3333
     },
     {
+      "name": "REJANO RIVAS, SAMUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 3,
+      "goals": 1,
+      "penalties": 0,
+      "average": 0.3333
+    },
+    {
       "name": "RAMÍREZ PÉREZ, DIEGO",
       "team": "C.D. ARAS FUTSAL A",
       "played": 4,
@@ -1254,7 +1278,7 @@
       "average": 0.25
     },
     {
-      "name": "CANTOS CORTES, MANUEL",
+      "name": "RUIZ MARTÍNEZ, JOSÉ ANTONIO",
       "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 4,
       "goals": 1,
@@ -1262,8 +1286,8 @@
       "average": 0.25
     },
     {
-      "name": "MARIN MEDINA, MANUEL",
-      "team": "C.D. CARCABUEY",
+      "name": "VELASCO AGUILERA, IVAN",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
       "played": 4,
       "goals": 1,
       "penalties": 0,
@@ -1278,20 +1302,12 @@
       "average": 0.25
     },
     {
-      "name": "ABOUELALAM EL BARHMI, ADAM",
-      "team": "C.D. MENCIANA",
-      "played": 4,
+      "name": "CANTOS CORTES, MANUEL",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "played": 5,
       "goals": 1,
       "penalties": 0,
-      "average": 0.25
-    },
-    {
-      "name": "JIMENEZ POYATO, JOSE ANTONIO",
-      "team": "C.D. MENCIANA",
-      "played": 4,
-      "goals": 1,
-      "penalties": 0,
-      "average": 0.25
+      "average": 0.2
     },
     {
       "name": "PEREZ REYES, MARIO",
@@ -1318,15 +1334,15 @@
       "average": 0.2
     },
     {
-      "name": "MORAL SANCHEZ, RAFAEL",
-      "team": "C.D. CARCABUEY",
+      "name": "JIMENEZ POYATO, JOSE ANTONIO",
+      "team": "C.D. MENCIANA",
       "played": 5,
       "goals": 1,
       "penalties": 0,
       "average": 0.2
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=6&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=7&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
   "roster": [
     {
       "name": "MONTILLA ALTEZ, ISMAEL",
@@ -3493,7 +3509,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-21T01:36:11.223712+00:00",
+  "updated_at": "2026-11-21T17:31:15.712772+00:00",
   "rounds": [
     1,
     2,
@@ -3622,13 +3638,13 @@
       "date": "2026-11-21",
       "time": "12:45",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 11,
+      "away_score": 3,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=7",
       "date_provisional": false,
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718916",
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718916&cod_acta=2718916",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766"
     },
@@ -3751,33 +3767,33 @@
   "standings": [
     {
       "position": 1,
-      "team": "C.D. ENCINAS REALES C.F.",
-      "points": 15,
-      "played": 5,
-      "won": 5,
-      "drawn": 0,
-      "lost": 0,
-      "gf": 65,
-      "ga": 14,
-      "gd": 51,
-      "form": "G G G G G",
-      "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
-    },
-    {
-      "position": 2,
       "team": "C.D. MENCIANA",
-      "points": 15,
-      "played": 5,
-      "won": 5,
+      "points": 18,
+      "played": 6,
+      "won": 6,
       "drawn": 0,
       "lost": 0,
-      "gf": 39,
-      "ga": 6,
-      "gd": 33,
+      "gf": 50,
+      "ga": 9,
+      "gd": 41,
       "form": "G G G G G",
       "sanction": 0,
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png"
+    },
+    {
+      "position": 2,
+      "team": "C.D. ENCINAS REALES C.F.",
+      "points": 15,
+      "played": 6,
+      "won": 5,
+      "drawn": 0,
+      "lost": 1,
+      "gf": 68,
+      "ga": 25,
+      "gd": 43,
+      "form": "G G G G P",
+      "sanction": 0,
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png"
     },
     {
       "position": 3,
@@ -3796,33 +3812,33 @@
     },
     {
       "position": 4,
-      "team": "C.D. MIRAGENIL F.S. CODIMAR",
-      "points": 6,
-      "played": 5,
+      "team": "C.D. CARCABUEY",
+      "points": 7,
+      "played": 6,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 3,
-      "gf": 23,
-      "ga": 32,
-      "gd": -9,
-      "form": "P P G P G",
+      "gf": 31,
+      "ga": 28,
+      "gd": 3,
+      "form": "P P E P G",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
     },
     {
       "position": 5,
-      "team": "C.D. CARCABUEY",
-      "points": 4,
-      "played": 5,
-      "won": 1,
-      "drawn": 1,
-      "lost": 3,
-      "gf": 25,
-      "ga": 25,
-      "gd": 0,
-      "form": "G P P E P",
+      "team": "C.D. MIRAGENIL F.S. CODIMAR",
+      "points": 6,
+      "played": 6,
+      "won": 2,
+      "drawn": 0,
+      "lost": 4,
+      "gf": 26,
+      "ga": 38,
+      "gd": -12,
+      "form": "P G P G P",
       "sanction": 0,
-      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000824812_descarga.jpeg"
+      "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg"
     },
     {
       "position": 6,
@@ -3855,7 +3871,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=6&codcompeticion=49465203&codgrupo=49465413&codjornada=6",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=7&codcompeticion=49465203&codgrupo=49465413&codjornada=7",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3905,7 +3921,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-21T01:36:12.192491+00:00",
+  "staff_updated_at": "2026-11-21T17:31:16.577917+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
