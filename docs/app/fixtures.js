@@ -45,7 +45,7 @@ window.Fixtures={data:{matches:[]},round:null,error:false,manualRound:false,asse
  attendance:null,
  matchKey(m){const key=`${this.selectedTeam}:${m?.id||''}`;return /^[a-z0-9_]{1,40}:[A-Za-z0-9_-]{1,40}$/.test(key)?key:'';},
  spectators(m){const n=this.attendance?.[this.matchKey(m)];return Number.isInteger(n)&&n>0?`<small class="fixture-spectators">${CDM.icon('team')}${this.esc(n.toLocaleString('es-ES'))} espectador${n===1?'':'es'}</small>`:'';},
- entryButton(m){if(!(this.club(m.home)||this.club(m.away))||!window.ClubAccess?.administrator?.()||!this.matchKey(m)||!this.attendance)return '';return Object.hasOwn(this.attendance,this.matchKey(m))?'<span class="fixture-entry-done">Evento de entradas creado</span>':`<button type="button" class="fixture-entry" data-match-event="${this.esc(m.id)}">${CDM.icon('check')}Crear evento de entradas</button>`;},
+ entryButton(m){if(!(this.club(m.home)||this.club(m.away))||!window.ClubAccess?.administrator?.()||!this.matchKey(m)||!this.attendance)return '';if(Object.hasOwn(this.attendance,this.matchKey(m))){const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(new Date());return m.played!==true&&m.date===today?`<button type="button" class="fixture-entry" data-match-activate="${this.esc(m.id)}">${CDM.icon('check')}Activar evento de entradas</button>`:'<span class="fixture-entry-done">Evento de entradas creado</span>';}return `<button type="button" class="fixture-entry" data-match-event="${this.esc(m.id)}">${CDM.icon('check')}Crear evento de entradas</button>`;},
  async loadAttendance(){try{const service=await window.ClubNotifications?.service?.();if(!service)return;const r=await fetch(service+'/public/attendance',{cache:'no-store'});if(!r.ok)return;const data=await r.json();if(data&&typeof data.counts==='object'){this.attendance=data.counts;window.dispatchEvent(new CustomEvent('club-match-alert-state'));}}catch(e){}},
  async createMatchEvent(id){
   const m=(this.data?.matches||[]).find(x=>String(x.id)===String(id));if(!m||!window.ClubEvents)return;
@@ -54,6 +54,17 @@ window.Fixtures={data:{matches:[]},round:null,error:false,manualRound:false,asse
   const title=`J${m.round} · ${m.home} – ${m.away}`.slice(0,80);
   try{await ClubEvents.http('/admin/events',{method:'POST',body:JSON.stringify({title,date:m.date,time:/^\d{2}:\d{2}$/.test(m.time||'')?m.time:'',place:String(m.venue||'').slice(0,120),matchKey:this.matchKey(m),activate:now})});ClubEvents.list=null;await this.loadAttendance();}
   catch(e){await CDM.confirm('No se pudo crear el evento',e.message,'Aceptar');}
+ },
+ // A match whose entry event was created on an earlier day is switched on here on match day, without opening Eventos y asistencia.
+ async activateMatchEvent(id){
+  const m=(this.data?.matches||[]).find(x=>String(x.id)===String(id));if(!m||!window.ClubEvents)return;
+  try{const list=await ClubEvents.http('/admin/events'),event=(list.events||[]).find(e=>e.matchKey===this.matchKey(m));
+   if(!event)throw Error('No se encuentra el evento de este partido. Créalo en Administración › Eventos y asistencia.');
+   if(list.active===event.id){await CDM.confirm('Evento activo',`${event.title} ya está contando entradas en la taquilla.`,'Aceptar');return;}
+   if(!await CDM.confirm('¿Activar el evento de entradas?',`${event.title}. La taquilla empezará a contar en este evento.`,'Activar'))return;
+   await ClubEvents.http('/admin/events/'+event.id+'/activate',{method:'POST',body:'{}'});ClubEvents.list=null;
+   await CDM.confirm('Evento activo','La taquilla ya cuenta las entradas de este partido.','Aceptar');}
+  catch(e){await CDM.confirm('No se pudo activar el evento',e.message,'Aceptar');}
  },
  card(m,title=''){const played=m.played===true;const acta=this.matchSheetHref(m);const status=played?'FINALIZADO':(m.state||'PROGRAMADO');return `<article class="match-card fixture-card ${this.club(m.home)||this.club(m.away)?'our-match':''}"><div class="section-label"><span class="live-dot"></span>${this.esc(title||((this.club(m.home)||this.club(m.away)?'NUESTRO EQUIPO · ':'')+'JORNADA '+m.round))}<span class="match-status ${played?'finished':''}">${this.esc(status)}</span></div><div class="fixture-date">${this.esc(this.date(m))}</div><div class="match-teams">${this.team(m.home,m.home_crest)}<div class="match-time">${acta?`<a class="result-acta" href="${acta}" aria-label="${played?'Ver acta':'Ver ficha del partido'} de ${this.esc(m.home)} contra ${this.esc(m.away)}">`:''}<strong class="${played?'fixture-score':(!m.time?'time-unconfirmed':'')}">${played?this.esc(m.home_score)+' <span class="score-dash">–</span> '+this.esc(m.away_score):this.esc(m.time||'POR CONFIRMAR')}</strong>${acta?`<small class="acta-hint">${played?'Ver acta':'Ficha del partido'} ↗</small></a>`:''}<small>${played?(m.time?this.esc(m.time)+'H · ':'')+'Jornada '+this.esc(m.round):'Jornada '+this.esc(m.round)+(m.date_provisional?' · Fecha orientativa':'')}</small>${this.spectators(m)}</div>${this.team(m.away,m.away_crest)}</div><div class="fixture-actions">${window.ClubMatchAlerts?ClubMatchAlerts.button(m):''}${this.entryButton(m)}</div><div class="fixture-venue">${CDM.icon('pin')}<span>${this.esc(m.venue||'Pabellón por confirmar')}</span></div></article>`},
  home(){const matches=this.data.matches;const upcoming=matches.filter(m=>!m.played).sort((a,b)=>a.round-b.round)[0];const last=matches.filter(m=>m.played).sort((a,b)=>b.round-a.round)[0];return '<div class="home-matches">'+(upcoming?this.card(upcoming,'PRÓXIMO PARTIDO'):CDM.empty('Próximo partido pendiente','La RFAF todavía no ha publicado el próximo encuentro.','calendar'))+(last?this.card(last,'ÚLTIMO RESULTADO'):'')+'</div>'+this.status()},
@@ -287,6 +298,7 @@ document.addEventListener('keydown',e=>{
 });
 
 
+document.addEventListener('click',e=>{const b=e.target.closest('[data-match-activate]');if(!b)return;b.disabled=true;Fixtures.activateMatchEvent(b.dataset.matchActivate).finally(()=>{b.disabled=false;});});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-match-event]');if(!b)return;b.disabled=true;Fixtures.createMatchEvent(b.dataset.matchEvent).finally(()=>{b.disabled=false;});});
 // The compact score bar shows once the big match header has scrolled under the app header.
 window.addEventListener?.('scroll',()=>{const stage=document.querySelector('.acta-stage'),bar=document.querySelector('.acta-sticky');if(!stage||!bar)return;const top=(document.getElementById('header')?.getBoundingClientRect().bottom||0);bar.classList.toggle('is-visible',stage.getBoundingClientRect().bottom<top+8);},{passive:true});

@@ -717,6 +717,8 @@ document.addEventListener('DOMContentLoaded',()=>{if(ClubMatchAlerts.route())Clu
 document.addEventListener('click',async e=>{const button=e.target.closest('[data-match-alert]');if(!button)return;e.preventDefault();e.stopPropagation();if(!ClubAuth.user){ClubFavorites.guestNotice();return;}try{await ClubMatchAlerts.toggle(button.dataset.matchAlert);}catch(error){ClubMatchAlerts.error=error.message;const notice=document.getElementById('notice');if(notice){notice.textContent=error.message;notice.style.display='block';setTimeout(()=>notice.style.display='none',6000);}}});
 
 /* Member card: the club's design flips to a signed QR that lasts the whole season; it can also be saved as a PDF. */
+// Admin event views read several club records; a phone on a weak connection needs more than a few seconds.
+const READ_WAIT=18000;
 window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,uid:'',scripts:{},stream:null,scanning:false,scanResult:null,members:null,membersError:'',
  E(v){return ClubAuth.escape(v);},
  load(src){return this.scripts[src]||=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>{delete this.scripts[src];reject(Error('No se pudo cargar el lector.'));};document.head.append(s);});},
@@ -727,7 +729,7 @@ window.ClubMembership={card:null,error:'',loading:false,flipped:false,timer:0,ui
   for(let attempt=0;attempt<(read?2:1);attempt++){
    if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
    try{
-    const r=await fetch(endpoint+path,{...options,headers:{Authorization:'Bearer '+credentials.token,'Content-Type':'application/json'},cache:'no-store',signal:AbortSignal.timeout(read?9000:15000)}),data=await r.json().catch(()=>{throw new TypeError('Invalid response');});
+    const r=await fetch(endpoint+path,{...options,headers:{Authorization:'Bearer '+credentials.token,'Content-Type':'application/json'},cache:'no-store',signal:AbortSignal.timeout(read?READ_WAIT:15000)}),data=await r.json().catch(()=>{throw new TypeError('Invalid response');});
     if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');if(!r.ok)throw Object.assign(Error(data.error||'No se pudo conectar con el club.'),{status:r.status});return data;
    }catch(error){
     if(ClubAuth.user?.uid!==identity.uid)throw Error('La sesión ha cambiado.');
