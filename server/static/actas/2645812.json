@@ -491,7 +491,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 5,
-        "called": 9,
+        "called": 10,
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -562,9 +562,9 @@
       "profile_updated_at": "2026-11-09T01:02:32.082583+00:00",
       "competition_summary": {
         "goals": 5,
-        "starts": 4,
-        "called": 7,
-        "played": 7,
+        "starts": 5,
+        "called": 8,
+        "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -633,10 +633,10 @@
       ],
       "profile_updated_at": "2026-10-27T02:12:02.491702+00:00",
       "competition_summary": {
-        "goals": 1,
-        "starts": 6,
-        "called": 8,
-        "played": 8,
+        "goals": 2,
+        "starts": 7,
+        "called": 9,
+        "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -706,9 +706,9 @@
       "profile_updated_at": "2026-11-05T11:02:35.763073+00:00",
       "competition_summary": {
         "goals": 2,
-        "starts": 2,
-        "called": 6,
-        "played": 6,
+        "starts": 3,
+        "called": 7,
+        "played": 7,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -850,8 +850,8 @@
       "profile_updated_at": "2026-11-08T10:29:10.075966+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 4,
-        "called": 8,
+        "starts": 5,
+        "called": 9,
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -993,10 +993,10 @@
       ],
       "profile_updated_at": "2026-11-10T09:59:19.808083+00:00",
       "competition_summary": {
-        "goals": 1,
-        "starts": 2,
-        "called": 5,
-        "played": 5,
+        "goals": 3,
+        "starts": 3,
+        "called": 6,
+        "played": 6,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1065,10 +1065,10 @@
       ],
       "profile_updated_at": "2026-10-27T02:12:07.337802+00:00",
       "competition_summary": {
-        "goals": 6,
+        "goals": 7,
         "starts": 9,
-        "called": 10,
-        "played": 10,
+        "called": 11,
+        "played": 11,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1139,7 +1139,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 8,
+        "called": 9,
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1153,7 +1153,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 6,
+        "called": 7,
         "played": 5,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1369,7 +1369,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 9,
+        "called": 10,
         "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1508,19 +1508,19 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "11"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "8"
+              "10"
             ]
           ]
         },
@@ -1529,11 +1529,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "2"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1550,16 +1550,16 @@
           "rows": [
             [
               "Total",
-              "7"
+              "8"
             ],
             [
               "Goles por partido",
-              "0.8"
+              "0.7"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-09T18:55:19.945394+00:00"
+      "profile_updated_at": "2026-11-21T23:22:15.214166+00:00"
     },
     {
       "id": "e9c8f94d1684e995",
@@ -1572,19 +1572,19 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "11"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
-              "3"
+              "4"
             ],
             [
               "Jugados",
-              "8"
+              "10"
             ]
           ]
         },
@@ -1614,16 +1614,16 @@
           "rows": [
             [
               "Total",
-              "4"
+              "6"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-09T18:55:17.921692+00:00"
+      "profile_updated_at": "2026-11-21T23:22:17.289656+00:00"
     },
     {
       "id": "e7dbbf7865b9c589",
@@ -1636,11 +1636,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
-              "8"
+              "9"
             ],
             [
               "Suplente",
@@ -1648,7 +1648,7 @@
             ],
             [
               "Jugados",
-              "9"
+              "10"
             ]
           ]
         },
@@ -1661,7 +1661,7 @@
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1678,16 +1678,16 @@
           "rows": [
             [
               "Total",
-              "8"
+              "10"
             ],
             [
               "Goles por partido",
-              "0.9"
+              "1.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:31.765626+00:00"
+      "profile_updated_at": "2026-11-21T23:22:12.072785+00:00"
     },
     {
       "id": "6ae31e3af3c82fd2",
@@ -1700,19 +1700,19 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "11"
             ],
             [
               "Titular",
-              "8"
+              "9"
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "9"
+              "11"
             ]
           ]
         },
@@ -1721,11 +1721,11 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Tarjeta amarilla",
-              "3"
+              "5"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1742,16 +1742,16 @@
           "rows": [
             [
               "Total",
-              "14"
+              "16"
             ],
             [
               "Goles por partido",
-              "1.6"
+              "1.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:32.745107+00:00"
+      "profile_updated_at": "2026-11-21T23:22:13.052696+00:00"
     },
     {
       "id": "a574c4ce6cf904e7",
@@ -1764,19 +1764,19 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "11"
             ],
             [
               "Titular",
-              "5"
+              "6"
             ],
             [
               "Suplente",
-              "4"
+              "5"
             ],
             [
               "Jugados",
-              "9"
+              "11"
             ]
           ]
         },
@@ -1815,7 +1815,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:16.989912+00:00"
+      "profile_updated_at": "2026-11-21T23:22:08.066251+00:00"
     },
     {
       "id": "48abb64e55d5168b",
@@ -2212,19 +2212,19 @@
           "rows": [
             [
               "Convocados",
-              "6"
+              "9"
             ],
             [
               "Titular",
-              "0"
+              "1"
             ],
             [
               "Suplente",
-              "6"
+              "8"
             ],
             [
               "Jugados",
-              "4"
+              "7"
             ]
           ]
         },
@@ -2233,11 +2233,11 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
-              "2"
+              "4"
             ],
             [
               "Doble tarjeta amarilla",
@@ -2254,16 +2254,16 @@
           "rows": [
             [
               "Total",
-              "4"
+              "7"
             ],
             [
               "Goles por partido",
-              "0.7"
+              "0.8"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-05T11:02:18.776191+00:00"
+      "profile_updated_at": "2026-11-21T23:22:18.244265+00:00"
     },
     {
       "id": "c6987fa7182812f7",
@@ -2276,11 +2276,11 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -2288,7 +2288,7 @@
             ],
             [
               "Jugados",
-              "8"
+              "9"
             ]
           ]
         },
@@ -2318,16 +2318,16 @@
           "rows": [
             [
               "Total",
-              "4"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:33.796888+00:00"
+      "profile_updated_at": "2026-11-21T23:22:14.249130+00:00"
     }
   ],
   "staff": [

@@ -432,8 +432,8 @@
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
         "goals": 0,
-        "starts": 2,
-        "called": 5,
+        "starts": 3,
+        "called": 6,
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
@@ -518,10 +518,10 @@
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=275362&codacta=2645838&nueva_ventana=",
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
-        "goals": 7,
-        "starts": 5,
-        "called": 8,
-        "played": 7,
+        "goals": 8,
+        "starts": 6,
+        "called": 9,
+        "played": 8,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
@@ -592,9 +592,9 @@
       "profile_updated_at": "2026-11-15T09:32:10.550840+00:00",
       "competition_summary": {
         "goals": 4,
-        "starts": 5,
-        "called": 7,
-        "played": 7,
+        "starts": 6,
+        "called": 8,
+        "played": 8,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -737,7 +737,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 8,
+        "called": 9,
         "played": null,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
@@ -953,8 +953,8 @@
       "competition_summary": {
         "goals": 2,
         "starts": 0,
-        "called": 8,
-        "played": 5,
+        "called": 9,
+        "played": 6,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       }
@@ -981,9 +981,9 @@
       "photo": "data:image/jpeg;base64,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",
       "competition_summary": {
         "goals": 1,
-        "starts": 1,
-        "called": 5,
-        "played": 4,
+        "starts": 2,
+        "called": 6,
+        "played": 5,
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
@@ -1055,7 +1055,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 5,
-        "called": 9,
+        "called": 10,
         "played": 9,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1125,10 +1125,10 @@
       ],
       "profile_updated_at": "2026-11-18T04:24:18.510299+00:00",
       "competition_summary": {
-        "goals": 6,
+        "goals": 7,
         "starts": 9,
-        "called": 10,
-        "played": 10,
+        "called": 11,
+        "played": 11,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1198,9 +1198,9 @@
       "profile_updated_at": "2026-11-16T02:13:28.993844+00:00",
       "competition_summary": {
         "goals": 5,
-        "starts": 4,
-        "called": 7,
-        "played": 7,
+        "starts": 5,
+        "called": 8,
+        "played": 8,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
       }
@@ -1444,7 +1444,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 1,
-        "called": 8,
+        "called": 9,
         "played": null,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"
@@ -1459,7 +1459,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 0,
-        "called": 1,
+        "called": 2,
         "played": 1,
         "team": "C.D. SANTAELLA 2010",
         "source": "actas oficiales RFAF"

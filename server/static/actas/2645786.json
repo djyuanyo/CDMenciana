@@ -577,7 +577,7 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "10"
             ],
             [
               "Titular",
@@ -585,11 +585,11 @@
             ],
             [
               "Suplente",
-              "1"
+              "2"
             ],
             [
               "Jugados",
-              "8"
+              "9"
             ]
           ]
         },
@@ -619,16 +619,16 @@
           "rows": [
             [
               "Total",
-              "4"
+              "5"
             ],
             [
               "Goles por partido",
-              "0.4"
+              "0.5"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-18T14:05:10.809854+00:00",
+      "profile_updated_at": "2026-11-21T23:22:37.035887+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -700,7 +700,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-18T14:05:11.820041+00:00",
+      "profile_updated_at": "2026-11-21T23:22:38.021046+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -721,7 +721,7 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "9"
             ],
             [
               "Titular",
@@ -729,11 +729,11 @@
             ],
             [
               "Suplente",
-              "6"
+              "5"
             ],
             [
               "Jugados",
-              "7"
+              "6"
             ]
           ]
         },
@@ -772,7 +772,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-18T14:05:12.802323+00:00",
+      "profile_updated_at": "2026-11-09T18:55:04.938385+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -793,11 +793,11 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "11"
             ],
             [
               "Titular",
-              "6"
+              "7"
             ],
             [
               "Suplente",
@@ -805,7 +805,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "8"
             ]
           ]
         },
@@ -852,7 +852,7 @@
         "team": "C.D. UNION DEPORTIVA LOS AMIGOS",
         "source": "actas oficiales RFAF"
       },
-      "profile_updated_at": "2026-11-18T14:05:09.809671+00:00"
+      "profile_updated_at": "2026-11-21T23:22:36.058635+00:00"
     },
     {
       "id": "cec96cbd8aaa3a18",
@@ -929,7 +929,7 @@
           "rows": [
             [
               "Convocados",
-              "10"
+              "9"
             ],
             [
               "Titular",
@@ -937,11 +937,11 @@
             ],
             [
               "Suplente",
-              "10"
+              "9"
             ],
             [
               "Jugados",
-              "4"
+              "3"
             ]
           ]
         },
@@ -980,7 +980,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-18T14:05:14.802014+00:00",
+      "profile_updated_at": "2026-11-10T17:57:14.020532+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -1335,8 +1335,8 @@
       "profile_updated_at": "2026-11-10T02:17:59.701131+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 8,
-        "called": 10,
+        "starts": 9,
+        "called": 11,
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -1406,10 +1406,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:18:00.691428+00:00",
       "competition_summary": {
-        "goals": 7,
-        "starts": 9,
-        "called": 10,
-        "played": 9,
+        "goals": 12,
+        "starts": 10,
+        "called": 11,
+        "played": 10,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -1768,7 +1768,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 2,
-        "called": 10,
+        "called": 11,
         "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -1910,10 +1910,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:17:57.679275+00:00",
       "competition_summary": {
-        "goals": 2,
+        "goals": 3,
         "starts": 2,
-        "called": 10,
-        "played": 8,
+        "called": 11,
+        "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -1984,7 +1984,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 9,
+        "called": 10,
         "played": 7,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -2055,9 +2055,9 @@
       "profile_updated_at": "2026-11-10T23:27:43.355611+00:00",
       "competition_summary": {
         "goals": 4,
-        "starts": 2,
-        "called": 9,
-        "played": 8,
+        "starts": 3,
+        "called": 10,
+        "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -2127,9 +2127,9 @@
       "profile_updated_at": "2026-11-10T23:27:44.351750+00:00",
       "competition_summary": {
         "goals": 1,
-        "starts": 3,
-        "called": 8,
-        "played": 6,
+        "starts": 4,
+        "called": 9,
+        "played": 7,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -2198,10 +2198,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:18:04.675074+00:00",
       "competition_summary": {
-        "goals": 4,
+        "goals": 5,
         "starts": 0,
-        "called": 10,
-        "played": 6,
+        "called": 11,
+        "played": 7,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }

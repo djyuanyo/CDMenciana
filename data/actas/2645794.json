@@ -486,8 +486,8 @@
       "profile_updated_at": "2026-11-10T02:17:59.701131+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 8,
-        "called": 10,
+        "starts": 9,
+        "called": 11,
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -557,10 +557,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:18:00.691428+00:00",
       "competition_summary": {
-        "goals": 7,
-        "starts": 9,
-        "called": 10,
-        "played": 9,
+        "goals": 12,
+        "starts": 10,
+        "called": 11,
+        "played": 10,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -847,7 +847,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 8,
+        "called": 9,
         "played": null,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -919,7 +919,7 @@
       "competition_summary": {
         "goals": 1,
         "starts": 2,
-        "called": 10,
+        "called": 11,
         "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -1061,10 +1061,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:17:57.679275+00:00",
       "competition_summary": {
-        "goals": 2,
+        "goals": 3,
         "starts": 2,
-        "called": 10,
-        "played": 8,
+        "called": 11,
+        "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -1135,7 +1135,7 @@
       "competition_summary": {
         "goals": 2,
         "starts": 1,
-        "called": 9,
+        "called": 10,
         "played": 7,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
@@ -1206,9 +1206,9 @@
       "profile_updated_at": "2026-11-10T23:27:43.355611+00:00",
       "competition_summary": {
         "goals": 4,
-        "starts": 2,
-        "called": 9,
-        "played": 8,
+        "starts": 3,
+        "called": 10,
+        "played": 9,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -1277,10 +1277,10 @@
       ],
       "profile_updated_at": "2026-11-10T02:18:04.675074+00:00",
       "competition_summary": {
-        "goals": 4,
+        "goals": 5,
         "starts": 0,
-        "called": 10,
-        "played": 6,
+        "called": 11,
+        "played": 7,
         "team": "U.D. ALCHOYANO",
         "source": "actas oficiales RFAF"
       }
@@ -1296,11 +1296,11 @@
           "rows": [
             [
               "Convocados",
-              "5"
+              "6"
             ],
             [
               "Titular",
-              "4"
+              "5"
             ],
             [
               "Suplente",
@@ -1308,7 +1308,7 @@
             ],
             [
               "Jugados",
-              "5"
+              "6"
             ]
           ]
         },
@@ -1347,7 +1347,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-09T18:55:29.936787+00:00",
+      "profile_updated_at": "2026-11-21T23:22:21.079987+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 5,
@@ -1440,11 +1440,11 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "10"
             ],
             [
               "Titular",
-              "5"
+              "7"
             ],
             [
               "Suplente",
@@ -1452,7 +1452,7 @@
             ],
             [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1491,11 +1491,11 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:40.759066+00:00",
+      "profile_updated_at": "2026-11-21T23:22:23.239568+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 6,
-        "called": 9,
+        "starts": 7,
+        "called": 10,
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
@@ -1512,19 +1512,19 @@
           "rows": [
             [
               "Convocados",
-              "9"
+              "11"
             ],
             [
               "Titular",
-              "4"
-            ],
-            [
-              "Suplente",
               "5"
             ],
             [
+              "Suplente",
+              "6"
+            ],
+            [
               "Jugados",
-              "7"
+              "9"
             ]
           ]
         },
@@ -1554,21 +1554,21 @@
           "rows": [
             [
               "Total",
-              "10"
+              "11"
             ],
             [
               "Goles por partido",
-              "1.1"
+              "1.0"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:38.770696+00:00",
+      "profile_updated_at": "2026-11-21T23:22:20.248257+00:00",
       "competition_summary": {
         "goals": 11,
         "starts": 5,
-        "called": 10,
-        "played": 8,
+        "called": 11,
+        "played": 9,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
       }
@@ -1584,83 +1584,11 @@
           "rows": [
             [
               "Convocados",
-              "7"
+              "9"
             ],
             [
               "Titular",
-              "2"
-            ],
-            [
-              "Suplente",
-              "5"
-            ],
-            [
-              "Jugados",
-              "5"
-            ]
-          ]
-        },
-        {
-          "title": "Sanciones",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Doble tarjeta amarilla",
-              "0"
-            ],
-            [
-              "Tarjeta roja",
-              "0"
-            ]
-          ]
-        },
-        {
-          "title": "Goles",
-          "rows": [
-            [
-              "Total",
-              "0"
-            ],
-            [
-              "Goles por partido",
-              "0.0"
-            ]
-          ]
-        }
-      ],
-      "profile_updated_at": "2026-11-10T23:27:20.926082+00:00",
-      "competition_summary": {
-        "goals": 0,
-        "starts": 3,
-        "called": 8,
-        "played": null,
-        "team": "C.D. VILLALBA F.S.",
-        "source": "actas oficiales RFAF"
-      }
-    },
-    {
-      "id": "498ae437c7e6a4bc",
-      "name": "RODRIGUEZ ROMERO, MARCO",
-      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8194804&codacta=2645794&nueva_ventana=",
-      "photo": "data:image/jpeg;base64,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",
-      "stats": [
-        {
-          "title": "Partidos",
-          "rows": [
-            [
-              "Convocados",
-              "8"
-            ],
-            [
-              "Titular",
-              "2"
+              "3"
             ],
             [
               "Suplente",
@@ -1677,11 +1605,11 @@
           "rows": [
             [
               "Total",
-              "1"
+              "0"
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "0"
             ],
             [
               "Doble tarjeta amarilla",
@@ -1707,11 +1635,83 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T09:59:35.800331+00:00",
+      "profile_updated_at": "2026-11-21T23:22:25.077128+00:00",
+      "competition_summary": {
+        "goals": 0,
+        "starts": 3,
+        "called": 9,
+        "played": null,
+        "team": "C.D. VILLALBA F.S.",
+        "source": "actas oficiales RFAF"
+      }
+    },
+    {
+      "id": "498ae437c7e6a4bc",
+      "name": "RODRIGUEZ ROMERO, MARCO",
+      "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=8194804&codacta=2645794&nueva_ventana=",
+      "photo": "data:image/jpeg;base64,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",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "10"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "8"
+            ],
+            [
+              "Jugados",
+              "9"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-21T23:22:19.265680+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 2,
-        "called": 9,
+        "called": 10,
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
@@ -1999,7 +1999,7 @@
       "competition_summary": {
         "goals": 0,
         "starts": 0,
-        "called": 5,
+        "called": 6,
         "played": null,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
@@ -2016,7 +2016,7 @@
           "rows": [
             [
               "Convocados",
-              "8"
+              "10"
             ],
             [
               "Titular",
@@ -2024,11 +2024,11 @@
             ],
             [
               "Suplente",
-              "8"
+              "10"
             ],
             [
               "Jugados",
-              "6"
+              "8"
             ]
           ]
         },
@@ -2037,11 +2037,11 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
-              "1"
+              "3"
             ],
             [
               "Doble tarjeta amarilla",
@@ -2058,21 +2058,21 @@
           "rows": [
             [
               "Total",
-              "2"
+              "4"
             ],
             [
               "Goles por partido",
-              "0.3"
+              "0.4"
             ]
           ]
         }
       ],
-      "profile_updated_at": "2026-11-10T23:27:21.355454+00:00",
+      "profile_updated_at": "2026-11-21T23:22:26.068644+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 0,
-        "called": 9,
-        "played": 7,
+        "called": 10,
+        "played": 8,
         "team": "C.D. VILLALBA F.S.",
         "source": "actas oficiales RFAF"
       }
