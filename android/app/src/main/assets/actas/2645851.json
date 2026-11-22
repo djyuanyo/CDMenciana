@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "3 - 4",
           ""
         ]
       ]
@@ -74,6 +74,43 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(3') LEON GONZALEZ, SERGIO"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(8') RODRIGUEZ BLANCO, JESUS"
+        ],
+        [
+          "Gol · 2 - 1",
+          "(12') LEON GONZALEZ, SERGIO"
+        ],
+        [
+          "Gol · 2 - 2",
+          "(15') LEÑA FERNÁNDEZ, SAMUEL"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(31') LEÑA FERNÁNDEZ, SAMUEL"
+        ],
+        [
+          "Gol · 3 - 3",
+          "(33') LEON GONZALEZ, SERGIO"
+        ],
+        [
+          "Gol · 3 - 4",
+          "(35') FERNANDEZ GOMEZ, JAVIER"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -225,6 +262,27 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(11') RAMOS ORTAS, CRISTIAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(15') RODRIGUEZ CALZADO, DANIEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') LEON GONZALEZ, SERGIO"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. DECORSENECA"
     },
@@ -320,6 +378,23 @@
         [
           "",
           "VINOS SERRANO, MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(6') GONZALEZ ESPINOSA, ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(33') COPETE RIVERO, DAVID"
         ]
       ]
     }
@@ -504,6 +579,5 @@
   ],
   "id": "2645851",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2645851",
-  "updated_at": "2026-11-22T11:24:38.827798+00:00",
-  "preview": true
+  "updated_at": "2026-11-22T17:50:25.327923+00:00"
 }

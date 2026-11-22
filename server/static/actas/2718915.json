@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "0 - 0",
+          "7 - 2",
           ""
         ]
       ]
@@ -62,6 +62,51 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(1') CAMPAÑA JARABA, JUAN"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(4') POLICARPO GOMEZ, FRANCISCO"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(12') LORA GOMEZ, RAFAEL"
+        ],
+        [
+          "Gol · 4 - 0",
+          "(17') MARQUEZ QUERO, RAFAEL"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(24') CARRILLO ORTIZ, JOSÉ LUIS"
+        ],
+        [
+          "Gol · 5 - 1",
+          "(29') RODRIGUEZ GOMEZ, MANUEL"
+        ],
+        [
+          "Gol en propia puerta · 6 - 1",
+          "(31') RUIZ GONZÁLEZ, ALBERTO"
+        ],
+        [
+          "Gol · 7 - 1",
+          "(32') RODRIGUEZ GOMEZ, MANUEL"
+        ],
+        [
+          "Gol · 7 - 2",
+          "(36') MOLINA AGUILERA, RAUL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -196,6 +241,23 @@
         [
           "",
           "RUIZ MUÑOZ, ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(9') POLICARPO GOMEZ, FRANCISCO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(39') RODRIGUEZ GOMEZ, JOAQUIN"
         ]
       ]
     },
@@ -511,6 +573,5 @@
   ],
   "id": "2718915",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718915",
-  "updated_at": "2026-11-22T11:24:38.827798+00:00",
-  "preview": true
+  "updated_at": "2026-11-22T17:50:25.327923+00:00"
 }
