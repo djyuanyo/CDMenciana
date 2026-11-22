@@ -1656,7 +1656,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:29.504786+00:00",
+      "profile_updated_at": "2026-11-22T03:13:11.870880+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 1,
@@ -1676,8 +1676,64 @@
       "acta_id": "2718135",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42501&codacta=2718135&nueva_ventana=",
       "rfaf_id": "42501",
-      "stats": [],
-      "profile_updated_at": "",
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-22T03:13:12.955566+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1685,7 +1741,8 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats_round": 6
     },
     {
       "name": "CABEZAS CORDOBA, RAUL",
@@ -1753,7 +1810,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:30.488132+00:00",
+      "profile_updated_at": "2026-11-22T03:13:13.712275+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -3221,8 +3278,8 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-22T02:28:52.660869+00:00",
-  "stats_updated_at": "2026-11-22T02:28:52.660869+00:00",
+  "roster_updated_at": "2026-11-22T03:13:11.292909+00:00",
+  "stats_updated_at": "2026-11-22T03:13:11.292909+00:00",
   "staff": [
     {
       "name": "LOZANO GARCIA, JULIO",

@@ -6066,7 +6066,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:04.481399+00:00",
+      "profile_updated_at": "2026-11-22T03:12:47.955442+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6136,7 +6136,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:05.432734+00:00",
+      "profile_updated_at": "2026-11-22T03:12:48.708352+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 5,
@@ -6351,7 +6351,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:07.450350+00:00",
+      "profile_updated_at": "2026-11-22T03:12:50.880754+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6421,7 +6421,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:08.247225+00:00",
+      "profile_updated_at": "2026-11-22T03:12:51.891871+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6491,7 +6491,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:09.392032+00:00",
+      "profile_updated_at": "2026-11-22T03:12:52.720911+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6561,7 +6561,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:11.604199+00:00",
+      "profile_updated_at": "2026-11-22T03:12:54.711379+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 6,
@@ -6638,7 +6638,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:12.441388+00:00",
+      "profile_updated_at": "2026-11-22T03:12:55.718340+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6708,7 +6708,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:13.437219+00:00",
+      "profile_updated_at": "2026-11-22T03:12:56.922773+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6778,7 +6778,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:14.267413+00:00",
+      "profile_updated_at": "2026-11-22T03:12:57.725276+00:00",
       "competition_summary": {
         "goals": 5,
         "starts": 1,
@@ -6855,7 +6855,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:15.460909+00:00",
+      "profile_updated_at": "2026-11-22T03:12:58.940892+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -6925,7 +6925,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:16.556647+00:00",
+      "profile_updated_at": "2026-11-22T03:12:59.707533+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 0,
@@ -7002,7 +7002,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:17.359534+00:00",
+      "profile_updated_at": "2026-11-22T03:13:00.909992+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7072,7 +7072,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:18.326321+00:00",
+      "profile_updated_at": "2026-11-22T03:13:01.897908+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7142,7 +7142,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:19.443907+00:00",
+      "profile_updated_at": "2026-11-22T03:13:02.922779+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7155,9 +7155,66 @@
       "acta_id": "2645849",
       "profile_url": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=81819&codacta=2645849&nueva_ventana=",
       "rfaf_id": "81819",
-      "stats": [],
-      "profile_updated_at": "",
-      "competition_summary": {}
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "1"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-22T03:13:03.956854+00:00",
+      "competition_summary": {},
+      "stats_round": 11
     },
     {
       "name": "SANCHEZ CRUZ, LUIS MANUEL",
@@ -7225,7 +7282,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:20.464274+00:00",
+      "profile_updated_at": "2026-11-22T03:13:04.718490+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -7302,7 +7359,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:21.274216+00:00",
+      "profile_updated_at": "2026-11-22T03:13:05.930158+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7372,7 +7429,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:22.274415+00:00",
+      "profile_updated_at": "2026-11-22T03:13:06.707653+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -7449,7 +7506,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:23.460205+00:00",
+      "profile_updated_at": "2026-11-22T03:13:07.909728+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7519,7 +7576,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:24.454197+00:00",
+      "profile_updated_at": "2026-11-22T03:13:08.732875+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7589,7 +7646,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:25.265057+00:00",
+      "profile_updated_at": "2026-11-22T03:13:10.050474+00:00",
       "competition_summary": {},
       "stats_round": 11
     },
@@ -7659,7 +7716,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-21T22:22:26.482746+00:00",
+      "profile_updated_at": "2026-11-22T03:13:10.716159+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 0,
@@ -8609,8 +8666,8 @@
     "27": "Jugador de pista"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-22T02:27:29.149111+00:00",
-  "stats_updated_at": "2026-11-22T02:27:29.149111+00:00",
+  "roster_updated_at": "2026-11-22T03:12:42.311151+00:00",
+  "stats_updated_at": "2026-11-22T03:12:42.311151+00:00",
   "staff": [
     {
       "name": "JIMENEZ CUBERO, JOSE ANTONIO",
