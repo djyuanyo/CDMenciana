@@ -434,7 +434,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "16309d9583be4370",
@@ -448,7 +449,8 @@
         "played": 10,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6ff935d1488cd856",
@@ -462,7 +464,8 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "2a5b4aa16860488e",
@@ -476,7 +479,8 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "0e2430aff05bb987",
@@ -490,7 +494,8 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "d3145c20ee024537",
@@ -504,7 +509,8 @@
         "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "708b3820cc25a058",
@@ -518,7 +524,8 @@
         "played": 10,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "6262b52099889ca0",
@@ -532,7 +539,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "c4921f7afa0098f9",
@@ -546,7 +554,8 @@
         "played": 9,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "50f4e3a836387ad2",
@@ -560,7 +569,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "5ad7d222e02856eb",
@@ -574,7 +584,8 @@
         "played": 10,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "a67d6d4f5adc23bb",
@@ -588,7 +599,8 @@
         "played": 7,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "44f57802dfbfe33b",
@@ -602,7 +614,8 @@
         "played": 8,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f090f25e46a25510",
@@ -616,7 +629,8 @@
         "played": null,
         "team": "C.D. OLIMPIC DE TRIANA",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "f98b2a7a4f1be2b7",
@@ -680,7 +694,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:10:58.564768+00:00",
+      "profile_updated_at": "2026-11-23T21:30:49.418293+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 5,
@@ -752,7 +766,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:04.555179+00:00",
+      "profile_updated_at": "2026-11-23T21:30:55.413001+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 8,
@@ -794,7 +808,7 @@
           "rows": [
             [
               "Total",
-              "1"
+              "2"
             ],
             [
               "Tarjeta amarilla",
@@ -824,7 +838,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:10:59.541973+00:00",
+      "profile_updated_at": "2026-11-23T21:30:50.416677+00:00",
       "competition_summary": {
         "goals": 2,
         "starts": 7,
@@ -896,7 +910,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:01.552948+00:00",
+      "profile_updated_at": "2026-11-23T21:30:52.413825+00:00",
       "competition_summary": {
         "goals": 8,
         "starts": 5,
@@ -938,7 +952,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -968,7 +982,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:07.554961+00:00",
+      "profile_updated_at": "2026-11-23T21:30:58.405062+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 2,
@@ -1010,7 +1024,7 @@
           "rows": [
             [
               "Total",
-              "3"
+              "4"
             ],
             [
               "Tarjeta amarilla",
@@ -1040,7 +1054,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:03.560127+00:00",
+      "profile_updated_at": "2026-11-23T21:30:54.401277+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 8,
@@ -1062,7 +1076,8 @@
         "played": 10,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "487488d0f825190f",
@@ -1096,7 +1111,7 @@
           "rows": [
             [
               "Total",
-              "2"
+              "3"
             ],
             [
               "Tarjeta amarilla",
@@ -1126,7 +1141,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:05.566334+00:00",
+      "profile_updated_at": "2026-11-23T21:30:56.404305+00:00",
       "competition_summary": {
         "goals": 5,
         "starts": 2,
@@ -1198,7 +1213,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:08.567609+00:00",
+      "profile_updated_at": "2026-11-23T21:30:59.421771+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 1,
@@ -1270,7 +1285,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-23T09:11:09.563267+00:00",
+      "profile_updated_at": "2026-11-23T21:31:00.416622+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 1,
@@ -1292,7 +1307,8 @@
         "played": 8,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "ba94a56232a42bc5",
@@ -1306,7 +1322,8 @@
         "played": null,
         "team": "C.D. ALCALA DE GUADAIRA F.S.",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     }
   ],
   "staff": [
