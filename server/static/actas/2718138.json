@@ -79,6 +79,63 @@
       "kind": "table",
       "rows": [
         [
+          "Gol · 0 - 1",
+          "(4') LARA SEVILLA, JOSE DAVID"
+        ],
+        [
+          "Gol · 1 - 1",
+          "(7') LEON ALCAIDE, CRISTIAN"
+        ],
+        [
+          "Gol · 1 - 2",
+          "(9') ALONZO CASTILLO, ANGEL LUIS"
+        ],
+        [
+          "Gol · 1 - 3",
+          "(12') MOLERO ARJONA, JUAN BAUTISTA"
+        ],
+        [
+          "Gol · 2 - 3",
+          "(16') LEON ALCAIDE, CRISTIAN"
+        ],
+        [
+          "Gol de penalti · 3 - 3",
+          "(16') PINO AGUILAR, PABLO"
+        ],
+        [
+          "Gol · 3 - 4",
+          "(24') ALONZO CASTILLO, ANGEL LUIS"
+        ],
+        [
+          "Gol · 3 - 5",
+          "(27') PACHECO ESCOBAR, FRANCISCO ANTONIO"
+        ],
+        [
+          "Gol · 3 - 6",
+          "(33') BERDUN SALERNO, RAFAEL"
+        ],
+        [
+          "Gol · 4 - 6",
+          "(34') LEON ALCAIDE, CRISTIAN"
+        ],
+        [
+          "Gol · 5 - 6",
+          "(35') SOTO CORTES, RAMON"
+        ],
+        [
+          "Gol · 5 - 7",
+          "(39') PACHECO ESCOBAR, FRANCISCO ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
           "Estadio: Puente Genil - NORTE QUINI32 (PABELLON)"
         ],
         [
@@ -225,6 +282,31 @@
       ]
     },
     {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(17') QUERO LUQUE, JUAN MANUEL"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(23') MILLAN MUÑOZ, ALEJANDRO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(27') LEON ALCAIDE, CRISTIAN"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(36') BAENA PEREZ, SAMUEL"
+        ]
+      ]
+    },
+    {
       "kind": "text",
       "text": "C.D. VILLA DE BENAMEJI"
     },
@@ -333,6 +415,31 @@
         [
           "",
           "CHACON TORRES, JOSE ANTONIO"
+        ]
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Tarjetas"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Tarjeta amarilla",
+          "(16') MORENO LINARES, JUAN FRANCISCO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(19') MEDINA LINARES, JUAN ANTONIO"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(23') ALONZO CASTILLO, ANGEL LUIS"
+        ],
+        [
+          "Tarjeta amarilla",
+          "(27') ACERO FLORES, MARIO"
         ]
       ]
     }
@@ -523,6 +630,5 @@
   ],
   "id": "2718138",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2718138",
-  "updated_at": "2026-11-22T19:40:50.736922+00:00",
-  "preview": true
+  "updated_at": "2026-11-23T00:53:28.285030+00:00"
 }
