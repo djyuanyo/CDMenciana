@@ -707,26 +707,6 @@
     {
       "id": "49520774-8-1",
       "round": 8,
-      "home": "C. D. FÚTBOL SALA LUQUE",
-      "away": "C.D. MIRAGENIL F.S. CODIMAR",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
-      "date": "2026-11-29",
-      "time": "",
-      "venue": "Luque - PABELLON MUNICIPAL DEPORTES",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=8",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
-      "acta_url": ""
-    },
-    {
-      "id": "49520774-8-2",
-      "round": 8,
       "home": "C.D. TOXAR",
       "away": "C.D. CABRA F.S.",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000406485_Escudo_Sin_Fondo.png",
@@ -742,6 +722,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-8-2",
+      "round": 8,
+      "home": "C. D. FÚTBOL SALA LUQUE",
+      "away": "C.D. MIRAGENIL F.S. CODIMAR",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001362321_Escudo_C.D._F_tbol_Sala_Luque.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
+      "date": "2026-11-29",
+      "time": "",
+      "venue": "Luque - PABELLON MUNICIPAL DEPORTES",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=8",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48925003",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484318",
       "acta_url": ""
     },
     {
@@ -3341,7 +3341,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-11-23T09:05:38.296161+00:00",
+  "updated_at": "2026-11-23T21:23:54.060159+00:00",
   "rounds": [
     1,
     2,
@@ -3922,7 +3922,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-11-23T09:05:38.908488+00:00",
+  "staff_updated_at": "2026-11-23T21:23:54.849167+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
