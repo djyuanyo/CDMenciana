@@ -1827,6 +1827,26 @@
     {
       "id": "48466109-12-4",
       "round": 12,
+      "home": "C.D. UNION DEPORTIVA LOS AMIGOS",
+      "away": "CIRCULO MERCANTIL E INDUSTRIAL",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg",
+      "date": "2026-11-29",
+      "time": "",
+      "venue": "Puerto Real - PABELLON SALA DE BARRIO (RIO SAN PEDRO)",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
+      "acta_url": ""
+    },
+    {
+      "id": "48466109-12-5",
+      "round": 12,
       "home": "C.D. VILLALBA F.S.",
       "away": "C.D. LA PALMA F.S. SMURFIT WESTROCK",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000287509_IMG_0133.JPG",
@@ -1845,7 +1865,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=613617"
     },
     {
-      "id": "48466109-12-5",
+      "id": "48466109-12-6",
       "round": 12,
       "home": "U.D. ALCHOYANO",
       "away": "C.D. CÓRDOBA FUTSAL PATRIMONIO",
@@ -1863,26 +1883,6 @@
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645854",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=328819",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=12931043"
-    },
-    {
-      "id": "48466109-12-6",
-      "round": 12,
-      "home": "C.D. UNION DEPORTIVA LOS AMIGOS",
-      "away": "CIRCULO MERCANTIL E INDUSTRIAL",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002218155_escudo.jpg",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001744093_Logo.jpg",
-      "date": "2026-11-29",
-      "time": "",
-      "venue": "Puerto Real - PABELLON SALA DE BARRIO (RIO SAN PEDRO)",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=24433997",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=181715",
-      "acta_url": ""
     },
     {
       "id": "48466109-12-7",
@@ -7746,7 +7746,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-23T21:25:06.168367+00:00",
+  "updated_at": "2026-11-24T01:10:35.642666+00:00",
   "rounds": [
     1,
     2,
@@ -8689,7 +8689,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-23T21:25:07.046093+00:00",
+  "staff_updated_at": "2026-11-24T01:10:36.914225+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

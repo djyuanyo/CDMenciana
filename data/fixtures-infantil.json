@@ -747,26 +747,6 @@
     {
       "id": "49520774-8-3",
       "round": 8,
-      "home": "C.D. ASOC. JUVENIL PALENCIANA",
-      "away": "C.D. BOCA F.S. PRIEGO",
-      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
-      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
-      "date": "2026-11-29",
-      "time": "",
-      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
-      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=8",
-      "date_provisional": false,
-      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
-      "acta_url": ""
-    },
-    {
-      "id": "49520774-8-4",
-      "round": 8,
       "home": "C.D. ENCINAS REALES C.F.",
       "away": "C.D. ARAS FUTSAL",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
@@ -782,6 +762,26 @@
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48904116",
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035588",
+      "acta_url": ""
+    },
+    {
+      "id": "49520774-8-4",
+      "round": 8,
+      "home": "C.D. ASOC. JUVENIL PALENCIANA",
+      "away": "C.D. BOCA F.S. PRIEGO",
+      "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002311673_img.png",
+      "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
+      "date": "2026-11-29",
+      "time": "",
+      "venue": "Palenciana - PABELLÓN MUNICIPAL LEANDRO RUIZ VELASCO",
+      "state": "Programado",
+      "played": false,
+      "home_score": null,
+      "away_score": null,
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=8",
+      "date_provisional": false,
+      "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48920677",
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2129925",
       "acta_url": ""
     },
     {
@@ -3341,7 +3341,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-11-23T21:23:54.060159+00:00",
+  "updated_at": "2026-11-24T01:10:58.998715+00:00",
   "rounds": [
     1,
     2,
@@ -3922,7 +3922,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-11-23T21:23:54.849167+00:00",
+  "staff_updated_at": "2026-11-24T01:10:59.649117+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
