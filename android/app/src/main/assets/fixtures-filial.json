@@ -1680,7 +1680,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T01:12:04.207006+00:00",
+      "profile_updated_at": "2026-11-24T10:58:30.775887+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 1,
@@ -1688,8 +1688,7 @@
         "played": 6,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 6
+      }
     },
     {
       "name": "CARRILLO LUNA, FERNANDO",
@@ -1757,7 +1756,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T01:12:05.352302+00:00",
+      "profile_updated_at": "2026-11-24T10:58:31.912511+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 0,
@@ -1765,8 +1764,7 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 6
+      }
     },
     {
       "name": "CABEZAS CORDOBA, RAUL",
@@ -1834,7 +1832,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T01:12:06.203155+00:00",
+      "profile_updated_at": "2026-11-24T10:58:32.769128+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -1842,8 +1840,7 @@
         "played": 6,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 6
+      }
     },
     {
       "name": "JIMENEZ POYATO, VICTOR",
@@ -1919,8 +1916,7 @@
         "played": null,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 6
+      }
     },
     {
       "name": "MARMOL TIENDA, JOSE",
@@ -1996,8 +1992,7 @@
         "played": 3,
         "team": "C.D. APAGA Y VAMONOS",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 6
+      }
     },
     {
       "name": "BARBA VALVERDE, DIEGO",
@@ -2860,7 +2855,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49113015&CodGrupo=49113036&CodTemporada=22",
-  "updated_at": "2026-11-24T17:44:09.504393+00:00",
+  "updated_at": "2026-11-24T17:45:25.090025+00:00",
   "rounds": [
     1,
     2,
@@ -3302,7 +3297,7 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-24T01:12:03.747190+00:00",
+  "roster_updated_at": "2026-11-24T17:54:58.537727+00:00",
   "stats_updated_at": "2026-11-24T01:12:03.747190+00:00",
   "staff": [
     {
@@ -3319,7 +3314,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=48536795",
-  "staff_updated_at": "2026-11-24T17:44:10.354586+00:00",
+  "staff_updated_at": "2026-11-24T17:45:26.139554+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
