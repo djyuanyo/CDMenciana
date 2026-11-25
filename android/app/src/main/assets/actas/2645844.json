@@ -430,7 +430,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:10.279014+00:00",
+      "profile_updated_at": "2026-11-25T22:38:10.772582+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 7,
@@ -502,7 +502,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:07.289907+00:00",
+      "profile_updated_at": "2026-11-25T22:38:11.745383+00:00",
       "competition_summary": {
         "goals": 3,
         "starts": 8,
@@ -574,7 +574,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:08.278655+00:00",
+      "profile_updated_at": "2026-11-25T22:38:08.317591+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 4,
@@ -646,7 +646,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:11.281021+00:00",
+      "profile_updated_at": "2026-11-25T22:38:12.874867+00:00",
       "competition_summary": {
         "goals": 0,
         "starts": 5,
@@ -668,7 +668,8 @@
         "played": 3,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "87925fadd351d4c7",
@@ -804,7 +805,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:12.286489+00:00",
+      "profile_updated_at": "2026-11-25T22:38:13.755260+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 2,
@@ -876,7 +877,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:13.275108+00:00",
+      "profile_updated_at": "2026-11-25T22:38:14.722424+00:00",
       "competition_summary": {
         "goals": 1,
         "starts": 3,
@@ -948,7 +949,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:09.279191+00:00",
+      "profile_updated_at": "2026-11-25T22:38:09.749749+00:00",
       "competition_summary": {
         "goals": 4,
         "starts": 6,
@@ -1020,7 +1021,7 @@
           ]
         }
       ],
-      "profile_updated_at": "2026-11-24T17:51:15.304149+00:00",
+      "profile_updated_at": "2026-11-25T22:38:16.881320+00:00",
       "competition_summary": {
         "goals": 6,
         "starts": 2,
@@ -1042,7 +1043,65 @@
         "played": 9,
         "team": "CIRCULO MERCANTIL E INDUSTRIAL",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "10"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "9"
+            ],
+            [
+              "Goles por partido",
+              "0.9"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:17.739171+00:00"
     },
     {
       "id": "90726f39993a2361",
@@ -1056,7 +1115,8 @@
         "played": null,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "3803b2c6c049ea44",
@@ -1070,7 +1130,65 @@
         "played": 7,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "10"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "7"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "8"
+            ],
+            [
+              "Goles por partido",
+              "0.8"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:33.099679+00:00"
     },
     {
       "id": "a7a15d24cd479e14",
@@ -1084,7 +1202,65 @@
         "played": 6,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "10"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "8"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.1"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:35.070098+00:00"
     },
     {
       "id": "21d2a8332500a68e",
@@ -1098,7 +1274,65 @@
         "played": 7,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "11"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "10"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.1"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:36.035262+00:00"
     },
     {
       "id": "8d1c9ca9dcf88906",
@@ -1112,7 +1346,65 @@
         "played": 8,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "11"
+            ],
+            [
+              "Titular",
+              "2"
+            ],
+            [
+              "Suplente",
+              "9"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:31.051218+00:00"
     },
     {
       "id": "ef628fe3a837a64f",
@@ -1126,7 +1418,65 @@
         "played": 10,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "11"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "10"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.1"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:27.381620+00:00"
     },
     {
       "id": "facf78073381cb64",
@@ -1140,7 +1490,65 @@
         "played": 9,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "11"
+            ],
+            [
+              "Titular",
+              "7"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "9"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:29.865433+00:00"
     },
     {
       "id": "6b6e14d61e7973f1",
@@ -1154,7 +1562,8 @@
         "played": 8,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": []
     },
     {
       "id": "d4f681dd6f20d562",
@@ -1168,7 +1577,65 @@
         "played": 8,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "10"
+            ],
+            [
+              "Titular",
+              "7"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "8"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:37.037524+00:00"
     },
     {
       "id": "eab340ec95cb6f72",
@@ -1182,7 +1649,65 @@
         "played": null,
         "team": "C.D. BENALUP",
         "source": "actas oficiales RFAF"
-      }
+      },
+      "stats": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "9"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "profile_updated_at": "2026-11-25T22:38:37.865261+00:00"
     }
   ],
   "staff": [
