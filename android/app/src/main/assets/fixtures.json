@@ -1271,9 +1271,9 @@
       "away": "C.D. OLIMPIC DE TRIANA",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001363107_X_Escudo_CD_C_diz_Futsal2.png",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg",
-      "date": "2026-11-17",
-      "time": "21:20",
-      "venue": "Cádiz - GADIR PABELLON PVO",
+      "date": "2026-12-08",
+      "time": "18:00",
+      "venue": "Cádiz - CENTRO HISTORICO PABELLON PVO",
       "state": "Programado",
       "played": false,
       "home_score": null,
@@ -1900,9 +1900,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22&CodJornada=12",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645852",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=4131731",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2645852"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=5907625"
     },
     {
       "id": "48466109-12-8",
@@ -7768,7 +7768,7 @@
   "season": "2026-2027",
   "team": "C.D. APAGA Y VAMONOS RAVI OBRAS & SERVICIOS",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=48466108&CodGrupo=48466109&CodTemporada=22",
-  "updated_at": "2026-11-25T14:19:05.156188+00:00",
+  "updated_at": "2026-11-25T22:31:31.945328+00:00",
   "rounds": [
     1,
     2,
@@ -8711,7 +8711,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=2137495",
-  "staff_updated_at": "2026-11-25T14:19:06.167846+00:00",
+  "staff_updated_at": "2026-11-25T22:31:32.567165+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
