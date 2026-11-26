@@ -720,9 +720,9 @@
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22&CodJornada=8",
       "date_provisional": false,
+      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745981",
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=13252923",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780",
-      "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2745981"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45293780"
     },
     {
       "id": "49520774-8-2",
@@ -2554,8 +2554,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "JIMENEZ CORDOBA, ANGELA",
@@ -2631,8 +2630,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "NAVARRO ORTIZ, JAVIER",
@@ -2708,8 +2706,7 @@
         "played": 6,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "JIMENEZ LAMA, ADRIAN",
@@ -2785,8 +2782,7 @@
         "played": null,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "LAMA CAMACHO, ALBERTO",
@@ -2862,8 +2858,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "CAMACHO JIMENEZ, ALVARO",
@@ -2939,8 +2934,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "BONILLA FERNANDEZ, ALVARO",
@@ -3016,8 +3010,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "BRAVO LOPEZ, YAGO",
@@ -3093,8 +3086,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "ALMANSA POLO, ALEJANDRO",
@@ -3170,8 +3162,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "CANTERO MONTES, ANTONIO",
@@ -3247,8 +3238,7 @@
         "played": null,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     },
     {
       "name": "RUIZ SANCHEZ, NATALIA",
@@ -3324,8 +3314,7 @@
         "played": 7,
         "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
         "source": "actas oficiales RFAF"
-      },
-      "stats_round": 7
+      }
     }
   ],
   "roster_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
@@ -3352,7 +3341,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA CENTRO CICLOTURISTA SUBBETICA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49520234&CodGrupo=49520774&CodTemporada=22",
-  "updated_at": "2026-11-25T14:19:28.163408+00:00",
+  "updated_at": "2026-11-26T15:16:10.543117+00:00",
   "rounds": [
     1,
     2,
@@ -3905,7 +3894,7 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-26T05:15:25.714950+00:00",
+  "roster_updated_at": "2026-11-26T15:25:35.180355+00:00",
   "stats_updated_at": "2026-11-26T05:15:25.714950+00:00",
   "staff": [
     {
@@ -3933,7 +3922,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34369965",
-  "staff_updated_at": "2026-11-25T14:19:28.736522+00:00",
+  "staff_updated_at": "2026-11-26T15:16:11.360951+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }

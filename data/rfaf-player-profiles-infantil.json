@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T15:13:54.238594+00:00",
+  "updated_at": "2026-11-26T15:25:34.238127+00:00",
   "profiles": {
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19378941&codacta=2745952&nueva_ventana=": {
       "name": "CANTERO MONTES, ANTONIO",
@@ -7970,6 +7970,1558 @@
       "failed_at": "2026-11-26T15:13:54.238594+00:00"
     },
     "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31569868&codacta=2745979&nueva_ventana=": {
+      "name": "RUIZ SANCHEZ, NATALIA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31569868&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "3"
+            ],
+            [
+              "Goles por partido",
+              "0.4"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:36.537493+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941780&codacta=2745978&nueva_ventana=": {
+      "name": "AGUILERA TRIGUERO, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941780&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941231&codacta=2745978&nueva_ventana=": {
+      "name": "LEON VALLE, ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941231&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46533728&codacta=2745978&nueva_ventana=": {
+      "name": "MARIN CAMPOS, PAULA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46533728&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36594750&codacta=2745978&nueva_ventana=": {
+      "name": "LOZANO CRUZ, IKER",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36594750&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45940885&codacta=2745978&nueva_ventana=": {
+      "name": "GONZALEZ BUJALANCE, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45940885&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50107597&codacta=2745978&nueva_ventana=": {
+      "name": "GONZALEZ BUJALANCE, ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50107597&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49792229&codacta=2745972&nueva_ventana=": {
+      "name": "PÉREZ MUÑOZ, JOSÉ MARÍA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49792229&codacta=2745972&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837332&codacta=2745977&nueva_ventana=": {
+      "name": "LEIVA TORRALBO, JORGE",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837332&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114029&codacta=2745977&nueva_ventana=": {
+      "name": "SOLDADO GARCIA, SAMUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=38114029&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45757815&codacta=2745972&nueva_ventana=": {
+      "name": "CERVERA VISO, IVÁN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45757815&codacta=2745972&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40483314&codacta=2745977&nueva_ventana=": {
+      "name": "SOME LOPEZ, ALVARO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40483314&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837699&codacta=2745972&nueva_ventana=": {
+      "name": "CABAÑAS CANO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837699&codacta=2745972&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42320227&codacta=2745977&nueva_ventana=": {
+      "name": "COCA SORLOZANO, JUAN CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42320227&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49838984&codacta=2745977&nueva_ventana=": {
+      "name": "CABALLERO MOLINA, JAVIER",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49838984&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49841090&codacta=2745977&nueva_ventana=": {
+      "name": "MONTES MARTIN, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49841090&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837142&codacta=2745977&nueva_ventana=": {
+      "name": "TELLADO LÓPEZ, DAVID",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49837142&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41766316&codacta=2745976&nueva_ventana=": {
+      "name": "DE LA ROSA GARCIA, ALBA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41766316&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=23372724&codacta=2745976&nueva_ventana=": {
+      "name": "GRANDE SANCHEZ, ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=23372724&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46472000&codacta=2745976&nueva_ventana=": {
+      "name": "ROMERO MONTES, FÁTIMA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46472000&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=30801272&codacta=2745976&nueva_ventana=": {
+      "name": "MONTES GARCÍA, ALBERTO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=30801272&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36318386&codacta=2745976&nueva_ventana=": {
+      "name": "VALDIVIA NOCETE, HUGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36318386&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158565&codacta=2745976&nueva_ventana=": {
+      "name": "SÁNCHEZ BERMÚDEZ, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158565&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158407&codacta=2745976&nueva_ventana=": {
+      "name": "ROMERO MONTES, MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158407&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158269&codacta=2745976&nueva_ventana=": {
+      "name": "CARRILLO AGUILERA, ELÍAS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158269&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158226&codacta=2745976&nueva_ventana=": {
+      "name": "QUINTERO POSTIGO, VÍCTOR",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37158226&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37157705&codacta=2745976&nueva_ventana=": {
+      "name": "RUIZ-RUANO MATAS, MARTÍN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37157705&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36318534&codacta=2745976&nueva_ventana=": {
+      "name": "GUTIÉRREZ MATAS, MANUELA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36318534&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36319182&codacta=2745976&nueva_ventana=": {
+      "name": "MÉRIDA CASANOVA, ELOY",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36319182&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49495282&codacta=2745978&nueva_ventana=": {
+      "name": "RAMÍREZ OSORIO, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49495282&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46082243&codacta=2745978&nueva_ventana=": {
+      "name": "LEBRÓN SÁNCHEZ, ISRAEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46082243&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36847566&codacta=2745978&nueva_ventana=": {
+      "name": "MESA HURTADO, ÁNGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36847566&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=16956888&codacta=2745978&nueva_ventana=": {
+      "name": "LOZANO DELGADO, GERMAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=16956888&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49588796&codacta=2745978&nueva_ventana=": {
+      "name": "ESPADAS PÉREZ, MIGUEL ÁNGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49588796&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49488820&codacta=2745978&nueva_ventana=": {
+      "name": "SÁNCHEZ LARA, AITOR",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49488820&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49569149&codacta=2745978&nueva_ventana=": {
+      "name": "CASADO PÉREZ, MARTÍN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49569149&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577064&codacta=2745975&nueva_ventana=": {
+      "name": "CASTRO LUQUE, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577064&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42727035&codacta=2745975&nueva_ventana=": {
+      "name": "ARROYO CHACON, DAVID",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42727035&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577176&codacta=2745975&nueva_ventana=": {
+      "name": "CASTRO LUQUE, ANTONIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577176&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50247013&codacta=2745975&nueva_ventana=": {
+      "name": "CORPAS CRIADO, NATALIA MARIA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50247013&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577312&codacta=2745975&nueva_ventana=": {
+      "name": "BONILLA CASTRO, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577312&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42576876&codacta=2745975&nueva_ventana=": {
+      "name": "GONZÁLEZ MORALES, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42576876&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577235&codacta=2745975&nueva_ventana=": {
+      "name": "PALOMEQUE LORENZO, FRANCISCO LUIS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577235&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50278801&codacta=2745970&nueva_ventana=": {
+      "name": "SABARIEGO DÍAZ, PABLO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50278801&codacta=2745970&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36820269&codacta=2745975&nueva_ventana=": {
+      "name": "CALA LARA, ISRAEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36820269&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577454&codacta=2745970&nueva_ventana=": {
+      "name": "ARROYO MONTES, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42577454&codacta=2745970&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50247410&codacta=2745975&nueva_ventana=": {
+      "name": "CRIADO MORALES, IKER MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50247410&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42576520&codacta=2745975&nueva_ventana=": {
+      "name": "ROPERO ÁVILA, ELÍAS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=42576520&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31911569&codacta=2745977&nueva_ventana=": {
+      "name": "ARAGON ARJONA, HECTOR",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31911569&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49821978&codacta=2745977&nueva_ventana=": {
+      "name": "COBOS AYORA, HUGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49821978&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49812471&codacta=2745973&nueva_ventana=": {
+      "name": "ESPADAS DE LA TORRE, JOSE ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49812471&codacta=2745973&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49812766&codacta=2745977&nueva_ventana=": {
+      "name": "CARNERERO FERNÁNDEZ, DYLAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49812766&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31910817&codacta=2745977&nueva_ventana=": {
+      "name": "AGUILAR ARJONA, MARTIN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31910817&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46800180&codacta=2745977&nueva_ventana=": {
+      "name": "CABRERA AGUILAR, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46800180&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22778029&codacta=2745977&nueva_ventana=": {
+      "name": "MEJÍAS HUETO, IGNACIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22778029&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27721468&codacta=2745977&nueva_ventana=": {
+      "name": "POZO QUESADA, MARCOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27721468&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32138801&codacta=2745977&nueva_ventana=": {
+      "name": "PONTES ARJONA, GABRIELA DEL CARMEN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32138801&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46800267&codacta=2745977&nueva_ventana=": {
+      "name": "ESPADAS DE LA TORRE, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46800267&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31960421&codacta=2745977&nueva_ventana=": {
+      "name": "RAMIREZ RODRIGUES, SARA ISABELLA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31960421&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=30560283&codacta=2745977&nueva_ventana=": {
+      "name": "ROJAS GONCHUK, AARON",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=30560283&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=33089142&codacta=2745975&nueva_ventana=": {
+      "name": "REY BARBERO, IKER",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=33089142&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27979212&codacta=2745975&nueva_ventana=": {
+      "name": "SERRANO MONTILLA, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27979212&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41319060&codacta=2745975&nueva_ventana=": {
+      "name": "MERINO CEJUDO, SAMUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41319060&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15213954&codacta=2745971&nueva_ventana=": {
+      "name": "MUÑOZ REJANO, EZEQUIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=15213954&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=35619405&codacta=2745975&nueva_ventana=": {
+      "name": "CALERO JIMÉNEZ, ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=35619405&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31541012&codacta=2745975&nueva_ventana=": {
+      "name": "PEREZ PIÑA, PABLO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31541012&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50190223&codacta=2745975&nueva_ventana=": {
+      "name": "CARMONA PALOS, DAVID",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50190223&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19355790&codacta=2745971&nueva_ventana=": {
+      "name": "MARTIN GRANADOS, RUBEN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19355790&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32000543&codacta=2745975&nueva_ventana=": {
+      "name": "LUNA MEJIAS, ROQUE",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32000543&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41303067&codacta=2745971&nueva_ventana=": {
+      "name": "CASTELL REQUENA, ESTEBAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41303067&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46874247&codacta=2745979&nueva_ventana=": {
+      "name": "JIMÉNEZ CASTRO, JESÚS MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46874247&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32105299&codacta=2745979&nueva_ventana=": {
+      "name": "TORRES VILA, DANIELA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32105299&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32398832&codacta=2745979&nueva_ventana=": {
+      "name": "OSUNA CAÑETE, DIEGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32398832&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965775&codacta=2745979&nueva_ventana=": {
+      "name": "ORTIZ JURADO, HECTOR",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965775&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37354207&codacta=2745979&nueva_ventana=": {
+      "name": "ORTIZ LUNA, JORGE LUIS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37354207&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965802&codacta=2745979&nueva_ventana=": {
+      "name": "ORTIZ JURADO, ANGELICA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965802&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32101504&codacta=2745979&nueva_ventana=": {
+      "name": "EXPOSITO MARIN, CARLOS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32101504&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37345684&codacta=2745970&nueva_ventana=": {
+      "name": "CORDON BAENA, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37345684&codacta=2745970&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31966052&codacta=2745979&nueva_ventana=": {
+      "name": "BAENA RABADAN, PACO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31966052&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965931&codacta=2745979&nueva_ventana=": {
+      "name": "LOPEZ JIMENEZ, MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31965931&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50171979&codacta=2745970&nueva_ventana=": {
+      "name": "ARROYO ARROYO, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50171979&codacta=2745970&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31985092&codacta=2745979&nueva_ventana=": {
+      "name": "NAVARRO ORTIZ, MARTIN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31985092&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31638644&codacta=2745976&nueva_ventana=": {
+      "name": "OSUNA BAENA, MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31638644&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41884176&codacta=2745976&nueva_ventana=": {
+      "name": "SEVILLA ARROYO, JUAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41884176&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26875763&codacta=2745976&nueva_ventana=": {
+      "name": "ROSA RICO, CRISTIAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26875763&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31797471&codacta=2745976&nueva_ventana=": {
+      "name": "ARIZA YÉVENES, ERIC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31797471&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22698149&codacta=2745976&nueva_ventana=": {
+      "name": "CALIZ SANCHEZ, ALONSO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=22698149&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49588134&codacta=2745976&nueva_ventana=": {
+      "name": "PINEDA AGUILERA, LUCAS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49588134&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=34779055&codacta=2745976&nueva_ventana=": {
+      "name": "GRANADO MUÑOZ, LUIS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=34779055&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47751907&codacta=2745972&nueva_ventana=": {
+      "name": "JIMENEZ MUDARRA, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47751907&codacta=2745972&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46822932&codacta=2745976&nueva_ventana=": {
+      "name": "CANO AGUILERA, MANUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46822932&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46056660&codacta=2745977&nueva_ventana=": {
+      "name": "ORTEGA LÓPEZ, ÁNGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46056660&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49838334&codacta=2745977&nueva_ventana=": {
+      "name": "VARO TORO, MIGUEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49838334&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27213430&codacta=2745975&nueva_ventana=": {
+      "name": "ECIJA GARCIA, DANIEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=27213430&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46461438&codacta=2745976&nueva_ventana=": {
+      "name": "DE LAS MORENAS GALVEZ, LUCAS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46461438&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26670091&codacta=2745976&nueva_ventana=": {
+      "name": "GALLEGO SALAMANCA, JORGE",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26670091&codacta=2745976&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50317649&codacta=2745977&nueva_ventana=": {
+      "name": "DÍAZ GUERRERO, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50317649&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26485957&codacta=2745971&nueva_ventana=": {
+      "name": "SERRANO CALVO, MARIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=26485957&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37171444&codacta=2745971&nueva_ventana=": {
+      "name": "ORTIZ GIL, RAFAEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=37171444&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=43284085&codacta=2745971&nueva_ventana=": {
+      "name": "MARTÍN CÁLIZ, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=43284085&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41301227&codacta=2745971&nueva_ventana=": {
+      "name": "HIDALGO ROPERO, ALEX",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=41301227&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941027&codacta=2745978&nueva_ventana=": {
+      "name": "MOLINA GERMAN, FERNANDO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=45941027&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=34781870&codacta=2745978&nueva_ventana=": {
+      "name": "LUNA CORPAS, DAVID",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=34781870&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50189718&codacta=2745975&nueva_ventana=": {
+      "name": "GARCIA BORREGO, CRISTIAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50189718&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50192454&codacta=2745975&nueva_ventana=": {
+      "name": "JIMENEZ BARRERO, ENRIQUE",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50192454&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50085781&codacta=2745975&nueva_ventana=": {
+      "name": "BARRAGAN BAENA, RAMÓN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50085781&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49565860&codacta=2745978&nueva_ventana=": {
+      "name": "BAREAS ALGAR, JESÚS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=49565860&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19670824&codacta=2745974&nueva_ventana=": {
+      "name": "RAMIREZ OTERO, JAVIER",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19670824&codacta=2745974&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50681736&codacta=2745979&nueva_ventana=": {
+      "name": "LARROSA LOPEZ, ISAAC",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50681736&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=43152190&codacta=2745973&nueva_ventana=": {
+      "name": "GIRALDEZ CEADA, SANTIAGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=43152190&codacta=2745973&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40469886&codacta=2745977&nueva_ventana=": {
+      "name": "RUIZ GONZÁLEZ, JESÚS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=40469886&codacta=2745977&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50108244&codacta=2745978&nueva_ventana=": {
+      "name": "MOYANO NUCETE, JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50108244&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50316554&codacta=2745971&nueva_ventana=": {
+      "name": "MURIEL JURADO, ANTONIO JESUS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50316554&codacta=2745971&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36356701&codacta=2745975&nueva_ventana=": {
+      "name": "RIVAS TORRES, PABLO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=36356701&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46519924&codacta=2745978&nueva_ventana=": {
+      "name": "ARMENTEROS LARA, NOA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46519924&codacta=2745978&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50944544&codacta=2745968&nueva_ventana=": {
+      "name": "NAVALÓN MELERO, MOISÉS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50944544&codacta=2745968&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50172413&codacta=2745979&nueva_ventana=": {
+      "name": "RABADAN FUENTES, SERGIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=50172413&codacta=2745979&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47881928&codacta=2745970&nueva_ventana=": {
+      "name": "ESTEBÁN OSORIO, PABLO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=47881928&codacta=2745970&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46930047&codacta=2745975&nueva_ventana=": {
+      "name": "MORAL LÓPEZ, MIGUEL ANGEL",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=46930047&codacta=2745975&nueva_ventana=",
+      "photo_source": "",
+      "sections": [],
+      "updated_at": ""
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19378941&codacta=2745968&nueva_ventana=": {
+      "name": "CANTERO MONTES, ANTONIO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19378941&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:35.712727+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988843&codacta=2745968&nueva_ventana=": {
+      "name": "JIMENEZ CORDOBA, ANGELA",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988843&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "4"
+            ],
+            [
+              "Suplente",
+              "3"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Tarjeta amarilla",
+              "1"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "8"
+            ],
+            [
+              "Goles por partido",
+              "1.1"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:27.540370+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19379013&codacta=2745968&nueva_ventana=": {
+      "name": "LAMA CAMACHO, ALBERTO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19379013&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "6"
+            ],
+            [
+              "Suplente",
+              "1"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "12"
+            ],
+            [
+              "Goles por partido",
+              "1.7"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:30.522378+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19438020&codacta=2745968&nueva_ventana=": {
+      "name": "CAMACHO JIMENEZ, ALVARO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19438020&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "7"
+            ],
+            [
+              "Suplente",
+              "0"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "5"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:31.546830+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31986770&codacta=2745968&nueva_ventana=": {
+      "name": "BRAVO LOPEZ, YAGO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31986770&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "5"
+            ],
+            [
+              "Suplente",
+              "2"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "20"
+            ],
+            [
+              "Goles por partido",
+              "2.9"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:33.537612+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19437880&codacta=2745968&nueva_ventana=": {
+      "name": "JIMENEZ LAMA, LUIS",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19437880&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "3"
+            ],
+            [
+              "Suplente",
+              "4"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Tarjeta amarilla",
+              "2"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "1"
+            ],
+            [
+              "Goles por partido",
+              "0.1"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:26.716872+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31985180&codacta=2745968&nueva_ventana=": {
+      "name": "NAVARRO ORTIZ, JAVIER",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31985180&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "5"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "4"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:28.519073+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32017118&codacta=2745968&nueva_ventana=": {
+      "name": "JIMENEZ LAMA, ADRIAN",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=32017118&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "6"
+            ],
+            [
+              "Titular",
+              "0"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Goles por partido",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:29.757977+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988981&codacta=2745968&nueva_ventana=": {
+      "name": "BONILLA FERNANDEZ, ALVARO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31988981&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "2"
+            ],
+            [
+              "Goles por partido",
+              "0.3"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:32.716534+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19431860&codacta=2745968&nueva_ventana=": {
+      "name": "ALMANSA POLO, ALEJANDRO",
+      "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=19431860&codacta=2745979&nueva_ventana=0",
+      "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
+      "sections": [
+        {
+          "title": "Partidos",
+          "rows": [
+            [
+              "Convocados",
+              "7"
+            ],
+            [
+              "Titular",
+              "1"
+            ],
+            [
+              "Suplente",
+              "6"
+            ],
+            [
+              "Jugados",
+              "7"
+            ]
+          ]
+        },
+        {
+          "title": "Sanciones",
+          "rows": [
+            [
+              "Total",
+              "0"
+            ],
+            [
+              "Tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Doble tarjeta amarilla",
+              "0"
+            ],
+            [
+              "Tarjeta roja",
+              "0"
+            ]
+          ]
+        },
+        {
+          "title": "Goles",
+          "rows": [
+            [
+              "Total",
+              "5"
+            ],
+            [
+              "Goles por partido",
+              "0.7"
+            ]
+          ]
+        }
+      ],
+      "updated_at": "2026-11-26T05:15:34.537396+00:00",
+      "stats_signature": "5c31bd7b1dae249a",
+      "stats_round": 7,
+      "failed_at": "2026-11-26T15:13:54.238594+00:00"
+    },
+    "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31569868&codacta=2745968&nueva_ventana=": {
       "name": "RUIZ SANCHEZ, NATALIA",
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_EstadisticasJugador?cod_primaria=5000274&jugador=31569868&codacta=2745979&nueva_ventana=0",
       "photo_source": "https://filesrfaf.filesnovanet.es/pnfg/img/web_responsive_2/ESP/divinaseguros.png",
