@@ -434,7 +434,7 @@
       "date": "2026-11-27",
       "time": "20:00",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
+      "state": "Resultado por verificar",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -454,10 +454,10 @@
       "date": "2026-11-27",
       "time": "20:00",
       "venue": "Santaella - PABELLON MUNICIPAL FELIPE REYES SANTAELLA",
-      "state": "Programado",
-      "played": false,
-      "home_score": null,
-      "away_score": null,
+      "state": "Finalizado",
+      "played": true,
+      "home_score": 0,
+      "away_score": 0,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=8",
       "date_provisional": false,
       "acta_url": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPrevio?cod_primaria=1000120&CodActa=2718921",
@@ -491,17 +491,18 @@
       "away": "C.D. MENCIANA",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png",
-      "date": "2026-12-13",
+      "date": "2026-12-20",
       "time": "",
       "venue": "Lucena - PABELLON CUBIERTO MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=9",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
+      "acta_url": ""
     },
     {
       "id": "49465413-9-2",
@@ -510,17 +511,18 @@
       "away": "C.D. SANTAELLA 2010",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000333205_ESCUDO_MIRAGENIL_3.jpg",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000818866_escudo_c.d._santaella_2010__1_.jpg",
-      "date": "2026-12-13",
+      "date": "2026-12-20",
       "time": "",
       "venue": "Puente Genil - NORTE QUINI32 (PABELLON)",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=9",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=484317",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=6016981",
+      "acta_url": ""
     },
     {
       "id": "49465413-9-3",
@@ -529,17 +531,18 @@
       "away": "C.D. BOCA F.S. PRIEGO",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001833559_ENCINAS_REALES_CF__logo_color_.png",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0000225701_Escudo_Boca_blanco_Linea.jpg",
-      "date": "2026-12-13",
+      "date": "2026-12-20",
       "time": "",
       "venue": "Encinas Reales - PABELLON MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=9",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=45102766",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=3768291",
+      "acta_url": ""
     },
     {
       "id": "49465413-10",
@@ -827,7 +830,7 @@
       "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=427815"
     }
   ],
-  "results_status": "verified",
+  "results_status": "pending",
   "scorers": [
     {
       "name": "MONTES RECIO, SERGIO",
@@ -1358,7 +1361,7 @@
       "average": 0.1667
     }
   ],
-  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=7&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
+  "scorers_source": "https://www.rfaf.es/pnfg/NPcd/NFG_CMP_Goleadores?cod_primaria=1000120&CodJornada=8&codcompeticion=49465203&codtemporada=22&codgrupo=49465413",
   "roster": [
     {
       "name": "MONTILLA ALTEZ, ISMAEL",
@@ -3526,7 +3529,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-27T08:32:18.551269+00:00",
+  "updated_at": "2026-11-27T18:59:31.896428+00:00",
   "rounds": [
     1,
     2,
@@ -3675,7 +3678,7 @@
       "date": "2026-11-27",
       "time": "20:00",
       "venue": "Doña Mencia - PMD ALCALDE JULIO PRIEGO (PABELLON)",
-      "state": "Programado",
+      "state": "Resultado por verificar",
       "played": false,
       "home_score": null,
       "away_score": null,
@@ -3692,17 +3695,18 @@
       "away": "C.D. MENCIANA",
       "home_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg",
       "away_crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001964732_MENCIANA_APAGA_COLOR.png",
-      "date": "2026-12-13",
+      "date": "2026-12-20",
       "time": "",
       "venue": "Lucena - PABELLON CUBIERTO MUNICIPAL",
-      "state": "Fecha de jornada",
+      "state": "Programado",
       "played": false,
       "home_score": null,
       "away_score": null,
       "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22&CodJornada=9",
       "date_provisional": false,
       "home_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=34035605",
-      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016"
+      "away_team_url": "https://www.rfaf.es/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
+      "acta_url": ""
     },
     {
       "id": "49465413-10",
@@ -3888,7 +3892,7 @@
       "crest": "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001351560_WhatsApp_Image_2023_08_11_at_18.10.09.jpeg"
     }
   ],
-  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=7&codcompeticion=49465203&codgrupo=49465413&codjornada=7",
+  "standings_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisClasificacion?cod_primaria=1000120&codjornada=8&codcompeticion=49465203&codgrupo=49465413&codjornada=8",
   "crest_assets": {
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001375486_Escudo_Olimpic.jpg": "crests/4cdb340d8ddf6745.jpg",
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0001011207_LOGO_CD_BENALUP.jpg": "crests/7a50172f407cf933.jpg",
@@ -3938,7 +3942,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-27T08:32:19.200732+00:00",
+  "staff_updated_at": "2026-11-27T18:59:32.511018+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
