@@ -26,7 +26,7 @@
         ],
         [
           "",
-          "6 - 1",
+          "11 - 1",
           ""
         ]
       ]
@@ -62,6 +62,63 @@
     {
       "kind": "text",
       "text": "Goles"
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Gol · 1 - 0",
+          "(1') ROSA RICO, CRISTIAN"
+        ],
+        [
+          "Gol · 2 - 0",
+          "(2') GALLEGO SALAMANCA, JORGE"
+        ],
+        [
+          "Gol · 3 - 0",
+          "(5') SEVILLA ARROYO, JUAN"
+        ],
+        [
+          "Gol · 3 - 1",
+          "(10') ARROYO MONTES, DANIEL"
+        ],
+        [
+          "Gol · 4 - 1",
+          "(15') CANO AGUILERA, MANUEL"
+        ],
+        [
+          "Gol en propia puerta · 5 - 1",
+          "(17') MORAL LÓPEZ, MIGUEL ANGEL"
+        ],
+        [
+          "Gol · 6 - 1",
+          "(19') GRANADO MUÑOZ, LUIS"
+        ],
+        [
+          "Gol · 7 - 1",
+          "(25') CALIZ SANCHEZ, ALONSO"
+        ],
+        [
+          "Gol · 8 - 1",
+          "(27') PINEDA AGUILERA, LUCAS"
+        ],
+        [
+          "Gol · 9 - 1",
+          "(31') GRANADO MUÑOZ, LUIS"
+        ],
+        [
+          "Gol · 10 - 1",
+          "(34') GRANADO MUÑOZ, LUIS"
+        ],
+        [
+          "Gol · 11 - 1",
+          "(39') CANO AGUILERA, MANUEL"
+        ]
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "Gol G. Penalti G. Propia Puerta"
     },
     {
       "kind": "table",
@@ -489,5 +546,5 @@
   ],
   "id": "2745981",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpPartido?cod_primaria=1000120&CodActa=2745981",
-  "updated_at": "2026-11-27T19:00:17.144931+00:00"
+  "updated_at": "2026-11-28T02:00:14.203805+00:00"
 }
