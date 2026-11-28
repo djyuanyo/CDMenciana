@@ -1508,10 +1508,10 @@
       "profile_updated_at": "2026-11-12T11:09:08.325092+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 0,
+        "starts": 1,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -1587,7 +1587,7 @@
         "starts": 0,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -1739,7 +1739,7 @@
         "starts": 0,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -1888,10 +1888,10 @@
       "profile_updated_at": "2026-11-12T11:09:13.489067+00:00",
       "competition_summary": {
         "goals": 0,
-        "starts": 1,
+        "starts": 0,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -2267,11 +2267,11 @@
       ],
       "profile_updated_at": "2026-11-12T11:09:18.501351+00:00",
       "competition_summary": {
-        "goals": 0,
-        "starts": 1,
+        "goals": 1,
+        "starts": 0,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -2647,11 +2647,11 @@
       ],
       "profile_updated_at": "2026-11-26T05:15:14.735138+00:00",
       "competition_summary": {
-        "goals": 0,
-        "starts": 1,
+        "goals": 1,
+        "starts": 0,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -3103,11 +3103,11 @@
       ],
       "profile_updated_at": "2026-11-26T05:15:20.691182+00:00",
       "competition_summary": {
-        "goals": 0,
-        "starts": 0,
+        "goals": 1,
+        "starts": 1,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     },
@@ -3487,7 +3487,7 @@
         "starts": 1,
         "called": 1,
         "played": null,
-        "team": "C.D. MENCIANA",
+        "team": "C.D. BOCA F.S. PRIEGO",
         "source": "actas oficiales RFAF"
       }
     }
@@ -3516,7 +3516,7 @@
   "season": "2026-2027",
   "team": "C.D. MENCIANA",
   "source": "https://www.rfaf.es/pnfg/NPcd/NFG_CmpJornada?cod_primaria=1000120&CodCompeticion=49465203&CodGrupo=49465413&CodTemporada=22",
-  "updated_at": "2026-11-27T23:45:29.447242+00:00",
+  "updated_at": "2026-11-28T02:00:49.170476+00:00",
   "rounds": [
     1,
     2,
@@ -3906,7 +3906,7 @@
     "https://rfaf.filesnovanet.es/pnfg/pimg/Clubes/00100_0002252458_IMG_1343__1_.jpg": "crests/b35298dc2599e534.jpg"
   },
   "roster_status": "verified",
-  "roster_updated_at": "2026-11-27T19:10:05.624742+00:00",
+  "roster_updated_at": "2026-11-28T02:10:16.745335+00:00",
   "stats_updated_at": "2026-11-27T15:42:20.796134+00:00",
   "staff": [
     {
@@ -3929,7 +3929,7 @@
     }
   ],
   "staff_source": "https://www.rfaf.es/pnfg/NPcd/NFG_VisEquipos?cod_primaria=1000119&Codigo_Equipo=485016",
-  "staff_updated_at": "2026-11-27T23:45:30.375755+00:00",
+  "staff_updated_at": "2026-11-28T02:00:49.886243+00:00",
   "staff_status": "verified",
   "details_status": "verified"
 }
